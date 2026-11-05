@@ -1,0 +1,93 @@
+{
+  "scope": "Mission Planner and ArduPilot reverse engineering research; other drone project documents excluded",
+  "source_roots": [
+    "ardupilot-mavproxy-source",
+    "ardupilot-source",
+    "mission-planner-1.3.83-source",
+    "mission-planner-binary-evidence",
+    "mission-planner-isolated",
+    "mission-planner-portable",
+    "mission-planner-research",
+    "mission-planner-runtime",
+    "research-tools",
+    "sitl-evidence",
+    "supportproxy-deps",
+    "supportproxy-evidence",
+    "supportproxy-source"
+  ],
+  "candidate_files": 65084,
+  "linked_files": 65080,
+  "large_files": [
+    {
+      "path": "mission-planner-installer.msi",
+      "bytes": 119841133
+    },
+    {
+      "path": "mission-planner-payload.cab",
+      "bytes": 118236272
+    },
+    {
+      "path": "mission-planner-portable.zip",
+      "bytes": 116392003
+    },
+    {
+      "path": "mission-planner-binary-evidence/rea-remaining-index.sqlite",
+      "bytes": 154841088
+    }
+  ],
+  "omitted": [
+    {
+      "path": "ardupilot-mavproxy-source/.git",
+      "reason": "repository metadata or symlink directory"
+    },
+    {
+      "path": "ardupilot-source/ardupilot-master/.git",
+      "reason": "repository metadata or symlink directory"
+    },
+    {
+      "path": "mission-planner-1.3.83-source/.git",
+      "reason": "repository metadata or symlink directory"
+    },
+    {
+      "path": "mission-planner-research/.git",
+      "reason": "repository metadata or symlink directory"
+    },
+    {
+      "path": "supportproxy-deps/root/usr/lib/x86_64-linux-gnu/libtdb.so.1",
+      "reason": "repository metadata or symlink"
+    },
+    {
+      "path": "supportproxy-deps/root/usr/share/doc/python3-tdb/changelog.Debian.gz",
+      "reason": "repository metadata or symlink"
+    },
+    {
+      "path": "supportproxy-source/.git",
+      "reason": "repository metadata or symlink directory"
+    },
+    {
+      "path": "supportproxy-source/modules/mavlink/.git",
+      "reason": "repository metadata or symlink"
+    },
+    {
+      "path": "supportproxy-source/modules/mavlink/pymavlink/.git",
+      "reason": "repository metadata or symlink"
+    },
+    {
+      "path": "supportproxy-deps/root/usr/lib/x86_64-linux-gnu/libtdb.so",
+      "reason": "Windows cannot access this WSL symlink"
+    },
+    {
+      "path": "supportproxy-deps/root/usr/share/doc/libtdb-dev/changelog.Debian.gz",
+      "reason": "Windows cannot access this WSL symlink"
+    },
+    {
+      "path": "supportproxy-evidence/auth-tests/tmp/supportproxy_w0current",
+      "reason": "Windows cannot access this WSL symlink"
+    },
+    {
+      "path": "supportproxy-evidence/local-network-tests/tmp/supportproxy_w0current",
+      "reason": "Windows cannot access this WSL symlink"
+    }
+  ],
+  "errors": []
+}
