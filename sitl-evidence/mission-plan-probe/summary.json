@@ -1,0 +1,18 @@
+{
+  "scope": "Synthetic JSON plan fixtures in a library harness; not GUI error handling",
+  "sha256": {
+    "sitl-evidence/mission-plan-probe/fixtures.json": "d4960ae9134cd806757a0de0eacaab9426a258d0275291b4eb40756f557cc03b",
+    "sitl-evidence/mission-plan-probe/probe.log": "29c6fcd7dce0c3da79b5f37ab394ebf3d6810c0a53bf0f9cc068db0159d05ed8",
+    "research-tools/MissionPlanProbe.cs": "321dab80ed0a37dd86f269aad12de5dc20b0cd70b43f06fe5ba22e11d4d126df",
+    "research-tools/make-mission-plan-fixtures.py": "3bfc6151f12572af0a9f52c2f5d18acc03720a6affcafc02e69cec30aa34447c",
+    "mission-planner-portable/MissionPlanProbe.exe": "1fcae504379ea3a08a24a3b4bae026e9dc6f3ee06e80871b9caa39a97f5360a6",
+    "mission-planner-portable/MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71"
+  },
+  "checks": {
+    "fixture_hashes": true,
+    "simple_and_complex_flattened": true,
+    "missing_complex_exception": true,
+    "short_params_exception": true
+  },
+  "passed": true
+}

@@ -1,0 +1,1009 @@
+{
+  "scope": "Legacy point transfer in disposable disarmed Copter SITL; no rendered UI or enforcement",
+  "relay": {
+    "scope": "Disposable Copter SITL; legacy fence points; no deliberate loss",
+    "case": "fence_legacy_release",
+    "binary_sha256": "caed35e4cb796ec06cac40b09566a18251771486b1cbac5e2bf16b7a5ed5045d",
+    "sitl_port": 7520,
+    "proxy_port": 7521,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 160,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "222526e53cd2c99f195df16eed07766c046f2e726cbd81b577679873a5b8ac10",
+      "to_client_output.bin": "222526e53cd2c99f195df16eed07766c046f2e726cbd81b577679873a5b8ac10",
+      "to_sitl_input.bin": "80554a9cec5f1cf43c1fc977560a0f35339844b6f242eb0167b464df09fd9c6b",
+      "to_sitl_output.bin": "80554a9cec5f1cf43c1fc977560a0f35339844b6f242eb0167b464df09fd9c6b"
+    }
+  },
+  "binary_sha256": "caed35e4cb796ec06cac40b09566a18251771486b1cbac5e2bf16b7a5ed5045d",
+  "library_hashes": {
+    "ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "mavlink": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "valuetuple": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4"
+  },
+  "probe_source_sha256": "cf034299b1aeaf90de6f5cdb77d698482ea2537b669e3049e3c501f53af45697",
+  "probe_exe_sha256": "22ae064cdc283a7e6ac725320cb36bd70068613ef0613955dc14ed2a465303d0",
+  "probe_log_sha256": "7f27b206df25bd1c4036fd815790556c8549bf33ee3c3f101cc75f1b3a7c1e85",
+  "points": [
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.36399841308594,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.36399841308594,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "fetches": [
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "received": [
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "mavpackettype": "PARAM_SET",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_SET",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "params": [
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ENABLE",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 1.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "param_count": 1350,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67568383,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        102,
+        98,
+        55,
+        55,
+        51,
+        53,
+        54,
+        55
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        233,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67568383,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        102,
+        98,
+        55,
+        55,
+        51,
+        53,
+        54,
+        55
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        233,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67568383,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        102,
+        98,
+        55,
+        55,
+        51,
+        53,
+        54,
+        55
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        233,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67568383,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        102,
+        98,
+        55,
+        55,
+        51,
+        53,
+        54,
+        55
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        233,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67568383,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        102,
+        98,
+        55,
+        55,
+        51,
+        53,
+        54,
+        55
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        233,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 6,
+      "text": "Received message (FENCE_FETCH_POINT) is deprecated",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 160
+  },
+  "verified_probe_lines": [
+    "INITIAL_ENABLE=0 TOTAL=0",
+    "SET_TOTAL=True READBACK=5",
+    "SET_ACTION_ZERO=True READBACK=0",
+    "LEGACY_ROUNDTRIP=True"
+  ]
+}

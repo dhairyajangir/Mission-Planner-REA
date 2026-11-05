@@ -1,0 +1,28 @@
+{
+  "scope": "ArduCopter 4.7.2 SITL only; no Mission Planner or aircraft",
+  "checks": {
+    "mission_upload": {
+      "passed": true,
+      "sent_sequences": [
+        0,
+        1
+      ],
+      "ack": 0
+    },
+    "mission_count": {
+      "passed": true,
+      "count": 2
+    },
+    "waypoint_readback": {
+      "passed": false,
+      "sequence": 1,
+      "lat_e7": -353629984,
+      "lon_e7": 1491654912,
+      "alt": 20.0
+    }
+  },
+  "errors": [],
+  "port": 6150,
+  "process_exit_code": 0,
+  "passed": false
+}

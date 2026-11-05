@@ -1,0 +1,18 @@
+{
+  "conversion_bytes": 8267692,
+  "conversion_sha256": "2a09825386071ec0a636c61edbf6296d10e189fe440835ef253c21063b1d7576",
+  "conversion_lines": 140847,
+  "pymavlink_messages": 140847,
+  "message_type_count_differences": {
+    "MAG": {
+      "pymavlink": 2564,
+      "mission_planner": 2565
+    },
+    "UNIT": {
+      "pymavlink": 39,
+      "mission_planner": 38
+    }
+  },
+  "converter_reported_bad_binary_line": true,
+  "scope": "Name counts only; does not compare record values or identify cause of difference."
+}

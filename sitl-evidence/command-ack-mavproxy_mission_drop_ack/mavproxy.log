@@ -1,0 +1,31 @@
+Connect tcp:127.0.0.1:7561 source_system=255
+Note: Not saving telemetry logs
+Waiting for heartbeat from tcp:127.0.0.1:7561
+MAV> Detected vehicle 1:1 on link 0
+online system 1
+STABILIZE> Mode STABILIZE
+AP: Barometer 1 calibration complete
+AP: Barometer 2 calibration complete
+Init Gyro**
+AP: ArduPilot Ready
+AP: RC7: SaveWaypoint LOW
+AP: ArduCopter V4.8.0-dev (72b23820)
+AP: �04cfea5c7cf4f1fb8b47f8b3e8289cf
+AP: Frame: QUAD/PLUS
+Received 1431 parameters
+STABILIZE> usage: wp load FILENAME
+AP: EKF3 IMU0 initialised
+AP: EKF3 IMU1 initialised
+AP: AHRS: EKF3 active
+AP: EKF3 IMU0 tilt alignment complete
+AP: EKF3 IMU1 tilt alignment complete
+AP: EKF3 IMU0 MAG0 initial yaw alignment complete
+AP: EKF3 IMU1 MAG0 initial yaw alignment complete
+AP: GPS 1: probing for u-blox at 230400 baud
+AP: GPS 1: detected u-blox
+AP: EKF3 IMU0 origin set
+AP: Field Elevation Set: 584m
+AP: EKF3 IMU1 origin set
+Unloading module link
+Unloading module param
+Unloading module wp

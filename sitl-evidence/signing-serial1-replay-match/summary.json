@@ -1,0 +1,62 @@
+{
+  "scope": "One disarmed Copter SITL session; same authentic signed heartbeat injected twice, then signature-corrupted copy",
+  "relay": {
+    "scope": "Disposable Copter SITL; synthetic key provisioned on SERIAL0; local relay to SERIAL1",
+    "case": "match",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "test_key_hex": "ae21e430a53c5df57629657cfc7db868fd78003a1aa8e8ab88cfb3cc33c68b0e",
+    "errors": [],
+    "initial_primary": {
+      "signed": false,
+      "valid_test_key": false,
+      "raw_hex": "fd09000000010100000000000000020359010382c2"
+    },
+    "initial_secondary": {
+      "signed": false,
+      "valid_test_key": false,
+      "raw_hex": "fd09000000010100000000000000020359010382c2"
+    },
+    "configured_primary": {
+      "signed": true,
+      "valid_test_key": true,
+      "raw_hex": "fd09010001010100000000000000020359010375b400b8fc8e77ff2178533d1a4a40"
+    },
+    "configured_secondary": {
+      "signed": true,
+      "valid_test_key": true,
+      "raw_hex": "fd09010001010100000000000000020359010375b401b8fc8e77ff21ce8e3db1d0cc"
+    },
+    "injected_sample_sha256": "acbbac097cd1ba45328863e98ed117fbc19b5a5e5e3a1f8951c4520a98f3c113",
+    "injected_bad_sha256": "e86a9c3078faec20ab677a6df24d71257d1e8c7b135726ebbc342124233ffe3f",
+    "closed_by": "client",
+    "capture_sha256": {
+      "bootstrap-primary-down.bin": "8488294081a262491ac8244495ed1d52a1be5bc19bde21f779588c4302c96b07",
+      "bootstrap-primary-up.bin": "96f354feb9cc54fae3e5187b577fa0639328764cfb1a1546418c6faacdd826b3",
+      "bootstrap-secondary-down.bin": "bd8c5515c08e6871969a5180105fa11b4a8fcd1df1feb58f4edbdad211e46b2c",
+      "downlink.bin": "0e6659ea331e9c91abafa55a50b974f44193a2ceb21cb478538bc26a4f5d9a56",
+      "injected.bin": "c54d2c24a5b77e1502c316082b7a186810bc8d9470f39bfd2fda3a8f3b5b7153",
+      "uplink.bin": "8d84fbde2f6bfaee508b6d2e5d4760c9a084a055d49fa4e5fbd7f1fe5d960af5"
+    }
+  },
+  "sample_sha256": "acbbac097cd1ba45328863e98ed117fbc19b5a5e5e3a1f8951c4520a98f3c113",
+  "bad_sha256": "e86a9c3078faec20ab677a6df24d71257d1e8c7b135726ebbc342124233ffe3f",
+  "sample_event_count": 2,
+  "bad_event_count": 0,
+  "signature_failure_log_count": 1,
+  "hashes": {
+    "probe-source.cs": "2ae332c054f548c8942078e16217112a0e340109a11f2b8a0569f594c3759215",
+    "probe.exe": "9fc83a468d39e25fa79345a6767f28d0e72fb8cb452ba820239e2fd33ca5a754",
+    "probe.log": "f53b84a60df5a814b9d0c0a7ae2becf362e4f3cf0e3604dfbc1bfe5f89eb1e5e",
+    "probe-exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "relay-source.py": "c66c69afcb1783a5e65e60bfa6ff20268319c6a083a241c27f618a7ed159c589"
+  },
+  "library_hashes": {
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MissionPlanner.Comms.dll": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "Interfaces.dll": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+    "System.ValueTuple.dll": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+    "SigningSerial1ReplayProbe.exe.config": "19363792acd6a1e4b7c6ae980fb5450f57387e910f74dac1dd51ac91f783e9ef"
+  }
+}

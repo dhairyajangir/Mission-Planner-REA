@@ -1,0 +1,59 @@
+{
+  "scope": "offline capture comparison and independent MAVLink decoding",
+  "dropped_indexes": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "requested_indexes": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "forwarded_recovered_indexes": {
+    "20": "FLTMODE_CH",
+    "21": "INITIAL_MODE",
+    "22": "SIMPLE",
+    "23": "LOG_BITMASK",
+    "24": "ESC_CALIBRATION",
+    "25": "TUNE",
+    "26": "FRAME_TYPE",
+    "27": "ARMING_ACCTHRESH",
+    "28": "ARMING_RUDDER",
+    "29": "ARMING_MIS_ITEMS"
+  },
+  "uplink_counts": {
+    "HEARTBEAT": 3,
+    "STATUSTEXT": 3,
+    "COMMAND_LONG": 6,
+    "AUTOPILOT_VERSION_REQUEST": 4,
+    "MISSION_REQUEST_LIST": 1,
+    "TIMESYNC": 2,
+    "PARAM_REQUEST_LIST": 1,
+    "PARAM_REQUEST_READ": 10
+  },
+  "downlink_matches_filtered_input": true,
+  "uplink_unchanged": true,
+  "matched_dropped_packets": 10,
+  "downlink_input_sha256": "5084c85ba8066513b9044fa8dcff8a0de81e2df12d687067694dd9bcd7085ada",
+  "downlink_output_sha256": "32735d6a2a0c4e19dd074a42354bd0eb7625e4dfe66400d0f932f51de7508580",
+  "uplink_input_sha256": "7857485851b59ce5425c26640aca2269992d1300ad7ef53a676e3d3539059091",
+  "uplink_output_sha256": "7857485851b59ce5425c26640aca2269992d1300ad7ef53a676e3d3539059091",
+  "dropped_sha256": "90f55c205ffab8e1801b367af2f24412f4543c81fe156cb320f1fe9a7b6360c3",
+  "errors": [],
+  "passed": true
+}

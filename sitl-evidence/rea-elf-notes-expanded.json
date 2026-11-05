@@ -1,0 +1,14 @@
+{
+  "code": "VALIDATION_ERROR",
+  "message": "REA could not read the command arguments. Check the named argument and its expected type, then try again.",
+  "fieldErrors": [
+    {
+      "code": "too_big",
+      "missing": false,
+      "path": "maxEntries",
+      "expected": "",
+      "received": "",
+      "message": "Too big: expected number to be <=256"
+    }
+  ]
+}

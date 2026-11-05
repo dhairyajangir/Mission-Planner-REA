@@ -1,0 +1,15 @@
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-probe\exact-4.apj
+image_size 4 size 4
+RESULT|exact-4.apj|OK|9999|4|4|41424344
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-probe\short-image.apj
+image_size 8 size 8
+RESULT|short-image.apj|OK|9999|8|8|4142434400000000
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-probe\exact-3.apj
+image_size 3 size 6
+RESULT|exact-3.apj|OK|9999|3|8|4142430000000000
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-probe\exact-5.apj
+image_size 5 size 6
+RESULT|exact-5.apj|OK|9999|5|8|4142434445000000
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-probe\exact-7.apj
+image_size 7 size 10
+RESULT|exact-7.apj|OK|9999|7|12|414243444546470000000000

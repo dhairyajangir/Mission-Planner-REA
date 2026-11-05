@@ -1,0 +1,35 @@
+{
+  "scope": "Disposable Copter SITL; synthetic key provisioned on SERIAL0; local relay to SERIAL1",
+  "case": "missing",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "test_key_hex": "ae21e430a53c5df57629657cfc7db868fd78003a1aa8e8ab88cfb3cc33c68b0e",
+  "errors": [],
+  "initial_primary": {
+    "signed": false,
+    "valid_test_key": false,
+    "raw_hex": "fd09000000010100000000000000020359010382c2"
+  },
+  "initial_secondary": {
+    "signed": false,
+    "valid_test_key": false,
+    "raw_hex": "fd09000000010100000000000000020359010382c2"
+  },
+  "configured_primary": {
+    "signed": true,
+    "valid_test_key": true,
+    "raw_hex": "fd09010001010100000000000000020359010375b400ed727175ff219ff732d0c2b2"
+  },
+  "configured_secondary": {
+    "signed": true,
+    "valid_test_key": true,
+    "raw_hex": "fd09010001010100000000000000020359010375b401ed727175ff2180cfba4bea60"
+  },
+  "closed_by": "client",
+  "capture_sha256": {
+    "bootstrap-primary-down.bin": "d15e629176cc3917892f945ca71abcb247cc927db62d2583d1c57ad57b39c177",
+    "bootstrap-primary-up.bin": "bf05b145989ec37d6c9067e6b5a0ba9ed37b0fe1cfa99326bfc7f37e0a03881d",
+    "bootstrap-secondary-down.bin": "41ed51315fff008b23220213ac04d827a4e91434b95ae85ff37b63d0a5283fdf",
+    "downlink.bin": "9118da14c69fad20c1de55277b10a02cba798cbe5be6ba65193281e882b9d155",
+    "uplink.bin": "ae11d94fbc28ab86deb2d75fabbaa5f5dd7d6e89fa3d22c76ec9a8c4bcad605e"
+  }
+}

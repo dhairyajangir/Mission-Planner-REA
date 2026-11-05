@@ -1,0 +1,11 @@
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-invalid\invalid-base64.apj
+RESULT|invalid-base64.apj|ERROR|System.FormatException
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-invalid\invalid-zlib.apj
+Possible bad file - usually safe to ignore
+image_size 4 size 4
+RESULT|invalid-zlib.apj|OK|9999|4|4|00000000
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-invalid\truncated-zlib.apj
+image_size 4 size 4
+RESULT|truncated-zlib.apj|OK|9999|4|4|41000000
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\firmware-parser-invalid\zero-size.apj
+RESULT|zero-size.apj|OK|9999|0|-1|null

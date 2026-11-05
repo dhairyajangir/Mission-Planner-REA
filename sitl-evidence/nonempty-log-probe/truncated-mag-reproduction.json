@@ -1,0 +1,27 @@
+{
+  "format_offset": 3568,
+  "record_offset": 5660641,
+  "expected_record_bytes": 35,
+  "results": {
+    "partial": {
+      "exit_code": 0,
+      "record_bytes": 31,
+      "input_sha256": "3c6bc80b7d9b6d605f0bee423a3dfea2665ef212692ef51dee781f564167501a",
+      "lines": [
+        "FMT, 113, 35, MAG, QBhhhhhhhhhBI, TimeUS,I,MagX,MagY,MagZ,OfsX,OfsY,OfsZ,MOX,MOY,MOZ,Health,S",
+        "MAG, 87849846, 2, 232, 52, -528, 5, 13, -18, 0, 0, 0, 1, 0"
+      ]
+    },
+    "completed": {
+      "exit_code": 0,
+      "record_bytes": 35,
+      "input_sha256": "185700eae0daf336bc0c559d8527339a022a64f839496cb3c972b027269f1276",
+      "lines": [
+        "FMT, 113, 35, MAG, QBhhhhhhhhhBI, TimeUS,I,MagX,MagY,MagZ,OfsX,OfsY,OfsZ,MOX,MOY,MOZ,Health,S",
+        "MAG, 87849846, 2, 232, 52, -528, 5, 13, -18, 0, 0, 0, 1, 0"
+      ]
+    }
+  },
+  "outputs_equal": true,
+  "scope": "One captured partial record and one synthetic zero-completed control."
+}

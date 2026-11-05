@@ -1,0 +1,1210 @@
+{
+  "checks": [
+    {
+      "name": "archive blobs match upstream tree",
+      "passed": true,
+      "detail": "Does not by itself validate extracted source files or a build."
+    },
+    {
+      "name": "pinned dependency blob readback",
+      "passed": true,
+      "detail": "Checks expected bytes; Windows extraction does not recreate two symbolic links."
+    },
+    {
+      "name": "main PE REA type coverage",
+      "passed": true,
+      "detail": "Static metadata coverage is not behavioral coverage."
+    },
+    {
+      "name": "rea-main-index.sqlite integrity",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "rea-supporting-index.sqlite integrity",
+      "passed": true,
+      "detail": "ok"
+    },
+    {
+      "name": "REA extended managed member inventory",
+      "passed": true,
+      "detail": "Selected plugin, device and utility member metadata only; not behavior or whole-distribution coverage."
+    },
+    {
+      "name": "partial Accord metadata and targeted REA recovery",
+      "passed": true,
+      "detail": "Whole-assembly REA result remains partial; matching type tokens and one targeted type do not prove full method coverage."
+    },
+    {
+      "name": "all-managed-identities inventory",
+      "passed": true,
+      "detail": "Identity or export-table inspection only; not all internal behavior."
+    },
+    {
+      "name": "native-exports inventory",
+      "passed": true,
+      "detail": "Identity or export-table inspection only; not all internal behavior."
+    },
+    {
+      "name": "REA managed declared-reference graph",
+      "passed": true,
+      "detail": "Declared identities only; no CLR binding, redirects, or dynamic loads resolved."
+    },
+    {
+      "name": "managed native boundary evidence",
+      "passed": true,
+      "detail": "Managed import declarations only; native exports and runtime behavior are not established by this check."
+    },
+    {
+      "name": "synthetic firmware parser size observations",
+      "passed": true,
+      "detail": "Five synthetic files; parser only, no bootloader exchange or physical flashing."
+    },
+    {
+      "name": "synthetic malformed firmware parser observations",
+      "passed": true,
+      "detail": "Four synthetic parser inputs; no uploader, board checks, or physical flashing."
+    },
+    {
+      "name": "in-memory firmware uploader guards and payload",
+      "passed": true,
+      "detail": "Manual board fields and echoing in-memory fake; no physical port, detection, or bootloader."
+    },
+    {
+      "name": "in-memory uploader invalid compressed image",
+      "passed": true,
+      "detail": "Invalid synthetic compressed data sent as zeros to in-memory fake; not a real device or full UI workflow."
+    },
+    {
+      "name": "in-memory uploader erase and verification failures",
+      "passed": true,
+      "detail": "In-memory fake replies only; erased flag means command received, not physical erase."
+    },
+    {
+      "name": "in-memory uploader CRC match and mismatch",
+      "passed": true,
+      "detail": "Revision-3 CRC responses from in-memory fake; no physical flash verification."
+    },
+    {
+      "name": "synthetic plugin loader lifecycle decisions",
+      "passed": true,
+      "detail": "Synthetic DLLs and direct registration/Exit calls; not scanner, scheduler or application shutdown."
+    },
+    {
+      "name": "SITL Mission Planner library roundtrip",
+      "passed": true,
+      "detail": "Specific 4.7.2 simulator test; no UI or physical aircraft."
+    },
+    {
+      "name": "SITL mission request loss recovery",
+      "passed": true,
+      "detail": "One dropped request followed by a later simulator request; no claim about repeated loss."
+    },
+    {
+      "name": "SITL lost mission acknowledgment error with readback",
+      "passed": true,
+      "detail": "Expected harness failure after one lost accepted ACK; same library readback showed waypoint persisted."
+    },
+    {
+      "name": "SITL parameter restore",
+      "passed": true,
+      "detail": "One parameter; not bulk synchronization or calibration."
+    },
+    {
+      "name": "isolated app UI parameter write and independent readback",
+      "passed": true,
+      "detail": "Modified app and local relay; independent reads on secondary SITL endpoint. UI observation was not screenshot-saved."
+    },
+    {
+      "name": "SITL full parameter list",
+      "passed": true,
+      "detail": "Regular MAVLink parameter protocol in one uninterrupted 4.8.0-dev simulator run; no GUI or FTP."
+    },
+    {
+      "name": "SITL FTP parameter list",
+      "passed": true,
+      "detail": "FTP-aware library path in one uninterrupted 4.8.0-dev simulator run; no injected loss in this run."
+    },
+    {
+      "name": "SITL FTP reply loss and regular parameter fallback",
+      "passed": true,
+      "detail": "One complete FTP-reply loss scenario; capture comparison and regular-protocol request, no GUI."
+    },
+    {
+      "name": "SITL dropped parameter index recovery",
+      "passed": true,
+      "detail": "One loss of first copies of ten indexes; does not establish behavior under repeated loss."
+    },
+    {
+      "name": "SITL bulk parameter loss full-list retry",
+      "passed": true,
+      "detail": "One first-copy loss pattern that triggers a full-list retry; not sustained loss."
+    },
+    {
+      "name": "SITL repeated parameter response loss recovery",
+      "passed": true,
+      "detail": "Three consecutive losses for one index followed by recovery; not indefinite loss."
+    },
+    {
+      "name": "nonempty SITL log list",
+      "passed": true,
+      "detail": "Source-built Copter, disarmed logging; listing is not log download or playback."
+    },
+    {
+      "name": "nonempty SITL log download",
+      "passed": true,
+      "detail": "One log downloaded through the original library and parsed independently; no GUI playback."
+    },
+    {
+      "name": "empty UNIT conversion reproduction",
+      "passed": true,
+      "detail": "One extracted record and a one-byte synthetic control; exception is swallowed by converter."
+    },
+    {
+      "name": "truncated MAG conversion reproduction",
+      "passed": true,
+      "detail": "One captured incomplete record and a zero-completed synthetic control; not every truncated log."
+    },
+    {
+      "name": "log browser graph backing evidence",
+      "passed": true,
+      "detail": "Logs and independent range only; rendered graph observation was not saved as a screenshot."
+    },
+    {
+      "name": "local map cache overwrite observation",
+      "passed": true,
+      "detail": "Synthetic payload in file cache with patched data path; no image decoding or network provider."
+    },
+    {
+      "name": "local map cache synthetic image decode",
+      "passed": true,
+      "detail": "One synthetic PNG decoded through local cache; no map display or online provider."
+    },
+    {
+      "name": "map test library hashes match portable",
+      "passed": true,
+      "detail": "Only these three libraries match; the test copy uses a modified utility DLL."
+    },
+    {
+      "name": "localhost synthetic MJPEG capture",
+      "passed": true,
+      "detail": "Synthetic local stream and direct library callback; no HUD, GStreamer or camera."
+    },
+    {
+      "name": "MJPEG missing length reconnect",
+      "passed": true,
+      "detail": "One missing Content-Length followed by a valid local stream; no HUD or camera."
+    },
+    {
+      "name": "modified app MJPEG HUD backing evidence",
+      "passed": true,
+      "detail": "Patched app and synthetic localhost stream; visual HUD observation not screenshot-saved; process forcibly terminated."
+    },
+    {
+      "name": "MJPEG truncated-body worker after stop",
+      "passed": true,
+      "detail": "Three bounded synthetic EOF tests; CPU is process-wide and no worker stack was captured."
+    },
+    {
+      "name": "offline map UI fixture integrity",
+      "passed": true,
+      "detail": "Synthetic fixtures and app status only; visual observation was not saved as a screenshot."
+    },
+    {
+      "name": "source-built Copter maximum-altitude fence response",
+      "passed": true,
+      "detail": "One already-breached altitude fence enabled in disposable SITL; no physical aircraft or other fence types."
+    },
+    {
+      "name": "SITL Lua scheduled messages",
+      "passed": true,
+      "detail": "One benign script in disposable Copter SITL; no failure or security testing."
+    },
+    {
+      "name": "SITL Lua instruction limit",
+      "passed": true,
+      "detail": "One deliberate instruction-limit event and later message from another script; no security assessment."
+    },
+    {
+      "name": "SITL Lua disabled script directory",
+      "passed": true,
+      "detail": "One 15-second observation with the same script fixture and disabled directory; not every script source."
+    },
+    {
+      "name": "source-built Blimp SITL smoke",
+      "passed": true,
+      "detail": "Locally built Blimp SITL; basic telemetry, parameter and mission count only."
+    },
+    {
+      "name": "source-built AntennaTracker SITL smoke",
+      "passed": true,
+      "detail": "Locally built tracker SITL; basic telemetry, parameter and mission count, not target tracking."
+    },
+    {
+      "name": "source-built variant REA artifact inventories",
+      "passed": true,
+      "detail": "ELF notes and native exports only; not full native behavior or disassembly."
+    },
+    {
+      "name": "fence and rally rejected replacement readback",
+      "passed": true,
+      "detail": "One rejected replacement per type, standalone client and disposable Copter SITL; not general atomicity."
+    },
+    {
+      "name": "exact-source SITL binary provenance",
+      "passed": true,
+      "detail": "Local SITL build from extracted pinned files, not an official release binary."
+    },
+    {
+      "name": "archive-copter-smoke",
+      "passed": true,
+      "detail": "Specific test-client checks; no physical aircraft."
+    },
+    {
+      "name": "archive-copter-mission",
+      "passed": true,
+      "detail": "Specific test-client checks; no physical aircraft."
+    },
+    {
+      "name": "exact-source invalid mission frame",
+      "passed": true,
+      "detail": "One unsupported-frame case; not general transaction atomicity or application UI behavior."
+    },
+    {
+      "name": "exact-source rejected mission partial update",
+      "passed": true,
+      "detail": "One failed upload left an earlier item changed; not a claim about all failures or firmware versions."
+    },
+    {
+      "name": "exact-source rejected mission truncation",
+      "passed": true,
+      "detail": "One rejected shorter upload reduced mission count and retained a prior changed item; no generality implied."
+    },
+    {
+      "name": "exact-source Copter simulated flight",
+      "passed": true,
+      "detail": "One simulated flight with standalone client; touchdown location and physical aircraft not tested."
+    },
+    {
+      "name": "exact-source Copter simulated GPS outage",
+      "passed": true,
+      "detail": "One simulated GPS outage; GPS was restored after disarm notice, with no physical-flight or in-flight recovery claim."
+    },
+    {
+      "name": "exact-source Copter short GPS outage recovery",
+      "passed": true,
+      "detail": "One short simulated GPS outage with recovery before commanded LAND; no physical-flight claim."
+    },
+    {
+      "name": "exact-source Rover simulated GCS failsafe",
+      "passed": true,
+      "detail": "One Rover SITL GCS-loss case; movement was not commanded or measured, and no physical-vehicle or timeout-accuracy claim."
+    },
+    {
+      "name": "exact-source Copter simulated battery failsafe",
+      "passed": true,
+      "detail": "One threshold-raised simulated battery case; no physical discharge, exact timing, or GUI test."
+    },
+    {
+      "name": "exact-source Copter simulated GCS failsafe",
+      "passed": true,
+      "detail": "One configured GCS heartbeat-loss scenario; no physical aircraft or timeout-duration measurement."
+    },
+    {
+      "name": "exact-source Copter mission pause and resume",
+      "passed": true,
+      "detail": "BRAKE and MIS_RESTART=0 in one source-built simulation; initial LOITER failure retained; no UI or completion-notification claim."
+    },
+    {
+      "name": "exact-source Copter centered-throttle LOITER retry",
+      "passed": true,
+      "detail": "One centered RC override in SITL; the earlier LOITER descent remains unexplained and no physical radio was tested."
+    },
+    {
+      "name": "exact-source Copter post-disarm mission telemetry",
+      "passed": true,
+      "detail": "One SITL run; no post-disarm command was issued by the harness; mission internals were not instrumented."
+    },
+    {
+      "name": "exact-source Copter mission restart option",
+      "passed": true,
+      "detail": "One already-airborne MIS_RESTART=1 simulation; no general restart, GUI or completion-notification claim."
+    },
+    {
+      "name": "exact-source Copter Auto mission",
+      "passed": true,
+      "detail": "One standalone-client simulator mission; completion notification and GUI not verified."
+    },
+    {
+      "name": "exact-source plane SITL smoke",
+      "passed": true,
+      "detail": "Local source-snapshot build, standalone client; no UI or physical aircraft."
+    },
+    {
+      "name": "exact-source rover SITL smoke",
+      "passed": true,
+      "detail": "Local source-snapshot build, standalone client; no UI or physical aircraft."
+    },
+    {
+      "name": "exact-source sub SITL smoke",
+      "passed": true,
+      "detail": "Local source-snapshot build, standalone client; no UI or physical aircraft."
+    },
+    {
+      "name": "official plane SITL smoke",
+      "passed": true,
+      "detail": "Official 4.7.2 binary; standalone client, no Mission Planner UI or flight behavior."
+    },
+    {
+      "name": "official rover SITL smoke",
+      "passed": true,
+      "detail": "Official 4.7.2 binary; standalone client, no Mission Planner UI or flight behavior."
+    },
+    {
+      "name": "official sub SITL smoke",
+      "passed": true,
+      "detail": "Official 4.7.2 binary; standalone client, no Mission Planner UI or flight behavior."
+    },
+    {
+      "name": "version-matched Mission Planner library mission",
+      "passed": true,
+      "detail": "Original library; no UI interaction."
+    },
+    {
+      "name": "isolated app telemetry state",
+      "passed": true,
+      "detail": "Data-path-patched, plugin-disabled test copy with file-spool transport; no rendered UI verification."
+    },
+    {
+      "name": "isolated app UI telemetry backing evidence",
+      "passed": true,
+      "detail": "Verifies logs and relay only; rendered UI observation is documented separately and screenshots were not retained."
+    },
+    {
+      "name": "isolated app UI mission backing evidence",
+      "passed": true,
+      "detail": "Checks upload, log entries and relay; rendered row observation is separate and screenshots were not retained."
+    },
+    {
+      "name": "isolated app UI mission write backing evidence",
+      "passed": true,
+      "detail": "Logs show one UI-triggered waypoint write and later readback through custom transport; GUI observation is separate."
+    },
+    {
+      "name": "isolated app UI parameter backing evidence",
+      "passed": true,
+      "detail": "Only script and relay evidence; UI population was observed separately, no UI write was performed."
+    },
+    {
+      "name": "telemetry-log truncation and checksum fixture",
+      "passed": true,
+      "detail": "Library fixture test only: one zero-byte checksum truncation is accepted; no GUI playback claim."
+    },
+    {
+      "name": "telemetry-log sequential recovery fixtures",
+      "passed": true,
+      "detail": "One MAVLink 1 heartbeat in synthetic library fixtures; no general recovery or GUI claim."
+    },
+    {
+      "name": "telemetry-log timestamp fixtures",
+      "passed": true,
+      "detail": "Specific library timestamp fixtures; GUI playback timing not tested."
+    },
+    {
+      "name": "telemetry-log signed-frame fixtures",
+      "passed": true,
+      "detail": "Playback with arbitrary signature blocks; no live-link signing or key-validation claim."
+    },
+    {
+      "name": "parameter-file library fixtures",
+      "passed": true,
+      "detail": "Synthetic files through the utility library; no UI or vehicle-write claim."
+    },
+    {
+      "name": "exact-source Copter non-finite parameter writes",
+      "passed": true,
+      "detail": "Standalone MAVLink 2 client and one disposable simulator parameter; no Mission Planner UI or physical-vehicle claim."
+    },
+    {
+      "name": "Mission Planner library non-finite parameter write",
+      "passed": true,
+      "detail": "Original library and source-built SITL; packet 345 payload was not independently captured or decoded in this run."
+    },
+    {
+      "name": "captured Mission Planner non-finite parameter exchange",
+      "passed": true,
+      "detail": "Passive localhost relay and offline MAVLink decode; no UI or physical-vehicle claim."
+    },
+    {
+      "name": "mission-file library fixtures",
+      "passed": true,
+      "detail": "Synthetic files and original utility library; no GUI save-open or vehicle test."
+    },
+    {
+      "name": "mission-plan conversion fixtures",
+      "passed": true,
+      "detail": "Three synthetic plan inputs and library harness; no GUI error-handling claim."
+    },
+    {
+      "name": "in-memory multi-vehicle parser fixtures",
+      "passed": true,
+      "detail": "Synthetic raw parser and timed in-memory Open; no real multi-vehicle connection."
+    },
+    {
+      "name": "in-memory MAVLink signing fixtures",
+      "passed": true,
+      "detail": "Synthetic key and in-memory parser, not a connected vehicle or full replay-protection assessment."
+    },
+    {
+      "name": "SITL synthetic MAVLink signing exchange",
+      "passed": true,
+      "detail": "One disarmed SITL connection with public synthetic key and reflection-injected vehicle key; not normal key lookup or UI."
+    },
+    {
+      "name": "SITL signing across two serial endpoints",
+      "passed": true,
+      "detail": "Two disarmed disposable SITL runs; standalone client, one read-only message, 1.5-second windows; internal channel assignment not instrumented."
+    },
+    {
+      "name": "SITL synthetic signing discovery match",
+      "passed": true,
+      "detail": "Disposable SITL and isolated synthetic registry; match adopts key, wrong-only case times out despite captured signed responses."
+    },
+    {
+      "name": "SITL synthetic signing discovery missing",
+      "passed": true,
+      "detail": "Disposable SITL and isolated synthetic registry; match adopts key, wrong-only case times out despite captured signed responses."
+    },
+    {
+      "name": "SITL signed SERIAL1 library match",
+      "passed": true,
+      "detail": "One disarmed simulator per case; synthetic key bootstrap on SERIAL0, original Mission Planner library via local SERIAL1 relay."
+    },
+    {
+      "name": "SITL signed SERIAL1 library missing",
+      "passed": true,
+      "detail": "One disarmed simulator per case; synthetic key bootstrap on SERIAL0, original Mission Planner library via local SERIAL1 relay."
+    },
+    {
+      "name": "SITL signed heartbeat replay into Mission Planner library",
+      "passed": true,
+      "detail": "One disarmed SITL heartbeat over local relay; two identical accepted events and one altered-signature failure, not full-app replay assessment."
+    },
+    {
+      "name": "REA MAVLink signing method records",
+      "passed": true,
+      "detail": "REA metadata and method IL hashes for distributed assembly; no source equivalence claim."
+    },
+    {
+      "name": "accord-statistics recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "accord-vision recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "system-reactive recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "ironpython recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "sixlabors-imagesharp recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "alglibnet recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "xamarin-forms-core recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "bouncycastle-cryptography recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "microsoft-codeanalysis recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "microsoft-codeanalysis-csharp recovered member index integrity",
+      "passed": true,
+      "detail": "Static member recovery compared with Cecil metadata; no runtime behavior claim."
+    },
+    {
+      "name": "accord-math partial REA index integrity",
+      "passed": true,
+      "detail": "Only complete REA batches indexed; partial selections remain excluded."
+    },
+    {
+      "name": "opentk partial REA index integrity",
+      "passed": true,
+      "detail": "Only complete REA batches indexed; partial selections remain excluded."
+    },
+    {
+      "name": "accord-math-core Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "accord-math Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "opentk Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "bouncycastle-cryptography Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "microsoft-codeanalysis Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "microsoft-codeanalysis-csharp Cecil fallback index",
+      "passed": true,
+      "detail": "Cecil fallback; REA remains partial and method-reference instructions are not runtime call evidence."
+    },
+    {
+      "name": "remaining managed member index snapshot",
+      "passed": true,
+      "detail": "A point-in-time index of complete REA results; partial and unprocessed assemblies are excluded."
+    },
+    {
+      "name": "REA raised-budget modification",
+      "passed": true,
+      "detail": "Only the CLI managed representation budget was changed in the copied file; other package files are not rehashed here."
+    },
+    {
+      "name": "REA tool variant sample comparison",
+      "passed": true,
+      "detail": "One bounded selection matches; this is not proof of tool equivalence for larger selections."
+    },
+    {
+      "name": "accord-math-core mixed REA index integrity",
+      "passed": true,
+      "detail": "Combined original and raised-budget REA captures compared with Cecil metadata; static only."
+    },
+    {
+      "name": "accord-math mixed REA index integrity",
+      "passed": true,
+      "detail": "Combined original and raised-budget REA captures compared with Cecil metadata; static only."
+    },
+    {
+      "name": "opentk mixed REA index integrity",
+      "passed": true,
+      "detail": "Combined original and raised-budget REA captures compared with Cecil metadata; static only."
+    },
+    {
+      "name": "dual SITL Mission Planner library relay",
+      "passed": true,
+      "detail": "Two local SITLs through a frame-aware relay; not a real aircraft or full GUI test."
+    },
+    {
+      "name": "ArduPilot organization metadata snapshot",
+      "passed": true,
+      "detail": "Dated public metadata inventory; not a review of repository code."
+    },
+    {
+      "name": "all managed native boundary inventory",
+      "passed": true,
+      "detail": "Static REA managed declarations, not runtime native loading."
+    },
+    {
+      "name": "native import export name candidates",
+      "passed": true,
+      "detail": "Basename and exact export-name candidates only; architecture, suffix probing and runtime resolution unverified."
+    },
+    {
+      "name": "REA PE native verification limitation",
+      "passed": true,
+      "detail": "REA rejected both supplied PE export records; the separate name match is not this verifier."
+    },
+    {
+      "name": "vehicle selection change events",
+      "passed": true,
+      "detail": "Property-only original library harness; no UI subscriber or vehicle behavior claim."
+    },
+    {
+      "name": "ArduPilot source text index",
+      "passed": true,
+      "detail": "Tracked main Git tree only; indexed bytes matched blob hashes when captured, with listed exclusions."
+    },
+    {
+      "name": "mission-planner source text index",
+      "passed": true,
+      "detail": "Git blob-matched UTF-8 source snapshot; normalized variant records CRLF-to-LF matches separately."
+    },
+    {
+      "name": "mission-planner-normalized source text index",
+      "passed": true,
+      "detail": "Git blob-matched UTF-8 source snapshot; normalized variant records CRLF-to-LF matches separately."
+    },
+    {
+      "name": "ArduPilot submodule source text index",
+      "passed": true,
+      "detail": "Saved pinned submodule tree snapshots; per-file blob matches at capture, with listed exclusions."
+    },
+    {
+      "name": "TCP graceful close and explicit reopen fixture",
+      "passed": true,
+      "detail": "Synthetic local peer; does not test automatic reconnect, GUI or a vehicle."
+    },
+    {
+      "name": "TCP reset and automatic reconnect fixture",
+      "passed": true,
+      "detail": "Synthetic peer, reset and IsOpen polling; no MAVLink session or full application."
+    },
+    {
+      "name": "TCP write buffer offset fixture",
+      "passed": true,
+      "detail": "Synthetic local TCP peer; no affected full-application workflow established."
+    },
+    {
+      "name": "TCP write after reset fixture",
+      "passed": true,
+      "detail": "Synthetic local reset; no command acknowledgement or full-application behavior established."
+    },
+    {
+      "name": "SITL MAVLink explicit reconnect fixture",
+      "passed": true,
+      "detail": "Controlled local relay reset and explicit reopen; no automatic reconnect or GUI claim."
+    },
+    {
+      "name": "SITL command acknowledgement normal",
+      "passed": true,
+      "detail": "Read-only command through local ACK-loss relay; not evidence for side-effecting commands or UI."
+    },
+    {
+      "name": "SITL command acknowledgement drop_one",
+      "passed": true,
+      "detail": "Read-only command through local ACK-loss relay; not evidence for side-effecting commands or UI."
+    },
+    {
+      "name": "SITL command acknowledgement drop_all",
+      "passed": true,
+      "detail": "Read-only command through local ACK-loss relay; not evidence for side-effecting commands or UI."
+    },
+    {
+      "name": "SITL command int acknowledgement normal",
+      "passed": true,
+      "detail": "Read-only COMMAND_INT through local ACK-loss relay; no side-effect or UI claim."
+    },
+    {
+      "name": "SITL command int acknowledgement drop_one",
+      "passed": true,
+      "detail": "Read-only COMMAND_INT through local ACK-loss relay; no side-effect or UI claim."
+    },
+    {
+      "name": "SITL command int acknowledgement drop_all",
+      "passed": true,
+      "detail": "Read-only COMMAND_INT through local ACK-loss relay; no side-effect or UI claim."
+    },
+    {
+      "name": "SITL unsupported command responses",
+      "passed": true,
+      "detail": "One unsupported ID against disposable SITL; relay scope label corrected in summary."
+    },
+    {
+      "name": "synthetic command acknowledgement filtering",
+      "passed": true,
+      "detail": "Synthetic in-memory MAVLink 1 ACKs; no vehicle, socket or full UI."
+    },
+    {
+      "name": "synthetic command int acknowledgement filtering",
+      "passed": true,
+      "detail": "Synthetic COMMAND_INT ACKs; no vehicle or UI behavior claim."
+    },
+    {
+      "name": "REA command entry points and state machines",
+      "passed": true,
+      "detail": "Build-local REA method records; static references do not prove runtime dispatch."
+    },
+    {
+      "name": "synthetic MAVLink 2 ACK target fields",
+      "passed": true,
+      "detail": "Synthetic unsigned ACKs; no live link, security or UI impact established."
+    },
+    {
+      "name": "SITL retargeted acknowledgement long",
+      "passed": true,
+      "detail": "Controlled relay rewrites an unsigned ACK and checksum; not a signed-link or attack demonstration."
+    },
+    {
+      "name": "SITL retargeted acknowledgement int",
+      "passed": true,
+      "detail": "Controlled relay rewrites an unsigned ACK and checksum; not a signed-link or attack demonstration."
+    },
+    {
+      "name": "SITL injected progress acknowledgement long",
+      "passed": true,
+      "detail": "Synthetic progress ACK inserted with same sequence as original; no signed-link or UI claim."
+    },
+    {
+      "name": "SITL injected progress acknowledgement int",
+      "passed": true,
+      "detail": "Synthetic progress ACK inserted with same sequence as original; no signed-link or UI claim."
+    },
+    {
+      "name": "SITL consecutive progress acknowledgement long",
+      "passed": true,
+      "detail": "Synthetic unsigned progress ACK and shifted final sequence; later stream not renumbered."
+    },
+    {
+      "name": "SITL consecutive progress acknowledgement int",
+      "passed": true,
+      "detail": "Synthetic unsigned progress ACK and shifted final sequence; later stream not renumbered."
+    },
+    {
+      "name": "SITL progress acknowledgement post-return drain",
+      "passed": true,
+      "detail": "One synthetic progress injection; harness drains TCP after return, without full application reader."
+    },
+    {
+      "name": "SITL stale acknowledgement consumed by later command",
+      "passed": true,
+      "detail": "Controlled relay, two identical read-only commands; no full application or aircraft impact established."
+    },
+    {
+      "name": "synthetic progress without terminal acknowledgement",
+      "passed": true,
+      "detail": "Single in-memory synthetic progress ACK; timing is one observation, not a guarantee."
+    },
+    {
+      "name": "SITL flight mode packet delivery normal",
+      "passed": true,
+      "detail": "One disarmed mode transition with controlled packet loss; not full UI or flight behavior."
+    },
+    {
+      "name": "SITL flight mode packet delivery drop_cmd",
+      "passed": true,
+      "detail": "One disarmed mode transition with controlled packet loss; not full UI or flight behavior."
+    },
+    {
+      "name": "SITL flight mode packet delivery drop_legacy",
+      "passed": true,
+      "detail": "One disarmed mode transition with controlled packet loss; not full UI or flight behavior."
+    },
+    {
+      "name": "SITL flight mode packet delivery drop_all",
+      "passed": true,
+      "detail": "One disarmed mode transition with controlled packet loss; not full UI or flight behavior."
+    },
+    {
+      "name": "SITL rejected numeric flight mode",
+      "passed": true,
+      "detail": "Invalid numeric mode in disarmed SITL; no UI or aircraft behavior claim."
+    },
+    {
+      "name": "SITL Copter string mode string",
+      "passed": true,
+      "detail": "Original ArduPilot assembly, test-patched Utilities data directory, local metadata and disarmed SITL; no UI."
+    },
+    {
+      "name": "SITL Copter string mode string_verified",
+      "passed": true,
+      "detail": "Original ArduPilot assembly, test-patched Utilities data directory, local metadata and disarmed SITL; no UI."
+    },
+    {
+      "name": "SITL rejected Copter mode name",
+      "passed": true,
+      "detail": "Invalid mode name, patched Utilities data directory and disarmed SITL; no UI or real vehicle."
+    },
+    {
+      "name": "SITL accelerometer calibration start",
+      "passed": true,
+      "detail": "Disarmed SITL calibration start only; no position confirmed, calibration completion or UI."
+    },
+    {
+      "name": "SITL accelerometer calibration first position",
+      "passed": true,
+      "detail": "Disarmed SITL, first position only; broadcast target fields observed; no UI or completed calibration."
+    },
+    {
+      "name": "SITL six-position accelerometer calibration",
+      "passed": true,
+      "detail": "Disarmed SITL calibration model and original library; no physical sensors or UI; no post-reboot persistence claim."
+    },
+    {
+      "name": "SITL accelerometer calibration reboot readback",
+      "passed": true,
+      "detail": "Fourteen simulator calibration values after one restart from copied storage; no physical hardware or UI."
+    },
+    {
+      "name": "SITL armed calibration rejection calibration_armed",
+      "passed": true,
+      "detail": "Simulator only; full-calibration library call returns before failed ACK; full UI untested."
+    },
+    {
+      "name": "SITL armed calibration rejection calibration_armed_observed",
+      "passed": true,
+      "detail": "Simulator only; full-calibration library call returns before failed ACK; full UI untested."
+    },
+    {
+      "name": "Instrumented armed calibration control calibration_control",
+      "passed": true,
+      "detail": "Direct handler invocation on unrendered control, patched Utilities and simulator; no rendered-screen interaction claim."
+    },
+    {
+      "name": "Instrumented armed calibration control calibration_control_retry",
+      "passed": true,
+      "detail": "Direct handler invocation on unrendered control, patched Utilities and simulator; no rendered-screen interaction claim."
+    },
+    {
+      "name": "Instrumented calibration control lifecycle",
+      "passed": true,
+      "detail": "Unrendered instrumented control, simulator disarm ACK captured, harness timed out; cause not established."
+    },
+    {
+      "name": "Instrumented calibration control pumped lifecycle",
+      "passed": true,
+      "detail": "Unrendered control; worker disarm plus message pump; normal app behavior untested."
+    },
+    {
+      "name": "Instrumented calibration backstage navigation",
+      "passed": true,
+      "detail": "Unrendered BackstageView page switch; patched Utilities and simulator; no physical UI interaction."
+    },
+    {
+      "name": "Instrumented calibration backstage disposal",
+      "passed": true,
+      "detail": "Instrumented unrendered page disposal before link close; first reflection attempt failed and is retained."
+    },
+    {
+      "name": "Disposed calibration control callback exceptions",
+      "passed": true,
+      "detail": "Unrendered disposed control and disposable SITL; caught callback exceptions logged; full app impact untested."
+    },
+    {
+      "name": "REA backstage page method records",
+      "passed": true,
+      "detail": "Static REA method and call references, not observed page navigation."
+    },
+    {
+      "name": "SITL synthetic terrain terrain_fixture",
+      "passed": true,
+      "detail": "Synthetic flat tile, patched Utilities and disposable simulator; first attempt timed out; no real terrain or UI."
+    },
+    {
+      "name": "SITL synthetic terrain terrain_fixture_stream",
+      "passed": true,
+      "detail": "Synthetic flat tile, patched Utilities and disposable simulator; first attempt timed out; no real terrain or UI."
+    },
+    {
+      "name": "SITL synthetic sloped terrain",
+      "passed": true,
+      "detail": "Synthetic slope and patched Utilities in disposable SITL; no real terrain or flight."
+    },
+    {
+      "name": "SITL all-void terrain fixture",
+      "passed": true,
+      "detail": "Synthetic all-void tile and patched Utilities in disposable SITL; finite observation, no real terrain or flight."
+    },
+    {
+      "name": "SITL dropped terrain block retry",
+      "passed": true,
+      "detail": "One deliberately dropped synthetic block; matching retransmission captured, no per-block vehicle acknowledgement or real terrain."
+    },
+    {
+      "name": "SITL typed fence roundtrip fence_roundtrip",
+      "passed": true,
+      "detail": "Original library, disposable SITL; selected item fields; first probe failed on mission-home assumption; no full UI or fence enforcement."
+    },
+    {
+      "name": "SITL typed fence roundtrip fence_roundtrip_retry",
+      "passed": true,
+      "detail": "Original library, disposable SITL; selected item fields; first probe failed on mission-home assumption; no full UI or fence enforcement."
+    },
+    {
+      "name": "SITL typed fence roundtrip fence_roundtrip_stable",
+      "passed": true,
+      "detail": "Original library, disposable SITL; selected item fields; first probe failed on mission-home assumption; no full UI or fence enforcement."
+    },
+    {
+      "name": "SITL typed fence roundtrip fence_highlevel",
+      "passed": true,
+      "detail": "Original library, disposable SITL; selected item fields; first probe failed on mission-home assumption; no full UI or fence enforcement."
+    },
+    {
+      "name": "SITL typed fence reboot fence-mission-reboot",
+      "passed": true,
+      "detail": "Copied simulator storage and standalone MAVLink readback; first attempt failed and cause is not established."
+    },
+    {
+      "name": "SITL typed fence reboot fence-mission-reboot-stable",
+      "passed": true,
+      "detail": "Copied simulator storage and standalone MAVLink readback; first attempt failed and cause is not established."
+    },
+    {
+      "name": "Synthetic fence and rally capability guards",
+      "passed": true,
+      "detail": "In-memory transport, zero capabilities and MAVLink 1; no simulator or full UI."
+    },
+    {
+      "name": "SITL legacy fence fence_legacy",
+      "passed": true,
+      "detail": "Selected Copter SITL binaries and setup; two source-built runs timed out, prebuilt run read back five points; no full UI."
+    },
+    {
+      "name": "SITL legacy fence fence_legacy_retry",
+      "passed": true,
+      "detail": "Selected Copter SITL binaries and setup; two source-built runs timed out, prebuilt run read back five points; no full UI."
+    },
+    {
+      "name": "SITL legacy fence fence_legacy_release",
+      "passed": true,
+      "detail": "Selected Copter SITL binaries and setup; two source-built runs timed out, prebuilt run read back five points; no full UI."
+    },
+    {
+      "name": "Legacy fence source and binary comparison",
+      "passed": true,
+      "detail": "Pinned source comparison and selected binary hashes; older binary exact build provenance remains unknown."
+    },
+    {
+      "name": "SITL legacy to typed fence readback",
+      "passed": true,
+      "detail": "One disarmed Copter 4.7.2 run; legacy closed triangle read through typed fence mission."
+    },
+    {
+      "name": "SITL typed to legacy fence readback",
+      "passed": true,
+      "detail": "One disarmed Copter 4.7.2 run; typed inclusion triangle read through legacy protocol."
+    },
+    {
+      "name": "SITL advanced fence legacy rejection and typed readback",
+      "passed": true,
+      "detail": "One disarmed Copter 4.7.2 run; legacy fetch refused with advanced fence warning; selected typed item fields preserved."
+    },
+    {
+      "name": "SITL legacy write replaces advanced fence",
+      "passed": true,
+      "detail": "One disarmed Copter 4.7.2 run; after a single legacy write, typed readback contained one return point."
+    },
+    {
+      "name": "SITL fence MAVFTP fence_mavftp",
+      "passed": true,
+      "detail": "Original libraries with and without harness packet pump; disarmed source-built Copter SITL, no planner UI."
+    },
+    {
+      "name": "SITL fence MAVFTP fence_mavftp_pumped",
+      "passed": true,
+      "detail": "Original libraries with and without harness packet pump; disarmed source-built Copter SITL, no planner UI."
+    },
+    {
+      "name": "SITL MAVFTP dropped fence writes",
+      "passed": true,
+      "detail": "Disarmed source-built Copter SITL; all 30 MAVFTP write requests dropped; earlier fence read back after normal return."
+    },
+    {
+      "name": "SITL MAVFTP loss fence_mavftp_partial",
+      "passed": true,
+      "detail": "Disarmed source-built Copter SITL; relay fault cases and two failed injection attempts retained."
+    },
+    {
+      "name": "SITL MAVFTP loss fence_mavftp_last_ack",
+      "passed": true,
+      "detail": "Disarmed source-built Copter SITL; relay fault cases and two failed injection attempts retained."
+    },
+    {
+      "name": "SITL MAVFTP loss fence_mavftp_last_ack_fixed",
+      "passed": true,
+      "detail": "Disarmed source-built Copter SITL; relay fault cases and two failed injection attempts retained."
+    },
+    {
+      "name": "SITL MAVFTP loss fence_mavftp_last_ack_retry",
+      "passed": true,
+      "detail": "Disarmed source-built Copter SITL; relay fault cases and two failed injection attempts retained."
+    },
+    {
+      "name": "REA mission packer and MAVFTP method records",
+      "passed": true,
+      "detail": "REA method metadata and IL hashes; not proof of full UI or protocol behavior."
+    },
+    {
+      "name": "Pinned MAVProxy source inventory",
+      "passed": true,
+      "detail": "Regular file bytes checked against captured Git blob IDs, exact or CRLF-normalized; one submodule not checked."
+    },
+    {
+      "name": "MAVProxy source SITL mavproxy-sitl-smoke",
+      "passed": true,
+      "detail": "Pinned source, disarmed local SITL, parameter display and empty mission; first two termination attempts retained."
+    },
+    {
+      "name": "MAVProxy source SITL mavproxy-sitl-smoke-2",
+      "passed": true,
+      "detail": "Pinned source, disarmed local SITL, parameter display and empty mission; first two termination attempts retained."
+    },
+    {
+      "name": "MAVProxy source SITL mavproxy-sitl-smoke-3",
+      "passed": true,
+      "detail": "Pinned source, disarmed local SITL, parameter display and empty mission; first two termination attempts retained."
+    },
+    {
+      "name": "MAVProxy SITL mission mavproxy_mission_normal",
+      "passed": true,
+      "detail": "Disarmed local SITL; normal or final-ACK loss and independent waypoint readback; earlier argument errors retained."
+    },
+    {
+      "name": "MAVProxy SITL mission mavproxy_mission_drop_ack",
+      "passed": true,
+      "detail": "Disarmed local SITL; normal or final-ACK loss and independent waypoint readback; earlier argument errors retained."
+    },
+    {
+      "name": "MAVProxy SITL mission mavproxy_mission_normal_retry",
+      "passed": true,
+      "detail": "Disarmed local SITL; normal or final-ACK loss and independent waypoint readback; earlier argument errors retained."
+    },
+    {
+      "name": "MAVProxy SITL mission mavproxy_mission_drop_ack_retry",
+      "passed": true,
+      "detail": "Disarmed local SITL; normal or final-ACK loss and independent waypoint readback; earlier argument errors retained."
+    },
+    {
+      "name": "MAVProxy SITL downstream forwarding default",
+      "passed": true,
+      "detail": "One disarmed SITL run; read-only downstream request, two relay reset observations retained; no physical vehicle."
+    },
+    {
+      "name": "MAVProxy SITL downstream forwarding disabled",
+      "passed": true,
+      "detail": "One disarmed SITL run; read-only downstream request, two relay reset observations retained; no physical vehicle."
+    },
+    {
+      "name": "MAVProxy SITL downstream forwarding disarmed",
+      "passed": true,
+      "detail": "One disarmed SITL run; read-only downstream request, two relay reset observations retained; no physical vehicle."
+    },
+    {
+      "name": "MAVProxy SITL armed forwarding mavproxy_forward_armed_block",
+      "passed": true,
+      "detail": "Disposable SITL only; initial arm rejection or forced simulated arm and confirmed disarm; read-only downstream request."
+    },
+    {
+      "name": "MAVProxy SITL armed forwarding mavproxy_forward_armed_block_retry",
+      "passed": true,
+      "detail": "Disposable SITL only; initial arm rejection or forced simulated arm and confirmed disarm; read-only downstream request."
+    },
+    {
+      "name": "MAVProxy SITL armed forwarding mavproxy_forward_armed_allow",
+      "passed": true,
+      "detail": "Disposable SITL only; initial arm rejection or forced simulated arm and confirmed disarm; read-only downstream request."
+    },
+    {
+      "name": "MAVProxy SITL armed forwarding mavproxy_forward_armed_allow_retry",
+      "passed": true,
+      "detail": "Disposable SITL only; initial arm rejection or forced simulated arm and confirmed disarm; read-only downstream request."
+    },
+    {
+      "name": "MAVProxy SITL rejected mission replacement",
+      "passed": true,
+      "detail": "One disarmed SITL rejection; MAVProxy reported sent then unsupported, independent readback matched selected baseline fields."
+    },
+    {
+      "name": "REA selected fence method records",
+      "passed": true,
+      "detail": "Static distributed assembly identities and call references only; no UI behavior inferred."
+    },
+    {
+      "name": "REA terrain responder method records",
+      "passed": true,
+      "detail": "Static REA records for distributed Utilities; runtime test uses modified Utilities."
+    },
+    {
+      "name": "REA accelerometer calibration method records",
+      "passed": true,
+      "detail": "Static REA method and call records only; no UI execution claim."
+    },
+    {
+      "name": "synthetic tracker mode translation",
+      "passed": true,
+      "detail": "Tracker mode list, direct in-memory method call; fresh structure used by ordinary string setter."
+    },
+    {
+      "name": "synthetic tracker string mode send",
+      "passed": true,
+      "detail": "In-memory tracker string setter; no vehicle, Copter metadata, or UI behavior claim."
+    },
+    {
+      "name": "REA flight mode method records",
+      "passed": true,
+      "detail": "Static build-local REA records; no runtime dispatch claim."
+    },
+    {
+      "name": "REA guided position method records",
+      "passed": true,
+      "detail": "Static REA records for the pinned assembly, not UI execution."
+    },
+    {
+      "name": "guided position disarmed packet capture",
+      "passed": true,
+      "detail": "Disarmed simulator and packet capture; target acceptance and flight not observed."
+    },
+    {
+      "name": "guided position airborne SITL capture",
+      "passed": true,
+      "detail": "One disposable source-built Copter simulation; no UI or physical aircraft."
+    },
+    {
+      "name": "Plane guided mission item and acknowledgment capture",
+      "passed": true,
+      "detail": "One disarmed source-built Plane run; no aircraft movement or UI claim."
+    },
+    {
+      "name": "Plane guided ACK loss plane_guided_drop_one",
+      "passed": true,
+      "detail": "Disarmed source-built Plane; withheld mission ACKs, not flight or UI."
+    },
+    {
+      "name": "Plane guided ACK loss plane_guided_drop_all",
+      "passed": true,
+      "detail": "Disarmed source-built Plane; withheld mission ACKs, not flight or UI."
+    },
+    {
+      "name": "Plane rejected guided target cache and mission readback",
+      "passed": true,
+      "detail": "Disarmed Plane; count and one mission item observed, not full mission or UI."
+    },
+    {
+      "name": "synthetic WPL import edge cases",
+      "passed": true,
+      "detail": "Synthetic library import; no GUI or vehicle validation claim."
+    },
+    {
+      "name": "SupportProxy source-built local tests",
+      "passed": true,
+      "detail": "Selected upstream tests with loopback bind interposer; no SITL, UI or remote network claim."
+    },
+    {
+      "name": "WPL NaN upload observation int",
+      "passed": true,
+      "detail": "Saved simulator observations; failure cause and physical behavior unproven."
+    },
+    {
+      "name": "WPL NaN upload observation float",
+      "passed": true,
+      "detail": "Saved simulator observations; failure cause and physical behavior unproven."
+    }
+  ],
+  "passed": true
+}

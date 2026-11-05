@@ -1,0 +1,7 @@
+{
+  "scope": "pymavlink parse, GPS instance 0 only; does not verify all plotted coordinates",
+  "samples": 391,
+  "minimum_m": 578.12,
+  "maximum_m": 584.09,
+  "last_m": 584.09
+}

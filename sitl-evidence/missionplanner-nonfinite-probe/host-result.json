@@ -1,0 +1,8 @@
+{
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "port": 6900,
+  "scope": "Disposable Copter SITL, local Windows library harness; no physical aircraft",
+  "errors": [],
+  "done_marker_seen": true,
+  "simulator_exit_code": 0
+}

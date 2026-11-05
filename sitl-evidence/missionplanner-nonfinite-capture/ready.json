@@ -1,0 +1,11 @@
+{
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "simulator_port": 6910,
+  "proxy_port": 6920,
+  "scope": "Passive localhost relay between original library harness and disposable Copter SITL",
+  "errors": [],
+  "bytes": {
+    "uplink": 0,
+    "downlink": 0
+  }
+}

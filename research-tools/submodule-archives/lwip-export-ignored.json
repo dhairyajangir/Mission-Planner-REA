@@ -1,0 +1,12 @@
+{
+  "commit": "a6bf350c679ed8ba042ad58bf81cc540d61bb605",
+  "files": [
+    ".gitattributes",
+    ".github/workflows/ci-linux.yml",
+    ".gitignore",
+    ".vscode/c_cpp_properties.json",
+    ".vscode/launch.json",
+    ".vscode/settings.json",
+    ".vscode/tasks.json"
+  ]
+}

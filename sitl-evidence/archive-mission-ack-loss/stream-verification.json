@@ -1,0 +1,74 @@
+{
+  "scope": "captured local proxy stream comparison and independent MAVLink decoding",
+  "dropped_request": {
+    "type": "MISSION_ACK",
+    "ack_type": 0
+  },
+  "forwarded_requests": [
+    {
+      "type": "MISSION_REQUEST",
+      "seq": 0
+    },
+    {
+      "type": "MISSION_REQUEST",
+      "seq": 1
+    }
+  ],
+  "forwarded_ack_types": [
+    1
+  ],
+  "readback_items": [
+    {
+      "type": "MISSION_ITEM_INT",
+      "seq": 1,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0
+    }
+  ],
+  "uplink_counts": {
+    "HEARTBEAT": 3,
+    "STATUSTEXT": 3,
+    "COMMAND_LONG": 6,
+    "AUTOPILOT_VERSION_REQUEST": 4,
+    "MISSION_REQUEST_LIST": 2,
+    "MISSION_COUNT": 1,
+    "TIMESYNC": 2,
+    "MISSION_ITEM_INT": 3,
+    "MISSION_REQUEST_INT": 1
+  },
+  "mission_counts": [
+    2
+  ],
+  "uploaded_items": [
+    {
+      "type": "MISSION_ITEM_INT",
+      "seq": 0,
+      "x": -353632610,
+      "y": 1491652300,
+      "z": 0.0
+    },
+    {
+      "type": "MISSION_ITEM_INT",
+      "seq": 1,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0
+    },
+    {
+      "type": "MISSION_ITEM_INT",
+      "seq": 1,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0
+    }
+  ],
+  "downlink_matches_filtered_input": true,
+  "uplink_unchanged": true,
+  "matched_dropped_frames": 1,
+  "input_sha256": "4e29d7a45d9e4c8627e02ea251a24369b9ed7172474176144a9034e7ecb609f9",
+  "output_sha256": "9835b772d3fd06adf6f6ad42bba683672e1ec382489cfb1378f13ac62633a276",
+  "uplink_sha256": "3fdcfaee5e6e573abb75669918b77cbc17e6b738a06fe0150bd8c84f3a34bb94",
+  "dropped_sha256": "4e1bf99a8b27b7b7431b310545e6780181ad8b044e13062c44a662a3977c6396",
+  "passed": true
+}

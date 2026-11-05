@@ -1,0 +1,295 @@
+{
+  "scope": "Build-local static REA method records; not runtime dispatch",
+  "assembly_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "index_sha256": "81e26a1f6c5271a3e3041777fb5fb2b3e9e4251a79e7fefc357da27a0cbea50e",
+  "methods": [
+    {
+      "token": "0x06000490",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "setMode",
+      "il_sha256": "1e54cb5837a8ed4d8fb15ddac18ba6fa20640eb0ccbb5fed823278910b187674",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 7,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 13,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 18,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 24,
+          "opcode": "call",
+          "name": "setMode",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x06000491",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "setMode",
+      "il_sha256": "a6d2963a0a376bf17a08febd759f6cd2caae096ce8bcde19e2d441ff56095824",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 14,
+          "opcode": "call",
+          "name": "translateMode",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 61,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.UInt32"
+        },
+        {
+          "il_offset": 75,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 80,
+          "opcode": "callvirt",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 90,
+          "opcode": "call",
+          "name": "setMode",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x06000492",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "setMode",
+      "il_sha256": "b6f08156c869c63fff79bc6d7f8257cfc27488a5bfe7bf122f66cf49b783ae8d",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 7,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 13,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 18,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 25,
+          "opcode": "call",
+          "name": "setMode",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x06000493",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "setMode",
+      "il_sha256": "dc5c699a21efd0b1ecd21ed83481a40e4ce3456a09a440ea6374ea06d339af00",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 64,
+          "opcode": "call",
+          "name": "doCommand",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 83,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 90,
+          "opcode": "call",
+          "name": "Sleep",
+          "type": "System.Threading.Thread"
+        },
+        {
+          "il_offset": 108,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x060004ae",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "translateMode",
+      "il_sha256": "30777e9adcd7de8470ff76ae15c9d40a00bbea5ad915d3c8e89ee6194c091b55",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 7,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 13,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 18,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 25,
+          "opcode": "call",
+          "name": "translateMode",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x060004af",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "translateMode",
+      "il_sha256": "827411d3a81e069d2c8fa7cffe72b45f0307fb0faa8ca8bfbde5b65e5808f3ee",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 17,
+          "opcode": "call",
+          "name": "op_Equality",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 35,
+          "opcode": "callvirt",
+          "name": "get_Item",
+          "type": "MissionPlanner.Mavlink.MAVList"
+        },
+        {
+          "il_offset": 50,
+          "opcode": "call",
+          "name": "getModesList",
+          "type": "MissionPlanner.ArduPilot.Common"
+        },
+        {
+          "il_offset": 57,
+          "opcode": "callvirt",
+          "name": "GetEnumerator",
+          "type": "System.Collections.Generic.List`1"
+        },
+        {
+          "il_offset": 67,
+          "opcode": "call",
+          "name": "get_Current",
+          "type": "Enumerator"
+        },
+        {
+          "il_offset": 75,
+          "opcode": "call",
+          "name": "get_Value",
+          "type": "System.Collections.Generic.KeyValuePair`2"
+        },
+        {
+          "il_offset": 80,
+          "opcode": "callvirt",
+          "name": "ToLower",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 86,
+          "opcode": "callvirt",
+          "name": "ToLower",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 91,
+          "opcode": "call",
+          "name": "op_Equality",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 110,
+          "opcode": "call",
+          "name": "get_Key",
+          "type": "System.Collections.Generic.KeyValuePair`2"
+        },
+        {
+          "il_offset": 122,
+          "opcode": "call",
+          "name": "MoveNext",
+          "type": "Enumerator"
+        },
+        {
+          "il_offset": 139,
+          "opcode": "callvirt",
+          "name": "Dispose",
+          "type": "System.IDisposable"
+        },
+        {
+          "il_offset": 165,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 170,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 192,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "scope": "Original COMMAND_INT method and disposable Copter SITL; frame-aware ACK-loss relay",
+  "case": "drop_one",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; read-only interval request; targeted downlink ACK loss",
+    "case": "drop_one",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7040,
+    "proxy_port": 7041,
+    "requests": [
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      },
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      }
+    ],
+    "dropped_acks": 1,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "ad5087d5c216fa51f7c405892852886d3b0e876275e569f7f8a9ab87927dbfb2",
+      "to_client_input.bin": "204a536a59703b9e4de9a887f6705ba1fe995abfd8b303e32ac6bb9768a09054",
+      "to_client_output.bin": "66a29cfc57a8ec34d8945ea1cf097a0f3e04252b892e91e93e26f3c1e7ea5a5c",
+      "to_sitl_input.bin": "8938f61d41d7b040900b985540bed1b9683fd5149146494ca613a4c5c11d69d3",
+      "to_sitl_output.bin": "8938f61d41d7b040900b985540bed1b9683fd5149146494ca613a4c5c11d69d3"
+    }
+  },
+  "requests": [
+    {
+      "mavpackettype": "COMMAND_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "frame": 0,
+      "command": 510,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 30.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "source_system": 255,
+      "source_component": 190
+    },
+    {
+      "mavpackettype": "COMMAND_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "frame": 0,
+      "command": 510,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 30.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "source_system": 255,
+      "source_component": 190
+    }
+  ],
+  "received_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    }
+  ],
+  "forwarded_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    }
+  ],
+  "dropped_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    }
+  ],
+  "bad_data_fragments": {
+    "to_sitl": 0,
+    "to_client_input": 164,
+    "to_client_output": 164,
+    "dropped": 0
+  },
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "COMMAND_RESULT=True"
+  ]
+}

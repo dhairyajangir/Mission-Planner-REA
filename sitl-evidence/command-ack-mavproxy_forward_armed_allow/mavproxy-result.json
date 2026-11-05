@@ -1,0 +1,41 @@
+{
+  "scope": "Disposable SITL only; synthetic forced arm, MAVProxy downstream read-only request, explicit disarm",
+  "case": "mavproxy_forward_armed_allow",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "configured": {
+    "mavfwd": "true",
+    "mavfwd_disarmed": "false"
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/research-tools/mavproxy-forward-armed-probe.py\", line 40, in <module>\n    result['armed_heartbeat']=wait_hb(True).to_dict()\n                              ^^^^^^^^^^^^^\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/research-tools/mavproxy-forward-armed-probe.py\", line 25, in wait_hb\n    raise TimeoutError('heartbeat armed='+str(armed))\nTimeoutError: heartbeat armed=True\n"
+  ],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7561",
+    "--out=udpout:127.0.0.1:7569",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--cmd=set requireexit true;set mavfwd true;set mavfwd_disarmed false;set mavfwd;set mavfwd_disarmed",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_forward_armed_allow"
+  ],
+  "initial_heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 3,
+    "base_mode": 81,
+    "custom_mode": 0,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "artifacts": {
+    "mavproxy.log": "a52e3007ae2fb4ed13c1eed745f7a1ee090706bcfb19edb4b7743d4e796e4ae7",
+    "udp-before.bin": "90338c41a249ce4a77cfce4cb4123a97e6ca229753671a75331ebbb550cfa557",
+    "udp-armed-before.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "udp-after.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control-uplink.bin": "e776db5e76630e1ac999e8e4d9ba5f327997d4361d8e8ee19b3e4bf5eb2ff42f",
+    "control-downlink.bin": "fcd56fac72ed4a64bff8f456029734a7ef18228030dcda722997223e8e4d2b7c"
+  }
+}

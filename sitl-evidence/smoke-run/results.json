@@ -1,0 +1,34 @@
+{
+  "scope": "ArduCopter 4.7.2 SITL, MAVLink client; Mission Planner not exercised",
+  "checks": {
+    "heartbeat": {
+      "passed": true,
+      "system": 1,
+      "component": 0,
+      "type": 2,
+      "autopilot": 3
+    },
+    "ATTITUDE": {
+      "passed": false
+    },
+    "GLOBAL_POSITION_INT": {
+      "passed": false
+    },
+    "SYS_STATUS": {
+      "passed": false
+    },
+    "parameter_read": {
+      "passed": true,
+      "name": "FRAME_CLASS",
+      "value": 0.0
+    },
+    "mission_list": {
+      "passed": true,
+      "count": 1
+    }
+  },
+  "errors": [],
+  "port": 6140,
+  "process_exit_code": 0,
+  "passed": false
+}

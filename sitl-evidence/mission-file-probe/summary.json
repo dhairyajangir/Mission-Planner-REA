@@ -1,0 +1,22 @@
+{
+  "scope": "Synthetic local files through distributed library; not a GUI or vehicle test",
+  "sha256": {
+    "sitl-evidence/mission-file-probe/normal.waypoints": "37a45aafd7a55cf697e0cfdeca99d56d1ad0c86db42efd0387c602dad9c58fbf",
+    "sitl-evidence/mission-file-probe/no-home.waypoints": "80850f0d35c36f6ed02a172ac9b9e35f67cc2101305c0e30c91843fed58298a3",
+    "sitl-evidence/mission-file-probe/flag-variant.waypoints": "80c6f8ec4277f23952dadfe0a5300908f70f5964440f893cdee83ea2039b71ea",
+    "sitl-evidence/mission-file-probe/generated.mission": "0da059a20e940763ef1cf8ebbae30d0a2724eb93a2f1e04b4962e4bc1d8b9980",
+    "sitl-evidence/mission-file-probe/probe.log": "fe282bcdc7f04342459a5607ab76fec1bd2773904fb6002f2ded58c9e9f76006",
+    "mission-planner-portable/MissionFileProbe.exe": "d5b484053a47d44dc253c4de148c2b004dc18dcc8eef9b7b6fed98a7ec38683b",
+    "mission-planner-portable/MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "research-tools/MissionFileProbe.cs": "05729a3a73faa02948f76c0299e4bb1e05cdc839287606644a674ca9eab54883"
+  },
+  "checks": {
+    "text_two_items": true,
+    "missing_home_inserted": true,
+    "flags_not_represented_in_dump": true,
+    "generated_item_type_null": true,
+    "generated_readback_only_home": true,
+    "simple_item_control_recovers_waypoint": true
+  },
+  "passed": true
+}

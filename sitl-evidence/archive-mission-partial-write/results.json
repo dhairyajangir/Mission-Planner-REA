@@ -1,0 +1,46 @@
+{
+  "scope": "Disposable source-built Copter SITL; standalone MAVLink client, no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "baseline": {
+      "passed": true,
+      "upload": {
+        "request_sequences": [
+          0,
+          1,
+          2
+        ],
+        "ack": 0,
+        "ack_name": "MAV_MISSION_ACCEPTED"
+      },
+      "readback": {
+        "count": 3,
+        "seq": 1,
+        "lat_e7": -353630000,
+        "lon_e7": 1491655000,
+        "alt_m": 20.0
+      }
+    },
+    "invalid_rejected": {
+      "passed": true,
+      "upload": {
+        "request_sequences": [
+          0,
+          1,
+          2
+        ],
+        "ack": 2,
+        "ack_name": "MAV_MISSION_UNSUPPORTED_FRAME"
+      }
+    }
+  },
+  "errors": [],
+  "post_rejection_readback": {
+    "count": 3,
+    "seq": 1,
+    "lat_e7": -353630000,
+    "lon_e7": 1491655000,
+    "alt_m": 25.0
+  },
+  "passed": true
+}

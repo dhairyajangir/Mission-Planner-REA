@@ -1,0 +1,92 @@
+[
+  {
+    "binary": "arduplane",
+    "sha256": "fc75bbfea710a9c41d863126b2f691976427a3263cacbb237ef5a72427b4187b",
+    "operation": "inspect-elf-notes",
+    "output": "arduplane-inspect-elf-notes.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "arduplane",
+    "sha256": "fc75bbfea710a9c41d863126b2f691976427a3263cacbb237ef5a72427b4187b",
+    "operation": "inspect-native-exports",
+    "output": "arduplane-inspect-native-exports.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "ardurover",
+    "sha256": "34d5ffdcd6e2c09d7df87dcfa0aa67132c345a8eaa02b61b10133f90e561fbb3",
+    "operation": "inspect-elf-notes",
+    "output": "ardurover-inspect-elf-notes.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "ardurover",
+    "sha256": "34d5ffdcd6e2c09d7df87dcfa0aa67132c345a8eaa02b61b10133f90e561fbb3",
+    "operation": "inspect-native-exports",
+    "output": "ardurover-inspect-native-exports.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "ardusub",
+    "sha256": "7399cf9018dbe1c5136e1e326d7bcc0978d679c07daa7f4e96a3fc78b221d07c",
+    "operation": "inspect-elf-notes",
+    "output": "ardusub-inspect-elf-notes.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "ardusub",
+    "sha256": "7399cf9018dbe1c5136e1e326d7bcc0978d679c07daa7f4e96a3fc78b221d07c",
+    "operation": "inspect-native-exports",
+    "output": "ardusub-inspect-native-exports.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "blimp",
+    "sha256": "740ebf25ff675ed85f93e9cf803db8b80d3312f873faf711bc40a60ed961395c",
+    "operation": "inspect-elf-notes",
+    "output": "blimp-inspect-elf-notes.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "blimp",
+    "sha256": "740ebf25ff675ed85f93e9cf803db8b80d3312f873faf711bc40a60ed961395c",
+    "operation": "inspect-native-exports",
+    "output": "blimp-inspect-native-exports.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "antennatracker",
+    "sha256": "3ff790c267b02f1b4b9f9121c3005b00085878a77b88448511b20aa7f455de36",
+    "operation": "inspect-elf-notes",
+    "output": "antennatracker-inspect-elf-notes.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "binary": "antennatracker",
+    "sha256": "3ff790c267b02f1b4b9f9121c3005b00085878a77b88448511b20aa7f455de36",
+    "operation": "inspect-native-exports",
+    "output": "antennatracker-inspect-native-exports.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  }
+]

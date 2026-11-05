@@ -1,0 +1,213 @@
+{
+  "assembly_sha256": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a",
+  "requested_names": [
+    "Accord.Vision.GroupMatching",
+    "Accord.Vision.GroupMatching`1",
+    "Accord.Vision.Tools",
+    "Accord.Vision.Tracking.MatchingTracker",
+    "Accord.Vision.Tracking.CamshiftMode",
+    "Accord.Vision.Tracking.Camshift",
+    "Accord.Vision.Tracking.HslBlobTracker",
+    "Accord.Vision.Tracking.IObjectTracker",
+    "Accord.Vision.Tracking.AxisOrientation",
+    "Accord.Vision.Tracking.TrackingObject",
+    "Accord.Vision.Motion.BlobCountingObjectsProcessing",
+    "Accord.Vision.Motion.CustomFrameDifferenceDetector",
+    "Accord.Vision.Motion.GridMotionAreaProcessing",
+    "Accord.Vision.Motion.IMotionDetector",
+    "Accord.Vision.Motion.IMotionProcessing",
+    "Accord.Vision.Motion.MotionAreaHighlighting",
+    "Accord.Vision.Motion.MotionBorderHighlighting",
+    "Accord.Vision.Motion.MotionDetector",
+    "Accord.Vision.Motion.SimpleBackgroundModelingDetector",
+    "Accord.Vision.Motion.TwoFramesDifferenceDetector",
+    "Accord.Vision.Detection.HaarCascade",
+    "Accord.Vision.Detection.HaarCascadeWriter",
+    "Accord.Vision.Detection.HaarClassifier",
+    "<>c__DisplayClass10_0",
+    "Accord.Vision.Detection.HaarCascadeStage",
+    "Accord.Vision.Detection.HaarCascadeSerializationObject",
+    "Accord.Vision.Detection.HaarFeatureNode",
+    "Accord.Vision.Detection.HaarFeature",
+    "Accord.Vision.Detection.HaarRectangle",
+    "Accord.Vision.Detection.IObjectDetector",
+    "Accord.Vision.Detection.ObjectDetectorSearchMode",
+    "Accord.Vision.Detection.ObjectDetectorScalingMode",
+    "Accord.Vision.Detection.HaarObjectDetector",
+    "<>c__DisplayClass56_0",
+    "<>c__DisplayClass56_1",
+    "<>c__DisplayClass56_2",
+    "Accord.Vision.Detection.Cascades.FaceHaarCascade",
+    "Accord.Vision.Detection.Cascades.NoseHaarCascade",
+    "Accord.Imaging.BagOfVisualWords",
+    "Accord.Imaging.BagOfVisualWords`1",
+    "Accord.Imaging.BaseBagOfVisualWords`5",
+    "<>c__DisplayClass1_0",
+    "<>c",
+    "<>c__DisplayClass22_0",
+    "<>c__DisplayClass23_0",
+    "<>c__DisplayClass24_0",
+    "<>c__DisplayClass25_0",
+    "<>c__DisplayClass26_0",
+    "<>c__DisplayClass27_0",
+    "Accord.Imaging.BagOfVisualWords`4",
+    "Accord.Imaging.BagOfVisualWords`2",
+    "Accord.Imaging.KNearestNeighborMatching",
+    "Accord.Imaging.KNearestNeighborMatching`1",
+    "Accord.Imaging.RansacFundamentalEstimator",
+    "<>c__DisplayClass13_0",
+    "Accord.Imaging.RansacHomographyEstimator",
+    "<>c__DisplayClass17_0",
+    "<PrivateImplementationDetails>",
+    "__StaticArrayInitTypeSize=20"
+  ],
+  "batches": [
+    {
+      "names": [
+        "Accord.Vision.GroupMatching",
+        "Accord.Vision.GroupMatching`1",
+        "Accord.Vision.Tools",
+        "Accord.Vision.Tracking.MatchingTracker",
+        "Accord.Vision.Tracking.CamshiftMode",
+        "Accord.Vision.Tracking.Camshift",
+        "Accord.Vision.Tracking.HslBlobTracker",
+        "Accord.Vision.Tracking.IObjectTracker"
+      ],
+      "status": "complete",
+      "evidence": "f0bc88251ede57c6.json.gz",
+      "types": 8,
+      "methods": 93
+    },
+    {
+      "names": [
+        "Accord.Vision.Tracking.AxisOrientation",
+        "Accord.Vision.Tracking.TrackingObject",
+        "Accord.Vision.Motion.BlobCountingObjectsProcessing",
+        "Accord.Vision.Motion.CustomFrameDifferenceDetector",
+        "Accord.Vision.Motion.GridMotionAreaProcessing",
+        "Accord.Vision.Motion.IMotionDetector",
+        "Accord.Vision.Motion.IMotionProcessing",
+        "Accord.Vision.Motion.MotionAreaHighlighting"
+      ],
+      "status": "complete",
+      "evidence": "3e5c24094bb946f3.json.gz",
+      "types": 8,
+      "methods": 84
+    },
+    {
+      "names": [
+        "Accord.Vision.Motion.MotionBorderHighlighting",
+        "Accord.Vision.Motion.MotionDetector",
+        "Accord.Vision.Motion.SimpleBackgroundModelingDetector",
+        "Accord.Vision.Motion.TwoFramesDifferenceDetector",
+        "Accord.Vision.Detection.HaarCascade",
+        "Accord.Vision.Detection.HaarCascadeWriter",
+        "Accord.Vision.Detection.HaarClassifier",
+        "<>c__DisplayClass10_0"
+      ],
+      "status": "complete",
+      "evidence": "a867b727e5f9c3af.json.gz",
+      "types": 8,
+      "methods": 79
+    },
+    {
+      "names": [
+        "Accord.Vision.Detection.HaarCascadeStage",
+        "Accord.Vision.Detection.HaarCascadeSerializationObject",
+        "Accord.Vision.Detection.HaarFeatureNode",
+        "Accord.Vision.Detection.HaarFeature",
+        "Accord.Vision.Detection.HaarRectangle",
+        "Accord.Vision.Detection.IObjectDetector",
+        "Accord.Vision.Detection.ObjectDetectorSearchMode",
+        "Accord.Vision.Detection.ObjectDetectorScalingMode"
+      ],
+      "status": "complete",
+      "evidence": "400e1b03dab9306e.json.gz",
+      "types": 8,
+      "methods": 76
+    },
+    {
+      "names": [
+        "Accord.Vision.Detection.HaarObjectDetector",
+        "<>c__DisplayClass56_0",
+        "<>c__DisplayClass56_1",
+        "<>c__DisplayClass56_2"
+      ],
+      "status": "complete",
+      "evidence": "503dee9a156d37f0.json.gz",
+      "types": 4,
+      "methods": 35
+    },
+    {
+      "names": [
+        "Accord.Vision.Detection.Cascades.FaceHaarCascade"
+      ],
+      "status": "complete",
+      "evidence": "d096b7f3d8528909.json.gz",
+      "types": 1,
+      "methods": 1
+    },
+    {
+      "names": [
+        "Accord.Vision.Detection.Cascades.NoseHaarCascade"
+      ],
+      "status": "complete",
+      "evidence": "1e58663876baee94.json.gz",
+      "types": 1,
+      "methods": 1
+    },
+    {
+      "names": [
+        "Accord.Imaging.BagOfVisualWords",
+        "Accord.Imaging.BagOfVisualWords`1"
+      ],
+      "status": "complete",
+      "evidence": "31cd8b35d732016e.json.gz",
+      "types": 2,
+      "methods": 17
+    },
+    {
+      "names": [
+        "Accord.Imaging.BaseBagOfVisualWords`5",
+        "<>c__DisplayClass1_0",
+        "<>c",
+        "<>c__DisplayClass22_0",
+        "<>c__DisplayClass23_0",
+        "<>c__DisplayClass24_0",
+        "<>c__DisplayClass25_0",
+        "<>c__DisplayClass26_0"
+      ],
+      "status": "complete",
+      "evidence": "8a068e048df726e0.json.gz",
+      "types": 8,
+      "methods": 55
+    },
+    {
+      "names": [
+        "<>c__DisplayClass27_0",
+        "Accord.Imaging.BagOfVisualWords`4",
+        "Accord.Imaging.BagOfVisualWords`2",
+        "Accord.Imaging.KNearestNeighborMatching",
+        "Accord.Imaging.KNearestNeighborMatching`1",
+        "Accord.Imaging.RansacFundamentalEstimator",
+        "<>c__DisplayClass13_0",
+        "Accord.Imaging.RansacHomographyEstimator"
+      ],
+      "status": "complete",
+      "evidence": "8d614239e98b0248.json.gz",
+      "types": 8,
+      "methods": 42
+    },
+    {
+      "names": [
+        "<>c__DisplayClass17_0",
+        "<PrivateImplementationDetails>",
+        "__StaticArrayInitTypeSize=20"
+      ],
+      "status": "complete",
+      "evidence": "b377f676737bae75.json.gz",
+      "types": 3,
+      "methods": 2
+    }
+  ]
+}

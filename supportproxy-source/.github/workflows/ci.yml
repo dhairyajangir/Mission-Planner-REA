@@ -1,0 +1,85 @@
+name: CI Tests
+
+on:
+  push:
+    branches: [ main, develop, 'pr-*' ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+
+    # Don't set up Python 3.12, use system default Python to match python3-tdb package
+    - name: Setup
+      run: |
+        set -e  # Exit on any error
+        echo "Running CI setup script..."
+        scripts/setup_ci.sh
+        echo "Setup completed successfully"
+
+    - name: Run Tests
+      run: |
+        set -e  # Exit on any error
+        echo "Running test script..."
+        scripts/run_tests.sh -j 16
+        echo "All tests completed successfully"
+
+  docker-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+
+    - name: Initialize submodules
+      run: |
+        git submodule update --init --recursive
+
+    - name: Build Docker image
+      run: |
+        docker build -t supportproxy-test -f docker/Dockerfile .
+
+    - name: Test Docker container
+      run: |
+        # Test that the binary exists and is executable
+        docker run --rm --entrypoint=/bin/bash supportproxy-test -c "ls -la /app/supportproxy && test -x /app/supportproxy && echo '/app/supportproxy is executable'"
+
+        # Create a volume for persistent data as shown in README
+        docker volume create supportproxy-test-data
+
+        # Initialize the database in the volume (as shown in README)
+        docker run --rm -v supportproxy-test-data:/app/data supportproxy-test keydb.py initialise
+
+        # Add a test user to the database (as shown in README)
+        docker run --rm -v supportproxy-test-data:/app/data supportproxy-test keydb.py add 10001 10002 'TestUser' TestPass123
+
+        # Test that the container runs supportproxy and creates proxy.log
+        docker run --rm --name supportproxy-test-run -v supportproxy-test-data:/app/data -d supportproxy-test
+        sleep 3
+
+        # Check if proxy.log is being created/filled
+        if docker exec supportproxy-test-run test -f /app/data/proxy.log; then
+          echo 'SupportProxy is running and proxy.log exists'
+          log_size=$(docker exec supportproxy-test-run wc -c /app/data/proxy.log | cut -d' ' -f1)
+          echo "proxy.log size: $log_size bytes"
+          if [ "$log_size" -gt 0 ]; then
+            echo 'proxy.log is being filled - SupportProxy is working correctly'
+          else
+            echo 'proxy.log exists but is empty'
+          fi
+          docker stop supportproxy-test-run
+        else
+          echo 'SupportProxy container failed - proxy.log not found'
+          docker stop supportproxy-test-run
+          exit 1
+        fi
+
+        # Cleanup
+        docker volume rm supportproxy-test-data

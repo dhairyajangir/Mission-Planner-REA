@@ -1,0 +1,268 @@
+{
+  "scope": "Direct reflection on unrendered control; patched Utilities; forced-arm disposable simulator only",
+  "relay": {
+    "scope": "Disposable Copter SITL; armed-state calibration rejection; no deliberate packet loss",
+    "case": "calibration_control",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7300,
+    "proxy_port": 7301,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "1df8ee2eba7d19a45a7928ba94c08fa936efe59161f13ea7b50d8124a31a6aaf",
+      "to_client_output.bin": "1df8ee2eba7d19a45a7928ba94c08fa936efe59161f13ea7b50d8124a31a6aaf",
+      "to_sitl_input.bin": "c9cd906f4ec027d0ee8dec6325a8a687050ea01d76ada7ac9696b6095ca821d5",
+      "to_sitl_output.bin": "c9cd906f4ec027d0ee8dec6325a8a687050ea01d76ada7ac9696b6095ca821d5"
+    }
+  },
+  "assembly_hashes": {
+    "original_main": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "test_main": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "original_library": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "test_library": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "original_utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "test_utilities": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022"
+  },
+  "probe_source_sha256": "e432bf2485d2291b3cc16efbf474186d36b77f1f3cb3312a06a7a621b98d0977",
+  "probe_exe_sha256": "89929ddd6df958a6bd06dab07ca856b1f13b2065a162cc5c43a9d33ceab25939",
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 5,
+      "text": "Disarm to allow calibration",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "ARM_COMMAND_RETURN=True",
+    "ARMED_HEARTBEAT=True",
+    "BEFORE_ACTIVE=False BUTTON_ENABLED=True BUTTON_TEXT=Calibrate Accel",
+    "AFTER_CLICK_ACTIVE=True BUTTON_ENABLED=True BUTTON_TEXT=Click when Done",
+    "SAW_FAILED_ACK=True SAW_NOTICE=True",
+    "AFTER_REJECTION_ACTIVE=True BUTTON_ENABLED=True BUTTON_TEXT=Click when Done LABEL=Disarm to allow calibration",
+    "DISARM_RETURN=True"
+  ]
+}

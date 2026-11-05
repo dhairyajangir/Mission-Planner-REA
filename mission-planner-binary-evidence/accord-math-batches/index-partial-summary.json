@@ -1,0 +1,15 @@
+{
+  "assembly_sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+  "database_sha256": "d75e14f4bdac066476148460260d46ac02bc486d31e100345dad017d7a9dd9a6",
+  "coverage_summary_sha256": "47e0433659d65f69994671429477434e89a1ef83ec1cfda75f6e17f4ee0f94d1",
+  "manifest_sha256": "c5c2fd91ab4da3524734daacde9e4834065d01074616b0b98faebb8c2560ac70",
+  "counts": {
+    "types": 465,
+    "methods": 4954,
+    "calls": 16186
+  },
+  "complete": false,
+  "expected_types": 466,
+  "expected_methods": 12532,
+  "scope": "static REA batch results; no runtime execution claim"
+}

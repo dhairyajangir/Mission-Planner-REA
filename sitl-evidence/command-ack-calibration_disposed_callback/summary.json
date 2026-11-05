@@ -1,0 +1,208 @@
+{
+  "scope": "Unrendered disposed control callbacks; patched Utilities; disposable SITL",
+  "relay": {
+    "scope": "Disposable Copter SITL; calibration lifecycle interaction; no deliberate packet loss",
+    "case": "calibration_disposed_callback",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7380,
+    "proxy_port": 7381,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 176,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "8b623e7d6dffb29bc7c66f8c840731eba655124157453b87d2a5c85db797e742",
+      "to_client_output.bin": "8b623e7d6dffb29bc7c66f8c840731eba655124157453b87d2a5c85db797e742",
+      "to_sitl_input.bin": "19e41489db773b2298052b49e5f41a26d5530da4c8a8c0e96d33d1c5380e7821",
+      "to_sitl_output.bin": "19e41489db773b2298052b49e5f41a26d5530da4c8a8c0e96d33d1c5380e7821"
+    }
+  },
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 2989.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "verified_probe_lines": [
+    "ARMED_HEARTBEAT=True",
+    "SUBSCRIPTIONS_BEFORE_DEACTIVATE=2",
+    "AFTER_DEACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "SAME_CONTROL=True",
+    "AFTER_REACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "AFTER_RESTART_ACTIVE=True BUTTON_TEXT=Click when Done SUBSCRIPTIONS=4",
+    "RESTART_ACK_RESULT=4",
+    "DISARM_RETURN=True",
+    "AFTER_CLOSE_DISPOSED=True SUBSCRIPTIONS=4",
+    "START_AFTER_CLOSE=True",
+    "STATUS_AFTER_CLOSE_COUNT=3"
+  ],
+  "probe_exit": 0,
+  "library_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "main_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "controls_sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+  "utilities_sha256": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022",
+  "probe_source_sha256": "5d79ed0e2716d1cf81d978b33e46eaaec41dd1bee07d16d4b6c2bfb1e7f326dc",
+  "probe_exe_sha256": "50e713d27363c08b5357017564f6d54a14da5b6b88bfb0593091c4df76f813e1",
+  "log_sha256": "e1038f928719a238d6b527e7e6fbdc76561254fb9fb84e9949d40e95f60afcaf",
+  "disposed_callback_error": "System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.",
+  "disposed_callback_error_count": 22
+}

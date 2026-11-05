@@ -1,0 +1,76 @@
+{
+  "scope": "synthetic APJ-shaped fixtures, independent zlib readback; no firmware flash",
+  "checks": [
+    {
+      "file": "exact-4.apj",
+      "sha256": "fe3a19bf8abd10b3ec962230505be3252dac52b1212fbedc54509e4f785243c5",
+      "declared": 4,
+      "actual_decompressed_bytes": 4,
+      "observed": {
+        "status": "OK",
+        "board_id": 9999,
+        "declared": 4,
+        "returned_length": 4,
+        "returned_hex": "41424344"
+      },
+      "passed": true
+    },
+    {
+      "file": "short-image.apj",
+      "sha256": "88a28fabcfff0d9b024f26e304550fab7696b092e47a999c5e35504c1c0af83b",
+      "declared": 8,
+      "actual_decompressed_bytes": 4,
+      "observed": {
+        "status": "OK",
+        "board_id": 9999,
+        "declared": 8,
+        "returned_length": 8,
+        "returned_hex": "4142434400000000"
+      },
+      "passed": true
+    },
+    {
+      "file": "exact-3.apj",
+      "sha256": "c4517e7f7d10efab051958e25a04f6cfa29b2f6b42b67120de7147f3ee65fd42",
+      "declared": 3,
+      "actual_decompressed_bytes": 3,
+      "observed": {
+        "status": "OK",
+        "board_id": 9999,
+        "declared": 3,
+        "returned_length": 8,
+        "returned_hex": "4142430000000000"
+      },
+      "passed": true
+    },
+    {
+      "file": "exact-5.apj",
+      "sha256": "ec559b3731d680906cdce4d532492d0110d288a806c26744d458b493988afa8a",
+      "declared": 5,
+      "actual_decompressed_bytes": 5,
+      "observed": {
+        "status": "OK",
+        "board_id": 9999,
+        "declared": 5,
+        "returned_length": 8,
+        "returned_hex": "4142434445000000"
+      },
+      "passed": true
+    },
+    {
+      "file": "exact-7.apj",
+      "sha256": "4470d80ee8cb22ed7b397bb2a25ac58f98afb604af8ed88fd8c7cfbb5ae47362",
+      "declared": 7,
+      "actual_decompressed_bytes": 7,
+      "observed": {
+        "status": "OK",
+        "board_id": 9999,
+        "declared": 7,
+        "returned_length": 12,
+        "returned_hex": "414243444546470000000000"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

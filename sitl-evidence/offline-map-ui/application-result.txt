@@ -1,0 +1,2 @@
+scope=modified app, plugin-disabled, synthetic tiles, cache-only
+applied=True

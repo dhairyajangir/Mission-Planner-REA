@@ -1,0 +1,8 @@
+{
+  "scope": "isolated REA 6.8.0 CLI copy; raised managed representation budget only",
+  "source_file": "dist\\cli-runtime\\ManagedSnapshot-C5h4avgc.js",
+  "old_limit_bytes": 67108864,
+  "new_limit_bytes": 268435456,
+  "original_sha256": "ed1cdc5391a710019ba18f7c55e00c2ffe937368617d6340260a06c3c43dd741",
+  "modified_sha256": "b4284c5d9832f88ac83e544c1bbc8e6842beb6f76e081a45382058a9204572d4"
+}

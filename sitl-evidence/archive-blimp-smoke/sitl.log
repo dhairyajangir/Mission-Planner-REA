@@ -1,0 +1,26 @@
+Starting Blimp model
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'Blimp'
+Starting SITL input
+Using Irlock at port : 9805
+Using \clock topic for DDS timing: disabled
+bind port 6560 for SERIAL0
+SERIAL0 on TCP port 6560
+Waiting for connection ....
+Connection on serial port 6560
+Loaded defaults from @ROMFS/default_params/blimp.parm
+bind port 6562 for SERIAL1
+SERIAL1 on TCP port 6562
+bind port 6563 for SERIAL2
+SERIAL2 on TCP port 6563
+Loaded defaults from @ROMFS/default_params/blimp.parm
+validate_structures:546: Validating structures
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm
+Closed connection on SERIAL0
+Exitting

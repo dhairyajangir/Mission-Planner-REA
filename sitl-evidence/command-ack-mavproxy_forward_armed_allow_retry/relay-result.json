@@ -1,0 +1,29 @@
+{
+  "scope": "Disposable Copter SITL; MAVProxy downstream read-only request forwarding",
+  "case": "mavproxy_forward_armed_allow_retry",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "control-downlink.bin": "c6a7d1e44eb08dbe5eb5801f4a300bd49dbeae98d680ea6b98d626d55bd2aef9",
+    "control-uplink.bin": "e13def0f41289e6fb0910f4a7470807597a5223c07523370b473d907dc208ce0",
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "request.bin": "32bc25f7ce492ec5f66139a279e395d0bd8c805a21273ed17efa079ec0e94c88",
+    "to_client_input.bin": "b4632bc074dc2112191d697d17dacb15e4554938d193c0a5314c32a0c164e92f",
+    "to_client_output.bin": "b4632bc074dc2112191d697d17dacb15e4554938d193c0a5314c32a0c164e92f",
+    "to_sitl_input.bin": "7ed0905930903569cd6893d764f692d16d59aabe4197dd75070a7e30fa747d94",
+    "to_sitl_output.bin": "7ed0905930903569cd6893d764f692d16d59aabe4197dd75070a7e30fa747d94",
+    "udp-after.bin": "f45bebbd07ab1e77dc4617660ba032ba167697ac71dae676e33ba131590f484a",
+    "udp-armed-before.bin": "1793304cefdf2fcaf3ddb2b3ddb2c5c16ace70fcfdf6ffcd474078abf6d6c27f",
+    "udp-before.bin": "4f70b46e3f9d8d7df7448b8afd839a2acd901cd122f0f6f35d909d25575092dd"
+  }
+}

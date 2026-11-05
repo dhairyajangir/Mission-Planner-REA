@@ -1,0 +1,31 @@
+{
+  "assembly_sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+  "requested_names": [
+    "Accord.Math.VectorType",
+    "Accord.Math.Elementwise"
+  ],
+  "batches": [
+    {
+      "names": [
+        "Accord.Math.VectorType"
+      ],
+      "status": "complete",
+      "evidence": "529d3b1614e982ed.json.gz",
+      "types": 1,
+      "methods": 0,
+      "tool_variant": "original"
+    },
+    {
+      "names": [
+        "Accord.Math.Elementwise"
+      ],
+      "status": "complete",
+      "evidence": "raised-accord-math-core-accord-math-elementwise.json.gz",
+      "tool_variant": "raised-budget",
+      "types": 1,
+      "methods": 10540
+    }
+  ],
+  "source_manifest_sha256": "089258e02ac15f3b8023c60c2b767a6c2e67a1614b6c16732d99cf6c0a9bf5e4",
+  "modification_sha256": "cb397f1fdbc92069f0e2a25a38b6273906d080cca0783a01bbf74914ce6d83fa"
+}

@@ -1,0 +1,4 @@
+scope=modified app, plugins disabled, synthetic localhost MJPEG
+image_found=False
+stop_called=True
+hud_cleared=True

@@ -1,0 +1,25 @@
+{
+  "scope": "Synthetic parameter files through distributed utility library; no GUI or vehicle write",
+  "sha256": {
+    "sitl-evidence/param-file-probe/normal.param": "c33e38d8e900771a39c032ac437ba86497d02f4418598c0ff75f7af5b5778b71",
+    "sitl-evidence/param-file-probe/bad-excluded.param": "c82116ec181e27d5f79109e4dfc4d8e027a7c80a593c28fd9d54d209ca47839f",
+    "sitl-evidence/param-file-probe/indented-comment.param": "1c911b9de8f8e8a389f1478e635a56606d3eb476a9ca821d667b6da432829cf4",
+    "sitl-evidence/param-file-probe/bad-value.param": "823e04d925f039b7d1ec59b0db5560788e36cd12addd60eb33c45b49ea149275",
+    "sitl-evidence/param-file-probe/saved.param": "d9080767b44b81e250faddbc289676533d04b6a2927af2db13b93c75a6106d9c",
+    "sitl-evidence/param-file-probe/probe.log": "135b87a52e4cb71210d9d8e0d6708e44156e010e72505f64aba858c5ca43f997",
+    "research-tools/ParamFileProbe.cs": "c9fd158362897929d2a97dd6e85556cd7ecf11feed64c288f8d79930943217ee",
+    "mission-planner-portable/ParamFileProbe.exe": "3de11fd5dea653ba5d76739f1a58bab5828046bf2505d386b76f8894a42d1eba",
+    "mission-planner-portable/MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71"
+  },
+  "checks": {
+    "duplicate_last_wins": true,
+    "excluded_keys_not_loaded": true,
+    "comma_delimiter": true,
+    "nonfinite_parsed": true,
+    "excluded_invalid_still_errors": true,
+    "indented_comment_errors": true,
+    "invalid_value_errors": true,
+    "de_culture_save_and_load": true
+  },
+  "passed": true
+}

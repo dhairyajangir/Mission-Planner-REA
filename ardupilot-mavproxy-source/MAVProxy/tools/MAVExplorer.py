@@ -1,0 +1,2815 @@
+#!/usr/bin/env python3
+
+'''
+log analysis program
+Andrew Tridgell December 2014
+'''
+
+import copy
+import sys
+import time
+import os
+import fnmatch
+import threading
+import shlex
+import traceback
+from types import SimpleNamespace
+from math import *
+
+os.environ['MAVLINK20'] = '1'
+
+from MAVProxy.modules.lib import multiproc
+from MAVProxy.modules.lib import grapher
+from MAVProxy.modules.lib import rline
+from MAVProxy.modules.lib import wxconsole
+from MAVProxy.modules.lib import param_help
+from MAVProxy.modules.lib import param_ftp
+from MAVProxy.modules.lib import log_mission
+from MAVProxy.modules.lib.graph_ui import Graph_UI
+from pymavlink.mavextra import *
+from MAVProxy.modules.lib.mp_menu import *
+import MAVProxy.modules.lib.mp_util as mp_util
+from pymavlink import mavutil
+from pymavlink import mavwp
+from pymavlink import DFReader
+from MAVProxy.modules.lib.mp_settings import MPSettings, MPSetting
+from MAVProxy.modules.mavproxy_map3d.map3d import (
+    MISSION_LABEL_SIZE, MISSION_LABEL_SIZES, MISSION_STYLES)
+from MAVProxy.modules.lib import wxsettings
+from MAVProxy.modules.lib.graphdefinition import GraphDefinition
+from lxml import objectify
+
+import importlib
+import importlib.resources
+
+from builtins import input
+import datetime
+import matplotlib
+import struct
+
+grui = []
+flightmodes = None
+
+# Global var to hold the GUI menu element
+TopMenu = None
+
+# have we decoded MAVFtp params?
+done_ftp_decode = False
+
+def xml_unescape(e):
+    '''unescape < amd >'''
+    e = e.replace('&gt;', '>')
+    e = e.replace('&lt;', '<')
+    return e
+
+def xml_escape(e):
+    '''escape < amd >'''
+    e = e.replace('>', '&gt;')
+    e = e.replace('<', '&lt;')
+    return e
+
+def timestring(msg):
+    '''return string for msg timestamp'''
+    ts_ms = int(msg._timestamp * 1000.0) % 1000
+    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg._timestamp)) + ".%.03u" % ts_ms
+
+class MEStatus(object):
+    '''status object to conform with mavproxy structure for modules'''
+    def __init__(self):
+        self.msgs = {}
+
+class XLimits(object):
+    '''A class capturing timestamp limits'''
+    def __init__(self):
+        self.last_xlim = None
+        self.xlim_low = None
+        self.xlim_high = None
+
+    def timestamp_in_range(self, timestamp):
+        '''check if a timestamp is in current limits
+        return -1 if too low
+        return 1 if too high
+        return 0 if in range
+        '''
+        if self.xlim_low is not None and timestamp < self.xlim_low:
+            return -1
+        if self.xlim_high is not None and timestamp > self.xlim_high:
+            return 1
+        return 0    
+
+xlimits = XLimits()
+
+class MEState(object):
+    '''holds state of MAVExplorer'''
+    def __init__(self):
+        self.input_queue = multiproc.Queue()
+        self.rl = None
+        self.console = wxconsole.MessageConsole(title='MAVExplorer')
+        self.exit = False
+        self.status = MEStatus()
+        self.settings = MPSettings(
+            [ MPSetting('marker', str, '+', 'data marker', tab='Graph'),
+              MPSetting('condition', str, None, 'condition'),
+              MPSetting('xaxis', str, None, 'xaxis'),
+              MPSetting('linestyle', str, None, 'linestyle'),
+              MPSetting('show_flightmode', int, 1, 'show flightmode'),
+              MPSetting('sync_xzoom', bool, True, 'sync X-axis zoom'),
+              MPSetting('sync_xmap', bool, True, 'sync X-axis zoom for map'),
+              MPSetting('legend', str, 'upper left', 'legend position'),
+              MPSetting('legend2', str, 'upper right', 'legend2 position'),
+              MPSetting('axis_mode', str, 'auto', 'y-axis layout mode',
+                        choice=['auto', 'dual', 'multi']),
+              MPSetting('title', str, None, 'Graph title'),
+              MPSetting('debug', int, 0, 'debug level'),
+              MPSetting('paramdocs', bool, True, 'show param docs'),
+              MPSetting('max_rate', float, 0, 'maximum display rate of graphs in Hz'),
+              MPSetting('vehicle_type', str, 'Auto', 'force vehicle type for mode handling'),
+              MPSetting('showdirection', bool, True,
+                        'show direction of travel on the 3D map mission'),
+              MPSetting('showlabels', bool, False,
+                        'label the mission items on the 3D map'),
+              MPSetting('labelsize', int, MISSION_LABEL_SIZE,
+                        'size of the 3D map mission labels, in points',
+                        range=MISSION_LABEL_SIZES),
+              MPSetting('missionpath', str, MISSION_STYLES[0],
+                        'draw the 3D map mission as ' + ', '.join(MISSION_STYLES),
+                        choice=list(MISSION_STYLES)),
+              ]
+            )
+
+        self.mlog = None
+        self.mav_param = None
+        self.filename = None
+        self.command_map = command_map
+        self.completions = {
+            "set"       : ["(SETTING)"],
+            "condition" : ["(VARIABLE)"],
+            "graph"     : ['(VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE)'],
+            "graphs"    : ['(PREDEFINED_GRAPH)'],
+            "dump"      : ['(MESSAGETYPE)', '--verbose (MESSAGETYPE)'],
+            "map"       : ['(VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE) (VARIABLE)'],
+            "map3d"     : [],
+            "param"     : ['download', 'check', 'help (PARAMETER)', 'save', 'savechanged', 'diff', 'show', 'check'],
+            "logmessage": ['download', 'help (MESSAGETYPE)'],
+            "locationAnalysis"  : [],
+            }
+        self.aliases = {}
+        self.graphs = []
+        self.flightmode_selections = []
+        self.last_graph = GraphDefinition(self.settings.title, '', '', [], None)
+        
+        #pipe to the wxconsole for any child threads (such as the save dialog box)
+        self.parent_pipe_recv_console,self.child_pipe_send_console = multiproc.Pipe(duplex=False)
+        #pipe for creating graphs (such as from the save dialog box)
+        self.parent_pipe_recv_graph,self.child_pipe_send_graph = multiproc.Pipe(duplex=False)
+        self.param_help = param_help.ParamHelp()
+        
+        tConsoleWrite = threading.Thread(target=self.pipeRecvConsole)
+        tConsoleWrite.daemon = True
+        tConsoleWrite.start()
+        tGraphWrite = threading.Thread(target=self.pipeRecvGraph)
+        tGraphWrite.daemon = True
+        tGraphWrite.start()
+
+    def pipeRecvConsole(self):
+        '''watch for piped data from save dialog'''
+        try:
+            while True:
+                console_msg = self.parent_pipe_recv_console.recv()
+                if console_msg is not None:
+                    self.console.writeln(console_msg)
+                time.sleep(0.1)
+        except EOFError:
+            pass
+
+    def pipeRecvGraph(self):
+        '''watch for piped data from save dialog'''
+        try:
+            while True:
+                graph_rec = self.parent_pipe_recv_graph.recv()
+                if graph_rec is not None:
+                    mestate.input_queue.put(graph_rec)
+                time.sleep(0.1)
+        except EOFError:
+            pass
+            
+def have_graph(name):
+    '''return true if we have a graph of the given name'''
+    for g in mestate.graphs:
+        if g.name == name:
+            return True
+    return False
+
+def menu_callback(m):
+    '''called on menu selection'''
+    if m.returnkey.startswith('# '):
+        cmd = m.returnkey[2:]
+        if m.handler is not None:
+            if m.handler_result is None:
+                return
+            cmd += m.handler_result
+        process_stdin(cmd)
+    elif m.returnkey == 'menuSettings':
+        wxsettings.WXSettings(mestate.settings)
+    elif m.returnkey.startswith("mode-"):
+        idx = int(m.returnkey[5:])
+        mestate.flightmode_selections[idx] = m.IsChecked()
+    elif m.returnkey.startswith("loadLog"):
+        print("File: " + m.returnkey[8:])
+    elif m.returnkey == 'quit':
+        mestate.console.close()
+        mestate.exit = True
+        print("Exited. Press Enter to continue.")
+        sys.exit(0)
+
+    else:
+        print('Unknown menu selection: %s' % m.returnkey)
+
+
+def flightmode_menu():
+    '''construct flightmode menu'''
+    global flightmodes
+    ret = []
+    idx = 0
+    for (mode,t1,t2) in flightmodes:
+        modestr = "%s %us" % (mode, (t2-t1))
+        ret.append(MPMenuCheckbox(modestr, modestr, 'mode-%u' % idx))
+        idx += 1
+        mestate.flightmode_selections.append(False)
+    return ret
+
+
+def graph_menus():
+    '''return menu tree for graphs (recursive)'''
+    ret = MPMenuSubMenu('Graphs', [])
+    for i in range(len(mestate.graphs)):
+        g = mestate.graphs[i]
+        path = g.name.split('/')
+        name = path[-1]
+        path = path[:-1]
+        ret.add_to_submenu(path, MPMenuItem(name, name, '# graph :%u' % i))
+    return ret
+
+def setup_file_menu():
+    global TopMenu
+    TopMenu = MPMenuTop([])
+    TopMenu.add(MPMenuSubMenu('MAVExplorer',
+                           items=[MPMenuItem('Settings', 'Settings', 'menuSettings'),
+                                  MPMenuItem('&Open\tCtrl+O', 'Open Log', '# loadLog ',
+                                            handler=MPMenuCallFileDialog(
+                                                                        flags=('open',),
+                                                                        title='Logfile Load',
+                                                                        wildcard='*.tlog;*.log;*.BIN;*.bin')),
+                                  MPMenuItem('&Quit\tCtrl+Q', 'Quit', 'quit')]))
+    mestate.console.set_menu(TopMenu, menu_callback)
+
+def setup_menus():
+    '''setup console menus'''
+    global TopMenu
+    TopMenu.add(MPMenuSubMenu('Display',
+                           items=[MPMenuItem('Map', 'Map', '# map'),
+                                  MPMenuItem('Save Graph', 'Save', '# save'),
+                                  MPMenuItem('Reload Graphs', 'Reload', '# reload')]))
+    TopMenu.add(graph_menus())
+    TopMenu.add(MPMenuSubMenu('FlightMode', items=flightmode_menu()))
+    TopMenu.add(MPMenuSubMenu('Tools',
+                              items=[MPMenuItem('MagFit', 'MagFit', '# magfit'),
+                                     MPMenuItem('Stats', 'Stats', '# stats'),
+                                     MPMenuItem('FFT', 'FFT', '# fft'),
+                                     MPMenuItem('Location Analysis', 'Location', '# locationAnalysis')]))
+
+    mestate.console.set_menu(TopMenu, menu_callback)
+
+def expression_ok(expression, msgs=None):
+    '''return True if an expression is OK with current messages'''
+    expression_ok = True
+    if expression is None:
+        return False
+    fields = expression.split()
+    if msgs is None:
+        msgs = mestate.status.msgs
+    for f in fields:
+        try:
+            if f.endswith(">"):
+                a2 = f.rfind("<")
+                if a2 != -1:
+                    f = f[:a2]
+            if len(f) >= 2 and f[-2] == ':' and f[-1] in '23456789':
+                f = f[:-2]
+            if f[-1] == '}':
+                # avoid passing nocondition unless needed to allow us to work witih older
+                # pymavlink versions
+                res = mavutil.evaluate_expression(f, msgs, nocondition=True)
+            else:
+                res = mavutil.evaluate_expression(f, msgs)
+            if res is None:
+                expression_ok = False
+        except Exception:
+            expression_ok = False
+            break
+    return expression_ok
+
+def load_graph_xml(xml, filename, load_all=False):
+    '''load a graph from one xml string'''
+    ret = []
+    try:
+        root = objectify.fromstring(xml)
+    except Exception as ex:
+        print(filename, ex)
+        return []
+    if root.tag != 'graphs':
+        return []
+    if not hasattr(root, 'graph'):
+        return []
+    names = set()
+    for g in root.graph:
+        name = g.attrib['name']
+        expressions = []
+        for e in g.expression:
+            if e.text is not None:
+                expressions.append(e.text)
+        if load_all:
+            if not name in names:
+                if hasattr(g,'description'):
+                    description = g.description.text
+                else:
+                    description = ''
+                ret.append(GraphDefinition(name, expressions[0], description, expressions, filename))
+            names.add(name)
+            continue
+        if have_graph(name):
+            continue
+        for e in expressions:
+            if e is None:
+                continue
+            e = xml_unescape(e)
+            if expression_ok(e):
+                if hasattr(g,'description'):
+                    description = g.description.text
+                else:
+                    description = ''
+                ret.append(GraphDefinition(name, e, description, expressions, filename))
+                break
+    return ret
+
+def load_graphs():
+    '''load graphs from mavgraphs.xml'''
+    mestate.graphs = []
+    gfiles = ['mavgraphs.xml']
+    for dirname, dirnames, filenames in os.walk(mp_util.dot_mavproxy()):
+        # Skip XML files in the LogMessages subfolder
+        if os.path.basename(dirname) == "LogMessages":
+            continue
+        for filename in filenames:
+            if filename.lower().endswith('.xml'):
+                gfiles.append(os.path.join(dirname, filename))
+
+    for file in gfiles:
+        if not os.path.exists(file):
+            continue
+        # skip parameter files.  They specify an encoding, and under
+        # Python3 this leads to a warning from etree
+        parameter_files = frozenset([
+            "AntennaTracker.xml",
+            "APMrover2.xml",
+            "ArduCopter.xml",
+            "ArduPlane.xml",
+            "ArduSub.xml",
+            "Blimp.xml",
+            "Copter.xml",
+            "Heli.xml",
+            "Plane.xml",
+            "Rover.xml",
+            "Sub.xml",
+        ])
+        if os.path.basename(file) in parameter_files:
+            continue
+        graphs = load_graph_xml(open(file).read(), file)
+        if graphs:
+            mestate.graphs.extend(graphs)
+            mestate.console.writeln("Loaded %s" % file)
+
+    # also load the built in graphs
+    load_built_in_graphs()
+
+    mestate.graphs = sorted(mestate.graphs, key=lambda g: g.name)
+    # Update completions with actual graph names
+    if len(mestate.graphs) > 0:
+        # Some default graph names have spaces: replace with -
+        graph_names = [g.name.replace(' ', '-') for g in mestate.graphs]
+        mestate.completions["graphs"] = graph_names
+
+def load_built_in_graphs():
+    '''load graph definitions from packaged resources'''
+    dlist = importlib.resources.files("MAVProxy.tools.graphs")
+    for f in dlist.iterdir():
+        raw = importlib.resources.files("MAVProxy.tools.graphs").joinpath(f).open('r').read()
+        graphs = load_graph_xml(raw, None)
+        if graphs:
+            mestate.graphs.extend(graphs)
+            mestate.console.writeln("Loaded %s" % f)
+
+def flightmode_colours():
+    '''return mapping of flight mode to colours'''
+    from MAVProxy.modules.lib.grapher import flightmode_colours
+    mapping = {}
+    idx = 0
+    for (mode,t0,t1) in flightmodes:
+        if not mode in mapping:
+            mapping[mode] = flightmode_colours[idx]
+            idx += 1
+            if idx >= len(flightmode_colours):
+                idx = 0
+    return mapping
+
+def cmd_location(args):
+    '''analyze GPS locations and identify nearest cities/countries'''
+    try:
+        from geopy.geocoders import Nominatim
+        from geopy.distance import geodesic
+        from geopy.exc import GeocoderTimedOut, GeocoderServiceError
+    except ImportError:
+        print("Error: geopy library not installed. Install with: pip install geopy")
+        return
+
+    # Initialize geocoder
+    geolocator = Nominatim(user_agent="MAVExplorer")
+
+    # Sample every 5km
+    sample_distance_km = 5.0
+
+    mestate.mlog.rewind()
+
+    # Track sampled positions
+    last_sampled_pos = None
+    sampled_positions = []
+    locations = set()  # Store display_name strings
+
+    print("Scanning log for GPS coordinates...")    # Read all GPS messages
+    msg_types = ['GPS', 'GPS_RAW_INT', 'GLOBAL_POSITION_INT']
+    while True:
+        msg = mestate.mlog.recv_match(type=msg_types, condition=mestate.settings.condition)
+        if msg is None:
+            break
+
+        msg_type = msg.get_type()
+        lat = None
+        lon = None
+
+        # Extract coordinates based on message type
+        if msg_type == 'GPS':
+            # Binary log format - uppercase Lat/Lng
+            if hasattr(msg, 'Lat') and hasattr(msg, 'Lng'):
+                lat = msg.Lat
+                lon = msg.Lng
+        elif msg_type in ['GPS_RAW_INT', 'GLOBAL_POSITION_INT']:
+            # MAVLink format - degE7
+            if hasattr(msg, 'lat') and hasattr(msg, 'lon'):
+                lat = msg.lat * 1.0e-7
+                lon = msg.lon * 1.0e-7
+
+        # Validate coordinates
+        if lat is None or lon is None:
+            continue
+        if lat == 0 and lon == 0:
+            continue
+
+        # Always sample first valid coordinate
+        if last_sampled_pos is None:
+            last_sampled_pos = (lat, lon, msg._timestamp)
+            sampled_positions.append((lat, lon, msg._timestamp))
+            continue
+
+        # Calculate distance from last sampled position
+        distance_km = geodesic(last_sampled_pos[:2], (lat, lon)).kilometers
+
+        # Sample if distance >= 5km
+        if distance_km >= sample_distance_km:
+            last_sampled_pos = (lat, lon, msg._timestamp)
+            sampled_positions.append((lat, lon, msg._timestamp))
+
+    mestate.mlog.rewind()
+
+    if len(sampled_positions) == 0:
+        print("No valid GPS coordinates found in log.")
+        return
+
+    print("Found %d GPS samples, performing reverse geocoding..." % len(sampled_positions))
+
+    # Geocode sampled positions
+    for idx, (lat, lon, timestamp) in enumerate(sampled_positions):
+        print("Geocoding sample %d/%d..." % (idx + 1, len(sampled_positions)))
+
+        try:
+            # Use 50km search radius to find nearest city
+            location = geolocator.reverse((lat, lon), timeout=10, language='en', addressdetails=True, zoom=8)
+
+            if location and location.raw:
+                # Use display_name from location.raw
+                display_name = location.raw.get('display_name', '')
+
+                if display_name:
+                    locations.add(display_name)
+
+                    # Show location for first and last samples
+                    if idx == 0:
+                        ts_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))
+                        print("  Start location: %s at %s" % (display_name, ts_str))
+                    elif idx == len(sampled_positions) - 1:
+                        ts_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))
+                        print("  End location: %s at %s" % (display_name, ts_str))
+
+            # Rate limiting: 1 second between requests
+            time.sleep(1)
+
+        except GeocoderTimedOut:
+            print("  Geocoding timeout for sample %d, skipping..." % (idx + 1))
+            continue
+        except GeocoderServiceError as e:
+            print("  Geocoding service error for sample %d: %s" % (idx + 1, str(e)))
+            continue
+        except Exception as e:
+            print("  Error geocoding sample %d: %s" % (idx + 1, str(e)))
+            continue
+
+    # Display summary
+    print("\n=== Location Summary ===")
+    if len(locations) > 0:
+        print("Locations visited:")
+        for location_name in sorted(locations):
+            print("  %s" % location_name)
+    else:
+        print("No location information could be retrieved.")
+
+def check_vehicle_type():
+    '''check vehicle_type option'''
+    vtypes = { "Rover" : mavutil.mavlink.MAV_TYPE_GROUND_ROVER,
+               "Plane" : mavutil.mavlink.MAV_TYPE_FIXED_WING,
+               "Copter" : mavutil.mavlink.MAV_TYPE_QUADROTOR,
+               "Tracker" : mavutil.mavlink.MAV_TYPE_ANTENNA_TRACKER,
+               "Antenna" : mavutil.mavlink.MAV_TYPE_ANTENNA_TRACKER,
+               "Sub" : mavutil.mavlink.MAV_TYPE_SUBMARINE,
+               "Blimp" : mavutil.mavlink.MAV_TYPE_AIRSHIP
+    }
+    if mestate.settings.vehicle_type == 'Auto':
+        # let mavutil handle it
+        return
+    old_mav_type = mestate.mlog.mav_type
+    for k in vtypes.keys():
+        if mestate.settings.vehicle_type.lower().find(k.lower()) != -1:
+            mestate.mlog.mav_type = vtypes[k]
+            if old_mav_type != mestate.mlog.mav_type:
+                global flightmodes
+                mestate.mlog._flightmodes = None
+                flightmodes = mestate.mlog.flightmode_list()
+            return
+    print("Unknown vehicle type '%s'" % mestate.settings.vehicle_type)
+
+
+def cmd_graph(args):
+    '''graph command'''
+    usage = "usage: graph <FIELD...>"
+    if len(args) < 1:
+        print(usage)
+        return
+    check_vehicle_type()
+    if args[0][0] == ':':
+        i = int(args[0][1:])
+        g = mestate.graphs[i]
+        expression = g.expression
+        args = expression.split()
+        mestate.console.write("Added graph: %s\n" % g.name)
+        if g.description:
+            mestate.console.write("%s\n" % g.description, fg='blue')
+        mestate.rl.add_history("graph %s" % ' '.join(expression.split()))
+        mestate.last_graph = g
+    else:
+        expression = ' '.join(args)
+        mestate.last_graph = GraphDefinition(mestate.settings.title, expression, '', [expression], None)
+    if mestate.settings.debug > 0:
+        print("Adding graph: %s" % mestate.last_graph.expression)
+    grui.append(Graph_UI(mestate))
+    grui[-1].display_graph(mestate.last_graph, flightmode_colours())
+    global xlimits
+    if xlimits.last_xlim is not None and mestate.settings.sync_xzoom:
+        #print("initial: ", xlimits.last_xlim)
+        grui[-1].set_xlim(xlimits.last_xlim)
+
+def cmd_graphs(args):
+    '''graphs command'''
+    usage = "usage: graphs <PREDEFINED_GRAPH_NAME>"
+    if len(args) < 1:
+        print(usage)
+        return
+    check_vehicle_type()
+    graph_name = ' '.join(args)
+
+    # Normalize search term and graph names by replacing spaces with dashes
+    normalized_search = graph_name.replace(' ', '-').upper()
+
+    # Find matching predefined graph
+    matching_graphs = [g for g in mestate.graphs if normalized_search in g.name.replace(' ', '-').upper()]
+    if not matching_graphs:
+        print("No predefined graph found matching: %s" % graph_name)
+        return
+
+    # Display the first matching graph
+    g = matching_graphs[0]
+    mestate.console.write("Added predefined graph: %s\n" % g.name)
+    if g.description:
+        mestate.console.write("%s\n" % g.description, fg='blue')
+    mestate.rl.add_history("graphs %s" % g.name)
+    mestate.last_graph = g
+    if mestate.settings.debug > 0:
+        print("Adding graph: %s" % mestate.last_graph.expression)
+    grui.append(Graph_UI(mestate))
+    grui[-1].display_graph(mestate.last_graph, flightmode_colours())
+    global xlimits
+    if xlimits.last_xlim is not None and mestate.settings.sync_xzoom:
+        #print("initial: ", xlimits.last_xlim)
+        grui[-1].set_xlim(xlimits.last_xlim)
+
+map_timelim_pipes = []
+# the settings the open 3D views were last given
+map3d_pushed = None
+
+def cmd_map(args):
+    '''map command'''
+    import mavflightview
+    #mestate.mlog.reduce_by_flightmodes(mestate.flightmode_selections)
+    #setup and process the map
+    check_vehicle_type()
+    options = mavflightview.mavflightview_options()
+    options.condition = mestate.settings.condition
+    options._flightmodes = mestate.mlog._flightmodes
+    options.show_flightmode_legend = mestate.settings.show_flightmode
+    options.colour_source='flightmode'
+
+    # check for kml or kmz
+    for a in args:
+        if a.endswith('.kml') or a.endswith('.kmz'):
+            options.kml = a
+            args = list(filter(lambda x : x != a, args))
+            break
+    if len(args) > 0:
+        options.types = ':'.join(args)
+        filtered_args = list(filter(lambda x : x != "CMD", options.types))
+        if len(filtered_args) > 1:
+            options.colour_source='type'
+    mfv_mav_ret = mavflightview.mavflightview_mav(mestate.mlog, options, mestate.flightmode_selections)
+    if mfv_mav_ret is None:
+        return
+    [path, wp, fen, used_flightmodes, mav_type, instances] = mfv_mav_ret
+    global map_timelim_pipes
+    timelim_pipe = multiproc.Pipe()
+    child = multiproc.Process(target=mavflightview.mavflightview_show, args=[path, wp, fen, used_flightmodes, mav_type, options, instances, None, timelim_pipe])
+    map_timelim_pipes.append(timelim_pipe)
+    global xlimits
+    if xlimits.last_xlim is not None and mestate.settings.sync_xmap:
+        try:
+            timelim_pipe[0].send(xlimits.last_xlim)
+        except Exception:
+            pass
+    child.start()
+    mestate.mlog.rewind()
+
+map3d_views = []
+
+# the mission and rally protocol's messages, which a telemetry log carries
+# as the ground station and the vehicle sent them
+MISSION_PROTOCOL = ('MISSION_COUNT', 'MISSION_ITEM', 'MISSION_ITEM_INT',
+                    'MISSION_CLEAR_ALL')
+
+
+def rally_points(rally_log):
+    '''a LogMission's rally table as mission_from_log() gives it, by
+    sequence: where each point is, and the flags AP_Rally keeps the frame
+    of its altitude in'''
+    out = {}
+    for (seq, item) in rally_log.whole().items():
+        if item.command == mavutil.mavlink.MAV_CMD_NAV_RALLY_POINT:
+            out[seq] = (item.x, item.y, item.z,
+                        rally_flags_for_frame(item.frame))
+    return out
+
+
+# how far apart two of a mission's items can be and still be the one item.
+# AP_Mission keeps a position in 1e-7 degrees, but turns a float
+# MISSION_ITEM's into that in float32, which is up to 6.4e-6 degrees out at
+# longitudes past 128; and it gives a float MISSION_ITEM back by turning the
+# integer into float32 and then multiplying it in float32, which is out by
+# up to 1.6e-5 degrees
+SAME_POSITION = 2.0e-5      # degrees, about 2m
+SAME_ALTITUDE = 0.1         # metres
+
+# the commands AP_Mission keeps a position for (stored_in_location()); the
+# rest go back with no position, and frame 0, whatever they came in with
+LOCATION_COMMANDS = frozenset((
+    mavutil.mavlink.MAV_CMD_NAV_WAYPOINT,
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_UNLIM,
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TURNS,
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TIME,
+    mavutil.mavlink.MAV_CMD_NAV_LAND,
+    mavutil.mavlink.MAV_CMD_NAV_TAKEOFF,
+    mavutil.mavlink.MAV_CMD_NAV_CONTINUE_AND_CHANGE_ALT,
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TO_ALT,
+    mavutil.mavlink.MAV_CMD_NAV_SPLINE_WAYPOINT,
+    mavutil.mavlink.MAV_CMD_NAV_GUIDED_ENABLE,
+    mavutil.mavlink.MAV_CMD_DO_SET_HOME,
+    mavutil.mavlink.MAV_CMD_DO_RETURN_PATH_START,
+    mavutil.mavlink.MAV_CMD_DO_LAND_START,
+    mavutil.mavlink.MAV_CMD_DO_GO_AROUND,
+    mavutil.mavlink.MAV_CMD_DO_SET_ROI_LOCATION,
+    mavutil.mavlink.MAV_CMD_DO_SET_ROI,
+    mavutil.mavlink.MAV_CMD_NAV_VTOL_TAKEOFF,
+    mavutil.mavlink.MAV_CMD_NAV_VTOL_LAND,
+    mavutil.mavlink.MAV_CMD_NAV_PAYLOAD_PLACE,
+    mp_util.MAV_CMD_NAV_ARC_WAYPOINT,
+))
+
+# the frame AP_Mission gives an item with a position back in: it keeps only
+# whether the altitude is above home or terrain, and never says _INT.  An
+# item uploaded in MISSION, the frame for one with no position, is kept as
+# absolute (AP_Mission::mavlink_int_to_mission_cmd)
+RETURNED_FRAME = {
+    mavutil.mavlink.MAV_FRAME_MISSION: mavutil.mavlink.MAV_FRAME_GLOBAL,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_INT: mavutil.mavlink.MAV_FRAME_GLOBAL,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT_INT:
+        mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_TERRAIN_ALT_INT:
+        mavutil.mavlink.MAV_FRAME_GLOBAL_TERRAIN_ALT,
+}
+
+
+def kept_whole(value):
+    '''a parameter as AP_Mission keeps it in an integer'''
+    return int(value) if isfinite(value) else 0
+
+
+def kept_signed(value):
+    '''a radius or an angle AP_Mission keeps as a whole number and a
+    direction'''
+    return copysign(kept_whole(abs(value)), value)
+
+
+def kept_float(value):
+    '''a parameter AP_Mission keeps as it came, where NaN is NaN again'''
+    return value if isfinite(value) else None
+
+
+def kept_turns(value):
+    '''the turns of NAV_LOITER_TURNS: fewer than one in 256ths, and at most
+    255 of them'''
+    if 0 < value < 1:
+        return kept_whole(value * 256) / 256.0
+    return min(255, max(0, kept_whole(value)))
+
+
+def kept_loiter_radius(value):
+    '''the radius of NAV_LOITER_TURNS: past 255m it is kept in tens of
+    metres, and at most 2550m'''
+    radius = abs(value)
+    if radius > 255:
+        radius = min(255, kept_whole(radius * 0.1)) * 10
+    return copysign(kept_whole(radius), value)
+
+
+def kept_ccw(value):
+    return value < 0
+
+
+def kept_xtrack(value):
+    return value > 0
+
+
+# the parameters of an item AP_Mission sends back as they were sent to it,
+# every vehicle alike, as it keeps each of them.  Another parameter goes
+# back as 0, or packed up, or only on some vehicles -- NAV_WAYPOINT's are
+# its delay on a copter and its acceptance radii on a plane -- so is no sign
+# of another mission
+RETURNED_PARAMS = {
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_UNLIM:
+        (None, None, kept_signed, None),
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TURNS:
+        (kept_turns, None, kept_loiter_radius, kept_xtrack),
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TIME:
+        (kept_whole, None, kept_ccw, kept_xtrack),
+    mavutil.mavlink.MAV_CMD_NAV_LOITER_TO_ALT:
+        (None, kept_signed, None, kept_xtrack),
+    mp_util.MAV_CMD_NAV_ARC_WAYPOINT:
+        (kept_signed, None, None, None),
+    mavutil.mavlink.MAV_CMD_NAV_TAKEOFF:
+        (kept_whole, None, None, None),
+    mavutil.mavlink.MAV_CMD_NAV_VTOL_LAND:
+        (kept_whole, None, None, None),
+    mavutil.mavlink.MAV_CMD_CONDITION_DELAY:
+        (kept_float, None, None, None),
+    mavutil.mavlink.MAV_CMD_DO_JUMP:
+        (kept_whole, kept_whole, None, None),
+    mavutil.mavlink.MAV_CMD_DO_JUMP_TAG:
+        (kept_whole, kept_whole, None, None),
+    mavutil.mavlink.MAV_CMD_JUMP_TAG:
+        (kept_whole, None, None, None),
+    mavutil.mavlink.MAV_CMD_DO_CHANGE_SPEED:
+        (kept_whole, kept_float, kept_float, None),
+}
+
+
+def returned_item(item):
+    '''a mission item as AP_Mission sends it back: what of it would come
+    back from the vehicle whichever way it was sent there'''
+    (lat, lon, alt, frame, command, _, params) = item
+    kept = RETURNED_PARAMS.get(command, (None,) * 4)
+    params = tuple(k(p) for (k, p) in zip(kept, params) if k is not None)
+    if command not in LOCATION_COMMANDS:
+        return (command, None, params, None)
+    return (command, RETURNED_FRAME.get(frame, frame), params, (lat, lon, alt))
+
+
+def same_mission(before, after):
+    '''whether a mission a log has just seen is the one it held, rather than
+    another.  Item 0 is left out of it: that is home, the vehicle's own and
+    not the mission's -- an uploaded one is never stored
+    (AP_Mission::replace_cmd) and a downloaded one is wherever home is now,
+    which the vehicle keeps setting while it is disarmed -- so a mission
+    downloaded to see what the vehicle holds differs there from the upload
+    of it every time.  The rest are compared as AP_Mission keeps them, since
+    a download gives back only that'''
+    if sorted(before) != sorted(after):
+        return False
+    for seq in before:
+        if seq == 0:
+            continue
+        (command, frame, params, where) = returned_item(before[seq])
+        (was_command, was_frame, was_params, was_where) = \
+            returned_item(after[seq])
+        if (command, frame, params) != (was_command, was_frame, was_params):
+            return False
+        if where is None:
+            continue
+        (lat, lon, alt) = where
+        (was_lat, was_lon, was_alt) = was_where
+        if (abs(lat - was_lat) > SAME_POSITION or
+                abs(lon - was_lon) > SAME_POSITION or
+                abs(alt - was_alt) > SAME_ALTITUDE):
+            return False
+    return True
+
+
+class RallyPoints(list):
+    '''a log's rally points in order, and whether the table they are of
+    arrived whole: the points of one a log ends part way through are points
+    to draw, and not a table to work a return out from, since the one it
+    would go to may be among those which never arrived'''
+    whole = True
+
+
+class MissionCmds(dict):
+    '''a log's CMD entries keyed by sequence, which is how this reads a
+    mission, and whether the mission they are arrived whole: the items of one
+    a log ends part way through are a mission to draw and not one to fly'''
+    whole = True
+
+
+def mission_cmds(mission_log):
+    '''a LogMission's mission as a log's CMD entries keyed by sequence'''
+    out = MissionCmds()
+    out.whole = not mission_log.partial()
+    for (seq, item) in mission_log.whole().items():
+        out[seq] = (item.x, item.y, item.z, item.frame, item.command, seq,
+                    (item.param1, item.param2, item.param3, item.param4))
+    return out
+
+
+def mission_items_from_cmds(items, started_at=None, flown_from=None):
+    '''the mission items to draw, from a log's CMD entries keyed by sequence.
+
+    An item with no position of its own is a takeoff, which climbs from
+    wherever the vehicle is when it runs.  flown_from maps an item's
+    sequence to where the vehicle was when the log says the item began, and
+    that is used when there is one.  Otherwise the best guess is home, the
+    mission's own first item, since ArduPilot sets home where it arms; and a
+    mission uploaded before the vehicle had a home leaves that item empty
+    too, so started_at -- where the flight itself began -- stands in for it.
+    Anything else without a position is not something the map can place,
+    and is left out
+    '''
+    flown_from = flown_from or {}
+    home = items.get(0)
+    if home is not None and (home[0] != 0 or home[1] != 0):
+        started_at = (home[0], home[1])
+    mission = []
+    for seq in sorted(items):
+        item = items[seq]
+        if not mp_util.mission_cmd_has_location(item[4]):
+            continue
+        if item[0] == 0 and item[1] == 0:
+            if item[4] not in mp_util.TAKEOFF_COMMANDS:
+                continue
+            where = flown_from.get(seq, started_at)
+            if where is None:
+                continue
+            item = (where[0], where[1]) + item[2:]
+        mission.append(item)
+    return mission
+
+
+# what ArduPlane says as it picks the course of a VTOL landing approach
+VTOL_APPROACH_MESSAGE = 'Selected an approach path of '
+
+# a rally point's altitude frame, as its flags carry it (Location::AltFrame),
+# for each MAVLink frame a rally item in the mission protocol can be in
+RALLY_FRAME_FLAGS = {
+    mavutil.mavlink.MAV_FRAME_GLOBAL: 0,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_INT: 0,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT: 1,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT_INT: 1,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_TERRAIN_ALT: 3,
+    mavutil.mavlink.MAV_FRAME_GLOBAL_TERRAIN_ALT_INT: 3,
+}
+
+
+def rally_flags_for_frame(frame):
+    '''the flags of a rally point in frame, as AP_Rally keeps them: the
+    frame, and the bit which says the flags carry one'''
+    return (1 << 2) | (RALLY_FRAME_FLAGS.get(frame, 1) << 3)
+
+
+def mission_from_log(mlog, condition=None):
+    '''the flight path in a log, the mission the log ends with, that
+    mission's CMD entries keyed by sequence -- every one of them, where the
+    mission drawn has only the ones with a position -- by sequence, the
+    index into the path at which the log says each of its items began, the
+    rally points the log ends with, as (lat, lon, alt, flags), the EKF
+    origin, which a rally point's altitude may be measured from, the
+    course of the last VTOL landing approach the vehicle announced, or None.
+
+    A log carries the whole mission again every time one is uploaded, and
+    once more when it starts, so the items are kept by sequence number and
+    the logger's "New mission" -- written before every one of them, even a
+    mission with no items at all -- starts them again.  Drawing every mission
+    the flight ever held would join them into one line.
+
+    A telemetry log carries the same things as the MAVLink messages the
+    vehicle sent: its position, home and origin, what it said, and the
+    mission and rally points as they were downloaded or uploaded while the
+    log was kept.  Only a mission which arrives whole replaces the one held,
+    so a transfer the log ends part way through leaves the mission before
+    it, and a log which starts part way through one holds no mission at all;
+    the rally points which arrive are the table, since what the old protocol
+    set before them is gone whether or not the new table ever arrives whole,
+    and they say so
+    '''
+    path = []
+    # the mission and the rally points, as whatever kind of log this is
+    # carries them: a table which never arrives whole says nothing about the
+    # one the vehicle holds, so the one before it stands
+    mission_log = log_mission.LogMission()
+    rally_log = log_mission.LogMission(
+        mavutil.mavlink.MAV_MISSION_TYPE_RALLY)
+    items = {}
+    # where the vehicle was when each item began, from the "Mission: <seq>"
+    # the autopilot announces as it starts one, and how far along the path
+    flown_from = {}
+    started = {}
+    # home, and the EKF origin, as the vehicle last logged them
+    home = None
+    origin = None
+    # the rally points, by sequence.  The logger writes the whole table out
+    # when one is uploaded, and a single point when just that one is set --
+    # appending one is logged as that one alone, with the new total -- so
+    # they are kept by sequence, and only the ones a smaller total leaves
+    # out are dropped
+    rally = {}
+    # whether the points held are the whole of the table they are of
+    rally_whole = True
+    approach = None
+    # the vehicle, in a telemetry log: its first heartbeat says which it is
+    vehicle = None
+    while True:
+        m = mlog.recv_match(type=['POS', 'CMD', 'MSG', 'ORGN', 'RALY',
+                                  'HEARTBEAT', 'GLOBAL_POSITION_INT',
+                                  'HOME_POSITION', 'GPS_GLOBAL_ORIGIN',
+                                  'STATUSTEXT', 'MISSION_COUNT',
+                                  'MISSION_ITEM', 'MISSION_ITEM_INT',
+                                  'MISSION_CLEAR_ALL', 'RALLY_POINT'],
+                            condition=condition)
+        if m is None:
+            break
+        mtype = m.get_type()
+        if mtype == 'HEARTBEAT':
+            if (vehicle is None and
+                    m.autopilot != mavutil.mavlink.MAV_AUTOPILOT_INVALID and
+                    m.type != mavutil.mavlink.MAV_TYPE_GCS):
+                vehicle = m.get_srcSystem()
+            continue
+        if mtype in MISSION_PROTOCOL:
+            # downloaded from the vehicle, or uploaded to it
+            if vehicle not in (m.get_srcSystem(), m.target_system):
+                continue
+        elif (mtype in ('GLOBAL_POSITION_INT', 'HOME_POSITION',
+                        'GPS_GLOBAL_ORIGIN', 'STATUSTEXT', 'RALLY_POINT') and
+                m.get_srcSystem() != vehicle):
+            continue
+        if mtype == 'GLOBAL_POSITION_INT':
+            if m.lat == 0 and m.lon == 0:
+                continue
+            m = SimpleNamespace(Lat=m.lat * 1.0e-7, Lng=m.lon * 1.0e-7,
+                                Alt=m.alt * 0.001, _timestamp=m._timestamp)
+            mtype = 'POS'
+        elif mtype == 'HOME_POSITION':
+            m = SimpleNamespace(Type=1, Lat=m.latitude * 1.0e-7,
+                                Lng=m.longitude * 1.0e-7,
+                                Alt=m.altitude * 0.001)
+            mtype = 'ORGN'
+        elif mtype == 'GPS_GLOBAL_ORIGIN':
+            m = SimpleNamespace(Type=0, Lat=m.latitude * 1.0e-7,
+                                Lng=m.longitude * 1.0e-7,
+                                Alt=m.altitude * 0.001)
+            mtype = 'ORGN'
+        elif mtype == 'STATUSTEXT':
+            m = SimpleNamespace(Message=m.text)
+            mtype = 'MSG'
+        elif mtype == 'RALLY_POINT':
+            # the old rally protocol's, which carry AP_Rally's own flags
+            m = SimpleNamespace(Seq=m.idx, Tot=m.count, Lat=m.lat * 1.0e-7,
+                                Lng=m.lng * 1.0e-7, Alt=m.alt, Flags=m.flags)
+            mtype = 'RALY'
+        elif mtype in MISSION_PROTOCOL:
+            # a rally table downloaded or uploaded, whose points are carried
+            # as a mission's items are.  One which arrives whole is what the
+            # vehicle holds, even where the table was that already: the
+            # points the old protocol set may not be there any more
+            before = rally_points(rally_log)
+            arrivals = rally_log.arrivals
+            rally_log.read(m, mtype)
+            after = rally_points(rally_log)
+            if after != before or rally_log.arrivals != arrivals:
+                rally = after
+            if mtype in ('MISSION_COUNT', 'MISSION_CLEAR_ALL') or \
+                    after != before:
+                # what arrived is what is known of the table the vehicle
+                # holds, and all that is known: the points the old protocol
+                # set before it are gone.  A download which says how many to
+                # expect and ends before any of them arrive leaves none of
+                # it, which is not the table either
+                rally_whole = not rally_log.partial()
+        if mtype in log_mission.MISSION_TYPES:
+            # the mission itself, which LogMission keeps: only the last one
+            # to arrive whole, so a download which stops part way through
+            # leaves the one before it as it was
+            before = mission_cmds(mission_log)
+            mission_log.read(m, mtype)
+            if not same_mission(before, mission_cmds(mission_log)):
+                # a mission other than the one flown so far: where the
+                # flight had got to in that one says nothing about this
+                flown_from = {}
+                started = {}
+            if mtype != 'MSG':
+                continue
+        if mtype == 'POS':
+            path.append((m.Lat, m.Lng, m.Alt,
+                         grapher.timestamp_to_days(m._timestamp)))
+        elif mtype == 'RALY':
+            if any(seq >= m.Tot for seq in rally):
+                rally = dict((seq, point) for (seq, point) in rally.items()
+                             if seq < m.Tot)
+            if m.Seq < m.Tot:
+                # RALY only carries the altitude frame from 4.5; before that
+                # a rally point's altitude is above home, which is flags 0
+                rally[m.Seq] = (m.Lat, m.Lng, m.Alt, getattr(m, 'Flags', 0))
+            # the logger writes the whole table out, so the points held are
+            # the table once there are as many of them as it says
+            rally_whole = len(rally) == m.Tot
+        elif mtype == 'ORGN':
+            # AP_AHRS: type 0 is the EKF origin, type 1 home
+            if m.Type == 1 and (m.Lat != 0 or m.Lng != 0):
+                home = (m.Lat, m.Lng, m.Alt)
+            elif m.Type == 0 and (m.Lat != 0 or m.Lng != 0):
+                origin = (m.Lat, m.Lng, m.Alt)
+        elif mtype == 'MSG':
+            fields = m.Message.split()
+            if m.Message.startswith(VTOL_APPROACH_MESSAGE):
+                # the course the vehicle took into the wind it had then
+                try:
+                    approach = float(m.Message[len(VTOL_APPROACH_MESSAGE):])
+                except ValueError:
+                    pass
+            elif m.Message == 'New rally':
+                # written before the whole table, even an empty one: a
+                # cleared table is this and no points at all, which is the
+                # whole of it
+                rally = {}
+                rally_whole = True
+            elif (len(fields) > 1 and fields[0] == 'Mission:' and
+                    fields[1].isdigit() and path):
+                flown_from.setdefault(int(fields[1]), (path[-1][0], path[-1][1]))
+                started.setdefault(int(fields[1]), len(path) - 1)
+    items = mission_cmds(mission_log)
+    if (home is not None and 0 in items and
+            items[0][0] == 0 and items[0][1] == 0):
+        # a mission uploaded before the vehicle had a home carries an empty
+        # one, which everything relative to home would be measured from
+        items[0] = (home[0], home[1], home[2], 0) + items[0][4:]
+    mission = mission_items_from_cmds(
+        items, started_at=(path[0][0], path[0][1]) if path else None,
+        flown_from=flown_from)
+    points = RallyPoints(rally[seq] for seq in sorted(rally))
+    points.whole = rally_whole
+    return (path, mission, items, started, points, origin, approach)
+
+
+def takeoff_flown(path, items, started):
+    '''the takeoff of the mission the log shows flown, as its CMD entry, and
+    the course in degrees it was flown on; (None, None) where the log shows
+    none.  ArduPlane holds the ground course it has once it gets moving, and
+    a QuadPlane transitions the way it was pointing, neither of which the
+    mission says, so the course is taken from the path: where the aircraft
+    was when the takeoff began, towards where it was once it had gone a
+    little way'''
+    for (seq, index) in sorted(started.items()):
+        item = items.get(seq)
+        if item is None or item[4] not in (
+                mavutil.mavlink.MAV_CMD_NAV_TAKEOFF,
+                mavutil.mavlink.MAV_CMD_NAV_VTOL_TAKEOFF):
+            continue
+        (lat, lon) = path[index][:2]
+        for point in path[index + 1:]:
+            if mp_util.gps_distance(lat, lon, point[0], point[1]) >= 30.0:
+                return (item, mp_util.gps_bearing(lat, lon, point[0],
+                                                  point[1]))
+    return (None, None)
+
+
+def takeoff_course(path, items, started):
+    '''the course in degrees the mission's takeoff was flown on, or None'''
+    return takeoff_flown(path, items, started)[1]
+
+
+# a rally point is one point of one view: wait only so long for the terrain
+# under it, rather than the whole fetch the tiles drawn are worth waiting for
+RALLY_TERRAIN_TIMEOUT = 5.0
+
+
+def rally_point_amsl(lat, lon, alt, flags, home_amsl, origin=None):
+    '''the AMSL altitude of a rally point from a log.  A point above the
+    terrain is resolved through the same quantized mesh the 3D view draws;
+    one above the EKF origin falls back to home, which the origin is
+    usually near, where the log does not say where the origin was'''
+    from MAVProxy.modules.lib import plane_track
+    frame = plane_track.rally_alt_frame(flags)
+    terrain = None
+    if frame == plane_track.RALLY_ALT_ABOVE_TERRAIN:
+        try:
+            from MAVProxy.modules.mavproxy_map3d.terrain import sample_terrain
+            terrain = sample_terrain(lat, lon, timeout=RALLY_TERRAIN_TIMEOUT)
+        except Exception as ex:
+            print("map3d: terrain elevation unavailable (%s)" % ex)
+    origin_amsl = origin[2] if origin else None
+    if frame == plane_track.RALLY_ALT_ABOVE_ORIGIN and origin_amsl is None:
+        origin_amsl = home_amsl
+    return plane_track.rally_amsl(alt, flags, home_amsl, origin_amsl, terrain)
+
+
+def plane_mission_track(cmds, mission, started_at, params=None, mav_type=None,
+                        path=None, started=None, rally=None, origin=None,
+                        approach=None):
+    '''the path a plane flies a log's mission along, as (lat, lon, amsl)
+    points, or None for a vehicle which is not a plane or a mission which
+    cannot be flown through.
+
+    cmds are the mission's CMD entries keyed by sequence, and mission the
+    MissionItems resolve_mission_amsl() made of them, which carry the
+    positions and AMSL altitudes worked out for the ones drawn.  The flight
+    starts from home, or from started_at where the log's mission has no home
+    of its own.  path and started are the flight path and where along it
+    each item began, as mission_from_log() gives them: where the log shows
+    the mission's first item beginning, the flight starts there instead,
+    and a takeoff is flown as the course measured over the start of it says:
+    a fixed-wing one on that course, and a VTOL one transitioning onto it.
+    rally is the log's rally points, which a return to launch may go to, and
+    origin the EKF origin one of them may be measured from.  approach is the
+    course of a VTOL landing approach, which the vehicle flies into the wind
+    it has then: the one the log says it took, where it says so, and
+    otherwise that of still air, since the wind at some other time says
+    little about it
+    '''
+    if mp_util.vehicle_type_name(mav_type) != 'plane':
+        return None
+    if sorted(cmds) != list(range(len(cmds))):
+        # an item is missing from the log.  The flight is numbered by
+        # sequence -- jumps go to one, and where each began is kept by one --
+        # so there is no flying it with a gap, and no guessing what was there
+        return None
+    if not getattr(cmds, 'whole', True):
+        # the log ends part way through the only transfer of this mission:
+        # flying what arrived would end it with a return to launch, or a
+        # landing, which whatever was still to come may say nothing of
+        return None
+    if not getattr(rally, 'whole', True):
+        # nor is a mission flown whose return may go to a rally point among
+        # those the log ends part way through the table of
+        return None
+    from MAVProxy.modules.lib import plane_track
+    placed = {item.seq: item for item in mission}
+    home = placed.get(0)
+    if home is not None:
+        home = (home.lat, home.lon, home.alt)
+    elif started_at is not None:
+        home = tuple(started_at)
+    items = []
+    for seq in sorted(cmds):
+        if seq == 0:
+            continue
+        (lat, lon, alt, frame, command, _, prm) = cmds[seq]
+        item = placed.get(seq)
+        if item is not None:
+            items.append((command, item.lat, item.lon, item.alt, prm))
+        else:
+            items.append((command, 0.0, 0.0,
+                          plane_track.positionless_amsl(
+                              alt, frame, home[2] if home else None),
+                          prm))
+    heading = None
+    course = None
+    start = None
+    if path and started:
+        # the course measured over the start of the takeoff, which is the way
+        # a QuadPlane pointed as it transitioned, and for a fixed-wing
+        # takeoff the course it held: nothing but a flight of one says either
+        (takeoff, measured) = takeoff_flown(path, cmds, started)
+        if takeoff is not None:
+            if plane_track.takeoff_is_vtol(takeoff[4], params or {}):
+                heading = measured
+            else:
+                course = measured
+        first = plane_track.first_navigation_item(items)
+        if first in started:
+            (lat, lon, alt) = path[started[first]][:3]
+            start = (lat, lon, alt)
+    rally_points = [(lat, lon, rally_point_amsl(lat, lon, alt, flags,
+                                                home[2] if home else None,
+                                                origin))
+                    for (lat, lon, alt, flags) in (rally or [])]
+    return plane_track.mission_track(home, items, params, heading, start,
+                                     rally_points, approach,
+                                     takeoff_course=course)
+
+
+def path_view(path):
+    '''where a 3D map of a flight path looks from: the middle of the path,
+    its lowest altitude and how far across it is, as (lat, lon, amsl, span).
+    Longitudes are taken from the first point's the short way round, so a
+    flight across the antimeridian is centred on it rather than on the far
+    side of the world'''
+    # note: sum/min/max are shadowed in this namespace (mavextra import *), so
+    # accumulate explicitly
+    first_lon = path[0][1]
+    sumlat = sumlon = 0.0
+    minlat = maxlat = path[0][0]
+    minlon = maxlon = 0.0
+    ground0 = path[0][2]
+    for p in path:
+        la, lo, al = p[:3]
+        lo = mp_util.wrap_180(lo - first_lon)
+        sumlat += la
+        sumlon += lo
+        if al < ground0:
+            ground0 = al
+        minlat = la if la < minlat else minlat
+        maxlat = la if la > maxlat else maxlat
+        minlon = lo if lo < minlon else minlon
+        maxlon = lo if lo > maxlon else maxlon
+    lat0 = sumlat / len(path)
+    lon0 = mp_util.wrap_180(first_lon + sumlon / len(path))
+    span_ns = mp_util.gps_distance(minlat, 0.0, maxlat, 0.0)
+    span_ew = mp_util.gps_distance(minlat, 0.0, minlat, maxlon - minlon)
+    span = span_ns if span_ns > span_ew else span_ew
+    if span < 1000.0:
+        span = 1000.0
+    return (lat0, lon0, ground0, span)
+
+
+def cmd_map3d(args):
+    '''show a 3D map view: draped satellite imagery over terrain'''
+    try:
+        from MAVProxy.modules.mavproxy_map3d.map3d import (
+            Map3D, missing_packages, missing_packages_message)
+    except ImportError as ex:
+        print("map3d needs extra packages: pip install 'MAVProxy[map3d]' (%s)" % ex)
+        return
+    # map3d.py itself does not import VTK; the viewer child process does
+    missing = missing_packages()
+    if missing:
+        print(missing_packages_message(missing))
+        return
+
+    mlog = mestate.mlog
+    (path, mission, cmds, started, rally, origin,
+     approach) = mission_from_log(mlog, mestate.settings.condition)
+    mlog.rewind()
+
+    if len(path) == 0:
+        print("No POS or GLOBAL_POSITION_INT messages found for 3D map")
+        return
+
+    (lat0, lon0, ground0, span) = path_view(path)
+
+    # resolve mission item altitudes to AMSL before sending. Terrain-frame
+    # waypoints (MAV_FRAME_GLOBAL_TERRAIN_ALT = 10/11) are "z above terrain", so
+    # they need the terrain elevation at the waypoint, not home + z.
+    track = None
+    if mission:
+        params = mp_util.log_params(mlog)
+        mav_type = getattr(mlog, 'mav_type', None)
+        mission = resolve_mission_amsl(mission, ground0, params, mav_type)
+
+        # a plane does not fly the lines between its items; where the log
+        # says enough to fly the mission through its navigation, that path
+        # is drawn, and worked out only when it is
+        def fly():
+            return plane_mission_track(cmds, mission,
+                                       (path[0][0], path[0][1], ground0),
+                                       params, mav_type, path, started,
+                                       rally, origin, approach)
+        if mestate.settings.missionpath == 'flown':
+            track = fly()
+            if (track is None and
+                    mp_util.vehicle_type_name(mav_type) == 'plane'):
+                say_unflown()
+
+    # drop views the user has already closed, so their child processes are reaped
+    for old in [v for v in map3d_views if not v.is_alive()]:
+        old.close()
+        map3d_views.remove(old)
+
+    m3d = Map3D(title="MAVExplorer 3D Map")
+    map3d_views.append(m3d)
+    m3d.set_origin(lat0, lon0, ground0)
+    m3d.set_home(ground0)
+    m3d.set_mission_arrows(mestate.settings.showdirection)
+    m3d.set_mission_labels(mestate.settings.showlabels)
+    m3d.set_mission_label_size(mestate.settings.labelsize)
+    m3d.set_mission_style(mestate.settings.missionpath)
+    m3d.set_path(path)
+    if xlimits.last_xlim is not None and mestate.settings.sync_xmap:
+        m3d.set_time_range(xlimits.last_xlim)
+    if mission:
+        m3d.set_mission(mission, track)
+        # kept, to draw the path flown if the style changes to it later
+        m3d.mission_to_fly = None
+        if track is None and mestate.settings.missionpath != 'flown':
+            m3d.mission_to_fly = (mission, fly)
+    m3d.look_at(lat0, lon0, ground0, dist=1.6 * span)
+
+def resolve_mission_amsl(mission, ground0, params=None, mav_type=None):
+    '''convert mission items to MissionItems in AMSL (frame 0). mission items
+    are (lat, lon, z, frame, cmd, seq, params).
+
+    Terrain-frame waypoints are resolved using the quantized terrain mesh (the
+    same source rendered in the 3D view), which is fetched per 1-degree tile and
+    cached, so it never stalls the command thread per waypoint.'''
+    from MAVProxy.modules.mavproxy_map3d.map3d import MissionItem
+    # home AMSL: the home item (seq 0) altitude, else takeoff ground
+    home_amsl = ground0
+    for item in mission:
+        if item[5] == 0:
+            home_amsl = item[2]
+            break
+    sampler = None
+    if any(item[3] in (10, 11) for item in mission):
+        try:
+            from MAVProxy.modules.mavproxy_map3d.terrain import sample_terrain
+            sampler = sample_terrain
+        except Exception as ex:
+            print("map3d: terrain elevation unavailable (%s)" % ex)
+    default_radius = mp_util.param_value(params, 'WP_LOITER_RAD')
+    out = []
+    previous = None
+    for (la, lo, z, frame, cid, seq, prm) in mission:
+        if frame in (0, 5):
+            amsl = z
+        elif frame in (10, 11):
+            terr = sampler(la, lo) if sampler is not None else None
+            amsl = (terr if terr is not None else home_amsl) + z
+        else:
+            amsl = home_amsl + z
+        radius = mp_util.mission_circle_radius(cid, prm, default_radius,
+                                               mav_type)
+        # items which say how many turns they fly say so themselves; None is
+        # an item which circles until something else stops it
+        turns = mp_util.mission_circle_turns(cid, prm)
+        if cid == mavutil.mavlink.MAV_CMD_NAV_LOITER_TO_ALT:
+            approach = None
+            if previous is not None:
+                approach = mp_util.gps_distance(previous[0], previous[1], la, lo)
+            turns = mp_util.loiter_to_alt_turns(
+                radius,
+                amsl - previous[2] if previous is not None else None,
+                params, approach)
+        converge = None
+        if (radius is not None and
+                mp_util.mission_crosstracks_from_centre(cid, prm)):
+            # the next leg is flown against a track from the loiter centre,
+            # so the vehicle pulls back onto it after leaving the circle
+            converge = mp_util.vehicle_track_convergence(params)
+        out.append(MissionItem(la, lo, amsl, 0, cid, seq, prm[0],
+                               radius, turns, converge))
+        previous = (la, lo, amsl)
+    return out
+
+def cmd_set(args):
+    '''control MAVExporer options'''
+    mestate.settings.command(args)
+    update_map3d_views()
+
+def update_map3d_views():
+    '''push the settings the open 3D views care about'''
+    global map3d_pushed
+    map3d_pushed = map3d_settings()
+    for view in map3d_views:
+        if view.is_alive():
+            view.set_mission_arrows(mestate.settings.showdirection)
+            view.set_mission_labels(mestate.settings.showlabels)
+            view.set_mission_label_size(mestate.settings.labelsize)
+            view.set_mission_style(mestate.settings.missionpath)
+            pending = getattr(view, 'mission_to_fly', None)
+            if mestate.settings.missionpath == 'flown' and pending is not None:
+                (mission, fly) = pending
+                view.mission_to_fly = None
+                track = fly()
+                if track is None:
+                    say_unflown()
+                view.set_mission(mission, track)
+
+def say_unflown():
+    print("map3d: could not work out the path this mission is flown along "
+          "-- only a plane's can be, and not one which is too long, never "
+          "finishes an item, uses a command which cannot be flown here, or "
+          "which the log does not hold all of; drawing its geometry")
+
+def map3d_settings():
+    '''the settings the open 3D views are drawn by'''
+    return (mestate.settings.showdirection, mestate.settings.showlabels,
+            mestate.settings.labelsize, mestate.settings.missionpath)
+
+
+def poll_map3d_views():
+    '''take what the open 3D views' own controls have been set to, and give
+    them any setting changed since they were last told -- by the settings
+    dialog as much as by a set command.  A view which has died is drained
+    too, so we do not lose the reason it failed to start'''
+    global map3d_pushed
+    changed = map3d_settings() != map3d_pushed
+    for view in map3d_views:
+        for event in view.check_events():
+            if event[0] == 'startup_error':
+                print("map3d: the 3D view failed to start:\n%s" % event[1])
+            elif event[0] == 'mission_labels':
+                mestate.settings.showlabels = bool(event[1])
+                changed = True
+            elif event[0] == 'mission_style':
+                mestate.settings.missionpath = event[1]
+                changed = True
+    if changed:
+        # every view follows the setting, and the path flown is only worked
+        # out while it is drawn
+        update_map3d_views()
+
+def cmd_condition(args):
+    '''control MAVExporer conditions'''
+    if len(args) == 0:
+        print("condition is: %s" % mestate.settings.condition)
+        return
+    mestate.settings.condition = ' '.join(args)
+    if len(mestate.settings.condition) == 0 or mestate.settings.condition == 'clear':
+        mestate.settings.condition = None
+
+def cmd_reload(args):
+    '''reload graphs'''
+    mestate.console.writeln('Reloading graphs', fg='blue')
+    load_graphs()
+    setup_menus()
+    mestate.console.write("Loaded %u graphs\n" % len(mestate.graphs))
+
+fft_tool = None
+
+def cmd_fft(args):
+    '''display fft from log'''
+
+    from MAVProxy.modules.lib import mav_fft
+    if len(args) > 0:
+        condition = args[0]
+    else:
+        condition = None
+    global fft_tool, xlimits
+    fft_tool = mav_fft.MavFFT(mlog=mestate.mlog,
+                              xlimits=xlimits)
+    fft_tool.start()
+
+msgstats_tool = None
+
+def cmd_stats(args):
+    '''show status on log'''
+
+    from MAVProxy.modules.lib import msgstats
+    global msgstats_tool
+    msgstats_tool = msgstats.MPMsgStats(mlog=mestate.mlog)
+    msgstats_tool.start()
+
+def cmd_dump(args):
+    '''dump messages from log'''
+    import re
+    global xlimits
+
+    # understand --verbose to give as much information about message as possible
+    verbose = False
+    if "--verbose" in args:
+        verbose = True
+        args = list(filter(lambda x : x != "--verbose", args))
+
+    if len(args) > 0:
+        wildcard = args[0]
+    else:
+        print("Usage: dump MSG1,MSG2[0]...")
+        return
+    mlog = mestate.mlog
+    mlog.rewind()
+    types_inst = []
+    types_filt_inst_id = []
+    types_inst_no_id = []
+    for t in wildcard.split(','):
+                #remove instance id if it exists
+                t2 = re.sub(r'\[.*\]', '', t)
+                types_filt_inst_id.extend([t2])
+                if t.find('[') != -1:
+                    # add message with instance id to instances list
+                    types_inst.extend([t])
+                    types_inst_no_id.extend([t2])
+
+    #begin first dump msg on new line
+    print("")
+    ext = False
+    while True:
+        msg = mlog.recv_match(type=types_filt_inst_id, condition=mestate.settings.condition)
+        if msg is None:
+            break
+        in_range = xlimits.timestamp_in_range(msg._timestamp)
+        if in_range < 0:
+            continue
+        if in_range > 0:
+            continue
+
+        instid = None
+        if msg.get_type() in types_inst_no_id:
+            if msg.fmt.instance_field is not None:
+                idx = types_inst_no_id.index(msg.get_type())
+                type_inst = types_inst[idx]
+                instid = re.sub(r'.*\[', '', type_inst)
+                instid = re.sub(r'\]', '', instid)
+            else:
+                print(f"{msg.get_type()} is not instance.")
+                ext = True
+        if ext:
+            break
+
+        if verbose and "pymavlink.dialects" in str(type(msg)):
+            mavutil.dump_message_verbose(sys.stdout, msg)
+        elif verbose and hasattr(msg,"dump_verbose"):
+            msg.dump_verbose(sys.stdout)
+        else:
+            if instid is not None:
+                inst = getattr(msg, msg.fmt.instance_field, None)
+                if str(inst) == instid:
+                    print("%s %s" % (timestring(msg), msg))  
+            else:
+                print("%s %s" % (timestring(msg), msg))
+    mlog.rewind()
+
+mfit_tool = None
+
+def cmd_magfit(args):
+    '''fit magnetic field'''
+
+    from MAVProxy.modules.lib import magfit    
+    global mfit_tool, xlimits
+    mfit_tool = magfit.MagFit(title="MagFit",
+                              mlog=mestate.mlog,
+                              xlimits=xlimits)
+    mfit_tool.start()
+
+def save_graph(graphdef):
+    '''save a graph as XML'''
+    if graphdef.filename is None:
+        graphdef.filename = os.path.join(mp_util.dot_mavproxy(), 'mavgraphs.xml')
+    contents = None
+    try:
+        contents = open(graphdef.filename).read()
+        graphs = load_graph_xml(contents, graphdef.filename, load_all=True)
+    except Exception as ex:
+        graphs = []
+        print(ex)
+    if contents is not None and len(graphs) == 0:
+        print("Unable to parse %s" % graphdef.filename)
+        return
+    if contents is not None:
+        try:
+            open(graphdef.filename + ".bak",'w').write(contents)
+        except Exception:
+            pass
+    found_name = False
+    for i in range(len(graphs)):
+        if graphs[i].name == graphdef.name:
+            graphs[i] = graphdef
+            found_name = True
+            break
+    if not found_name:
+        graphs.append(graphdef)
+    pipe_console_input.send("Saving %u graphs to %s" % (len(graphs), graphdef.filename))
+    f = open(graphdef.filename, "w")
+    f.write("<graphs>\n\n")
+    for g in graphs:
+        f.write(" <graph name='%s'>\n" % g.name.strip())
+        if g.description is None:
+            g.description = ''
+        f.write("  <description>%s</description>\n" % g.description.strip())
+        for e in g.expressions:
+            if e is None:
+                continue
+            e = xml_escape(e)
+            f.write("  <expression>%s</expression>\n" % e.strip())
+        f.write(" </graph>\n\n")
+    f.write("</graphs>\n")
+    f.close()
+
+def save_callback(operation, graphdef):
+    '''callback from save thread'''
+    if operation == 'test':
+        for e in graphdef.expressions:
+            if e is None:
+                continue
+            if expression_ok(e, msgs):
+                graphdef.expression = e
+                pipe_graph_input.send('graph ' + graphdef.expression)
+                return
+        pipe_console_input.send('Invalid graph expressions')
+        return
+    if operation == 'save':
+        save_graph(graphdef)
+
+def save_process(MAVExpLastGraph, child_pipe_console_input, child_pipe_graph_input, statusMsgs):
+    '''process for saving a graph'''
+    from MAVProxy.modules.lib import wx_processguard
+    from MAVProxy.modules.lib.wx_loader import wx
+    from MAVProxy.modules.lib.wxgrapheditor import GraphDialog
+    
+    #This pipe is used to send text to the console
+    global pipe_console_input
+    pipe_console_input = child_pipe_console_input
+
+    #This pipe is used to send graph commands
+    global pipe_graph_input
+    pipe_graph_input = child_pipe_graph_input
+    
+    #The valid expression messages, required to
+    #validate the expression in the dialog box
+    global msgs
+    msgs = statusMsgs
+    
+    app = wx.App(False)
+    if MAVExpLastGraph.description is None:
+        MAVExpLastGraph.description = ''
+    frame = GraphDialog('Graph Editor',
+                        MAVExpLastGraph,
+                        save_callback)
+    frame.ShowModal()
+    frame.Destroy()
+
+def cmd_save(args):
+    '''save a graph'''
+    child = multiproc.Process(target=save_process, args=[mestate.last_graph, mestate.child_pipe_send_console, mestate.child_pipe_send_graph, mestate.status.msgs])
+    child.start()
+    
+# events from EV messages, taken from AP_Logger.h
+events = {
+    7 : "DATA_AP_STATE",
+    8 : "DATA_SYSTEM_TIME_SET",
+    9 : "DATA_INIT_SIMPLE_BEARING",
+    10 : "DATA_ARMED",
+    11 : "DATA_DISARMED",
+    15 : "DATA_AUTO_ARMED",
+    17 : "DATA_LAND_COMPLETE_MAYBE",
+    18 : "DATA_LAND_COMPLETE",
+    28 : "DATA_NOT_LANDED",
+    19 : "DATA_LOST_GPS",
+    21 : "DATA_FLIP_START",
+    22 : "DATA_FLIP_END",
+    25 : "DATA_SET_HOME",
+    26 : "DATA_SET_SIMPLE_ON",
+    27 : "DATA_SET_SIMPLE_OFF",
+    29 : "DATA_SET_SUPERSIMPLE_ON",
+    30 : "DATA_AUTOTUNE_INITIALISED",
+    31 : "DATA_AUTOTUNE_OFF",
+    32 : "DATA_AUTOTUNE_RESTART",
+    33 : "DATA_AUTOTUNE_SUCCESS",
+    34 : "DATA_AUTOTUNE_FAILED",
+    35 : "DATA_AUTOTUNE_REACHED_LIMIT",
+    36 : "DATA_AUTOTUNE_PILOT_TESTING",
+    37 : "DATA_AUTOTUNE_SAVEDGAINS",
+    38 : "DATA_SAVE_TRIM",
+    39 : "DATA_SAVEWP_ADD_WP",
+    41 : "DATA_FENCE_ENABLE",
+    42 : "DATA_FENCE_DISABLE",
+    43 : "DATA_ACRO_TRAINER_DISABLED",
+    44 : "DATA_ACRO_TRAINER_LEVELING",
+    45 : "DATA_ACRO_TRAINER_LIMITED",
+    46 : "DATA_GRIPPER_GRAB",
+    47 : "DATA_GRIPPER_RELEASE",
+    49 : "DATA_PARACHUTE_DISABLED",
+    50 : "DATA_PARACHUTE_ENABLED",
+    51 : "DATA_PARACHUTE_RELEASED",
+    52 : "DATA_LANDING_GEAR_DEPLOYED",
+    53 : "DATA_LANDING_GEAR_RETRACTED",
+    54 : "DATA_MOTORS_EMERGENCY_STOPPED",
+    55 : "DATA_MOTORS_EMERGENCY_STOP_CLEARED",
+    56 : "DATA_MOTORS_INTERLOCK_DISABLED",
+    57 : "DATA_MOTORS_INTERLOCK_ENABLED",
+    58 : "DATA_ROTOR_RUNUP_COMPLETE",
+    59 : "DATA_ROTOR_SPEED_BELOW_CRITICAL",
+    60 : "DATA_EKF_ALT_RESET",
+    61 : "DATA_LAND_CANCELLED_BY_PILOT",
+    62 : "DATA_EKF_YAW_RESET",
+    63 : "DATA_AVOIDANCE_ADSB_ENABLE",
+    64 : "DATA_AVOIDANCE_ADSB_DISABLE",
+    65 : "DATA_AVOIDANCE_PROXIMITY_ENABLE",
+    66 : "DATA_AVOIDANCE_PROXIMITY_DISABLE",
+    67 : "DATA_GPS_PRIMARY_CHANGED",
+    68 : "DATA_WINCH_RELAXED",
+    69 : "DATA_WINCH_LENGTH_CONTROL",
+    70 : "DATA_WINCH_RATE_CONTROL",
+    71 : "DATA_ZIGZAG_STORE_A",
+    72 : "DATA_ZIGZAG_STORE_B",
+    73 : "DATA_LAND_REPO_ACTIVE",
+    74 : "DATA_STANDBY_ENABLE",
+    75 : "DATA_STANDBY_DISABLE",
+    76 : "FENCE_ALT_MAX_ENABLE",
+    77 : "FENCE_ALT_MAX_DISABLE",
+
+    80 : "FENCE_FLOOR_ENABLE",
+    81 : "FENCE_FLOOR_DISABLE",
+    82 : "FENCE_POLYGON_ENABLE",
+    83 : "FENCE_POLYGON_DISABLE",
+
+    85 : "EK3_SOURCES_SET_TO_PRIMARY",
+    86 : "EK3_SOURCES_SET_TO_SECONDARY",
+    87 : "EK3_SOURCES_SET_TO_TERTIARY",
+
+    90 : "AIRSPEED_PRIMARY_CHANGED",
+
+    163 : "DATA_SURFACED",
+    164 : "DATA_NOT_SURFACED",
+    165 : "DATA_BOTTOMED",
+    166 : "DATA_NOT_BOTTOMED",
+}
+
+subsystems = {
+    1 : "MAIN",
+    2 : "RADIO",
+    3 : "COMPASS",
+    4 : "OPTFLOW",
+    5 : "FAILSAFE_RADIO",
+    6 : "FAILSAFE_BATT",
+    7 : "FAILSAFE_GPS",
+    8 : "FAILSAFE_GCS",
+    9 : "FAILSAFE_FENCE",
+    10 : "FLIGHT_MODE",
+    11 : "GPS",
+    12 : "CRASH_CHECK",
+    13 : "FLIP",
+    14 : "AUTOTUNE",
+    15 : "PARACHUTES",
+    16 : "EKFCHECK",
+    17 : "FAILSAFE_EKFINAV",
+    18 : "BARO",
+    19 : "CPU",
+    20 : "FAILSAFE_ADSB",
+    21 : "TERRAIN",
+    22 : "NAVIGATION",
+    23 : "FAILSAFE_TERRAIN",
+    24 : "EKF_PRIMARY",
+    25 : "THRUST_LOSS_CHECK",
+    26 : "FAILSAFE_SENSORS",
+    27 : "FAILSAFE_LEAK",
+    28 : "PILOT_INPUT",
+    29 : "FAILSAFE_VIBE",
+    30 : "INTERNAL_ERROR",
+    31 : "FAILSAFE_DEADRECKON",
+}
+
+error_codes = {
+    "RADIO" : { # subsystem specific error codes -- radio
+        2: "RADIO_LATE_FRAME",
+    },
+    "FAILSAFE_FENCE" : { # for failsafe fence, non-zero is a bitmask
+        0: "FAILSAFE_RESOLVED",
+        '*': "Fence:#",
+    },
+    "FAILSAFE*" : { # subsystem specific error codes -- failsafe_thr, batt, gps
+        0: "FAILSAFE_RESOLVED",
+        1: "FAILSAFE_OCCURRED",
+    },
+    "MAIN" : { # subsystem specific error codes -- main
+        1: "MAIN_INS_DELAY",
+    },
+    "CRASH_CHECK" : { # subsystem specific error codes -- crash checker
+        1: "CRASH_CHECK_CRASH",
+        2: "CRASH_CHECK_LOSS_OF_CONTROL",
+    },
+    "FLIP" : { # subsystem specific error codes -- flip
+        2: "FLIP_ABANDONED",
+    },
+    "TERRAIN" : { # subsystem specific error codes -- terrain
+        2: "MISSING_TERRAIN_DATA",
+    },
+    "NAVIGATION" : { # subsystem specific error codes -- navigation
+        2: "FAILED_TO_SET_DESTINATION",
+        3: "RESTARTED_RTL",
+        4: "FAILED_CIRCLE_INIT",
+        5: "DEST_OUTSIDE_FENCE",
+        6: "RTL_MISSING_RNGFND",
+    },
+    "INTERNAL_ERROR" : { # subsystem specific error codes -- internal_error
+        1: "INTERNAL_ERRORS_DETECTED",
+    },
+    "PARACHUTES" : { # parachute failed to deploy because of low altitude or landed
+        2: "PARACHUTE_TOO_LOW",
+        3: "PARACHUTE_LANDED",
+    },
+    "EKFCHECK" : { # EKF check definitions
+        2: "EKFCHECK_BAD_VARIANCE",
+        0: "EKFCHECK_VARIANCE_CLEARED",
+    },
+    "BARO" : { # Baro specific error codes
+        2: "BARO_GLITCH",
+        3: "BAD_DEPTH", # sub-only
+    },
+    "GPS" : { # GPS specific error coces
+        2: "GPS_GLITCH",
+    },
+    "EKF_PRIMARY" : { # EKF primary - code is the EKF number
+        '*': "EKF:#",
+    },
+    "FLIGHT_MODE" : { # flight mode - code is the mode number
+        '*': "Mode:#",
+    },
+    "*" : { # general error codes
+        0: "ERROR_RESOLVED",
+        1: "FAILED_TO_INITIALISE",
+        4: "UNHEALTHY",
+    }
+}
+    
+def cmd_messages(args):
+    '''show messages'''
+    invert = False
+    if len(args) > 0:
+        wildcard = args[0]
+        if wildcard.startswith("!"):
+            invert = True
+            wildcard = wildcard[1:]
+        if wildcard.find('*') == -1 and wildcard.find('?') == -1:
+            wildcard = "*" + wildcard + "*"
+    else:
+        wildcard = '*'
+
+    # statustext reassembly:
+    statustext_current_id = None
+    statustext_next_seq = 0
+    statustext_accumulation = None
+    # statustext_timestring = None
+
+
+    def print_if_match(m_timestring, mstr):
+        matches = fnmatch.fnmatch(mstr.upper(), wildcard.upper())
+        if invert:
+            matches = not matches
+        if matches:
+            print("%s %s" % (m_timestring, mstr))
+
+    def get_error_code(subsys, ecode):
+        for e in error_codes:
+            if e.endswith('*'):
+                subsys_match = subsys.startswith(e[:-1])
+            else:
+                subsys_match = subsys == e
+            if subsys_match:
+                if ecode in error_codes[e]:
+                    return error_codes[e][ecode]
+                elif "*" in error_codes[e]:
+                    return error_codes[e]['*'].replace("#",str(ecode))
+        return str(ecode)
+
+    mestate.mlog.rewind()
+    types = set(['MSG','EV','ERR', 'STATUSTEXT'])
+    while True:
+        m = mestate.mlog.recv_match(type=types, condition=mestate.settings.condition)
+        if m is None:
+            break
+        if m.get_type() == 'MSG':
+            mstr = m.Message
+        elif m.get_type() == 'EV':
+            mstr = "Event: %s" % events.get(m.Id, str(m.Id))
+        elif m.get_type() == 'ERR':
+            subsys = subsystems.get(m.Subsys, str(m.Subsys))
+            ecode = get_error_code(subsys, m.ECode)
+            mstr = "Error: Subsys %s ECode %s " % (subsys, ecode)
+        else:
+            mstr = m.text
+
+        # special handling for statustext:
+        chunking_id = getattr(m, "id", getattr(m, "ID", None))
+        chunking_seq = getattr(m, "chunk_seq", getattr(m, "Seq", None))
+
+        if chunking_id is not None and chunking_seq is not None and chunking_id != 0:
+            if chunking_id != statustext_current_id:
+                if statustext_accumulation is not None:
+                    print_if_match(statustext_timestring, statustext_accumulation)
+                statustext_accumulation = ""
+                statustext_current_id = chunking_id
+                statustext_next_seq = 0
+                statustext_timestring = timestring(m)
+            if chunking_seq != statustext_next_seq:
+                statustext_accumulation += "..."
+            statustext_next_seq = chunking_seq + 1
+            t_str = getattr(m, "text", None)
+            if t_str is None:
+                t_str = getattr(m, 'Message')
+            statustext_accumulation += t_str
+
+            continue
+
+        print_if_match(timestring(m), mstr)
+
+    # emit any remaining statustext if it matches:
+    if statustext_accumulation is not None:
+        print_if_match(statustext_timestring, statustext_accumulation)
+
+    mestate.mlog.rewind()
+
+def extract_files():
+    '''extract all FILE messages as a dictionary of files'''
+    sequences = {}
+    mestate.mlog.rewind()
+    while True:
+        m = mestate.mlog.recv_match(type=['FILE'], condition=mestate.settings.condition)
+        if m is None:
+            break
+        if not m.FileName in sequences:
+            sequences[m.FileName] = set()
+        sequences[m.FileName].add((m.Offset, m.Data[:m.Length]))
+    ret = {}
+    for f in sequences:
+        ofs = 0
+        seen = set()
+        seq = sorted(list(sequences[f]), key=lambda t: t[0])
+        ret[f] = bytes()
+        for t in seq:
+            if t[0] in seen:
+                continue
+            seen.add(t[0])
+            if t[0] != ofs:
+                print("Gap in %s at %u" % (f, ofs))
+            ret[f] += t[1]
+            ofs = t[0]+len(t[1])
+
+    mestate.mlog.rewind()
+    return ret
+
+def cmd_file(args):
+    '''show files'''
+    files = extract_files()
+    if len(args) == 0:
+        # list
+        for n in sorted(files.keys()):
+            print("%s (length %u)" % (n, len(files[n])))
+        return
+    fname = args[0]
+    if any(c in fname for c in '*?['):
+        # wildcard: extract all matching files to a directory (default cwd)
+        matches = sorted(n for n in files if fnmatch.fnmatch(n, fname))
+        if not matches:
+            print("No files match %s" % fname)
+            return
+        destdir = args[1] if len(args) > 1 else '.'
+        for n in matches:
+            dest = os.path.join(destdir, os.path.basename(n))
+            open(dest, "wb").write(files[n])
+            print("Saved %s to %s" % (n, dest))
+        return
+    if not fname in files:
+        print("File %s not found" % fname)
+        return
+    if len(args) == 1:
+        # print on terminal
+        print(files[fname].decode('utf-8'))
+    else:
+        # save to file
+        dest = args[1]
+        open(dest, "wb").write(files[fname])
+        print("Saved %s to %s" % (fname, dest))
+
+def set_vehicle_name():
+    mapping = { mavutil.mavlink.MAV_TYPE_GROUND_ROVER : "Rover",
+                mavutil.mavlink.MAV_TYPE_FIXED_WING : "ArduPlane",
+                mavutil.mavlink.MAV_TYPE_QUADROTOR : "ArduCopter",
+                mavutil.mavlink.MAV_TYPE_ANTENNA_TRACKER : "AntennaTracker",
+                mavutil.mavlink.MAV_TYPE_SUBMARINE : "ArduSub",
+                }
+    mestate.param_help.vehicle_name = mapping.get(mestate.mlog.mav_type, None)
+
+def cmd_param_diff(args):
+    '''show parameter changed using 4.3.x defaults'''
+    verbose = mestate.settings.paramdocs
+    mlog = mestate.mlog
+    if not hasattr(mlog, 'param_defaults'):
+        print("No param defaults in log")
+        return
+    if len(args) > 0:
+        wildcard = args[0]
+    else:
+        wildcard = '*'
+    k = sorted(mlog.params.keys())
+    defaults = mlog.param_defaults
+    for p in k:
+        p = str(p).upper()
+        if not p in defaults:
+            continue
+        if mlog.params[p] == defaults[p]:
+            continue
+        if fnmatch.fnmatch(p, wildcard.upper()):
+            s = "%-16.16s %f %f" % (str(p), mlog.params[p], defaults[p])
+            if verbose:
+                set_vehicle_name()
+                info = mestate.param_help.param_info(p, mlog.params[p])
+                if info is not None:
+                    s += " # %s" % info
+                info_default = mestate.param_help.param_info(p, defaults[p])
+                if info_default is not None:
+                    s += " (DEFAULT: %s)" % info_default
+            print(s)
+
+def cmd_param_save(args, changed_only=False):
+    '''save parameters'''
+    mlog = mestate.mlog
+    if changed_only and not hasattr(mlog, 'param_defaults'):
+        print("No param defaults in log")
+        return
+    filename = args[0]
+    if len(args) > 1:
+        wildcard = args[1]
+    else:
+        wildcard = '*'
+    k = sorted(mlog.params.keys())
+    count = 0
+    try:
+        f = open(filename, "w")
+    except Exception as ex:
+        print("Failed to open %s - %s" % (filename, ex))
+        return
+    for p in k:
+        p = str(p).upper()
+        if changed_only and p in mlog.param_defaults and mlog.params[p] == mlog.param_defaults[p]:
+            continue
+        if fnmatch.fnmatch(p, wildcard.upper()):
+            v = mlog.params[p]
+            if int(v) == v:
+                s = "%-16.16s %d" % (str(p), mlog.params[p])
+            else:
+                s = "%-16.16s %f" % (str(p), mlog.params[p])
+                s = s.rstrip('0')
+            f.write(s + "\n")
+            count += 1
+    f.close()
+    print("Saved %u parameters to %s" % (count, filename))
+            
+def ftp_decode(mlog):
+    '''decode FILE_TRANSFER_PROTOCOL for parameters'''
+    mlog.rewind()
+    ftp_transfers = {}
+    ftp_block_size = 0
+
+    FTP_OpenFileRO = 4
+    FTP_ReadFile = 5
+    FTP_BurstReadFile = 15
+    FTP_Ack = 128
+    FTP_NAck = 129
+
+    class Block(object):
+        def __init__(self, offset, size, data):
+            self.offset = offset
+            self.size = size
+            self.data = data
+
+    class Transfer(object):
+        def __init__(self, filename):
+            self.filename = filename
+            self.blocks = []
+
+        def extract(self):
+            self.blocks.sort(key = lambda x: x.offset)
+            data = bytes()
+            for b in self.blocks:
+                if b.offset < len(data):
+                    continue
+                if b.offset > len(data):
+                    print("gap at %u" % len(data))
+                    return None
+                data += bytes(b.data)
+            return data
+    
+    while True:
+        m = mestate.mlog.recv_match(type=['FILE_TRANSFER_PROTOCOL'])
+        if m is None:
+            break
+        session = m.payload[2]
+        opcode = m.payload[3]
+        size = m.payload[4]
+        req_opcode = m.payload[5]
+        burst_complete = m.payload[6]
+        data = m.payload[12:12+size]
+        if opcode == FTP_OpenFileRO:
+            filename = data
+            ftp_transfers[session] = Transfer(bytearray(filename))
+        if req_opcode in [FTP_ReadFile, FTP_BurstReadFile] and opcode == FTP_Ack:
+            if not session in ftp_transfers:
+                print("No session %u" % session)
+                continue
+            offset, = struct.unpack("<I", bytearray(m.payload[8:12]))
+            ftp_transfers[session].blocks.append(Block(offset,size,bytearray(data)))
+
+    pdata = None
+    for session in ftp_transfers:
+        f = ftp_transfers[session]
+        if f.filename.decode().startswith('@PARAM/param.pck'):
+            ex = f.extract()
+            if ex is not None:
+                pdata = param_ftp.ftp_param_decode(ex)
+    if pdata is not None:
+        for (name,value,ptype) in pdata.params:
+            name = name.decode('utf-8')
+            if name not in mlog.params:
+                mlog.params[name] = value
+        if pdata.defaults is not None and len(pdata.defaults) > 0:
+            mlog.param_defaults = {}
+            for (name,value,ptype) in pdata.defaults:
+                name = name.decode('utf-8')
+                mlog.param_defaults[name] = value
+
+
+def cmd_param(args):
+    '''show parameters'''
+    verbose = mestate.settings.paramdocs
+    mlog = mestate.mlog
+    usage = "Usage: param <help|download|check|show|diff|save|savechanged>"
+    global done_ftp_decode
+    if isinstance(mlog, mavutil.mavfile) and not done_ftp_decode:
+        done_ftp_decode = True
+        ftp_decode(mlog)
+    if len(args) > 0:
+        if args[0] == 'help':
+            if len(args) < 2:
+                print(usage)
+                return
+            set_vehicle_name()
+            mestate.param_help.param_help(args[1:])
+            return
+        if args[0] == 'download':
+            mestate.param_help.param_help_download()
+            return
+        if args[0] == 'check':
+            set_vehicle_name()
+            mestate.param_help.param_check(mlog.params, args[1:])
+            return
+        if args[0] == 'show':
+            # habits from mavproxy
+            cmd_param(args[1:])
+            return
+        if args[0] == 'diff':
+            cmd_param_diff(args[1:])
+            return
+        if args[0] == 'save':
+            # save parameters
+            if len(args) < 2:
+                print("Usage: param save FILENAME <WILDCARD>")
+                return
+            cmd_param_save(args[1:], False)
+            return
+        if args[0] == 'savechanged':
+            # save changed parameters
+            if len(args) < 2:
+                print("Usage: param savechanged FILENAME <WILDCARD>")
+                return
+            cmd_param_save(args[1:], True)
+            return
+        wildcard = args[0]
+        if len(args) > 1 and args[1] == "-v":
+            verbose = True
+    else:
+        wildcard = '*'
+    k = mp_util.sorted_natural(mlog.params.keys())
+    for p in k:
+        if fnmatch.fnmatch(str(p).upper(), wildcard.upper()):
+            s = "%-16.16s %f" % (str(p), mlog.params[p])
+            if verbose:
+                set_vehicle_name()
+                info = mestate.param_help.param_info(p, mlog.params[p])
+                if info is not None:
+                    s += " # %s" % info
+            print(s)
+
+def cmd_paramchange(args):
+    '''show param changes'''
+    if len(args) > 0:
+        wildcard = args[0]
+        if wildcard.find('*') == -1 and wildcard.find('?') == -1:
+            wildcard = "*" + wildcard + "*"
+    else:
+        wildcard = '*'
+    types = set(['PARM','PARAM_VALUE'])
+    vmap = {}
+    while True:
+        m = mestate.mlog.recv_match(type=types, condition=mestate.settings.condition)
+        if m is None:
+            break
+        if m.get_type() == 'PARM':
+            pname = m.Name
+            pvalue = m.Value
+        elif m.get_type() == 'PARAM_VALUE':
+            pname = m.param_id
+            pvalue = m.param_value
+        else:
+            continue
+        if pname.startswith('STAT_'):
+            # STAT_* changes are not interesting
+            continue
+        if not fnmatch.fnmatch(pname.upper(), wildcard.upper()):
+            continue
+        if not pname in vmap or vmap[pname] == pvalue:
+            vmap[pname] = pvalue
+            continue
+
+        print("%s %s %.6f -> %.6f" % (timestring(m), pname, vmap[pname], pvalue))
+        vmap[pname] = pvalue
+    mestate.mlog.rewind()
+
+
+def present_message_types(mlog):
+    '''return a set of message names that have at least one instance in
+    the currently loaded log. Uses mlog.counts (combined with
+    id_to_name where the dict is keyed by msg id) because mlog.messages
+    is cleared whenever DFReader rewinds, which happens during normal
+    MAVExplorer load (flightmode_list, etc.).'''
+    counts = getattr(mlog, 'counts', None)
+    if counts is None:
+        return set()
+    id_to_name = getattr(mlog, 'id_to_name', {}) or {}
+    out = set()
+    if isinstance(counts, dict):
+        # tlog -> {msg_id: count}; DFReader_text -> {name: count}
+        for k, v in counts.items():
+            if not v:
+                continue
+            if isinstance(k, str):
+                out.add(k)
+            else:
+                n = id_to_name.get(k)
+                if n:
+                    out.add(n)
+    else:
+        # DFReader_binary -> list[count] indexed by msg id
+        for mid, v in enumerate(counts):
+            if v:
+                n = id_to_name.get(mid)
+                if n:
+                    out.add(n)
+    return out
+
+
+def show_mavlink_message_help(name):
+    '''print MAVLink message help by introspecting the pymavlink-generated
+    <msgname>_encode docstring (used for telemetry .tlog files where the
+    DFMetaData XML doesn't apply)'''
+    import textwrap
+    method = getattr(mavutil.mavlink.MAVLink, name.lower() + '_encode', None)
+    doc = getattr(method, '__doc__', None) if method is not None else None
+    if not doc:
+        print("No help found for message: %s" % name)
+        return
+    print("Log Message: %s" % name)
+    print(textwrap.dedent(doc).strip())
+
+
+def cmd_logmessage(args):
+    '''show log message information'''
+    mlog = mestate.mlog
+    usage = "Usage: logmessage <help|download>"
+    # Print usage and return, if we have no arguments
+    if len(args) <= 0:
+        print(usage)
+        return
+    # help: print help for the requested log message
+    if args[0] == 'help':
+        if len(args) < 2:
+            print(usage)
+            return
+        present = present_message_types(mlog)
+        if present and args[1] not in present:
+            print("Message %s is not present in this log" % args[1])
+            return
+        if isinstance(mlog, DFReader.DFReader):
+            mlog.metadata.print_help(args[1])
+        elif isinstance(mlog, mavutil.mavlogfile):
+            show_mavlink_message_help(args[1])
+        else:
+            print("unsupported log type")
+        return
+    # download: download XML files for log messages
+    if args[0] == 'download':
+        if not hasattr(DFReader, 'DFMetaData'):
+            print("Incompatible pymavlink; upgrade pymavlink?")
+            return
+        try:
+            child = multiproc.Process(target=DFReader.DFMetaData.download)
+            child.start()
+        except Exception as e:
+            print(e)
+        if isinstance(mlog, DFReader.DFReader):
+            mlog.metadata.reset()
+        return
+    # Print usage if we've dropped through the ifs
+    print(usage)
+
+
+def mavlink_message_fields(msgname):
+    '''return [(field_name, units, description), ...] for a MAVLink message
+    by parsing the pymavlink-generated <msgname>_encode docstring; used by
+    find/help when the master is a telemetry log'''
+    import re
+    import textwrap
+    method = getattr(mavutil.mavlink.MAVLink, msgname.lower() + '_encode', None)
+    doc = getattr(method, '__doc__', None) if method is not None else None
+    if not doc:
+        return []
+    line_re = re.compile(
+        r'^(\S+)\s+:\s+(.*?)(?:\s*\[([^\]]+)\])?\s*\(type:[^)]+\)\s*$'
+    )
+    out = []
+    for line in textwrap.dedent(doc).splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = line_re.match(line)
+        if not m:
+            continue
+        name = m.group(1)
+        desc = m.group(2).strip()
+        units = (m.group(3) or '').strip()
+        out.append((name, units, desc))
+    return out
+
+
+def cmd_find(args):
+    '''find log message fields whose name or description contains a
+    case-insensitive substring; prints MSG.field [units] : description'''
+    if len(args) == 0:
+        print("Usage: find <substring>")
+        return
+    query = ' '.join(args).lower()
+    mlog = mestate.mlog
+    matches = []
+    present = present_message_types(mlog)
+
+    if isinstance(mlog, DFReader.DFReader):
+        # DataFlash log: walk the LogMessages XML metadata tree, skipping
+        # any messages that don't actually appear in this log
+        data = mlog.metadata.metadata_tree(verbose=True)
+        if data is None:
+            return
+        for msg_name in sorted(data.keys()):
+            if present and msg_name not in present:
+                continue
+            node = data[msg_name]
+            if not hasattr(node, 'fields') or not hasattr(node.fields, 'field'):
+                continue
+            msg_match = query in msg_name.lower()
+            for f in node.fields.field:
+                fname = f.get('name') or ''
+                try:
+                    desc = f.description.text or ''
+                except AttributeError:
+                    desc = ''
+                if (not msg_match and query not in fname.lower()
+                        and query not in desc.lower()):
+                    continue
+                units = f.get('units') or ''
+                matches.append((msg_name, fname, units, desc))
+    elif isinstance(mlog, mavutil.mavlogfile):
+        # telemetry tlog: introspect every MAVLink message that actually
+        # appears in this log via pymavlink class metadata
+        for msg_name in sorted(present):
+            msg_match = query in msg_name.lower()
+            for (fname, units, desc) in mavlink_message_fields(msg_name):
+                if (not msg_match and query not in fname.lower()
+                        and query not in desc.lower()):
+                    continue
+                matches.append((msg_name, fname, units, desc))
+    else:
+        print("unsupported log type")
+        return
+
+    if not matches:
+        print("No fields matching %r" % query)
+        return
+    full_names = ['%s.%s' % (m, fn) for (m, fn, _, _) in matches]
+    unit_strs = ['[%s]' % u if u else '' for (_, _, u, _) in matches]
+    name_w = max(len(s) for s in full_names)
+    unit_w = max(len(s) for s in unit_strs) if any(unit_strs) else 0
+    for (full, ustr, (_, _, _, desc)) in zip(full_names, unit_strs, matches):
+        print("%-*s %-*s : %s" % (name_w, full, unit_w, ustr, desc))
+
+
+mission_viewers = []
+
+
+def cmd_mission(args):
+    '''show mission'''
+    if (args and args != ['--gui'] and
+            not (len(args) == 2 and args[0] == 'save')):
+        print("Usage: mission [--gui | save FILENAME]")
+        return
+    mestate.mlog.rewind()
+    types = set(['CMD','MISSION_ITEM_INT'])
+    wp = mavwp.MAVWPLoader()
+    while True:
+        m = mestate.mlog.recv_match(type=types, condition=mestate.settings.condition)
+        if m is None:
+            break
+        if m.get_type() == 'CMD':
+            try:
+                frame = m.Frame
+            except AttributeError:
+                print("Warning: assuming frame is GLOBAL_RELATIVE_ALT")
+                frame = mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT
+            num_wps = m.CTot
+            m = mavutil.mavlink.MAVLink_mission_item_message(0,
+                                                             0,
+                                                             m.CNum,
+                                                             frame,
+                                                             m.CId,
+                                                             0, 1,
+                                                             m.Prm1, m.Prm2, m.Prm3, m.Prm4,
+                                                             m.Lat, m.Lng, m.Alt)
+
+        if m.get_type() == 'MISSION_ITEM_INT':
+            m = mavutil.mavlink.MAVLink_mission_item_message(m.target_system,
+                                                             m.target_component,
+                                                             m.seq,
+                                                             m.frame,
+                                                             m.command,
+                                                             m.current,
+                                                             m.autocontinue,
+                                                             m.param1,
+                                                             m.param2,
+                                                             m.param3,
+                                                             m.param4,
+                                                             m.x*1.0e-7,
+                                                             m.y*1.0e-7,
+                                                             m.z)
+        if m.current >= 2:
+            continue
+
+        while m.seq > wp.count():
+            print("Adding dummy WP %u" % wp.count())
+            wp.set(m, wp.count())
+        wp.set(m, m.seq)
+    if len(args) == 2 and args[0] == 'save':
+        wp.save(args[1])
+        mestate.mlog.rewind()
+        return
+    if args == ['--gui']:
+        from MAVProxy.modules.mavproxy_misseditor.mission_editor import MissionViewer
+        for old in [viewer for viewer in mission_viewers
+                    if not viewer.is_alive()]:
+            old.close()
+            mission_viewers.remove(old)
+        mission_viewers.append(MissionViewer(wp))
+        mestate.mlog.rewind()
+        return
+    for i in range(wp.count()):
+        w = wp.wp(i)
+        print("%u\t%u\t%u\t%u\t%f\t%f\t%f\t%f\t%f\t\t%f\t\t%f\t%u" % (
+            w.seq, w.current, w.frame, w.command,
+            w.param1, w.param2, w.param3, w.param4,
+            w.x, w.y, w.z, w.autocontinue))
+    mestate.mlog.rewind()
+    
+def cmd_devid(args):
+    '''show parameters'''
+    params = mestate.mlog.params
+    k = sorted(params.keys())
+    for p in k:
+        if p.startswith('COMPASS_DEV_ID') or p.startswith('COMPASS_PRIO') or (
+                p.startswith('COMPASS') and p.endswith('DEV_ID')):
+            mp_util.decode_devid(params[p], p)
+        if p.startswith('INS') and p.endswith('_ID'):
+            mp_util.decode_devid(params[p], p)
+        if p.startswith('GND_BARO') and p.endswith('_ID'):
+            mp_util.decode_devid(params[p], p)
+        if p.startswith('BARO') and p.endswith('DEVID'):
+            mp_util.decode_devid(params[p], p)
+        if p.startswith('ARSPD') and p.endswith('DEVID'):
+            mp_util.decode_devid(params[p], p)
+        if p.startswith('MAV') and p.endswith('DEVID'):
+            mp_util.decode_devid(params[p], p)
+
+def cmd_loadfile(args):
+    '''callback from menu to load a log file'''
+    if len(args) != 1:
+        fileargs = " ".join(args)
+    else:
+        fileargs = args[0]
+    if not os.path.exists(fileargs):
+        print("Error loading file ", fileargs);
+        return
+    if os.name == 'nt':
+        #convert slashes in Windows
+        fileargs = fileargs.replace("\\", "/")
+    loadfile(fileargs.strip('"'))
+
+def loadfile(args):
+    '''load a log file (path given by arg)'''
+    mestate.console.write("Loading %s...\n" % args)
+    t0 = time.time()
+    mlog = mavutil.mavlink_connection(args, notimestamps=False,
+                                      zero_time_base=False,
+                                      progress_callback=progress_bar)
+    mestate.filename = args
+    mestate.mlog = mlog
+    # note that this is a shallow copy of the messages.
+    # Instance-number-containing messages in mestate.status.msgs may
+    # reference messages in their parent DFReader object which no
+    # longer exist after a rewind() is performed.  Still, this is good
+    # enough for tab-completion to function.
+    mestate.status.msgs = copy.copy(mlog.messages)
+    t1 = time.time()
+    mestate.console.write("\ndone (%u messages in %.1fs)\n" % (mestate.mlog._count, t1-t0))
+
+    # evaluate graph expressions before finding flightmode list as
+    # flightmode_list does a rewind(), and that clears the DFReader
+    # object.  While we do take a copy of mestate.status.msgs above,
+    # that is a shallow copy, so does not allow
+    # DFMessage.parent.messages to function, which is vital for
+    # instance-number-indexing to work - and the graph expression
+    # evaluation requires that to function.
+    load_graphs()
+
+    global flightmodes
+    flightmodes = mlog.flightmode_list()
+
+    mestate.mav_param = mlog.params
+
+    setup_menus()
+
+def print_caught_exception(e):
+    if sys.version_info[0] >= 3:
+        ret = "%s\n" % e
+        ret += ''.join(traceback.format_exception(type(e),
+                                                  value=e,
+                                                  tb=e.__traceback__))
+        print(ret)
+    else:
+        print(traceback.format_exc(e))
+
+def cmd_help(args):
+    '''help command'''
+    if len(args) == 0:
+        k = command_map.keys()
+        for cmd in sorted(k):
+            (fn, help) = command_map[cmd]
+            print("%-15s : %s" % (cmd, help))
+        return
+    cmd = args[0]
+    # an all-caps token is treated as a log message name and produces the
+    # same output as 'logmessage help <MSG>'
+    if cmd.isupper() and all(c.isalnum() or c == '_' for c in cmd):
+        mlog = mestate.mlog
+        present = present_message_types(mlog)
+        if present and cmd not in present:
+            print("Message %s is not present in this log" % cmd)
+            return
+        if isinstance(mlog, DFReader.DFReader):
+            mlog.metadata.print_help(cmd)
+        elif isinstance(mlog, mavutil.mavlogfile):
+            show_mavlink_message_help(cmd)
+        else:
+            print("Incompatible pymavlink; upgrade pymavlink?")
+        return
+    if cmd in command_map.keys():
+        (fn, help) = command_map[cmd]
+        print("%-15s : %s" % (cmd, help))
+        return
+    import pymavlink.mavextra as mavextra
+    import math
+    import pydoc
+    pydoc.pager = pydoc.plainpager
+    for v in [mavextra,math]:
+        if hasattr(v,cmd):
+            pydoc.help(getattr(v,cmd))
+            return
+    print("%s not found" % cmd)
+
+def process_stdin(line):
+    '''handle commands from user'''
+    if line is None:
+        sys.exit(0)
+
+    line = line.strip()
+    if not line:
+        return
+
+    try:
+        args = shlex.split(line)
+    except ValueError as e:
+        print_caught_exception(e)
+        return
+
+    cmd = args[0]
+    if cmd == 'help':
+        cmd_help(args[1:])
+        return
+    if cmd == 'exit':
+        mestate.exit = True
+        return
+
+    if not cmd in command_map:
+        print("Unknown command '%s'" % line)
+        return
+    (fn, help) = command_map[cmd]
+    try:
+        fn(args[1:])
+    except Exception as e:
+        print("ERROR in command %s: %s" % (args[1:], str(e)))
+        if mestate.settings.debug > 0:
+            print_caught_exception(e)
+
+def input_loop():
+    '''wait for user input'''
+    while mestate.exit != True:
+        try:
+            if mestate.exit != True:
+                line = input(mestate.rl.prompt)
+        except EOFError:
+            mestate.exit = True
+            sys.exit(1)
+        mestate.input_queue.put(line)
+
+new_matplotlib = False
+mversion = matplotlib.__version__.split('.')
+matplotlib_major = mversion[0]
+matplotlib_minor = mversion[1]
+if int(matplotlib_major) > 3:
+    new_matplotlib = True
+elif (int(matplotlib_major) >= 3 and int(matplotlib_minor) >= 5):
+    new_matplotlib = True
+
+def epoch_time(num):
+    '''converts a number into an epoch time - compatability wrapper'''
+    if new_matplotlib:
+        return matplotlib.dates.num2date(num).timestamp()
+    return matplotlib.dates.num2epoch(num)
+
+def main_loop():
+    '''main processing loop, display graphs and maps'''
+    global grui, xlimits, map3d_views
+    while True:
+        if mestate is None or mestate.exit:
+            return
+        while not mestate.input_queue.empty():
+            line = mestate.input_queue.get()
+            cmds = line.split(';')
+            for c in cmds:
+                process_stdin(c)
+        poll_map3d_views()
+
+        remlist = []
+        for i in range(0, len(grui)):
+            xlim = grui[i].check_xlim_change()
+            if xlim is not None and mestate.settings.sync_xzoom:
+                for j in range(0, len(grui)):
+                    if j == i:
+                        continue
+                    if not grui[j].set_xlim(xlim):
+                        remlist.append(j)
+                xlimits.last_xlim = xlim
+                from dateutil.tz import tzlocal
+                localtimezone = tzlocal()
+                tbase = epoch_time(xlim[0])
+                tzofs = localtimezone.utcoffset(datetime.datetime.fromtimestamp(tbase, datetime.timezone.utc)).total_seconds()
+                xlimits.xlim_low = epoch_time(xlim[0]) - tzofs
+                xlimits.xlim_high = epoch_time(xlim[1]) - tzofs
+                
+                if mestate.settings.sync_xmap:
+                    remlist = []
+                    global map_timelim_pipes
+                    for p in map_timelim_pipes[:]:
+                        try:
+                            p[0].send(xlim)
+                        except Exception:
+                            map_timelim_pipes.remove(p)
+                    for view in map3d_views[:]:
+                        if not view.is_alive():
+                            view.close()
+                            map3d_views.remove(view)
+                            continue
+                        view.set_time_range(xlim)
+                break
+        if len(remlist) > 0:
+            # remove stale graphs
+            new_grui = []
+            for j in range(0, len(grui)):
+                if j not in remlist:
+                    new_grui.append(grui[j])
+            grui = new_grui
+
+        time.sleep(0.1)
+
+
+command_map = {
+    'graph'      : (cmd_graph,     'display a graph'),
+    'graphs'     : (cmd_graphs,    'display a predefined graph'),
+    'set'        : (cmd_set,       'control settings'),
+    'reload'     : (cmd_reload,    'reload graphs'),
+    'save'       : (cmd_save,      'save a graph'),
+    'condition'  : (cmd_condition, 'set graph conditions'),
+    'param'      : (cmd_param,     'show parameters'),
+    'paramchange': (cmd_paramchange, 'show parameter changes in log'),
+    'messages'   : (cmd_messages,  'show messages'),
+    'devid'      : (cmd_devid,     'show device IDs'),
+    'map'        : (cmd_map,       'show map view'),
+    'map3d'      : (cmd_map3d,     'show 3D map view'),
+    'fft'        : (cmd_fft,       'show a FFT (if available)'),
+    'loadLog'    : (cmd_loadfile,  'load a log file'),
+    'stats'      : (cmd_stats,     'show statistics on the log'),
+    'magfit'     : (cmd_magfit,    'fit mag parameters to WMM'),
+    'dump'       : (cmd_dump,      'dump messages from log'),
+    'file'       : (cmd_file,      'show files'),
+    'mission'    : (cmd_mission,   'show mission'),
+    'logmessage' : (cmd_logmessage, 'show log message information'),
+    'find'       : (cmd_find,       'find log message fields by name or description'),
+    'locationAnalysis'   : (cmd_location,  'Output a descriptive list of locations from the log' ),
+    }
+
+def progress_bar(pct):
+    if pct % 2 == 0:
+        mestate.console.write('#')
+
+if __name__ == "__main__":
+    multiproc.freeze_support()
+    from argparse import ArgumentParser
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument("--version", action='store_true', help="show version")
+    parser.add_argument("files", metavar="<FILE>", nargs="?")
+    args = parser.parse_args()
+
+    if args.version:
+        import importlib.metadata
+        version = importlib.metadata.version("mavproxy")
+        print("MAVExplorer Version: " + version)
+        sys.exit(1)
+
+    mestate = MEState()
+    setup_file_menu()
+
+    mestate.rl = rline.rline("MAV> ", mestate)
+
+    #If specified, open the log file
+    if args.files is not None and len(args.files) != 0:
+        loadfile(args.files)
+
+    # run main loop as a thread
+    mestate.thread = threading.Thread(target=main_loop, name='main_loop')
+    mestate.thread.daemon = True
+    mestate.thread.start()
+
+    # input loop
+    while mestate.rl is not None and not mestate.exit:
+        try:
+            try:
+                line = mestate.rl.input()
+            except EOFError:
+                mestate.exit = True
+                break
+            mestate.input_queue.put(line)
+        except KeyboardInterrupt:
+            mestate.exit = True
+            break

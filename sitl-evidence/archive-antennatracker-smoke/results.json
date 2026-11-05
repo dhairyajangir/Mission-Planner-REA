@@ -1,0 +1,37 @@
+{
+  "scope": "ArduPilot SITL, MAVLink client; Mission Planner not exercised",
+  "binary": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/antennatracker",
+  "binary_sha256": "3ff790c267b02f1b4b9f9121c3005b00085878a77b88448511b20aa7f455de36",
+  "model": "tracker",
+  "checks": {
+    "heartbeat": {
+      "passed": true,
+      "system": 2,
+      "component": 0,
+      "type": 5,
+      "autopilot": 3
+    },
+    "ATTITUDE": {
+      "passed": true
+    },
+    "GLOBAL_POSITION_INT": {
+      "passed": true
+    },
+    "SYS_STATUS": {
+      "passed": true
+    },
+    "parameter_read": {
+      "passed": true,
+      "name": "YAW_SLEW_TIME",
+      "value": 2.0
+    },
+    "mission_list": {
+      "passed": true,
+      "count": 0
+    }
+  },
+  "errors": [],
+  "port": 6570,
+  "process_exit_code": 0,
+  "passed": true
+}

@@ -1,0 +1,7 @@
+scope=isolated app, plugin-disabled, file-spool transport, local SITL
+open=True
+system=1
+component=1
+mission_count=0
+state_lat=0.0
+state_lng=0.0

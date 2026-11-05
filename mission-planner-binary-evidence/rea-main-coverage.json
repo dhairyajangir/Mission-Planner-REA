@@ -1,0 +1,12 @@
+{
+  "assembly_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "inventory_typedefs_excluding_module": 890,
+  "observed_inventory_typedefs": 890,
+  "unique_method_tokens": 6050,
+  "missing_types": [],
+  "issues": [],
+  "limitations": [
+    "Type and method metadata coverage does not establish runtime behavior, full source recovery, dependency coverage, or workflow coverage.",
+    "All metadata tokens are meaningful only for this exact assembly hash."
+  ]
+}

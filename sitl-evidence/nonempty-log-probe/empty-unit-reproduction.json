@@ -1,0 +1,25 @@
+{
+  "source_format_offset": 453,
+  "source_unit_offset": 67181,
+  "fixture_bytes_differ": 1,
+  "results": {
+    "empty": {
+      "exit_code": 0,
+      "input_sha256": "c1cf893a9db64f686a146e707c92d8fa4d280d882a9890e19e76c8f0a5167358",
+      "lines": [
+        "FMT, 119, 76, UNIT, QbZ, TimeUS,Id,Label"
+      ],
+      "bad_line_warning": true
+    },
+    "nonempty": {
+      "exit_code": 0,
+      "input_sha256": "d9560f8f2958627ecd2db459f034e88684852e21a07d97ff0e13a4024ab9dbbe",
+      "lines": [
+        "FMT, 119, 76, UNIT, QbZ, TimeUS,Id,Label",
+        "UNIT, 2459849, 45, x"
+      ],
+      "bad_line_warning": false
+    }
+  },
+  "scope": "One captured UNIT record and one synthetic one-byte control."
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "file": "invalid-base64.apj",
+    "sha256": "89ba4c6d3b2466ec754e0454ed9f3342d4a18ff5d3b517a66def87623676ce72",
+    "independent": {
+      "status": "error",
+      "type": "Error"
+    }
+  },
+  {
+    "file": "invalid-zlib.apj",
+    "sha256": "b7f631f5854729e4370c25fe60ca6c8a3e649a07755ada21ff3bcac2e7de98de",
+    "independent": {
+      "status": "error",
+      "type": "error"
+    }
+  },
+  {
+    "file": "truncated-zlib.apj",
+    "sha256": "2961400bbb1b50ec4599b95eecd319d798f9a1ee2fde505bcffbd3adbf686694",
+    "independent": {
+      "status": "error",
+      "type": "error"
+    }
+  },
+  {
+    "file": "zero-size.apj",
+    "sha256": "ec98f614166f2bfc66d29ec71a8408c7f39d2dca99a39fb9666bdb566274dbcc",
+    "independent": {
+      "status": "ok",
+      "data_hex": "41424344"
+    }
+  }
+]

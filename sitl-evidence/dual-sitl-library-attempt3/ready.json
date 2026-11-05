@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "dropped_bad_data": [
+    0,
+    0
+  ],
+  "configured": [
+    {
+      "system": 1,
+      "value": 0.0
+    },
+    {
+      "system": 2,
+      "value": 1.0
+    }
+  ]
+}

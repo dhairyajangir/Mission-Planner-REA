@@ -1,0 +1,26 @@
+{
+  "assembly_sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+  "expected_types": 2,
+  "expected_methods": 10540,
+  "observed_types": 1,
+  "observed_methods": 0,
+  "unexpected_types": [],
+  "missing_types": [
+    {
+      "token": "0x02000003",
+      "name": "Accord.Math.Elementwise"
+    }
+  ],
+  "method_count_mismatches": [
+    {
+      "token": "0x02000003",
+      "name": "Accord.Math.Elementwise",
+      "expected": 10540,
+      "observed": 0
+    }
+  ],
+  "errors": [],
+  "complete_batches": 1,
+  "partial_batches": 1,
+  "complete": false
+}

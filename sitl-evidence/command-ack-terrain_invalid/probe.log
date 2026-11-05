@@ -1,0 +1,358 @@
+FIXTURE_SHA256=2b0abd7479e57d9402b8beceda539d7e758702b887028e39aac2cd58475280b5
+142 [1] INFO MissionPlanner.Utilities.srtm (null) - .cctor
+175 [1] INFO MissionPlanner.Utilities.srtm (null) - requestRunner start
+191 [1] INFO MissionPlanner.Utilities.srtm (null) - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\terrain-invalid-fixture-data
+SRTM_TYPE=invalid
+347 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+349 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+351 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+353 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+363 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+365 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+379 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+381 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+381 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 266 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+382 [4] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7421 0
+384 [4] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7421
+388 [4] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+392 [4] INFO MissionPlanner.MAVLinkInterface (null) - 843 Start connect loop 
+405 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+438 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+439 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+475 [4] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+475 [4] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+475 [4] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+479 [4] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+479 [4] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+479 [4] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+481 [4] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+481 [4] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+483 [4] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 4.693359375 mav2 False sign False mav1 0 mav2 0 signed 0      
+514 [5] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+514 [5] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+526 [5] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+526 [5] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+526 [5] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+526 [5] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+526 [5] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+607 [5] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:37 PM 7 RCInput: decoding UDP (Pulses)
+bps 43 loss 0 left 296 mem 4.8486328125 mav2 False sign False mav1 0 mav2 1 signed 0      
+639 [5] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:37 PM 6 Calibrating barometer
+1400 [5] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1439 [7] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1447 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1449 [4] INFO MissionPlanner.MAVLinkInterface (null) - 900 Start connect loop 
+1463 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1463 [4] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1463 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1465 [4] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1465 [4] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1474 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 520 loss 0 left 276 mem 13.6083984375 mav2 True sign False mav1 0 mav2 15 signed 0      
+2246 [6] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2246 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:38 PM 6 Barometer 1 calibration complete
+2246 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:38 PM 6 Barometer 2 calibration complete
+Init Gyro*2325 [7] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2325 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2326 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2335 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2340 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2340 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2346 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2346 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2918 [7] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+3465 [5] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+4031 [5] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4584 [9] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 460225864
+4586 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4586 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4586 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4586 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4595 [4] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4595 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+OPEN=True SELECTED=1:1
+4599 [1] INFO MissionPlanner.MAVLinkInterface (null) - Request stream ALL at 4 hz for 1:1
+REQUESTED_ALL_STREAMS_HZ=4
+bps 333 loss 0 left 1201 mem 13.8662109375 mav2 True sign False mav1 0 mav2 9 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+4602 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+4602 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4607 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4610 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 ArduCopter V4.8.0-dev (72b23820)
+4610 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+4611 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 Frame: QUAD/PLUS
+4831 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 EKF3 IMU0 initialised
+4832 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 EKF3 IMU1 initialised
+4834 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:41 PM 6 AHRS: EKF3 active
+5158 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+5158 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+5163 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374769 149.1548424 space 100 bit 0
+5260 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+5359 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+5375 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+5457 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+5546 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+bps 3044 loss 0 left 776 mem 14.513671875 mav2 True sign False mav1 0 mav2 86 signed 0      
+5642 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+5643 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+5730 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+5821 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+5912 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+6000 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+6097 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+6184 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+6215 [9] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:42 PM 6 EKF3 IMU0 tilt alignment complete
+6215 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:42 PM 6 EKF3 IMU1 tilt alignment complete
+6278 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+6309 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:42 PM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+6309 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:42 PM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+6365 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+6465 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+6563 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+6649 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+bps 3491 loss 0 left 850 mem 13.595703125 mav2 True sign False mav1 0 mav2 105 signed 0      
+6745 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+6840 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+6934 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+7019 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+7104 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+7192 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+7287 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+7374 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+7391 [5] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7391 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7393 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7393 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7406 [5] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7410 [5] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+7464 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+7561 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+7657 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+bps 3625 loss 0 left 850 mem 14.40625 mav2 True sign False mav1 0 mav2 107 signed 0      
+7750 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+7836 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+7930 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+8015 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+8103 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+8190 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+8290 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+8376 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+8464 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+8558 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+8655 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+bps 3581 loss 0 left 850 mem 15.150390625 mav2 True sign False mav1 0 mav2 105 signed 0      
+8750 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+8838 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+8932 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+9024 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+9113 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+9208 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+9299 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+9387 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+9457 [9] INFO MissionPlanner.MAVLinkInterface (null) - doCommand Retry 3
+9474 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+9571 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+9667 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+bps 3634 loss 0 left 850 mem 15.9111328125 mav2 True sign False mav1 0 mav2 107 signed 0      
+9762 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+9848 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+9943 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+10034 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+10128 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+10215 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+10278 [12] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:46 PM 6 GPS 1: probing for u-blox at 230400 baud
+10293 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:46 PM 6 GPS 1: detected u-blox
+10461 [6] INFO MissionPlanner.Utilities.TerrainFollow (null) - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+10461 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374769 149.1548424 space 100 bit 0
+10550 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+10637 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+bps 3703 loss 0 left 850 mem 16.6875 mav2 True sign False mav1 0 mav2 108 signed 0      
+10724 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+10819 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+10917 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+11013 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+11105 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+11192 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+11286 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+11373 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+11465 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+11489 [10] INFO MissionPlanner.MAVLinkInterface (null) - doCommand Retry 2
+bps 3582 loss 0 left 0 mem 17.37890625 mav2 True sign False mav1 0 mav2 101 signed 0      
+11552 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+11639 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+11733 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+11828 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+11922 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+12014 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+12102 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+12198 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+12293 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+12387 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+12480 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+12577 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+12672 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+bps 3631 loss 0 left 850 mem 14.234375 mav2 True sign False mav1 0 mav2 103 signed 0      
+12767 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+12861 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+12950 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+13046 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+13130 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+13230 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+13324 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+13417 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+13496 [9] INFO MissionPlanner.MAVLinkInterface (null) - doCommand Retry 1
+13512 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+13512 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+13512 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+13512 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+13512 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+bps 3622 loss 0 left 0 mem 14.97265625 mav2 True sign False mav1 0 mav2 103 signed 0      
+13599 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+13695 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+13783 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+13877 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+13963 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+14050 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+14137 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+14230 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+14317 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+14411 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+14498 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+bps 3545 loss 0 left 0 mem 15.642578125 mav2 True sign False mav1 0 mav2 102 signed 0      
+14587 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+14677 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+14772 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+14860 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+14954 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+15047 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+15134 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+15230 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+15325 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+15416 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+15511 [7] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+bps 3569 loss 0 left 0 mem 16.3525390625 mav2 True sign False mav1 0 mav2 101 signed 0      
+16544 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+16545 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374769 149.1548424 space 100 bit 0
+bps 3601 loss 0 left 0 mem 16.9921875 mav2 True sign False mav1 0 mav2 102 signed 0      
+16632 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+16728 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+16815 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+16909 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+16998 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+17086 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+17181 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+17269 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+17355 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+17449 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+17544 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+bps 2717 loss 0 left 848 mem 17.5361328125 mav2 True sign False mav1 0 mav2 77 signed 0      
+17632 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+17727 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+17813 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+17902 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+17990 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+18078 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+18168 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+18260 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+18348 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+18437 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+18522 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+bps 3573 loss 0 left 877 mem 14.2763671875 mav2 True sign False mav1 0 mav2 101 signed 0      
+18618 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+18713 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+18808 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+18896 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+18983 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+19081 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+19178 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+19273 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+19360 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+19457 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+19552 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+bps 3602 loss 0 left 848 mem 14.931640625 mav2 True sign False mav1 0 mav2 102 signed 0      
+19649 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+19743 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+19837 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+19932 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+20032 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+20120 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+20208 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+20300 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+20391 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+20489 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+bps 3573 loss 0 left 877 mem 15.609375 mav2 True sign False mav1 0 mav2 101 signed 0      
+20577 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+20657 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:57 PM 6 EKF3 IMU0 origin set
+20659 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:57 PM 6 Field Elevation Set: 584m
+20672 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+20768 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+20799 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 1:00:57 PM 6 EKF3 IMU1 origin set
+20862 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+20951 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+21047 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+21132 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+21231 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+21326 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+21425 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+21516 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+bps 3970 loss 0 left 848 mem 16.3740234375 mav2 True sign False mav1 0 mav2 112 signed 0      
+21617 [12] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+bps 3573 loss 0 left 877 mem 17.021484375 mav2 True sign False mav1 0 mav2 101 signed 0      
+22579 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+22581 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374769 149.1548424 space 100 bit 0
+22681 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+22775 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+22869 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+22957 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+23048 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+23134 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+23224 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+23311 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+23402 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+23496 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+bps 3602 loss 0 left 848 mem 13.7548828125 mav2 True sign False mav1 0 mav2 102 signed 0      
+23592 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+23679 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+23774 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+23868 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+23962 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+24048 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+24143 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+24233 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+24328 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+24417 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+24512 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+bps 3573 loss 0 left 877 mem 14.43359375 mav2 True sign False mav1 0 mav2 101 signed 0      
+24612 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+REQUEST_COUNT=23 PENDING_REPORT_COUNT=66
+24643 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+24643 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+24643 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+24643 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7421

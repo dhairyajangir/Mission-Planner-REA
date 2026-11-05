@@ -1,0 +1,433 @@
+{
+  "case": "mavproxy_forward_armed_allow_retry",
+  "relay": {
+    "scope": "Disposable Copter SITL; MAVProxy downstream read-only request forwarding",
+    "case": "mavproxy_forward_armed_allow_retry",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7560,
+    "proxy_port": 7561,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "control-downlink.bin": "c6a7d1e44eb08dbe5eb5801f4a300bd49dbeae98d680ea6b98d626d55bd2aef9",
+      "control-uplink.bin": "e13def0f41289e6fb0910f4a7470807597a5223c07523370b473d907dc208ce0",
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "request.bin": "32bc25f7ce492ec5f66139a279e395d0bd8c805a21273ed17efa079ec0e94c88",
+      "to_client_input.bin": "b4632bc074dc2112191d697d17dacb15e4554938d193c0a5314c32a0c164e92f",
+      "to_client_output.bin": "b4632bc074dc2112191d697d17dacb15e4554938d193c0a5314c32a0c164e92f",
+      "to_sitl_input.bin": "7ed0905930903569cd6893d764f692d16d59aabe4197dd75070a7e30fa747d94",
+      "to_sitl_output.bin": "7ed0905930903569cd6893d764f692d16d59aabe4197dd75070a7e30fa747d94",
+      "udp-after.bin": "f45bebbd07ab1e77dc4617660ba032ba167697ac71dae676e33ba131590f484a",
+      "udp-armed-before.bin": "1793304cefdf2fcaf3ddb2b3ddb2c5c16ace70fcfdf6ffcd474078abf6d6c27f",
+      "udp-before.bin": "4f70b46e3f9d8d7df7448b8afd839a2acd901cd122f0f6f35d909d25575092dd"
+    }
+  },
+  "probe": {
+    "scope": "Disposable SITL only; synthetic forced arm, MAVProxy downstream read-only request, explicit disarm",
+    "case": "mavproxy_forward_armed_allow_retry",
+    "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+    "configured": {
+      "mavfwd": "true",
+      "mavfwd_disarmed": "false"
+    },
+    "errors": [],
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "MAVProxy.mavproxy",
+      "--master=tcp:127.0.0.1:7561",
+      "--out=udpout:127.0.0.1:7569",
+      "--no-state",
+      "--no-startup-scripts",
+      "--default-modules=param,wp",
+      "--cmd=set requireexit true;set mavfwd true;set mavfwd_disarmed false;set mavfwd;set mavfwd_disarmed",
+      "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_forward_armed_allow_retry"
+    ],
+    "initial_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3
+    },
+    "arm_attempted": true,
+    "armed_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3
+    },
+    "final_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3
+    },
+    "proxy_exit": 1,
+    "artifacts": {
+      "mavproxy.log": "d2da2713bb1b88c8ffd753dd51e626765baf8b86e2e6a87a83924aa4af92546c",
+      "udp-before.bin": "4f70b46e3f9d8d7df7448b8afd839a2acd901cd122f0f6f35d909d25575092dd",
+      "udp-armed-before.bin": "1793304cefdf2fcaf3ddb2b3ddb2c5c16ace70fcfdf6ffcd474078abf6d6c27f",
+      "udp-after.bin": "f45bebbd07ab1e77dc4617660ba032ba167697ac71dae676e33ba131590f484a",
+      "request.bin": "32bc25f7ce492ec5f66139a279e395d0bd8c805a21273ed17efa079ec0e94c88",
+      "control-uplink.bin": "e13def0f41289e6fb0910f4a7470807597a5223c07523370b473d907dc208ce0",
+      "control-downlink.bin": "c6a7d1e44eb08dbe5eb5801f4a300bd49dbeae98d680ea6b98d626d55bd2aef9"
+    }
+  },
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        254,
+        188
+      ],
+      "raw_hex": "fd20000000febc4c00000000803f0098a546000000000000000000000000000000000000000090010101cc64"
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        254,
+        188
+      ],
+      "raw_hex": "fd20000000febc4c0000000000000098a546000000000000000000000000000000000000000090010101db3c"
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 254,
+      "target_component": 188,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0a00000801014d00009001000000000000febc7eba"
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 254,
+      "target_component": 188,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0a00001101014d00009001000000000000febce822"
+    }
+  ],
+  "control_heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000000101000000000000000203510303e292"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000010101000000000000000203510303f21c"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000030101000000000000000203510303c308"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09000004010100000000000000020351030380ba"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900000501010000000000000002035103039034"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000060101000000000000000203510303b1ae"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000070101000000000000000203510303a120"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900000c0101000000000000000203d103032ac7"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900000e0101000000000000000203d103031bd3"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900000f0101000000000000000203d103030b5d"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000100101000000000000000203d10303041e"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000140101000000000000000203510303081b"
+    }
+  ],
+  "armed_output_heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000cd0101000000000000000203d103032dfb"
+    }
+  ],
+  "request_window_heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000d00101000000000000000203d1030313ac"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000d10101000000000000000203d103030322"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 209,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000d30101000000000000000203d103033236"
+    }
+  ],
+  "forwarded": [
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "LOG_DISARMED",
+      "param_index": -1,
+      "source": [
+        211,
+        77
+      ],
+      "raw_hex": "fd10000000d34d140000ffff01014c4f475f44495341524d4544a0af"
+    }
+  ],
+  "replies": [
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "LOG_DISARMED",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd190000cf0101160000000000009705ffff4c4f475f44495341524d454400000000029be5"
+    }
+  ],
+  "arm_notices": [],
+  "bad_data_fragments": {
+    "control_up": 0,
+    "control_down": 0,
+    "master_up": 0,
+    "udp_before": 0,
+    "udp_armed": 0,
+    "udp_after": 0
+  },
+  "runner_sha256": "1508d05b45a44c1a4b57faabd14754f6c5c311e9178c21b53adac8c65fc7d836",
+  "relay_source_sha256": "d22957e293bf3ac0d42839562a7b02ba000a34e9e08cebdd6d213ce2d4206196",
+  "source_inventory_sha256": "cb04e3589d82f1d895878701dd226528d357c188c58bea3e7cadbdab1b807cfd"
+}

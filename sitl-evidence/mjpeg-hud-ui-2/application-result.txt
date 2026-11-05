@@ -1,0 +1,5 @@
+scope=modified app, plugins disabled, synthetic localhost MJPEG
+hud_image=640x480
+image_found=True
+stop_called=True
+hud_cleared=True

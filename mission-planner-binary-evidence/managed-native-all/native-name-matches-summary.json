@@ -1,0 +1,8 @@
+{
+  "scope": "case-insensitive DLL basename candidate plus exact export-name comparison; not loader resolution",
+  "boundary_index_sha256": "35df934838702787e1a9a964e41a8024062d6beb5841ec58e7a17e3fad9768d2",
+  "native_manifest_sha256": "6a7424ec9b5b4808a4fe2f5f0f75f076be5445209266b7282ce5af037c5b25ab",
+  "database_sha256": "ef5dc31a6d4cee5efc8b9e730dd834787aee604bb95f013e7e6ee3047630f1f3",
+  "candidate_rows": 2276,
+  "exact_name_rows": 1190
+}

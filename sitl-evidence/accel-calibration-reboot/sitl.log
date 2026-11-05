@@ -1,0 +1,16 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 10505
+Using \clock topic for DDS timing: disabled
+bind port 7260 for SERIAL0
+SERIAL0 on TCP port 7260
+Waiting for connection ....
+Connection on serial port 7260
+bind port 7262 for SERIAL1
+SERIAL1 on TCP port 7262
+bind port 7263 for SERIAL2
+SERIAL2 on TCP port 7263
+validate_structures:546: Validating structures
+Closed connection on SERIAL0
+Exitting

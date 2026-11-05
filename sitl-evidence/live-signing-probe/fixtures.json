@@ -1,0 +1,26 @@
+{
+  "control_sha256": "e0f93933fdafb37a1e8b0fb6b0d453a64978d9ec5dbec0f69e865da1bec78670",
+  "test_key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "files": {
+    "signed.bin": {
+      "size": 34,
+      "sha256": "4f941adec678257ee685154ed298be61167d3cf255ea32699cf06439f107da15"
+    },
+    "bad-signature.bin": {
+      "size": 34,
+      "sha256": "aa2299282b57b6b532ab93ab232a8d2d97e6d9c824f472c4b94592b7a30b7bdf"
+    },
+    "signed-twice.bin": {
+      "size": 68,
+      "sha256": "de7c2b4b3d77553385d6195e407fcf88e1e1b739c90af49d31f359cebcd0f79f"
+    },
+    "unsigned.bin": {
+      "size": 21,
+      "sha256": "1d57e6d959521fd6b8e4472b8778f95b61bdb47a8c6e228673b9972b6533d440"
+    },
+    "signed-then-unsigned.bin": {
+      "size": 55,
+      "sha256": "0bca4e865cea8b8a4981dfa2dda75434ae8a43ea767e67263a6a72bab87190da"
+    }
+  }
+}

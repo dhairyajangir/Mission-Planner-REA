@@ -1,0 +1,706 @@
+{
+  "scope": "Static REA-derived tokens and IL hashes for one distributed managed assembly; not runtime dispatch",
+  "assembly_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "index_sha256": "81e26a1f6c5271a3e3041777fb5fb2b3e9e4251a79e7fefc357da27a0cbea50e",
+  "methods": [
+    {
+      "token": "0x06000460",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "doCommand",
+      "il_sha256": "60462857e2a071504c7706b1c2e001231c57a71872e9f1a19b49947dfd001a54",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 7,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 13,
+          "opcode": "call",
+          "name": "get_MAV",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 18,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MissionPlanner.MAVState"
+        },
+        {
+          "il_offset": 39,
+          "opcode": "call",
+          "name": "doCommand",
+          "type": "MissionPlanner.MAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "token": "0x06000461",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "doCommand",
+      "il_sha256": "1d87261e33a9da39a3826bd5ea645c5396d95184f19182ac857e79d34abc5c4d",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 22,
+          "opcode": "call",
+          "name": "doCommandAsync",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 27,
+          "opcode": "call",
+          "name": "AwaitSync",
+          "type": "MissionPlanner.Utilities.Extensions"
+        }
+      ]
+    },
+    {
+      "token": "0x06000462",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "doCommandAsync",
+      "il_sha256": "14ed6cc4d3bf10ae9fbbc02a3a789ff4133c6954b12645faf275778d18925797",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "Create",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 142,
+          "opcode": "call",
+          "name": "Start",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 154,
+          "opcode": "call",
+          "name": "get_Task",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        }
+      ]
+    },
+    {
+      "token": "0x06000463",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "doCommandInt",
+      "il_sha256": "15417f3428ee228d5c876fde0e674d926ceae26dffda8b9e7815192f7e0af69e",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 24,
+          "opcode": "call",
+          "name": "doCommandIntAsync",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 29,
+          "opcode": "call",
+          "name": "AwaitSync",
+          "type": "MissionPlanner.Utilities.Extensions"
+        }
+      ]
+    },
+    {
+      "token": "0x06000464",
+      "declaring_type": "MissionPlanner.MAVLinkInterface",
+      "name": "doCommandIntAsync",
+      "il_sha256": "88bcedfc4f26cc9a03a127505a1150920376ff17264558d1eda3362a144677df",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 2,
+          "opcode": "call",
+          "name": "Create",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 151,
+          "opcode": "call",
+          "name": "Start",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 163,
+          "opcode": "call",
+          "name": "get_Task",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        }
+      ]
+    },
+    {
+      "token": "0x060007f2",
+      "declaring_type": "<doCommandAsync>d__208",
+      "name": "MoveNext",
+      "il_sha256": "021dc2af307b481de6ed4413328bdb3d78e4e1b0f553864410fbcb9ab35167dc",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 21,
+          "opcode": "call",
+          "name": "get_BaseStream",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 29,
+          "opcode": "call",
+          "name": "get_BaseStream",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 34,
+          "opcode": "callvirt",
+          "name": "get_IsOpen",
+          "type": "MissionPlanner.Comms.ICommsSerial"
+        },
+        {
+          "il_offset": 232,
+          "opcode": "callvirt",
+          "name": "ToString",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 336,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 351,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 384,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 399,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 412,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 423,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 479,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 545,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 552,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 674,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 681,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 734,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 746,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 766,
+          "opcode": "call",
+          "name": "AddMilliseconds",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 771,
+          "opcode": "call",
+          "name": "op_GreaterThan",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 779,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 801,
+          "opcode": "callvirt",
+          "name": "Invoke",
+          "type": "System.Action"
+        },
+        {
+          "il_offset": 819,
+          "opcode": "call",
+          "name": "AddMilliseconds",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 824,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 829,
+          "opcode": "call",
+          "name": "op_GreaterThan",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 864,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Int32"
+        },
+        {
+          "il_offset": 869,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 874,
+          "opcode": "callvirt",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 924,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 930,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 965,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 975,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.TimeoutException"
+        },
+        {
+          "il_offset": 982,
+          "opcode": "call",
+          "name": "readPacketAsync",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 988,
+          "opcode": "callvirt",
+          "name": "ConfigureAwait",
+          "type": "System.Threading.Tasks.Task`1"
+        },
+        {
+          "il_offset": 997,
+          "opcode": "call",
+          "name": "GetAwaiter",
+          "type": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1"
+        },
+        {
+          "il_offset": 1006,
+          "opcode": "call",
+          "name": "get_IsCompleted",
+          "type": "ConfiguredTaskAwaiter"
+        },
+        {
+          "il_offset": 1039,
+          "opcode": "call",
+          "name": "AwaitUnsafeOnCompleted",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 1080,
+          "opcode": "call",
+          "name": "GetResult",
+          "type": "ConfiguredTaskAwaiter"
+        },
+        {
+          "il_offset": 1091,
+          "opcode": "callvirt",
+          "name": "get_Length",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 1103,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 1116,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 1138,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 1160,
+          "opcode": "callvirt",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 1221,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 1265,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 1281,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 1314,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 1325,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 1352,
+          "opcode": "call",
+          "name": "SetException",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 1374,
+          "opcode": "call",
+          "name": "SetResult",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        }
+      ]
+    },
+    {
+      "token": "0x060007f4",
+      "declaring_type": "<doCommandIntAsync>d__210",
+      "name": "MoveNext",
+      "il_sha256": "0b7a2f0b837f43ac8d6959dcb1bdb2a009faa43031850b3b878cff834d0cc3fa",
+      "body_status": "present",
+      "calls": [
+        {
+          "il_offset": 21,
+          "opcode": "call",
+          "name": "get_BaseStream",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 29,
+          "opcode": "call",
+          "name": "get_BaseStream",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 34,
+          "opcode": "callvirt",
+          "name": "get_IsOpen",
+          "type": "MissionPlanner.Comms.ICommsSerial"
+        },
+        {
+          "il_offset": 253,
+          "opcode": "callvirt",
+          "name": "ToString",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 357,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 372,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 405,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 420,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 433,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 444,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 472,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 492,
+          "opcode": "call",
+          "name": "AddMilliseconds",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 497,
+          "opcode": "call",
+          "name": "op_GreaterThan",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 505,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 527,
+          "opcode": "callvirt",
+          "name": "Invoke",
+          "type": "System.Action"
+        },
+        {
+          "il_offset": 545,
+          "opcode": "call",
+          "name": "AddMilliseconds",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 550,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 555,
+          "opcode": "call",
+          "name": "op_GreaterThan",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 587,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Int32"
+        },
+        {
+          "il_offset": 592,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 597,
+          "opcode": "callvirt",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 630,
+          "opcode": "call",
+          "name": "generatePacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 636,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 671,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 681,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.TimeoutException"
+        },
+        {
+          "il_offset": 688,
+          "opcode": "call",
+          "name": "readPacketAsync",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 694,
+          "opcode": "callvirt",
+          "name": "ConfigureAwait",
+          "type": "System.Threading.Tasks.Task`1"
+        },
+        {
+          "il_offset": 703,
+          "opcode": "call",
+          "name": "GetAwaiter",
+          "type": "System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1"
+        },
+        {
+          "il_offset": 712,
+          "opcode": "call",
+          "name": "get_IsCompleted",
+          "type": "ConfiguredTaskAwaiter"
+        },
+        {
+          "il_offset": 745,
+          "opcode": "call",
+          "name": "AwaitUnsafeOnCompleted",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 786,
+          "opcode": "call",
+          "name": "GetResult",
+          "type": "ConfiguredTaskAwaiter"
+        },
+        {
+          "il_offset": 797,
+          "opcode": "callvirt",
+          "name": "get_Length",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 809,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 822,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 844,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 866,
+          "opcode": "callvirt",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 927,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 971,
+          "opcode": "callvirt",
+          "name": "InfoFormat",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 987,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 998,
+          "opcode": "call",
+          "name": "set_giveComport",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 1025,
+          "opcode": "call",
+          "name": "SetException",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        },
+        {
+          "il_offset": 1047,
+          "opcode": "call",
+          "name": "SetResult",
+          "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+        }
+      ]
+    }
+  ]
+}

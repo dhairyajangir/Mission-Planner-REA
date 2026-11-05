@@ -1,0 +1,375 @@
+{
+  "scope": "One local disarmed Copter SITL run; MAVProxy source with param and wp modules",
+  "result": {
+    "scope": "Pinned MAVProxy source, local disposable disarmed Copter SITL, no physical vehicle",
+    "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "commands": [
+      "param show LOG_DISARMED",
+      "wp list",
+      "exit"
+    ],
+    "errors": [],
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "MAVProxy.mavproxy",
+      "--master=tcp:127.0.0.1:7560",
+      "--out=udpout:127.0.0.1:14599",
+      "--no-state",
+      "--no-startup-scripts",
+      "--default-modules=param,wp",
+      "--cmd=set requireexit true",
+      "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/mavproxy-sitl-smoke-3"
+    ],
+    "forwarded_datagrams": 2141,
+    "stdin_closed": true,
+    "proxy_exit": 1,
+    "artifacts": {
+      "sitl.log": "dfe6522af5b23c704e1c97f3c59448e0529f26db91ed1ada412d18f9994fe43a",
+      "mavproxy.log": "a4d815a6eca32ec1deb48f8a932742cc1d93317043ed821adc26a9231da70b04",
+      "forwarded.bin": "773a69792f86fc2a1fcbc9f0e46d687e97dbe1865ad691da9b7b8e60519b0dd2"
+    }
+  },
+  "source_inventory_sha256": "cb04e3589d82f1d895878701dd226528d357c188c58bea3e7cadbdab1b807cfd",
+  "runner_source_sha256": "b4c0a6a8d4fa608cd53ab0fb0efd0a551cd350544f70b6254db693f5511a9a23",
+  "heartbeat_count": 23,
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "forwarded_message_counts": {
+    "HEARTBEAT": 23,
+    "STATUSTEXT": 19,
+    "PARAM_VALUE": 1455,
+    "COMMAND_ACK": 9,
+    "TIMESYNC": 2,
+    "MISSION_COUNT": 1,
+    "RAW_IMU": 26,
+    "AHRS": 25,
+    "AHRS2": 25,
+    "ATTITUDE": 25,
+    "GLOBAL_POSITION_INT": 25,
+    "VFR_HUD": 25,
+    "SYS_STATUS": 25,
+    "POWER_STATUS": 25,
+    "MEMINFO": 25,
+    "NAV_CONTROLLER_OUTPUT": 25,
+    "MISSION_CURRENT": 25,
+    "SERVO_OUTPUT_RAW": 25,
+    "RC_CHANNELS": 25,
+    "SCALED_IMU2": 25,
+    "SCALED_IMU3": 25,
+    "SCALED_PRESSURE": 25,
+    "SCALED_PRESSURE2": 25,
+    "GPS_RAW_INT": 25,
+    "SYSTEM_TIME": 25,
+    "SIMSTATE": 25,
+    "TERRAIN_REQUEST": 4,
+    "TERRAIN_REPORT": 25,
+    "EKF_STATUS_REPORT": 25,
+    "VIBRATION": 25,
+    "BATTERY_STATUS": 25,
+    "ESC_TELEMETRY_1_TO_4": 25,
+    "GPS_GLOBAL_ORIGIN": 1,
+    "HOME_POSITION": 1
+  },
+  "bad_data_fragments": 0
+}

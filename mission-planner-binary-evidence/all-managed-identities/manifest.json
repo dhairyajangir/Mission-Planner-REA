@@ -1,0 +1,1825 @@
+{
+  "requested": 260,
+  "results": [
+    {
+      "path": "7zip.dll",
+      "sha256": "845ff05fcdf9e09ded1446e3e4c94ff13362d8d5a3d73045e6ffd0f552974a09",
+      "status": "complete",
+      "evidence": "845ff05fcdf9e09ded1446e3e4c94ff13362d8d5a3d73045e6ffd0f552974a09-e0e0fb79c7ca.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.dll",
+      "sha256": "d36c225a84415c01bc2a8e84096590a7206dfc3d36173e3c7b6a62a04c0a33a9",
+      "status": "complete",
+      "evidence": "d36c225a84415c01bc2a8e84096590a7206dfc3d36173e3c7b6a62a04c0a33a9-bf184c1459e4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.MachineLearning.dll",
+      "sha256": "cb958d8674b4da412db8e0292fcae62ca239e617298a3123d058203c1e75bef5",
+      "status": "complete",
+      "evidence": "cb958d8674b4da412db8e0292fcae62ca239e617298a3123d058203c1e75bef5-3ceec5b9fde6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Imaging.dll",
+      "sha256": "febabb148e6ceeb3421075e353f3ebe1b436912d625620888c97fb58cba0c2aa",
+      "status": "complete",
+      "evidence": "febabb148e6ceeb3421075e353f3ebe1b436912d625620888c97fb58cba0c2aa-85f2ac4f4ca9.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Math.Core.dll",
+      "sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+      "status": "complete",
+      "evidence": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8-d6031c434de1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Math.dll",
+      "sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+      "status": "complete",
+      "evidence": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2-ad013a40c163.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Statistics.dll",
+      "sha256": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00",
+      "status": "complete",
+      "evidence": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00-1f2442449b14.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Video.dll",
+      "sha256": "5feaaa1d49f2c2c8363a0a6f0ef42df5ebefcdb8989c707d93adc3eb9db10874",
+      "status": "complete",
+      "evidence": "5feaaa1d49f2c2c8363a0a6f0ef42df5ebefcdb8989c707d93adc3eb9db10874-930d069423df.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Accord.Vision.dll",
+      "sha256": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a",
+      "status": "complete",
+      "evidence": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a-e7e429cf0ea3.json",
+      "exit_code": 0
+    },
+    {
+      "path": "alglibnet.dll",
+      "sha256": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3",
+      "status": "complete",
+      "evidence": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3-de86ab293103.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ar/MissionPlanner.resources.dll",
+      "sha256": "e5cfa03c463c62e3d05a33857b9fc9a68df2d196e415341e2502d37f7123d7bf",
+      "status": "complete",
+      "evidence": "e5cfa03c463c62e3d05a33857b9fc9a68df2d196e415341e2502d37f7123d7bf-ff9067f6fe1d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Arduino.dll",
+      "sha256": "1120deb2fc632aa10887f057159a5efd52bfaa4030e0670579000e441de4a903",
+      "status": "complete",
+      "evidence": "1120deb2fc632aa10887f057159a5efd52bfaa4030e0670579000e441de4a903-a8ae08c3635d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "AviFile.dll",
+      "sha256": "91aa38d7c5494473784092bb6e6c18284e158bc03bc54f1a8925be8bb7e74fd6",
+      "status": "complete",
+      "evidence": "91aa38d7c5494473784092bb6e6c18284e158bc03bc54f1a8925be8bb7e74fd6-4602e3729798.json",
+      "exit_code": 0
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.resources.dll",
+      "sha256": "81502eff8beb6637c9931a85b4364e126add5f09b8f854b9cdb1d1e8349ebf7d",
+      "status": "complete",
+      "evidence": "81502eff8beb6637c9931a85b4364e126add5f09b8f854b9cdb1d1e8349ebf7d-c4f52b909fbd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.Strings.resources.dll",
+      "sha256": "4cba20588b6d00b5773d04d9f28020ee1a5270d73356e5fef10f7ec6961bdcd8",
+      "status": "complete",
+      "evidence": "4cba20588b6d00b5773d04d9f28020ee1a5270d73356e5fef10f7ec6961bdcd8-c5f1de16e262.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BaseClasses.dll",
+      "sha256": "ea49f439d977b27c6891dbcd43ec979f71b9edc0252e9f0c71644bc95dd6271c",
+      "status": "complete",
+      "evidence": "ea49f439d977b27c6891dbcd43ec979f71b9edc0252e9f0c71644bc95dd6271c-96d3e19341b5.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BitMiracle.LibTiff.NET40.dll",
+      "sha256": "6fd42ad8cf7b7a0d78eb1eadbd4853de3ddf5f8deee0535812e47436fd893554",
+      "status": "complete",
+      "evidence": "6fd42ad8cf7b7a0d78eb1eadbd4853de3ddf5f8deee0535812e47436fd893554-a44da55e562d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BitMiracle.LibTiff.NetStandard.dll",
+      "sha256": "7b67fdda9c5611f996cd4dd96de816e4e693a81802aa5c6693bf9ab012c65e59",
+      "status": "complete",
+      "evidence": "7b67fdda9c5611f996cd4dd96de816e4e693a81802aa5c6693bf9ab012c65e59-ec5811fd324c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BouncyCastle.Cryptography.dll",
+      "sha256": "aec227154fc549739ff5a07920723641f773ce65d05dca70b215183c93e9641d",
+      "status": "complete",
+      "evidence": "aec227154fc549739ff5a07920723641f773ce65d05dca70b215183c93e9641d-bb633dab6aa6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BruTile.dll",
+      "sha256": "ff321342a2ac49dc796c4523e19205e8f1b996c7f091bf7aded0ea86091cf2aa",
+      "status": "complete",
+      "evidence": "ff321342a2ac49dc796c4523e19205e8f1b996c7f091bf7aded0ea86091cf2aa-744a292c771e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "BSE.Windows.Forms.dll",
+      "sha256": "46491df9e66e38bb4d97fcfca0e28c8b2731080c782b52872fc2be2373291d85",
+      "status": "complete",
+      "evidence": "46491df9e66e38bb4d97fcfca0e28c8b2731080c782b52872fc2be2373291d85-19c0fb0cb9fd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Core.dll",
+      "sha256": "8d6eb327cc2d214e1cf59fce5da946aa4c0fe073b612c2d4e5e7007b7ef82104",
+      "status": "complete",
+      "evidence": "8d6eb327cc2d214e1cf59fce5da946aa4c0fe073b612c2d4e5e7007b7ef82104-5de601e12e22.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Crc32.NET.dll",
+      "sha256": "9eafbec3431a3ddc072d870dd71f96d4fd421eff27b3f855fb29dde31463803a",
+      "status": "complete",
+      "evidence": "9eafbec3431a3ddc072d870dd71f96d4fd421eff27b3f855fb29dde31463803a-b0f8c5fc74ca.json",
+      "exit_code": 0
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "24c11d138b9c977f338a43e60586cd6e6b8590b9ccbdcb161c5fac55c7a07575",
+      "status": "complete",
+      "evidence": "24c11d138b9c977f338a43e60586cd6e6b8590b9ccbdcb161c5fac55c7a07575-96c71e7d1d63.json",
+      "exit_code": 0
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "bb2a25b9e01d9557cb4b1eecaa3ad803f711e41ed11d47916710a3644fd4521a",
+      "status": "complete",
+      "evidence": "bb2a25b9e01d9557cb4b1eecaa3ad803f711e41ed11d47916710a3644fd4521a-fc5b9f786fbe.json",
+      "exit_code": 0
+    },
+    {
+      "path": "csmatio.dll",
+      "sha256": "8345cd7f6008bc7eb732b7c79e0d1efae947afd789adbfaa840be403197334b1",
+      "status": "complete",
+      "evidence": "8345cd7f6008bc7eb732b7c79e0d1efae947afd789adbfaa840be403197334b1-3b1ec570d5a7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "a31bc80583f1dc1a458bc11fd29aafc74c7486d393e3d689897377937c72271c",
+      "status": "complete",
+      "evidence": "a31bc80583f1dc1a458bc11fd29aafc74c7486d393e3d689897377937c72271c-dbfefc66ccbd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "ebc3cd419b1a792f82d5f065622750611b473ee9bf3c8909e3601e99a856ed97",
+      "status": "complete",
+      "evidence": "ebc3cd419b1a792f82d5f065622750611b473ee9bf3c8909e3601e99a856ed97-9eb2239231e4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "de/ZedGraph.resources.dll",
+      "sha256": "2674facab0f04a7d1788eec6b14fa66a8ae385b1107b57af2368e451427beba0",
+      "status": "complete",
+      "evidence": "2674facab0f04a7d1788eec6b14fa66a8ae385b1107b57af2368e451427beba0-268c1be31104.json",
+      "exit_code": 0
+    },
+    {
+      "path": "de-DE/MissionPlanner.resources.dll",
+      "sha256": "2029b3c401a2012abd0c420adaf1b459e94f3e2c90bbd1b04cd57c33c68838c1",
+      "status": "complete",
+      "evidence": "2029b3c401a2012abd0c420adaf1b459e94f3e2c90bbd1b04cd57c33c68838c1-26a4aa4b4103.json",
+      "exit_code": 0
+    },
+    {
+      "path": "de-DE/MissionPlanner.Strings.resources.dll",
+      "sha256": "9a0d6da6b0c5c55478be5faf0f37cff41e78c811312e3b1a14e8f97cd65b6f30",
+      "status": "complete",
+      "evidence": "9a0d6da6b0c5c55478be5faf0f37cff41e78c811312e3b1a14e8f97cd65b6f30-786a74d8def8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DeviceProgramming.dll",
+      "sha256": "3379ea9353d7bb226aaadd4b0f680ce930cee31ee4f786359bd7cacbacc48e3e",
+      "status": "complete",
+      "evidence": "3379ea9353d7bb226aaadd4b0f680ce930cee31ee4f786359bd7cacbacc48e3e-bc843595a31f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DirectShowLib.dll",
+      "sha256": "af97430187c697be5ec7e378a78512cec70e76400d664d7878f9b05800271140",
+      "status": "complete",
+      "evidence": "af97430187c697be5ec7e378a78512cec70e76400d664d7878f9b05800271140-af38eba83e44.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DotNetZip.dll",
+      "sha256": "8e9c0362e9bfb3c49af59e1b4d376d3e85b13aed0fbc3f5c0e1ebc99c07345f3",
+      "status": "complete",
+      "evidence": "8e9c0362e9bfb3c49af59e1b4d376d3e85b13aed0fbc3f5c0e1ebc99c07345f3-0c695688831e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DotSpatial.Data.dll",
+      "sha256": "333d2b9b9e3d6fb5df3c0a01e94a32981e9bb64591b8ce5447659ac0a4fe2ec5",
+      "status": "complete",
+      "evidence": "333d2b9b9e3d6fb5df3c0a01e94a32981e9bb64591b8ce5447659ac0a4fe2ec5-512318500400.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DotSpatial.NTSExtension.dll",
+      "sha256": "bb76f1ba7efc499de6bb9927a83ec6ddeb2c9ef576dde4037be877da3e8f9ff7",
+      "status": "complete",
+      "evidence": "bb76f1ba7efc499de6bb9927a83ec6ddeb2c9ef576dde4037be877da3e8f9ff7-bb44472476c9.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DotSpatial.Serialization.dll",
+      "sha256": "3222801c3899e0b79b76efe75be11718eb432794778daec238b1282c79745c88",
+      "status": "complete",
+      "evidence": "3222801c3899e0b79b76efe75be11718eb432794778daec238b1282c79745c88-7fcaa6160640.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DotSpatial.Projections.dll",
+      "sha256": "78efeb72ac2a37482f56ecf5ecf6cb74c2ba8ff014c0682483a92f445811b3c4",
+      "status": "complete",
+      "evidence": "78efeb72ac2a37482f56ecf5ecf6cb74c2ba8ff014c0682483a92f445811b3c4-07a3228f5b0b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/DriverCleanup.exe",
+      "sha256": "7d647a1b6028f69d3f4b5fa500adf2eed5eb112772129be117c05bb2eab05900",
+      "status": "complete",
+      "evidence": "7d647a1b6028f69d3f4b5fa500adf2eed5eb112772129be117c05bb2eab05900-4da48f466c4c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "DroneCAN.dll",
+      "sha256": "8e411332d81479355b7b9fdf0793d80acaa2a537ecdd3f8b50bdfb0e60d76314",
+      "status": "complete",
+      "evidence": "8e411332d81479355b7b9fdf0793d80acaa2a537ecdd3f8b50bdfb0e60d76314-fb31b668a84c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "a49af3679897cc3946f407f98fdedda995811b9ed026e5e41d461096dc39bde6",
+      "status": "complete",
+      "evidence": "a49af3679897cc3946f407f98fdedda995811b9ed026e5e41d461096dc39bde6-dec99952d39b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d219d9c1195a71ec75fa3e38b84148a4291158131f39644bd131836fbc075332",
+      "status": "complete",
+      "evidence": "d219d9c1195a71ec75fa3e38b84148a4291158131f39644bd131836fbc075332-e2dc7584edc6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "es/ZedGraph.resources.dll",
+      "sha256": "c37d5ccff6626ade11dacbce7d65ef263e7b6af8179ebdb041a8a5e653c4aa5a",
+      "status": "complete",
+      "evidence": "c37d5ccff6626ade11dacbce7d65ef263e7b6af8179ebdb041a8a5e653c4aa5a-d9301cbd777f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "es-ES/MissionPlanner.resources.dll",
+      "sha256": "8b82f3ca5199f236ba4bee9e3158dfcf4dd26b6e3b8ae282f68fc8d98fb54bb0",
+      "status": "complete",
+      "evidence": "8b82f3ca5199f236ba4bee9e3158dfcf4dd26b6e3b8ae282f68fc8d98fb54bb0-8b2dbf0407e9.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ExifLibrary.dll",
+      "sha256": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16",
+      "status": "complete",
+      "evidence": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16-800867ea44f5.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Flurl.dll",
+      "sha256": "1c25f0dfdfe39768961bc9928a09c6f7cc663914adb4b5ecfe96756b02f73e99",
+      "status": "complete",
+      "evidence": "1c25f0dfdfe39768961bc9928a09c6f7cc663914adb4b5ecfe96756b02f73e99-d83fcfc6e81c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Flurl.Http.dll",
+      "sha256": "6a2d5d2045f62ade4406b6f100820cb98177c0a050b38c08b0e2f3462f3dcea2",
+      "status": "complete",
+      "evidence": "6a2d5d2045f62ade4406b6f100820cb98177c0a050b38c08b0e2f3462f3dcea2-5e7b502b201b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "59ffbfea7ae84c97f175a04415fc3e9fe0cf9ab12147f1f4d8694c83b7bf349f",
+      "status": "complete",
+      "evidence": "59ffbfea7ae84c97f175a04415fc3e9fe0cf9ab12147f1f4d8694c83b7bf349f-f0af9507e614.json",
+      "exit_code": 0
+    },
+    {
+      "path": "fr/MissionPlanner.resources.dll",
+      "sha256": "ff9807699f6730e3351cf5f419b8a013b3289dd2871c57a0f5a3ddff856751ad",
+      "status": "complete",
+      "evidence": "ff9807699f6730e3351cf5f419b8a013b3289dd2871c57a0f5a3ddff856751ad-c29b25a41451.json",
+      "exit_code": 0
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "591d091fac6e9476ac7309636063c8683f6822ee281e66d73f0b8863784afc8e",
+      "status": "complete",
+      "evidence": "591d091fac6e9476ac7309636063c8683f6822ee281e66d73f0b8863784afc8e-95da747ba5a0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "fr/ZedGraph.resources.dll",
+      "sha256": "41893f26063c1201bd45db4cfa651b53f8b13cfbf9613d32156d3869a2acffc8",
+      "status": "complete",
+      "evidence": "41893f26063c1201bd45db4cfa651b53f8b13cfbf9613d32156d3869a2acffc8-c8ee05811d84.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GDAL.NET.dll",
+      "sha256": "b435a537b1bc1d70d55235e648e28a11c67d8b67a71f16fb9791061b3a864165",
+      "status": "complete",
+      "evidence": "b435a537b1bc1d70d55235e648e28a11c67d8b67a71f16fb9791061b3a864165-4265f5918f8b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal_csharp.dll",
+      "sha256": "0596b046c29fd5db88f9853c8a09e957332c9c7e7caec3c8a690c2c18358596c",
+      "status": "complete",
+      "evidence": "0596b046c29fd5db88f9853c8a09e957332c9c7e7caec3c8a690c2c18358596c-016eff3a7e76.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdalconst_csharp.dll",
+      "sha256": "baca2ce971e79c5cbb7f0c18aed1b99702b9985ac08ac9b3ad68131f14b694c7",
+      "status": "complete",
+      "evidence": "baca2ce971e79c5cbb7f0c18aed1b99702b9985ac08ac9b3ad68131f14b694c7-3c4d96db30ab.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GeoAPI.CoordinateSystems.dll",
+      "sha256": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b",
+      "status": "complete",
+      "evidence": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b-037246eeaa09.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GeoAPI.dll",
+      "sha256": "34a045a45f50d113f2fe150340fa98ae7f3e8c10b2aa4ac616eaf644a673d687",
+      "status": "complete",
+      "evidence": "34a045a45f50d113f2fe150340fa98ae7f3e8c10b2aa4ac616eaf644a673d687-e5f0e62ce1a9.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GeoidHeights.dll",
+      "sha256": "b23e30873fc46134aacccd0a0041809418e7e93f76bb91ddbc2ba1a514ad714e",
+      "status": "complete",
+      "evidence": "b23e30873fc46134aacccd0a0041809418e7e93f76bb91ddbc2ba1a514ad714e-78f9c32cdc8a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GeoJSON.Net.dll",
+      "sha256": "f26a99aa9dcc15dd7799fc5dbf369aedb5ca3151680f4e00ecaf9d07378eb6a4",
+      "status": "complete",
+      "evidence": "f26a99aa9dcc15dd7799fc5dbf369aedb5ca3151680f4e00ecaf9d07378eb6a4-b58664fbb16c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GeoUtility.dll",
+      "sha256": "e51c3821c5ec47b05b698a1a00c9da94285120578fcc027be9c5b3b1bd10284b",
+      "status": "complete",
+      "evidence": "e51c3821c5ec47b05b698a1a00c9da94285120578fcc027be9c5b3b1bd10284b-c824a7ea8c88.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GMap.NET.Core.dll",
+      "sha256": "c3fc6cc387a0e3c2bb756847d1c5826f76c4a93a7976868e3ef8f5fde0715431",
+      "status": "complete",
+      "evidence": "c3fc6cc387a0e3c2bb756847d1c5826f76c4a93a7976868e3ef8f5fde0715431-87e3680247ab.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GMap.NET.Drawing.dll",
+      "sha256": "fb08a403bf9b1cbc1c45fe46581d4d524439328b37c6d69f59e80422845336ea",
+      "status": "complete",
+      "evidence": "fb08a403bf9b1cbc1c45fe46581d4d524439328b37c6d69f59e80422845336ea-212f1da7cc19.json",
+      "exit_code": 0
+    },
+    {
+      "path": "GMap.NET.WindowsForms.dll",
+      "sha256": "c4ad59f05dea6aa83188feae9f41f4ca1c509e61ad86df36df6b59ef929c6d2a",
+      "status": "complete",
+      "evidence": "c4ad59f05dea6aa83188feae9f41f4ca1c509e61ad86df36df6b59ef929c6d2a-f68b56b8797f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "hu/ZedGraph.resources.dll",
+      "sha256": "81704ef79a67333f073b848e8b6bb59b8c34e0df7aeaf453ad85a72022bb0b1b",
+      "status": "complete",
+      "evidence": "81704ef79a67333f073b848e8b6bb59b8c34e0df7aeaf453ad85a72022bb0b1b-3e46a1e35aaa.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ICSharpCode.SharpZipLib.dll",
+      "sha256": "e260680904a46eb1c6847a604a791d20851f90a04f9a785b4d8d1d90793d7284",
+      "status": "complete",
+      "evidence": "e260680904a46eb1c6847a604a791d20851f90a04f9a785b4d8d1d90793d7284-06e16145056f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "id-ID/MissionPlanner.Strings.resources.dll",
+      "sha256": "ef4114f88c8a8915998c061596ac1d39b1bedd21095da26700e1f988cd7a7671",
+      "status": "complete",
+      "evidence": "ef4114f88c8a8915998c061596ac1d39b1bedd21095da26700e1f988cd7a7671-073fa496a52f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "id-ID/MissionPlanner.resources.dll",
+      "sha256": "fe7f1a11e2aed706c4e74a874880d844f1b63bac29803cabfb38089d77a990a4",
+      "status": "complete",
+      "evidence": "fe7f1a11e2aed706c4e74a874880d844f1b63bac29803cabfb38089d77a990a4-af880a444d03.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Ionic.Zip.NetStandard.dll",
+      "sha256": "c4e3bc5933f4064d27527463d89e4bde76a64707dfefd74861e57dc3f826a25f",
+      "status": "complete",
+      "evidence": "c4e3bc5933f4064d27527463d89e4bde76a64707dfefd74861e57dc3f826a25f-92d692a37803.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Interfaces.dll",
+      "sha256": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+      "status": "complete",
+      "evidence": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205-032ab2cde724.json",
+      "exit_code": 0
+    },
+    {
+      "path": "IronPython.Modules.dll",
+      "sha256": "42154d6cf9fc8c15571140f0656bd98a127814e40f8cea1fb567d9d97cde0aa5",
+      "status": "complete",
+      "evidence": "42154d6cf9fc8c15571140f0656bd98a127814e40f8cea1fb567d9d97cde0aa5-ec864f01fb2a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "IronPython.dll",
+      "sha256": "fa31585f4ee4140ee4dc3e4130643ea21f514d142a8dbacbc12afba5ed7bb5a3",
+      "status": "complete",
+      "evidence": "fa31585f4ee4140ee4dc3e4130643ea21f514d142a8dbacbc12afba5ed7bb5a3-6f32bdec3b33.json",
+      "exit_code": 0
+    },
+    {
+      "path": "IronPython.SQLite.dll",
+      "sha256": "5c43c75d7d88df61cf76c4739346a1f7947671019c08785457e61dc790ecb0a5",
+      "status": "complete",
+      "evidence": "5c43c75d7d88df61cf76c4739346a1f7947671019c08785457e61dc790ecb0a5-29fb919c1278.json",
+      "exit_code": 0
+    },
+    {
+      "path": "IronPython.Wpf.dll",
+      "sha256": "4e3c9e0d0ec9120de35521ee3c3e7a5ad6709686edc26e7b2b746973ba9c1a47",
+      "status": "complete",
+      "evidence": "4e3c9e0d0ec9120de35521ee3c3e7a5ad6709686edc26e7b2b746973ba9c1a47-226ab7cb0427.json",
+      "exit_code": 0
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "19b188f164f970f5598bca806c900027c7aac5ab02dfec45e9d883bc3d7c1ead",
+      "status": "complete",
+      "evidence": "19b188f164f970f5598bca806c900027c7aac5ab02dfec45e9d883bc3d7c1ead-cf56ff26cb00.json",
+      "exit_code": 0
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "53fb4185f37ff46c4807692b37db021d33d3d8ad7aff62f85450553006fd0faf",
+      "status": "complete",
+      "evidence": "53fb4185f37ff46c4807692b37db021d33d3d8ad7aff62f85450553006fd0faf-102e64585183.json",
+      "exit_code": 0
+    },
+    {
+      "path": "it/ZedGraph.resources.dll",
+      "sha256": "536e25b406c4716bd6990ed8998272658359868003b925e9e8ff65472bba345a",
+      "status": "complete",
+      "evidence": "536e25b406c4716bd6990ed8998272658359868003b925e9e8ff65472bba345a-63889b3c3a61.json",
+      "exit_code": 0
+    },
+    {
+      "path": "it-IT/MissionPlanner.resources.dll",
+      "sha256": "7de1e0dd5c2cc44040205637ec3757bf33a6941c18cec4e257950949af816b21",
+      "status": "complete",
+      "evidence": "7de1e0dd5c2cc44040205637ec3757bf33a6941c18cec4e257950949af816b21-be90b1a04fcc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "888e69f650722b6dcff4da7645a1fa9783fafb70a028fa08c446619288537121",
+      "status": "complete",
+      "evidence": "888e69f650722b6dcff4da7645a1fa9783fafb70a028fa08c446619288537121-b3b6e16caf9b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "c3df6306011e06e99234eb004ab924bc21bd40c23ccb50c64ed398e1cac088dc",
+      "status": "complete",
+      "evidence": "c3df6306011e06e99234eb004ab924bc21bd40c23ccb50c64ed398e1cac088dc-6d42c32934ac.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ja/ZedGraph.resources.dll",
+      "sha256": "8d1d721b1adaf57a21ba8a2861c4dc46591852faf965ea962761f6f2d0ce2872",
+      "status": "complete",
+      "evidence": "8d1d721b1adaf57a21ba8a2861c4dc46591852faf965ea962761f6f2d0ce2872-2d6afad19862.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ja-JP/MissionPlanner.resources.dll",
+      "sha256": "c843f84195229d2b9cb2285d5b78a86f9938f8882304e6f60c8c49c7e1f477b0",
+      "status": "complete",
+      "evidence": "c843f84195229d2b9cb2285d5b78a86f9938f8882304e6f60c8c49c7e1f477b0-0f21b1e381b4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ja-JP/MissionPlanner.Strings.resources.dll",
+      "sha256": "e79802bc2098170416f129fe8c044f62b8b8007ad1ca060871b836c9b0e8418b",
+      "status": "complete",
+      "evidence": "e79802bc2098170416f129fe8c044f62b8b8007ad1ca060871b836c9b0e8418b-e6b8dafa846f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "JetBrains.Profiler.Api.dll",
+      "sha256": "0e81d6dd31052e029c0f7e74dce0deddc6179a3955be5762ea8a2dbff5f42f3a",
+      "status": "complete",
+      "evidence": "0e81d6dd31052e029c0f7e74dce0deddc6179a3955be5762ea8a2dbff5f42f3a-9c20c2d17685.json",
+      "exit_code": 0
+    },
+    {
+      "path": "JetBrains.Profiler.SelfApi.dll",
+      "sha256": "ae3fc72f428ae9b804b1ab3df4a6e9ffb96a56afd18ff18d8cb3c7c9d63ab18c",
+      "status": "complete",
+      "evidence": "ae3fc72f428ae9b804b1ab3df4a6e9ffb96a56afd18ff18d8cb3c7c9d63ab18c-084fd5f2d3dd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "KMLib.dll",
+      "sha256": "1952af7cb6095ab76750ceb278a1cae308718398896938c5b97ead0ea40325c9",
+      "status": "complete",
+      "evidence": "1952af7cb6095ab76750ceb278a1cae308718398896938c5b97ead0ea40325c9-e3303980c320.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "ec13f51ce899bd1ce7f780921386cb017d477d8f4cd3745a0425582306683ee4",
+      "status": "complete",
+      "evidence": "ec13f51ce899bd1ce7f780921386cb017d477d8f4cd3745a0425582306683ee4-6923c6cf04eb.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "de24e9ad5e3e332851a25fc17474e242dbb383ed5f82029d264035e50f4025a0",
+      "status": "complete",
+      "evidence": "de24e9ad5e3e332851a25fc17474e242dbb383ed5f82029d264035e50f4025a0-eab1681d93ef.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ko-KR/MissionPlanner.Strings.resources.dll",
+      "sha256": "06a395d82f8dd07d96a2d09ad3172e2c952343f3f26c640e8ef90a0b930f4df8",
+      "status": "complete",
+      "evidence": "06a395d82f8dd07d96a2d09ad3172e2c952343f3f26c640e8ef90a0b930f4df8-65c962e37712.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ko-KR/MissionPlanner.resources.dll",
+      "sha256": "a17c8a941b90633dd8d6cc985cde0e8262a06e5c101d6692abf59e1c302fe269",
+      "status": "complete",
+      "evidence": "a17c8a941b90633dd8d6cc985cde0e8262a06e5c101d6692abf59e1c302fe269-d8331a910088.json",
+      "exit_code": 0
+    },
+    {
+      "path": "LibTessDotNet.dll",
+      "sha256": "2df563dfe20d8201089dfde79efcbe38b0d82cd503ff0ec429de67ec2f67ba5d",
+      "status": "complete",
+      "evidence": "2df563dfe20d8201089dfde79efcbe38b0d82cd503ff0ec429de67ec2f67ba5d-0074ae938fbd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "LibUsbDfu.dll",
+      "sha256": "f577d659edfe5c240830ba16dcb43fe94dfa4586eb94834c925f4eefd8b73093",
+      "status": "complete",
+      "evidence": "f577d659edfe5c240830ba16dcb43fe94dfa4586eb94834c925f4eefd8b73093-898db5d3ad75.json",
+      "exit_code": 0
+    },
+    {
+      "path": "LibUsbDotNet.LibUsbDotNet.dll",
+      "sha256": "b6de87ff6fdde6d0a245ef37fe81fac49523c35115c61bc002e4935d99875508",
+      "status": "complete",
+      "evidence": "b6de87ff6fdde6d0a245ef37fe81fac49523c35115c61bc002e4935d99875508-11e13e8aabc4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "LibVLC.NET.dll",
+      "sha256": "74d0b2ac1bec034ab5c541ef211eeb708fb224a5013be718550ff0c354f052df",
+      "status": "complete",
+      "evidence": "74d0b2ac1bec034ab5c541ef211eeb708fb224a5013be718550ff0c354f052df-9b32e13ab70e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "log4net.dll",
+      "sha256": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d",
+      "status": "complete",
+      "evidence": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d-8cadc865da93.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ManagedNativeWifi.Simple.dll",
+      "sha256": "ae1c9dff1d88f92e47addc3a16f69a63acd5803e10933d2dd61ba8bfde7fbda8",
+      "status": "complete",
+      "evidence": "ae1c9dff1d88f92e47addc3a16f69a63acd5803e10933d2dd61ba8bfde7fbda8-73c954d9d89e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MathParser.org-mXparser.dll",
+      "sha256": "b2dde6c274ff0ad287442bf9d86fb580dce3c99ef27775dcdbdcc854df5b91b9",
+      "status": "complete",
+      "evidence": "b2dde6c274ff0ad287442bf9d86fb580dce3c99ef27775dcdbdcc854df5b91b9-a2b86a54a716.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MAVLink.dll",
+      "sha256": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+      "status": "complete",
+      "evidence": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6-75d3ca6d74ff.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MetaDataExtractor.dll",
+      "sha256": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8",
+      "status": "complete",
+      "evidence": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8-4b4e00e3fcd0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.CSharp.dll",
+      "sha256": "58fc067e6cfb52480ce558eed5c55b6806e602ea235acd0fd0634dd771c9b715",
+      "status": "complete",
+      "evidence": "58fc067e6cfb52480ce558eed5c55b6806e602ea235acd0fd0634dd771c9b715-2b222679073e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.dll",
+      "sha256": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97",
+      "status": "complete",
+      "evidence": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97-f416783903d7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Diagnostics.Runtime.dll",
+      "sha256": "902514bc754baa9466ceab24f387784e31d54ee89b00f539f28765b4be44e344",
+      "status": "complete",
+      "evidence": "902514bc754baa9466ceab24f387784e31d54ee89b00f539f28765b4be44e344-d8761cba3b0c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Dynamic.dll",
+      "sha256": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca",
+      "status": "complete",
+      "evidence": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca-c461013d68be.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Abstractions.dll",
+      "sha256": "fa446e68a7d85d47163ed76be91553ec0c4ada77b740474b7d1215de72c9048f",
+      "status": "complete",
+      "evidence": "fa446e68a7d85d47163ed76be91553ec0c4ada77b740474b7d1215de72c9048f-1d376cbb606c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Memory.dll",
+      "sha256": "bf65e4e121d2a2233caf70bf0b6089c88c8851c9e232bc0b048e6a40ad746ece",
+      "status": "complete",
+      "evidence": "bf65e4e121d2a2233caf70bf0b6089c88c8851c9e232bc0b048e6a40ad746ece-3a2abe199c18.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "sha256": "3ad1dde935aae2f332bae842c7e360dfb8be0ff8774564771b77405b2ba0ebd2",
+      "status": "complete",
+      "evidence": "3ad1dde935aae2f332bae842c7e360dfb8be0ff8774564771b77405b2ba0ebd2-5a0a47897f93.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.Logging.Abstractions.dll",
+      "sha256": "750955eea05d92071f032de955d5ba2c93c247ff6c7db4c81f27105dc99bde34",
+      "status": "complete",
+      "evidence": "750955eea05d92071f032de955d5ba2c93c247ff6c7db4c81f27105dc99bde34-3b406b2e36a2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.Options.dll",
+      "sha256": "71e2aab1bd158a5499f5a6b7c6f5a0f13a4f6ddaa24e1d7c4a7445ceb8ec9b6c",
+      "status": "complete",
+      "evidence": "71e2aab1bd158a5499f5a6b7c6f5a0f13a4f6ddaa24e1d7c4a7445ceb8ec9b6c-ec4690909a59.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Extensions.Primitives.dll",
+      "sha256": "4fa020c0e576e0c2332de41f27a0934dd13160017b201844a6b139ea389b1e90",
+      "status": "complete",
+      "evidence": "4fa020c0e576e0c2332de41f27a0934dd13160017b201844a6b139ea389b1e90-8171a4fa76af.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Scripting.dll",
+      "sha256": "2dfbeb0f68ee9828f50c246f379d60da5f37ddda07e07acce92cca2ded9f3a7f",
+      "status": "complete",
+      "evidence": "2dfbeb0f68ee9828f50c246f379d60da5f37ddda07e07acce92cca2ded9f3a7f-4dc716d61291.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Scripting.Metadata.dll",
+      "sha256": "9748910fefa76dc8770fde957ec5eebe55cd27bae0c1e1d5d859c9aac1d89af3",
+      "status": "complete",
+      "evidence": "9748910fefa76dc8770fde957ec5eebe55cd27bae0c1e1d5d859c9aac1d89af3-93e57b5079a0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Microsoft.Win32.Registry.dll",
+      "sha256": "619737e2af8fb713085726631dd2e522fe130cac1d388a59c38907a47d7aadea",
+      "status": "complete",
+      "evidence": "619737e2af8fb713085726631dd2e522fe130cac1d388a59c38907a47d7aadea-2353e68bca99.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Antenna.dll",
+      "sha256": "56ef179ca0cfc55dcbaef975f38e683b2409fb4c5c2cedd3aff4d1169f415d0e",
+      "status": "complete",
+      "evidence": "56ef179ca0cfc55dcbaef975f38e683b2409fb4c5c2cedd3aff4d1169f415d0e-b6a17b6719a9.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.ArduPilot.dll",
+      "sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+      "status": "complete",
+      "evidence": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c-f3516f115610.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Comms.dll",
+      "sha256": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+      "status": "complete",
+      "evidence": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814-d730cb832786.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Controls.dll",
+      "sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+      "status": "complete",
+      "evidence": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336-01f50539404a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Drawing.dll",
+      "sha256": "26ac32bd57e107e39b5b877cae4bfe5c762b164dc508defd4c05e11c4e92d20b",
+      "status": "complete",
+      "evidence": "26ac32bd57e107e39b5b877cae4bfe5c762b164dc508defd4c05e11c4e92d20b-628efec91334.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.exe",
+      "sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+      "status": "complete",
+      "evidence": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a-02ee9375698b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.HIL.dll",
+      "sha256": "7a2e5ec6fb854d0a57ac8a03c9353f2464907830c01312d08ad4730c58e8627b",
+      "status": "complete",
+      "evidence": "7a2e5ec6fb854d0a57ac8a03c9353f2464907830c01312d08ad4730c58e8627b-19ad8b18ee8c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Maps.dll",
+      "sha256": "8a8b97526f8c1f94057df356496bf82ea8b144f4372792e8f0b60bd9e588e6ec",
+      "status": "complete",
+      "evidence": "8a8b97526f8c1f94057df356496bf82ea8b144f4372792e8f0b60bd9e588e6ec-a0351d6c700b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Strings.dll",
+      "sha256": "a48e47b8dbf4f5f93e582423418614c709b16ef65c71245ae3727cecb266a165",
+      "status": "complete",
+      "evidence": "a48e47b8dbf4f5f93e582423418614c709b16ef65c71245ae3727cecb266a165-8485f2c00426.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.Utilities.dll",
+      "sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+      "status": "complete",
+      "evidence": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71-6682bcb12b6e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "MissionPlanner.WebAPIs.dll",
+      "sha256": "6c2ee11f045a400c3150ecd52aa72170458e92861ae8cccc8e1937b474b57e08",
+      "status": "complete",
+      "evidence": "6c2ee11f045a400c3150ecd52aa72170458e92861ae8cccc8e1937b474b57e08-e605430dd111.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Mono.Posix.NETStandard.dll",
+      "sha256": "e67e359a40feb8665adbbd8f781e9e512866d103f2870ba57aab4aa59de83fee",
+      "status": "complete",
+      "evidence": "e67e359a40feb8665adbbd8f781e9e512866d103f2870ba57aab4aa59de83fee-d871a06c7aec.json",
+      "exit_code": 0
+    },
+    {
+      "path": "netDxf.dll",
+      "sha256": "c04b89cd13234021ab6e1a8edb0cd145c60b05a8297597ac5e83473b0d69350a",
+      "status": "complete",
+      "evidence": "c04b89cd13234021ab6e1a8edb0cd145c60b05a8297597ac5e83473b0d69350a-2f3b09f280ed.json",
+      "exit_code": 0
+    },
+    {
+      "path": "NetTopologySuite.dll",
+      "sha256": "456dfab0684e2a48af46962ad46bd3e34bd40153cab9832306ce59d7a6f7aa69",
+      "status": "complete",
+      "evidence": "456dfab0684e2a48af46962ad46bd3e34bd40153cab9832306ce59d7a6f7aa69-19609ea9b1ca.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Newtonsoft.Json.dll",
+      "sha256": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d",
+      "status": "complete",
+      "evidence": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d-75b8fe214af2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ObjectListView.dll",
+      "sha256": "76b2120588c0b1582d1784a7d2719ed662fc3462cce005d3a30cf9873e4e01ff",
+      "status": "complete",
+      "evidence": "76b2120588c0b1582d1784a7d2719ed662fc3462cce005d3a30cf9873e4e01ff-ff4a7b27ef2d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ogr_csharp.dll",
+      "sha256": "48c275f1b26f0c7d157410698c0246aece07052c95da31c70a926820f87d6a86",
+      "status": "complete",
+      "evidence": "48c275f1b26f0c7d157410698c0246aece07052c95da31c70a926820f87d6a86-2ce194be9830.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Onvif.Core.dll",
+      "sha256": "0ebffc8fe7b3cce0b2b8df23043e697225de6b9e217a254dff532246dfe085b1",
+      "status": "complete",
+      "evidence": "0ebffc8fe7b3cce0b2b8df23043e697225de6b9e217a254dff532246dfe085b1-c515f6ce7e60.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Onvif.dll",
+      "sha256": "d2faf23f2590a499d9c3d437e86e4139a110c31259408f4c85f017970c24cfb7",
+      "status": "complete",
+      "evidence": "d2faf23f2590a499d9c3d437e86e4139a110c31259408f4c85f017970c24cfb7-1cdc00a79e1a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "OpenTK.dll",
+      "sha256": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4",
+      "status": "complete",
+      "evidence": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4-c76ff9042fa2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "OpenTK.GLControl.dll",
+      "sha256": "13763605654dc50b83844dcb23c4530cf8d1f443a4dade3abc485c1cc9a93318",
+      "status": "complete",
+      "evidence": "13763605654dc50b83844dcb23c4530cf8d1f443a4dade3abc485c1cc9a93318-3ff5acf59a7b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "OSDConfigurator.dll",
+      "sha256": "086ad37894d13a337b43f9aafa3ebb0d346b6d389ba4e94a9b152c3f1f57cc3e",
+      "status": "complete",
+      "evidence": "086ad37894d13a337b43f9aafa3ebb0d346b6d389ba4e94a9b152c3f1f57cc3e-8edb7d8ada43.json",
+      "exit_code": 0
+    },
+    {
+      "path": "osr_csharp.dll",
+      "sha256": "8a41651ffb53279e6e70bf3d4e294adb00558483327659b693e8cb6406ba356f",
+      "status": "complete",
+      "evidence": "8a41651ffb53279e6e70bf3d4e294adb00558483327659b693e8cb6406ba356f-7f54b2a4506c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "5c75908c05d6088306aa52cf915972bfbe5b15fb21699cac61b0d37c91bad68a",
+      "status": "complete",
+      "evidence": "5c75908c05d6088306aa52cf915972bfbe5b15fb21699cac61b0d37c91bad68a-3d9378acbd96.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d110bf0f1f620c40e2cbc0459438a6fa937b6bf85e75e0b97fa24e7a381b617b",
+      "status": "complete",
+      "evidence": "d110bf0f1f620c40e2cbc0459438a6fa937b6bf85e75e0b97fa24e7a381b617b-c863ff624b36.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pl/MissionPlanner.resources.dll",
+      "sha256": "f31d4cf77c9421dc62900dcdb8653b9c6cdf9b9912464e7250cf96b6e24d1d2a",
+      "status": "complete",
+      "evidence": "f31d4cf77c9421dc62900dcdb8653b9c6cdf9b9912464e7250cf96b6e24d1d2a-11f66475f483.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/AltitudeAngelWings.dll",
+      "sha256": "9dfd3293d5eff37503706a269b97ead17c2375d99013fb2bab5403260f58e38d",
+      "status": "complete",
+      "evidence": "9dfd3293d5eff37503706a269b97ead17c2375d99013fb2bab5403260f58e38d-591057d3ef26.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/AltitudeAngelWings.Plugin.dll",
+      "sha256": "b44113352912531aac6dfbaf92efc0ad6d514a002db2e73708e1dd82fd9c5daf",
+      "status": "complete",
+      "evidence": "b44113352912531aac6dfbaf92efc0ad6d514a002db2e73708e1dd82fd9c5daf-bab6a646e2b3.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Bulb.dll",
+      "sha256": "84a2ec5aef458c015d55dba468403b4307f4799a9658a9544f8c8cf001f41d39",
+      "status": "complete",
+      "evidence": "84a2ec5aef458c015d55dba468403b4307f4799a9658a9544f8c8cf001f41d39-c0b13c844319.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/FaceMap.dll",
+      "sha256": "6f23cdf4f36d32e2b588cce87e3da39f1facd99c0a629b05ff18349297223d6f",
+      "status": "complete",
+      "evidence": "6f23cdf4f36d32e2b588cce87e3da39f1facd99c0a629b05ff18349297223d6f-fc851cca8072.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.Gridv2.resources.dll",
+      "sha256": "e014d74a6daf6b9e4fff3be680abbba8bd594c336f89d5999da378e756116157",
+      "status": "complete",
+      "evidence": "e014d74a6daf6b9e4fff3be680abbba8bd594c336f89d5999da378e756116157-95b96437ba61.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.SimpleGrid.resources.dll",
+      "sha256": "bbc2ed044c36a78af507fc372b9815389a0f7fd9408f98b82c7ef4d61aeb7246",
+      "status": "complete",
+      "evidence": "bbc2ed044c36a78af507fc372b9815389a0f7fd9408f98b82c7ef4d61aeb7246-efb34d7700f6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Markdig.dll",
+      "sha256": "4b693316ca1215a4adeff6f00807a967b07087230ca9da9ed1f69abde24ccd85",
+      "status": "complete",
+      "evidence": "4b693316ca1215a4adeff6f00807a967b07087230ca9da9ed1f69abde24ccd85-6db7e4e12e3e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/MavlinkMessagePlugin.dll",
+      "sha256": "5e4a44b7cca7b67623a9b0b1f4e3b8a1e11350a0843b12a45681152986b369d9",
+      "status": "complete",
+      "evidence": "5e4a44b7cca7b67623a9b0b1f4e3b8a1e11350a0843b12a45681152986b369d9-9b246a2da30a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Microsoft.Bcl.AsyncInterfaces.dll",
+      "sha256": "ed5bc605f7f9fcc382183abef06c354dad946abb42a07631712077b2157d6bc9",
+      "status": "complete",
+      "evidence": "ed5bc605f7f9fcc382183abef06c354dad946abb42a07631712077b2157d6bc9-03f6a8396576.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Abstractions.dll",
+      "sha256": "f737853a563d87774707623484eb23072992848b6767626024a37d9d9d2fa51b",
+      "status": "complete",
+      "evidence": "f737853a563d87774707623484eb23072992848b6767626024a37d9d9d2fa51b-ac90628233b6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.JsonWebTokens.dll",
+      "sha256": "342ead1b0d42192f3d26d0788d1e34d44bbbb26a2433d9a6c5703453be2d9b21",
+      "status": "complete",
+      "evidence": "342ead1b0d42192f3d26d0788d1e34d44bbbb26a2433d9a6c5703453be2d9b21-2f3dbc3f21b7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Logging.dll",
+      "sha256": "888ce7235ac4edf45ff7be366ce4c0f1d62d8dd8dd01eec72b4f05632171ceeb",
+      "status": "complete",
+      "evidence": "888ce7235ac4edf45ff7be366ce4c0f1d62d8dd8dd01eec72b4f05632171ceeb-7bfa5cca29a8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Tokens.dll",
+      "sha256": "18ceaf81c268fe652a7f3b0a852e71aff3cb4505743d706526ee088fc284d6d6",
+      "status": "complete",
+      "evidence": "18ceaf81c268fe652a7f3b0a852e71aff3cb4505743d706526ee088fc284d6d6-00e81503efa2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/MissionPlanner.Gridv2.dll",
+      "sha256": "7946dce696d4ba17a53ce5bbf740272af327fe78fbed41bac63c963d39e27e63",
+      "status": "complete",
+      "evidence": "7946dce696d4ba17a53ce5bbf740272af327fe78fbed41bac63c963d39e27e63-b01b5c4d424b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/MissionPlanner.SimpleGrid.dll",
+      "sha256": "dead106e5105751bee486df097ed339af506586d06529fab6c11e23f619a170c",
+      "status": "complete",
+      "evidence": "dead106e5105751bee486df097ed339af506586d06529fab6c11e23f619a170c-7cf67066d0ab.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/MissionPlanner.Stats.dll",
+      "sha256": "618aacade8d1198d38d410d623cb03fc1fb82f8c52991f7900b999ebc6765e03",
+      "status": "complete",
+      "evidence": "618aacade8d1198d38d410d623cb03fc1fb82f8c52991f7900b999ebc6765e03-5c6d02081ad2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/NodaTime.dll",
+      "sha256": "82a5a58a4fb623c85534d20750ef39b482a5f261e3d3b3e91b49180f63c51b3a",
+      "status": "complete",
+      "evidence": "82a5a58a4fb623c85534d20750ef39b482a5f261e3d3b3e91b49180f63c51b3a-6645da7c9bd7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/NodaTime.Serialization.JsonNet.dll",
+      "sha256": "4902e29b0fbcdb85a630d27e85504c1f40db79958fe356465eadcc989fb33f47",
+      "status": "complete",
+      "evidence": "4902e29b0fbcdb85a630d27e85504c1f40db79958fe356465eadcc989fb33f47-53c8eac4f807.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/opendroneid.dll",
+      "sha256": "944bab400dffd76fca7e2652598d0dfeb32ebea45a9dc169cc10a68b35379da1",
+      "status": "complete",
+      "evidence": "944bab400dffd76fca7e2652598d0dfeb32ebea45a9dc169cc10a68b35379da1-d7923b9f5865.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/Polly.dll",
+      "sha256": "fc859b5e11d4d9ad76a767381438969062ff7780c495f5fe30b12b13b97eb283",
+      "status": "complete",
+      "evidence": "fc859b5e11d4d9ad76a767381438969062ff7780c495f5fe30b12b13b97eb283-41d641e8e55c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/pt/MissionPlanner.SimpleGrid.resources.dll",
+      "sha256": "238c85d447dae137d22de893f599d7412dd12e0ec0b6c46feabd81c7ac002c4b",
+      "status": "complete",
+      "evidence": "238c85d447dae137d22de893f599d7412dd12e0ec0b6c46feabd81c7ac002c4b-bc2f47ba844e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/System.IdentityModel.Tokens.Jwt.dll",
+      "sha256": "a99a847bdb8e4b5352ffc966d77860835919921561e6e26cbacde0b46b01c2a8",
+      "status": "complete",
+      "evidence": "a99a847bdb8e4b5352ffc966d77860835919921561e6e26cbacde0b46b01c2a8-e2d510626533.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/System.Text.Encodings.Web.dll",
+      "sha256": "09f7d7e7f98be4c21c4dba8c3be7bf9516dbae6dddfb1b827188a9bd874c6724",
+      "status": "complete",
+      "evidence": "09f7d7e7f98be4c21c4dba8c3be7bf9516dbae6dddfb1b827188a9bd874c6724-8cb7154ae549.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/System.Text.Json.dll",
+      "sha256": "d2608254043e5b19f6e8335569fc2dd72ae4ce11a3df0d3f1425ac158df93237",
+      "status": "complete",
+      "evidence": "d2608254043e5b19f6e8335569fc2dd72ae4ce11a3df0d3f1425ac158df93237-226cfe5585be.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/TerrainMakerPlugin.dll",
+      "sha256": "72610cff944ce9db0486b9cc03581f3a2b6e127afea6072135e36c27f054cfb1",
+      "status": "complete",
+      "evidence": "72610cff944ce9db0486b9cc03581f3a2b6e127afea6072135e36c27f054cfb1-336d7554a674.json",
+      "exit_code": 0
+    },
+    {
+      "path": "plugins/TrackerHome.dll",
+      "sha256": "8db4eaa432359a2949a3ef4f3eaf3da64c20c6d26f3b43caffab767bf0272afb",
+      "status": "complete",
+      "evidence": "8db4eaa432359a2949a3ef4f3eaf3da64c20c6d26f3b43caffab767bf0272afb-212d9946fe70.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ProjNET.dll",
+      "sha256": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48",
+      "status": "complete",
+      "evidence": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48-4235ce7a42a7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pt/MissionPlanner.resources.dll",
+      "sha256": "37da327c9f50190a480baa764826cc84beb243af86287ede13109edb668245c9",
+      "status": "complete",
+      "evidence": "37da327c9f50190a480baa764826cc84beb243af86287ede13109edb668245c9-3b10ccd0a9fc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pt/MissionPlanner.Strings.resources.dll",
+      "sha256": "d2f2424b30c2076cfdbdfcde9e6ba16a83ed849564b5f47130a1e3dcea7f60fe",
+      "status": "complete",
+      "evidence": "d2f2424b30c2076cfdbdfcde9e6ba16a83ed849564b5f47130a1e3dcea7f60fe-6af846e518d5.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pt/ZedGraph.resources.dll",
+      "sha256": "cca886440642650914f3f56bd6a9e0a00fb65e575cdae797664689414f121800",
+      "status": "complete",
+      "evidence": "cca886440642650914f3f56bd6a9e0a00fb65e575cdae797664689414f121800-508fedd7aa99.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "d14623ab457697e3644c12a6091fe896103a13f920b36e4ca52e309510ff9545",
+      "status": "complete",
+      "evidence": "d14623ab457697e3644c12a6091fe896103a13f920b36e4ca52e309510ff9545-a65b0a7d584d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "891348b007d7fa8b92aadd88d2ec3f30b67936810c3fc5e46e8afe3c1abf37bf",
+      "status": "complete",
+      "evidence": "891348b007d7fa8b92aadd88d2ec3f30b67936810c3fc5e46e8afe3c1abf37bf-1fcee580e1d7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "px4uploader.dll",
+      "sha256": "96c74a1ff1dac2ae5a68787e1cf66617dbee2cde74f68ac4389423bca7ac39c6",
+      "status": "complete",
+      "evidence": "96c74a1ff1dac2ae5a68787e1cf66617dbee2cde74f68ac4389423bca7ac39c6-e980d27ab072.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Renci.SshNet.dll",
+      "sha256": "f6a4be2a762ffd5a1f8d47c0deb34c3015d479bd409d01cc96f1d2d0be55caa2",
+      "status": "complete",
+      "evidence": "f6a4be2a762ffd5a1f8d47c0deb34c3015d479bd409d01cc96f1d2d0be55caa2-89d3f298aa8e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "RestSharp.dll",
+      "sha256": "55ca753ccad95b3845ef735252ec35ebd0a3a5e420625393e32032add2331378",
+      "status": "complete",
+      "evidence": "55ca753ccad95b3845ef735252ec35ebd0a3a5e420625393e32032add2331378-b8a8f69e2093.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "2eaba6b072a203a5cb52a9df72326c7fc0f20bb29488f0abdf6a5b94bbc90509",
+      "status": "complete",
+      "evidence": "2eaba6b072a203a5cb52a9df72326c7fc0f20bb29488f0abdf6a5b94bbc90509-e707664c51fc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "591798c606db1084be5620a8203f117f453d2cae284c7b79d5751b9f04b9ecfb",
+      "status": "complete",
+      "evidence": "591798c606db1084be5620a8203f117f453d2cae284c7b79d5751b9f04b9ecfb-1b24a6c0355e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru/ZedGraph.resources.dll",
+      "sha256": "72e955e6f936393fac3ccb2cb68386ee9a7da313dea4133fb85e0f42d3a4caa4",
+      "status": "complete",
+      "evidence": "72e955e6f936393fac3ccb2cb68386ee9a7da313dea4133fb85e0f42d3a4caa4-77635d3ac2a3.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.resources.dll",
+      "sha256": "3cb748ea82f6e82f1f89e7c3ef3b5e0181b9dd18a1e09218316f97f96a488b09",
+      "status": "complete",
+      "evidence": "3cb748ea82f6e82f1f89e7c3ef3b5e0181b9dd18a1e09218316f97f96a488b09-fe47fef7c474.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.Strings.resources.dll",
+      "sha256": "65f8725582f6161d95c4627667249087dd59f44a6f02afe7de41b8add6ff8825",
+      "status": "complete",
+      "evidence": "65f8725582f6161d95c4627667249087dd59f44a6f02afe7de41b8add6ff8825-6216dce2b4b4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ru-RU/MissionPlanner.resources.dll",
+      "sha256": "94da5403af631b728605618403b624e46d8512192f13a4bc2270051ef23e30c4",
+      "status": "complete",
+      "evidence": "94da5403af631b728605618403b624e46d8512192f13a4bc2270051ef23e30c4-aa8bdc8994a0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SharpAdbClient.dll",
+      "sha256": "87ef276ebd015b24253c4c4db4b655d1f630a6713d8278081f52a5601d9d235d",
+      "status": "complete",
+      "evidence": "87ef276ebd015b24253c4c4db4b655d1f630a6713d8278081f52a5601d9d235d-01e9e3c087f1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SharpCompress.dll",
+      "sha256": "01cb5fbfb6dabdd5a84ecdbf88797c78e4b4602fb82e44daee5cd9b219b90289",
+      "status": "complete",
+      "evidence": "01cb5fbfb6dabdd5a84ecdbf88797c78e4b4602fb82e44daee5cd9b219b90289-d3aa592d3470.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SharpDX.DirectInput.dll",
+      "sha256": "582ab6ecf6753cfaef4a45ddc7b723407d2e83d5d9d65b549f48d751f1030519",
+      "status": "complete",
+      "evidence": "582ab6ecf6753cfaef4a45ddc7b723407d2e83d5d9d65b549f48d751f1030519-b8fd57f0ccd5.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SharpDX.dll",
+      "sha256": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b",
+      "status": "complete",
+      "evidence": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b-d4ca9fd65131.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SharpKml.dll",
+      "sha256": "4e4687e0545849538ffd5d9971be0512a683848b27864f7aeb988053b483909d",
+      "status": "complete",
+      "evidence": "4e4687e0545849538ffd5d9971be0512a683848b27864f7aeb988053b483909d-6c88ecf66d4c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SixLabors.ImageSharp.dll",
+      "sha256": "0672a08b23b909c336ff6feaf7a0dab22cc57ae709dc6f95b013799b0128c2a7",
+      "status": "complete",
+      "evidence": "0672a08b23b909c336ff6feaf7a0dab22cc57ae709dc6f95b013799b0128c2a7-c8109a4a994d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "sk/ZedGraph.resources.dll",
+      "sha256": "5cd46cbec89cc968656a5ad984bd15c60ebad060df8efabe5661bdfb36e101c0",
+      "status": "complete",
+      "evidence": "5cd46cbec89cc968656a5ad984bd15c60ebad060df8efabe5661bdfb36e101c0-f20477d933dd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.dll",
+      "sha256": "9d329d01e929fb81eaaa451d0909859a85507ea7268f6039156d56ba69fd8d53",
+      "status": "complete",
+      "evidence": "9d329d01e929fb81eaaa451d0909859a85507ea7268f6039156d56ba69fd8d53-210421cf54bf.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.Common.dll",
+      "sha256": "5b0f5714f9e1bb8d0fc8de352512eecfbe55e0474536060fcb15fb4a96eef37f",
+      "status": "complete",
+      "evidence": "5b0f5714f9e1bb8d0fc8de352512eecfbe55e0474536060fcb15fb4a96eef37f-474da5b4e8be.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.dll",
+      "sha256": "dcd6938d8a12d2fbe69585843283cfeee3cc44808307e49569588a21c1af3675",
+      "status": "complete",
+      "evidence": "dcd6938d8a12d2fbe69585843283cfeee3cc44808307e49569588a21c1af3675-f5d462865d08.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.Views.Gtk.dll",
+      "sha256": "e536e972b843365a923bc67bbbac0d0bfab751c67d304c3e976b18d9a72c05dc",
+      "status": "complete",
+      "evidence": "e536e972b843365a923bc67bbbac0d0bfab751c67d304c3e976b18d9a72c05dc-b2e97576280f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.Views.WindowsForms.dll",
+      "sha256": "9e5a55a4be89af4bf581d85b0c40dc0b44afd21f35bce9263d4e609ea34c9ccc",
+      "status": "complete",
+      "evidence": "9e5a55a4be89af4bf581d85b0c40dc0b44afd21f35bce9263d4e609ea34c9ccc-34e22e5a5980.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SkiaSharp.Views.WPF.dll",
+      "sha256": "c5828f134c52d8e3c4ca07408d19ad7336d61971c014581487e2fcaaa274e55a",
+      "status": "complete",
+      "evidence": "c5828f134c52d8e3c4ca07408d19ad7336d61971c014581487e2fcaaa274e55a-2e2a80b1c98d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SocketIOClient.dll",
+      "sha256": "b7d41eb88f72faea3e28d8c3875d1ba3990482a68fb108d24caf3af108f852e7",
+      "status": "complete",
+      "evidence": "b7d41eb88f72faea3e28d8c3875d1ba3990482a68fb108d24caf3af108f852e7-c9825aced31e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "solo.dll",
+      "sha256": "ef7dc3e396d41470d4f0d7725b95941afd45e6381a369185668d78cac8fa7dcc",
+      "status": "complete",
+      "evidence": "ef7dc3e396d41470d4f0d7725b95941afd45e6381a369185668d78cac8fa7dcc-1ffa848fc8e0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SuperSocket.ClientEngine.dll",
+      "sha256": "9863a8ca0fd55fdf1de8d64cb89d034fc009a58220d45c5f4f83c6cdd0c5cbfd",
+      "status": "complete",
+      "evidence": "9863a8ca0fd55fdf1de8d64cb89d034fc009a58220d45c5f4f83c6cdd0c5cbfd-4b7d52b083ba.json",
+      "exit_code": 0
+    },
+    {
+      "path": "sv/ZedGraph.resources.dll",
+      "sha256": "4a161f8805802a5da16569cbb060698b29956bcc7a445c95386b99823b2cbdcf",
+      "status": "complete",
+      "evidence": "4a161f8805802a5da16569cbb060698b29956bcc7a445c95386b99823b2cbdcf-9c791f88258c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "SvgNet.dll",
+      "sha256": "458e85b54b54c800657552638a6d20bb4570a222a7b8a0c018af3a57aab03c7d",
+      "status": "complete",
+      "evidence": "458e85b54b54c800657552638a6d20bb4570a222a7b8a0c018af3a57aab03c7d-3b4c413a2c84.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Buffers.dll",
+      "sha256": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb",
+      "status": "complete",
+      "evidence": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb-9f6277c79a36.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.CodeDom.dll",
+      "sha256": "e8c88b0448083663910587efeacb6a1977749fe3ffe83b263fc01f7b63d7dfd2",
+      "status": "complete",
+      "evidence": "e8c88b0448083663910587efeacb6a1977749fe3ffe83b263fc01f7b63d7dfd2-2b0a9e16cbdc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Collections.Immutable.dll",
+      "sha256": "646d3b52a4898078f46534727bdb06ff23b72523441458b9f49ecc315bf3ef5c",
+      "status": "complete",
+      "evidence": "646d3b52a4898078f46534727bdb06ff23b72523441458b9f49ecc315bf3ef5c-fcf15524aead.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ComponentModel.Annotations.dll",
+      "sha256": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4",
+      "status": "complete",
+      "evidence": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4-47ef5eeecbba.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Configuration.ConfigurationManager.dll",
+      "sha256": "370fa504e5766c703ddef43abddbbe3e373362207a1704d7baa67206c888c51c",
+      "status": "complete",
+      "evidence": "370fa504e5766c703ddef43abddbbe3e373362207a1704d7baa67206c888c51c-82079eef6cb1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Data.OleDb.dll",
+      "sha256": "3dfa99916e6b64f9d4143059d57e0bdfc3cc3218cf65f5a3879d2f5b9835fbca",
+      "status": "complete",
+      "evidence": "3dfa99916e6b64f9d4143059d57e0bdfc3cc3218cf65f5a3879d2f5b9835fbca-0ee85d94c8ce.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Drawing.Common.dll",
+      "sha256": "0b1e23603f49613b623a82a2b04260642ab8b118d138726dda6556bead77b966",
+      "status": "complete",
+      "evidence": "0b1e23603f49613b623a82a2b04260642ab8b118d138726dda6556bead77b966-5b48b1dd17d6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Geometry.dll",
+      "sha256": "4faca517db47fee12381c8c449785e3acd803c5dbb89df6b6d7fc86fc4292bd8",
+      "status": "complete",
+      "evidence": "4faca517db47fee12381c8c449785e3acd803c5dbb89df6b6d7fc86fc4292bd8-9a6d34a3fe25.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Geometry.Text.dll",
+      "sha256": "3313d2bff1e4092ca5fbdc1b6d53b53f8a4194c08f495caf28a1da1505a4b1a2",
+      "status": "complete",
+      "evidence": "3313d2bff1e4092ca5fbdc1b6d53b53f8a4194c08f495caf28a1da1505a4b1a2-8dbe0ca44be4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.IO.Compression.dll",
+      "sha256": "e9c71ebf653159ee260640f152f677b33d30796307803fb5340f522abff17691",
+      "status": "complete",
+      "evidence": "e9c71ebf653159ee260640f152f677b33d30796307803fb5340f522abff17691-bfce40334ad7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.IO.Ports.dll",
+      "sha256": "96d4e1871ac699f6dbc0ecc54e38bead6e52db64c3b43fb7330362b299bff0f4",
+      "status": "complete",
+      "evidence": "96d4e1871ac699f6dbc0ecc54e38bead6e52db64c3b43fb7330362b299bff0f4-d08b4574ef91.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Memory.dll",
+      "sha256": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f",
+      "status": "complete",
+      "evidence": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f-777f3785b9e0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Numerics.Vectors.dll",
+      "sha256": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183",
+      "status": "complete",
+      "evidence": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183-93fb3a32595d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Reactive.Core.dll",
+      "sha256": "b4ff782c1aa2aba5db4a06adb37c3ec2b9c2d7f13861cb73b2617db722b27354",
+      "status": "complete",
+      "evidence": "b4ff782c1aa2aba5db4a06adb37c3ec2b9c2d7f13861cb73b2617db722b27354-bff10114ad10.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Reactive.dll",
+      "sha256": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172",
+      "status": "complete",
+      "evidence": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172-bf70b13c9fd0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Reactive.Linq.dll",
+      "sha256": "32cc235df1bf5e272536f95cd41b216215e1fa6540650a30f5ad9e002fd25a72",
+      "status": "complete",
+      "evidence": "32cc235df1bf5e272536f95cd41b216215e1fa6540650a30f5ad9e002fd25a72-276757d3b6d4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Reflection.Metadata.dll",
+      "sha256": "46451e1168dd11d450aa9b6119f17cec9a70928a40ac3c752abf61ce809cba6f",
+      "status": "complete",
+      "evidence": "46451e1168dd11d450aa9b6119f17cec9a70928a40ac3c752abf61ce809cba6f-45d7f331ebcd.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Resources.Extensions.dll",
+      "sha256": "8d328477d48f1ed9ea795b22e84ace6e983b939c6bb743c14d460c17c8e4ba4e",
+      "status": "complete",
+      "evidence": "8d328477d48f1ed9ea795b22e84ace6e983b939c6bb743c14d460c17c8e4ba4e-0db6ada62a02.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Runtime.CompilerServices.Unsafe.dll",
+      "sha256": "2d6f419d641682d8efc4a40e850d2e85de519d6823b93daf2aeee63206d4e32d",
+      "status": "complete",
+      "evidence": "2d6f419d641682d8efc4a40e850d2e85de519d6823b93daf2aeee63206d4e32d-e2838bca8c49.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Security.AccessControl.dll",
+      "sha256": "aced52254a8c3cb6ad30f99f8b745296926c49373cab00824c2c4c10ad325b10",
+      "status": "complete",
+      "evidence": "aced52254a8c3cb6ad30f99f8b745296926c49373cab00824c2c4c10ad325b10-81aa6bd5d4da.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Security.Permissions.dll",
+      "sha256": "50653deedf757fd1669f54c1cbac2c2d1403d5864b73f63454ac4adc9619d831",
+      "status": "complete",
+      "evidence": "50653deedf757fd1669f54c1cbac2c2d1403d5864b73f63454ac4adc9619d831-9c22c94de1f7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Security.Principal.Windows.dll",
+      "sha256": "c3ae599b5218516915f6542779ef577d5ad5de3d84a116e671c09e15e4591285",
+      "status": "complete",
+      "evidence": "c3ae599b5218516915f6542779ef577d5ad5de3d84a116e671c09e15e4591285-2c8b045d6b80.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ServiceModel.Duplex.dll",
+      "sha256": "6071201eac2294b1b9779c57f61471d486b4b65b029d1cb82f0ed2fc6af73c17",
+      "status": "complete",
+      "evidence": "6071201eac2294b1b9779c57f61471d486b4b65b029d1cb82f0ed2fc6af73c17-4bd600d220ed.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ServiceModel.Http.dll",
+      "sha256": "4d9db4c6bf44373ffac62f5c42f456aa88cd26e857fdd1bfda28ef15277171cf",
+      "status": "complete",
+      "evidence": "4d9db4c6bf44373ffac62f5c42f456aa88cd26e857fdd1bfda28ef15277171cf-17069ba41f38.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ServiceModel.NetTcp.dll",
+      "sha256": "eb874bed139c2e486c9923a39b5c9278707dee9e3906459efc325e76e7a594e2",
+      "status": "complete",
+      "evidence": "eb874bed139c2e486c9923a39b5c9278707dee9e3906459efc325e76e7a594e2-c23244e6bcb0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ServiceModel.Primitives.dll",
+      "sha256": "50cadbf608dc09a77953eaf4a9dd4eb74048a521d6c91509f9dbf8e206b79534",
+      "status": "complete",
+      "evidence": "50cadbf608dc09a77953eaf4a9dd4eb74048a521d6c91509f9dbf8e206b79534-1d081b2cfc12.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ServiceModel.Security.dll",
+      "sha256": "5b04f069c797001ebc5cb5248aa78baae5165a42d3299650ca32083a7d687dee",
+      "status": "complete",
+      "evidence": "5b04f069c797001ebc5cb5248aa78baae5165a42d3299650ca32083a7d687dee-aefc0b5a40fe.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Speech.dll",
+      "sha256": "a84cc9f552f3de369891466659c3a69eb8014114d316c9c15120569f515ff69c",
+      "status": "complete",
+      "evidence": "a84cc9f552f3de369891466659c3a69eb8014114d316c9c15120569f515ff69c-e1ec158723e3.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Text.Encoding.CodePages.dll",
+      "sha256": "93da6a111239a3804da2efd6a6faa92bf5cbfe3b2b079ad3c04be643179f4088",
+      "status": "complete",
+      "evidence": "93da6a111239a3804da2efd6a6faa92bf5cbfe3b2b079ad3c04be643179f4088-718103b9f63f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.Threading.Tasks.Extensions.dll",
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6",
+      "status": "complete",
+      "evidence": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6-2722433c33ff.json",
+      "exit_code": 0
+    },
+    {
+      "path": "System.ValueTuple.dll",
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+      "status": "complete",
+      "evidence": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4-064ac5b625a1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tlogThumbnailHandler.dll",
+      "sha256": "8764d7918098e3be2b05b05bdab2ec023a903700be24d6d0794d03ed642927c1",
+      "status": "complete",
+      "evidence": "8764d7918098e3be2b05b05bdab2ec023a903700be24d6d0794d03ed642927c1-9dc6f9eeff8f.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "723a7ab2e7b204c06d4c5b7a8a39155343358cbf2abf9dfa8b42681136f5ca4b",
+      "status": "complete",
+      "evidence": "723a7ab2e7b204c06d4c5b7a8a39155343358cbf2abf9dfa8b42681136f5ca4b-1fff52a0d85a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "0f0629546bf2130a53393bdd3aa98e61c742ac8463858c31881e90414381a52c",
+      "status": "complete",
+      "evidence": "0f0629546bf2130a53393bdd3aa98e61c742ac8463858c31881e90414381a52c-1f19989d2183.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tr/MissionPlanner.resources.dll",
+      "sha256": "3dc759f06bfa1e4d8ed2d6602988c50819435289fb026b360092e6d115055690",
+      "status": "complete",
+      "evidence": "3dc759f06bfa1e4d8ed2d6602988c50819435289fb026b360092e6d115055690-c787536c5941.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tr/MissionPlanner.Strings.resources.dll",
+      "sha256": "219f3fb65d8e1e289bc2e4fe51d87d67bccb6664a51e84cab9fcb52baa3aa0e5",
+      "status": "complete",
+      "evidence": "219f3fb65d8e1e289bc2e4fe51d87d67bccb6664a51e84cab9fcb52baa3aa0e5-c9f9a70c913b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "tr/ZedGraph.resources.dll",
+      "sha256": "40a2b09551b7c83780fda95426009472d504f10e3dd3f06ad7f12f52b709b1cc",
+      "status": "complete",
+      "evidence": "40a2b09551b7c83780fda95426009472d504f10e3dd3f06ad7f12f52b709b1cc-39c652ab5769.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Transitions.dll",
+      "sha256": "6fdf5524bfb3115fbd4de12b6dfedcf5eea79b97f3ba7c3fcf4151551a282e27",
+      "status": "complete",
+      "evidence": "6fdf5524bfb3115fbd4de12b6dfedcf5eea79b97f3ba7c3fcf4151551a282e27-ac8b2be82a97.json",
+      "exit_code": 0
+    },
+    {
+      "path": "uk/MissionPlanner.resources.dll",
+      "sha256": "6eb8c534c537c7e126b6d4c76935fe552c6b2f1e5637b7aeafc65868b3a1c29b",
+      "status": "complete",
+      "evidence": "6eb8c534c537c7e126b6d4c76935fe552c6b2f1e5637b7aeafc65868b3a1c29b-9d47b9f0f6dc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "uk/MissionPlanner.Strings.resources.dll",
+      "sha256": "eee1f29ce0fc9939467158c54d2e10354b53dc979656c5018ab47f8b2d1e21cb",
+      "status": "complete",
+      "evidence": "eee1f29ce0fc9939467158c54d2e10354b53dc979656c5018ab47f8b2d1e21cb-7be7a26c992b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Updater.exe",
+      "sha256": "191cb00b3d3aeada878089cbe05d188f6785ffef6b384f2a686a6e788f0e9056",
+      "status": "complete",
+      "evidence": "191cb00b3d3aeada878089cbe05d188f6785ffef6b384f2a686a6e788f0e9056-af82256f3e09.json",
+      "exit_code": 0
+    },
+    {
+      "path": "version.exe",
+      "sha256": "3577923f32cd98a3f553319ce4dfad1f7b17fe6ecaa1feaf8d2e4507b57d40b9",
+      "status": "complete",
+      "evidence": "3577923f32cd98a3f553319ce4dfad1f7b17fe6ecaa1feaf8d2e4507b57d40b9-9aea8746d500.json",
+      "exit_code": 0
+    },
+    {
+      "path": "WebCamService.dll",
+      "sha256": "46dcb01fcf061a9bc84f1228e69cd9a9245994ffc001f0b8744fecae534eeb29",
+      "status": "complete",
+      "evidence": "46dcb01fcf061a9bc84f1228e69cd9a9245994ffc001f0b8744fecae534eeb29-715c17651b2d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "WebSocket4Net.dll",
+      "sha256": "bbaf622cc3f4b512c6c131ab7ccad2db6b0662c03367afc10f1aab3deff5efcb",
+      "status": "complete",
+      "evidence": "bbaf622cc3f4b512c6c131ab7ccad2db6b0662c03367afc10f1aab3deff5efcb-e790af94968e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Xamarin.Essentials.dll",
+      "sha256": "62148ef21a1cfc093a7987d598218b2b88f622af902343e91688a768d55326f8",
+      "status": "complete",
+      "evidence": "62148ef21a1cfc093a7987d598218b2b88f622af902343e91688a768d55326f8-715cd91f9a18.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Xamarin.Forms.Core.dll",
+      "sha256": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47",
+      "status": "complete",
+      "evidence": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47-51a87fbcee9d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Xamarin.Forms.Platform.dll",
+      "sha256": "ee361236c5240e2889d907077a0806df1714ef7fbd5ce4ef7fced7e3e650e2f4",
+      "status": "complete",
+      "evidence": "ee361236c5240e2889d907077a0806df1714ef7fbd5ce4ef7fced7e3e650e2f4-80148db99c84.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Xamarin.Forms.Platform.WinForms.dll",
+      "sha256": "3405d211dae27ca83051a68bba4bcca97920a46d57287c6a26d943eb273ea896",
+      "status": "complete",
+      "evidence": "3405d211dae27ca83051a68bba4bcca97920a46d57287c6a26d943eb273ea896-62b8084d361a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Xamarin.Forms.Xaml.dll",
+      "sha256": "8a92f612f553ce950132a1ec073719767be2b3e0e5296cb0d823b93f7fcbcefa",
+      "status": "complete",
+      "evidence": "8a92f612f553ce950132a1ec073719767be2b3e0e5296cb0d823b93f7fcbcefa-f49da238127b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "ZedGraph.dll",
+      "sha256": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5",
+      "status": "complete",
+      "evidence": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5-961be3922bd7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Zeroconf.dll",
+      "sha256": "57f59d5627e8a0868311f657eaf6bb9561276f4be0b19b7ea53e0e806e0502af",
+      "status": "complete",
+      "evidence": "57f59d5627e8a0868311f657eaf6bb9561276f4be0b19b7ea53e0e806e0502af-63c4ef2b80df.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-cn/MissionPlanner.resources.dll",
+      "sha256": "03f1084da43a574e2d0a7edc82cb4132dea214ae14d66c49bbae59a061256d96",
+      "status": "complete",
+      "evidence": "03f1084da43a574e2d0a7edc82cb4132dea214ae14d66c49bbae59a061256d96-55484a62696b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-cn/ZedGraph.resources.dll",
+      "sha256": "dea0d230b808cbb695ca4ce8fea6834f18acff47e028f4942873caa427e3af76",
+      "status": "complete",
+      "evidence": "dea0d230b808cbb695ca4ce8fea6834f18acff47e028f4942873caa427e3af76-2897669e24de.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/GMap.NET.Core.resources.dll",
+      "sha256": "92ce09b1805e05cd454f8da7d5998030fc9c8bc6d9446b5a7a987a344339d87b",
+      "status": "complete",
+      "evidence": "92ce09b1805e05cd454f8da7d5998030fc9c8bc6d9446b5a7a987a344339d87b-7d9b93fc7209.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "6a7f287826260478b24cd2c1a6b93b682e99e1b9f036f18299996dfd4450d05f",
+      "status": "complete",
+      "evidence": "6a7f287826260478b24cd2c1a6b93b682e99e1b9f036f18299996dfd4450d05f-ceb824875762.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d5d653fbac1bb7aa95dbe6e98d432aa0ba82ebc3d4c76c97d57f84d052041599",
+      "status": "complete",
+      "evidence": "d5d653fbac1bb7aa95dbe6e98d432aa0ba82ebc3d4c76c97d57f84d052041599-7d99018221ab.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Controls.resources.dll",
+      "sha256": "ad3f29e6f4907c240ae586bdac5035b27b51ac8e8e1791f200a35427483040f5",
+      "status": "complete",
+      "evidence": "ad3f29e6f4907c240ae586bdac5035b27b51ac8e8e1791f200a35427483040f5-fc516e90ebb1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.resources.dll",
+      "sha256": "fb0dcbbaac3188fb247c1abadd9328894f6527cfb598c3a75e26c5a00027e9f1",
+      "status": "complete",
+      "evidence": "fb0dcbbaac3188fb247c1abadd9328894f6527cfb598c3a75e26c5a00027e9f1-3bbb319ef247.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Strings.resources.dll",
+      "sha256": "1f5218244520f8166ddfe4c059cdd9bbb8b06d20b8521678f6c7821b93fe4f5b",
+      "status": "complete",
+      "evidence": "1f5218244520f8166ddfe4c059cdd9bbb8b06d20b8521678f6c7821b93fe4f5b-07f95f968fa2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "f9e4534149a8421c7efe9ee3406fc645f940de25da78047cc6915a7d521acddb",
+      "status": "complete",
+      "evidence": "f9e4534149a8421c7efe9ee3406fc645f940de25da78047cc6915a7d521acddb-017be99aa7cb.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "5997803e4a28b8fd2a72d3cf213632d8cac2130156b1ed536aab7383b432af5c",
+      "status": "complete",
+      "evidence": "5997803e4a28b8fd2a72d3cf213632d8cac2130156b1ed536aab7383b432af5c-d9dc4b0b87e0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-Hant/MissionPlanner.resources.dll",
+      "sha256": "ba67ca2dd02f4d18bc6db6401a5ab362e1b21088f5a1f133ac03056abbd6f121",
+      "status": "complete",
+      "evidence": "ba67ca2dd02f4d18bc6db6401a5ab362e1b21088f5a1f133ac03056abbd6f121-f686d6250d28.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-tw/MissionPlanner.resources.dll",
+      "sha256": "623581707bcc43a582fff314ab7b459f29e66546d0bd675224dbcef5224e725a",
+      "status": "complete",
+      "evidence": "623581707bcc43a582fff314ab7b459f29e66546d0bd675224dbcef5224e725a-167e54b0ff32.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zh-tw/ZedGraph.resources.dll",
+      "sha256": "786dfeffaf91ff2176e230d2dcf33379f662e5050e4fb16b85ee897bb203ad1e",
+      "status": "complete",
+      "evidence": "786dfeffaf91ff2176e230d2dcf33379f662e5050e4fb16b85ee897bb203ad1e-60caf00370ef.json",
+      "exit_code": 0
+    },
+    {
+      "path": "zlib.net.dll",
+      "sha256": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a",
+      "status": "complete",
+      "evidence": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a-a02871a286c6.json",
+      "exit_code": 0
+    }
+  ]
+}

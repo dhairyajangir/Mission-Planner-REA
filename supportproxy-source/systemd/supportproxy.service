@@ -1,0 +1,34 @@
+[Unit]
+Description=SupportProxy MAVLink proxy daemon
+Documentation=https://github.com/ArduPilot/SupportProxy
+After=network-online.target
+Wants=network-online.target
+# Bail out of the restart loop if the binary is genuinely broken:
+# 5 restarts within 60 s puts the unit into failed state for an
+# operator to investigate (journalctl -u supportproxy will show
+# why). Resume with `systemctl reset-failed supportproxy &&
+# systemctl start supportproxy` once fixed.
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=support
+Group=support
+WorkingDirectory=/home/support/proxy
+ExecStart=/home/support/SupportProxy/supportproxy
+# Respawn on any exit except a deliberate `systemctl stop/restart` —
+# this matches the cron model of "if pidof shows nothing, launch
+# it" and covers crashes (SIGSEGV / SIGABRT / OOM-kill) as well as
+# an accidental external pkill.
+Restart=always
+RestartSec=5s
+# The daemon's printf output is the activity log; mirror it to the
+# legacy proxy.log path so existing tail-and-grep habits still work.
+# Append-mode is safe across restarts; systemd opens the file each
+# launch.
+StandardOutput=append:/home/support/proxy/proxy.log
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target

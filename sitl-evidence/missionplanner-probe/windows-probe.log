@@ -1,0 +1,43 @@
+108 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+134 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+136 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1043 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+137 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1098 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+144 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+151 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+160 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+162 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+162 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+163 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP6160 0
+165 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 6160
+169 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+170 [3] INFO MissionPlanner.MAVLinkInterface (null) - 532 Start connect loop 
+192 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+199 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 6160
+200 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+201 [3] ERROR MissionPlanner.MAVLinkInterface (null) - System.IO.FileLoadException: Could not load file or assembly 'System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+   at MissionPlanner.MAVLinkInterface.generatePacket(Int32 messageType, Object indata, Int32 sysid, Int32 compid, Boolean forcemavlink2, Boolean forcesigning)
+   at MissionPlanner.MAVLinkInterface.sendPacket(Object indata, Int32 sysid, Int32 compid)
+   at MissionPlanner.MAVLinkInterface.<getHeartBeatAsync>d__162.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Extensions.<>c__DisplayClass1_0`1.<<AwaitSync>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Extensions.AwaitSync[T](Task`1 infunc)
+   at MissionPlanner.MAVLinkInterface.OpenBg(IProgressReporterDialogue PRsender, Boolean getparams)
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+OPEN=False
+SYSTEM=0 COMPONENT=0

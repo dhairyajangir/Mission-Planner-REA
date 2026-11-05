@@ -1,0 +1,35 @@
+{
+  "assembly_sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+  "requested_names": [
+    "Accord.Math.VectorType",
+    "Accord.Math.Elementwise"
+  ],
+  "batches": [
+    {
+      "names": [
+        "Accord.Math.VectorType"
+      ],
+      "status": "complete",
+      "evidence": "529d3b1614e982ed.json.gz",
+      "types": 1,
+      "methods": 0
+    },
+    {
+      "names": [
+        "Accord.Math.Elementwise"
+      ],
+      "status": "partial",
+      "reason": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      }
+    }
+  ]
+}

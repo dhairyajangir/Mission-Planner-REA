@@ -1,0 +1,269 @@
+"""Admin routes: list all entries, edit any, add, delete.
+
+Last-admin guard: an admin cannot revoke the FLAG_ADMIN bit on the only
+remaining admin entry, nor delete it. Both checks happen inside the same
+TDB transaction as the mutation so a concurrent grant/revoke can't slip
+through.
+"""
+from flask import (Blueprint, abort, flash, redirect, render_template, request,
+                   session, url_for)
+
+import keydb_lib
+
+from . import connections as conn_db
+from .auth import is_admin, require_admin
+from .db import tdb_readonly, tdb_transaction
+from .forms import AdminAddForm, AdminEditForm, DeleteForm, KillForm
+from . import videoform
+
+bp = Blueprint('admin', __name__, url_prefix='/admin')
+
+
+@bp.route('/', methods=['GET'])
+@require_admin
+def list_entries():
+    with tdb_readonly() as db:
+        entries = keydb_lib.list_entries(db)
+    add_form = AdminAddForm()
+    return render_template('admin_list.html', entries=entries, add_form=add_form)
+
+
+@bp.route('/connections', methods=['GET'])
+@require_admin
+def connections():
+    """Live connections across all entries.
+
+    Joins connections.tdb with keys.tdb so we can render the entry
+    name alongside each connection. Auto-refreshes via meta http-equiv
+    in the template — the proxy heartbeat is 5s.
+    """
+    active = conn_db.list_active()
+    with tdb_readonly() as db:
+        names = {e.port2: e.name for e in keydb_lib.list_entries(db)}
+        port1s = {e.port2: e.port1 for e in keydb_lib.list_entries(db)}
+    return render_template('admin_connections.html',
+                           active=active, names=names, port1s=port1s,
+                           kill_form=KillForm())
+
+
+@bp.route('/<int:port2>/kill/<int:conn_index>', methods=['POST'])
+@require_admin
+def kill_connection(port2, conn_index):
+    """Drop a single connection (port2, conn_index).
+
+    conn_index 0 is the user side; dropping it ends the whole session.
+    conn_index >= 1 closes just that engineer slot.
+    """
+    form = KillForm()
+    if not form.validate_on_submit():
+        abort(400)
+    if conn_db.request_drop(port2, conn_index):
+        flash('Drop requested for port2=%d/conn=%d.' % (port2, conn_index),
+              'success')
+    else:
+        flash('Connection (port2=%d, conn=%d) not found or already gone.'
+              % (port2, conn_index), 'error')
+    return redirect(url_for('admin.connections'))
+
+
+def _build_partner_text(plan, passphrase):
+    """Plain-text blurb the admin pastes back to the partner. `plan`
+    is a list of (port1, port2, name) tuples. Adapted from the old
+    add_partner.sh wording for the web-UI world. Lines are kept short
+    (<= ~50 cols) so the read-only textarea that shows it doesn't need
+    much horizontal scrolling."""
+    n = len(plan)
+    lines = []
+    lines.append('Created %d SupportProxy connection%s for you:'
+                 % (n, '' if n == 1 else 's'))
+    lines.append('')
+    for idx, (p1, p2, nm) in enumerate(plan, start=1):
+        lines.append('  connection %d (%s):' % (idx, nm))
+        lines.append('    user port:             %d' % p1)
+        lines.append('    support engineer port: %d' % p2)
+        lines.append('    passphrase:            %s' % passphrase)
+        lines.append('')
+    lines.append('Change the passphrase by logging in at')
+    lines.append('https://support.ardupilot.org/dashboard')
+    lines.append('with your user port (or support engineer port)')
+    lines.append('and the passphrase above.')
+    lines.append('')
+    lines.append('Do not give the passphrase to your end users — it')
+    lines.append('is only for your support engineers. End users')
+    lines.append('connect to the user port without it.')
+    return '\n'.join(lines)
+
+
+@bp.route('/add', methods=['POST'])
+@require_admin
+def add_entry():
+    form = AdminAddForm()
+    if not form.validate_on_submit():
+        flash('Add failed: ' + '; '.join(
+            '%s: %s' % (k, ', '.join(v)) for k, v in form.errors.items()),
+            'error')
+        return redirect(url_for('admin.list_entries'))
+
+    count = form.count.data or 1
+    base_p1 = form.port1.data
+    name = form.name.data
+    passphrase = form.passphrase.data
+
+    # Build the (port1, port2, name) plan.
+    if count == 1:
+        plan = [(base_p1, form.port2.data, name)]
+    else:
+        # Consecutive: port1 = base + i, port2 = port1 + 1000,
+        # name = "<name><i+1>" — exactly what add_partner.sh did.
+        plan = [(base_p1 + i, base_p1 + i + 1000, '%s%d' % (name, i + 1))
+                for i in range(count)]
+
+    # Range-check the whole batch up front so a partial create can't
+    # happen because entry N tripped the validator.
+    for p1, p2, _ in plan:
+        for p in (p1, p2):
+            if not (10000 <= p <= 60000):
+                flash('Add failed: derived port %d is outside the allowed '
+                      'range 10000–60000' % p, 'error')
+                return redirect(url_for('admin.list_entries'))
+
+    # Create them all in one transaction — tdb_transaction cancels on
+    # exception, so a conflict on any entry rolls the whole batch back.
+    try:
+        with tdb_transaction() as db:
+            for p1, p2, nm in plan:
+                keydb_lib.add_entry(db, p1, p2, nm, passphrase)
+    except keydb_lib.CLIError as e:
+        flash('Add failed (no entries created): ' + str(e), 'error')
+        return redirect(url_for('admin.list_entries'))
+
+    n = len(plan)
+    flash(_build_partner_text(plan, passphrase), 'partner_text')
+    flash('Added %d entr%s.' % (n, 'y' if n == 1 else 'ies'), 'success')
+    return redirect(url_for('admin.list_entries'))
+
+
+@bp.route('/<int:port2>', methods=['GET', 'POST'])
+@require_admin
+def edit(port2):
+    form = AdminEditForm()
+    delete_form = DeleteForm()
+
+    if request.method == 'POST' and form.validate_on_submit():
+        with tdb_transaction() as db:
+            ke = keydb_lib.KeyEntry(port2)
+            if not ke.fetch(db):
+                abort(404)
+
+            # last-admin guard: if we're about to clear FLAG_ADMIN on the
+            # only admin, refuse — count admins inside the same transaction
+            currently_admin = ke.is_admin()
+            making_non_admin = currently_admin and not form.is_admin.data
+            if making_non_admin and keydb_lib.count_admins(db) <= 1:
+                flash('Refusing to revoke admin from the last admin.', 'error')
+                return redirect(url_for('admin.edit', port2=port2))
+
+            ke.name = form.name.data or ''
+            if form.port1.data != ke.port1:
+                # New port1 must not collide with any port any other entry
+                # binds -- port1, port2 or a video port.
+                used = keydb_lib.ports_in_use(db, exclude_port2=port2)
+                if form.port1.data in used or form.port1.data == ke.port2:
+                    flash('port1 %d is already in use.' % form.port1.data,
+                          'error')
+                    return redirect(url_for('admin.edit', port2=port2))
+                ke.port1 = form.port1.data
+            if form.new_passphrase.data:
+                ke.set_passphrase(form.new_passphrase.data)
+            if form.is_admin.data:
+                ke.flags |= keydb_lib.FLAG_ADMIN
+            else:
+                ke.flags &= ~keydb_lib.FLAG_ADMIN
+            if form.bidi_sign.data:
+                ke.flags |= keydb_lib.FLAG_BIDI_SIGN
+            else:
+                ke.flags &= ~keydb_lib.FLAG_BIDI_SIGN
+            was_tlog   = bool(ke.flags & keydb_lib.FLAG_TLOG)
+            was_binlog = bool(ke.flags & keydb_lib.FLAG_BINLOG)
+            if form.tlog_enabled.data:
+                ke.flags |= keydb_lib.FLAG_TLOG
+            else:
+                ke.flags &= ~keydb_lib.FLAG_TLOG
+            if form.binlog_enabled.data:
+                ke.flags |= keydb_lib.FLAG_BINLOG
+            else:
+                ke.flags &= ~keydb_lib.FLAG_BINLOG
+            if form.log_retention_days.data is not None:
+                ke.log_retention_days = float(form.log_retention_days.data)
+            ke.set_log_access(form.log_access.data)
+            # First-enable default for either recording flag.
+            just_enabled = ((form.tlog_enabled.data and not was_tlog)
+                            or (form.binlog_enabled.data and not was_binlog))
+            if (just_enabled
+                    and ke.log_retention_days == 0.0
+                    and (form.log_retention_days.data is None
+                         or form.log_retention_days.data == 0.0)):
+                ke.log_retention_days = keydb_lib.DEFAULT_LOG_RETENTION_DAYS
+            if form.fc_sysid.data is not None:
+                ke.fc_sysid = int(form.fc_sysid.data)
+            if form.tz_offset_hours.data is not None:
+                ke.tz_offset_hours = float(form.tz_offset_hours.data)
+            if form.use_tz.data:
+                ke.flags |= keydb_lib.FLAG_USE_TZ
+            else:
+                ke.flags &= ~keydb_lib.FLAG_USE_TZ
+            if form.reset_timestamp.data:
+                ke.timestamp = 0
+            err = videoform.apply(form, ke, db)
+            if err:
+                flash(err, 'error')
+                return redirect(url_for('admin.edit', port2=port2))
+            ke.store(db)
+
+            # if the admin just demoted themselves, drop their session role
+            if making_non_admin and session.get('owner') == port2:
+                session['is_admin'] = False
+        flash('Saved.', 'success')
+        return redirect(url_for('admin.edit', port2=port2))
+
+    with tdb_readonly() as db:
+        ke = keydb_lib.KeyEntry(port2)
+        if not ke.fetch(db):
+            abort(404)
+        form.name.data = ke.name
+        form.port1.data = ke.port1
+        form.is_admin.data = ke.is_admin()
+        form.bidi_sign.data = bool(ke.flags & keydb_lib.FLAG_BIDI_SIGN)
+        form.tlog_enabled.data = bool(ke.flags & keydb_lib.FLAG_TLOG)
+        form.binlog_enabled.data = bool(ke.flags & keydb_lib.FLAG_BINLOG)
+        form.log_retention_days.data = ke.log_retention_days
+        form.log_access.data = ke.log_access()
+        form.fc_sysid.data = ke.fc_sysid
+        form.tz_offset_hours.data = ke.tz_offset_hours
+        form.use_tz.data = bool(ke.flags & keydb_lib.FLAG_USE_TZ)
+        videoform.populate(form, ke, db)
+    return render_template('admin_edit.html', form=form, entry=ke,
+                           delete_form=delete_form)
+
+
+@bp.route('/<int:port2>/delete', methods=['POST'])
+@require_admin
+def delete(port2):
+    form = DeleteForm()
+    if not form.validate_on_submit():
+        abort(400)
+    with tdb_transaction() as db:
+        ke = keydb_lib.KeyEntry(port2)
+        if not ke.fetch(db):
+            abort(404)
+        if ke.is_admin() and keydb_lib.count_admins(db) <= 1:
+            flash('Refusing to delete the last admin entry.', 'error')
+            return redirect(url_for('admin.edit', port2=port2))
+        ke.remove(db)
+        # if the admin just deleted their own entry, clear their session
+        if session.get('owner') == port2:
+            session.clear()
+    flash('Deleted entry %d.' % port2, 'success')
+    if session.get('owner') is None:
+        return redirect(url_for('auth.login'))
+    return redirect(url_for('admin.list_entries'))

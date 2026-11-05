@@ -1,0 +1,45 @@
+{
+  "scope": "Disposable source-built Copter SITL; relay alters one ACK target and recalculates checksum",
+  "case": "retarget",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7070,
+  "proxy_port": 7071,
+  "requests": [
+    {
+      "confirmation": 0,
+      "target": [
+        1,
+        1
+      ]
+    }
+  ],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "original_ack": {
+    "source": [
+      1,
+      1
+    ],
+    "target": [
+      255,
+      190
+    ],
+    "result": 0
+  },
+  "retargeted_acks": 1,
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "modified_ack.bin": "0a4000982cf2f1bc34840679ab125b504c5965114ea50f0863a509e81bed6c17",
+    "original_ack.bin": "ad5087d5c216fa51f7c405892852886d3b0e876275e569f7f8a9ab87927dbfb2",
+    "to_client_input.bin": "4fce939e9d5a75ddad8ddbc7617203f75d1cbcbf53d576129265a2525e8378da",
+    "to_client_output.bin": "e5446f9337cf83a820328de2ac823b4b452a5ea28ec181bff883304943d97444",
+    "to_sitl_input.bin": "763d09b68cf5bad7a74d76548ed35621498c5a1d44257413112de67d7e9dd1fe",
+    "to_sitl_output.bin": "763d09b68cf5bad7a74d76548ed35621498c5a1d44257413112de67d7e9dd1fe"
+  }
+}

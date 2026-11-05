@@ -1,0 +1,316 @@
+{
+  "scope": "REA static records for distributed Utilities; runtime terrain test uses patched Utilities",
+  "assembly_sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+  "index_sha256": "81e26a1f6c5271a3e3041777fb5fb2b3e9e4251a79e7fefc357da27a0cbea50e",
+  "methods": [
+    {
+      "declaring_type": "MissionPlanner.Utilities.TerrainFollow",
+      "name": "_interface_OnPacketReceived",
+      "il_sha256": "14bdea2747ff6d4a69e4a15271224c88ff3db9370397976ab91452ad80139cdb",
+      "body_status": "present",
+      "token": "0x06000715",
+      "calls": [
+        {
+          "il_offset": 1,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 14,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 28,
+          "opcode": "call",
+          "name": "ReceivedPacket",
+          "type": "MissionPlanner.Utilities.TerrainFollow"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Utilities.TerrainFollow",
+      "name": "ReceivedPacket",
+      "il_sha256": "42fd6abe3fddb8a1bf6bc3a802ce5c3144309b0d233258a2469fd5132dbce2d3",
+      "body_status": "present",
+      "token": "0x06000718",
+      "calls": [
+        {
+          "il_offset": 1,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 17,
+          "opcode": "callvirt",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 88,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Double"
+        },
+        {
+          "il_offset": 124,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Double"
+        },
+        {
+          "il_offset": 147,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.UInt16"
+        },
+        {
+          "il_offset": 170,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Convert"
+        },
+        {
+          "il_offset": 176,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 181,
+          "opcode": "callvirt",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 191,
+          "opcode": "callvirt",
+          "name": "Reset",
+          "type": "System.Threading.EventWaitHandle"
+        },
+        {
+          "il_offset": 198,
+          "opcode": "ldftn",
+          "name": "QueueSendGrid",
+          "type": "MissionPlanner.Utilities.TerrainFollow"
+        },
+        {
+          "il_offset": 204,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.Threading.WaitCallback"
+        },
+        {
+          "il_offset": 209,
+          "opcode": "call",
+          "name": "QueueUserWorkItem",
+          "type": "System.Threading.ThreadPool"
+        },
+        {
+          "il_offset": 220,
+          "opcode": "callvirt",
+          "name": "WaitOne",
+          "type": "System.Threading.WaitHandle"
+        },
+        {
+          "il_offset": 229,
+          "opcode": "callvirt",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 242,
+          "opcode": "callvirt",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Utilities.TerrainFollow",
+      "name": "QueueSendGrid",
+      "il_sha256": "a0deff628f0ab86143676cebb91ab409b4ddd209b3d1b565b742fcbdf9bdce44",
+      "body_status": "present",
+      "token": "0x06000719",
+      "calls": [
+        {
+          "il_offset": 12,
+          "opcode": "callvirt",
+          "name": "Set",
+          "type": "System.Threading.EventWaitHandle"
+        },
+        {
+          "il_offset": 113,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 137,
+          "opcode": "call",
+          "name": "Floor",
+          "type": "System.Math"
+        },
+        {
+          "il_offset": 145,
+          "opcode": "call",
+          "name": "gps_offset",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 155,
+          "opcode": "callvirt",
+          "name": "get_Lat",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 162,
+          "opcode": "callvirt",
+          "name": "get_Lng",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 179,
+          "opcode": "call",
+          "name": "SendGrid",
+          "type": "MissionPlanner.Utilities.TerrainFollow"
+        },
+        {
+          "il_offset": 186,
+          "opcode": "call",
+          "name": "Sleep",
+          "type": "System.Threading.Thread"
+        },
+        {
+          "il_offset": 215,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Utilities.TerrainFollow",
+      "name": "SendGrid",
+      "il_sha256": "75d2c2794fba623c0a56cb05d08ba2287bcf6d166f31a057085ef653ea179502",
+      "body_status": "present",
+      "token": "0x0600071a",
+      "calls": [
+        {
+          "il_offset": 23,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Double"
+        },
+        {
+          "il_offset": 41,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Double"
+        },
+        {
+          "il_offset": 59,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.UInt16"
+        },
+        {
+          "il_offset": 77,
+          "opcode": "call",
+          "name": "ToString",
+          "type": "System.Byte"
+        },
+        {
+          "il_offset": 83,
+          "opcode": "call",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 88,
+          "opcode": "callvirt",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 182,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 195,
+          "opcode": "call",
+          "name": "gps_offset",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 204,
+          "opcode": "callvirt",
+          "name": "get_Lat",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 211,
+          "opcode": "callvirt",
+          "name": "get_Lng",
+          "type": "MissionPlanner.Utilities.PointLatLngAlt"
+        },
+        {
+          "il_offset": 225,
+          "opcode": "call",
+          "name": "getAltitude",
+          "type": "MissionPlanner.Utilities.srtm"
+        },
+        {
+          "il_offset": 286,
+          "opcode": "callvirt",
+          "name": "get_sysid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 297,
+          "opcode": "callvirt",
+          "name": "get_compid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 302,
+          "opcode": "callvirt",
+          "name": "sendPacket",
+          "type": "MissionPlanner.Utilities.IMAVLinkInterface"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Utilities.TerrainFollow",
+      "name": "checkTerrain",
+      "il_sha256": "c45d91c369b643cbfe342dd77b1fed1622767674c9f9156635c0018502858fc4",
+      "body_status": "present",
+      "token": "0x0600071b",
+      "calls": [
+        {
+          "il_offset": 64,
+          "opcode": "callvirt",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.Utilities.IMAVLinkInterface"
+        },
+        {
+          "il_offset": 75,
+          "opcode": "callvirt",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.Utilities.IMAVLinkInterface"
+        },
+        {
+          "il_offset": 80,
+          "opcode": "callvirt",
+          "name": "sendPacket",
+          "type": "MissionPlanner.Utilities.IMAVLinkInterface"
+        }
+      ]
+    }
+  ]
+}

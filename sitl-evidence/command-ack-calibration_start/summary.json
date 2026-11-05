@@ -1,0 +1,540 @@
+{
+  "scope": "Original Mission Planner library; disarmed source-built Copter SITL; calibration not completed",
+  "relay": {
+    "scope": "Disposable disarmed Copter SITL; accelerometer calibration start; no deliberate packet loss",
+    "case": "calibration_start",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7230,
+    "proxy_port": 7231,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 176,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "4df98155fe19c8bd085f364b5df3d97571f25792547088a5c4d404f17075f672",
+      "to_client_output.bin": "4df98155fe19c8bd085f364b5df3d97571f25792547088a5c4d404f17075f672",
+      "to_sitl_input.bin": "4cfae3397308b9a03a1e1c9a80786cef32bda0f72239bb3bcc78a4f65d38a322",
+      "to_sitl_output.bin": "4cfae3397308b9a03a1e1c9a80786cef32bda0f72239bb3bcc78a4f65d38a322"
+    }
+  },
+  "library_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "start": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "acknowledgements": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "position_requests": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 0,
+      "target_component": 0,
+      "command": 42429,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 176
+  },
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "INITIAL_ARMED=False",
+    "PREFLIGHT_CALIBRATION_RETURN=True",
+    "POSITION_REQUEST=1",
+    "POSITION_REQUEST_COUNT=12"
+  ]
+}

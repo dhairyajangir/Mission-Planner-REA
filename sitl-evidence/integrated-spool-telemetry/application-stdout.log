@@ -1,0 +1,1049 @@
+If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 
+
+
+Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe
+To fix any filename case issues under mono use    export MONO_IOMAP=drive:case
+for pinvoke      MONO_LOG_LEVEL=debug MONO_LOG_MASK=dll mono MissionPlanner.exe
+watch -n 1 ls -l /proc/$(pidof mono)/fd
+watch -n 1 lsof -p $(pidof mono)
+Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+Log Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs
+Running Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\
+User Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+PlacesRecentDocuments Dir 
+PlacesDesktop Dir C:\Users\think\OneDrive\Desktop
+PlacesPersonal Dir C:\Users\think\OneDrive\Documents
+PlacesMyComputer Dir 
+INFO MissionPlanner.Program - ******************* Logging Configured *******************
+INFO MissionPlanner.Program - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\x64\libSkiaSharp
+INFO MissionPlanner.Program - SkiaLoaded
+4.0.0.0
+Splash .ctor
+IconFile
+Splash.Show()
+Debugger.IsAttached False
+Application.DoEvents
+Application.DoEvents
+Setup GMaps 1
+Setup GMaps 2
+Setup GoogleMapProvider API
+Setup Tracking.productName
+Setup Tracking.primaryScreenBitsPerPixel
+Setup Settings.Instance.UserAgent
+Setup check gdal dir
+Setup gdal
+INFO GDAL.GDAL - GDAL static ctor
+INFO GDAL.GDAL - GDAL static ctor - SpatialReference
+Setup proxy
+Setup proxy
+Setup CleanupFiles
+INFO MissionPlanner.Program - 64bit os True, 64bit process True, OS Arch X64, OS Desc Microsoft Windows 10.0.26300 , FW Desc .NET Framework 4.8.10008.0
+INFO MissionPlanner.Program - Runtime Version v4.0.30319
+Application.Run(new MainV2())
+INFO MissionPlanner.MainV2 - Mainv2 ctor
+INFO MissionPlanner.MainV2 - Loading config
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1125 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:669:13
+ adsb_UpdatePlanePosition MainV2 System.EventHandler`1[MissionPlanner.Utilities.adsb+PointLatLngAltHdg]
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1178 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:681:13
+ <.ctor>b__106_0 MainV2 System.EventHandler`1[System.ValueTuple`2[System.String,MAVLink+MAV_COLLISION_THREAT_LEVEL]]
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+BurntKermit.mpsystheme theme is loading
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+INFO MissionPlanner.Utilities.srtm - .cctor
+INFO MissionPlanner.Utilities.srtm - requestRunner start
+INFO MissionPlanner.Utilities.srtm - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\srtm
+INFO MissionPlanner.Utilities.Speech - TTS: init, mono = False
+INFO MissionPlanner.MainV2 - Create FD
+INFO MissionPlanner.GCSViews.FlightData - Ctor Start
+INFO MissionPlanner.Controls.HUD - Static HUD ctor
+INFO MissionPlanner.Controls.HUD - Instance HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+Using backup param data
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.GCSViews.FlightData - Components Done
+INFO MissionPlanner.GCSViews.FlightData - Tunning Graph Settings
+INFO MissionPlanner.GCSViews.FlightData - HUD Settings
+INFO MissionPlanner.GCSViews.FlightData - Graph Setup
+INFO MissionPlanner.GCSViews.FlightData - Map Setup
+INFO MissionPlanner.MainV2 - Create FP
+INFO MissionPlanner.GCSViews.FlightPlanner - Loading wp params
+INFO MissionPlanner.GCSViews.FlightPlanner - param WP_RADIUS 30
+INFO MissionPlanner.GCSViews.FlightPlanner - param LOITER_RADIUS 45
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 55 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 55 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - updateMapType invoke req? False
+INFO MissionPlanner.MainV2 - Create SIM
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 12588 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:1091:13
+ comPort_MavChanged MainV2 System.EventHandler
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - Load Pluggins
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\plugins\
+INFO MissionPlanner.MainV2 - Load Pluggins... Done
+INFO MissionPlanner.MainV2 - show FlightData
+Open MissionPlanner.GCSViews.FlightData FlightData
+INFO MissionPlanner.GCSViews.FlightData - Activate Called
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnHandleCreated Start
+INFO MissionPlanner.Controls.HUD - OnLoad Start
+INFO MissionPlanner.Controls.HUD - Vendor: Intel
+INFO MissionPlanner.Controls.HUD - Version: 4.6.0 - Build 31.0.101.2125
+INFO MissionPlanner.Controls.HUD - Device: Intel(R) Iris(R) Plus Graphics
+INFO MissionPlanner.Controls.HUD - OnLoad Done
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 236
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 223
+HUD 1 hz drawtime 217 gl True
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 221
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - show FlightData... Done
+INFO MissionPlanner.MainV2 - start http
+INFO MissionPlanner.MainV2 - start joystick
+ERROR MissionPlanner.Utilities.httpserver - Exception starting listener. Possible multiple instances of planner?
+System.Net.Sockets.SocketException (0x80004005): An attempt was made to access a socket in a way forbidden by its access permissions
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   at MissionPlanner.Utilities.httpserver.listernforclients() in C:\Users\mich1\Desktop\CubePilot\MissionPlanner\Utilities\httpserver.cs:line 64
+INFO MissionPlanner.MainV2 - start serialreader
+INFO MissionPlanner.MainV2 - start adsbsender
+INFO MissionPlanner.MainV2 - start plugin thread
+INFO MissionPlanner.MainV2 - start AutoConnect
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Copter/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Plane/LogMessages.xml.xz
+INFO MissionPlanner.ArduPilot.APFirmware - https://firmware.oborne.me/manifest.json.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Rover/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Tracker/LogMessages.xml.xz
+ERROR MissionPlanner.Utilities.KIndex - System.Net.WebException: The remote name could not be resolved: 'services.swpc.noaa.gov'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at MissionPlanner.Utilities.KIndex.kindexcallback(IAsyncResult ar)
+INFO MissionPlanner.Log.LogSort - Move log C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs\2026-11-04 10-21-47.rlog to C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs\SITL\QUADROTOR\1\2026-11-04 10-21-47.rlog
+INFO MissionPlanner.Log.LogSort - Move log C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs\2026-11-04 10-21-47.tlog to C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs\SITL\QUADROTOR\1\2026-11-04 10-21-47.tlog
+ERROR MissionPlanner.ArduPilot.APFirmware - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'firmware.oborne.me'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.ArduPilot.APFirmware.GetList(String url, Boolean force) in C:\Users\mich1\Desktop\CubePilot\MissionPlanner\ExtLibs\ArduPilot\APFirmware.cs:line 116
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.ArduPilot.APFirmware - https://firmware.ardupilot.org/manifest.json.gz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+ERROR MissionPlanner.ArduPilot.APFirmware - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'firmware.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.ArduPilot.APFirmware.GetList(String url, Boolean force) in C:\Users\mich1\Desktop\CubePilot\MissionPlanner\ExtLibs\ArduPilot\APFirmware.cs:line 116
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.MainV2 - Loaded 4855 airports
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink default port",
+  "Enabled": true,
+  "Port": 14550,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink alt port",
+  "Enabled": true,
+  "Port": 14551,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5000 h264",
+  "Enabled": true,
+  "Port": 5000,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5000 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5100 h264",
+  "Enabled": true,
+  "Port": 5100,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5100 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5600 h264",
+  "Enabled": true,
+  "Port": 5600,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5600 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5601 h265",
+  "Enabled": true,
+  "Port": 5601,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5601 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H265 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.MainV2 - appload time
+INFO MissionPlanner.MainV2 - ProcessCommandLine: script = C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\integrated-app-spool-probe.py
+INFO MissionPlanner.Utilities.Update - Checking for update at: https://firmware.oborne.me/MissionPlanner/upgrade/version.txt
+ERROR MissionPlanner.MainV2 - Update check failed
+System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'firmware.oborne.me'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Update.CheckForUpdate(Boolean NotifyNoUpdate) in C:\Users\mich1\Desktop\CubePilot\MissionPlanner\Utilities\Update.cs:line 139
+   at MissionPlanner.MainV2.checkupdate(Object stuff) in C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:line 4014
+Adapter POWER - Top stopped scanning.
+Adapter POWER - Top started scanning.
+HUD 2 hz drawtime 9 gl True
+hello world from python
+0.0
+Run Script Microsoft.Scripting.Hosting.ScriptScope
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 2 gl True
+INFO MissionPlanner.MainV2 - We are connecting to preset 0
+INFO MissionPlanner.MainV2 - Set Portname
+INFO MissionPlanner.MainV2 - Set Baudrate
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new True
+INFO MissionPlanner.MainV2 - About to do dtr if needed
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current True new False
+INFO MissionPlanner.MainV2 - Reset connection stats
+INFO MissionPlanner.MainV2 - creating logfile 2026-11-04 10-24-41.tlog
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - -1% Mavlink Connecting...
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - DoWork
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - -1% Mavlink Connecting...
+INFO MissionPlanner.Utilities.TerrainFollow - OnPacketReceived to packets
+INFO MissionPlanner.MAVLinkInterface - Open port with  0
+INFO MissionPlanner.MAVLinkInterface - 436 Start connect loop 
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTENDED_STATUS at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream POSITION at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA1 at 4 hz for 0:0
+INFO MissionPlanner.Utilities.Airports - getAirports - regen list
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA2 at 4 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA3 at 2 hz for 0:0
+INFO MissionPlanner.Utilities.Airports - getAirports done 0.0050025 sec
+INFO MissionPlanner.MAVLinkInterface - Request stream RAW_SENSORS at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream RC_CHANNELS at 2 hz for 0:0
+
+INFO MissionPlanner.MAVLinkInterface - 
+
+INFO MissionPlanner.MAVLinkInterface - 
+Init ArduCopter V4.8.0-dev (72b23820)
+INFO MissionPlanner.MAVLinkInterface - Init ArduCopter V4.8.0-dev (72b23820)
+
+INFO MissionPlanner.MAVLinkInterface - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+INFO MissionPlanner.MAVLinkInterface - Free RAM: 524288
+Booting 0/0
+INFO MissionPlanner.MAVLinkInterface - Booting 0/0
+Firmware change: erasing EEPROM...
+INFO MissionPlanner.MAVLinkInterface - Firmware change: erasing EEPROM...
+done.
+INFO MissionPlanner.MAVLinkInterface - done.
+0 0 0 AP_Logger_File: buffer size=204800
+INFO MissionPlanner.MAVLinkInterface - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 37 mem 33.978515625 mav2 False sign False mav1 0 mav2 0 signed 0      
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+INFO MissionPlanner.Utilities.Proximity - created for 1 - 1
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:41 AM 7 RCInput: decoding UDP (Pulses)
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:41 AM 6 Calibrating barometer
+HUD 2 hz drawtime 4 gl True
+bps 595 loss 0 left 0 mem 32.7978515625 mav2 False sign False mav1 0 mav2 16 signed 0      
+INFO MissionPlanner.MainV2 - Mav Changed 1
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - 384 Start connect loop 
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - HB Selection 1-1 seen 2
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTENDED_STATUS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream POSITION at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA1 at 4 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA2 at 4 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA3 at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream RAW_SENSORS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream RC_CHANNELS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport Base Thread current True new False
+INFO MissionPlanner.MAVLinkInterface - mav 1-1 seqno 18 exp 17 pkts lost 1
+bps 64 loss 1 left 276 mem 35.939453125 mav2 True sign False mav1 0 mav2 3 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 Barometer 1 calibration complete
+Init GyrINFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 Barometer 2 calibration complete
+o*HUD 3 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - 100% Done
+INFO MissionPlanner.MAVLinkInterface - Done open 1 1
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - DoWork Done
+*INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 ArduCopter V4.8.0-dev (72b23820)
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 j04cfea5c7cf4f1fb8b47f8b3e8289cf
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 Frame: QUAD/PLUS
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new True
+INFO MissionPlanner.MAVLinkInterface - wpcount: 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - Request stream ALL at 4 hz for 1:1
+
+INFO MissionPlanner.MAVLinkInterface - Init Gyro**
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:43 AM 6 ArduPilot Ready
+bps 1349 loss 0 left 790 mem 33.45703125 mav2 True sign False mav1 0 mav2 38 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:44 AM 6 RC7: SaveWaypoint LOW
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1548424 space 100 bit 0
+HUD 3 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.srtm - Getting S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - srtm1sec 1
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM3/
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<get3secfile>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MissionPlanner.Utilities.srtm.<requestRunner>d__28.MoveNext()
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+HUD 5 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+bps 4073 loss 0 left 784 mem 34.2021484375 mav2 True sign False mav1 0 mav2 124 signed 0      
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:45 AM 6 EKF3 IMU0 initialised
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:45 AM 6 EKF3 IMU1 initialised
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:45 AM 6 AHRS: EKF3 active
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+HUD 4 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+bps 3376 loss 0 left 776 mem 37.1845703125 mav2 True sign False mav1 0 mav2 104 signed 0      
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:46 AM 6 EKF3 IMU0 tilt alignment complete
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:46 AM 6 EKF3 IMU1 tilt alignment complete
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:46 AM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:46 AM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+bps 3539 loss 0 left 850 mem 36.1494140625 mav2 True sign False mav1 0 mav2 108 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+HUD 6 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+bps 3581 loss 0 left 850 mem 35.29296875 mav2 True sign False mav1 0 mav2 105 signed 0      
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+HUD 5 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+bps 4492 loss 0 left 850 mem 35.6875 mav2 True sign False mav1 0 mav2 132 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1548424 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+bps 3581 loss 0 left 850 mem 34.6826171875 mav2 True sign False mav1 0 mav2 105 signed 0      
+HUD 5 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:50 AM 6 GPS 1: probing for u-blox at 230400 baud
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+INFO MissionPlanner.MAVLinkInterface - 11/4/2026 10:24:50 AM 6 GPS 1: detected u-blox
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+bps 3710 loss 0 left 850 mem 34.09375 mav2 True sign False mav1 0 mav2 108 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 4 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+INFO MissionPlanner.Utilities.Airports - getAirports - regen list
+INFO MissionPlanner.Utilities.Airports - getAirports done 0.0029944 sec
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+HUD 4 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+bps 4471 loss 0 left 850 mem 38.9951171875 mav2 True sign False mav1 0 mav2 126 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+bps 3610 loss 0 left 850 mem 38.263671875 mav2 True sign False mav1 0 mav2 102 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+HUD 5 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - OnPacketReceived remove to packets
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new False
+Run Script Done
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+HUD 3 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 2 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.srtm - S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - srtm1sec 1
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM3/
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<get3secfile>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MissionPlanner.Utilities.srtm.<requestRunner>d__28.MoveNext()
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 4 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.srtm - S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - srtm1sec 1
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM3/
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<get3secfile>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MissionPlanner.Utilities.srtm.<requestRunner>d__28.MoveNext()
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 2 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 4 gl True
+INFO MissionPlanner.Utilities.srtm - S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - srtm1sec 1
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM3/
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+ERROR MissionPlanner.Utilities.srtm - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'terrain.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<getListing>d__40.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.srtm.<get3secfile>d__29.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MissionPlanner.Utilities.srtm.<requestRunner>d__28.MoveNext()
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 5 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 4 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 4 gl True
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 1105
+route OnRender Large Graphics Path 415
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 3 gl True

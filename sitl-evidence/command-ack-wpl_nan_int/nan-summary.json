@@ -1,0 +1,37 @@
+{
+  "form": "int",
+  "item_count": 1,
+  "sent_item": {
+    "mavpackettype": "MISSION_ITEM_INT",
+    "target_system": 1,
+    "target_component": 1,
+    "seq": 1,
+    "frame": 3,
+    "command": 16,
+    "current": 0,
+    "autocontinue": 1,
+    "param1": 0.0,
+    "param2": 0.0,
+    "param3": 0.0,
+    "param4": 0.0,
+    "x": -2147483648,
+    "y": 1491651000,
+    "z": 21.0,
+    "mission_type": 0
+  },
+  "ack_types": [
+    0,
+    10
+  ],
+  "relay_closed_by": "client",
+  "probe_exit": 0,
+  "post_upload_readback_completed": true,
+  "files": {
+    "probe.log": "2c0c4b47d8be4a38afee273018f0241f019e8f58773d9d8c2602f03e9bba97cf",
+    "probe-source.cs": "119d9b255c8818ce8560a1f08600ffda825eaf9f902422b1bd6fb4db87730c9b",
+    "input.waypoints": "e6dfb9ca0d52cd62a95564497aca4d75666d055b0f631381caec62ff017f82da",
+    "sitl.log": "69e6941638f0cff477769292e269850a08b47bd299b202b0ab5c70449f8806c2",
+    "to_sitl_output.bin": "0264e2d6c3ff3b2d1bc69d473db04328b9d3a24f57f3778908079da9625f48c6",
+    "to_client_output.bin": "0ebb5075d802fe8575a35e78054e98f0802117201691af892f23ac4ed1f7d5a3"
+  }
+}

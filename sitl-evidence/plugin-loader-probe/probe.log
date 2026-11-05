@@ -1,0 +1,20 @@
+79 [1] INFO MissionPlanner.Plugin.PluginLoader (null) - Plugin DisabledLifecycle.dll is disabled in config.xml
+DISABLED_EVENTS=0
+136 [1] INFO MissionPlanner.Plugin.PluginLoader (null) - Plugin Load C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\plugin-loader-probe\fixtures\SyntheticLifecycle.dll
+159 [1] ERROR MissionPlanner.Plugin.PluginLoader (null) - Failed to load plugin SyntheticLifecycle, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+System.InvalidOperationException: Instances of abstract classes cannot be created.
+   at System.Runtime.CompilerServices.RuntimeHelpers._CompileMethod(IRuntimeMethodInfo method)
+   at System.Reflection.Emit.DynamicMethod.CreateDelegate(Type delegateType, Object target)
+   at System.Linq.Expressions.Compiler.LambdaCompiler.Compile(LambdaExpression lambda, DebugInfoGenerator debugInfoGenerator)
+   at MissionPlanner.Plugin.PluginLoader.InitPlugin(Assembly asm, String pluginfilename)
+184 [1] INFO MissionPlanner.Plugin.PluginLoader (null) - Plugin Init AcceptedFixture 1 by Local test fixture
+186 [1] INFO MissionPlanner.Plugin.PluginLoader (null) - Plugin Init RejectLoadedFixture 1 by Local test fixture
+187 [1] ERROR MissionPlanner.Plugin.PluginLoader (null) - Failed to load plugin SyntheticLifecycle, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+System.InvalidOperationException: synthetic init failure
+   at ThrowInitFixture.Init()
+   at MissionPlanner.Plugin.PluginLoader.InitPlugin(Assembly asm, String pluginfilename)
+188 [1] INFO MissionPlanner.Plugin.PluginLoader (null) - Plugin Load C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\plugin-loader-probe\fixtures\SyntheticLifecycle.dll time 0.0769797 s
+PENDING=AcceptedFixture,RejectLoadedFixture
+ACTIVE=AcceptedFixture
+PENDING_AFTER=0
+EVENTS=AcceptedFixture:Init|RejectInitFixture:Init|RejectLoadedFixture:Init|ThrowInitFixture:Init|AcceptedFixture:Loaded|RejectLoadedFixture:Loaded|AcceptedFixture:Exit

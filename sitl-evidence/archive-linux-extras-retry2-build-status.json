@@ -1,0 +1,77 @@
+{
+  "temp_directory": "/tmp/ardupilot-sitl-72b23820-aiq00srm",
+  "commit": "72b238201f5ea3b556e3809b2ec704fcf701474a",
+  "status": "complete",
+  "steps": [
+    {
+      "step": "create temporary workspace",
+      "status": "running"
+    },
+    {
+      "step": "copy verified source ZIP",
+      "status": "complete",
+      "sha256": "7edc50142718c3c98c1c679cf398ce7e258e29ec889ae65a53855b7a2bce931d"
+    },
+    {
+      "step": "extract source ZIP",
+      "status": "complete"
+    },
+    {
+      "step": "extract verified pinned dependencies",
+      "status": "complete",
+      "count": 16
+    },
+    {
+      "step": "verify copied Git revision metadata",
+      "status": "complete",
+      "head": "72b238201f5ea3b556e3809b2ec704fcf701474a"
+    },
+    {
+      "step": "configure",
+      "status": "running"
+    },
+    {
+      "step": "configure",
+      "status": "complete",
+      "log": "archive-linux-extras-retry2-configure.log"
+    },
+    {
+      "step": "build blimp",
+      "status": "running"
+    },
+    {
+      "step": "build blimp",
+      "status": "complete",
+      "log": "archive-linux-blimp-retry2-build.log"
+    },
+    {
+      "step": "publish blimp binary",
+      "status": "complete",
+      "path": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/blimp",
+      "sha256": "740ebf25ff675ed85f93e9cf803db8b80d3312f873faf711bc40a60ed961395c"
+    },
+    {
+      "step": "build antennatracker",
+      "status": "running"
+    },
+    {
+      "step": "build antennatracker",
+      "status": "complete",
+      "log": "archive-linux-antennatracker-retry2-build.log"
+    },
+    {
+      "step": "publish antennatracker binary",
+      "status": "complete",
+      "path": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/antennatracker",
+      "sha256": "3ff790c267b02f1b4b9f9121c3005b00085878a77b88448511b20aa7f455de36"
+    },
+    {
+      "step": "publish all local SITL binaries",
+      "status": "complete"
+    }
+  ],
+  "limitations": [
+    "Temporary source tree uses verified archives and copied Git metadata; it is not a pristine recursive Git checkout.",
+    "Compiler output is a local build, not an official release."
+  ]
+}

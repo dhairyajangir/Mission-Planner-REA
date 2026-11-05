@@ -1,0 +1,57 @@
+# Mission transfer trace
+
+This trace covers selected Mission Planner 1.3.83 source paths and local ArduCopter simulator tests. Individual sections identify whether they used a standalone client, the Mission Planner library, or a modified application copy.
+
+## Ground-station source
+
+The 1.3.83 `FlightPlanner` screen has separate mission, fence and rally selections (`mission-planner-1.3.83-source/GCSViews/FlightPlanner.cs`). In `ExtLibs/ArduPilot/Mavlink/MAVLinkInterface.cs:3750`, the older `setWPTotal` path calls `setWPTotalAsync`, which sends `MISSION_COUNT`, accepts either `MISSION_REQUEST` or `MISSION_REQUEST_INT`, and has a retry-and-timeout loop. Its item-transfer methods include an integer item path (`MAVLinkInterface.cs:4239`) and handling for both request forms. The existence of a method does not prove which path the UI takes for every vehicle, firmware and mission type.
+
+REA's index of the distributed `MissionPlanner.ArduPilot.dll` identifies `setWPTotalAsync` as method token `0x0600047d` and several `setWPAsync` overloads as `0x06000482`–`0x06000484` (`mission-planner-binary-evidence/rea-supporting-index.sqlite`). These are metadata and IL identities, not independent proof that every source branch matches the distributed library.
+
+## Simulator source
+
+The tested SITL binary's version metadata identifies upstream commit `fb773567896014da007bca58358704d4a0d8516f`. A copy of that commit's `MissionItemProtocol.cpp` is saved as `sitl-evidence/MissionItemProtocol-fb773567.cpp`; upstream: [MissionItemProtocol.cpp at that commit](https://github.com/ArduPilot/ardupilot/blob/fb773567896014da007bca58358704d4a0d8516f/libraries/GCS_MAVLink/MissionItemProtocol.cpp).
+
+At source line 78, `handle_mission_count` checks protocol requirements, cancels or refuses competing uploads, compares the requested count against capacity, allocates receive resources and starts requesting items. At line 370, the queued-request path sends `MISSION_REQUEST`. Item processing verifies sequence and sender, adds or replaces items, and sends an acknowledgement at completion. The implementation also handles timeout and retry paths. This is source corresponding to the revision reported by the simulator metadata; no reproducible rebuild was performed to prove the binary was compiled exclusively from that exact tree.
+
+## Observed simulator-client exchange
+
+The test used a fresh ArduCopter 4.7.2 SITL instance on localhost. It did not arm, fly, connect to hardware, or invoke Mission Planner. The script and raw outcomes are under `sitl-evidence`.
+
+1. An immediate two-item upload returned `MAV_MISSION_NO_SPACE`. The exact cause was not established (`mission-roundtrip/results.json`).
+2. After a 15-second startup delay, a two-item legacy float upload returned `MAV_MISSION_ACCEPTED` and the subsequent count was two. The waypoint readback differed from the original integer coordinates; exact equality failed (`mission-roundtrip-2/results.json`). A second attempt with MAVLink 2 enabled still observed `MISSION_REQUEST` and the same float rounding (`mission-roundtrip-3/results.json`).
+3. In a further fresh run, the client sent `MISSION_ITEM_INT` in response to the simulator's two `MISSION_REQUEST` messages. The upload acknowledgement was accepted, the reported count was two, and the second item's integer coordinates and altitude matched (`mission-roundtrip-4/results.json`).
+
+These observations do not establish a general precision guarantee or explain every compatibility case. Repeat with the intended firmware, mission types, error conditions and Mission Planner runtime before treating the transfer path as verified end to end.
+
+## Mission Planner library check
+
+A separate harness compiled against the unmodified portable distribution's managed libraries opened a connection to a SITL instance, identified system/component 1/1 and obtained a mission count of one through `MAVLinkInterface.getWPCount`. Its log is `sitl-evidence/missionplanner-probe/windows-probe-binding.log`. The first harness invocation failed because its own executable lacked Mission Planner's assembly-binding configuration; the failure log is also retained.
+
+The harness was then extended to call Mission Planner's `setWPTotal`, integer `setWP`, `getWPCount` and `getWP` methods. With a 15-second startup delay, both item uploads returned `MAV_MISSION_ACCEPTED`; count readback was two and the second item's coordinates and altitude matched the test input (`windows-probe-roundtrip.log`). This tests those library calls against the selected SITL version. It does not exercise the application's mission-planning UI, other mission commands or flight behavior.
+
+The same library harness also passed the round trip against the locally built 4.8.0-dev binary corresponding to the verified user archive (`sitl-evidence/library-exact-source/windows-probe-roundtrip.log`).
+
+In a separate 4.8.0-dev run, a local proxy dropped the first `MISSION_REQUEST` for sequence 0 after a two-item `MISSION_COUNT`. The capture contained one count sent by the library, the dropped request, and a later forwarded request for the same sequence. The library sent two `MISSION_ITEM_INT` packets, received an accepted acknowledgment, and its subsequent readback matched the test waypoint (`sitl-evidence/archive-mission-request-loss/`). Independent MAVLink decoding and byte comparisons confirmed exactly one valid request was removed from the downlink and the uplink was unchanged. The supplied source contains a timed request-resend path at `libraries/GCS_MAVLink/MissionItemProtocol.cpp:406`, consistent with the observed repeated request. This test does not isolate timing or prove behavior under repeated losses. The harness log also records failed network metadata-download attempts; these did not supply the simulated mission data.
+
+A second local proxy test dropped the accepted `MISSION_ACK` sent after the final mission item. Mission Planner resent item 1; the next acknowledgment had type `MAV_MISSION_ERROR`. The harness reported `UPLOAD_RESULTS=MAV_MISSION_ACCEPTED,MAV_MISSION_ERROR` and exited with code 3 because it expected both results to be accepted. Before exiting, it requested the mission count and item 1: the count was two and the returned item had the uploaded coordinates and 20-metre altitude (`sitl-evidence/archive-mission-ack-loss/`). Independent decoding confirms the discarded acknowledgment was `MAV_MISSION_ACCEPTED`, item 1 was sent twice, and the later error and item readback appeared on the wire. Stream comparison confirms only that acknowledgment was removed by the proxy. The readback used the same Mission Planner library connection, not a second independent client. This one failure case shows why a reported upload error does not establish that the vehicle retained its previous mission; it does not characterize all acknowledgment loss or firmware versions.
+
+A separate read-only run invoked `getWPCount` for mission, fence and rally types through the same library. Each returned zero for that fresh simulator instance (`sitl-evidence/mission-types-probe/library-list.log`). This establishes only empty-list queries; it does not verify writing, editing or enforcing fences or rally points.
+
+## Fence and rally replacement after rejection
+
+The archive's common upload handler allocates receive resources and calls the type-specific `truncate` method when it receives a count (`libraries/GCS_MAVLink/MissionItemProtocol.cpp:98`). Fence items are converted into an allocated `_new_items` array and `complete` calls `write_fence` (`MissionItemProtocol_Fence.cpp:153`, `:186`); its `truncate` implementation does not truncate the stored fence (`:218`). Rally handling instead calls `rally.set_rally_point_with_index` for replacement and `rally.truncate` on count (`MissionItemProtocol_Rally.cpp:173`, `:191`). These are selected source paths, not proof of atomicity for all errors.
+
+In one separate MAVLink 2 test against the locally built 4.8.0-dev Copter simulator, the client established two circle-inclusion fence items and then attempted a replacement with changed coordinates for item 0 and an invalid frame for item 1. The simulator requested both items and returned `MAV_MISSION_UNSUPPORTED_FRAME`; a subsequent read returned both original fence coordinates. The same test with two rally points returned the same rejection, but readback showed item 0's changed latitude and item 1's original latitude. Full values and acknowledgments are in `sitl-evidence/archive-fence-rally-rejection/results.json`. Fence readback reported zero altitude for these circle items, even though the sent items used 20 metres.
+
+This is one failure case for each type on one simulator build, using a standalone client. It does not establish Mission Planner UI behavior, all failure modes, or actual flight enforcement. A client handling a failed upload should read back the vehicle's stored data instead of assuming it was unchanged.
+
+## Invalid-frame simulator case
+
+On a fresh locally built 4.8.0-dev Copter simulator, a standalone client first uploaded two valid waypoint items and read back the second. It then began another two-item upload and supplied frame `255` for item 1. The simulator returned `MAV_MISSION_UNSUPPORTED_FRAME`; a subsequent count and item-1 read returned the same coordinates and 20-metre altitude (`sitl-evidence/archive-mission-invalid-frame/results.json`). The first item of the second upload matched the original, so this case does not prove whole-mission atomicity or preservation under other failures. The application UI and the Mission Planner library were not used for this error case.
+
+A second fresh simulator test made the distinction observable. It uploaded a valid three-item baseline, then started a replacement upload with item 1 changed from 20 to 25 metres and an unsupported frame on item 2. The simulator requested all three items and rejected the upload with `MAV_MISSION_UNSUPPORTED_FRAME`. Subsequent readback showed item 1 at 25 metres (`sitl-evidence/archive-mission-partial-write/results.json`). Thus this particular rejected transfer left an earlier item changed. The test did not verify all items after rejection or other firmware versions; a client should not infer rollback from the failure acknowledgment alone.
+
+The source snapshot is consistent with that observation: `libraries/GCS_MAVLink/MissionItemProtocol.cpp:104` invokes mission truncation when a count is received, and its item handler around `:284` replaces or appends each accepted item before requesting the next. `MissionItemProtocol_Waypoints.cpp:101` converts the individual item and calls `mission.replace_cmd` at `:117`. A later rejected item therefore does not imply that an earlier replacement was rolled back. This source trace applies to the tested snapshot; it does not characterize every ArduPilot release or mission type.
+
+A third fresh simulator case started with four stored items and sent a replacement count of three, again changing item 1 and supplying an unsupported frame for item 2. After the rejection, the reported count was three and item 1 had the new 25-metre altitude (`sitl-evidence/archive-mission-rejected-truncation/results.json`). This confirms both truncation and the earlier item update for this specific run. The client should re-read and reconcile the stored mission after such a failure; an error acknowledgment alone is not evidence that the original mission remains intact.

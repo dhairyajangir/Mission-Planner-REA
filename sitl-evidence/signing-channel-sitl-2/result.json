@@ -1,0 +1,473 @@
+{
+  "scope": "Standalone synthetic MAVLink client, disposable disarmed Copter SITL, two local serial endpoints",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "test_key_hex": "0159347902e469a002acc3953d33facef208cfc57695b51e59eed7fd5db20599",
+  "wrong_key_hex": "953a6cc44bf141e0229289cec93dd432eacd5b3ca3cd7da251a9654681211266",
+  "events": [
+    {
+      "channel": "channel0",
+      "case": "initial",
+      "heartbeats": [
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd09000000010100000000000000020359010382c2"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000010101000000000000000203590103924c"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000020101000000000000000203590103b3d6"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000030101000000000000000203590103a358"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd09000004010100000000000000020351030380ba"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd0900000501010000000000000002035103039034"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000060101000000000000000203510303b1ae"
+        }
+      ]
+    },
+    {
+      "channel": "channel1",
+      "case": "initial",
+      "heartbeats": [
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd09000000010100000000000000020359010382c2"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000010101000000000000000203590103924c"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000020101000000000000000203590103b3d6"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 89,
+          "custom_mode": 0,
+          "system_status": 1,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000030101000000000000000203590103a358"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd09000004010100000000000000020351030380ba"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd0900000501010000000000000002035103039034"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000060101000000000000000203510303b1ae"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000070101000000000000000203510303a120"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd09000008010100000000000000020351030326c2"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd090000090101000000000000000203510303364c"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd0900000a010100000000000000020351030317d6"
+        },
+        {
+          "mavpackettype": "HEARTBEAT",
+          "type": 2,
+          "autopilot": 3,
+          "base_mode": 81,
+          "custom_mode": 0,
+          "system_status": 3,
+          "mavlink_version": 3,
+          "source": [
+            1,
+            1
+          ],
+          "signed": false,
+          "raw_hex": "fd0900000c010100000000000000020351030344ea"
+        }
+      ]
+    },
+    {
+      "channel": "channel0",
+      "case": "unsigned",
+      "packet_hex": "fd10000000ffbe140000ffff01014c4f475f44495341524d454479cc",
+      "responses": [
+        {
+          "mavpackettype": "PARAM_VALUE",
+          "param_id": "LOG_DISARMED",
+          "param_value": 0.0,
+          "param_type": 2,
+          "param_count": 1431,
+          "param_index": 65535,
+          "source": [
+            1,
+            1
+          ],
+          "signed": true,
+          "raw_hex": "fd190100110101160000000000009705ffff4c4f475f44495341524d45440000000002b83100699a4573ff21f52c99da2cc8",
+          "valid_test_key": true
+        }
+      ],
+      "uplink_start": 54,
+      "uplink_end": 82,
+      "downlink_start": 577,
+      "downlink_end": 695
+    },
+    {
+      "channel": "channel0",
+      "case": "bad_signature",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c813a5e59173ff21b28e48d96cfb",
+      "responses": [
+        {
+          "mavpackettype": "PARAM_VALUE",
+          "param_id": "LOG_DISARMED",
+          "param_value": 0.0,
+          "param_type": 2,
+          "param_count": 1431,
+          "param_index": 65535,
+          "source": [
+            1,
+            1
+          ],
+          "signed": true,
+          "raw_hex": "fd190100140101160000000000009705ffff4c4f475f44495341524d454400000000024393006c9a4573ff21ad30423f426a",
+          "valid_test_key": true
+        }
+      ],
+      "uplink_start": 82,
+      "uplink_end": 123,
+      "downlink_start": 695,
+      "downlink_end": 779
+    },
+    {
+      "channel": "channel0",
+      "case": "valid",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c813e527a173ff21a15fced63301",
+      "responses": [
+        {
+          "mavpackettype": "PARAM_VALUE",
+          "param_id": "LOG_DISARMED",
+          "param_value": 0.0,
+          "param_type": 2,
+          "param_count": 1431,
+          "param_index": 65535,
+          "source": [
+            1,
+            1
+          ],
+          "signed": true,
+          "raw_hex": "fd190100160101160000000000009705ffff4c4f475f44495341524d45440000000002877d00e527a173ff21ea24589643ea",
+          "valid_test_key": true
+        }
+      ],
+      "uplink_start": 123,
+      "uplink_end": 164,
+      "downlink_start": 779,
+      "downlink_end": 897
+    },
+    {
+      "channel": "channel0",
+      "case": "replay",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c813e527a173ff21a15fced63301",
+      "responses": [
+        {
+          "mavpackettype": "PARAM_VALUE",
+          "param_id": "LOG_DISARMED",
+          "param_value": 0.0,
+          "param_type": 2,
+          "param_count": 1431,
+          "param_index": 65535,
+          "source": [
+            1,
+            1
+          ],
+          "signed": true,
+          "raw_hex": "fd190100190101160000000000009705ffff4c4f475f44495341524d454400000000029b9200e827a173ff2177ff131f24d0",
+          "valid_test_key": true
+        }
+      ],
+      "uplink_start": 164,
+      "uplink_end": 205,
+      "downlink_start": 897,
+      "downlink_end": 1468
+    },
+    {
+      "channel": "channel1",
+      "case": "unsigned",
+      "packet_hex": "fd10000000ffbe140000ffff01014c4f475f44495341524d454479cc",
+      "responses": [],
+      "uplink_start": 0,
+      "uplink_end": 28,
+      "downlink_start": 811,
+      "downlink_end": 845
+    },
+    {
+      "channel": "channel1",
+      "case": "bad_signature",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c813a5e59173ff21b28e48d96cfb",
+      "responses": [],
+      "uplink_start": 28,
+      "uplink_end": 69,
+      "downlink_start": 879,
+      "downlink_end": 913
+    },
+    {
+      "channel": "channel1",
+      "case": "valid",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c8132535a473ff217bdfe1a6362f",
+      "responses": [
+        {
+          "mavpackettype": "PARAM_VALUE",
+          "param_id": "LOG_DISARMED",
+          "param_value": 0.0,
+          "param_type": 2,
+          "param_count": 1431,
+          "param_index": 65535,
+          "source": [
+            1,
+            1
+          ],
+          "signed": true,
+          "raw_hex": "fd1901001e0101160000000000009705ffff4c4f475f44495341524d45440000000002a4de012535a473ff21a0f25ca90882",
+          "valid_test_key": true
+        }
+      ],
+      "uplink_start": 69,
+      "uplink_end": 110,
+      "downlink_start": 913,
+      "downlink_end": 1031
+    },
+    {
+      "channel": "channel1",
+      "case": "replay",
+      "packet_hex": "fd10010000ffbe140000ffff01014c4f475f44495341524d454402c8132535a473ff217bdfe1a6362f",
+      "responses": [],
+      "uplink_start": 110,
+      "uplink_end": 151,
+      "downlink_start": 1031,
+      "downlink_end": 1065
+    }
+  ],
+  "errors": [],
+  "setup_hex": "fd2a000000ffbe000100e50cea72ff21000001010159347902e469a002acc3953d33facef208cfc57695b51e59eed7fd5db20599a1be",
+  "capture_sha256": {
+    "channel0-downlink.bin": "cf2e75a520419f8cffe0ae6593c94e2d6401b88da7f910441f79a8426c961168",
+    "channel0-uplink.bin": "630419a73127de8964565e53b108a5118acaabc3d3c7c126cf103164fa025fa6",
+    "channel1-downlink.bin": "8023147211cacff3fbab4a1e3838a4ccc795280ec6e9ed42f4751a75a46f6f18",
+    "channel1-uplink.bin": "1b400c222c13268d4c7635b94835cb0e60e96ce2f61ad6ee0b8c1e5bd56364b3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Pinned MAVProxy source, local disposable disarmed Copter SITL, no physical vehicle",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "commands": [
+    "param show LOG_DISARMED",
+    "wp list",
+    "exit"
+  ],
+  "errors": [],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7560",
+    "--out=udpout:127.0.0.1:14599",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/mavproxy-sitl-smoke"
+  ],
+  "forwarded_datagrams": 3311,
+  "proxy_exit": 1,
+  "forced_terminate": true,
+  "artifacts": {
+    "sitl.log": "dfe6522af5b23c704e1c97f3c59448e0529f26db91ed1ada412d18f9994fe43a",
+    "mavproxy.log": "fe240181e8d4fc84258729b8042d719b073ce61950dea33942eb0967e5698014",
+    "forwarded.bin": "bbed2c281de1e37fecd12036ed4295f83bf6d41e319535a627b0f2f4d4143caa"
+  }
+}

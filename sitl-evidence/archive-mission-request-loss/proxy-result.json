@@ -1,0 +1,24 @@
+{
+  "scope": "local disposable Copter SITL and one TCP client; targeted downlink packet loss",
+  "mode": "mission_request",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "client_port": 6650,
+  "sitl_port": 6660,
+  "ftp_replies_dropped": 0,
+  "ftp_requests_forwarded": 0,
+  "stray_bytes": 164,
+  "frames_to_client": 100,
+  "frames_to_sitl": 24,
+  "stray_hex": {
+    "to_client": "0a0a496e69742041726475436f707465722056342e382e302d64657620283732623233383230290a0a467265652052414d3a203532343238380a426f6f74696e6720302f300a4669726d77617265206368616e67653a2065726173696e6720454550524f4d2e2e2e0a646f6e652e0a30203020302041505f4c6f676765725f46696c653a206275666665722073697a653d3230343830300a496e6974204779726f2a2a0a",
+    "to_sitl": ""
+  },
+  "param_list_started": false,
+  "dropped_param_indexes": [],
+  "mission_upload_started": true,
+  "mission_requests_dropped": 1,
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "passed": true
+}

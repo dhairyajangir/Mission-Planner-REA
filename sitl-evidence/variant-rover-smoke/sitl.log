@@ -1,0 +1,16 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'Rover'
+Starting SITL input
+Using Irlock at port : 9515
+bind port 6270 for SERIAL0
+SERIAL0 on TCP port 6270
+Waiting for connection ....
+Connection on serial port 6270
+bind port 6272 for SERIAL1
+SERIAL1 on TCP port 6272
+bind port 6273 for SERIAL2
+SERIAL2 on TCP port 6273
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Closed connection on SERIAL0
+Exitting

@@ -1,0 +1,1307 @@
+If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 
+
+
+Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe
+To fix any filename case issues under mono use    export MONO_IOMAP=drive:case
+for pinvoke      MONO_LOG_LEVEL=debug MONO_LOG_MASK=dll mono MissionPlanner.exe
+watch -n 1 ls -l /proc/$(pidof mono)/fd
+watch -n 1 lsof -p $(pidof mono)
+Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+Log Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs
+Running Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\
+User Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+PlacesRecentDocuments Dir 
+PlacesDesktop Dir C:\Users\think\OneDrive\Desktop
+PlacesPersonal Dir C:\Users\think\OneDrive\Documents
+PlacesMyComputer Dir 
+INFO MissionPlanner.Program - ******************* Logging Configured *******************
+INFO MissionPlanner.Program - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\x64\libSkiaSharp
+INFO MissionPlanner.Program - SkiaLoaded
+4.0.0.0
+Splash .ctor
+IconFile
+Splash.Show()
+Debugger.IsAttached False
+Application.DoEvents
+Application.DoEvents
+Setup GMaps 1
+Setup GMaps 2
+Setup GoogleMapProvider API
+Setup Tracking.productName
+Setup Tracking.primaryScreenBitsPerPixel
+Setup Settings.Instance.UserAgent
+Setup check gdal dir
+Setup gdal
+INFO GDAL.GDAL - GDAL static ctor
+INFO GDAL.GDAL - GDAL static ctor - SpatialReference
+Setup proxy
+Setup proxy
+Setup CleanupFiles
+INFO MissionPlanner.Program - 64bit os True, 64bit process True, OS Arch X64, OS Desc Microsoft Windows 10.0.26300 , FW Desc .NET Framework 4.8.10008.0
+INFO MissionPlanner.Program - Runtime Version v4.0.30319
+Application.Run(new MainV2())
+INFO MissionPlanner.MainV2 - Mainv2 ctor
+INFO MissionPlanner.MainV2 - Loading config
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1126 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:669:13
+ adsb_UpdatePlanePosition MainV2 System.EventHandler`1[MissionPlanner.Utilities.adsb+PointLatLngAltHdg]
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1179 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:681:13
+ <.ctor>b__106_0 MainV2 System.EventHandler`1[System.ValueTuple`2[System.String,MAVLink+MAV_COLLISION_THREAT_LEVEL]]
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+BurntKermit.mpsystheme theme is loading
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+INFO MissionPlanner.Utilities.srtm - .cctor
+INFO MissionPlanner.Utilities.srtm - requestRunner start
+INFO MissionPlanner.Utilities.srtm - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\srtm
+INFO MissionPlanner.Utilities.Speech - TTS: init, mono = False
+INFO MissionPlanner.MainV2 - Create FD
+INFO MissionPlanner.GCSViews.FlightData - Ctor Start
+INFO MissionPlanner.Controls.HUD - Static HUD ctor
+INFO MissionPlanner.Controls.HUD - Instance HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.GCSViews.FlightData - Components Done
+INFO MissionPlanner.GCSViews.FlightData - Tunning Graph Settings
+INFO MissionPlanner.GCSViews.FlightData - HUD Settings
+INFO MissionPlanner.GCSViews.FlightData - Graph Setup
+INFO MissionPlanner.GCSViews.FlightData - Map Setup
+INFO MissionPlanner.MainV2 - Create FP
+INFO MissionPlanner.GCSViews.FlightPlanner - Loading wp params
+INFO MissionPlanner.GCSViews.FlightPlanner - param WP_RADIUS 30
+INFO MissionPlanner.GCSViews.FlightPlanner - param LOITER_RADIUS 45
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduCopter2
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 51 orig list 51
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduCopter2
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 51 orig list 51
+INFO MissionPlanner.GCSViews.FlightPlanner - updateMapType invoke req? False
+INFO MissionPlanner.MainV2 - Create SIM
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.MainV2 - myview width 944 height 1152
+INFO MissionPlanner.MainV2 - this   width 960 height 1219
+INFO MissionPlanner.MainV2 - myview width 1805 height 1152
+INFO MissionPlanner.MainV2 - this   width 1821 height 1219
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 12589 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:1091:13
+ comPort_MavChanged MainV2 System.EventHandler
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - Load Pluggins
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\plugins\
+INFO MissionPlanner.MainV2 - Load Pluggins... Done
+INFO MissionPlanner.MainV2 - show FlightData
+Open MissionPlanner.GCSViews.FlightData FlightData
+INFO MissionPlanner.GCSViews.FlightData - Activate Called
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnHandleCreated Start
+INFO MissionPlanner.Controls.HUD - OnLoad Start
+INFO MissionPlanner.Controls.HUD - Vendor: Intel
+INFO MissionPlanner.Controls.HUD - Version: 4.6.0 - Build 31.0.101.2125
+INFO MissionPlanner.Controls.HUD - Device: Intel(R) Iris(R) Plus Graphics
+INFO MissionPlanner.Controls.HUD - OnLoad Done
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 550
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 223
+HUD 1 hz drawtime 458 gl True
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 221
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - show FlightData... Done
+INFO MissionPlanner.MainV2 - start http
+INFO MissionPlanner.MainV2 - start joystick
+INFO MissionPlanner.Utilities.httpserver - Listening for client
+INFO MissionPlanner.MainV2 - start serialreader
+INFO MissionPlanner.MainV2 - start adsbsender
+INFO MissionPlanner.MainV2 - start plugin thread
+INFO MissionPlanner.MainV2 - start AutoConnect
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink default port",
+  "Enabled": true,
+  "Port": 14550,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink alt port",
+  "Enabled": true,
+  "Port": 14551,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5000 h264",
+  "Enabled": true,
+  "Port": 5000,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5000 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5100 h264",
+  "Enabled": true,
+  "Port": 5100,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5100 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5600 h264",
+  "Enabled": true,
+  "Port": 5600,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5600 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5601 h265",
+  "Enabled": true,
+  "Port": 5601,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5601 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H265 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.MainV2 - Loaded 4855 airports
+INFO MissionPlanner.MainV2 - appload time
+INFO MissionPlanner.MainV2 - ProcessCommandLine: script = C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\ui-calibration-armed-script.py
+Adapter POWER - Top started scanning.
+Adapter POWER - Top found device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top found device:  [4a:45:cb:14:52:8a]
+Adapter POWER - Top updated device:  [4a:45:cb:14:52:8a]
+Adapter POWER - Top found device:  [13:4e:b7:6c:3a:1c]
+HUD 2 hz drawtime 7 gl True
+Adapter POWER - Top found device:  [37:18:a6:b1:e4:24]
+Adapter POWER - Top updated device:  [37:18:a6:b1:e4:24]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top found device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top updated device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top found device:  [09:a5:cd:89:b9:32]
+Adapter POWER - Top found device:  [73:40:5c:94:da:ce]
+Adapter POWER - Top updated device: LAPTOP-7HEF6RM3 [73:40:5c:94:da:ce]
+Adapter POWER - Top found device:  [6d:a1:ac:d8:c9:5b]
+Adapter POWER - Top updated device:  [6d:a1:ac:d8:c9:5b]
+Adapter POWER - Top found device:  [2c:e7:95:85:d3:b0]
+Adapter POWER - Top found device:  [1e:93:02:d3:8c:ad]
+Adapter POWER - Top updated device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top updated device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top found device:  [0b:73:4d:c1:f2:f2]
+Adapter POWER - Top updated device:  [09:a5:cd:89:b9:32]
+Adapter POWER - Top updated device:  [37:18:a6:b1:e4:24]
+Adapter POWER - Top updated device:  [37:18:a6:b1:e4:24]
+Adapter POWER - Top updated device: LAPTOP-7HEF6RM3 [73:40:5c:94:da:ce]
+Adapter POWER - Top updated device: LAPTOP-7HEF6RM3 [73:40:5c:94:da:ce]
+Adapter POWER - Top found device:  [55:b4:5f:7c:30:3e]
+Adapter POWER - Top updated device:  [2c:e7:95:85:d3:b0]
+Adapter POWER - Top updated device:  [6d:a1:ac:d8:c9:5b]
+Adapter POWER - Top updated device:  [6d:a1:ac:d8:c9:5b]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top updated device:  [40:c9:e9:7d:b0:87]
+Adapter POWER - Top updated device:  [2c:e7:95:85:d3:b0]
+Adapter POWER - Top updated device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top updated device:  [76:1d:05:ce:14:5f]
+Adapter POWER - Top updated device: LAPTOP-7HEF6RM3 [73:40:5c:94:da:ce]
+Adapter POWER - Top found device:  [7a:b8:9f:4a:fa:64]
+Adapter POWER - Top found device:  [3d:a5:ec:f8:8d:1a]
+Adapter POWER - Top found device:  [00:01:f9:45:9f:a2]
+Adapter POWER - Top found device:  [3e:ef:32:8c:0e:95]
+hello world from python
+0.0
+Run Script Microsoft.Scripting.Hosting.ScriptScope
+Adapter POWER - Top stopped scanning.
+[0]  [00:01:f9:45:9f:a2] -91 dBm Connectable
+    Service UUID: 0000fcf1-0000-1000-8000-00805f9b34fb
+    Service data: 04 1B A2 D4 EE C5 60 97 19 3D 1E BF 35 B1 B8 E7 9B 14 03
+[1]  [09:a5:cd:89:b9:32] -94 dBm Non-Connectable
+[2]  [0b:73:4d:c1:f2:f2] -95 dBm Non-Connectable
+[3]  [13:4e:b7:6c:3a:1c] -92 dBm Non-Connectable
+[4]  [1e:93:02:d3:8c:ad] -100 dBm Non-Connectable
+[5]  [2c:e7:95:85:d3:b0] -99 dBm Non-Connectable
+[6]  [37:18:a6:b1:e4:24] -74 dBm Connectable
+    Service UUID: 0000fcf1-0000-1000-8000-00805f9b34fb
+    Service data: 04 2D 14 29 83 15 09 2F D2 C1 3C 3B 30 04 C7 A7 81 4E 22
+[7]  [3d:a5:ec:f8:8d:1a] -92 dBm Non-Connectable
+    Service UUID: 0000fef3-0000-1000-8000-00805f9b34fb
+    Service data: 4A 17 23 46 44 42 58 11 32 E3 F7 C1 66 F1 D6 E7 22 56 68 C4 D5 BB C3 9B C7 2D 6B
+[8]  [3e:ef:32:8c:0e:95] -101 dBm Non-Connectable
+[9]  [40:c9:e9:7d:b0:87] -90 dBm Connectable
+[10]  [4a:45:cb:14:52:8a] -94 dBm Connectable
+[11]  [55:b4:5f:7c:30:3e] -100 dBm Non-Connectable
+[12]  [6d:a1:ac:d8:c9:5b] -64 dBm Connectable
+[13] LAPTOP-7HEF6RM3 [73:40:5c:94:da:ce] -97 dBm Connectable
+    Service UUID: 0000180a-0000-1000-8000-00805f9b34fb
+    Service data: 
+    Service UUID: 3e1d50cd-7e3e-427d-8e1c-b78aa87fe624
+    Service data: 
+[14]  [76:1d:05:ce:14:5f] -90 dBm Connectable
+[15]  [7a:b8:9f:4a:fa:64] -102 dBm Connectable
+HUD 2 hz drawtime 10 gl True
+HUD 1 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.Airports - getAirports - regen list
+INFO MissionPlanner.MainV2 - We are connecting to preset 0
+INFO MissionPlanner.Utilities.Airports - getAirports done 0.0020096 sec
+INFO MissionPlanner.MainV2 - Set Portname
+INFO MissionPlanner.MainV2 - Set Baudrate
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new True
+INFO MissionPlanner.MainV2 - About to do dtr if needed
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current True new False
+INFO MissionPlanner.MainV2 - creating logfile 2026-11-05 11-11-17.tlog
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - -1% Mavlink Connecting...
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - DoWork
+INFO MissionPlanner.MainV2 - Reset connection stats
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - -1% Mavlink Connecting...
+INFO MissionPlanner.Utilities.TerrainFollow - OnPacketReceived to packets
+INFO MissionPlanner.MAVLinkInterface - Open port with  0
+INFO MissionPlanner.MAVLinkInterface - 203 Start connect loop 
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTENDED_STATUS at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream POSITION at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA1 at 4 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA2 at 4 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA3 at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream RAW_SENSORS at 2 hz for 0:0
+INFO MissionPlanner.MAVLinkInterface - Request stream RC_CHANNELS at 2 hz for 0:0
+
+INFO MissionPlanner.MAVLinkInterface - 
+
+INFO MissionPlanner.MAVLinkInterface - 
+Init ArduCopter V4.8.0-dev (72b23820)
+INFO MissionPlanner.MAVLinkInterface - Init ArduCopter V4.8.0-dev (72b23820)
+
+INFO MissionPlanner.MAVLinkInterface - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+INFO MissionPlanner.MAVLinkInterface - Free RAM: 524288
+Booting 0/0
+INFO MissionPlanner.MAVLinkInterface - Booting 0/0
+Firmware change: erasing EEPROM...
+INFO MissionPlanner.MAVLinkInterface - Firmware change: erasing EEPROM...
+done.
+INFO MissionPlanner.MAVLinkInterface - done.
+0 0 0 AP_Logger_File: buffer size=204800
+INFO MissionPlanner.MAVLinkInterface - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 37 mem 37.1689453125 mav2 False sign False mav1 0 mav2 0 signed 0      
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+INFO MissionPlanner.Utilities.Proximity - created for 1 - 1
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:17 AM 7 RCInput: decoding UDP (Pulses)
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:17 AM 6 Calibrating barometer
+HUD 2 hz drawtime 0 gl True
+bps 595 loss 0 left 0 mem 35.296875 mav2 False sign False mav1 0 mav2 16 signed 0      
+INFO MissionPlanner.MainV2 - Mav Changed 1
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - 182 Start connect loop 
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - -1% Trying to connect.
+Timeout in 29
+INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - HB Selection 1-1 seen 2
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTENDED_STATUS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream POSITION at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA1 at 4 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA2 at 4 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream EXTRA3 at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream RAW_SENSORS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - Request stream RC_CHANNELS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport Base Thread current True new False
+INFO MissionPlanner.MAVLinkInterface - mav 1-1 seqno 18 exp 17 pkts lost 1
+bps 64 loss 1 left 276 mem 36.0009765625 mav2 True sign False mav1 0 mav2 3 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 Barometer 1 calibration complete
+Init GyroINFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 Barometer 2 calibration complete
+HUD 3 hz drawtime 0 gl True
+*INFO MissionPlanner.MAVLinkInterface - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - 100% Done
+INFO MissionPlanner.MAVLinkInterface - Done open 1 1
+INFO MissionPlanner.MAVLinkInterface+NoUIReporter - DoWork Done
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 ArduCopter V4.8.0-dev (72b23820)
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 Frame: QUAD/PLUS
+*
+INFO MissionPlanner.MAVLinkInterface - Init Gyro**
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 ArduPilot Ready
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:19 AM 6 RC7: SaveWaypoint LOW
+bps 2043 loss 0 left 126 mem 37.2841796875 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1548424 space 100 bit 0
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.srtm - Getting S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - S36E149.hgt
+INFO MissionPlanner.Utilities.srtm - srtm1sec 1
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM3/
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+bps 1913 loss 0 left 126 mem 36.7734375 mav2 True sign False mav1 0 mav2 58 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+INFO MissionPlanner.Utilities.srtm - srtm1esc+3sec 11
+INFO MissionPlanner.Utilities.srtm - srtm req https://terrain.ardupilot.org/SRTM1/
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:21 AM 6 EKF3 IMU0 initialised
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:21 AM 6 EKF3 IMU1 initialised
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:21 AM 6 AHRS: EKF3 active
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+bps 2046 loss 0 left 124 mem 35.1181640625 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.CurrentState - EKF red uninit EKF_UNINITIALIZED
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:22 AM 6 EKF3 IMU0 tilt alignment complete
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:22 AM 6 EKF3 IMU1 tilt alignment complete
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+bps 2097 loss 0 left 58 mem 37.953125 mav2 True sign False mav1 0 mav2 64 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:23 AM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:23 AM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+HUD 4 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+INFO MissionPlanner.Utilities.srtm - Get https://terrain.ardupilot.org/SRTM1/S36E149.hgt.zip
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+bps 2329 loss 0 left 182 mem 46.9619140625 mav2 True sign False mav1 0 mav2 65 signed 0      
+HUD 5 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+INFO MissionPlanner.Utilities.srtm - Got https://terrain.ardupilot.org/SRTM1/S36E149.hgt.zip 9387360
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+bps 2213 loss 0 left 182 mem 47.4912109375 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+HUD 5 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1548424 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+HUD 5 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+bps 2213 loss 0 left 182 mem 69.0146484375 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:26 AM 6 GPS 1: probing for u-blox at 230400 baud
+bps 2270 loss 0 left 0 mem 68.5322265625 mav2 True sign False mav1 0 mav2 64 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:27 AM 6 GPS 1: detected u-blox
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+HUD 7 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+bps 2287 loss 0 left 182 mem 68.9296875 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+HUD 7 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+bps 2268 loss 0 left 182 mem 68.8017578125 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+HUD 6 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.159248284239 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.163654168462 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.168060052649 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.172465936783 space 100 bit 44
+HUD 4 hz drawtime 4 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.176871820848 space 100 bit 45
+bps 2239 loss 0 left 182 mem 72.3310546875 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.181277704826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.185683588699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1548424 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.159248088173 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.163653776328 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.168059464449 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.172465152517 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.176870840515 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.181276528426 space 100 bit 54
+HUD 4 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.185682216233 space 100 bit 55
+bps 2235 loss 0 left 181 mem 69.4033203125 mav2 True sign False mav1 0 mav2 62 signed 0      
+bps 2231 loss 0 left 181 mem 74.111328125 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd COMPONENT_ARM_DISARM 1 2989 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd resp COMPONENT_ARM_DISARM - ACCEPTED
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+HUD 5 hz drawtime 3 gl True
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:32 AM 6 Arming motors
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3963287 149.1238906 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963287 149.1238906 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963286199365 149.128298642992 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963283797459 149.132706685967 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963279794282 149.137114728907 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963274189835 149.141522771794 space 100 bit 4
+bps 2383 loss 0 left 181 mem 73.134765625 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963266984117 149.145930814612 space 100 bit 5
+HUD 5 hz drawtime 2 gl True
+INFO MissionPlanner.MAVLinkInterface - set giveComport Arm State change current False new True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963258177129 149.150338857341 space 100 bit 6
+INFO MissionPlanner.MAVLinkInterface - getWPint 16 0 0 0 0 opt 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963247768871 149.154746899966 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927354180186 149.1238906 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392735337961 149.128298446572 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927350977882 149.132706293126 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927346975002 149.137114139645 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927341370969 149.141521986112 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927334165785 149.145929832508 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927325359448 149.150337678818 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392731495196 149.154745525022 space 100 bit 15
+bps 2282 loss 0 left 181 mem 71.921875 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891421360373 149.1238906 space 100 bit 16
+HUD 4 hz drawtime 3 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891420559856 149.12829825018 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891418158306 149.132705900343 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891414155721 149.13711355047 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891408552103 149.141521200545 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891401347452 149.145928850551 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891392541767 149.150336500468 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891382135048 149.154744150281 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.385548854056 149.1238906 space 100 bit 24
+HUD 3 hz drawtime 5 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855487740102 149.128298053818 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855485338729 149.132705507618 space 100 bit 26
+bps 2262 loss 0 left 181 mem 72.4794921875 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855481336441 149.137112961383 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855475733237 149.141520415095 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855468529119 149.145927868738 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855459724085 149.150335322293 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855449318136 149.154742775743 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819555720746 149.1238906 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819554920348 149.128297857484 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819552519152 149.132705114951 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.381954851716 149.137112372382 space 100 bit 35
+HUD 4 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819542914371 149.141519629761 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819535710785 149.145926887071 space 100 bit 37
+bps 2233 loss 0 left 181 mem 72.3427734375 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819526906403 149.150334144292 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819516501224 149.154741401409 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622900933 149.1238906 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622100593 149.12829766118 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783619699576 149.132704722342 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783615697879 149.137111783469 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783610095505 149.141518844544 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783602892452 149.145925905549 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783594088721 149.150332966466 space 100 bit 46
+HUD 6 hz drawtime 4 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783583684311 149.154740027278 space 100 bit 47
+bps 2262 loss 0 left 217 mem 72.3037109375 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747690081119 149.1238906 space 100 bit 48
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:37 AM 6 EKF3 IMU0 origin set
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689280839 149.128297464904 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747686879999 149.132704329791 space 100 bit 50
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:37 AM 6 EKF3 IMU1 origin set
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682878599 149.137111194643 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677276638 149.141518059442 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670074118 149.145924924172 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661271038 149.150331788814 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650867398 149.154738653351 space 100 bit 55
+bps 2457 loss 0 left 181 mem 71.8603515625 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 3 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3963287 149.1548633 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963287 149.1548633 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963286199365 149.159271342992 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963283797459 149.163679385967 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963279794282 149.168087428907 space 100 bit 3
+HUD 5 hz drawtime 1 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963274189835 149.172495471794 space 100 bit 4
+bps 2262 loss 0 left 181 mem 69.8134765625 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963266984117 149.176903514612 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963258177129 149.181311557341 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963247768871 149.185719599966 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927354180186 149.1548633 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392735337961 149.159271146572 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927350977882 149.163678993126 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927346975002 149.168086839645 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927341370969 149.172494686112 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927334165785 149.176902532508 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927325359448 149.181310378818 space 100 bit 14
+HUD 4 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392731495196 149.185718225022 space 100 bit 15
+bps 2233 loss 0 left 181 mem 69.6259765625 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891421360373 149.1548633 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891420559856 149.15927095018 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891418158306 149.163678600343 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891414155721 149.16808625047 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891408552103 149.172493900545 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891401347452 149.176901550551 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891392541767 149.181309200468 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891382135048 149.185716850281 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.385548854056 149.1548633 space 100 bit 24
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855487740102 149.159270753818 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855485338729 149.163678207618 space 100 bit 26
+bps 2262 loss 0 left 181 mem 73.23046875 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855481336441 149.168085661383 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855475733237 149.172493115095 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855468529119 149.176900568738 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855459724085 149.181308022293 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855449318136 149.185715475743 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819555720746 149.1548633 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819554920348 149.159270557484 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819552519152 149.163677814951 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.381954851716 149.168085072382 space 100 bit 35
+HUD 4 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819542914371 149.172492329761 space 100 bit 36
+bps 2233 loss 0 left 75 mem 72.666015625 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:42 AM 6 Disarming motors
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:42 AM 6 Field Elevation Set: 584m
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819535710785 149.176899587071 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819526906403 149.181306844292 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819516501224 149.185714101409 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622900933 149.1548633 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622100593 149.15927036118 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783619699576 149.163677422342 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783615697879 149.168084483469 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783610095505 149.172491544544 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783602892452 149.176898605549 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783594088721 149.181305666466 space 100 bit 46
+HUD 5 hz drawtime 5 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783583684311 149.185712727278 space 100 bit 47
+bps 2366 loss 0 left 181 mem 72.9912109375 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747690081119 149.1548633 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689280839 149.159270164904 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747686879999 149.163677029791 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682878599 149.168083894643 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677276638 149.172490759442 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670074118 149.176897624172 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661271038 149.181304488814 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650867398 149.185711353351 space 100 bit 55
+HUD 3 hz drawtime 78 gl True
+bps 2233 loss 0 left 181 mem 72.03515625 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3963287 149.185836 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963287 149.185836 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963286199365 149.190244042992 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963283797459 149.194652085967 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963279794282 149.199060128907 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963274189835 149.203468171794 space 100 bit 4
+bps 2262 loss 0 left 181 mem 70.5390625 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963266984117 149.207876214612 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963258177129 149.212284257341 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3963247768871 149.216692299966 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927354180186 149.185836 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392735337961 149.190243846572 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927350977882 149.194651693126 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927346975002 149.199059539645 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927341370969 149.203467386112 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927334165785 149.207875232508 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3927325359448 149.212283078818 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.392731495196 149.216690925022 space 100 bit 15
+bps 2233 loss 0 left 181 mem 72.6513671875 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891421360373 149.185836 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891420559856 149.19024365018 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891418158306 149.194651300343 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891414155721 149.19905895047 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891408552103 149.203466600545 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891401347452 149.207874250551 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891392541767 149.212281900468 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3891382135048 149.216689550281 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.385548854056 149.185836 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855487740102 149.190243453818 space 100 bit 25
+bps 2262 loss 0 left 217 mem 71.4833984375 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855485338729 149.194650907618 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855481336441 149.199058361383 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855475733237 149.203465815095 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855468529119 149.207873268738 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855459724085 149.212280722293 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3855449318136 149.216688175743 space 100 bit 31
+HUD 6 hz drawtime 17 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819555720746 149.185836 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819554920348 149.190243257484 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819552519152 149.194650514951 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.381954851716 149.199057772382 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819542914371 149.203465029761 space 100 bit 36
+bps 2295 loss 0 left 181 mem 74.2705078125 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819535710785 149.207872287071 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819526906403 149.212279544292 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3819516501224 149.216686801409 space 100 bit 39
+HUD 2 hz drawtime 3 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622900933 149.185836 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783622100593 149.19024306118 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783619699576 149.194650122342 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783615697879 149.199057183469 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783610095505 149.203464244544 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783602892452 149.207871305549 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783594088721 149.212278366466 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3783583684311 149.216685427278 space 100 bit 47
+bps 2233 loss 0 left 181 mem 73.19140625 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747690081119 149.185836 space 100 bit 48
+HUD 1 hz drawtime 12 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689280839 149.190242864904 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747686879999 149.194649729791 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682878599 149.199056594643 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677276638 149.203463459442 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670074118 149.207870324172 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661271038 149.212277188814 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650867398 149.216684053351 space 100 bit 55
+HUD 3 hz drawtime 10 gl True
+bps 2262 loss 0 left 181 mem 72.9990234375 mav2 True sign False mav1 0 mav2 62 signed 0      
+HUD 6 hz drawtime 15 gl True
+bps 2233 loss 0 left 181 mem 72.5390625 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1238739 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1238739 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.128280765008 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.132687629998 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.137094494954 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.141501359857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.14590822469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.150315089435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.154721954076 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1238739 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.128280568796 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.132687237575 space 100 bit 10
+bps 2262 loss 0 left 181 mem 77.01171875 mav2 True sign False mav1 0 mav2 62 signed 0      
+HUD 6 hz drawtime 9 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.137093906318 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.14150057501 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.145907243631 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.150313912165 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.154720580594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1238739 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.128280372613 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.132686845209 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.13709331777 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.141499790279 space 100 bit 20
+bps 2233 loss 0 left 181 mem 75.3896484375 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.145906262718 space 100 bit 21
+HUD 4 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.150312735069 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.154719207316 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1238739 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.12828017646 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.132686452902 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.137092729309 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.141499005664 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.14590528195 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.150311558147 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.15471783424 space 100 bit 31
+bps 2262 loss 0 left 181 mem 74.365234375 mav2 True sign False mav1 0 mav2 62 signed 0      
+HUD 4 hz drawtime 6 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1238739 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.128279980335 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.132686060653 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.137092140936 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.141498221166 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.145904301326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.1503103814 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.154716461368 space 100 bit 39
+HUD 5 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1238739 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.128279784239 space 100 bit 41
+bps 2235 loss 0 left 181 mem 71.71484375 mav2 True sign False mav1 0 mav2 61 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.132685668462 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.137091552649 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.141497436783 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.145903320848 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.150309204826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.154715088699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1238739 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.128279588173 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.132685276328 space 100 bit 50
+HUD 4 hz drawtime 4 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.137090964449 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.141496652517 space 100 bit 52
+bps 2264 loss 0 left 181 mem 72.0048828125 mav2 True sign False mav1 0 mav2 62 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.145902340515 space 100 bit 53
+INFO MissionPlanner.MAVLinkInterface - Request stream RC_CHANNELS at 2 hz for 1:1
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport Base Thread current True new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd SET_MESSAGE_INTERVAL 271 500000 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.150308028426 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.154713716233 space 100 bit 55
+HUD 4 hz drawtime 10 gl True
+bps 2322 loss 0 left 217 mem 72.3408203125 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.374769 149.1858108 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374769 149.1858108 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747689200003 149.190217665008 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.374768680001 149.194624529998 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747682800023 149.199031394954 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747677200041 149.203438259857 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747670000065 149.20784512469 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747661200093 149.212251989435 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3747650800127 149.216658854076 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711757180187 149.1858108 space 100 bit 8
+HUD 4 hz drawtime 12 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711756380248 149.190217468796 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711753980434 149.194624137575 space 100 bit 10
+bps 2287 loss 0 left 181 mem 72.671875 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711749980742 149.199030806318 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711744381174 149.20343747501 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371173718173 149.207844143631 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.371172838241 149.212250812165 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3711717983213 149.216657480594 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675824360373 149.1858108 space 100 bit 16
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:58 AM 6 EKF3 IMU0 is using GPS
+INFO MissionPlanner.MAVLinkInterface - 11/5/2026 11:11:58 AM 6 EKF3 IMU1 is using GPS
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675823560494 149.190217272613 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675821160857 149.194623745209 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675817161461 149.19903021777 space 100 bit 19
+HUD 4 hz drawtime 17 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675811562308 149.203436690279 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675804363396 149.207843162718 space 100 bit 21
+bps 2303 loss 0 left 181 mem 72.0078125 mav2 True sign False mav1 0 mav2 63 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675795564726 149.212249635069 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3675785166299 149.216656107316 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989154056 149.1858108 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363989074074 149.19021707646 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988834128 149.194623352902 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.363988434218 149.199029629309 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639878743441 149.203435905664 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639871545061 149.20784218195 space 100 bit 29
+HUD 4 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639862747043 149.212248458147 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3639852349384 149.21665473424 space 100 bit 31
+bps 2376 loss 0 left 181 mem 71.765625 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603958720746 149.1858108 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603957920985 149.190216880335 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603955521703 149.194622960653 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603951522899 149.199029040936 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603945924574 149.203435121166 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603938726727 149.207841201326 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603929929359 149.2122472814 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3603919532469 149.216653361368 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025900933 149.1858108 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568025101231 149.190216684239 space 100 bit 41
+HUD 4 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568022702126 149.194622568462 space 100 bit 42
+bps 2347 loss 0 left 181 mem 71.013671875 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568018703618 149.199028452649 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568013105706 149.203434336783 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3568005908392 149.207840220848 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567997111674 149.212246104826 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3567986715554 149.216651988699 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093081119 149.1858108 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532092281477 149.190216488173 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532089882549 149.194622176328 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085884337 149.199027864449 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080286839 149.203433552517 space 100 bit 52
+bps 2376 loss 0 left 181 mem 70.4091796875 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073090057 149.207839240515 space 100 bit 53
+HUD 5 hz drawtime 6 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353206429399 149.212244928426 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053898638 149.216650616233 space 100 bit 55
+bps 2347 loss 0 left 181 mem 73.3818359375 mav2 True sign False mav1 0 mav2 65 signed 0      
+HUD 4 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3532093 149.1238571 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093 149.1238571 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353209220064 149.128262788276 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353208980256 149.132668476535 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085805761 149.137074164759 space 100 bit 3
+HUD 3 hz drawtime 3 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080210242 149.141479852931 space 100 bit 4
+bps 2376 loss 0 left 181 mem 73.1796875 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073016003 149.145885541033 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532064223045 149.150291229048 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053831367 149.154696916958 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496160180187 149.1238571 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496159380886 149.128262592273 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496156982983 149.132668084529 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349615298648 149.13707357675 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496147391374 149.141479068919 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496140197668 149.145884561018 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349613140536 149.15029005303 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349612101445 149.154695544937 space 100 bit 15
+bps 2347 loss 0 left 181 mem 72.615234375 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460227360373 149.1238571 space 100 bit 16
+HUD 5 hz drawtime 7 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460226561131 149.128262396299 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460224163406 149.132667692581 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460220167198 149.137072988828 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460214572507 149.141478285023 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460207379332 149.145883581148 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460198587674 149.150288877186 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460188197533 149.154694173119 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.342429454056 149.1238571 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424293741377 149.128262200354 space 100 bit 25
+bps 2376 loss 0 left 181 mem 71.86328125 mav2 True sign False mav1 0 mav2 66 signed 0      
+HUD 5 hz drawtime 8 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424291343829 149.132667300691 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424287347917 149.137072400993 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424281753639 149.141477501243 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424274560996 149.145882601423 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424265769988 149.150287701516 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424255380616 149.154692801504 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388361720746 149.1238571 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388360921623 149.128262004438 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388358524252 149.132666908859 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388354528635 149.137071813245 space 100 bit 35
+bps 2347 loss 0 left 181 mem 71.2607421875 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388348934771 149.141476717579 space 100 bit 36
+HUD 4 hz drawtime 10 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.338834174266 149.145881621843 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388332952302 149.15028652602 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388322563698 149.154691430092 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428900933 149.1238571 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428101868 149.128261808551 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352425704675 149.132666517085 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352421709353 149.137071225584 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352416115903 149.141475934031 space 100 bit 44
+HUD 3 hz drawtime 4 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352408924324 149.145880642408 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352400134616 149.150285350698 space 100 bit 46
+bps 2401 loss 0 left 181 mem 74.5126953125 mav2 True sign False mav1 0 mav2 67 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352389746779 149.154690058883 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316496081119 149.1238571 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316495282114 149.128261612693 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316492885098 149.132666125369 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316488890071 149.13707063801 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316483297034 149.141475150598 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316476105987 149.145879663117 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316467316929 149.150284175549 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316456929861 149.154688687877 space 100 bit 55
+HUD 5 hz drawtime 6 gl True
+bps 2347 loss 0 left 181 mem 71.908203125 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3532093 149.1548214 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093 149.1548214 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353209220064 149.159227088276 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353208980256 149.163632776535 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085805761 149.168038464759 space 100 bit 3
+HUD 5 hz drawtime 8 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080210242 149.172444152931 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073016003 149.176849841033 space 100 bit 5
+bps 2376 loss 0 left 181 mem 71.6875 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532064223045 149.181255529048 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053831367 149.185661216958 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496160180187 149.1548214 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496159380886 149.159226892273 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496156982983 149.163632384529 space 100 bit 10
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349615298648 149.16803787675 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496147391374 149.172443368919 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496140197668 149.176848861018 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349613140536 149.18125435303 space 100 bit 14
+HUD 4 hz drawtime 10 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349612101445 149.185659844937 space 100 bit 15
+bps 2347 loss 0 left 181 mem 70.7265625 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460227360373 149.1548214 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460226561131 149.159226696299 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460224163406 149.163631992581 space 100 bit 18
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460220167198 149.168037288828 space 100 bit 19
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460214572507 149.172442585023 space 100 bit 20
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460207379332 149.176847881148 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460198587674 149.181253177186 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460188197533 149.185658473119 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.342429454056 149.1548214 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424293741377 149.159226500354 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424291343829 149.163631600691 space 100 bit 26
+bps 2376 loss 0 left 931 mem 69.54296875 mav2 True sign False mav1 0 mav2 66 signed 0      
+HUD 5 hz drawtime 10 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424287347917 149.168036700993 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424281753639 149.172441801243 space 100 bit 28
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424274560996 149.176846901423 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424265769988 149.181252001516 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424255380616 149.185657101504 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388361720746 149.1548214 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388360921623 149.159226304438 space 100 bit 33
+HUD 4 hz drawtime 13 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388358524252 149.163631208859 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388354528635 149.168036113245 space 100 bit 35
+bps 2347 loss 0 left 181 mem 72.3017578125 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388348934771 149.172441017579 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.338834174266 149.176845921843 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388332952302 149.18125082602 space 100 bit 38
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388322563698 149.185655730092 space 100 bit 39
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428900933 149.1548214 space 100 bit 40
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428101868 149.159226108551 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352425704675 149.163630817085 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352421709353 149.168035525584 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352416115903 149.172440234031 space 100 bit 44
+HUD 5 hz drawtime 10 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352408924324 149.176844942408 space 100 bit 45
+bps 2347 loss 0 left 181 mem 71.86328125 mav2 True sign False mav1 0 mav2 65 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352400134616 149.181249650698 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352389746779 149.185654358883 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316496081119 149.1548214 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316495282114 149.159225912693 space 100 bit 49
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316492885098 149.163630425369 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316488890071 149.16803493801 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316483297034 149.172439450598 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316476105987 149.176843963117 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316467316929 149.181248475549 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316456929861 149.185652987877 space 100 bit 55
+bps 1213 loss 0 left 2311 mem 70.361328125 mav2 True sign False mav1 0 mav2 34 signed 0      
+HUD 3 hz drawtime 7 gl True
+HUD 2 hz drawtime 5 gl True
+bps 3510 loss 0 left 181 mem 72.2978515625 mav2 True sign False mav1 0 mav2 97 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - received TERRAIN_REQUEST -35.3532093 149.1857857 space 100 11111111111111111111111111111111111111111111111111111111
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532093 149.1857857 space 100 bit 0
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353209220064 149.190191388276 space 100 bit 1
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.353208980256 149.194597076535 space 100 bit 2
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532085805761 149.199002764759 space 100 bit 3
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532080210242 149.203408452931 space 100 bit 4
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532073016003 149.207814141033 space 100 bit 5
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532064223045 149.212219829048 space 100 bit 6
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3532053831367 149.216625516958 space 100 bit 7
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496160180187 149.1857857 space 100 bit 8
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496159380886 149.190191192273 space 100 bit 9
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496156982983 149.194596684529 space 100 bit 10
+bps 2376 loss 0 left 181 mem 71.48828125 mav2 True sign False mav1 0 mav2 66 signed 0      
+HUD 7 hz drawtime 6 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349615298648 149.19900217675 space 100 bit 11
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496147391374 149.203407668919 space 100 bit 12
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3496140197668 149.207813161018 space 100 bit 13
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349613140536 149.21221865303 space 100 bit 14
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.349612101445 149.216624144937 space 100 bit 15
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460227360373 149.1857857 space 100 bit 16
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460226561131 149.190190996299 space 100 bit 17
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460224163406 149.194596292581 space 100 bit 18
+HUD 4 hz drawtime 5 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460220167198 149.199001588828 space 100 bit 19
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 0 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460214572507 149.203406885023 space 100 bit 20
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 1 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2372 loss 0 left 0 mem 71.7900390625 mav2 True sign False mav1 0 mav2 66 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460207379332 149.207812181148 space 100 bit 21
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460198587674 149.212217477186 space 100 bit 22
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3460188197533 149.216622773119 space 100 bit 23
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.342429454056 149.1857857 space 100 bit 24
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424293741377 149.190190800354 space 100 bit 25
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424291343829 149.194595900691 space 100 bit 26
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424287347917 149.199001000993 space 100 bit 27
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424281753639 149.203406101243 space 100 bit 28
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 2 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 3 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2270 loss 0 left 181 mem 70.0771484375 mav2 True sign False mav1 0 mav2 64 signed 0      
+HUD 4 hz drawtime 5 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424274560996 149.207811201423 space 100 bit 29
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424265769988 149.212216301516 space 100 bit 30
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3424255380616 149.216621401504 space 100 bit 31
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388361720746 149.1857857 space 100 bit 32
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388360921623 149.190190604438 space 100 bit 33
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388358524252 149.194595508859 space 100 bit 34
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388354528635 149.199000413245 space 100 bit 35
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388348934771 149.203405317579 space 100 bit 36
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.338834174266 149.207810221843 space 100 bit 37
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388332952302 149.21221512602 space 100 bit 38
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 4 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 5 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3388322563698 149.216620030092 space 100 bit 39
+bps 2421 loss 0 left 181 mem 69.9140625 mav2 True sign False mav1 0 mav2 67 signed 0      
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428900933 149.1857857 space 100 bit 40
+HUD 5 hz drawtime 13 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352428101868 149.190190408551 space 100 bit 41
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352425704675 149.194595117085 space 100 bit 42
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352421709353 149.198999825584 space 100 bit 43
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352416115903 149.203404534031 space 100 bit 44
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352408924324 149.207809242408 space 100 bit 45
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352400134616 149.212213950698 space 100 bit 46
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3352389746779 149.216618658883 space 100 bit 47
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316496081119 149.1857857 space 100 bit 48
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316495282114 149.190190212693 space 100 bit 49
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 6 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 7 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2450 loss 0 left 181 mem 69.4052734375 mav2 True sign False mav1 0 mav2 68 signed 0      
+HUD 6 hz drawtime 2 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316492885098 149.194594725369 space 100 bit 50
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316488890071 149.19899923801 space 100 bit 51
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316483297034 149.203403750598 space 100 bit 52
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316476105987 149.207808263117 space 100 bit 53
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316467316929 149.212212775549 space 100 bit 54
+INFO MissionPlanner.Utilities.TerrainFollow - SendGrid -35.3316456929861 149.216617287877 space 100 bit 55
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 8 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 9 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2421 loss 0 left 181 mem 69.9462890625 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 1 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 10 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 11 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2422 loss 0 left 181 mem 73.49609375 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 1 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 12 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 13 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 73.3056640625 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 14 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 15 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 73.14453125 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 16 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 17 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 72.6201171875 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 18 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 19 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 72.4921875 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 0 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 20 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 21 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2448 loss 0 left 181 mem 72.330078125 mav2 True sign False mav1 0 mav2 68 signed 0      
+HUD 6 hz drawtime 1 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 22 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 23 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 72.259765625 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 6 hz drawtime 2 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 24 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 25 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 71.8466796875 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 5 hz drawtime 1 gl True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd COMPONENT_ARM_DISARM 0 21196 0 0 0 0 0
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new True
+INFO MissionPlanner.MAVLinkInterface - doCommand cmd resp COMPONENT_ARM_DISARM - ACCEPTED
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 26 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 27 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2445 loss 0 left 181 mem 71.7392578125 mav2 True sign False mav1 0 mav2 68 signed 0      
+HUD 5 hz drawtime 1 gl True
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 28 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+INFO MissionPlanner.MAVLinkInterface - GetParam name: '' or index: 29 1:1
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current False new True
+INFO MissionPlanner.MAVLinkInterface - set giveComport  current True new False
+bps 2423 loss 0 left 181 mem 70.798828125 mav2 True sign False mav1 0 mav2 67 signed 0      
+HUD 4 hz drawtime 0 gl True
+INFO MissionPlanner.Utilities.TerrainFollow - OnPacketReceived remove to packets
+INFO MissionPlanner.MAVLinkInterface - set giveComport Script Thread (new) current False new False
+Run Script Done
+HUD 2 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 2 hz drawtime 1 gl True
+HUD 1 hz drawtime 9 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True

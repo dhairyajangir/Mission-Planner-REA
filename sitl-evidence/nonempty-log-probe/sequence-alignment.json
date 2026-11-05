@@ -1,0 +1,21 @@
+{
+  "aligned_source_records": 140847,
+  "aligned_converted_lines": 140846,
+  "source_records": 140847,
+  "converted_lines": 140847,
+  "candidate_edits": [
+    {
+      "source_index_1based": 1664,
+      "converted_index_1based": 1664,
+      "pymavlink_only": [
+        "UNIT"
+      ],
+      "mission_planner_only": []
+    }
+  ],
+  "pymavlink_unaligned_tail": [],
+  "mission_planner_unaligned_tail": [
+    "MAG"
+  ],
+  "scope": "Heuristic type-name alignment only; duplicate names can make alignment ambiguous."
+}

@@ -1,0 +1,346 @@
+{
+  "scope": "Original Mission Planner library; typed mission and fence in disposable Copter SITL; no UI or flight",
+  "relay": {
+    "scope": "Disposable Copter SITL; typed mission and fence roundtrip; no deliberate loss",
+    "case": "fence_roundtrip",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7440,
+    "proxy_port": 7441,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "38c90328f9c494c1e8782717942c74a5786410e021ade76836df1d2b09ab936e",
+      "to_client_output.bin": "38c90328f9c494c1e8782717942c74a5786410e021ade76836df1d2b09ab936e",
+      "to_sitl_input.bin": "4e93f8404b0293a180a7873e82e25c82ceaad45224bcb3b43e13109dbbad35f3",
+      "to_sitl_output.bin": "4e93f8404b0293a180a7873e82e25c82ceaad45224bcb3b43e13109dbbad35f3"
+    }
+  },
+  "library_hashes": {
+    "ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "mavlink": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6"
+  },
+  "probe_source_sha256": "93317c9d88ca2171b4616711c5eec41398edbfbc25cb6270f5f84ae89265519f",
+  "probe_exe_sha256": "6b68a46d2f22fdceb544ce62d37f8bc46348e6c88500a857744ff19fe322b9d5",
+  "probe_log_sha256": "2c301a9eef849d2b908e86575c46f6389b8a6803f81d032416bd92f0ebeb00c5",
+  "sent": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 0,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353632610,
+      "y": 1491652300,
+      "z": 0.0,
+      "mission_type": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0,
+      "mission_type": 0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "counts": [
+    {
+      "mavpackettype": "MISSION_COUNT",
+      "target_system": 1,
+      "target_component": 1,
+      "count": 2,
+      "mission_type": 0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "received": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "frame": 0,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "MISSION_ACK",
+      "target_system": 255,
+      "target_component": 190,
+      "type": 0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "mavpackettype": "MISSION_REQUEST",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_REQUEST",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "READ=MISSION:0:16:0:0:0:0",
+    "ERROR=System.Exception: item mismatch MISSION:0"
+  ]
+}

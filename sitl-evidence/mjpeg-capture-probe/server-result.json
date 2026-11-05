@@ -1,0 +1,21 @@
+{
+  "scope": "synthetic MJPEG frames served on 127.0.0.1 only",
+  "requests": 1,
+  "frames_sent": 3,
+  "fixture_sha256": [
+    {
+      "file": "red.jpg",
+      "sha256": "dc138d39288b7dee5ecb8dbddc9128c7d1a5ac07d7d9c828cf463625d65bb3f0"
+    },
+    {
+      "file": "green.jpg",
+      "sha256": "13e6bfc2161b8a3c0f96ec43759ba129a5159279ffa5b40e7beac70d73e796f6"
+    },
+    {
+      "file": "blue.jpg",
+      "sha256": "a6280d0ac6d5228ef5db7e5de671b61e84fc7e55d4bd4d054777a09335266dea"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "Selected source files and static binary strings; build-to-source equivalence not proven",
+  "old_source_commit": "fb773567896014da007bca58358704d4a0d8516f",
+  "old_binary_reported_revision_prefix": "fb773567",
+  "new_source_commit": "72b238201f5ea3b556e3809b2ec704fcf701474a",
+  "old_file_source": "GitHub API at pinned commit",
+  "files": [
+    {
+      "repository_path": "libraries/GCS_MAVLink/GCS_Fence.cpp",
+      "old_file": "sitl-evidence/legacy-fence-source/GCS_Fence.cpp",
+      "old_git_blob_sha1": "b3bfb78a37194fdfbd5d78dd355785532701fd38",
+      "new_git_blob_sha1": "f1e305ff72ecd71b1e9271db56a3ff19bda556b0"
+    },
+    {
+      "repository_path": "libraries/GCS_MAVLink/GCS_Common.cpp",
+      "old_file": "sitl-evidence/legacy-fence-source/GCS_Common.cpp",
+      "old_git_blob_sha1": "da5d47e30e6d1b2501a8e4302cf4c7bf1f05d22d",
+      "new_git_blob_sha1": "310c4debab0f2df72265592eb8955518e86011ed"
+    },
+    {
+      "repository_path": "libraries/AC_Fence/AC_Fence_config.h",
+      "old_file": "sitl-evidence/legacy-fence-source/AC_Fence_config.h",
+      "old_git_blob_sha1": "e3b83081f720add3d71a6f2094f1038ce1462e61",
+      "new_git_blob_sha1": "23707a539351424d8a591d849172eac9af7cff14"
+    },
+    {
+      "repository_path": "libraries/AC_Fence/AC_PolyFence_loader.cpp",
+      "old_file": "sitl-evidence/legacy-fence-source/AC_PolyFence_loader.cpp",
+      "old_git_blob_sha1": "b77eabcae746f29f14453160b8678789c190bcc8",
+      "new_git_blob_sha1": "9843fafafc781c040c8362ae2e4caf9d08d5fbc5"
+    },
+    {
+      "repository_path": "libraries/AC_Fence/AC_PolyFence_loader.h",
+      "old_file": "sitl-evidence/legacy-fence-source/AC_PolyFence_loader.h",
+      "old_git_blob_sha1": "1a4b3ce6decc8d13179f417a63fa5441ca960a8a",
+      "new_git_blob_sha1": "e09a38099c64ffcbdf8095bff37bc95073ca85f7"
+    }
+  ],
+  "binaries": {
+    "prebuilt_4_7_2": {
+      "sha256": "caed35e4cb796ec06cac40b09566a18251771486b1cbac5e2bf16b7a5ed5045d",
+      "legacy_dispatch_string_count": 1,
+      "legacy_fetch_string_count": 1
+    },
+    "source_built_4_8_dev": {
+      "sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+      "legacy_dispatch_string_count": 0,
+      "legacy_fetch_string_count": 0
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  "tests/test_authentication.py::TestAuthentication::test_add_user_to_database",
+  "tests/test_authentication.py::TestAuthentication::test_concurrent_database_access",
+  "tests/test_authentication.py::TestAuthentication::test_database_creation",
+  "tests/test_authentication.py::TestAuthentication::test_database_file_permissions",
+  "tests/test_authentication.py::TestAuthentication::test_duplicate_user_handling",
+  "tests/test_authentication.py::TestAuthentication::test_empty_key_handling",
+  "tests/test_authentication.py::TestAuthentication::test_empty_username_handling",
+  "tests/test_authentication.py::TestAuthentication::test_invalid_port_number",
+  "tests/test_authentication.py::TestAuthentication::test_keydb_help_functionality",
+  "tests/test_authentication.py::TestAuthentication::test_list_users_in_database",
+  "tests/test_authentication.py::TestAuthentication::test_long_username_handling",
+  "tests/test_authentication.py::TestAuthentication::test_remove_user_from_database",
+  "tests/test_authentication.py::TestAuthentication::test_special_characters_in_username",
+  "tests/test_connections.py::TestMixedConnections::test_tcp_user_udp_engineer",
+  "tests/test_connections.py::TestMixedConnections::test_udp_user_tcp_engineer",
+  "tests/test_connections.py::TestTCPConnections::test_bad_signing_key",
+  "tests/test_connections.py::TestTCPConnections::test_good_signing_key",
+  "tests/test_connections.py::TestTCPConnections::test_unsigned_engineer",
+  "tests/test_connections.py::TestUDPConnections::test_bad_signing_key",
+  "tests/test_connections.py::TestUDPConnections::test_good_signing_key",
+  "tests/test_connections.py::TestUDPConnections::test_unsigned_engineer"
+]

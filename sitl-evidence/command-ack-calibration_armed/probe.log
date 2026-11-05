@@ -1,0 +1,220 @@
+111 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+142 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+142 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+142 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+159 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+159 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+174 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+174 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+174 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+174 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7271 0
+174 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7271
+174 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+190 [3] INFO MissionPlanner.MAVLinkInterface (null) - 427 Start connect loop 
+206 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+222 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+222 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+238 [3] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 1.8095703125 mav2 False sign False mav1 0 mav2 0 signed 0      
+317 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+317 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+317 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+317 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+317 [4] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+317 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+317 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+351 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:43 AM 7 RCInput: decoding UDP (Pulses)
+428 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:43 AM 6 Calibrating barometer
+bps 521 loss 0 left 0 mem 2.08203125 mav2 False sign False mav1 0 mav2 14 signed 0      
+1155 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+1187 [12] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1191 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\Mission Planner\ParameterMetaData.xml
+1191 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-portable\\ParameterMetaDataBackup.xml
+Using backup param data
+1234 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1234 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1234 [3] INFO MissionPlanner.MAVLinkInterface (null) - 471 Start connect loop 
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1250 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1624 [15] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+1625 [14] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2034 [14] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2046 [15] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+bps 42 loss 0 left 276 mem 12.142578125 mav2 True sign False mav1 0 mav2 2 signed 0      
+2047 [4] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2047 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:45 AM 6 Barometer 1 calibration complete
+2047 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:45 AM 6 Barometer 2 calibration complete
+Init Gyro*2110 [9] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2110 [9] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2111 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2111 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2121 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2121 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2121 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2121 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2455 [14] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2471 [15] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2683 [7] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+2862 [14] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2877 [15] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3238 [9] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+3285 [15] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3793 [7] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4359 [12] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2023931762
+4359 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4359 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4359 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4359 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4359 [3] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4359 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+7166 [12] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7166 [12] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7166 [9] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7166 [12] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 333 loss 0 left 1570 mem 13.0615234375 mav2 True sign False mav1 0 mav2 9 signed 0      
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7166 [9] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd COMPONENT_ARM_DISARM 1 21196 0 0 0 0 0
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 22 loss 0 left 1790 mem 13.0927734375 mav2 True sign False mav1 0 mav2 1 signed 0      
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_AUTOPILOT_CAPABILITIES - FAILED - Commands dont match
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp DO_SEND_BANNER - ACCEPTED - Commands dont match
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 ArduCopter V4.8.0-dev (72b23820)
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 ï¿½04cfea5c7cf4f1fb8b47f8b3e8289cf
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 Frame: QUAD/PLUS
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU0 initialised
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU1 initialised
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 AHRS: EKF3 active
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU0 tilt alignment complete
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU1 tilt alignment complete
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 GPS 1: probing for u-blox at 230400 baud
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 GPS 1: detected u-blox
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp COMPONENT_ARM_DISARM - ACCEPTED
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+ARM_COMMAND_RETURN=True
+10370 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:02:53 AM 6 Arming motors
+bps 1932 loss 0 left 0 mem 13.5224609375 mav2 True sign False mav1 0 mav2 52 signed 0      
+ARMED_HEARTBEAT=True
+11157 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd PREFLIGHT_CALIBRATION 0 0 0 0 1 0 0
+11157 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+11157 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+PREFLIGHT_CALIBRATION_RETURN=True
+ERROR=System.Exception: armed calibration unexpectedly accepted
+   at AccelCalibrationArmedProbe.Main(String[] args)
+11162 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+11162 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+11162 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+11162 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7271

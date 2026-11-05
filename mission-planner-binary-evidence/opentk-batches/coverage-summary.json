@@ -1,0 +1,136 @@
+{
+  "assembly_sha256": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4",
+  "expected_types": 3869,
+  "expected_methods": 33436,
+  "observed_types": 3857,
+  "observed_methods": 22053,
+  "unexpected_types": [],
+  "missing_types": [
+    {
+      "token": "0x020001f2",
+      "name": "OpenTK.Platform.X11.Glx/Ext"
+    },
+    {
+      "token": "0x0200028d",
+      "name": "OpenTK.Platform.Windows.Wgl/Ext"
+    },
+    {
+      "token": "0x02000373",
+      "name": "OpenTK.Graphics.OpenGL4.GL/Ext"
+    },
+    {
+      "token": "0x02000376",
+      "name": "OpenTK.Graphics.OpenGL4.GL/NV"
+    },
+    {
+      "token": "0x020005b1",
+      "name": "OpenTK.Graphics.ES30.GL/Ext"
+    },
+    {
+      "token": "0x020005b5",
+      "name": "OpenTK.Graphics.ES30.GL/NV"
+    },
+    {
+      "token": "0x020007d1",
+      "name": "OpenTK.Graphics.ES20.GL/Ext"
+    },
+    {
+      "token": "0x020007d5",
+      "name": "OpenTK.Graphics.ES20.GL/NV"
+    },
+    {
+      "token": "0x020009de",
+      "name": "OpenTK.Graphics.ES11.GL/Ext"
+    },
+    {
+      "token": "0x020009e1",
+      "name": "OpenTK.Graphics.ES11.GL/NV"
+    },
+    {
+      "token": "0x02000ef6",
+      "name": "OpenTK.Graphics.OpenGL.GL/Ext"
+    },
+    {
+      "token": "0x02000efe",
+      "name": "OpenTK.Graphics.OpenGL.GL/NV"
+    }
+  ],
+  "method_count_mismatches": [
+    {
+      "token": "0x020001f2",
+      "name": "OpenTK.Platform.X11.Glx/Ext",
+      "expected": 2,
+      "observed": 0
+    },
+    {
+      "token": "0x0200028d",
+      "name": "OpenTK.Platform.Windows.Wgl/Ext",
+      "expected": 3,
+      "observed": 0
+    },
+    {
+      "token": "0x02000373",
+      "name": "OpenTK.Graphics.OpenGL4.GL/Ext",
+      "expected": 1289,
+      "observed": 0
+    },
+    {
+      "token": "0x02000376",
+      "name": "OpenTK.Graphics.OpenGL4.GL/NV",
+      "expected": 961,
+      "observed": 0
+    },
+    {
+      "token": "0x020005b1",
+      "name": "OpenTK.Graphics.ES30.GL/Ext",
+      "expected": 1084,
+      "observed": 0
+    },
+    {
+      "token": "0x020005b5",
+      "name": "OpenTK.Graphics.ES30.GL/NV",
+      "expected": 1166,
+      "observed": 0
+    },
+    {
+      "token": "0x020007d1",
+      "name": "OpenTK.Graphics.ES20.GL/Ext",
+      "expected": 1084,
+      "observed": 0
+    },
+    {
+      "token": "0x020007d5",
+      "name": "OpenTK.Graphics.ES20.GL/NV",
+      "expected": 1166,
+      "observed": 0
+    },
+    {
+      "token": "0x020009de",
+      "name": "OpenTK.Graphics.ES11.GL/Ext",
+      "expected": 99,
+      "observed": 0
+    },
+    {
+      "token": "0x020009e1",
+      "name": "OpenTK.Graphics.ES11.GL/NV",
+      "expected": 29,
+      "observed": 0
+    },
+    {
+      "token": "0x02000ef6",
+      "name": "OpenTK.Graphics.OpenGL.GL/Ext",
+      "expected": 2483,
+      "observed": 0
+    },
+    {
+      "token": "0x02000efe",
+      "name": "OpenTK.Graphics.OpenGL.GL/NV",
+      "expected": 2017,
+      "observed": 0
+    }
+  ],
+  "errors": [],
+  "complete_batches": 481,
+  "partial_batches": 2,
+  "complete": false
+}

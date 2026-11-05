@@ -1,0 +1,36 @@
+{
+  "scope": "Disposable source-built Copter SITL; relay inserts progress ACK and shifts accepted ACK sequence",
+  "case": "inject_progress_sequential",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7110,
+  "proxy_port": 7111,
+  "requests": [
+    {
+      "confirmation": 0,
+      "target": [
+        1,
+        1
+      ]
+    }
+  ],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "injected_acks": 1,
+  "shifted_acks": 1,
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "injected_ack.bin": "efed3e99b95027bebb77a81cdec68c9acfe4ad833c3c8b08a6b45ca849a4372f",
+    "modified_ack.bin": "ad5087d5c216fa51f7c405892852886d3b0e876275e569f7f8a9ab87927dbfb2",
+    "original_ack.bin": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734",
+    "to_client_input.bin": "6aa4c693d645e9c9f7de64f8bd3e5c678795a5a1212c11a23ed0a719bbaa7538",
+    "to_client_output.bin": "c93145b8d0abfdc931154a46d76419ff6d9428bc5b5b6b0b19844e59e5b0d566",
+    "to_sitl_input.bin": "98a5ddfd485fdb35fbec312d5b22eb0880fdb0a52dd059a09659248c16609099",
+    "to_sitl_output.bin": "98a5ddfd485fdb35fbec312d5b22eb0880fdb0a52dd059a09659248c16609099"
+  }
+}

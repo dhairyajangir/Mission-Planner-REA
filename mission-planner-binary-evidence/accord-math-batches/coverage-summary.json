@@ -1,0 +1,26 @@
+{
+  "assembly_sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+  "expected_types": 466,
+  "expected_methods": 12532,
+  "observed_types": 465,
+  "observed_methods": 4954,
+  "unexpected_types": [],
+  "missing_types": [
+    {
+      "token": "0x0200001b",
+      "name": "Accord.Math.Matrix"
+    }
+  ],
+  "method_count_mismatches": [
+    {
+      "token": "0x0200001b",
+      "name": "Accord.Math.Matrix",
+      "expected": 7578,
+      "observed": 0
+    }
+  ],
+  "errors": [],
+  "complete_batches": 58,
+  "partial_batches": 1,
+  "complete": false
+}

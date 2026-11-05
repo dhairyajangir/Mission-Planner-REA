@@ -1,0 +1,52 @@
+{
+  "temp_directory": "/tmp/ardupilot-sitl-72b23820-i2i285fm",
+  "commit": "72b238201f5ea3b556e3809b2ec704fcf701474a",
+  "status": "failed",
+  "steps": [
+    {
+      "step": "create temporary workspace",
+      "status": "running"
+    },
+    {
+      "step": "copy verified source ZIP",
+      "status": "complete",
+      "sha256": "7edc50142718c3c98c1c679cf398ce7e258e29ec889ae65a53855b7a2bce931d"
+    },
+    {
+      "step": "extract source ZIP",
+      "status": "complete"
+    },
+    {
+      "step": "extract verified pinned dependencies",
+      "status": "complete",
+      "count": 16
+    },
+    {
+      "step": "verify copied Git revision metadata",
+      "status": "complete",
+      "head": "72b238201f5ea3b556e3809b2ec704fcf701474a"
+    },
+    {
+      "step": "configure",
+      "status": "running"
+    },
+    {
+      "step": "configure",
+      "status": "complete",
+      "log": "archive-linux-extras-retry-configure.log"
+    },
+    {
+      "step": "build blimp",
+      "status": "running"
+    },
+    {
+      "step": "build workflow",
+      "status": "failed"
+    }
+  ],
+  "limitations": [
+    "Temporary source tree uses verified archives and copied Git metadata; it is not a pristine recursive Git checkout.",
+    "Compiler output is a local build, not an official release."
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/build-extras-retry-in-linux-tmp.py\", line 115, in <module>\n    p = subprocess.run(args, cwd=source, env=env, stdout=log, stderr=subprocess.STDOUT, timeout=3600)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 2141, in _communicate\n    self.wait(timeout=self._remaining_time(endtime))\n  File \"/usr/lib/python3.12/subprocess.py\", line 1264, in wait\n    return self._wait(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/subprocess.py\", line 2045, in _wait\n    raise TimeoutExpired(self.args, timeout)\nsubprocess.TimeoutExpired: Command '['python3', 'waf', 'blimp', '-j', '1']' timed out after 3599.9999798569997 seconds\n"
+}

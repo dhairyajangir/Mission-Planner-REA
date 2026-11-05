@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; synthetic nonfinite waypoint upload",
+  "case": "wpl_nan_float",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "sitl",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "b074c2efbff78b79ac28b11df51bee596dfb84ba9074a54fca29a84adc82796b",
+    "to_client_output.bin": "b074c2efbff78b79ac28b11df51bee596dfb84ba9074a54fca29a84adc82796b",
+    "to_sitl_input.bin": "9c4b1baa86d0a3f9ebfcb2d1bb72a8e39d860f33a192d8295c7d9f9d9990cc28",
+    "to_sitl_output.bin": "9c4b1baa86d0a3f9ebfcb2d1bb72a8e39d860f33a192d8295c7d9f9d9990cc28"
+  }
+}

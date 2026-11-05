@@ -1,0 +1,1163 @@
+127 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+150 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+156 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+158 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+166 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+176 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+189 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+191 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+192 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+193 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7561 0
+194 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7561
+199 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+200 [3] INFO MissionPlanner.MAVLinkInterface (null) - 16 Start connect loop 
+208 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+226 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+226 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+255 [3] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 1.8173828125 mav2 False sign False mav1 0 mav2 0 signed 0      
+326 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+326 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+326 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+326 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+326 [6] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+326 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+326 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+365 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:55:37 PM 7 RCInput: decoding UDP (Pulses)
+443 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:55:37 PM 6 Calibrating barometer
+1174 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+1205 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1206 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+1207 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+1208 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+1209 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+1210 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+1211 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+1212 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+1212 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+1221 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\Mission Planner\ParameterMetaData.xml
+1222 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-portable\\ParameterMetaDataBackup.xml
+Using backup param data
+1286 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1287 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - 104 Start connect loop 
+1296 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 542 loss 0 left 0 mem 11.458984375 mav2 True sign False mav1 0 mav2 15 signed 0      
+1296 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1297 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1297 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1297 [3] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1297 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1773 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+1794 [11] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2045 [6] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2045 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:55:38 PM 6 Barometer 1 calibration complete
+2046 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:55:38 PM 6 Barometer 2 calibration complete
+Init Gyro*2127 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2127 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2127 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2127 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2127 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2127 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2127 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2127 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2280 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2280 [11] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2680 [10] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+2775 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2775 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3215 [8] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+3247 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3262 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3772 [8] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+3772 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+4312 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1410018405
+4313 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4313 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4313 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4313 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4313 [3] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4313 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+OPEN=True SELECTED=1:1
+7196 [7] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7196 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7198 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7198 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7202 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7203 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 354 loss 0 left 1660 mem 13.0654296875 mav2 True sign False mav1 0 mav2 10 signed 0      
+7205 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7205 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7205 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7206 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+12342 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdResetSessions
+12343 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+12343 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+12343 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdResetSessions
+12347 [10] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+12458 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+12568 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+12677 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+12787 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+12898 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13013 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13114 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13217 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13329 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13430 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:50.162
+13430 [10] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+13540 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+13650 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+13760 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+13864 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+13977 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14079 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14181 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14294 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14397 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14507 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:51.246
+14507 [10] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+14616 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+14727 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+14836 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+14946 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15058 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15159 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15263 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15364 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15475 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15584 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:52.323
+15584 [10] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+15694 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+15804 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+15914 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16023 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16127 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16247 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16364 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16473 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16583 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16693 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:53.400
+16693 [10] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+16803 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+16914 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17030 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17131 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17246 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17359 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17475 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17585 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17695 [10] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:54.508
+17695 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+17695 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdCreateFile @MISSION/fence.dat
+17695 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+17695 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+17695 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+17805 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+17914 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18025 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18243 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18357 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18459 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18569 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18679 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18788 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:55.510
+18788 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+18899 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19009 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19111 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19227 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19342 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19444 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19553 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19663 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19773 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19883 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:56.604
+19883 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+19993 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20095 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20196 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20309 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20411 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20521 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20630 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20740 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20850 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20963 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:57.699
+20963 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+21081 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21184 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21295 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21399 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21508 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21618 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21728 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21837 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+21946 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+22047 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:58.780
+22048 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+22160 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22263 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22364 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22476 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22586 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22695 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22805 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+22915 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+23025 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+23128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:55:59.865
+23128 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+23232 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23342 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23458 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23568 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23677 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23781 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23896 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+23998 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+24114 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+24229 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:00.943
+24229 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+24331 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24447 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24550 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24663 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24765 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24867 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+24979 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+25080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+25185 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+25296 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:02.044
+25296 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+25401 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+25510 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+25612 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+25713 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+25828 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+25929 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+26038 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+26143 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+26248 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+26363 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:03.112
+26363 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+26474 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+26583 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+26694 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+26795 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+26896 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27007 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27111 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27233 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27457 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:04.179
+27457 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+27567 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+27677 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+27779 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+27881 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+27992 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28095 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28207 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28311 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28413 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28514 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:05.272
+28515 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+28630 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+28732 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+28848 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+28949 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29063 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29169 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29280 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29381 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29495 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29596 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:06.330
+29596 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+29709 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+29810 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+29924 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30029 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30246 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30359 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30572 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30682 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:07.413
+30682 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+30794 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+30897 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31006 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31112 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31215 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31324 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31427 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31536 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31646 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31748 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:08.498
+31748 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+31858 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+31960 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32065 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32174 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32382 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32497 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32598 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32702 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32813 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:09.563
+32813 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+32915 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33030 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33247 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33348 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33461 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33563 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33673 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33779 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33882 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:10.630
+33882 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+33992 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34096 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34209 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34325 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34426 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34536 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34645 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34763 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34873 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34976 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:11.698
+34976 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+35080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35195 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35310 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35413 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35525 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35628 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35741 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35842 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+35945 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+36047 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:12.791
+36047 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+36159 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36374 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36480 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36581 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36697 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36798 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+36900 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+37014 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+37116 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:13.864
+37116 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+37228 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37330 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37445 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37557 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37659 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37769 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37881 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+37992 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+38096 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+38208 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:14.932
+38208 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+38310 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38413 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38524 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38627 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38737 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38848 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+38949 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+39050 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+39165 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+39280 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:16.024
+39280 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+39384 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+39499 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+39611 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+39714 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+39830 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+39944 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+40046 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+40162 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+40264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+40379 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:17.097
+40379 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+40497 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+40607 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+40725 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+40834 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+40944 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+41054 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+41159 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+41264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+41380 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:18.195
+41380 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+41489 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+41599 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+41709 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+41819 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+41928 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42038 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42143 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42248 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42362 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42476 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:19.195
+42476 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+42577 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+42687 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+42797 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+42899 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43000 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43113 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43231 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43348 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43464 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43576 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:20.291
+43576 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+43680 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+43790 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+43897 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+43998 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44112 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44215 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44326 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44442 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44543 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44648 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:21.392
+44648 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+44759 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+44868 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+44978 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45196 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45297 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45399 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45514 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45615 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45730 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:22.463
+45730 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+45847 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+45948 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46063 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46165 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46380 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46490 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46600 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46709 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46819 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:23.547
+46819 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+46929 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47038 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47143 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47249 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47359 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47474 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47584 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47803 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47913 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:24.634
+47913 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+48022 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48127 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48230 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48342 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48459 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48568 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48678 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48787 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+48897 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+49008 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:25.728
+49008 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+49114 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49231 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49347 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49448 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49565 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49680 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49781 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+49884 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+50000 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+50113 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:26.823
+50113 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+50115 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdWriteFile fence.dat 
+50206 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+50206 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+50207 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+50311 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50412 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50522 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50632 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50742 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50852 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+50962 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+51065 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+51174 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+51279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:28.024
+51279 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+51396 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+51506 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+51615 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+51725 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+51835 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+51944 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+52048 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+52159 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+52263 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+52364 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:29.095
+52364 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+52474 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+52577 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+52687 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+52796 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+52906 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53016 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53129 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53232 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53347 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53449 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:30.180
+53449 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+53565 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+53674 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+53780 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+53882 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+53996 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54098 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54212 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54326 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54428 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54538 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:31.265
+54538 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+54647 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+54757 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+54867 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+54977 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55184 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55294 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55396 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55498 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55608 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:32.353
+55608 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+55718 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+55828 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+55937 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56047 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56159 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56263 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56379 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56489 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56600 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56710 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:33.423
+56710 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+56820 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+56930 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57031 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57132 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57234 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57337 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57440 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57544 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57646 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57757 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:34.525
+57757 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+57867 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+57977 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58081 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58185 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58297 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58401 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58514 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58616 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58717 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58829 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:35.572
+58829 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+58933 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59034 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59147 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59248 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59361 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59573 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59682 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59792 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59902 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:36.644
+59902 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+60012 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60249 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60360 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60474 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60584 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60694 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60804 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60914 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:37.717
+60914 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+61023 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61233 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61347 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61458 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61568 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61679 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61790 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+61899 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+62009 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:38.730
+62009 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+62114 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62228 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62330 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62431 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62532 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62648 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62759 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62861 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+62965 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+63081 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:39.825
+63081 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+63197 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63298 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63408 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63511 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63620 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63730 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63840 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+63949 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+64064 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+64165 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:40.897
+64166 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+64281 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64394 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64504 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64613 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64723 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64833 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+64942 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+65057 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+65159 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+65263 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:41.982
+65263 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+65379 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+65489 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+65600 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+65710 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+65821 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+65931 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+66043 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+66146 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+66248 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+66349 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:43.078
+66350 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+66471 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+66595 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+66697 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+66799 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+66907 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67011 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67113 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67219 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67329 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67430 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:44.165
+67430 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+67541 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+67652 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+67762 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+67873 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+67984 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68097 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68204 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68310 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68413 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68525 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:45.246
+68525 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+68635 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+68746 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+68856 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+68966 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69182 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69296 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69412 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69514 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69625 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:46.340
+69625 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+69736 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+69846 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+69956 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70067 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70170 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70281 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70382 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70497 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70598 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70712 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:47.440
+70712 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+70828 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+70932 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71043 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71145 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71249 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71360 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71571 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71681 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71791 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:48.527
+71791 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+71901 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72010 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72111 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72214 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72326 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72428 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72530 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72640 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72750 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72863 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:49.606
+72863 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+72965 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73191 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73296 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73412 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73514 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73615 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73833 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73946 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:50.679
+73946 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+74063 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74164 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74265 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74371 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74478 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74591 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74802 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+74912 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+75022 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:51.763
+75022 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+75127 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75231 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75332 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75443 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75546 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75656 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75765 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75875 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+75985 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+76095 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:52.838
+76096 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+76198 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76311 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76412 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76522 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76631 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76741 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76851 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+76961 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+77065 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+77166 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:53.911
+77166 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+77278 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77380 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77498 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77616 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77832 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+77934 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+78045 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+78147 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+78249 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:54.982
+78249 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+78364 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+78479 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+78592 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+78694 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+78797 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+78907 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+79016 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+79128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+79230 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+79332 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:56.064
+79332 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+79443 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+79547 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+79656 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+79766 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+79876 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+79985 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+80099 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+80209 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+80312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+80426 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:57.148
+80426 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+80536 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+80646 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+80755 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+80865 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+80975 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+81080 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+81195 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+81311 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+81426 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:58.242
+81426 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+81531 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+81632 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+81747 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+81848 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+81964 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82066 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82171 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82282 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82397 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82498 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:56:59.242
+82498 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+82499 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdResetSessions
+82499 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+82499 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+82500 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdResetSessions
+82500 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+82614 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+82726 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+82829 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+82938 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83049 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83160 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83263 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83364 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83474 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83583 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:00.316
+83583 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+83693 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+83803 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+83912 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84022 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84128 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84232 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84347 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84459 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84570 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84680 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:01.399
+84680 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+84789 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+84899 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85009 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85112 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85216 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85326 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85428 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85532 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85633 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85747 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:02.495
+85747 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+85849 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+85951 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86063 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86164 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86266 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86381 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86483 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86593 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86695 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86799 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:03.564
+86799 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+86907 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87017 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87127 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87232 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87347 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87459 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87562 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87672 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87781 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87891 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:04.614
+87891 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+FTP_UPLOAD_RETURNED=True BYTES=162
+87893 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 22 loss 0 left 5529 mem 13.3173828125 mav2 True sign False mav1 0 mav2 1 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+87896 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+87896 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+87896 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+87898 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 ArduCopter V4.8.0-dev (72b23820)
+87898 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+87898 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 Frame: QUAD/PLUS
+87898 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU0 initialised
+87899 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU1 initialised
+87899 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 AHRS: EKF3 active
+87900 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU0 tilt alignment complete
+87900 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU1 tilt alignment complete
+87900 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+87900 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+87901 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 GPS 1: probing for u-blox at 230400 baud
+87901 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 GPS 1: detected u-blox
+87902 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU0 origin set
+87902 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 Field Elevation Set: 584m
+87902 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU1 origin set
+87904 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU0 is using GPS
+87904 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 4:57:04 PM 6 EKF3 IMU1 is using GPS
+87909 [1] INFO MissionPlanner.MAVLinkInterface (null) - wpcount: 0
+87909 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_COUNT=0
+87917 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - GetFile 1-1 @MISSION/fence.dat
+87917 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdResetSessions
+87917 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+87917 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+87917 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdResetSessions
+87917 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+88032 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88143 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88249 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88363 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88475 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88578 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88689 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88799 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+88909 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+89019 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:05.732
+89020 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+89127 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89229 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89344 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89448 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89549 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89651 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89764 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89866 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+89981 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+90082 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:06.835
+90082 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+90196 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90297 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90399 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90513 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90629 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90743 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90852 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+90962 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+91065 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+91168 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:07.898
+91168 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+91279 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91380 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91490 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91593 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91703 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91813 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+91922 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+92032 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+92144 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+92249 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:08.983
+92249 [11] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+92364 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+92473 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+92583 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+92693 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+92803 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+92912 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+93022 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+93128 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+93232 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+93347 [11] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:10.064
+93347 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+93349 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdOpenFileRO @MISSION/fence.dat
+93349 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+93349 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+93349 [13] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdOpenFileRO 0 - 1
+93466 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+93581 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+93683 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+93797 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+93899 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94015 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94116 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94228 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94331 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94432 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94546 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94647 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94757 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94860 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+94970 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+95081 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+95196 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+95310 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+95411 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:12.164
+95411 [13] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdOpenFileRO 0 - 1
+95521 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+95631 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+95740 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+95850 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+95959 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96081 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96182 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96294 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96397 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96499 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96609 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96719 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96829 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+96938 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97048 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97159 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97263 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97365 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97481 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:14.227
+97481 [13] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdOpenFileRO 0 - 1
+97582 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+97698 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+97799 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+97914 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98015 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98131 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98233 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98334 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98449 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98563 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98665 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98776 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98885 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+98995 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99097 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99197 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99311 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99427 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99537 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:16.297
+99537 [13] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdOpenFileRO 0 - 1
+99646 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+99756 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+99866 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+99975 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100081 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100184 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100296 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100397 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100499 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100609 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100719 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100828 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+100938 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101048 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101159 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101263 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101364 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101466 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101581 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:18.352
+101581 [13] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdOpenFileRO 0 - 1
+101683 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+101799 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+101914 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102016 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102132 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102248 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102349 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102465 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102578 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102694 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102798 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+102909 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103020 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103128 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103234 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103344 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103449 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103552 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103659 [13] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T16:57:20.397
+103660 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1364378415
+ERROR=System.NullReferenceException: Object reference not set to an instance of an object.
+   at FenceMavftpProbe.Main(String[] args)
+103662 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+103663 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+103663 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+103664 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7561

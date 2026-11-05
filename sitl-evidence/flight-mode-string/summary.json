@@ -1,0 +1,188 @@
+{
+  "scope": "Original ArduPilot assembly with test-patched Utilities data path; disarmed SITL",
+  "case": "string",
+  "relay": {
+    "scope": "Disposable disarmed Copter SITL; relay selectively drops mode-setting messages",
+    "case": "mode_string",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7200,
+    "proxy_port": 7201,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "mode_packets": {
+      "command_seen": 1,
+      "command_dropped": 0,
+      "legacy_seen": 2,
+      "legacy_dropped": 0
+    },
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "53cce8bcafc0b447ee232e09ed84c435fc6aec27f143fc10950dac68a7a008b5",
+      "to_client_output.bin": "53cce8bcafc0b447ee232e09ed84c435fc6aec27f143fc10950dac68a7a008b5",
+      "to_sitl_input.bin": "ba90c9608e5e4286d88985c59635b62b18cb8f2b3b7999c1e26cd6e1a4f1a470",
+      "to_sitl_output.bin": "ba90c9608e5e4286d88985c59635b62b18cb8f2b3b7999c1e26cd6e1a4f1a470"
+    }
+  },
+  "library_hashes": {
+    "original_ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "test_ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "original_utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "test_utilities": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022"
+  },
+  "metadata_sha256": "546fd71183653babc06ec0e99f9e085345f07e1f908df22528110e299ed120c6",
+  "metadata_guided_option": "Guided",
+  "metadata_reflection_checked": false,
+  "sent": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 176,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 4.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 4,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "COPTER_METADATA_SHA256=546fd71183653babc06ec0e99f9e085345f07e1f908df22528110e299ed120c6",
+    "OPEN=True SELECTED=1:1",
+    "INITIAL_MODE=0 ARMED=False FIRMWARE=ArduCopter2",
+    "TRANSLATED=True TARGET=1 BASE=1 CUSTOM=4",
+    "INVALID_STRING_RETURNED",
+    "VALID_STRING_RETURNED",
+    "FINAL_MODE=4 ARMED=False"
+  ]
+}

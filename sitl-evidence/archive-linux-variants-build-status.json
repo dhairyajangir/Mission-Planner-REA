@@ -1,0 +1,92 @@
+{
+  "temp_directory": "/tmp/ardupilot-sitl-72b23820-4tkodjlc",
+  "commit": "72b238201f5ea3b556e3809b2ec704fcf701474a",
+  "status": "complete",
+  "steps": [
+    {
+      "step": "create temporary workspace",
+      "status": "running"
+    },
+    {
+      "step": "copy verified source ZIP",
+      "status": "complete",
+      "sha256": "7edc50142718c3c98c1c679cf398ce7e258e29ec889ae65a53855b7a2bce931d"
+    },
+    {
+      "step": "extract source ZIP",
+      "status": "complete"
+    },
+    {
+      "step": "extract verified pinned dependencies",
+      "status": "complete",
+      "count": 16
+    },
+    {
+      "step": "verify copied Git revision metadata",
+      "status": "complete",
+      "head": "72b238201f5ea3b556e3809b2ec704fcf701474a"
+    },
+    {
+      "step": "configure",
+      "status": "running"
+    },
+    {
+      "step": "configure",
+      "status": "complete",
+      "log": "archive-linux-variants-configure.log"
+    },
+    {
+      "step": "build plane",
+      "status": "running"
+    },
+    {
+      "step": "build plane",
+      "status": "complete",
+      "log": "archive-linux-plane-build.log"
+    },
+    {
+      "step": "publish plane binary",
+      "status": "complete",
+      "path": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/arduplane",
+      "sha256": "fc75bbfea710a9c41d863126b2f691976427a3263cacbb237ef5a72427b4187b"
+    },
+    {
+      "step": "build rover",
+      "status": "running"
+    },
+    {
+      "step": "build rover",
+      "status": "complete",
+      "log": "archive-linux-rover-build.log"
+    },
+    {
+      "step": "publish rover binary",
+      "status": "complete",
+      "path": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/ardurover",
+      "sha256": "34d5ffdcd6e2c09d7df87dcfa0aa67132c345a8eaa02b61b10133f90e561fbb3"
+    },
+    {
+      "step": "build sub",
+      "status": "running"
+    },
+    {
+      "step": "build sub",
+      "status": "complete",
+      "log": "archive-linux-sub-build.log"
+    },
+    {
+      "step": "publish sub binary",
+      "status": "complete",
+      "path": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/ardusub",
+      "sha256": "7399cf9018dbe1c5136e1e326d7bcc0978d679c07daa7f4e96a3fc78b221d07c"
+    },
+    {
+      "step": "publish all local SITL binaries",
+      "status": "complete"
+    }
+  ],
+  "limitations": [
+    "Temporary source tree uses verified archives and copied Git metadata; it is not a pristine recursive Git checkout.",
+    "Compiler output is a local build, not an official release."
+  ]
+}

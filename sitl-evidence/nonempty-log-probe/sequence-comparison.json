@@ -1,0 +1,67 @@
+{
+  "records_compared": 140847,
+  "mismatch_count": 108599,
+  "examples": [
+    {
+      "index_1based": 1664,
+      "pymavlink": "UNIT",
+      "mission_planner": "MULT",
+      "text_prefix": "MULT, 2459849, 45, 0"
+    },
+    {
+      "index_1based": 1679,
+      "pymavlink": "MULT",
+      "mission_planner": "FMTU",
+      "text_prefix": "FMTU, 2459849, 128, -b---, -----"
+    },
+    {
+      "index_1based": 1869,
+      "pymavlink": "FMTU",
+      "mission_planner": "MSG",
+      "text_prefix": "MSG, 2459849, 7, 0, ArduCopter V4.8.0-dev (72b23820)"
+    },
+    {
+      "index_1based": 1870,
+      "pymavlink": "MSG",
+      "mission_planner": "VER",
+      "text_prefix": "VER, 2459849, 3, 65535, 4, 8, 0, 0, 1924282400, ArduCopter V4.8.0-dev (72b23820), 0, 2, 4, 0, 0"
+    },
+    {
+      "index_1based": 1871,
+      "pymavlink": "VER",
+      "mission_planner": "MSG",
+      "text_prefix": "MSG, 2459849, 8, 0, o04cfea5c7cf4f1fb8b47f8b3e8289cf"
+    },
+    {
+      "index_1based": 1874,
+      "pymavlink": "MSG",
+      "mission_planner": "RTC",
+      "text_prefix": "RTC, 2459849, 0, 3"
+    },
+    {
+      "index_1based": 1875,
+      "pymavlink": "RTC",
+      "mission_planner": "MSG",
+      "text_prefix": "MSG, 2459849, 11, 0, New mission"
+    },
+    {
+      "index_1based": 1879,
+      "pymavlink": "MSG",
+      "mission_planner": "MODE",
+      "text_prefix": "MODE, 2459849, 0, 0, 26"
+    },
+    {
+      "index_1based": 1880,
+      "pymavlink": "MODE",
+      "mission_planner": "FMT",
+      "text_prefix": "FMT, 252, 59, SIM2, QdddfffffI, TimeUS,PN,PE,PD,VN,VE,VD,As,ASpdU,UFC"
+    },
+    {
+      "index_1based": 1881,
+      "pymavlink": "FMT",
+      "mission_planner": "FMTU",
+      "text_prefix": "FMTU, 2459849, 252, s?????????, F?????????"
+    }
+  ],
+  "scope": "Type name sequence comparison only; field values not compared."
+}

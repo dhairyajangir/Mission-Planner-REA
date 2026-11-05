@@ -1,0 +1,22 @@
+{
+  "vehicle-first.bin": {
+    "sha256": "27ab7dcfbc3cd044becc2d627b588039051bf2e983540ce4a1b3d92713ab1247",
+    "size": 85,
+    "frame_count": 5
+  },
+  "gcs-first.bin": {
+    "sha256": "6eca69a41220a1546b79c0039cdbb0ace1dce6f1e949a8e089933653fb0943d6",
+    "size": 51,
+    "frame_count": 3
+  },
+  "bad-only.bin": {
+    "sha256": "ec41735dd0856d3fcc7476a12d491f8486b76dab086e71b671d1503690395ec7",
+    "size": 17,
+    "frame_count": 1
+  },
+  "param-isolation.bin": {
+    "sha256": "2069af2b467c078e3909649eb6468ac4c726287bc616e72a7eec614f18e91986",
+    "size": 183,
+    "frame_count": 7
+  }
+}

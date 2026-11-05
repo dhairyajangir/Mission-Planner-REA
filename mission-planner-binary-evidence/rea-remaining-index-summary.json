@@ -1,0 +1,28 @@
+{
+  "scope": "complete individual REA member results only; not runtime behavior",
+  "source_manifest_sha256": "cf7f881951950bcf995e3e0d1e326b33e8c787163b2cb97a15784c44f9465164",
+  "database_sha256": "672e60f437ba780ecfb702118c759483684a5496187ce0612f90d0fbac851156",
+  "counts": {
+    "assemblies": 216,
+    "types": 19109,
+    "methods": 139780,
+    "calls": 492211
+  },
+  "requested": 229,
+  "partial": [
+    "Accord.Math.Core.dll",
+    "Accord.Math.dll",
+    "Accord.Statistics.dll",
+    "Accord.Vision.dll",
+    "alglibnet.dll",
+    "BouncyCastle.Cryptography.dll",
+    "IronPython.dll",
+    "Microsoft.CodeAnalysis.CSharp.dll",
+    "Microsoft.CodeAnalysis.dll",
+    "OpenTK.dll",
+    "SixLabors.ImageSharp.dll",
+    "System.Reactive.dll",
+    "Xamarin.Forms.Core.dll"
+  ],
+  "not_yet_processed": []
+}

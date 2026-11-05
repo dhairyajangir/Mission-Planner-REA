@@ -1,0 +1,567 @@
+If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 
+
+
+Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe
+To fix any filename case issues under mono use    export MONO_IOMAP=drive:case
+for pinvoke      MONO_LOG_LEVEL=debug MONO_LOG_MASK=dll mono MissionPlanner.exe
+watch -n 1 ls -l /proc/$(pidof mono)/fd
+watch -n 1 lsof -p $(pidof mono)
+Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+Log Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\logs
+Running Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\
+User Data Dir C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\
+PlacesRecentDocuments Dir 
+PlacesDesktop Dir C:\Users\think\OneDrive\Desktop
+PlacesPersonal Dir C:\Users\think\OneDrive\Documents
+PlacesMyComputer Dir 
+INFO MissionPlanner.Program - ******************* Logging Configured *******************
+INFO MissionPlanner.Program - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\x64\libSkiaSharp
+INFO MissionPlanner.Program - SkiaLoaded
+4.0.0.0
+Splash .ctor
+IconFile
+Splash.Show()
+Debugger.IsAttached False
+Application.DoEvents
+Application.DoEvents
+Setup GMaps 1
+Setup GMaps 2
+Setup GoogleMapProvider API
+Setup Tracking.productName
+Setup Tracking.primaryScreenBitsPerPixel
+Setup Settings.Instance.UserAgent
+Setup check gdal dir
+Setup gdal
+INFO GDAL.GDAL - GDAL static ctor
+INFO GDAL.GDAL - GDAL static ctor - SpatialReference
+Setup proxy
+Setup proxy
+Setup CleanupFiles
+INFO MissionPlanner.Program - 64bit os True, 64bit process True, OS Arch X64, OS Desc Microsoft Windows 10.0.26300 , FW Desc .NET Framework 4.8.10008.0
+INFO MissionPlanner.Program - Runtime Version v4.0.30319
+Application.Run(new MainV2())
+INFO MissionPlanner.MainV2 - Mainv2 ctor
+INFO MissionPlanner.MainV2 - Loading config
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1126 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:669:13
+ adsb_UpdatePlanePosition MainV2 System.EventHandler`1[MissionPlanner.Utilities.adsb+PointLatLngAltHdg]
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 1179 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:681:13
+ <.ctor>b__106_0 MainV2 System.EventHandler`1[System.ValueTuple`2[System.String,MAVLink+MAV_COLLISION_THREAT_LEVEL]]
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+BurntKermit.mpsystheme theme is loading
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+INFO MissionPlanner.Utilities.srtm - .cctor
+INFO MissionPlanner.Utilities.srtm - requestRunner start
+INFO MissionPlanner.Utilities.srtm - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-runtime\isolated-data\srtm
+INFO MissionPlanner.Utilities.Speech - TTS: init, mono = False
+INFO MissionPlanner.MainV2 - Create FD
+INFO MissionPlanner.GCSViews.FlightData - Ctor Start
+INFO MissionPlanner.Controls.HUD - Static HUD ctor
+INFO MissionPlanner.Controls.HUD - Instance HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+Using backup param data
+INFO MissionPlanner.GCSViews.FlightData - Components Done
+INFO MissionPlanner.GCSViews.FlightData - Tunning Graph Settings
+INFO MissionPlanner.GCSViews.FlightData - HUD Settings
+INFO MissionPlanner.GCSViews.FlightData - Graph Setup
+INFO MissionPlanner.GCSViews.FlightData - Map Setup
+INFO MissionPlanner.MainV2 - Create FP
+INFO MissionPlanner.GCSViews.FlightPlanner - Loading wp params
+INFO MissionPlanner.GCSViews.FlightPlanner - param WP_RADIUS 30
+INFO MissionPlanner.GCSViews.FlightPlanner - param LOITER_RADIUS 45
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduCopter2
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 51 orig list 51
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduCopter2
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 51 orig list 51
+INFO MissionPlanner.GCSViews.FlightPlanner - updateMapType invoke req? False
+INFO MissionPlanner.MainV2 - Create SIM
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.MainV2 - myview width 944 height 1152
+INFO MissionPlanner.MainV2 - this   width 960 height 1219
+INFO MissionPlanner.MainV2 - myview width 1805 height 1152
+INFO MissionPlanner.MainV2 - this   width 1821 height 1219
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 12589 in file:line:column C:\Users\mich1\Desktop\CubePilot\MissionPlanner\MainV2.cs:1091:13
+ comPort_MavChanged MainV2 System.EventHandler
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - Load Pluggins
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\plugins\
+INFO MissionPlanner.MainV2 - Load Pluggins... Done
+INFO MissionPlanner.MainV2 - show FlightData
+Open MissionPlanner.GCSViews.FlightData FlightData
+INFO MissionPlanner.GCSViews.FlightData - Activate Called
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnHandleCreated Start
+INFO MissionPlanner.Controls.HUD - OnLoad Start
+INFO MissionPlanner.Controls.HUD - Vendor: Intel
+INFO MissionPlanner.Controls.HUD - Version: 4.6.0 - Build 31.0.101.2125
+INFO MissionPlanner.Controls.HUD - Device: Intel(R) Iris(R) Plus Graphics
+INFO MissionPlanner.Controls.HUD - OnLoad Done
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 550
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 223
+HUD 1 hz drawtime 400 gl True
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 298 221
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - show FlightData... Done
+INFO MissionPlanner.MainV2 - start http
+INFO MissionPlanner.Utilities.httpserver - Listening for client
+INFO MissionPlanner.MainV2 - start joystick
+INFO MissionPlanner.MainV2 - start serialreader
+INFO MissionPlanner.MainV2 - start adsbsender
+INFO MissionPlanner.MainV2 - start plugin thread
+INFO MissionPlanner.MainV2 - start AutoConnect
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Copter/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Plane/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Rover/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Tracker/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The remote name could not be resolved: 'autotest.ardupilot.org'
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink default port",
+  "Enabled": true,
+  "Port": 14550,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink alt port",
+  "Enabled": true,
+  "Port": 14551,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5000 h264",
+  "Enabled": true,
+  "Port": 5000,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5000 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5100 h264",
+  "Enabled": true,
+  "Port": 5100,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5100 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5600 h264",
+  "Enabled": true,
+  "Port": 5600,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5600 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5601 h265",
+  "Enabled": true,
+  "Port": 5601,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5601 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H265 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.MainV2 - Loaded 4855 airports
+Downloading[{X=59922,Y=39658}]: 0 of 1
+INFO MissionPlanner.MainV2 - appload time
+INFO MissionPlanner.MainV2 - ProcessCommandLine: file = C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\nonempty-log-probe\downloaded.bin
+Open MissionPlanner.Log.LogBrowse Log Browse
+Adapter POWER - Top started scanning.
+Adapter POWER - Top stopped scanning.
+INFO MissionPlanner.Log.LogBrowse - LogBrowse_Load Done
+INFO MissionPlanner.Controls.Loading - Scanning File
+INFO MissionPlanner.Log.LogBrowse - before read 44.3746032714844
+Binary: True
+Seen FMT count 195
+Seen FMTU count 198
+Seen MAVC count 6
+Seen UNIT count 39
+Seen MULT count 15
+Seen PARM count 1436
+Seen GPS count 391
+Seen GPA count 391
+Seen MSG count 26
+Seen RCIN count 854
+Seen RCI2 count 854
+Seen RCOU count 853
+Seen RCO2 count 853
+Seen BARO count 1706
+Seen BAT count 854
+Seen MAG count 2565
+Seen MODE count 1
+Seen RTC count 7
+Seen PM count 8
+Seen SRTL count 1
+Seen SIM count 853
+Seen TERR count 78
+Seen ESC count 32736
+Seen PIDR count 853
+Seen PIDP count 853
+Seen PIDY count 853
+Seen PIDA count 853
+Seen IMU count 4268
+Seen VIBE count 1706
+Seen XKF1 count 1686
+Seen XKF2 count 1686
+Seen XKF3 count 1686
+Seen XKF4 count 1686
+Seen XKF5 count 843
+Seen XKFM count 826
+Seen XKFS count 1686
+Seen XKQ count 1686
+Seen XKT count 34
+Seen XKTV count 329
+Seen XKV1 count 169
+Seen XKV2 count 169
+Seen AHR2 count 833
+Seen ATT count 853
+Seen ORGN count 3
+Seen POS count 778
+Seen UART count 170
+Seen DSF count 85
+Seen MAV count 85
+Seen EV count 3
+Seen ERR count 1
+Seen RATE count 853
+Seen ANG count 853
+Seen VER count 1
+Seen MOTB count 853
+Seen CTUN count 853
+Seen DU32 count 85
+Seen SIM2 count 34156
+Seen DCM count 853
+Seen AUXF count 1
+Seen ESCX count 32736
+Seen TSYN count 1
+INFO MissionPlanner.Controls.Loading - Create Instance
+51467
+HUD 2 hz drawtime 10 gl True
+DFLogBuffer-linecount: 140848 time(ms): 1062.2596
+INFO MissionPlanner.Log.LogBrowse - got log lines 41.6102066040039
+INFO MissionPlanner.Log.LogBrowse - process to datagrid 41.9496994018555
+INFO MissionPlanner.Controls.Loading - Scanning coloum widths
+INFO MissionPlanner.Log.LogBrowse - Done 42.4643936157227
+INFO MissionPlanner.Log.LogBrowse - LoadLog Done
+INFO MissionPlanner.Controls.Loading - Loading.Close()
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml from C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml file C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs\ekf3Graphs.xml
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml file C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs\ekfGraphs.xml
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml file C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs\mavgraphs.xml
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml file C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs\mavgraphs2.xml
+INFO MissionPlanner.Utilities.mavgraph - readmavgraphsxml file C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-isolated\\graphs\mavgraphsMP.xml
+INFO MissionPlanner.Log.LogBrowse - Start DrawErrors
+INFO MissionPlanner.Log.LogBrowse - Start DrawModes
+INFO MissionPlanner.Log.LogBrowse - LoadLog2 Done
+INFO MissionPlanner.Log.LogBrowse - Start DrawEV
+INFO MissionPlanner.Log.LogBrowse - End DrawErrors
+INFO MissionPlanner.Log.LogBrowse - Start DrawMSG
+INFO MissionPlanner.Log.LogBrowse - End DrawModes
+INFO MissionPlanner.Log.LogBrowse - End DrawEV
+INFO MissionPlanner.Log.LogBrowse - End DrawMSG
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+INFO MissionPlanner.Utilities.Airports - getAirports - regen list
+INFO MissionPlanner.Utilities.Airports - getAirports done 0.0243345 sec
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 2 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 7 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 5 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 5 gl True
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+INFO MissionPlanner.Log.LogBrowse - GraphItem: GPS Alt 0
+INFO MissionPlanner.Log.LogBrowse - Graphing GPS - Alt
+INFO MissionPlanner.Controls.Loading - Graphing GPS - Alt
+INFO MissionPlanner.Controls.Loading - Create Instance
+INFO MissionPlanner.Log.LogBrowse - GraphItem_GetList GPS Alt 0
+10979 of 140848     INFO MissionPlanner.Log.LogBrowse - Start DrawModes
+INFO MissionPlanner.Log.LogBrowse - Start DrawEV
+INFO MissionPlanner.Log.LogBrowse - Start DrawMSG
+INFO MissionPlanner.Log.LogBrowse - End DrawModes
+INFO MissionPlanner.Log.LogBrowse - Start DrawErrors
+INFO MissionPlanner.Controls.Loading - Loading.Close()
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 9 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 5 gl True
+HUD 1 hz drawtime 7 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 4 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 3 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 6 gl True
+HUD 1 hz drawtime 1 gl True
+HUD 1 hz drawtime 2 gl True
+HUD 1 hz drawtime 0 gl True
+HUD 1 hz drawtime 0 gl True
+INFO MissionPlanner.MainV2 - MainV2_FormClosing
+INFO MissionPlanner.MainV2 - GMaps write cache
+INFO MissionPlanner.MainV2 - close logs
+INFO MissionPlanner.MainV2 - close ports
+INFO MissionPlanner.MainV2 - stop adsb
+INFO MissionPlanner.Utilities.adsb - adsb stop
+INFO MissionPlanner.Utilities.adsb - adsb stopped
+INFO MissionPlanner.MainV2 - stop WarningEngine
+INFO MissionPlanner.MainV2 - stop GStreamer
+INFO MissionPlanner.MainV2 - closing vlcrender
+INFO MissionPlanner.MainV2 - closing pluginthread
+HUD 1 hz drawtime 3 gl True
+INFO MissionPlanner.MainV2 - closing serialthread
+INFO MissionPlanner.MainV2 - closing adsbthread
+INFO MissionPlanner.MainV2 - closing joystickthread
+INFO MissionPlanner.MainV2 - closing httpthread
+INFO MissionPlanner.MainV2 - sorting tlogs
+INFO MissionPlanner.MainV2 - closing MyView
+MainSwitcher dispose FlightData
+FD Main loop exit
+SerialReader Done
+INFO MissionPlanner.Controls.HUD - OnHandleDestroyed Start
+INFO MissionPlanner.Controls.HUD - HUD Dispose
+MainSwitcher dispose FlightPlanner
+MainSwitcher dispose HWConfig
+MainSwitcher dispose SWConfig
+MainSwitcher dispose Simulation
+MainSwitcher dispose Help
+INFO MissionPlanner.MainV2 - closing fd
+INFO MissionPlanner.MainV2 - closing fp
+INFO MissionPlanner.MainV2 - closing sim
+INFO MissionPlanner.MainV2 - Saving config
+False
+False
+INFO MissionPlanner.MainV2 - MainV2_FormClosing done
+MainV2_FormClosed
+mainv2_Dispose
+[INFO] SimpleBLE: D:\a\SimpleBLE\SimpleBLE\simpleble\src\backends\windows\Utils.cpp:33 in initialize_winrt: CoGetApartmentType: cotype=3, qualifier=0, result=0
+[WARNING] SimpleBLE: D:\a\SimpleBLE\SimpleBLE\simpleble\src\backends\windows\Utils.cpp:36 in initialize_winrt: Single-threaded apartment detected, uninitializing.
+[INFO] SimpleBLE: D:\a\SimpleBLE\SimpleBLE\simpleble\src\backends\windows\Utils.cpp:41 in initialize_winrt: RoInitialize: result=80010106

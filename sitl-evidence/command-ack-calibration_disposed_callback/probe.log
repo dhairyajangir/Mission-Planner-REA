@@ -1,0 +1,345 @@
+200 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+231 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+231 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+247 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+272 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+273 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+274 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+274 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+283 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+291 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+303 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+303 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+303 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+303 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7381 0
+303 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7381
+319 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+321 [3] INFO MissionPlanner.MAVLinkInterface (null) - 881 Start connect loop 
+339 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+354 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+354 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+417 [3] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 2.03515625 mav2 False sign False mav1 0 mav2 0 signed 0      
+460 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+461 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+470 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+471 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+471 [6] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+472 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+473 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+550 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:42 AM 7 RCInput: decoding UDP (Pulses)
+550 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:42 AM 6 Calibrating barometer
+1336 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1381 [2] INFO MissionPlanner.CurrentState (null) - CurrentState .dtor
+1385 [2] INFO MissionPlanner.CurrentState (null) - CurrentState Dispose
+1387 [2] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Dispose at offset 121 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+1394 [2] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+1520 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1520 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1520 [3] INFO MissionPlanner.MAVLinkInterface (null) - 79 Start connect loop 
+1535 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 542 loss 0 left 0 mem 10.8134765625 mav2 True sign False mav1 0 mav2 15 signed 0      
+1537 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1538 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1539 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1540 [3] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1556 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+2170 [7] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2170 [7] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:43 AM 6 Barometer 1 calibration complete
+2170 [7] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:43 AM 6 Barometer 2 calibration complete
+Init Gyro*2249 [4] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2249 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2268 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2269 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2288 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2290 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2292 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2293 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2851 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+3400 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+3950 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4489 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1410018405
+4499 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4500 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4501 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4502 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4503 [3] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4503 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+7312 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7314 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7314 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7312 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7329 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7330 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 354 loss 0 left 1681 mem 11.1806640625 mav2 True sign False mav1 0 mav2 10 signed 0      
+7335 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7336 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7337 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7338 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd COMPONENT_ARM_DISARM 1 2989 0 0 0 0 0
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 22 loss 0 left 1880 mem 11.2197265625 mav2 True sign False mav1 0 mav2 1 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_AUTOPILOT_CAPABILITIES - FAILED - Commands dont match
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp DO_SEND_BANNER - ACCEPTED - Commands dont match
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 ArduCopter V4.8.0-dev (72b23820)
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+10521 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 Frame: QUAD/PLUS
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU0 initialised
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU1 initialised
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 AHRS: EKF3 active
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU0 tilt alignment complete
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU1 tilt alignment complete
+10534 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED - Commands dont match
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 GPS 1: probing for u-blox at 230400 baud
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 GPS 1: detected u-blox
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp COMPONENT_ARM_DISARM - ACCEPTED
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+ARM_COMMAND_RETURN=True
+10538 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:52 AM 6 Arming motors
+ARMED_HEARTBEAT=True
+11497 [1] DEBUG MissionPlanner.Controls.BackstageView.BackstageView (null) - MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration Accel 112.0776
+BEFORE_ACTIVE=False BUTTON_ENABLED=True BUTTON_TEXT=Calibrate Accel
+11501 [1] INFO MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration (null) - Sending accel command (mavlink 1.0)
+11503 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd PREFLIGHT_CALIBRATION 0 0 0 0 1 0 0
+11504 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+11505 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+11506 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType STATUSTEXT System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+11507 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType STATUSTEXT System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+11508 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType COMMAND_LONG System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+11509 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType COMMAND_LONG System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+AFTER_CLICK_ACTIVE=True BUTTON_ENABLED=True BUTTON_TEXT=Click when Done
+bps 2042 loss 0 left 40 mem 12.1953125 mav2 True sign False mav1 0 mav2 54 signed 0      
+11515 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:53 AM 5 Disarm to allow calibration
+SAW_FAILED_ACK=True SAW_NOTICE=True
+AFTER_REJECTION_ACTIVE=True BUTTON_ENABLED=True BUTTON_TEXT=Click when Done LABEL=Disarm to allow calibration
+SUBSCRIPTIONS_BEFORE_DEACTIVATE=2
+11527 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+11528 [1] DEBUG MissionPlanner.Controls.BackstageView.BackstageView (null) - System.Windows.Forms.UserControl Other 8.9111
+AFTER_DEACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2
+11538 [1] DEBUG MissionPlanner.Controls.BackstageView.BackstageView (null) - MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration Accel 9.9898
+SAME_CONTROL=True
+AFTER_REACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2
+11538 [1] INFO MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration (null) - Sending accel command (mavlink 1.0)
+11543 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd PREFLIGHT_CALIBRATION 0 0 0 0 1 0 0
+11543 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+11543 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+11543 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType STATUSTEXT System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+11543 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType STATUSTEXT System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+11543 [1] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType COMMAND_LONG System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+11543 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType COMMAND_LONG System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+AFTER_RESTART_ACTIVE=True BUTTON_TEXT=Click when Done SUBSCRIPTIONS=4
+RESTART_ACK_RESULT=4
+11551 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd COMPONENT_ARM_DISARM 0 21196 0 0 0 0 0
+11551 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+11599 [7] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:53 AM 5 Disarm to allow calibration
+11599 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp COMPONENT_ARM_DISARM - ACCEPTED
+11599 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+DISARM_RETURN=True
+11615 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+AFTER_CLOSE_DISPOSED=True SUBSCRIPTIONS=4
+11618 [1] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd PREFLIGHT_CALIBRATION 0 0 0 0 1 0 0
+11618 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+11618 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+START_AFTER_CLOSE=True
+11631 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+11640 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+11640 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:53 AM 6 Disarming motors
+STATUS_AFTER_CLOSE=Disarming motors
+Init Gyro*11678 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+11680 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+11680 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:53 AM 6 Initialising ArduPilot
+STATUS_AFTER_CLOSE=Initialising ArduPilot
+*
+12167 [9] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+12214 [4] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+12215 [4] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+12215 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+12215 [1] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+12215 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 11:45:53 AM 2 Place vehicle level and press any key.
+12215 [1] INFO MissionPlanner.CurrentState (null) - messageHigh Place vehicle level and press any key.
+STATUS_AFTER_CLOSE=Place vehicle level and press any key.
+bps 922 loss 0 left 0 mem 11.2470703125 mav2 True sign False mav1 0 mav2 27 signed 0      
+13319 [9] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+13320 [9] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.33984375 mav2 True sign False mav1 0 mav2 2 signed 0      
+14422 [7] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+14423 [7] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.44140625 mav2 True sign False mav1 0 mav2 2 signed 0      
+bps 21 loss 0 left 0 mem 11.4560546875 mav2 True sign False mav1 0 mav2 1 signed 0      
+15517 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+15517 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.5654296875 mav2 True sign False mav1 0 mav2 2 signed 0      
+16613 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+16613 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.658203125 mav2 True sign False mav1 0 mav2 2 signed 0      
+17721 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+17721 [6] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.7509765625 mav2 True sign False mav1 0 mav2 2 signed 0      
+18821 [3] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+18823 [3] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+bps 63 loss 0 left 0 mem 11.859375 mav2 True sign False mav1 0 mav2 2 signed 0      
+19935 [8] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+19936 [8] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Invoke or BeginInvoke cannot be called on a control until the window handle has been created.
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.UpdateUserMessage(String message)
+   at MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration.receivedPacket(MAVLinkMessage arg)
+   at MissionPlanner.MAVLinkInterface.PacketReceived(MAVLinkMessage buffer)
+STATUS_AFTER_CLOSE_COUNT=3
+19936 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+19936 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+19936 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+19936 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7381

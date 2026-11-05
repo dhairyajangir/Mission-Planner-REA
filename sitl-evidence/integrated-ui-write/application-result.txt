@@ -1,0 +1,7 @@
+scope=modified app, plugin-disabled, file-spool transport, local SITL
+open=True
+upload_results=MAV_MISSION_ACCEPTED,MAV_MISSION_ACCEPTED
+mission_count=2
+readback_lat=-35.363
+readback_lng=149.16550000000001
+readback_alt=20.0

@@ -1,0 +1,3352 @@
+{
+  "commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "repository": "https://github.com/ArduPilot/MAVProxy",
+  "tracked": 477,
+  "counts": {
+    "exact": 87,
+    "crlf_normalized": 389,
+    "mismatch": 0,
+    "missing": 0,
+    "not_checked_special_mode": 1
+  },
+  "files": [
+    {
+      "path": ".flake8",
+      "mode": "100644",
+      "git_blob": "1f3da2e2bdedc82e09cbe0b9706e3580bf29060f",
+      "status": "crlf_normalized",
+      "size": 448
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "git_blob": "be006de9a1ae3b9628e796c74277cd6d61e0a34a",
+      "status": "crlf_normalized",
+      "size": 592
+    },
+    {
+      "path": ".github/workflows/python-cleanliness.yml",
+      "mode": "100644",
+      "git_blob": "f3dc8f555c46d9e49f3f437f018824359f0fb104",
+      "status": "crlf_normalized",
+      "size": 2658
+    },
+    {
+      "path": ".github/workflows/python-publish.yml",
+      "mode": "100644",
+      "git_blob": "4de7baf35eae06d62958f7942afd3c2cb31480f4",
+      "status": "crlf_normalized",
+      "size": 1021
+    },
+    {
+      "path": ".github/workflows/windows_build.yml",
+      "mode": "100644",
+      "git_blob": "44fd09b01183c7afcb1f6f1cb14713791a54cd7b",
+      "status": "crlf_normalized",
+      "size": 3530
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "git_blob": "80123ae647d0b097e4dc9be2fda01126a95b6f1e",
+      "status": "crlf_normalized",
+      "size": 159
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "git_blob": "ac5dfb44df457de2b69927fce4ae0b300245fa3a",
+      "status": "crlf_normalized",
+      "size": 141
+    },
+    {
+      "path": "ANDROID.md",
+      "mode": "100644",
+      "git_blob": "6f602f68a720a2383278b67daa310193d30d1e9d",
+      "status": "crlf_normalized",
+      "size": 2224
+    },
+    {
+      "path": "COPYING.txt",
+      "mode": "100644",
+      "git_blob": "818433ecc0e094a4db1023c68b33f24344643ad8",
+      "status": "exact",
+      "size": 35821
+    },
+    {
+      "path": "MAVProxy/MAVLink.xml",
+      "mode": "100644",
+      "git_blob": "0cbd998f09045153086cec7f895435a7e6851f38",
+      "status": "crlf_normalized",
+      "size": 3022
+    },
+    {
+      "path": "MAVProxy/MAVProxyWinLAN.bat",
+      "mode": "100644",
+      "git_blob": "0a323a2af1173f2128f3b3f2aa69be70271c2d65",
+      "status": "exact",
+      "size": 135
+    },
+    {
+      "path": "MAVProxy/MAVProxyWinUSB.bat",
+      "mode": "100644",
+      "git_blob": "3e08f06a47bece89e4d0772185edf5a104d386dc",
+      "status": "exact",
+      "size": 110
+    },
+    {
+      "path": "MAVProxy/__init__.py",
+      "mode": "100644",
+      "git_blob": "37593515e6c637736096d0081d28bb6c2311b1a0",
+      "status": "crlf_normalized",
+      "size": 49
+    },
+    {
+      "path": "MAVProxy/mavproxy.py",
+      "mode": "100755",
+      "git_blob": "5e955c4ea33eb4b2fb9b4120ebbc9bd2e82caaa8",
+      "status": "crlf_normalized",
+      "size": 83207
+    },
+    {
+      "path": "MAVProxy/modules/__init__.py",
+      "mode": "100644",
+      "git_blob": "5b0105f39a67835f187aee1bb9ddfb4c5c327330",
+      "status": "crlf_normalized",
+      "size": 17
+    },
+    {
+      "path": "MAVProxy/modules/lib/ANUGA/README.txt",
+      "mode": "100644",
+      "git_blob": "38e4927e9e59c1370bcf8b1634f5fd75d2b79557",
+      "status": "crlf_normalized",
+      "size": 134
+    },
+    {
+      "path": "MAVProxy/modules/lib/ANUGA/__init__.py",
+      "mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "status": "exact",
+      "size": 0
+    },
+    {
+      "path": "MAVProxy/modules/lib/ANUGA/geo_reference.py",
+      "mode": "100644",
+      "git_blob": "d7027d0f9b8851741f0578e088efd525992d16f9",
+      "status": "crlf_normalized",
+      "size": 17055
+    },
+    {
+      "path": "MAVProxy/modules/lib/ANUGA/lat_long_UTM_conversion.py",
+      "mode": "100644",
+      "git_blob": "f751a3431f1fef71ac644a3cb076da1ced479675",
+      "status": "exact",
+      "size": 9936
+    },
+    {
+      "path": "MAVProxy/modules/lib/ANUGA/redfearn.py",
+      "mode": "100644",
+      "git_blob": "cdb5b0b416efd6593ffb0bdb2419b340c9975ca1",
+      "status": "crlf_normalized",
+      "size": 6670
+    },
+    {
+      "path": "MAVProxy/modules/lib/LowPassFilter2p.py",
+      "mode": "100644",
+      "git_blob": "d2c656270bf3e980591a7e649d9c31ac3b765e78",
+      "status": "crlf_normalized",
+      "size": 1601
+    },
+    {
+      "path": "MAVProxy/modules/lib/MacOS/__init__.py",
+      "mode": "100644",
+      "git_blob": "4f8c669301f77fd7e5b96b22d58ce9ac2bc2f212",
+      "status": "crlf_normalized",
+      "size": 64
+    },
+    {
+      "path": "MAVProxy/modules/lib/MacOS/backend_agg.py",
+      "mode": "100644",
+      "git_blob": "2ed9c4b097f6908c17ae43338579e999f7984cb0",
+      "status": "crlf_normalized",
+      "size": 19469
+    },
+    {
+      "path": "MAVProxy/modules/lib/MacOS/backend_wx.py",
+      "mode": "100644",
+      "git_blob": "561c0f9075048dbc2c159d179fd36b08bbef0339",
+      "status": "crlf_normalized",
+      "size": 74700
+    },
+    {
+      "path": "MAVProxy/modules/lib/MacOS/backend_wxagg.py",
+      "mode": "100644",
+      "git_blob": "1137cec50cdd0414e42adeeb8ed33c3f9b970d29",
+      "status": "crlf_normalized",
+      "size": 3812
+    },
+    {
+      "path": "MAVProxy/modules/lib/MacOS/wxversion.py",
+      "mode": "100644",
+      "git_blob": "cef5886a9b28a3113dafaef2d26289cb997bdc6b",
+      "status": "crlf_normalized",
+      "size": 18374
+    },
+    {
+      "path": "MAVProxy/modules/lib/__init__.py",
+      "mode": "100644",
+      "git_blob": "f378a5afe93a42b31e198d2897cd17fe642acd46",
+      "status": "crlf_normalized",
+      "size": 18
+    },
+    {
+      "path": "MAVProxy/modules/lib/camera_projection.py",
+      "mode": "100755",
+      "git_blob": "e8dbfee4081f3f67cafa7cecbb271ca717fea3b7",
+      "status": "crlf_normalized",
+      "size": 22368
+    },
+    {
+      "path": "MAVProxy/modules/lib/dumpstacks.py",
+      "mode": "100644",
+      "git_blob": "27278e1b74382f9f1329aecc0e35c6d36f794e0d",
+      "status": "crlf_normalized",
+      "size": 965
+    },
+    {
+      "path": "MAVProxy/modules/lib/geodesic_grid.py",
+      "mode": "100644",
+      "git_blob": "239859acfbdc76e7b4fbb4c551f975f0cdc71876",
+      "status": "crlf_normalized",
+      "size": 10463
+    },
+    {
+      "path": "MAVProxy/modules/lib/graph_ui.py",
+      "mode": "100644",
+      "git_blob": "2906a1276774ea4c03e50e79445ca92b529b4221",
+      "status": "crlf_normalized",
+      "size": 3236
+    },
+    {
+      "path": "MAVProxy/modules/lib/graphdefinition.py",
+      "mode": "100644",
+      "git_blob": "ffb835367854d50286efdbd6f05b2ac6a7ded0b3",
+      "status": "crlf_normalized",
+      "size": 355
+    },
+    {
+      "path": "MAVProxy/modules/lib/grapher.py",
+      "mode": "100755",
+      "git_blob": "aee918f4f2b96ad817cf35218c6a0dc3a493747e",
+      "status": "crlf_normalized",
+      "size": 34699
+    },
+    {
+      "path": "MAVProxy/modules/lib/icon.py",
+      "mode": "100644",
+      "git_blob": "21bc9fe589624bc22749be6763703ef8197d6866",
+      "status": "crlf_normalized",
+      "size": 3258
+    },
+    {
+      "path": "MAVProxy/modules/lib/kmlread.py",
+      "mode": "100644",
+      "git_blob": "953360da9f218e27c9316625facd92c2632969a5",
+      "status": "crlf_normalized",
+      "size": 6773
+    },
+    {
+      "path": "MAVProxy/modules/lib/live_graph.py",
+      "mode": "100755",
+      "git_blob": "d11a4107d523428cb06cfcc7f308d3488817b587",
+      "status": "crlf_normalized",
+      "size": 3467
+    },
+    {
+      "path": "MAVProxy/modules/lib/live_graph_ui.py",
+      "mode": "100644",
+      "git_blob": "574a28d4ab88840e4a05c60ce94585a19bf64a05",
+      "status": "crlf_normalized",
+      "size": 8013
+    },
+    {
+      "path": "MAVProxy/modules/lib/log_mission.py",
+      "mode": "100644",
+      "git_blob": "8fce9ab61723f0f3255fdd737ae80184e47564da",
+      "status": "crlf_normalized",
+      "size": 6886
+    },
+    {
+      "path": "MAVProxy/modules/lib/magfit.py",
+      "mode": "100644",
+      "git_blob": "6dad6224a3d9ee9c633b8c293ad288ee779b98e4",
+      "status": "crlf_normalized",
+      "size": 30180
+    },
+    {
+      "path": "MAVProxy/modules/lib/mav_fft.py",
+      "mode": "100644",
+      "git_blob": "8c5de45ef8a2ea421e7e7bf5064517ec024ceedc",
+      "status": "crlf_normalized",
+      "size": 4986
+    },
+    {
+      "path": "MAVProxy/modules/lib/mavvidplay.py",
+      "mode": "100644",
+      "git_blob": "dba5e49a1ffe8468f449c863281b1c00067bbc03",
+      "status": "crlf_normalized",
+      "size": 20915
+    },
+    {
+      "path": "MAVProxy/modules/lib/mission_item_protocol.py",
+      "mode": "100644",
+      "git_blob": "4bd3c97f8faa41ecd86c556a36e35b8cb0e93327",
+      "status": "crlf_normalized",
+      "size": 47156
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_checklist.py",
+      "mode": "100755",
+      "git_blob": "1be8dbf0dc34706a32dbc68529f0d496a14cb1b8",
+      "status": "crlf_normalized",
+      "size": 9031
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_elevation.py",
+      "mode": "100755",
+      "git_blob": "47af99b041cf48f2b119abf8f06078bb517eeca8",
+      "status": "crlf_normalized",
+      "size": 4727
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_image.py",
+      "mode": "100755",
+      "git_blob": "cb532bfa0ba58dfbc312565915b34905d0a8610a",
+      "status": "crlf_normalized",
+      "size": 39268
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_instructor.py",
+      "mode": "100755",
+      "git_blob": "02c4cb70af09565fd75170bbe32f533f2906dfa7",
+      "status": "crlf_normalized",
+      "size": 13714
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_menu.py",
+      "mode": "100644",
+      "git_blob": "f34a7e091de6e88c78b9ef93f6f4b5e18e4a18f2",
+      "status": "crlf_normalized",
+      "size": 22411
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_module.py",
+      "mode": "100644",
+      "git_blob": "609883bec84c219062438c447074997a82a1c463",
+      "status": "crlf_normalized",
+      "size": 9312
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_settings.py",
+      "mode": "100644",
+      "git_blob": "6a6cab25d65b8dae07209f4ed520d03dc818a99e",
+      "status": "crlf_normalized",
+      "size": 7364
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_substitute.py",
+      "mode": "100644",
+      "git_blob": "1bcb2273a670138aab60d827190010c14f08f552",
+      "status": "crlf_normalized",
+      "size": 3693
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_util.py",
+      "mode": "100644",
+      "git_blob": "2f0ee3b0fda2f48355f32bba11e7ac2de6868c15",
+      "status": "crlf_normalized",
+      "size": 38160
+    },
+    {
+      "path": "MAVProxy/modules/lib/mp_widgets.py",
+      "mode": "100644",
+      "git_blob": "9115a572ef3033c23872398a90c0e848badc2a7f",
+      "status": "crlf_normalized",
+      "size": 1316
+    },
+    {
+      "path": "MAVProxy/modules/lib/msgstats.py",
+      "mode": "100644",
+      "git_blob": "5463cac63603e652d436fe42785ddb6c7df9f1e8",
+      "status": "crlf_normalized",
+      "size": 3930
+    },
+    {
+      "path": "MAVProxy/modules/lib/multiproc.py",
+      "mode": "100644",
+      "git_blob": "524100e5b0ab85b412a8c7f664b68cf0cd57e018",
+      "status": "crlf_normalized",
+      "size": 2374
+    },
+    {
+      "path": "MAVProxy/modules/lib/multiproc_util.py",
+      "mode": "100644",
+      "git_blob": "f073fed9a6fc04617e09a4c4a0d3907dc00d4ece",
+      "status": "crlf_normalized",
+      "size": 10064
+    },
+    {
+      "path": "MAVProxy/modules/lib/ntrip.py",
+      "mode": "100755",
+      "git_blob": "204295f5f72e186e97ba3d5f81757d4bdd1a1880",
+      "status": "crlf_normalized",
+      "size": 11685
+    },
+    {
+      "path": "MAVProxy/modules/lib/opengl.py",
+      "mode": "100644",
+      "git_blob": "43fbd78a2563db822318086ead25e2f7b0b0d34b",
+      "status": "crlf_normalized",
+      "size": 22573
+    },
+    {
+      "path": "MAVProxy/modules/lib/optparse_gui/README.txt",
+      "mode": "100644",
+      "git_blob": "d5a4638cd75270e43084ca7e31d2cc0a0e935d35",
+      "status": "crlf_normalized",
+      "size": 107
+    },
+    {
+      "path": "MAVProxy/modules/lib/optparse_gui/__init__.py",
+      "mode": "100644",
+      "git_blob": "1d281f7150ed50eace1b38d8234e677f24c3b68b",
+      "status": "crlf_normalized",
+      "size": 12474
+    },
+    {
+      "path": "MAVProxy/modules/lib/param_ftp.py",
+      "mode": "100755",
+      "git_blob": "9e2cbfc9cd59f48cd430803f93e5317da5a23394",
+      "status": "crlf_normalized",
+      "size": 3335
+    },
+    {
+      "path": "MAVProxy/modules/lib/param_help.py",
+      "mode": "100644",
+      "git_blob": "0ba9842a64c4d0573a6d32d273b0dbbd01854600",
+      "status": "crlf_normalized",
+      "size": 9919
+    },
+    {
+      "path": "MAVProxy/modules/lib/plane_track.py",
+      "mode": "100644",
+      "git_blob": "7ec132eaeb1f25f8f05f19c657a5789a432cf86a",
+      "status": "crlf_normalized",
+      "size": 67292
+    },
+    {
+      "path": "MAVProxy/modules/lib/rline.py",
+      "mode": "100644",
+      "git_blob": "5443f443484338fbd47ec7a2dd356722e371810f",
+      "status": "crlf_normalized",
+      "size": 12307
+    },
+    {
+      "path": "MAVProxy/modules/lib/rtcm3.py",
+      "mode": "100644",
+      "git_blob": "5bde1a57b20618680c12b78ce309d0b8489e230e",
+      "status": "crlf_normalized",
+      "size": 4016
+    },
+    {
+      "path": "MAVProxy/modules/lib/sitl_output.py",
+      "mode": "100644",
+      "git_blob": "1f5c07abe9252c8d1624ef9a19e4a26f05ef23c1",
+      "status": "crlf_normalized",
+      "size": 1240
+    },
+    {
+      "path": "MAVProxy/modules/lib/siyi_video.py",
+      "mode": "100644",
+      "git_blob": "dcfaeff0d94fd28f6736b2aabac8f7d641b9e3d0",
+      "status": "crlf_normalized",
+      "size": 6879
+    },
+    {
+      "path": "MAVProxy/modules/lib/srtm.py",
+      "mode": "100755",
+      "git_blob": "747464a2f4b7d39a68d162aace4b4e8b15916552",
+      "status": "crlf_normalized",
+      "size": 21163
+    },
+    {
+      "path": "MAVProxy/modules/lib/textconsole.py",
+      "mode": "100644",
+      "git_blob": "035a1fb5d8516c030dad995b7d05d0506d195c92",
+      "status": "crlf_normalized",
+      "size": 1434
+    },
+    {
+      "path": "MAVProxy/modules/lib/video_telemetry.py",
+      "mode": "100644",
+      "git_blob": "0bf1bbd6c9a1e8348ff399e0033b209be54ae493",
+      "status": "crlf_normalized",
+      "size": 18860
+    },
+    {
+      "path": "MAVProxy/modules/lib/wavefront.py",
+      "mode": "100644",
+      "git_blob": "0c6494a002f2f0eca39c4e940b7ee5dcf11808eb",
+      "status": "crlf_normalized",
+      "size": 12090
+    },
+    {
+      "path": "MAVProxy/modules/lib/win_layout.py",
+      "mode": "100644",
+      "git_blob": "622c6b9c8cdd4dedf07eae58bd7b2db8689fe43b",
+      "status": "crlf_normalized",
+      "size": 4123
+    },
+    {
+      "path": "MAVProxy/modules/lib/wx_addlink.py",
+      "mode": "100644",
+      "git_blob": "b00deb8eed13cc5afd9d6c5839a5eb2c427ce187",
+      "status": "crlf_normalized",
+      "size": 6207
+    },
+    {
+      "path": "MAVProxy/modules/lib/wx_loader.py",
+      "mode": "100644",
+      "git_blob": "e79912723d53969d3de7479e305ab8d5aeb84d4e",
+      "status": "crlf_normalized",
+      "size": 244
+    },
+    {
+      "path": "MAVProxy/modules/lib/wx_processguard.py",
+      "mode": "100644",
+      "git_blob": "fceb35e39358949dcf5f883dea1559920b15050d",
+      "status": "crlf_normalized",
+      "size": 177
+    },
+    {
+      "path": "MAVProxy/modules/lib/wx_util.py",
+      "mode": "100644",
+      "git_blob": "43eefa92070dbca2f206ffd5487270c848f9f2a7",
+      "status": "crlf_normalized",
+      "size": 213
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxconsole.py",
+      "mode": "100755",
+      "git_blob": "27b669f3cf40fe2a9d9f4143a064dbd5f4546d49",
+      "status": "crlf_normalized",
+      "size": 4580
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxconsole_ui.py",
+      "mode": "100644",
+      "git_blob": "224892f9093108a378c0dbbee44b0c5427b29599",
+      "status": "crlf_normalized",
+      "size": 7222
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxconsole_util.py",
+      "mode": "100644",
+      "git_blob": "83f5dfe57dd475931cd13d8e58e6319edc17ebd1",
+      "status": "crlf_normalized",
+      "size": 536
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxgrapheditor.py",
+      "mode": "100644",
+      "git_blob": "9845c9885b711928f7cc81efe7820f88ed72c331",
+      "status": "crlf_normalized",
+      "size": 3032
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxhorizon.py",
+      "mode": "100755",
+      "git_blob": "0271144634309e824c7dbe058c6e925fb1e86b78",
+      "status": "crlf_normalized",
+      "size": 1720
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxhorizon_ui.py",
+      "mode": "100644",
+      "git_blob": "cfe0e2ccc9fff81b63f3b215e1691730f42166b1",
+      "status": "crlf_normalized",
+      "size": 33491
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxhorizon_util.py",
+      "mode": "100644",
+      "git_blob": "0e5f8a115569fac7e7f9eaf1ad46bcc19c28ba35",
+      "status": "crlf_normalized",
+      "size": 1739
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxnotes.py",
+      "mode": "100644",
+      "git_blob": "bf757161e4939c9e95d80788cd38772c4e0857d4",
+      "status": "crlf_normalized",
+      "size": 3952
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxnotes_ui.py",
+      "mode": "100644",
+      "git_blob": "d452273329d588f4dc8c48a9f41d6c9065fe45f8",
+      "status": "crlf_normalized",
+      "size": 13092
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxrc.py",
+      "mode": "100644",
+      "git_blob": "df04fb97b408bd718a9e3161ef4e55bf17cd5a3e",
+      "status": "crlf_normalized",
+      "size": 6641
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxsaildash.py",
+      "mode": "100644",
+      "git_blob": "22e3025f38911810d95528dd7f2833faa2f98e3f",
+      "status": "crlf_normalized",
+      "size": 2341
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxsaildash_ui.py",
+      "mode": "100644",
+      "git_blob": "a39305531eef5f36c3ef2dc7c5a8ddc2f3e93666",
+      "status": "crlf_normalized",
+      "size": 13141
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxsaildash_util.py",
+      "mode": "100644",
+      "git_blob": "ccd2af0a6d4985b478eaa393f92feb354c0e559e",
+      "status": "crlf_normalized",
+      "size": 906
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxsettings.py",
+      "mode": "100644",
+      "git_blob": "0ff0909d08e0cb770c20031ee7fea92f31b0b516",
+      "status": "crlf_normalized",
+      "size": 2669
+    },
+    {
+      "path": "MAVProxy/modules/lib/wxsettings_ui.py",
+      "mode": "100644",
+      "git_blob": "ebd4fc8a8f5e39ec128f6be3462afcef272488cc",
+      "status": "crlf_normalized",
+      "size": 7818
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_DGPS.py",
+      "mode": "100644",
+      "git_blob": "143f75b0d03d0014ee18ad4490520a080f90787a",
+      "status": "crlf_normalized",
+      "size": 4490
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_GPSInject.py",
+      "mode": "100644",
+      "git_blob": "0340e2dfb2011f0a955c8dc1f61e6f3f554f18f9",
+      "status": "crlf_normalized",
+      "size": 5098
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_GPSInput.py",
+      "mode": "100644",
+      "git_blob": "344d7447de2e82207aa923fa4a8844614051d5f8",
+      "status": "crlf_normalized",
+      "size": 5525
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_HIL.py",
+      "mode": "100644",
+      "git_blob": "0184e2037b4d0ea1224b77a864f9600e66fb29ee",
+      "status": "crlf_normalized",
+      "size": 5802
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_OpenDroneID.py",
+      "mode": "100644",
+      "git_blob": "8dd432b37e164cddbd684837ae4d8b95096bd75e",
+      "status": "crlf_normalized",
+      "size": 8832
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/__init__.py",
+      "mode": "100644",
+      "git_blob": "100a1ef54078836aee71e3dfde34ccf2df842023",
+      "status": "crlf_normalized",
+      "size": 127872
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/camera_view.py",
+      "mode": "100644",
+      "git_blob": "a565fe95c92762d7b0377bd5631645ac9f82095d",
+      "status": "crlf_normalized",
+      "size": 13774
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/raw_thermal.py",
+      "mode": "100644",
+      "git_blob": "9154560ea0eccfa9ac363591563115ff5f2d4e61",
+      "status": "crlf_normalized",
+      "size": 13795
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/test_siyi.py",
+      "mode": "100644",
+      "git_blob": "4491e512d61f89e392af00308b1344badeb31956",
+      "status": "crlf_normalized",
+      "size": 49158
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/tools/playback.py",
+      "mode": "100755",
+      "git_blob": "1f0277a942d8490346f9e06a33e3e9030a36b042",
+      "status": "crlf_normalized",
+      "size": 8596
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/tools/temp_dir.py",
+      "mode": "100755",
+      "git_blob": "0092e79033274bde67c870ded4e4c9fff171f7f5",
+      "status": "crlf_normalized",
+      "size": 2136
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SIYI/tools/temp_view.py",
+      "mode": "100755",
+      "git_blob": "5dbd36557ff943ea11b7065f6113b8154c79d64a",
+      "status": "crlf_normalized",
+      "size": 797
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_SecureCommand.py",
+      "mode": "100644",
+      "git_blob": "1b25df79bbf044a8699cb770b6788ffb0c787327",
+      "status": "crlf_normalized",
+      "size": 11428
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_adsb.py",
+      "mode": "100644",
+      "git_blob": "4eba6f70f049b1fe922cda6c8b37b2e227e50bf7",
+      "status": "crlf_normalized",
+      "size": 14770
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ais.py",
+      "mode": "100644",
+      "git_blob": "858a6cfc32d89ac1ccbf5acfd8578209f7d951cd",
+      "status": "crlf_normalized",
+      "size": 6656
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_antenna.py",
+      "mode": "100644",
+      "git_blob": "60ee5d353fc47673925ca36bc5c2c33eab5110d7",
+      "status": "crlf_normalized",
+      "size": 2098
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_anufireproject/__init__.py",
+      "mode": "100644",
+      "git_blob": "68d7230467acc19765b0c4d83e0315fa0945553e",
+      "status": "crlf_normalized",
+      "size": 6641
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_arm.py",
+      "mode": "100644",
+      "git_blob": "2cf9fa53afdbe3860e1735be0f92437562567af1",
+      "status": "crlf_normalized",
+      "size": 13625
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_asterix.py",
+      "mode": "100644",
+      "git_blob": "9bc69a0f158bd0447e468a841d334c2be26659c6",
+      "status": "crlf_normalized",
+      "size": 15229
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_auxopt.py",
+      "mode": "100644",
+      "git_blob": "48f12da46c1a7acd13c71f6fbab4905421ee5638",
+      "status": "crlf_normalized",
+      "size": 3539
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_battery.py",
+      "mode": "100644",
+      "git_blob": "95e3600fa76cf5eeb0ec95e9e4092fb35d94cb35",
+      "status": "crlf_normalized",
+      "size": 7950
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_calibration.py",
+      "mode": "100644",
+      "git_blob": "e3673a989c1902f259e04dcaf08916269f8df941",
+      "status": "crlf_normalized",
+      "size": 9590
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/README.md",
+      "mode": "100644",
+      "git_blob": "0a35a0bb250c57aef58734e9f0633a86d4da3787",
+      "status": "crlf_normalized",
+      "size": 20210
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/__init__.py",
+      "mode": "100644",
+      "git_blob": "77823e0eac263bad13e00c719cc70f5527b4c845",
+      "status": "crlf_normalized",
+      "size": 74790
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/definition.py",
+      "mode": "100644",
+      "git_blob": "f14e6914b65d21dcdb40958aaf66949236130917",
+      "status": "crlf_normalized",
+      "size": 13386
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/graphs.py",
+      "mode": "100644",
+      "git_blob": "adb9b74f109efda86823feb39d2a4e5e5fb83d41",
+      "status": "crlf_normalized",
+      "size": 8324
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/parameters.py",
+      "mode": "100644",
+      "git_blob": "0684e323ab0f9fe0898d1c98a1fe29e0285f5ca2",
+      "status": "crlf_normalized",
+      "size": 19105
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/roi.py",
+      "mode": "100644",
+      "git_blob": "6cbe3b20c476f088af994541ad24beb4edbe6b7b",
+      "status": "crlf_normalized",
+      "size": 9833
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/settings_dialog.py",
+      "mode": "100644",
+      "git_blob": "5f4e2690e14a3f4da1904344dad23e7197dea92e",
+      "status": "crlf_normalized",
+      "size": 12095
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/survey.py",
+      "mode": "100644",
+      "git_blob": "937e29be17f5c7cfdf968498877f1609378ad5de",
+      "status": "crlf_normalized",
+      "size": 7441
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/thermal_stream.py",
+      "mode": "100644",
+      "git_blob": "96ae3803c6e93791672a2d4c9484b93f2954bef1",
+      "status": "crlf_normalized",
+      "size": 5992
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/thermal_view.py",
+      "mode": "100644",
+      "git_blob": "f70cc0052c713b8e0285c1a13c834b18b05b8e07",
+      "status": "crlf_normalized",
+      "size": 8267
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_camera/video_view.py",
+      "mode": "100644",
+      "git_blob": "41582222f470f828f16867e599e464f8450a8aaf",
+      "status": "crlf_normalized",
+      "size": 3001
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_cameraview.py",
+      "mode": "100644",
+      "git_blob": "b6dcb1746dad842b178f52a3424fcab435bde23e",
+      "status": "crlf_normalized",
+      "size": 6791
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_cesium",
+      "mode": "160000",
+      "git_blob": "78f7be3dc1511709cdc7427144ab1a2d7c6e33b2",
+      "status": "not_checked_special_mode"
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/__init__.py",
+      "mode": "100644",
+      "git_blob": "3aded5e783096c39e239565c55670dcf7694097c",
+      "status": "crlf_normalized",
+      "size": 4334
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/assistant_instructions.txt",
+      "mode": "100644",
+      "git_blob": "fa356bd3e8883046a6811aa7484f2014b417874b",
+      "status": "crlf_normalized",
+      "size": 9021
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/copter_flightmodes.txt",
+      "mode": "100644",
+      "git_blob": "1689f26736b88e1d7aa53b8b1126e693baa8686a",
+      "status": "crlf_normalized",
+      "size": 2620
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/delete_wakeup_timers.json",
+      "mode": "100644",
+      "git_blob": "848951b2b02f5dce6c5c6f105942cda623f2726c",
+      "status": "crlf_normalized",
+      "size": 874
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_all_parameters.json",
+      "mode": "100644",
+      "git_blob": "a2b7a8d5614afbb91243263e9392e71b6554dc8f",
+      "status": "crlf_normalized",
+      "size": 254
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_available_mavlink_messages.json",
+      "mode": "100644",
+      "git_blob": "e2a3eafd0941bf3839ec86b8e39a552e712052e7",
+      "status": "crlf_normalized",
+      "size": 318
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_current_datetime.json",
+      "mode": "100644",
+      "git_blob": "7e08d2aec763053696757d8f148e5b0ea90c216c",
+      "status": "crlf_normalized",
+      "size": 282
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_location_plus_dist_at_bearing.json",
+      "mode": "100644",
+      "git_blob": "efe5ea7fe2468db5104e4832c3a450e11637250d",
+      "status": "crlf_normalized",
+      "size": 762
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_location_plus_offset.json",
+      "mode": "100644",
+      "git_blob": "558cc302cf723465ca469578f7dad1d3ff596670",
+      "status": "crlf_normalized",
+      "size": 761
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_mavlink_message.json",
+      "mode": "100644",
+      "git_blob": "77ee84963169c0564b7e2a6e65e7a2cde555c062",
+      "status": "crlf_normalized",
+      "size": 524
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_mode_mapping.json",
+      "mode": "100644",
+      "git_blob": "37d4e70c4e741739827204afe407d2d122d6b3f2",
+      "status": "crlf_normalized",
+      "size": 648
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_parameter.json",
+      "mode": "100644",
+      "git_blob": "ccee03dbea74eacbf025bc307b28e5f8a6ca2ebd",
+      "status": "crlf_normalized",
+      "size": 570
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_parameter_description.json",
+      "mode": "100644",
+      "git_blob": "93f52f0d6c8a417f50b2578f5b142db9f7e41bf5",
+      "status": "crlf_normalized",
+      "size": 489
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_vehicle_location_and_yaw.json",
+      "mode": "100644",
+      "git_blob": "3fc82c17acf0ac547bee7ef95b66e7c3f44beee7",
+      "status": "crlf_normalized",
+      "size": 812
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_vehicle_state.json",
+      "mode": "100644",
+      "git_blob": "cb4aae2930d7ef377bdc4a500459746d96edf0d3",
+      "status": "crlf_normalized",
+      "size": 557
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_vehicle_type.json",
+      "mode": "100644",
+      "git_blob": "53126f29ed96fee27d77b484410d29e134a3b4df",
+      "status": "crlf_normalized",
+      "size": 402
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/get_wakeup_timers.json",
+      "mode": "100644",
+      "git_blob": "2671f3677ad4bdba35205d49a5e2e08405359969",
+      "status": "crlf_normalized",
+      "size": 871
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/plane_flightmodes.txt",
+      "mode": "100644",
+      "git_blob": "d8c1672fc97e2b83e683dbe620fe6ba410149486",
+      "status": "crlf_normalized",
+      "size": 1797
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/rover_modes.txt",
+      "mode": "100644",
+      "git_blob": "38c986b3223b6024153a5cc08f09bb83532825ab",
+      "status": "crlf_normalized",
+      "size": 1285
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/send_mavlink_command_int.json",
+      "mode": "100644",
+      "git_blob": "8abd547d5a6e6dbbfbe03d5426111b1e66d1ce63",
+      "status": "crlf_normalized",
+      "size": 1931
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/send_mavlink_set_position_target_global_int.json",
+      "mode": "100644",
+      "git_blob": "c473cee4f7cb1c58039340ea5eec9c50a643c5c8",
+      "status": "crlf_normalized",
+      "size": 2638
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/set_parameter.json",
+      "mode": "100644",
+      "git_blob": "d9d646b8d556ed34816dedf855263f655725338c",
+      "status": "crlf_normalized",
+      "size": 518
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/set_wakeup_timer.json",
+      "mode": "100644",
+      "git_blob": "eab4e73972f1097fac63577d9c1c6d14f52f6db3",
+      "status": "crlf_normalized",
+      "size": 714
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/setup_assistant.py",
+      "mode": "100644",
+      "git_blob": "a351c1f8154cddee71dfece11583db9abf74897f",
+      "status": "crlf_normalized",
+      "size": 11471
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/assistant_setup/sub_modes.txt",
+      "mode": "100644",
+      "git_blob": "ef3eae87ad530058d2972c03a5b79f5c085bbd75",
+      "status": "crlf_normalized",
+      "size": 801
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/chat_openai.py",
+      "mode": "100644",
+      "git_blob": "72f89ea6d49b49665060bda9b246a28515ef5b71",
+      "status": "crlf_normalized",
+      "size": 34047
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/chat_voice_to_text.py",
+      "mode": "100644",
+      "git_blob": "dd3e2189549b205ac2a02d795bb60160a8297b7a",
+      "status": "crlf_normalized",
+      "size": 2883
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_chat/chat_window.py",
+      "mode": "100644",
+      "git_blob": "ef713d1089e9ddeb73f696dd5391fdd2ad8a942c",
+      "status": "crlf_normalized",
+      "size": 9203
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_checklist.py",
+      "mode": "100755",
+      "git_blob": "483ecd709d1cf69566d409d3b2d4506579e3fb7d",
+      "status": "crlf_normalized",
+      "size": 5278
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_cmdlong.py",
+      "mode": "100644",
+      "git_blob": "80b7662b3f80e0d7393143fe213ab175aa7d37c1",
+      "status": "crlf_normalized",
+      "size": 19040
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_console.py",
+      "mode": "100644",
+      "git_blob": "f8741ccbd7fdeb9276ed4f27b2c75f323e6c5240",
+      "status": "crlf_normalized",
+      "size": 48508
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_dataflash_logger.py",
+      "mode": "100644",
+      "git_blob": "cd4c2f0c4a6addcb1f0a9257dbd61acd8e0112fb",
+      "status": "crlf_normalized",
+      "size": 14657
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_devop.py",
+      "mode": "100644",
+      "git_blob": "ef41efb9007d6b44bc7107d536c7a868dc4c1be7",
+      "status": "crlf_normalized",
+      "size": 5601
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_emuecu.py",
+      "mode": "100644",
+      "git_blob": "8397a8badc60d3cd1e80b5597d825f9e73a4f26f",
+      "status": "crlf_normalized",
+      "size": 1607
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_example.py",
+      "mode": "100644",
+      "git_blob": "dbd0bbc34c8bf4d1d9ded98e877885850ca3737f",
+      "status": "crlf_normalized",
+      "size": 3263
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fakegps.py",
+      "mode": "100644",
+      "git_blob": "c70640d45b260f1ae6b6e8ab76735f882c04631c",
+      "status": "crlf_normalized",
+      "size": 4491
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fence.py",
+      "mode": "100644",
+      "git_blob": "0d0e42b35c97e05fba55f9a2f756f043cfedab67",
+      "status": "crlf_normalized",
+      "size": 31708
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fenceitem_protocol.py",
+      "mode": "100644",
+      "git_blob": "91cbd3545267d3afaa669d7df71f6501a4f307b5",
+      "status": "crlf_normalized",
+      "size": 14195
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/__init__.py",
+      "mode": "100755",
+      "git_blob": "f421d8d211082b51f17d362ff59dc5c4457216a6",
+      "status": "crlf_normalized",
+      "size": 20320
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/cmac-foamy-fence.txt",
+      "mode": "100644",
+      "git_blob": "705fc6d0b1f4513bc3e8c46d7cc23744557d118f",
+      "status": "crlf_normalized",
+      "size": 138
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/cmac-foamy-mission-ccw.txt",
+      "mode": "100644",
+      "git_blob": "80778f86d2ca2f8ad48412ebf1827540632d6508",
+      "status": "crlf_normalized",
+      "size": 975
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/cmac-foamy-mission-cw.txt",
+      "mode": "100644",
+      "git_blob": "d50d4041c5e0ddfe52c7f2f89669c72169248707",
+      "status": "crlf_normalized",
+      "size": 975
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/cmac-foamy-rally.txt",
+      "mode": "100644",
+      "git_blob": "ed52d3670a24052d27bd189e01bd002b498b9520",
+      "status": "crlf_normalized",
+      "size": 60
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalley-foamy-fence.txt",
+      "mode": "100644",
+      "git_blob": "19b6672053908db10735b9f17db03bb92c889be3",
+      "status": "crlf_normalized",
+      "size": 138
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalley-foamy-mission-ccw.txt",
+      "mode": "100644",
+      "git_blob": "423afd038d5eae50fd74def5f53771fbcfb33209",
+      "status": "crlf_normalized",
+      "size": 975
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalley-foamy-mission-cw.txt",
+      "mode": "100644",
+      "git_blob": "b93402df6f22a396c83a77cf10106201a79cda4c",
+      "status": "crlf_normalized",
+      "size": 974
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalley-foamy-rally.txt",
+      "mode": "100644",
+      "git_blob": "23871a5fd0d124953b1258952302d718a2446d34",
+      "status": "crlf_normalized",
+      "size": 61
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalleybottom-foamy-fence.txt",
+      "mode": "100644",
+      "git_blob": "3a63edaf426b2d7ffa5823c7ad51adca63ad9ad6",
+      "status": "crlf_normalized",
+      "size": 418
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalleybottom-foamy-mission-ccw.txt",
+      "mode": "100644",
+      "git_blob": "423afd038d5eae50fd74def5f53771fbcfb33209",
+      "status": "crlf_normalized",
+      "size": 975
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalleybottom-foamy-mission-cw.txt",
+      "mode": "100644",
+      "git_blob": "995d5285f19df5f2ac153d0dd88e19da6600b3cd",
+      "status": "crlf_normalized",
+      "size": 974
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_fieldcheck/springvalleybottom-foamy-rally.txt",
+      "mode": "100644",
+      "git_blob": "23871a5fd0d124953b1258952302d718a2446d34",
+      "status": "crlf_normalized",
+      "size": 61
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_firmware.py",
+      "mode": "100644",
+      "git_blob": "241e76262f7d7ce1fa6ef35435db122b6d2045f0",
+      "status": "crlf_normalized",
+      "size": 15427
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_followtest.py",
+      "mode": "100644",
+      "git_blob": "12ff49dc912838804f4f66fd8e732216a3a536ef",
+      "status": "crlf_normalized",
+      "size": 5553
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ftp.py",
+      "mode": "100644",
+      "git_blob": "e28c1059d75d7176082bdad4a5ae96ec2265817b",
+      "status": "crlf_normalized",
+      "size": 78986
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_gasheli.py",
+      "mode": "100644",
+      "git_blob": "4f712ecb7bb3a0e36e695b670ad8e8820164ab4b",
+      "status": "crlf_normalized",
+      "size": 6087
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_generator.py",
+      "mode": "100644",
+      "git_blob": "650545422b3296d9b42648828d7c44ecdac5a198",
+      "status": "crlf_normalized",
+      "size": 3739
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_genobstacles.py",
+      "mode": "100644",
+      "git_blob": "aeae75a37ed53ce288d8b0c055588220aaa6a069",
+      "status": "crlf_normalized",
+      "size": 19535
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_gimbal.py",
+      "mode": "100644",
+      "git_blob": "59637698f0d9ce92b13388a33707128c48bfe40c",
+      "status": "crlf_normalized",
+      "size": 11250
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_gopro.py",
+      "mode": "100644",
+      "git_blob": "1e8da8c8b67659dfbc526dd8057a22898636dc61",
+      "status": "crlf_normalized",
+      "size": 3208
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_graph.py",
+      "mode": "100644",
+      "git_blob": "e8c353564a17a7aea26bd5891b8564005b42ba2c",
+      "status": "crlf_normalized",
+      "size": 5715
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_heliplane.py",
+      "mode": "100644",
+      "git_blob": "bd0782b380d85bc332ed0b2e76d1f205223cc407",
+      "status": "crlf_normalized",
+      "size": 5350
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_help.py",
+      "mode": "100644",
+      "git_blob": "9a9b04c433a2701e8a6eabfa9d23e4c8695cb13e",
+      "status": "crlf_normalized",
+      "size": 4718
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_horizon.py",
+      "mode": "100644",
+      "git_blob": "bf63f009cd1ac92f6d67d00f9d2c9c309e55885b",
+      "status": "crlf_normalized",
+      "size": 4801
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_instructor.py",
+      "mode": "100755",
+      "git_blob": "f61e9b5ef37756e99237d91774aa9055197339e3",
+      "status": "crlf_normalized",
+      "size": 8919
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/__init__.py",
+      "mode": "100644",
+      "git_blob": "7a7f69fa58bcb131bcb23b85a1695b14d4dbffda",
+      "status": "crlf_normalized",
+      "size": 5521
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/controls.py",
+      "mode": "100644",
+      "git_blob": "969538e80a6058b280f0c3055d22e5522564c33b",
+      "status": "crlf_normalized",
+      "size": 6859
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/findjoy.py",
+      "mode": "100644",
+      "git_blob": "bc3f0b12e66d36e02aba759abe917b3f11618188",
+      "status": "crlf_normalized",
+      "size": 3467
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/FeiYing.yml",
+      "mode": "100644",
+      "git_blob": "bfe0096b2b186e9da66655380c9a3c5b7c7141de",
+      "status": "crlf_normalized",
+      "size": 332
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/Logitech_WingMan_3D.yml",
+      "mode": "100644",
+      "git_blob": "aef473f1350a44dd9a8294bfa89c5ad32f5474eb",
+      "status": "crlf_normalized",
+      "size": 1654
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/SM001.yml",
+      "mode": "100644",
+      "git_blob": "f52f970693113849f72778d209dc78bb2ba73fd9",
+      "status": "crlf_normalized",
+      "size": 437
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/SparkFun Pro Micro.yml",
+      "mode": "100644",
+      "git_blob": "ba4353296f26e662fa7c0de547ae6053e0dfe747",
+      "status": "crlf_normalized",
+      "size": 477
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/T12S.yml",
+      "mode": "100644",
+      "git_blob": "c1f692d195d1086b7108d64f0c2ffba76238e121",
+      "status": "crlf_normalized",
+      "size": 454
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/T16S.yml",
+      "mode": "100644",
+      "git_blob": "80efd4752b96f6b4902f876001aa84ca06585622",
+      "status": "crlf_normalized",
+      "size": 400
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/carolbox-usb.yml",
+      "mode": "100644",
+      "git_blob": "b226ec2cceb8bf3bafbb4ed0a8246503ddb592c3",
+      "status": "crlf_normalized",
+      "size": 909
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/cypress-spektrum.yml",
+      "mode": "100644",
+      "git_blob": "c396c14781bad5da1507fbaf92d5d7094ff95af0",
+      "status": "crlf_normalized",
+      "size": 514
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/great-planes.Interlink-X.yaml",
+      "mode": "100644",
+      "git_blob": "1342ecc601d476e38a1629c4d1e951b52ccf5d86",
+      "status": "exact",
+      "size": 1197
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/great-planes.yml",
+      "mode": "100644",
+      "git_blob": "687a589c15a4ec4099c6e2d632768d8988b78f45",
+      "status": "crlf_normalized",
+      "size": 899
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/jumper.yml",
+      "mode": "100644",
+      "git_blob": "cfc82a7410932b42a5c106f18c10a94952803d0c",
+      "status": "crlf_normalized",
+      "size": 409
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/logicool-f310.yml",
+      "mode": "100644",
+      "git_blob": "9f610ba983f9015f2d72d90105730f7a78029b14",
+      "status": "crlf_normalized",
+      "size": 1373
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/logitech-dual-action.yml",
+      "mode": "100644",
+      "git_blob": "0c3d6f47b98c4f964664665208f030fe4cf2d21e",
+      "status": "crlf_normalized",
+      "size": 1714
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/saili-simulator.yml",
+      "mode": "100644",
+      "git_blob": "472f5c9fc27c2e7cea7d70eee636992fed6c235c",
+      "status": "crlf_normalized",
+      "size": 870
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/sony-playstation.yml",
+      "mode": "100644",
+      "git_blob": "36f818a212fdd2833f5b1f5c1f9b1066ee2445f0",
+      "status": "crlf_normalized",
+      "size": 603
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/spektrumInterLinkDX.yml",
+      "mode": "100644",
+      "git_blob": "c4c7ab8606bbf69b5e58ead58e2dec78ce91c49f",
+      "status": "crlf_normalized",
+      "size": 823
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/sz-mypower-ds4.yml",
+      "mode": "100644",
+      "git_blob": "6cc4ba05263583d476d9edfe623572d36ad2269b",
+      "status": "crlf_normalized",
+      "size": 732
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/taranis.yml",
+      "mode": "100644",
+      "git_blob": "294b86d576f38aff0168dbe6d48d56c46a17c664",
+      "status": "crlf_normalized",
+      "size": 504
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/xbox-360.yml",
+      "mode": "100644",
+      "git_blob": "f9399469e03b9aaca53c3426d12fb8f87d7d72cf",
+      "status": "crlf_normalized",
+      "size": 933
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_joystick/joysticks/xboxdrv-mode2.yml",
+      "mode": "100644",
+      "git_blob": "8ec3753171f45ec4182090a8c606ad35f236784d",
+      "status": "crlf_normalized",
+      "size": 1781
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_kmlgen.py",
+      "mode": "100644",
+      "git_blob": "51d634bebf5413658adb1ea6b5477e95e870c3f6",
+      "status": "crlf_normalized",
+      "size": 8444
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_kmlread.py",
+      "mode": "100644",
+      "git_blob": "ee52dac79fa0220d6370b9ea5ae80fdaa4283397",
+      "status": "crlf_normalized",
+      "size": 17546
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_layout.py",
+      "mode": "100644",
+      "git_blob": "0bde29de5c5f48a6f39d885c14ec2d5d1122117e",
+      "status": "crlf_normalized",
+      "size": 935
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_link.py",
+      "mode": "100644",
+      "git_blob": "deaeaed0686b8d6e04fe316feedb81bd5389b58e",
+      "status": "crlf_normalized",
+      "size": 53634
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_log.py",
+      "mode": "100644",
+      "git_blob": "bd75d926939d368fdc7da8897a2476b629fe1ff4",
+      "status": "crlf_normalized",
+      "size": 10890
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/__init__.py",
+      "mode": "100644",
+      "git_blob": "c0e5170aeedc4e6669bc9054a5873f9abfac6b79",
+      "status": "crlf_normalized",
+      "size": 6880
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/data/arrow.mtl",
+      "mode": "100644",
+      "git_blob": "18e92faa523727561ce44b1a60fa8520e4a0024f",
+      "status": "crlf_normalized",
+      "size": 436
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/data/arrow.obj",
+      "mode": "100644",
+      "git_blob": "3d11ebe3708bd5532f07b8edcda3942c4afc44bf",
+      "status": "crlf_normalized",
+      "size": 9741
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/data/quadcopter.mtl",
+      "mode": "100644",
+      "git_blob": "325684f878a70d54f6d47a9581aee377a4486527",
+      "status": "crlf_normalized",
+      "size": 709
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/data/quadcopter.obj",
+      "mode": "100644",
+      "git_blob": "88f3edd511d8991bca712e301286733490935c2e",
+      "status": "crlf_normalized",
+      "size": 470729
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/glrenderer.py",
+      "mode": "100644",
+      "git_blob": "e41dd751ba64b4ba1a580ffa12fe86f27fbb45b6",
+      "status": "crlf_normalized",
+      "size": 3122
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/magical_ui.py",
+      "mode": "100644",
+      "git_blob": "3015da7ced8c8ef6d51f2e709e99ce435145f12d",
+      "status": "crlf_normalized",
+      "size": 31807
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/wxgeodesicgrid.py",
+      "mode": "100644",
+      "git_blob": "1585ad920a7b87963f0c5572b2d23d989ac028b3",
+      "status": "crlf_normalized",
+      "size": 8801
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_magical/wxvehicle.py",
+      "mode": "100644",
+      "git_blob": "0dfae843ba83128f5cdbfc02f2ed0b5fb9edb7b3",
+      "status": "crlf_normalized",
+      "size": 8265
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/GAreader.py",
+      "mode": "100755",
+      "git_blob": "619097f6302f3315ac68070ae46b76fc0cc3f6a0",
+      "status": "crlf_normalized",
+      "size": 7634
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/__init__.py",
+      "mode": "100644",
+      "git_blob": "7017b5aa453c2990bdcc9ac296e01a952d2a3fae",
+      "status": "crlf_normalized",
+      "size": 66904
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/barrell.png",
+      "mode": "100644",
+      "git_blob": "c4173873d41b898e8259b67e29ff2184fdf4d71f",
+      "status": "exact",
+      "size": 1124
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/blueantenna.png",
+      "mode": "100644",
+      "git_blob": "b185d6c3f1251c09a43faaf7277b467f5bcca499",
+      "status": "exact",
+      "size": 312
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/blueblimp.png",
+      "mode": "100644",
+      "git_blob": "a873297366e6d96d01b021eb9e14a2d40b7cedb1",
+      "status": "exact",
+      "size": 8584
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/blueboat.png",
+      "mode": "100644",
+      "git_blob": "9519e3fbc5a3529adb0096129c4fcd7a027a1a06",
+      "status": "exact",
+      "size": 395
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/bluecopter.png",
+      "mode": "100644",
+      "git_blob": "248432287c1cb011bd47ed38ac03067c96d28d20",
+      "status": "exact",
+      "size": 430
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/blueheli.png",
+      "mode": "100644",
+      "git_blob": "e9a769c2aa5334527311171f25cf8625b6438478",
+      "status": "exact",
+      "size": 2500
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/blueplane.png",
+      "mode": "100644",
+      "git_blob": "8d96e974850ea0a958d82913cb78f29f484d3d24",
+      "status": "exact",
+      "size": 2386
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/bluerover.png",
+      "mode": "100644",
+      "git_blob": "0ce82221a9704a707cf4d7d6681bb95b1bf8e21b",
+      "status": "exact",
+      "size": 612
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/bluesinglecopter.png",
+      "mode": "100644",
+      "git_blob": "427c8b9b960ddcbd07b8fdca07d97a8e70a1b258",
+      "status": "exact",
+      "size": 432
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/bluesub.png",
+      "mode": "100644",
+      "git_blob": "177dc5794a85d00a24986db7ec1cc0bcdcf765bb",
+      "status": "exact",
+      "size": 2963
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/camera-small-red.png",
+      "mode": "100644",
+      "git_blob": "e784325a45915cfd85e3b0e0b33c4512afe9db33",
+      "status": "exact",
+      "size": 1098
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/cloud.png",
+      "mode": "100644",
+      "git_blob": "67cb36d77cf042c0f6020838d03715c31559c0b8",
+      "status": "exact",
+      "size": 1058
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/flag.png",
+      "mode": "100644",
+      "git_blob": "54dd3e3871269b74b3afae74bb55bed8b7c7ce78",
+      "status": "exact",
+      "size": 287
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/flame.png",
+      "mode": "100644",
+      "git_blob": "b3780d7589b9928e3cd91e21f9597dff146a09e9",
+      "status": "exact",
+      "size": 11279
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greenantenna.png",
+      "mode": "100644",
+      "git_blob": "6c062370e3a4667f9cfefa2fd269fec260201e5e",
+      "status": "exact",
+      "size": 314
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greenblimp.png",
+      "mode": "100644",
+      "git_blob": "a9686032c61fbd7b4b66396dc41b09a3f4942281",
+      "status": "exact",
+      "size": 11116
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greencopter.png",
+      "mode": "100644",
+      "git_blob": "7e2cd17927078ea5af50836c1c563ac618433e46",
+      "status": "exact",
+      "size": 429
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greenheli.png",
+      "mode": "100644",
+      "git_blob": "2023e2045954a31825f53169ef11386d8ec61a83",
+      "status": "exact",
+      "size": 2307
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greenplane.png",
+      "mode": "100644",
+      "git_blob": "12bc82ece36634942549ba3f8429226acd212f40",
+      "status": "exact",
+      "size": 2329
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greenrover.png",
+      "mode": "100644",
+      "git_blob": "e107cbe5ad600f917a61d24d57ee366f05d68dac",
+      "status": "exact",
+      "size": 563
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greensinglecopter.png",
+      "mode": "100644",
+      "git_blob": "279422b5b2476accf865fa58d3e932195dd04476",
+      "status": "exact",
+      "size": 431
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/greensub.png",
+      "mode": "100644",
+      "git_blob": "496b52b9df7c11ff2fba7ccb774b69bc1435116f",
+      "status": "exact",
+      "size": 4128
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/hawk.png",
+      "mode": "100644",
+      "git_blob": "db0545f446da002d390dce0a0c991bcef68b79ab",
+      "status": "exact",
+      "size": 1658
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/home.png",
+      "mode": "100644",
+      "git_blob": "35847278d168ea71e17aff413f6c057192e236f3",
+      "status": "exact",
+      "size": 1339
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/hoop.png",
+      "mode": "100644",
+      "git_blob": "d4d1f2dfad0b02c0d32f26401f2e0345a9ffedca",
+      "status": "exact",
+      "size": 616
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/image_vector_files/heli_icon.svg",
+      "mode": "100644",
+      "git_blob": "4663d6cad746927f75fdf7bf2ccc6fa85b863122",
+      "status": "crlf_normalized",
+      "size": 4813
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/loading.jpg",
+      "mode": "100644",
+      "git_blob": "00521ba8d16e0fcf2ea13e2d264c0fb1a25903c3",
+      "status": "exact",
+      "size": 5413
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/migbird.png",
+      "mode": "100644",
+      "git_blob": "34375c8b357dd3e4fef85d1ec74b85a8eff92e8b",
+      "status": "exact",
+      "size": 2001
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/orangecopter.png",
+      "mode": "100644",
+      "git_blob": "0d5caf46625a918743d123486fb2916508c53c80",
+      "status": "exact",
+      "size": 14288
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/orangeheli.png",
+      "mode": "100644",
+      "git_blob": "ddabd18f2cdfd3cbde3e3bb93df2b0ba2c5fd6c2",
+      "status": "exact",
+      "size": 2452
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/orangeplane.png",
+      "mode": "100644",
+      "git_blob": "9b1cb3e72ebfeaf7c1e34238fa21d262bd285755",
+      "status": "exact",
+      "size": 2346
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/orangerover.png",
+      "mode": "100644",
+      "git_blob": "49fc80d3fe7c1a77587a5d404ac906e9854d97e0",
+      "status": "exact",
+      "size": 10058
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/purpleplane.png",
+      "mode": "100644",
+      "git_blob": "63b840af0b6b56f01e1f6c59153454b166b186a1",
+      "status": "exact",
+      "size": 2260
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/rallypoint.png",
+      "mode": "100644",
+      "git_blob": "1af50b96c4503b4589249dc8e36df2806bfeb3af",
+      "status": "exact",
+      "size": 303
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/ramp.png",
+      "mode": "100644",
+      "git_blob": "24ea4a094bf950409f7b4354165ef3e5598c6e6f",
+      "status": "exact",
+      "size": 880
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redantenna.png",
+      "mode": "100644",
+      "git_blob": "de39d7e027866e2b3c3fb5cf44a66000683cb10e",
+      "status": "exact",
+      "size": 316
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redblimp.png",
+      "mode": "100644",
+      "git_blob": "c226a8f8e6af99e4837e0c136feeccd2d7c4becb",
+      "status": "exact",
+      "size": 9973
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redboat.png",
+      "mode": "100644",
+      "git_blob": "f32cdea03e325e3e7e9e332eee1b43dec630b258",
+      "status": "exact",
+      "size": 383
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redcopter.png",
+      "mode": "100644",
+      "git_blob": "6e8020d964eff11b7549c5b53ea1a409e6af168b",
+      "status": "exact",
+      "size": 453
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redheli.png",
+      "mode": "100644",
+      "git_blob": "b87df5c237b4aa236e539cad55b2eec48827d26f",
+      "status": "exact",
+      "size": 2432
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redplane.png",
+      "mode": "100644",
+      "git_blob": "1bdd94bed20d3a36b9f784cb40fd2699288d9d24",
+      "status": "exact",
+      "size": 3207
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redrover.png",
+      "mode": "100644",
+      "git_blob": "d3213dda0d9de0d82b3f499214e960a2bf12b7d9",
+      "status": "exact",
+      "size": 614
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redsinglecopter.png",
+      "mode": "100644",
+      "git_blob": "b91041d27c3dadea3a18898186779216c4e758ad",
+      "status": "exact",
+      "size": 479
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/redsub.png",
+      "mode": "100644",
+      "git_blob": "a49ddaa39b9fca640615e32b3c4ccbf9c2371bf0",
+      "status": "exact",
+      "size": 3903
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/data/unavailable.jpg",
+      "mode": "100644",
+      "git_blob": "901756fdd5e168076dbc6a51fbd30a7e7278108d",
+      "status": "exact",
+      "size": 6903
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/mp_elevation.py",
+      "mode": "100644",
+      "git_blob": "11ac39c1a3b5fbf9d6fbe60740b97aed44883587",
+      "status": "crlf_normalized",
+      "size": 235
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/mp_slipmap.py",
+      "mode": "100755",
+      "git_blob": "96e7a09fee57793bc40e0905480255b14cf9864d",
+      "status": "crlf_normalized",
+      "size": 10433
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/mp_slipmap_ui.py",
+      "mode": "100644",
+      "git_blob": "68f64e2cb023ba930a1e013666b9786126873bf4",
+      "status": "crlf_normalized",
+      "size": 34986
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/mp_slipmap_util.py",
+      "mode": "100644",
+      "git_blob": "6351c8b0f3948ddf2686dc3e6386112221906816",
+      "status": "crlf_normalized",
+      "size": 36830
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/mp_tile.py",
+      "mode": "100755",
+      "git_blob": "6d54c6867144c82078bbfca83e10d8089fe6ef9d",
+      "status": "crlf_normalized",
+      "size": 35795
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map/srtm.py",
+      "mode": "100644",
+      "git_blob": "3079181dc4d62a39baaafafdfd61bb2849e56caf",
+      "status": "crlf_normalized",
+      "size": 217
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/__init__.py",
+      "mode": "100644",
+      "git_blob": "8f09b8ccf32778573f438e3ed1915289788deb49",
+      "status": "crlf_normalized",
+      "size": 47717
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/camera.py",
+      "mode": "100644",
+      "git_blob": "bb519d952327acc81236e1ae649dfff8095079b2",
+      "status": "crlf_normalized",
+      "size": 6444
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/elements.py",
+      "mode": "100644",
+      "git_blob": "2e9d81a71fd28f30ef8035f9cffbc4b6096c9b39",
+      "status": "crlf_normalized",
+      "size": 46757
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/map3d.py",
+      "mode": "100644",
+      "git_blob": "a2f4ebf5201e8616c886ad1da69e45550d6ba7fe",
+      "status": "crlf_normalized",
+      "size": 8361
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/map3d_test.py",
+      "mode": "100644",
+      "git_blob": "e90be19caff510cc563ed552cafc6906ec0f5930",
+      "status": "crlf_normalized",
+      "size": 5167
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/map3d_ui.py",
+      "mode": "100644",
+      "git_blob": "b3874f953a46d94ff5af2d31e699d24d90d84bfe",
+      "status": "crlf_normalized",
+      "size": 26421
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/requirements.txt",
+      "mode": "100644",
+      "git_blob": "0c363bf93f5beaa26f8b592654e3662e3ae8736f",
+      "status": "crlf_normalized",
+      "size": 327
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_map3d/terrain.py",
+      "mode": "100644",
+      "git_blob": "461f9591df9e870a8b558f1d18f2f08489836b69",
+      "status": "crlf_normalized",
+      "size": 22570
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_message.py",
+      "mode": "100644",
+      "git_blob": "40b5f7696b3ace7478200ea8ca8b18733a302f88",
+      "status": "crlf_normalized",
+      "size": 1605
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_messagerate.py",
+      "mode": "100644",
+      "git_blob": "fc0e4caa48c7fbab51cf3ca12c9afe5226b06acb",
+      "status": "crlf_normalized",
+      "size": 5487
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misc.py",
+      "mode": "100644",
+      "git_blob": "6764bf4b8c62a9d7057f21de02c9b84ef1a6bfa5",
+      "status": "crlf_normalized",
+      "size": 31630
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/__init__.py",
+      "mode": "100644",
+      "git_blob": "45ec8e3c60aac58c4d68c6e049e432fd2e006b86",
+      "status": "crlf_normalized",
+      "size": 1552
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/button_renderer.py",
+      "mode": "100644",
+      "git_blob": "09250cfc3420870f3dba8a51751841fe3c7d56cf",
+      "status": "crlf_normalized",
+      "size": 2992
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/height_profile.py",
+      "mode": "100644",
+      "git_blob": "f5dc796f8eda211b69b7bc3fc509936884c8ab60",
+      "status": "crlf_normalized",
+      "size": 28365
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/me_defines.py",
+      "mode": "100644",
+      "git_blob": "431938d9874b8ad21b28ff6dbb3c8e41b2487bf0",
+      "status": "crlf_normalized",
+      "size": 2625
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/me_event.py",
+      "mode": "100644",
+      "git_blob": "25bcde55e1022873352cfabeeffa775948efb7b7",
+      "status": "crlf_normalized",
+      "size": 2033
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/missionEditorFrame.py",
+      "mode": "100755",
+      "git_blob": "0931257707a1585f8506e86d3862e7fc1e08ddf3",
+      "status": "crlf_normalized",
+      "size": 67369
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/mission_editor.py",
+      "mode": "100644",
+      "git_blob": "740760fada9d48dcca42414b05c4e9a41d4e78ce",
+      "status": "crlf_normalized",
+      "size": 20617
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/survey.py",
+      "mode": "100644",
+      "git_blob": "108536057fc447f75ac0973957988db8b2babcd0",
+      "status": "crlf_normalized",
+      "size": 3862
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/survey_dialog.py",
+      "mode": "100644",
+      "git_blob": "ca432eebecb49dcbab2af4ef4ffda43dcce3b0da",
+      "status": "crlf_normalized",
+      "size": 9112
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_misseditor/survey_preview.py",
+      "mode": "100644",
+      "git_blob": "8be0168ae9f5cf471283b23ec30bd4ba8d060e8d",
+      "status": "crlf_normalized",
+      "size": 1322
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/__init__.py",
+      "mode": "100644",
+      "git_blob": "a63d9d4ebee5342ca1633c94e97fb1fb0ba1d024",
+      "status": "crlf_normalized",
+      "size": 1382
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/bing.js",
+      "mode": "100644",
+      "git_blob": "0aec623dd6a18c86e0bab93c72320b32ca29977b",
+      "status": "crlf_normalized",
+      "size": 2407
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/bluemarble.js",
+      "mode": "100644",
+      "git_blob": "759115bf816bcb0a65ed40de29ad4b2cc5c6e255",
+      "status": "crlf_normalized",
+      "size": 467
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/drone-md.png",
+      "mode": "100644",
+      "git_blob": "04d84ab8e74961118986532c220ed2bc68d344a3",
+      "status": "exact",
+      "size": 880
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/drone-sm.png",
+      "mode": "100644",
+      "git_blob": "77ee10c92f65a476f4ac410f05cfc21259e9802f",
+      "status": "exact",
+      "size": 603
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/index.html",
+      "mode": "100644",
+      "git_blob": "4bf7f369643f7a07660a5518b4c9a30e3946fc86",
+      "status": "crlf_normalized",
+      "size": 9560
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_app/modestmaps.js",
+      "mode": "100644",
+      "git_blob": "fb27f015b69b0d84ca3c83977b07d71f8ba414fe",
+      "status": "crlf_normalized",
+      "size": 111778
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mmap/mmap_server.py",
+      "mode": "100644",
+      "git_blob": "25e1bbc2d1323a9535a1661d1a023c73b6658009",
+      "status": "crlf_normalized",
+      "size": 2035
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mode.py",
+      "mode": "100644",
+      "git_blob": "d26208c2785754f62225b3155ebf2649435796d5",
+      "status": "crlf_normalized",
+      "size": 7371
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_movinghome.py",
+      "mode": "100644",
+      "git_blob": "5a4c4a8f7f877264948233c789c115fd718f7afd",
+      "status": "crlf_normalized",
+      "size": 7478
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_mqtt.py",
+      "mode": "100644",
+      "git_blob": "518cd6101de9ca92b64ec1229e1708e3c683e6b0",
+      "status": "crlf_normalized",
+      "size": 2540
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_msg.py",
+      "mode": "100644",
+      "git_blob": "bcfdee6df9d91b7b70d937a05bd19bc2b0b1c3b2",
+      "status": "crlf_normalized",
+      "size": 1351
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_nmeagps.py",
+      "mode": "100644",
+      "git_blob": "a49d46864d211663c6d163079c10753836c4cfab",
+      "status": "crlf_normalized",
+      "size": 3633
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_nmeaout.py",
+      "mode": "100644",
+      "git_blob": "fd07995e974088c4853b32162573b3350f011f19",
+      "status": "crlf_normalized",
+      "size": 5291
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_nokov/__init__.py",
+      "mode": "100755",
+      "git_blob": "b3a05c36b27a5a5610d9bf9f416ad4c49ba6e1d7",
+      "status": "crlf_normalized",
+      "size": 4427
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_notes.py",
+      "mode": "100644",
+      "git_blob": "73eec1ce9ecb4fad9d90a8d67d1f5e0fe9ba3b47",
+      "status": "crlf_normalized",
+      "size": 5604
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_nsh.py",
+      "mode": "100644",
+      "git_blob": "6beec6dbe596f7554da48e245826611876e26b7e",
+      "status": "crlf_normalized",
+      "size": 4031
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ntrip.py",
+      "mode": "100644",
+      "git_blob": "a6b153298746bdd887599a921cd847e49b1b03ff",
+      "status": "crlf_normalized",
+      "size": 6948
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_oldwp.py",
+      "mode": "100644",
+      "git_blob": "733271622b3391ae88eb15a245d47b2038561e0f",
+      "status": "crlf_normalized",
+      "size": 55950
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_optitrack/DataDescriptions.py",
+      "mode": "100644",
+      "git_blob": "f56159825e490f1bc7478387d20c1201477c43d8",
+      "status": "crlf_normalized",
+      "size": 32540
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_optitrack/MoCapData.py",
+      "mode": "100644",
+      "git_blob": "f29a2a0172aeab40bb15002f557d15b9675691b9",
+      "status": "crlf_normalized",
+      "size": 39812
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_optitrack/NatNetClient.py",
+      "mode": "100644",
+      "git_blob": "60b1a5a3f4d706638fb193fc44f62d67d1537021",
+      "status": "crlf_normalized",
+      "size": 80776
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_optitrack/__init__.py",
+      "mode": "100644",
+      "git_blob": "1fbd06f7c2ad5a4538fa3f23700677b3303b784b",
+      "status": "crlf_normalized",
+      "size": 3091
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_osd.py",
+      "mode": "100644",
+      "git_blob": "214875f3b63f9e561c602b822da22ade1a3f7322",
+      "status": "crlf_normalized",
+      "size": 6738
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_output.py",
+      "mode": "100644",
+      "git_blob": "bfac7413219d0c108bd1692f9133dfbc43527ce9",
+      "status": "crlf_normalized",
+      "size": 6866
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_param.py",
+      "mode": "100644",
+      "git_blob": "c3d60339f7e2926977c5e17bf4abeb65c4aa10c5",
+      "status": "crlf_normalized",
+      "size": 45084
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/__init__.py",
+      "mode": "100644",
+      "git_blob": "fee3164d7a2b980d70bad227968dfdc8a35c4f1a",
+      "status": "crlf_normalized",
+      "size": 1784
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/checklisteditor.py",
+      "mode": "100644",
+      "git_blob": "3366c1b501a15f86c79227d493544365bcf35d50",
+      "status": "crlf_normalized",
+      "size": 6793
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/param_editor.py",
+      "mode": "100644",
+      "git_blob": "7d49918f39b82ec75c419b3d7b6c239975f26385",
+      "status": "crlf_normalized",
+      "size": 18450
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/param_editor.wxg",
+      "mode": "100644",
+      "git_blob": "88f2929627a4d15193f166d99c099694b955fdb0",
+      "status": "crlf_normalized",
+      "size": 10530
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/param_editor_frame.py",
+      "mode": "100755",
+      "git_blob": "38228aaa7e6451136e55d740130ac153a02f7b8b",
+      "status": "crlf_normalized",
+      "size": 27724
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_paramedit/ph_event.py",
+      "mode": "100644",
+      "git_blob": "196fc8a15355e08e50048c52b544684f91bfd48d",
+      "status": "crlf_normalized",
+      "size": 1450
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_park.py",
+      "mode": "100644",
+      "git_blob": "9ba7404ecace3a6c13d8a1c7ba69e8188b0cd71c",
+      "status": "crlf_normalized",
+      "size": 3784
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ppp.py",
+      "mode": "100644",
+      "git_blob": "ed20dc0608fd1943dfc9f2811909153609530487",
+      "status": "crlf_normalized",
+      "size": 3157
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_proximity.py",
+      "mode": "100644",
+      "git_blob": "5b1cc0954f91f804c8f22094fa020f6585a71b5f",
+      "status": "crlf_normalized",
+      "size": 7920
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_rally.py",
+      "mode": "100644",
+      "git_blob": "69d0c8666522df69345a09e9305ead478c2c97a8",
+      "status": "crlf_normalized",
+      "size": 4486
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_rallypoint_protocol.py",
+      "mode": "100644",
+      "git_blob": "ffa57bc41d215911905bfa9fd7bc0c55b7b1dc7a",
+      "status": "crlf_normalized",
+      "size": 14050
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_rc.py",
+      "mode": "100644",
+      "git_blob": "9da468fc934ce0f2c50cb81125c1c7ff24bf7c84",
+      "status": "crlf_normalized",
+      "size": 9086
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_rcsetup.py",
+      "mode": "100644",
+      "git_blob": "70056c28275abc6bb4e3b44c0443d0d5f1c20752",
+      "status": "crlf_normalized",
+      "size": 4201
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_relay.py",
+      "mode": "100644",
+      "git_blob": "aa991e057a210233a2637501ed326f0fbcac4d55",
+      "status": "crlf_normalized",
+      "size": 3854
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_restserver.py",
+      "mode": "100644",
+      "git_blob": "78cce0f0b05b281029a93461f9848e52e97782fa",
+      "status": "crlf_normalized",
+      "size": 5482
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_sail.py",
+      "mode": "100644",
+      "git_blob": "25061c07878acf89618bf102265c358566b9b212",
+      "status": "crlf_normalized",
+      "size": 6703
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_sensors.py",
+      "mode": "100644",
+      "git_blob": "bf0b6c5a96655eccc5aed631dc86c4c0f46e86fe",
+      "status": "crlf_normalized",
+      "size": 4499
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_serial.py",
+      "mode": "100644",
+      "git_blob": "cc83e6294b7ed2aa1803ed0ec02da982fba0713b",
+      "status": "crlf_normalized",
+      "size": 3102
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_setpos.py",
+      "mode": "100644",
+      "git_blob": "ccad8be12b43258c5f2e9a1abd573dc4232037b4",
+      "status": "crlf_normalized",
+      "size": 3967
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_signing.py",
+      "mode": "100644",
+      "git_blob": "4569b219dcebbeb7421b3670d46a6af95fcba93c",
+      "status": "crlf_normalized",
+      "size": 7136
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_silvus.py",
+      "mode": "100644",
+      "git_blob": "b15a716d74183b24286523fa527ff73cbabc2d20",
+      "status": "crlf_normalized",
+      "size": 10454
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/__init__.py",
+      "mode": "100644",
+      "git_blob": "ac512cff23964eff860bf2199ebccef6eddab064",
+      "status": "crlf_normalized",
+      "size": 19739
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_ExifWriter.py",
+      "mode": "100755",
+      "git_blob": "e1a907399d71860a6c97324a458688b100c89459",
+      "status": "crlf_normalized",
+      "size": 5049
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_SonyQX1.py",
+      "mode": "100644",
+      "git_blob": "dfcf9d92abf6724395f338230165013913583a2b",
+      "status": "crlf_normalized",
+      "size": 32070
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_config.py",
+      "mode": "100644",
+      "git_blob": "a41c016c1acfee8fea1bc78847b1dbe792ba8615",
+      "status": "crlf_normalized",
+      "size": 5265
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_main.py",
+      "mode": "100644",
+      "git_blob": "b610f5f959248a7623aa95213c4d9ce77ac04035",
+      "status": "crlf_normalized",
+      "size": 8152
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_video.py",
+      "mode": "100644",
+      "git_blob": "9148bcd6be3b926e3e4e2e4d0f59f7f0708a0d15",
+      "status": "crlf_normalized",
+      "size": 6897
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/sc_webcam.py",
+      "mode": "100644",
+      "git_blob": "a907440ff5cd6fcdfee64252213d254b50f7b9aa",
+      "status": "crlf_normalized",
+      "size": 3415
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/smart_camera.cnf",
+      "mode": "100644",
+      "git_blob": "4fb7473d516ced72a49367f8bfe27d147cf03c0c",
+      "status": "crlf_normalized",
+      "size": 262
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_smartcamera/ssdp.py",
+      "mode": "100644",
+      "git_blob": "c912a22bcd1f3b8fe910e4f12d6b9b8760874c2b",
+      "status": "crlf_normalized",
+      "size": 2315
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_soar.py",
+      "mode": "100644",
+      "git_blob": "cf6813880661e70a7ec77efd996fc34656ff03fa",
+      "status": "crlf_normalized",
+      "size": 2844
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_speech.py",
+      "mode": "100644",
+      "git_blob": "c08fec85c3c88a50c1701aebc23ecd18ddfaa1fb",
+      "status": "crlf_normalized",
+      "size": 8689
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_swarm.py",
+      "mode": "100644",
+      "git_blob": "ded9c38297a209fb22d783f6a09b4ca87c27d488",
+      "status": "crlf_normalized",
+      "size": 41570
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_system_time.py",
+      "mode": "100644",
+      "git_blob": "d2e20b747156a95735d1533b1ed3c6100a793e24",
+      "status": "crlf_normalized",
+      "size": 4048
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_terrain.py",
+      "mode": "100644",
+      "git_blob": "751be4028fb5e896bc98ef564078fac49f92d307",
+      "status": "crlf_normalized",
+      "size": 6390
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_test.py",
+      "mode": "100644",
+      "git_blob": "c8253647fb0f455fe9338c4ca5cf92d05e7f0e88",
+      "status": "crlf_normalized",
+      "size": 1412
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_timesync.py",
+      "mode": "100644",
+      "git_blob": "690745b3df7e7e99c8be401697d8ef5732674af0",
+      "status": "crlf_normalized",
+      "size": 1100
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_tracker.py",
+      "mode": "100644",
+      "git_blob": "d3dc91fc47e474cffec64d3eb4ebedeeea944a2a",
+      "status": "crlf_normalized",
+      "size": 8822
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_tuneopt.py",
+      "mode": "100644",
+      "git_blob": "a95f565c91bbcf0276a06ee20efb2727f4473f6a",
+      "status": "crlf_normalized",
+      "size": 3650
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ublox/__init__.py",
+      "mode": "100644",
+      "git_blob": "8e9d6c4828cc567f2848cb952dbde5006168c839",
+      "status": "crlf_normalized",
+      "size": 6900
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_ucenter.py",
+      "mode": "100644",
+      "git_blob": "95ab36d0271a417c36a7e6d6b2e505c12db06284",
+      "status": "crlf_normalized",
+      "size": 6158
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_useralerts.py",
+      "mode": "100644",
+      "git_blob": "f4dc2a526652fcba9f6b6f81924c9ca36615d92b",
+      "status": "crlf_normalized",
+      "size": 8326
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_vicon.py",
+      "mode": "100644",
+      "git_blob": "9b48dd2e21d1ba53aa0a9d2438b71d1bee24af67",
+      "status": "crlf_normalized",
+      "size": 10975
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_warning.py",
+      "mode": "100644",
+      "git_blob": "38475046d0e236bae531fb165b81402ed62c8b8e",
+      "status": "crlf_normalized",
+      "size": 8254
+    },
+    {
+      "path": "MAVProxy/modules/mavproxy_wp.py",
+      "mode": "100644",
+      "git_blob": "2a135d65b246dc8fb0135c5dcf209078069eb539",
+      "status": "crlf_normalized",
+      "size": 25784
+    },
+    {
+      "path": "MAVProxy/tools/MAVExplorer.bat",
+      "mode": "100644",
+      "git_blob": "bf1814fefded5c298e495762bb65bd62a932aa35",
+      "status": "exact",
+      "size": 114
+    },
+    {
+      "path": "MAVProxy/tools/MAVExplorer.py",
+      "mode": "100755",
+      "git_blob": "fc190c960ce32d2feef3a22502a2359e45ff7eb1",
+      "status": "crlf_normalized",
+      "size": 110246
+    },
+    {
+      "path": "MAVProxy/tools/graphs/ekf3Graphs.xml",
+      "mode": "100644",
+      "git_blob": "235f0d95483f97ec928afccdbcc618e867fcb342",
+      "status": "crlf_normalized",
+      "size": 13281
+    },
+    {
+      "path": "MAVProxy/tools/graphs/ekfGraphs.xml",
+      "mode": "100644",
+      "git_blob": "4996dced5bd638e11825d8792862daaff5eace2e",
+      "status": "crlf_normalized",
+      "size": 11675
+    },
+    {
+      "path": "MAVProxy/tools/graphs/mavgraphs.xml",
+      "mode": "100644",
+      "git_blob": "3c8c0f763231678c4243dc85320040af1df9d083",
+      "status": "crlf_normalized",
+      "size": 35226
+    },
+    {
+      "path": "MAVProxy/tools/graphs/mavgraphs2.xml",
+      "mode": "100644",
+      "git_blob": "9380f12f7906112c6948cfaddd921607ea1df86f",
+      "status": "crlf_normalized",
+      "size": 26835
+    },
+    {
+      "path": "MAVProxy/tools/mavflightview.py",
+      "mode": "100755",
+      "git_blob": "c5f942aa78dae1b44d7837e897560a04bed418f2",
+      "status": "crlf_normalized",
+      "size": 33811
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer.bat",
+      "mode": "100644",
+      "git_blob": "8e6c43896ee6d825a34ce1cb5c3058bbf4db8871",
+      "status": "exact",
+      "size": 110
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer.py",
+      "mode": "100644",
+      "git_blob": "50629a757bf19799888aeb75c881f1b44431a9e1",
+      "status": "crlf_normalized",
+      "size": 1069
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer_image.py",
+      "mode": "100644",
+      "git_blob": "cbf387ee3ca58fe490dc26257e1cf50e7d12e0f5",
+      "status": "crlf_normalized",
+      "size": 25667
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer_mosaic.py",
+      "mode": "100644",
+      "git_blob": "563e1862d0a36863a6720aa7a4583ab3aef0bec3",
+      "status": "crlf_normalized",
+      "size": 18813
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer_settings.py",
+      "mode": "100644",
+      "git_blob": "1f69b163b0708fb188a79f68a850614fba7562c8",
+      "status": "crlf_normalized",
+      "size": 2922
+    },
+    {
+      "path": "MAVProxy/tools/mavpicviewer/mavpicviewer_shared.py",
+      "mode": "100644",
+      "git_blob": "581857f551186aea9d05342a40e9a82cf5c0ae2a",
+      "status": "crlf_normalized",
+      "size": 3206
+    },
+    {
+      "path": "MAVProxy/tools/mavvidplay.py",
+      "mode": "100755",
+      "git_blob": "ea1bb369634da9ca0a1a4a765fbebe5a1f5b120a",
+      "status": "crlf_normalized",
+      "size": 5269
+    },
+    {
+      "path": "MAVProxy_Icon/3.ai",
+      "mode": "100644",
+      "git_blob": "388660e156b7e9a9442f870f6d559c3bbd76589c",
+      "status": "exact",
+      "size": 380808
+    },
+    {
+      "path": "MAVProxy_Icon/3.jpg",
+      "mode": "100644",
+      "git_blob": "a12f32fe948d7c0d583e3720310104398ee57581",
+      "status": "exact",
+      "size": 130627
+    },
+    {
+      "path": "MAVProxy_Icon/3.png",
+      "mode": "100644",
+      "git_blob": "e49bf6863679bee30be80d877b46805b7cf2a4b7",
+      "status": "exact",
+      "size": 63007
+    },
+    {
+      "path": "MAVProxy_Icon/icon.jpg",
+      "mode": "100644",
+      "git_blob": "bd5d130aa24e8e407b0c83c93124d20046565c37",
+      "status": "exact",
+      "size": 124278
+    },
+    {
+      "path": "MAVProxy_Icon/icon.png",
+      "mode": "100644",
+      "git_blob": "3e8d910ae71d3c58969c05deb8e25f391b083233",
+      "status": "exact",
+      "size": 60546
+    },
+    {
+      "path": "MAVProxy_Icon/mockup.jpg",
+      "mode": "100644",
+      "git_blob": "79532f773132b85571077dc68ff11780d35e3980",
+      "status": "exact",
+      "size": 273216
+    },
+    {
+      "path": "MAVProxy_Icon/source file 2.ai",
+      "mode": "100644",
+      "git_blob": "2bd58a4864487a62070c76fd8797a73221580289",
+      "status": "exact",
+      "size": 376607
+    },
+    {
+      "path": "MAVProxy_Icon/source file.ai",
+      "mode": "100644",
+      "git_blob": "0710133feec706b14e625b175138789858b63210",
+      "status": "exact",
+      "size": 380408
+    },
+    {
+      "path": "MAVProxy_Icon/trans-BG-2.png",
+      "mode": "100644",
+      "git_blob": "ec6d1a716cc72fa0d5bb704ce0625ec9f8bbc2cc",
+      "status": "exact",
+      "size": 77677
+    },
+    {
+      "path": "MAVProxy_Icon/trans-BG.png",
+      "mode": "100644",
+      "git_blob": "cbf075700b90cd88c455e7e5e33535d93894a0e6",
+      "status": "exact",
+      "size": 63031
+    },
+    {
+      "path": "MAVProxy_Icon/white-BG-2.jpg",
+      "mode": "100644",
+      "git_blob": "4c9321f27d201f5f893ce262fdab98b953ad6fd4",
+      "status": "exact",
+      "size": 161742
+    },
+    {
+      "path": "MAVProxy_Icon/white-BG.jpg",
+      "mode": "100644",
+      "git_blob": "55ac7408196061ab47787f415f03626f28a141a6",
+      "status": "exact",
+      "size": 130594
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "git_blob": "0dd82f328032ba722355057554b4a93802346d52",
+      "status": "crlf_normalized",
+      "size": 722
+    },
+    {
+      "path": "docs/JOYSTICKS.md",
+      "mode": "100644",
+      "git_blob": "01b8698edc989facc3741c8a3888bff5e4edca76",
+      "status": "crlf_normalized",
+      "size": 5477
+    },
+    {
+      "path": "docs/MavProxy_Screenshot_Termux.jpg",
+      "mode": "100644",
+      "git_blob": "a84396845c2a80e208ffd7800e3d493b580cce39",
+      "status": "exact",
+      "size": 535383
+    },
+    {
+      "path": "docs/mavvidplay.md",
+      "mode": "100644",
+      "git_blob": "f3a99aaaaf54edeae2b80a7a1b26d89df68dd20b",
+      "status": "crlf_normalized",
+      "size": 7324
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "git_blob": "c426cdd3727bab8412ee07a07db38fa84e69a5bc",
+      "status": "crlf_normalized",
+      "size": 41
+    },
+    {
+      "path": "scripts/run_flake8.py",
+      "mode": "100755",
+      "git_blob": "0f23afa8d5c0fb5761eba74d65aa2c5b9fe6a979",
+      "status": "crlf_normalized",
+      "size": 1916
+    },
+    {
+      "path": "setup.py",
+      "mode": "100755",
+      "git_blob": "a231baff69a4b0c8c42a5a11df15fd41ee62f838",
+      "status": "crlf_normalized",
+      "size": 7925
+    },
+    {
+      "path": "shortcuts/ReadMe.md",
+      "mode": "100644",
+      "git_blob": "b6c728bfe9e36e1ee2683005f1914f57ea6922b7",
+      "status": "crlf_normalized",
+      "size": 1064
+    },
+    {
+      "path": "shortcuts/mavexplorer.desktop",
+      "mode": "100755",
+      "git_blob": "1924250ecd7de71f2a996bbb40cf40309125d6de",
+      "status": "crlf_normalized",
+      "size": 203
+    },
+    {
+      "path": "shortcuts/mavexplorer.png",
+      "mode": "100644",
+      "git_blob": "f5dd9cdf2f78d488fe98d6077696a09c94dcdb4b",
+      "status": "exact",
+      "size": 39160
+    },
+    {
+      "path": "shortcuts/mavpicviewer.desktop",
+      "mode": "100644",
+      "git_blob": "3a4f5c749a8024cc465cfd6df19cda3da22bf5e9",
+      "status": "crlf_normalized",
+      "size": 201
+    },
+    {
+      "path": "shortcuts/mavpicviewer.png",
+      "mode": "100644",
+      "git_blob": "8ca05fbc87363700da565ecbafb914d31bb777a7",
+      "status": "exact",
+      "size": 123909
+    },
+    {
+      "path": "shortcuts/mavproxy.desktop",
+      "mode": "100755",
+      "git_blob": "10a1e0ae417cf9f8b317e942e5e5b7ffed1879c5",
+      "status": "crlf_normalized",
+      "size": 181
+    },
+    {
+      "path": "shortcuts/mavproxy.png",
+      "mode": "100644",
+      "git_blob": "572dcd602f42c58bb13b2dc1be7cebbe466b8714",
+      "status": "exact",
+      "size": 23989
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "git_blob": "461d6e2c30f824985a442f0864f30afef0532650",
+      "status": "crlf_normalized",
+      "size": 6225
+    },
+    {
+      "path": "tests/missions/README.md",
+      "mode": "100644",
+      "git_blob": "4b324dbdc18957c19a39bf977cd8e25e9f10e865",
+      "status": "crlf_normalized",
+      "size": 3003
+    },
+    {
+      "path": "tests/missions/copter-mission-geometry.txt",
+      "mode": "100644",
+      "git_blob": "a8c1a93aa52870be0a3e3c043aa1fd004e25956b",
+      "status": "crlf_normalized",
+      "size": 2436
+    },
+    {
+      "path": "tests/missions/kalaupapa-canyon-run.json",
+      "mode": "100644",
+      "git_blob": "1c7354b0c1ea54790c86138cec99a9ae78be07e7",
+      "status": "exact",
+      "size": 40674
+    },
+    {
+      "path": "tests/missions/plane-mission-geometry.txt",
+      "mode": "100644",
+      "git_blob": "88ee54b50e34386bc956222ddc2a44f8af6e50a9",
+      "status": "crlf_normalized",
+      "size": 3111
+    },
+    {
+      "path": "tests/missions/record_flight.py",
+      "mode": "100644",
+      "git_blob": "10e92454a40748207579e45455a5dc538e982779",
+      "status": "crlf_normalized",
+      "size": 8555
+    },
+    {
+      "path": "tests/missions/sitl-plane-loiter-unlimited.json",
+      "mode": "100644",
+      "git_blob": "e166e8b97cb48f41d0d39c4b92b450ce6872bdf9",
+      "status": "exact",
+      "size": 4166
+    },
+    {
+      "path": "tests/missions/sitl-plane-mission-items.json",
+      "mode": "100644",
+      "git_blob": "dcf2ea80652266124884ac106eadc3de9ff4fd31",
+      "status": "exact",
+      "size": 32457
+    },
+    {
+      "path": "tests/missions/sitl-plane-rtl-rally.json",
+      "mode": "100644",
+      "git_blob": "9992bc1b62e85780585dd90a3bc360f00ad7b642",
+      "status": "exact",
+      "size": 7146
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-rtl-q-rtl-mode-1.json",
+      "mode": "100644",
+      "git_blob": "461d0ea8517a1b234f5ea5ac72e750d70007ce85",
+      "status": "exact",
+      "size": 5984
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-rtl-q-rtl-mode-2.json",
+      "mode": "100644",
+      "git_blob": "dbfe7369874f68ca09dd7d6a617b9c4d9eb02374",
+      "status": "exact",
+      "size": 7095
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-rtl-q-rtl-mode-3.json",
+      "mode": "100644",
+      "git_blob": "a5035c3d165403f572dcd22ca24c04839ae34982",
+      "status": "exact",
+      "size": 6076
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-vtol-land-approach.json",
+      "mode": "100644",
+      "git_blob": "0ffb1054de9041d91095cee38c4d6afcdc78d09c",
+      "status": "exact",
+      "size": 6144
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-vtol-land-q-options.json",
+      "mode": "100644",
+      "git_blob": "87b190eafcd5604743110f22a3930dc80be19d5f",
+      "status": "exact",
+      "size": 5764
+    },
+    {
+      "path": "tests/missions/sitl-quadplane-vtol-land.json",
+      "mode": "100644",
+      "git_blob": "e0b37eaedbfa2245c786f8cef1f953d07dcb4abc",
+      "status": "exact",
+      "size": 5611
+    },
+    {
+      "path": "tests/test_camera_definition.py",
+      "mode": "100644",
+      "git_blob": "76de12cf4b9f316599708ef491f3e8f956fbb1e1",
+      "status": "crlf_normalized",
+      "size": 28598
+    },
+    {
+      "path": "tests/test_camera_projection.py",
+      "mode": "100644",
+      "git_blob": "294d0464aea17abc4fdab8206959d763024371ac",
+      "status": "crlf_normalized",
+      "size": 5150
+    },
+    {
+      "path": "tests/test_camera_settings_dialog.py",
+      "mode": "100644",
+      "git_blob": "d56b9df8f4608474c7ef567e3cd161ed2a2bf47b",
+      "status": "crlf_normalized",
+      "size": 2737
+    },
+    {
+      "path": "tests/test_console_component_names.py",
+      "mode": "100644",
+      "git_blob": "d7732e443cdb9a203ab85894ee5d49e0b1729103",
+      "status": "crlf_normalized",
+      "size": 6956
+    },
+    {
+      "path": "tests/test_editor_ftp.py",
+      "mode": "100644",
+      "git_blob": "7d9ff02ffb1bc6be294a2ae49b5408ae46e6fe64",
+      "status": "crlf_normalized",
+      "size": 20900
+    },
+    {
+      "path": "tests/test_map3d_mission_labels.py",
+      "mode": "100644",
+      "git_blob": "77ab3eb7a3920ede9454412734db034a54cc788c",
+      "status": "crlf_normalized",
+      "size": 13736
+    },
+    {
+      "path": "tests/test_map3d_ribbon.py",
+      "mode": "100644",
+      "git_blob": "6f2144d9e88df36b424da739ed8dfaccf98a0780",
+      "status": "crlf_normalized",
+      "size": 5911
+    },
+    {
+      "path": "tests/test_map3d_settings_sync.py",
+      "mode": "100644",
+      "git_blob": "2414b913ff5c34172d8b41418997d5c9ae6fd51b",
+      "status": "crlf_normalized",
+      "size": 16400
+    },
+    {
+      "path": "tests/test_map_arc_compat.py",
+      "mode": "100644",
+      "git_blob": "d87fc2343a0bd91014d4341cf25bd16edc83d517",
+      "status": "crlf_normalized",
+      "size": 2856
+    },
+    {
+      "path": "tests/test_map_follow.py",
+      "mode": "100644",
+      "git_blob": "eb521ce8a1d3314d1baab88c53cfa45f00934ebb",
+      "status": "crlf_normalized",
+      "size": 3671
+    },
+    {
+      "path": "tests/test_map_roi.py",
+      "mode": "100644",
+      "git_blob": "8205c673c0a15d5b65440d34211f946e9dbf8f4b",
+      "status": "crlf_normalized",
+      "size": 3532
+    },
+    {
+      "path": "tests/test_mavflightview.py",
+      "mode": "100644",
+      "git_blob": "2ed42ea2c8aaf125ca2d6fe3e8b31a09ce7e0c21",
+      "status": "crlf_normalized",
+      "size": 18341
+    },
+    {
+      "path": "tests/test_mavproxy_camera.py",
+      "mode": "100644",
+      "git_blob": "c8ba36f23a0524700e5729b0acf93730d7f467fb",
+      "status": "crlf_normalized",
+      "size": 89654
+    },
+    {
+      "path": "tests/test_mavproxy_ftp.py",
+      "mode": "100644",
+      "git_blob": "a4965358709a6cf0b6ba72db2c14c8b607c8d6c6",
+      "status": "crlf_normalized",
+      "size": 36915
+    },
+    {
+      "path": "tests/test_mavproxy_shutdown.py",
+      "mode": "100644",
+      "git_blob": "81d3572939bd820904940988f0dc383bacd25513",
+      "status": "crlf_normalized",
+      "size": 27858
+    },
+    {
+      "path": "tests/test_mavproxy_siyi.py",
+      "mode": "100644",
+      "git_blob": "083619a1743e676c4d323f72c9ace0a3f241d45a",
+      "status": "crlf_normalized",
+      "size": 2171
+    },
+    {
+      "path": "tests/test_mavproxy_siyi_sitl.py",
+      "mode": "100644",
+      "git_blob": "e07d9e529fac56545c4eeb8210a2c3cf1053a48c",
+      "status": "crlf_normalized",
+      "size": 10714
+    },
+    {
+      "path": "tests/test_mavvidplay.py",
+      "mode": "100644",
+      "git_blob": "cdff4963464ef92d689b6ce5ba3f0cfd5fad2e29",
+      "status": "crlf_normalized",
+      "size": 1311
+    },
+    {
+      "path": "tests/test_mavvidplay_gui.py",
+      "mode": "100644",
+      "git_blob": "022fcb3abe89a3a8d95686e93e0020701ecffa08",
+      "status": "crlf_normalized",
+      "size": 5231
+    },
+    {
+      "path": "tests/test_mission_editor_ftp.py",
+      "mode": "100644",
+      "git_blob": "b8f08399189df2e4189258fa94668f600506ec87",
+      "status": "crlf_normalized",
+      "size": 2722
+    },
+    {
+      "path": "tests/test_mission_editor_map.py",
+      "mode": "100644",
+      "git_blob": "20aa7185a31409212c89a012081bc13e9c0799d9",
+      "status": "crlf_normalized",
+      "size": 8853
+    },
+    {
+      "path": "tests/test_mission_editor_startup.py",
+      "mode": "100644",
+      "git_blob": "ed6fd4c94c124df65909a5bc697ec15506f43780",
+      "status": "crlf_normalized",
+      "size": 4777
+    },
+    {
+      "path": "tests/test_mission_geometry.py",
+      "mode": "100644",
+      "git_blob": "cc1d23c7cc6a92b41a558ba57eb41fef528190f8",
+      "status": "crlf_normalized",
+      "size": 72605
+    },
+    {
+      "path": "tests/test_mp_image_pacing.py",
+      "mode": "100644",
+      "git_blob": "3da21f558a8fde7d6dde88896a8d8009582285ad",
+      "status": "crlf_normalized",
+      "size": 2874
+    },
+    {
+      "path": "tests/test_mp_image_video.py",
+      "mode": "100644",
+      "git_blob": "c147c1ffe856c15b57d3389afcf598623cdd64d6",
+      "status": "crlf_normalized",
+      "size": 2872
+    },
+    {
+      "path": "tests/test_opendroneid.py",
+      "mode": "100644",
+      "git_blob": "8b8d49a66d9def408ff6aa9a5685fadf08d01686",
+      "status": "crlf_normalized",
+      "size": 510
+    },
+    {
+      "path": "tests/test_paramedit.py",
+      "mode": "100644",
+      "git_blob": "bd318483fe905a112563c3985b2f74e7b9530911",
+      "status": "crlf_normalized",
+      "size": 15635
+    },
+    {
+      "path": "tests/test_paramedit_filter.py",
+      "mode": "100644",
+      "git_blob": "092f751d50826365be7839eb917f67b744b80711",
+      "status": "crlf_normalized",
+      "size": 3325
+    },
+    {
+      "path": "tests/test_plane_track.py",
+      "mode": "100644",
+      "git_blob": "8d780f11d9b28ee0d40e01d39f6ac0943fa56fb6",
+      "status": "crlf_normalized",
+      "size": 199949
+    },
+    {
+      "path": "tests/test_raw_thermal.py",
+      "mode": "100644",
+      "git_blob": "2b4803f70b13cb5c4c3775eddc6441e631f931e9",
+      "status": "crlf_normalized",
+      "size": 6141
+    },
+    {
+      "path": "tests/test_rline.py",
+      "mode": "100644",
+      "git_blob": "ec4b38ea1bc6b001f832c5a449ca76d5df00709d",
+      "status": "crlf_normalized",
+      "size": 2427
+    },
+    {
+      "path": "tests/test_siyi_video.py",
+      "mode": "100644",
+      "git_blob": "d837686b079a002fc37a2694acbbacce7b4f5408",
+      "status": "crlf_normalized",
+      "size": 7372
+    },
+    {
+      "path": "tests/test_siyi_video_gui.py",
+      "mode": "100644",
+      "git_blob": "9b7c1dcaddd7b6f10e645172a0af44b676d2cd1d",
+      "status": "crlf_normalized",
+      "size": 3198
+    },
+    {
+      "path": "tests/test_srtm.py",
+      "mode": "100644",
+      "git_blob": "9aa12d9f949c471b2e54ef95c03245d57d1c4ce3",
+      "status": "crlf_normalized",
+      "size": 5517
+    },
+    {
+      "path": "tests/test_survey.py",
+      "mode": "100644",
+      "git_blob": "eb21c444375c076c25f0c2cfd8656a18dbc80c0e",
+      "status": "crlf_normalized",
+      "size": 6832
+    },
+    {
+      "path": "tests/test_survey_coverage.py",
+      "mode": "100644",
+      "git_blob": "5a289705f996f92a94c7337bb1e9aad0ace4e5df",
+      "status": "crlf_normalized",
+      "size": 4982
+    },
+    {
+      "path": "tests/test_survey_gui.py",
+      "mode": "100644",
+      "git_blob": "b89b3f2d5060cb3d6cda7cfa608d3a417e6ef54b",
+      "status": "crlf_normalized",
+      "size": 30887
+    },
+    {
+      "path": "tests/test_sysid32.py",
+      "mode": "100644",
+      "git_blob": "8e4f59139e6bb36c289164ea37a8c586489779a3",
+      "status": "crlf_normalized",
+      "size": 2868
+    },
+    {
+      "path": "tests/test_video_telemetry.py",
+      "mode": "100644",
+      "git_blob": "fe04e6059e0968701d43f3e95e762669c7ca19d3",
+      "status": "crlf_normalized",
+      "size": 14678
+    },
+    {
+      "path": "tests/test_wp_draw.py",
+      "mode": "100644",
+      "git_blob": "4b4bbd5d493fc19071a917a786e8124b20c66e4a",
+      "status": "crlf_normalized",
+      "size": 8503
+    },
+    {
+      "path": "tests/test_wxconsole_shutdown.py",
+      "mode": "100644",
+      "git_blob": "2f089bb353c07dddd3bd56b957d1c3036e8c45fc",
+      "status": "crlf_normalized",
+      "size": 2513
+    },
+    {
+      "path": "windows/MAVExplorer.ico",
+      "mode": "100644",
+      "git_blob": "406334945f67971b1aabbeb6f06b45d4f8a244a7",
+      "status": "exact",
+      "size": 131966
+    },
+    {
+      "path": "windows/MAVProxy.ico",
+      "mode": "100644",
+      "git_blob": "a4dfa6e3f0b965069ad4199b23cc3c671d49edfc",
+      "status": "exact",
+      "size": 121361
+    },
+    {
+      "path": "windows/MAVProxyWinBuild.bat",
+      "mode": "100755",
+      "git_blob": "6cc39fa3506e8b814194a8ce2eed396f985dad2a",
+      "status": "exact",
+      "size": 2962
+    },
+    {
+      "path": "windows/Startup Examples/MAVProxyLogput.bat",
+      "mode": "100644",
+      "git_blob": "1fc0d7fe6d2e6704efadc47e94cf56f0c53c9b7e",
+      "status": "crlf_normalized",
+      "size": 250
+    },
+    {
+      "path": "windows/Startup Examples/MAVProxyMultiOutput.bat",
+      "mode": "100644",
+      "git_blob": "f64fd70d3c2a314ab954f9b4a89a69444a370cc6",
+      "status": "crlf_normalized",
+      "size": 294
+    },
+    {
+      "path": "windows/mavinit.scr",
+      "mode": "100644",
+      "git_blob": "96f74a2f8c13cd9f19cc6f07b289b9921437ef29",
+      "status": "crlf_normalized",
+      "size": 9303
+    },
+    {
+      "path": "windows/mavpicviewer.ico",
+      "mode": "100644",
+      "git_blob": "ff4dce2efeaff4efe3f8d7ddd09e4af3bdd4a86a",
+      "status": "exact",
+      "size": 140206
+    },
+    {
+      "path": "windows/mavproxy.iss",
+      "mode": "100644",
+      "git_blob": "c564ac48a4d86fbbd11b666d27e2abffa68fd240",
+      "status": "exact",
+      "size": 7234
+    },
+    {
+      "path": "windows/mavproxy.spec",
+      "mode": "100755",
+      "git_blob": "fa0e77093d58b7ab6a19256c53e277fbd7801032",
+      "status": "exact",
+      "size": 5529
+    },
+    {
+      "path": "windows/returnVersion.py",
+      "mode": "100644",
+      "git_blob": "39794e45328e77a347069fb8725fc0df65246095",
+      "status": "exact",
+      "size": 463
+    }
+  ]
+}

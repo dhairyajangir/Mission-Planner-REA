@@ -1,0 +1,673 @@
+103 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+138 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+139 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+141 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+151 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+159 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+164 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+164 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+164 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+164 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7561 0
+164 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7561
+164 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+164 [3] INFO MissionPlanner.MAVLinkInterface (null) - 612 Start connect loop 
+179 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+195 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+195 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+211 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+211 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+227 [3] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 1.8095703125 mav2 False sign False mav1 0 mav2 0 signed 0      
+295 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+295 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+295 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+295 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+295 [4] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+295 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+295 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+342 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:04 PM 7 RCInput: decoding UDP (Pulses)
+423 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:04 PM 6 Calibrating barometer
+bps 521 loss 0 left 0 mem 2.08984375 mav2 False sign False mav1 0 mav2 14 signed 0      
+1162 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+1178 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1188 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+1188 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+1188 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+1188 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+1194 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+1194 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+1196 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+1196 [6] INFO MissionPlanner.Utilities.Download (null) - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+1205 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\Mission Planner\ParameterMetaData.xml
+1205 [6] DEBUG MissionPlanner.Utilities.ParameterMetaDataRepositoryAPM (null) - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\mission-planner-portable\\ParameterMetaDataBackup.xml
+Using backup param data
+1270 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1271 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1272 [3] INFO MissionPlanner.MAVLinkInterface (null) - 720 Start connect loop 
+1279 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1279 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1280 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1281 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1281 [3] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1281 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1761 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+1777 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+bps 42 loss 0 left 276 mem 11.986328125 mav2 True sign False mav1 0 mav2 2 signed 0      
+2125 [6] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2125 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:06 PM 6 Barometer 1 calibration complete
+2126 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:06 PM 6 Barometer 2 calibration complete
+Init Gyro*2210 [7] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2210 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2210 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2210 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2210 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2210 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2210 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2210 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2272 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2281 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2746 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+2761 [7] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+2777 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3263 [13] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3266 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3311 [4] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+3762 [12] INFO MissionPlanner.Utilities.Download (null) - getFilefromNetAsync(): System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MissionPlanner.Utilities.Download.<getFilefromNetAsync>d__8.MoveNext()
+3848 [4] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4420 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2023931762
+4424 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4425 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4425 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4425 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4426 [3] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4426 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+OPEN=True SELECTED=1:1
+7177 [7] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7177 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7179 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7180 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7183 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7183 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 333 loss 0 left 1549 mem 13.0703125 mav2 True sign False mav1 0 mav2 9 signed 0      
+7185 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7185 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7185 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7185 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+12431 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12579 [1] INFO MissionPlanner.MAVLinkInterface (null) - setWPTotal req MISSION_COUNT {"count":4,"target_system":1,"target_component":1,"mission_type":1}
+bps 22 loss 0 left 1832 mem 13.3662109375 mav2 True sign False mav1 0 mav2 1 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+12581 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+12581 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+12583 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+12583 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 ArduCopter V4.8.0-dev (72b23820)
+12583 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+12584 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 Frame: QUAD/PLUS
+12584 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU0 initialised
+12584 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU1 initialised
+12584 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 AHRS: EKF3 active
+12585 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU0 tilt alignment complete
+12585 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU1 tilt alignment complete
+12585 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+12585 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+12586 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 GPS 1: probing for u-blox at 230400 baud
+12586 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 6 GPS 1: detected u-blox
+12588 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+12596 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12598 [1] INFO MissionPlanner.MAVLinkInterface (null) - setWPint req MISSION_ITEM_INT {"param1":3.0,"param2":0.0,"param3":0.0,"param4":0.0,"x":-353650000,"y":1491630000,"z":0.0,"seq":0,"command":5001,"target_system":1,"target_component":1,"frame":0,"current":0,"autocontinue":1,"mission_type":1}
+12664 [9] INFO MissionPlanner.MAVLinkInterface (null) - setWPint resp MISSION_REQUEST{"buffer":"/QUAAE0BASgAAAEA/74BS08=","rxtime":"2026-11-05T11:46:17.0932612Z","header":253,"payloadlength":5,"incompat_flags":0,"compat_flags":0,"seq":77,"sysid":1,"compid":1,"msgid":40,"ismavlink2":true,"msgtypename":"MISSION_REQUEST","data":{"seq":1,"target_system":255,"target_component":190,"mission_type":1},"crc16":20299,"sig":null,"sigLinkid":0,"sigTimestamp":0,"Length":17}
+12664 [9] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+BASELINE_UPLOAD=0:MAV_MISSION_ACCEPTED
+12664 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12664 [1] INFO MissionPlanner.MAVLinkInterface (null) - setWPint req MISSION_ITEM_INT {"param1":3.0,"param2":0.0,"param3":0.0,"param4":0.0,"x":-353610000,"y":1491630000,"z":0.0,"seq":1,"command":5001,"target_system":1,"target_component":1,"frame":0,"current":0,"autocontinue":1,"mission_type":1}
+12693 [4] INFO MissionPlanner.MAVLinkInterface (null) - setWPint resp MISSION_REQUEST{"buffer":"/QUAAE4BASgAAAIA/74B2MQ=","rxtime":"2026-11-05T11:46:17.1411038Z","header":253,"payloadlength":5,"incompat_flags":0,"compat_flags":0,"seq":78,"sysid":1,"compid":1,"msgid":40,"ismavlink2":true,"msgtypename":"MISSION_REQUEST","data":{"seq":2,"target_system":255,"target_component":190,"mission_type":1},"crc16":50392,"sig":null,"sigLinkid":0,"sigTimestamp":0,"Length":17}
+12693 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+BASELINE_UPLOAD=1:MAV_MISSION_ACCEPTED
+12693 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12693 [1] INFO MissionPlanner.MAVLinkInterface (null) - setWPint req MISSION_ITEM_INT {"param1":3.0,"param2":0.0,"param3":0.0,"param4":0.0,"x":-353630000,"y":1491680000,"z":0.0,"seq":2,"command":5001,"target_system":1,"target_component":1,"frame":0,"current":0,"autocontinue":1,"mission_type":1}
+12714 [7] INFO MissionPlanner.MAVLinkInterface (null) - setWPint resp MISSION_REQUEST{"buffer":"/QUAAE8BASgAAAMA/74BpkU=","rxtime":"2026-11-05T11:46:17.1621652Z","header":253,"payloadlength":5,"incompat_flags":0,"compat_flags":0,"seq":79,"sysid":1,"compid":1,"msgid":40,"ismavlink2":true,"msgtypename":"MISSION_REQUEST","data":{"seq":3,"target_system":255,"target_component":190,"mission_type":1},"crc16":17830,"sig":null,"sigLinkid":0,"sigTimestamp":0,"Length":17}
+12714 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+BASELINE_UPLOAD=2:MAV_MISSION_ACCEPTED
+12716 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12716 [1] INFO MissionPlanner.MAVLinkInterface (null) - setWPint req MISSION_ITEM_INT {"param1":15.0,"param2":0.0,"param3":0.0,"param4":0.0,"x":-353630000,"y":1491650000,"z":0.0,"seq":3,"command":5004,"target_system":1,"target_component":1,"frame":0,"current":0,"autocontinue":1,"mission_type":1}
+12732 [4] INFO MissionPlanner.MAVLinkInterface (null) - setWPint resp MISSION_ACK {"buffer":"/QQAAFABAS8AAP++AAHgVQ==","rxtime":"2026-11-05T11:46:17.178881Z","header":253,"payloadlength":4,"incompat_flags":0,"compat_flags":0,"seq":80,"sysid":1,"compid":1,"msgid":47,"ismavlink2":true,"msgtypename":"MISSION_ACK","data":{"target_system":255,"target_component":190,"type":0,"mission_type":1},"crc16":21984,"sig":null,"sigLinkid":0,"sigTimestamp":0,"Length":16}
+12733 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+BASELINE_UPLOAD=3:MAV_MISSION_ACCEPTED
+12735 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdResetSessions
+12735 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+12735 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+12735 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdResetSessions
+12748 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+12764 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:17 PM 7 Fence Indexed OK
+12796 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kRspAck kCmdResetSessions 0
+12860 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.197
+12860 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2051315756
+12860 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdCreateFile @MISSION/fence.dat
+12860 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+12860 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+12860 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdCreateFile 0 - 1
+12876 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdCreateFile @MISSION/fence.dat 0
+12977 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.308
+12977 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2051315756
+12977 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdWriteFile fence.dat 
+13024 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+13024 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+13024 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+13131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13240 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13279 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 88 exp 87 pkts lost 1
+13343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13446 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13559 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13662 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13778 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13889 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+13999 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+14104 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:18.488
+14104 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+14209 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+bps 2110 loss 1 left 0 mem 12.8076171875 mav2 True sign False mav1 0 mav2 62 signed 0      
+14264 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 90 exp 89 pkts lost 1
+14312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14423 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14525 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14629 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14739 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14842 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+14952 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+15062 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+15164 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:19.553
+15164 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+bps 21 loss 2 left 0 mem 12.8544921875 mav2 True sign False mav1 0 mav2 1 signed 0      
+15258 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 92 exp 91 pkts lost 1
+15279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15390 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15493 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15595 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15708 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15813 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+15915 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+16029 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+16131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+16242 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:20.611
+16242 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+bps 21 loss 3 left 0 mem 12.900390625 mav2 True sign False mav1 0 mav2 1 signed 0      
+16345 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16448 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16554 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16662 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16766 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16875 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+16977 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+17087 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+17193 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+bps 21 loss 3 left 0 mem 12.931640625 mav2 True sign False mav1 0 mav2 1 signed 0      
+17256 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 95 exp 94 pkts lost 1
+17296 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:21.690
+17296 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+17408 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+17509 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+17613 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+17714 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+17826 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+17936 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+18046 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+18164 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+bps 21 loss 4 left 0 mem 12.970703125 mav2 True sign False mav1 0 mav2 1 signed 0      
+18264 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 97 exp 96 pkts lost 1
+18280 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+18390 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:22.744
+18391 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+18493 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+18596 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+18709 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+18826 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+18935 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+19045 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+19162 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+19273 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+bps 21 loss 5 left 0 mem 13.017578125 mav2 True sign False mav1 0 mav2 1 signed 0      
+19296 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 99 exp 98 pkts lost 1
+19375 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+19477 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:23.839
+19477 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+19581 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+19693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+19797 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+19900 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20013 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20115 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20227 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+bps 21 loss 6 left 0 mem 13.056640625 mav2 True sign False mav1 0 mav2 1 signed 0      
+20279 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 101 exp 100 pkts lost 1
+20342 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20342 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:24 PM 6 EKF3 IMU0 origin set
+20342 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:24 PM 6 Field Elevation Set: 584m
+20446 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20493 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:24 PM 6 EKF3 IMU1 origin set
+20550 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:24.925
+20550 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+20661 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+20763 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+20877 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+20993 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21102 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21209 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+bps 357 loss 7 left 0 mem 13.166015625 mav2 True sign False mav1 0 mav2 10 signed 0      
+21312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21312 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 112 exp 111 pkts lost 1
+21423 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21525 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21629 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:26.000
+21629 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+21731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+21841 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+21951 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22061 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22177 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+bps 21 loss 8 left 0 mem 13.212890625 mav2 True sign False mav1 0 mav2 1 signed 0      
+22312 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 114 exp 113 pkts lost 1
+22390 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22493 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22594 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22708 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:27.077
+22708 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+22810 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+22920 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23030 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23242 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+bps 21 loss 9 left 0 mem 13.251953125 mav2 True sign False mav1 0 mav2 1 signed 0      
+23311 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 116 exp 115 pkts lost 1
+23358 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23574 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23676 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23781 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:28.156
+23782 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+23896 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+23997 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24113 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24227 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+bps 21 loss 10 left 0 mem 13.2978515625 mav2 True sign False mav1 0 mav2 1 signed 0      
+24312 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 118 exp 117 pkts lost 1
+24327 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24431 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24533 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24645 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24750 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24861 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:29.229
+24861 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+24962 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25072 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25178 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25280 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+bps 21 loss 11 left 0 mem 13.3447265625 mav2 True sign False mav1 0 mav2 1 signed 0      
+25312 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 120 exp 119 pkts lost 1
+25391 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25493 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25607 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25708 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25811 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25921 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:30.308
+25921 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+26030 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26145 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26259 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+bps 21 loss 12 left 0 mem 13.3916015625 mav2 True sign False mav1 0 mav2 1 signed 0      
+26343 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 122 exp 121 pkts lost 1
+26375 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26477 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26581 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26809 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+26919 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+27029 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:31.368
+27029 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+27145 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27257 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27359 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+bps 21 loss 13 left 0 mem 13.4384765625 mav2 True sign False mav1 0 mav2 1 signed 0      
+27375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 124 exp 123 pkts lost 1
+27462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27575 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27677 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27782 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27897 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+27998 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+28101 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:32.477
+28101 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+28210 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28313 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+bps 21 loss 14 left 0 mem 13.4853515625 mav2 True sign False mav1 0 mav2 1 signed 0      
+28376 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 126 exp 125 pkts lost 1
+28425 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28541 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28645 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28750 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28861 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+28962 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+29072 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+29178 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:33.549
+29178 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+29279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+bps 21 loss 15 left 0 mem 13.5322265625 mav2 True sign False mav1 0 mav2 1 signed 0      
+29375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 128 exp 127 pkts lost 1
+29391 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+29493 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+29614 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+29724 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+29825 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+29935 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+30044 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+30146 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+30257 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:34.626
+30257 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+bps 21 loss 16 left 0 mem 13.5712890625 mav2 True sign False mav1 0 mav2 1 signed 0      
+30343 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 130 exp 129 pkts lost 1
+30359 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+30462 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+30575 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+30677 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+bps 46 loss 17 left 0 mem 13.5947265625 mav2 True sign False mav1 0 mav2 2 signed 0      
+30777 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+30887 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+30997 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+31109 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+31210 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+31312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:35.705
+31312 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+31375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 134 exp 133 pkts lost 1
+31422 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+31524 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+31630 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+31731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+31846 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+31948 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+32063 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+32165 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+32279 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+bps 58 loss 18 left 0 mem 13.6640625 mav2 True sign False mav1 0 mav2 2 signed 0      
+32389 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:36.760
+32390 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+32494 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+32597 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+32699 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+32812 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+32914 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+33033 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+33142 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+33258 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+33359 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+bps 21 loss 18 left 0 mem 13.703125 mav2 True sign False mav1 0 mav2 1 signed 0      
+33374 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 137 exp 136 pkts lost 1
+33463 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:37.837
+33463 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+33576 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+33677 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+33778 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+33887 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+33997 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+34107 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+34210 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+34312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+bps 21 loss 19 left 0 mem 13.75 mav2 True sign False mav1 0 mav2 1 signed 0      
+34375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 139 exp 138 pkts lost 1
+34423 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+34525 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:38.910
+34525 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+34630 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+34731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+34847 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+34959 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35069 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35179 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35280 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+bps 21 loss 20 left 0 mem 13.796875 mav2 True sign False mav1 0 mav2 1 signed 0      
+35375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 141 exp 140 pkts lost 1
+35391 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35494 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35596 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:39.973
+35596 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+35708 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+35813 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+35914 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36030 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36233 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+bps 21 loss 21 left 0 mem 13.84375 mav2 True sign False mav1 0 mav2 1 signed 0      
+36390 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 143 exp 142 pkts lost 1
+36446 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36550 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36661 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:41.045
+36661 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+36766 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+36875 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+36978 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37087 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37193 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37297 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+bps 21 loss 22 left 0 mem 13.8828125 mav2 True sign False mav1 0 mav2 1 signed 0      
+37375 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 145 exp 144 pkts lost 1
+37406 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37510 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37612 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37724 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:42.109
+37725 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+37841 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+37951 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38060 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38162 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+bps 21 loss 23 left 0 mem 13.921875 mav2 True sign False mav1 0 mav2 1 signed 0      
+38343 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 147 exp 146 pkts lost 1
+38375 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38478 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38591 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38795 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:43.173
+38795 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+38904 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39014 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39128 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39240 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+bps 21 loss 24 left 0 mem 13.9677734375 mav2 True sign False mav1 0 mav2 1 signed 0      
+39327 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 149 exp 148 pkts lost 1
+39343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39447 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39560 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39662 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39764 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39866 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:44.242
+39866 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+39980 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40082 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40196 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+bps 21 loss 25 left 0 mem 14.0146484375 mav2 True sign False mav1 0 mav2 1 signed 0      
+40279 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 151 exp 150 pkts lost 1
+40312 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40423 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40526 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40629 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40731 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40845 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40946 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:45.313
+40946 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+41056 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41163 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+bps 46 loss 26 left 0 mem 14.0693359375 mav2 True sign False mav1 0 mav2 2 signed 0      
+41296 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 154 exp 153 pkts lost 1
+41375 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41478 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41591 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+41809 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+bps 21 loss 27 left 35 mem 14.0927734375 mav2 True sign False mav1 0 mav2 1 signed 0      
+41872 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:46 PM 6 EKF3 IMU0 is using GPS
+41872 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:46 PM 6 EKF3 IMU1 is using GPS
+41919 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+42028 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:46.394
+42028 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+42131 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42240 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42296 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 158 exp 157 pkts lost 1
+42343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42447 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42560 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42661 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42763 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42873 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+42983 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+43093 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:47.476
+43093 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+43194 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+bps 91 loss 28 left 0 mem 14.1787109375 mav2 True sign False mav1 0 mav2 3 signed 0      
+43296 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43296 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 160 exp 159 pkts lost 1
+43405 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43510 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43613 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43715 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43829 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+43931 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+44032 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+44147 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:48.541
+44148 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdWriteFile 0 - 1
+44264 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+bps 21 loss 29 left 0 mem 14.2255859375 mav2 True sign False mav1 0 mav2 1 signed 0      
+44295 [1] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 162 exp 161 pkts lost 1
+44374 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+44478 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+44581 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+44693 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+44797 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+44907 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+45009 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+45123 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+45226 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:49.596
+45226 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2051315756
+45226 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - get kCmdResetSessions
+45226 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+45226 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType FILE_TRANSFER_PROTOCOL System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+45227 [3] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kCmdResetSessions
+45227 [3] INFO MissionPlanner.ArduPilot.RetryTimeout (null) - Retry kCmdResetSessions 0 - 1
+bps 21 loss 30 left 66 mem 14.2880859375 mav2 True sign False mav1 0 mav2 1 signed 0      
+45241 [1] INFO MissionPlanner.ArduPilot.Mavlink.MAVFtp (null) - kRspAck kCmdResetSessions 0
+45241 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 5:16:49 PM 7 Fence Indexed OK
+45343 [3] DEBUG MissionPlanner.ArduPilot.RetryTimeout (null) - TimeOutDateTime 2026-11-05T17:16:50.675
+45343 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType 2051315756
+FTP_UPLOAD_RETURNED=True BYTES=162
+45359 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+45375 [6] INFO MissionPlanner.MAVLinkInterface (null) - wpcount: 4
+45375 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_COUNT=4
+45375 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+45390 [4] INFO MissionPlanner.MAVLinkInterface (null) - getWPint 5001 3 0 -35.364 149.1639999 opt 0
+45391 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_ITEM=0:5001:3:-35.364:149.1639999
+45392 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+45408 [6] INFO MissionPlanner.MAVLinkInterface (null) - getWPint 5001 3 0 -35.362 149.1639999 opt 0
+45408 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_ITEM=1:5001:3:-35.362:149.1639999
+45409 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+45424 [4] INFO MissionPlanner.MAVLinkInterface (null) - getWPint 5001 3 0 -35.363 149.167 opt 0
+45424 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_ITEM=2:5001:3:-35.363:149.167
+45425 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+45431 [6] INFO MissionPlanner.MAVLinkInterface (null) - getWPint 5004 25 0 -35.363 149.1658 opt 0
+45431 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+MISSION_ITEM=3:5004:25:-35.363:149.1658
+DROP_PROBE_COMPLETE=True
+45431 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+45431 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+45431 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+45431 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7561

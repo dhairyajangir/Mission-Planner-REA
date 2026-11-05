@@ -1,0 +1,23 @@
+90 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - OK
+106 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - --frame
+109 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Type: image/jpeg
+109 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Length: 635
+109 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+FRAME=1 SIZE=16x16 RGB=254,0,0
+206 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+474 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - --frame
+474 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Type: image/jpeg
+474 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Length: 635
+476 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+MJPEG 2
+FRAME=2 SIZE=16x16 RGB=0,255,1
+490 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+890 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - --frame
+890 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Type: image/jpeg
+890 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Length: 635
+890 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+FRAME=3 SIZE=16x16 RGB=0,0,254
+906 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+CLEAR_EVENT=True
+FRAMES=3
+STOP_CLEAR=True

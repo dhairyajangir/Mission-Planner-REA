@@ -1,0 +1,45 @@
+{
+  "fileType": null,
+  "geoFence": null,
+  "groundStation": "MissionPlanner",
+  "mission": {
+    "cruiseSpeed": 0,
+    "firmwareType": 0,
+    "hoverSpeed": 0,
+    "items": [
+      {
+        "autoContinue": false,
+        "command": 16,
+        "doJumpId": 0,
+        "frame": 3,
+        "params": [
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          -35.3625,
+          149.166,
+          25.0
+        ],
+        "type": null,
+        "TransectStyleComplexItem": null,
+        "angle": null,
+        "complexItemType": null,
+        "entryLocation": null,
+        "flyAlternateTransects": null,
+        "polygon": null,
+        "splitConcavePolygons": null,
+        "version": null
+      }
+    ],
+    "plannedHomePosition": [
+      -35.363261,
+      149.16523,
+      584.0
+    ],
+    "vehicleType": 0,
+    "version": 0
+  },
+  "rallyPoints": null,
+  "version": 1
+}

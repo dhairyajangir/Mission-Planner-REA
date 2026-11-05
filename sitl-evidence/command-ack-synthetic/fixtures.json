@@ -1,0 +1,26 @@
+{
+  "wrong-system": {
+    "sha256": "663ae335df73206637ab33d8e2f5e35e7bdd9f20b2161a324286eac0b979adc9",
+    "bytes": 22
+  },
+  "wrong-component": {
+    "sha256": "7f16774f8f6691650b14c17bda9cbdb6fc401925780c5fba6deb9864d47792d4",
+    "bytes": 22
+  },
+  "wrong-command": {
+    "sha256": "51352d4862e3d2625a06e5644c2b9b643c5c3236e2a4760d5112cab3f7368ac1",
+    "bytes": 22
+  },
+  "in-progress": {
+    "sha256": "51ef87efabbac3044b181819808ba74f255d53546086fc2078832b8a53e1821d",
+    "bytes": 22
+  },
+  "denied": {
+    "sha256": "5dbfaf83346cbf60cd33984eb58799cd3c6250d06287f22bafd80af32ac8d6b1",
+    "bytes": 11
+  },
+  "no-ack": {
+    "sha256": "5dbfaf83346cbf60cd33984eb58799cd3c6250d06287f22bafd80af32ac8d6b1",
+    "bytes": 11
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "source-built SupportProxy; local ephemeral databases and synthetic loopback connections",
+  "revisions": {
+    "supportproxy": "21ca25286b2a0bcc25228e4d6bc20c5438abdcce",
+    "mavlink": "a23652e3c7d1d7a94b1c2d354a13ce4858cd0996",
+    "pymavlink": "19880422d451de4daba3fd96781076afb1cb889c"
+  },
+  "binary_sha256": "24b53a1d9d64de4e79ce3499faea96f85c58392c567a8b2d05cdfad907e15bc8",
+  "source_sha256": {
+    "README.md": "84827b3a6cd06444c041f8e421c6ce190810811a068dee2338a9ce251c9eca61",
+    "supportproxy.cpp": "b8e93888847ec6ecd17166cf624ff68442202856b06b78a4d8fc7cb7f808955f",
+    "mavlink.cpp": "7e46b23419f0982976f0bdd33a5030872bf68e4f466aadaf83b9d9fdd90a3a22",
+    "keydb_lib.py": "3acff3f6cb290015b56e7abe8dfc89088ac43a56a903a92326e2ffb71a042bf4",
+    "tests/test_connections.py": "0a4294064a2c5cfe08c8b0303ab1a66553873200cc19d26688ee8a8944ebc7ba",
+    "tests/test_authentication.py": "4713e9b5e25302f0a106ece8530f2c0c4637c549fa4a7432ee3f11fba255e4e4"
+  },
+  "interposer_source_sha256": "ba5e8d7dd5032ce533d54e1399a595b9796fbaffea0ee94f41e0020c459663cc",
+  "interposer_binary_sha256": "d65b6051f2a4882c9eac73fcde28b2d280f4e239bd060e2553af2df7f2551c75",
+  "tests": {
+    "auth-tests": {
+      "log_sha256": "65767e2b37796e106c2deffb68543792e481a2d937277af56c20e82e97bd309c",
+      "expected_summary": "13 passed",
+      "exit": 0
+    },
+    "local-network-tests": {
+      "log_sha256": "f899faab98a14c365fc47e7e469d3b95bafacca2aa86c844b62267697dd5ac5b",
+      "expected_summary": "8 passed",
+      "exit": 0
+    }
+  }
+}

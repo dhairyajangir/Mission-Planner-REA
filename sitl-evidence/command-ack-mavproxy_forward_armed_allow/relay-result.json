@@ -1,0 +1,28 @@
+{
+  "scope": "Disposable Copter SITL; MAVProxy downstream read-only request forwarding",
+  "case": "mavproxy_forward_armed_allow",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-relay.py\", line 206, in <module>\n    chunk = source.recv(65536)\n            ^^^^^^^^^^^^^^^^^^\nConnectionResetError: [Errno 104] Connection reset by peer\n"
+  ],
+  "capture_sha256": {
+    "control-downlink.bin": "fcd56fac72ed4a64bff8f456029734a7ef18228030dcda722997223e8e4d2b7c",
+    "control-uplink.bin": "e776db5e76630e1ac999e8e4d9ba5f327997d4361d8e8ee19b3e4bf5eb2ff42f",
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "658fd6b3bb1ef4a6f7e64e0533390e17ba90c45b88b7cf44fd5bc2eb081156e4",
+    "to_client_output.bin": "658fd6b3bb1ef4a6f7e64e0533390e17ba90c45b88b7cf44fd5bc2eb081156e4",
+    "to_sitl_input.bin": "aeacbf00baf4d4a4969e76f3e1f31f6459a405b4a2da0e98f54fa35e1cfa24ef",
+    "to_sitl_output.bin": "aeacbf00baf4d4a4969e76f3e1f31f6459a405b4a2da0e98f54fa35e1cfa24ef",
+    "udp-after.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "udp-armed-before.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "udp-before.bin": "90338c41a249ce4a77cfce4cb4123a97e6ca229753671a75331ebbb550cfa557"
+  }
+}

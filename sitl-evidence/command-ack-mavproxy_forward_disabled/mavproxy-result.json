@@ -1,0 +1,34 @@
+{
+  "scope": "Pinned MAVProxy source; synthetic downstream parameter request; disposable disarmed Copter SITL",
+  "case": "mavproxy_forward_disabled",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "configured": {
+    "mavfwd": "false",
+    "mavfwd_disarmed": "false"
+  },
+  "errors": [],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7551",
+    "--out=udpout:127.0.0.1:7559",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--cmd=set requireexit true;set mavfwd false;set mavfwd_disarmed false;set mavfwd;set mavfwd_disarmed",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_forward_disabled"
+  ],
+  "peer": [
+    "127.0.0.1",
+    41716
+  ],
+  "post_request_datagrams": 12,
+  "proxy_exit": 1,
+  "artifacts": {
+    "mavproxy.log": "ebbf68852232bfc3cc77d42fc8208c9318a65abde4d3347812343f384de0dac9",
+    "udp-before.bin": "119a4ce29e36a96bd00f4680e23fe6b0abeb6ac9aff174e433ff519da003018f",
+    "udp-after.bin": "57f05c6eede7ad085e2b6ec506f70d63cdb7b51fbbe348273015a4ffa5c19c0c",
+    "request.bin": "32bc25f7ce492ec5f66139a279e395d0bd8c805a21273ed17efa079ec0e94c88"
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "scope": "Stationary source-built Rover SITL; standalone MAVLink client; no physical vehicle",
+  "binary_sha256": "34d5ffdcd6e2c09d7df87dcfa0aa67132c345a8eaa02b61b10133f90e561fbb3",
+  "checks": {
+    "configuration": {
+      "passed": true,
+      "values": {
+        "FS_THR_ENABLE": 0.0,
+        "FS_GCS_ENABLE": 1.0,
+        "FS_GCS_TIMEOUT": 3.0,
+        "FS_TIMEOUT": 1.0,
+        "FS_ACTION": 2.0
+      }
+    },
+    "armed_guided": {
+      "passed": true,
+      "guided_mode": 15
+    },
+    "gcs_loss_hold": {
+      "passed": true,
+      "hold_mode": 4,
+      "hold_seen": true,
+      "gcs_failsafe_notice": true
+    },
+    "gcs_recovered": {
+      "passed": true
+    },
+    "disarmed": {
+      "passed": true
+    }
+  },
+  "status_messages": [
+    "Barometer 1 calibration complete",
+    "Barometer 2 calibration complete",
+    "Beginning INS calibration. Do not move vehicle",
+    "INS: alloc 6144 bytes for ISB (free=524288)",
+    "ArduPilot Ready",
+    "RCInput: decoding UDP (Pulses)",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "AHRS: EKF3 active",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "Set HOME to -35.36326 149.1652 at 584.00m",
+    "EKF3 IMU0 origin set",
+    "EKF3 IMU1 origin set",
+    "Field Elevation Set: 584m",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Throttle armed",
+    "GCS Failsafe",
+    "GCS Failsafe Cleared",
+    "Throttle disarmed"
+  ],
+  "events": [
+    {
+      "seconds": 2.001,
+      "kind": "heartbeat",
+      "mode": 16,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 2.661,
+      "kind": "status",
+      "text": "Barometer 1 calibration complete"
+    },
+    {
+      "seconds": 2.661,
+      "kind": "status",
+      "text": "Barometer 2 calibration complete"
+    },
+    {
+      "seconds": 2.677,
+      "kind": "status",
+      "text": "Beginning INS calibration. Do not move vehicle"
+    },
+    {
+      "seconds": 2.931,
+      "kind": "heartbeat",
+      "mode": 16,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 2.984,
+      "kind": "heartbeat",
+      "mode": 16,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 3.306,
+      "kind": "status",
+      "text": "INS: alloc 6144 bytes for ISB (free=524288)"
+    },
+    {
+      "seconds": 3.306,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 3.306,
+      "kind": "status",
+      "text": "ArduPilot Ready"
+    },
+    {
+      "seconds": 3.306,
+      "kind": "status",
+      "text": "RCInput: decoding UDP (Pulses)"
+    },
+    {
+      "seconds": 3.963,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 4.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 5.323,
+      "kind": "status",
+      "text": "EKF3 IMU0 initialised"
+    },
+    {
+      "seconds": 5.323,
+      "kind": "status",
+      "text": "EKF3 IMU1 initialised"
+    },
+    {
+      "seconds": 5.964,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 6.928,
+      "kind": "status",
+      "text": "EKF3 IMU0 tilt alignment complete"
+    },
+    {
+      "seconds": 6.928,
+      "kind": "status",
+      "text": "EKF3 IMU1 tilt alignment complete"
+    },
+    {
+      "seconds": 6.963,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 7.004,
+      "kind": "status",
+      "text": "EKF3 IMU0 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 7.004,
+      "kind": "status",
+      "text": "EKF3 IMU1 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 7.004,
+      "kind": "status",
+      "text": "AHRS: EKF3 active"
+    },
+    {
+      "seconds": 7.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 8.965,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 9.968,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 10.603,
+      "kind": "status",
+      "text": "GPS 1: probing for u-blox at 230400 baud"
+    },
+    {
+      "seconds": 10.627,
+      "kind": "status",
+      "text": "GPS 1: detected u-blox"
+    },
+    {
+      "seconds": 10.808,
+      "kind": "status",
+      "text": "Set HOME to -35.36326 149.1652 at 584.00m"
+    },
+    {
+      "seconds": 10.966,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 11.969,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 12.966,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 13.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 14.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 15.965,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 16.968,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 17.965,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 18.969,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 19.966,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 20.808,
+      "kind": "status",
+      "text": "EKF3 IMU0 origin set"
+    },
+    {
+      "seconds": 20.808,
+      "kind": "status",
+      "text": "EKF3 IMU1 origin set"
+    },
+    {
+      "seconds": 20.889,
+      "kind": "status",
+      "text": "Field Elevation Set: 584m"
+    },
+    {
+      "seconds": 20.965,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 21.968,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 22.966,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 23.969,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 24.966,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 25.969,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 26.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 27.967,
+      "kind": "heartbeat",
+      "mode": 0,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 28.087,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 28.11,
+      "kind": "status",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 28.308,
+      "kind": "status",
+      "text": "PreArm: Need Position Estimate"
+    },
+    {
+      "seconds": 28.969,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 29.969,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 30.967,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 31.966,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 32.971,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 33.968,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 34.971,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 35.969,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 36.966,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 36.99,
+      "kind": "status",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 37.97,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 38.968,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 39.971,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 40.968,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 41.971,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 42.968,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 43.033,
+      "kind": "status",
+      "text": "EKF3 IMU0 is using GPS"
+    },
+    {
+      "seconds": 43.033,
+      "kind": "status",
+      "text": "EKF3 IMU1 is using GPS"
+    },
+    {
+      "seconds": 43.971,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 44.969,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": false,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 44.992,
+      "kind": "status",
+      "text": "Throttle armed"
+    },
+    {
+      "seconds": 45.972,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": true,
+      "sending_heartbeats": true
+    },
+    {
+      "seconds": 45.972,
+      "kind": "stop_gcs_heartbeats"
+    },
+    {
+      "seconds": 46.969,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": true,
+      "sending_heartbeats": false
+    },
+    {
+      "seconds": 47.972,
+      "kind": "heartbeat",
+      "mode": 15,
+      "armed": true,
+      "sending_heartbeats": false
+    },
+    {
+      "seconds": 48.509,
+      "kind": "heartbeat",
+      "mode": 4,
+      "armed": true,
+      "sending_heartbeats": false
+    },
+    {
+      "seconds": 48.509,
+      "kind": "status",
+      "text": "GCS Failsafe"
+    },
+    {
+      "seconds": 48.608,
+      "kind": "status",
+      "text": "GCS Failsafe Cleared"
+    },
+    {
+      "seconds": 48.631,
+      "kind": "status",
+      "text": "Throttle disarmed"
+    },
+    {
+      "seconds": 48.969,
+      "kind": "heartbeat",
+      "mode": 4,
+      "armed": false,
+      "sending_heartbeats": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,17 @@
+{
+  "control_sha256": "e0f93933fdafb37a1e8b0fb6b0d453a64978d9ec5dbec0f69e865da1bec78670",
+  "files": {
+    "arbitrary-signature-a.tlog": {
+      "size": 42,
+      "sha256": "3beb5bdf71c5f0b9587b9896e2907ebeb867d33aa0bc10b07e8ed66c009219c8"
+    },
+    "arbitrary-signature-b.tlog": {
+      "size": 42,
+      "sha256": "6ef6428ea2f933f443fb2761ef688c17b924d76cd9d056b71b9be96cd984dc33"
+    },
+    "payload-flipped.tlog": {
+      "size": 42,
+      "sha256": "9ef1f1092762d497d0dbbfdd7114f7fdae2cbc85963beaf0859bacf322567268"
+    }
+  }
+}

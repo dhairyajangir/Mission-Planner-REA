@@ -1,0 +1,1652 @@
+/*
+  UDP (and TCP) Proxy for MAVLink, with signing support
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <errno.h>
+#include <stdbool.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <sys/wait.h>
+#include <sys/epoll.h>
+#include <sys/prctl.h>
+#include <signal.h>
+
+#include "mavlink.h"
+#include "util.h"
+#include "keydb.h"
+#include "conntdb.h"
+#include "tlog.h"
+#include "binlog.h"
+#include "session.h"
+#include "cleanup.h"
+#include "websocket.h"
+#include "video.h"
+#include "videots.h"
+#include "videostream.h"
+
+#include <vector>
+
+/*
+  SIGUSR1 from the webadmin asks the per-port-pair child to drop a
+  specific connection. The webadmin sets CONN_FLAG_DROP_REQUESTED on
+  the matching ConnEntry first; the handler just sets a flag and
+  main_loop scans connections.tdb to find the target slot(s).
+ */
+// Engineer-side conn2 slots that haven't validated a signed packet
+// within CONN2_PREAUTH_SECONDS of accept/first-tuple are closed. Cuts
+// off DoS where unauthenticated clients camp on conn2 slots and block
+// legitimate signed engineers.
+static constexpr time_t CONN2_PREAUTH_SECONDS = 5;
+
+// User-side conn1 in bidi-sign mode: TCP/WS latch immediately but if
+// no signed user packet validates within this window we break the
+// per-pair child so the parent reopens the listener. UDP defers the
+// latch until validation, so this guard only fires for TCP/WS.
+static constexpr time_t CONN1_BIDI_PREAUTH_SECONDS = 5;
+
+static volatile sig_atomic_t g_drops_pending = 0;
+
+static void sigusr1_handler(int)
+{
+    g_drops_pending = 1;
+}
+
+#define MAX_EPOLL_EVENTS 64
+
+struct listen_port {
+    struct listen_port *next;
+    int port1, port2;
+    int sock1_udp, sock2_udp;
+    int sock1_tcp, sock2_listen;
+    pid_t pid;
+    // Long-lived video child. Independent of `pid`: video must survive
+    // a MAVLink session ending, and must run with no session at all
+    // when the entry has a publish password.
+    pid_t video_pid;
+    time_t video_respawn_after;   // backoff so a child that dies at once
+                                  // can't be re-forked in a tight loop
+    uint32_t video_ports[KEY_MAX_VIDEO_PORTS];
+    uint32_t video_flags;
+    uint32_t video_flags_hi;   // slots past KEY_VIDEO_PORTS_INLINE
+    uint32_t flags;
+    uint32_t fc_sysid;     // 0 = match any; otherwise the FC's MAVLink
+                           // sysid for binlog reboot detection
+    float    tz_offset_hours;  // log-naming timezone (GMT offset in hours)
+    bool seen;     // set true by handle_record() during reload_ports()
+                   // for any entry that's still in the DB; entries left
+                   // unseen after a reload have been removed.
+    bool removed;  // entry no longer in keys.tdb. We keep the struct
+                   // around (don't free it under a running child) but
+                   // close listening sockets and skip it everywhere.
+    WebSocket *ws = nullptr;
+};
+
+static struct listen_port *ports;
+
+// epoll instance used by wait_connection(). handle_connection() must
+// deregister a pair's sockets from it before closing them at fork
+// time: the child keeps the open file descriptions alive, so close()
+// alone leaves live registrations that wake the parent for every
+// packet the child handles.
+static int g_epfd = -1;
+
+// PID of the long-lived log-cleanup child forked from main() that
+// ages out old .tlog / .bin files. Tracked separately from
+// per-port-pair children so check_children() can respawn it if it
+// dies, rather than printing "No child for X found".
+static pid_t cleanup_child_pid = 0;
+static void fork_cleanup_child(void);
+
+static uint32_t count_ports(void)
+{
+    uint32_t count = 0;
+    for (auto *p = ports; p; p=p->next) {
+        count++;
+    }
+    return count;
+}
+
+static void open_sockets(struct listen_port *p);
+static void close_sockets(struct listen_port *p);
+
+/*
+  Reconcile a single keys.tdb record with our in-memory port list.
+
+    - new port2:                add struct, mark seen, open listeners
+    - existing port2, same port1, flags unchanged: just mark seen
+    - existing port2 marked removed: un-remove, reopen
+    - existing port2, port1 changed: close old listeners, signal the
+      running child (if any) to exit so the old port1 is freed, then
+      open the new port1
+    - existing port2, only flags changed: refresh flags so the next
+      child fork picks them up
+
+  Used both at startup and on each reload; reload_ports() handles the
+  flip side (entries that were in keys.tdb last time and aren't now).
+ */
+/*
+  Video config that requires a rebind: the enable bit, the ports, and
+  the per-slot options (SRT vs plain MPEG-TS changes how the UDP socket
+  is used). A change here re-forks the video child. Policy that does not
+  need a rebind -- credentials, grace, quota -- is re-read by the child
+  itself on its tick, so those take effect without dropping a publisher.
+ */
+static bool video_cfg_differs(const struct listen_port *p, uint32_t flags,
+                              const uint32_t *video_ports,
+                              uint32_t video_flags, uint32_t video_flags_hi)
+{
+    if ((p->flags & KEY_FLAG_VIDEO) != (flags & KEY_FLAG_VIDEO)) {
+        return true;
+    }
+    if (p->video_flags != video_flags || p->video_flags_hi != video_flags_hi) {
+        return true;
+    }
+    for (int i = 0; i < KEY_MAX_VIDEO_PORTS; i++) {
+        if (p->video_ports[i] != video_ports[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+static void video_stop_child(struct listen_port *p, const char *why)
+{
+    if (p->video_pid == 0) {
+        return;
+    }
+    printf("[%d] video child %d stopping (%s)\n",
+           p->port2, int(p->video_pid), why);
+    kill(p->video_pid, SIGTERM);
+}
+
+static void upsert_port(int port1, int port2, uint32_t flags, uint32_t fc_sysid,
+                        float tz_offset_hours, const uint32_t *video_ports,
+                        uint32_t video_flags, uint32_t video_flags_hi)
+{
+    for (auto *p = ports; p; p=p->next) {
+        if (p->port2 == port2) {
+            p->seen = true;
+            if (video_cfg_differs(p, flags, video_ports, video_flags,
+                                  video_flags_hi)) {
+                // Ports/enable/slot options changed: the running child
+                // still binds the old set, so stop it and let
+                // check_children() re-fork with the new config.
+                video_stop_child(p, "video config changed");
+            }
+            memcpy(p->video_ports, video_ports, sizeof(p->video_ports));
+            p->video_flags = video_flags;
+            p->video_flags_hi = video_flags_hi;
+            if (p->removed) {
+                // came back: re-add as a fresh listener
+                printf("[%d] re-added (port1=%d)\n", port2, port1);
+                p->removed = false;
+                p->port1 = port1;
+                p->flags = flags;
+                p->fc_sysid = fc_sysid;
+                p->tz_offset_hours = tz_offset_hours;
+                if (p->pid == 0) {
+                    open_sockets(p);
+                }
+            } else if (p->port1 != port1) {
+                printf("[%d] port1 changed %d -> %d\n",
+                       port2, p->port1, port1);
+                close_sockets(p);
+                if (p->pid != 0) {
+                    // running child still binds the old port1; signal it
+                    // to exit so check_children reopens with the new one
+                    kill(p->pid, SIGTERM);
+                }
+                p->port1 = port1;
+                p->flags = flags;
+                p->fc_sysid = fc_sysid;
+                p->tz_offset_hours = tz_offset_hours;
+                if (p->pid == 0) {
+                    open_sockets(p);
+                }
+            } else {
+                p->flags = flags;
+                p->fc_sysid = fc_sysid;
+                p->tz_offset_hours = tz_offset_hours;
+            }
+            return;
+        }
+    }
+    struct listen_port *p = new struct listen_port;
+    p->next = ports;
+    p->port1 = port1;
+    p->port2 = port2;
+    p->sock1_udp = -1;
+    p->sock2_udp = -1;
+    p->sock1_tcp = -1;
+    p->sock2_listen = -1;
+    p->pid = 0;
+    p->video_pid = 0;
+    p->video_respawn_after = 0;
+    memcpy(p->video_ports, video_ports, sizeof(p->video_ports));
+    p->video_flags = video_flags;
+    p->video_flags_hi = video_flags_hi;
+    p->flags = flags;
+    p->fc_sysid = fc_sysid;
+    p->tz_offset_hours = tz_offset_hours;
+    p->seen = true;
+    p->removed = false;
+    ports = p;
+    printf("Added port %d/%d\n", port1, port2);
+    open_sockets(p);
+}
+
+
+static int handle_record(struct tdb_context *db, TDB_DATA key, TDB_DATA data, void *ptr)
+{
+    if (key.dsize != sizeof(int) || data.dsize < KEYENTRY_MIN_SIZE) {
+        // skip it
+        return 0;
+    }
+    struct KeyEntry k {};
+    int port2 = 0;
+    memcpy(&port2, key.dptr, sizeof(int));
+    size_t copy = data.dsize < sizeof(KeyEntry) ? data.dsize : sizeof(KeyEntry);
+    memcpy(&k, data.dptr, copy);
+    // The slots are split across two field groups on disk; hand
+    // upsert_port one flat array so nothing downstream has to know.
+    uint32_t vports[KEY_MAX_VIDEO_PORTS];
+    for (unsigned i = 0; i < KEY_MAX_VIDEO_PORTS; i++) {
+        vports[i] = video_port_of(k, i);
+    }
+    upsert_port(k.port1, port2, k.flags, k.fc_sysid,
+                k.tz_offset_hours, vports, k.video_flags, k.video_flags_hi);
+    return 0;
+}
+
+static void close_fd(int &fd)
+{
+    if (fd != -1) {
+	close(fd);
+	fd = -1;
+    }
+}
+
+class Connection2 {
+public:
+    int sock = -1;
+    bool used = false;
+    bool tcp_active = false;
+    MAVLink mav;
+    WebSocket *ws = nullptr;
+    struct sockaddr_in from;
+    socklen_t fromlen = 0;
+    bool is_udp = false;
+    double last_pkt = 0;
+    // for connections.tdb visibility
+    time_t connected_at = 0;
+    uint32_t rx_msgs = 0;
+    uint32_t tx_msgs = 0;
+
+    void close(void) {
+	close_fd(sock);
+	tcp_active = false;
+	used = false;
+	mav.set_ws(nullptr);
+	delete ws;
+	ws = nullptr;
+	connected_at = 0;
+	rx_msgs = 0;
+	tx_msgs = 0;
+    }
+};
+
+static void main_loop(struct listen_port *p)
+{
+    unsigned char buf[10240] {};
+    bool have_conn1=false;
+    double last_pkt1=0;
+    uint32_t count1=0, count2=0;
+    int fdmax = -1;
+    // bidi-sign: enforce signing on the user side too. mav1 then loads the
+    // same key keys.tdb stores for the engineer side, so unsigned and
+    // wrong-key user packets are rejected before being forwarded.
+    const bool bidi = (p->flags & KEY_FLAG_BIDI_SIGN) != 0;
+    const int conn1_key_id = bidi ? p->port2 : -1;
+    /*
+      we allow more than one connection on the support engineer side
+     */
+    uint8_t max_conn2_count = 0;
+    uint8_t conn2_count = 0;
+    MAVLink mav_blank;
+    MAVLink mav1;
+    Connection2 conn2[MAX_COMM2_LINKS];
+
+    // Webadmin sends SIGUSR1 to ask us to drop a specific connection.
+    // The signal handler just sets a flag; we scan connections.tdb at
+    // the top of each main_loop iteration to find the target slot(s).
+    {
+        struct sigaction sa = {};
+        sa.sa_handler = sigusr1_handler;
+        sigemptyset(&sa.sa_mask);
+        sigaction(SIGUSR1, &sa, nullptr);
+    }
+
+    // Log naming: one timestamp basename computed once at fork start
+    // (in the entry's log-naming timezone) and shared between the tlog
+    // and (further down) the binlog writer, so the paired files —
+    // <name>.tlog + <name>.bin — share their name and date subdir
+    // regardless of which writer activates first or whether one never
+    // does. Made unique up front so a same-second session start doesn't
+    // clobber an existing file.
+    const bool use_tz = (p->flags & KEY_FLAG_USE_TZ) != 0;
+    char log_datedir[16];
+    char log_name[64];
+    session_time_strings(time(nullptr), use_tz, p->tz_offset_hours,
+                         log_datedir, sizeof(log_datedir),
+                         log_name, sizeof(log_name));
+    session_unique_basename("logs", uint32_t(p->port2), log_datedir,
+                            log_name, sizeof(log_name));
+
+    // bidi: initialise the user-side validator once. Re-initialising
+    // per unsigned datagram (as the pre-latch path originally did)
+    // opens keys.tdb and forks a timestamp-save child every packet;
+    // under a stream of unsigned traffic the tdb lock collisions stall
+    // the main loop long enough to blow the engineer pre-auth window
+    // and WebSocket handshake timeouts. Parser and signing state carry
+    // across datagrams safely — validation still gates the latch.
+    if (bidi && p->sock1_udp != -1) {
+	mav1.init(p->sock1_udp, CHAN_COMM1, true, false, false, conn1_key_id);
+    }
+
+    // tlog: opened lazily on first received frame so an idle child that
+    // never sees traffic doesn't leave behind an empty session file.
+    TlogWriter tlog;
+    const bool tlog_enabled = (p->flags & KEY_FLAG_TLOG) != 0;
+    auto ensure_tlog_open = [&]() {
+        if (tlog_enabled && !tlog.is_open()) {
+            tlog.open(uint32_t(p->port2), log_datedir, log_name);
+        }
+    };
+    auto tlog_ptr = [&]() -> TlogWriter * {
+        return tlog_enabled ? &tlog : nullptr;
+    };
+
+    // binlog: ArduPilot bin logs over MAVLink. Activates when the
+    // first REMOTE_LOG_DATA_BLOCK arrives from the user side; while
+    // enabled, both REMOTE_LOG_DATA_BLOCK (184) and
+    // REMOTE_LOG_BLOCK_STATUS (185) are stripped from the user→
+    // engineer forward path so the support engineer's session isn't
+    // polluted by log traffic. Engineer→user direction is unchanged.
+    BinlogWriter binlog;
+    const bool binlog_enabled = (p->flags & KEY_FLAG_BINLOG) != 0;
+
+    // Video counts as a downstream consumer of user-side packets even
+    // though nothing here writes video: with bidi signing, the video
+    // side needs this session to reach an authenticated state, and on
+    // the TCP path that only happens inside the parse block below.
+    const bool video_enabled = (p->flags & KEY_FLAG_VIDEO) != 0;
+    if (binlog_enabled) {
+        // Per-entry sysid filter for SYSTEM_TIME-based reboot
+        // detection. 0 (default) accepts any sysid.
+        binlog.set_fc_sysid_filter(p->fc_sysid);
+        // Timezone (for the reboot-rotated file's timestamp name) and
+        // the shared session paths for the initial lazy open.
+        binlog.set_tz(use_tz, p->tz_offset_hours);
+        binlog.set_session_paths(log_datedir, log_name);
+    }
+    // Tap helper: returns true if the message was consumed by binlog
+    // and the caller should NOT forward it to the engineer side.
+    // BinlogWriter::handle_block does its own lazy file-open, gated
+    // on seqno==0 so we don't sparse-extend the file from a mid-
+    // stream seqno. observe() is called on every message for
+    // SYSTEM_TIME-based reboot detection and never strips.
+    auto binlog_handle_user_msg = [&](const mavlink_message_t &m) -> bool {
+        if (!binlog_enabled) {
+            return false;
+        }
+        binlog.observe(m);
+        if (m.msgid != MAVLINK_MSG_ID_REMOTE_LOG_DATA_BLOCK
+            && m.msgid != MAVLINK_MSG_ID_REMOTE_LOG_BLOCK_STATUS) {
+            return false;
+        }
+        if (m.msgid == MAVLINK_MSG_ID_REMOTE_LOG_DATA_BLOCK) {
+            binlog.handle_block(uint32_t(p->port2), m);
+        }
+        return true;  // strip from user→engineer
+    };
+
+    // Live state mirrored into connections.tdb so the web UI can show
+    // who is connected right now. Captured here, snapshotted into TDB
+    // on a 10s heartbeat below (mirroring save_signing_timestamp's
+    // fork-and-write pattern in mavlink.cpp).
+    struct sockaddr_in mav1_peer {};
+    time_t mav1_connected_at = 0;
+    uint32_t mav1_rx_msgs = 0, mav1_tx_msgs = 0;
+    bool mav1_is_tcp = false;
+    double last_conn_save_s = 0;
+    const pid_t my_pid = getpid();
+
+    fdmax = MAX(fdmax, p->sock1_udp);
+    fdmax = MAX(fdmax, p->sock2_udp);
+    fdmax = MAX(fdmax, p->sock1_tcp);
+    fdmax = MAX(fdmax, p->sock2_listen);
+
+    // Close an engineer slot and keep the counters consistent.
+    // max_conn2_count is a scan watermark (highest used slot + 1): it
+    // may only shrink when the top slot(s) become free. Shrinking it
+    // because the counts happened to match dropped still-used higher
+    // slots out of every scan loop, silently freezing those engineers.
+    auto close_conn2 = [&](Connection2 &c2) {
+	c2.close();
+	if (conn2_count > 0) {
+	    conn2_count--;
+	}
+	while (max_conn2_count > 0 && !conn2[max_conn2_count-1].used) {
+	    max_conn2_count--;
+	}
+    };
+
+    // Pull DROP_REQUESTED entries for our port2 out of connections.tdb,
+    // close the matching slots, and delete the records. Returns true if
+    // the user side was dropped (caller should exit main_loop).
+    auto process_drops = [&]() -> bool {
+        std::vector<int> indices;
+        struct collect_ctx {
+            int port2;
+            std::vector<int> *out;
+        } ctx { p->port2, &indices };
+
+        auto cb = [](struct tdb_context *, TDB_DATA key, TDB_DATA data,
+                     void *vptr) -> int {
+            auto *c = static_cast<collect_ctx *>(vptr);
+            if (key.dsize != sizeof(struct ConnKey)
+                || data.dsize < CONNENTRY_MIN_SIZE) {
+                return 0;
+            }
+            struct ConnKey k {};
+            memcpy(&k, key.dptr, sizeof(k));
+            if (k.port2 != c->port2) {
+                return 0;
+            }
+            struct ConnEntry e {};
+            size_t copy = data.dsize < sizeof(e) ? data.dsize : sizeof(e);
+            memcpy(&e, data.dptr, copy);
+            if (e.magic == CONN_MAGIC
+                && (e.flags & CONN_FLAG_DROP_REQUESTED) != 0) {
+                c->out->push_back(k.conn_index);
+            }
+            return 0;
+        };
+
+        auto *db = conn_db_open_transaction();
+        if (db == nullptr) {
+            return false;
+        }
+        tdb_traverse(db, cb, &ctx);
+        for (int idx : indices) {
+            conn_delete(db, p->port2, idx);
+        }
+        conn_db_close_commit(db);
+
+        bool exit_loop = false;
+        for (int idx : indices) {
+            if (idx == 0) {
+                printf("[%d] %s drop user requested -> ending session\n",
+                       p->port2, time_string());
+                exit_loop = true;
+            } else if (idx >= 1 && idx <= MAX_COMM2_LINKS) {
+                auto &c2 = conn2[idx - 1];
+                if (c2.used) {
+                    printf("[%d] %s drop conn2[%d] requested\n",
+                           p->port2, time_string(), idx - 1);
+                    close_conn2(c2);
+                }
+            }
+        }
+        return exit_loop;
+    };
+
+    while (1) {
+        if (g_drops_pending) {
+            g_drops_pending = 0;
+            if (process_drops()) {
+                break;
+            }
+        }
+        fd_set fds;
+        int ret;
+        struct timeval tval;
+        double now = time_seconds();
+
+        if (have_conn1 && now - last_pkt1 > 10) {
+            break;
+        }
+
+	FD_ZERO(&fds);
+	if (p->sock1_udp != -1) {
+	    FD_SET(p->sock1_udp, &fds);
+	}
+	if (p->sock2_udp != -1) {
+	    FD_SET(p->sock2_udp, &fds);
+	}
+	if (p->sock1_tcp != -1) {
+	    FD_SET(p->sock1_tcp, &fds);
+	}
+	if (p->sock2_listen != -1) {
+	    FD_SET(p->sock2_listen, &fds);
+	}
+	for (uint8_t i=0; i<max_conn2_count; i++) {
+	    const auto &c2 = conn2[i];
+	    if (c2.sock != -1) {
+		FD_SET(c2.sock, &fds);
+	    }
+	}
+
+        tval.tv_sec = 10;
+        tval.tv_usec = 0;
+
+	ret = select(fdmax+1, &fds, NULL, NULL, &tval);
+        if (ret == -1 && errno == EINTR) continue;
+        if (ret <= 0) break;
+
+	now = time_seconds();
+
+	if (max_conn2_count > MAX_COMM2_LINKS) {
+	    // formerly exit(1). With the UDP idle-close path now decrementing
+	    // conn2_count properly this should not be reachable, but if some
+	    // other path leaks it we'd rather log loudly and clamp than kill
+	    // the child for the whole port pair.
+	    printf("BUG: max_conn2_count=%d, clamping to %d\n",
+	           int(max_conn2_count), int(MAX_COMM2_LINKS));
+	    max_conn2_count = MAX_COMM2_LINKS;
+	}
+
+	/*
+	  check for dead UDP conn2 + pre-auth deadline on any conn2 slot
+	 */
+	const time_t wall_now = time(nullptr);
+	for (uint8_t i=0; i<max_conn2_count; i++) {
+	    auto &c2 = conn2[i];
+	    if (!c2.used) {
+		continue;
+	    }
+	    bool close_this = false;
+	    const char *why = "";
+	    if (!c2.mav.is_authenticated() &&
+		wall_now - c2.connected_at > CONN2_PREAUTH_SECONDS) {
+		// pre-auth deadline: applies to TCP, WS and UDP. Compare
+		// against connected_at (not last_pkt) so an attacker can't
+		// keep the slot alive by spamming unsigned/wrong-key
+		// traffic that refreshes last_pkt.
+		close_this = true;
+		why = "pre-auth deadline";
+	    } else if (c2.is_udp && now - c2.last_pkt > 10) {
+		// authenticated UDP: existing idle close
+		close_this = true;
+		why = "idle";
+	    }
+	    if (close_this) {
+		printf("[%d] %s closing %s conn2[%u] (%s)\n",
+		       unsigned(p->port2), time_string(),
+		       c2.is_udp ? "UDP" : "TCP",
+		       unsigned(i), why);
+		close_conn2(c2);
+	    }
+	}
+
+	// bidi user-side pre-auth deadline: TCP/WS latches before the
+	// first signed packet validates. If we don't see a valid signed
+	// packet in time, exit the child so the parent reopens the
+	// listener for the legitimate signed user. (UDP defers the latch
+	// until validation, so it never enters this state.)
+	if (bidi && have_conn1 && !mav1.is_authenticated() && mav1_is_tcp &&
+	    wall_now - mav1_connected_at > CONN1_BIDI_PREAUTH_SECONDS) {
+	    printf("[%d] %s bidi conn1 pre-auth timeout — restarting child\n",
+		   unsigned(p->port2), time_string());
+	    break;
+	}
+
+	/*
+	  check for UDP user data
+	 */
+	if (p->sock1_udp != -1 &&
+	    FD_ISSET(p->sock1_udp, &fds)) {
+	    close_fd(p->sock1_tcp);
+	    struct sockaddr_in from;
+            socklen_t fromlen = sizeof(from);
+	    ssize_t n = recvfrom(p->sock1_udp, buf, sizeof(buf), 0,
+                             (struct sockaddr *)&from, &fromlen);
+	    if (n < 0) break;
+            last_pkt1 = now;
+            count1++;
+            if (!have_conn1) {
+                if (bidi) {
+                    // bidi pre-auth: validate the signature *before*
+                    // committing the listener to this tuple. Unsigned
+                    // or wrong-key senders cannot latch conn1 and
+                    // deny the legitimate signed user. mav1 was
+                    // initialised once at child start.
+                    uint8_t *vbuf = buf;
+                    ssize_t vn = n;
+                    mavlink_message_t vmsg{};
+                    bool validated = false;
+                    while (vn > 0 && mav1.receive_message(vbuf, vn, vmsg)) {
+                        validated = true;
+                    }
+                    if (!validated) {
+                        continue;  // drop, leave listener open
+                    }
+                    if (connect(p->sock1_udp, (struct sockaddr *)&from, fromlen) != 0) {
+                        break;
+                    }
+                    have_conn1 = true;
+                    mav1_peer = from;
+                    mav1_connected_at = time(nullptr);
+                    mav1_is_tcp = false;
+                    last_conn_save_s = 0;
+                    printf("[%d] %s have UDP conn1 (bidi-validated) from %s\n",
+                           unsigned(p->port2), time_string(), addr_to_str(from));
+                    // bytes were already consumed during validation;
+                    // skip the main parse path below for this datagram
+                    n = 0;
+                } else {
+                    if (connect(p->sock1_udp, (struct sockaddr *)&from, fromlen) != 0) {
+                        break;
+                    }
+                    mav1.init(p->sock1_udp, CHAN_COMM1, bidi, false, false, conn1_key_id);
+                    have_conn1 = true;
+                    mav1_peer = from;
+                    mav1_connected_at = time(nullptr);
+                    mav1_is_tcp = false;
+                    // trigger an immediate connections.tdb snapshot on
+                    // the next loop iteration so the web UI sees the
+                    // new conn quickly
+                    last_conn_save_s = 0;
+                    printf("[%d] %s have UDP conn1 for from %s\n", unsigned(p->port2), time_string(), addr_to_str(from));
+                }
+            }
+            mavlink_message_t msg {};
+	    // Parse user-side bytes whenever there's anywhere for them to
+	    // go: a connected engineer (forward), tlog recording, binlog
+	    // recording, or video (which needs the session to authenticate).
+	    // Without one of those, the bytes are read off the socket but
+	    // discarded.
+	    if (conn2_count > 0 || binlog_enabled || tlog_enabled || video_enabled) {
+		uint8_t *buf0 = buf;
+		while (n > 0 && mav1.receive_message(buf0, n, msg)) {
+		    mav1_rx_msgs++;
+		    ensure_tlog_open();
+		    tlog_write_message(tlog_ptr(), msg);
+		    if (binlog_handle_user_msg(msg)) {
+			continue;  // strip REMOTE_LOG_* from user→engineer
+		    }
+		    for (uint8_t i=0; i<max_conn2_count; i++) {
+			auto &c2 = conn2[i];
+			if (!c2.used) {
+			    continue;
+			}
+			if (!c2.is_udp && c2.sock != -1) {
+			    if (!c2.mav.send_message(msg)) {
+				close_conn2(c2);
+			    } else {
+				c2.tx_msgs++;
+			    }
+			}
+			if (c2.is_udp) {
+			    c2.mav.send_message(msg);
+			    c2.tx_msgs++;
+			}
+		    }
+		}
+	    }
+        }
+
+	/*
+	  check for UDP support engineer data
+	 */
+	if (p->sock2_udp != -1 &&
+	    FD_ISSET(p->sock2_udp, &fds)) {
+	    struct sockaddr_in from;
+            socklen_t fromlen = sizeof(from);
+	    ssize_t n = recvfrom(p->sock2_udp, buf, sizeof(buf), 0,
+                             (struct sockaddr *)&from, &fromlen);
+	    if (n < 0) break;
+	    count2++;
+
+	    // find existing slot
+	    int idx = -1;
+	    for (uint8_t i=0; i<max_conn2_count; i++) {
+		auto &c2 = conn2[i];
+		if (c2.used && c2.is_udp &&
+		    from.sin_addr.s_addr == c2.from.sin_addr.s_addr &&
+		    from.sin_port == c2.from.sin_port &&
+		    fromlen == c2.fromlen) {
+		    // found it
+		    idx = &c2 - &conn2[0];
+		    c2.last_pkt = now;
+		    break;
+		}
+	    }
+
+	    if (idx == -1) {
+		// find a free slot
+		for (auto &c2 : conn2) {
+		    if (!c2.used) {
+			idx = int(&c2 - &conn2[0]),
+			c2.from = from;
+			c2.fromlen = fromlen;
+			c2.tcp_active = true;
+			c2.sock = -1;
+			c2.is_udp = true;
+			conn2_count++;
+			max_conn2_count = MAX(max_conn2_count, conn2_count);
+			c2.mav.init(p->sock2_udp, CHAN_COMM2(idx), true, false, false, p->port2);
+			c2.mav.set_sendto(from, fromlen);
+			c2.used = true;
+			c2.last_pkt = now;
+			c2.connected_at = time(nullptr);
+			c2.rx_msgs = 0;
+			c2.tx_msgs = 0;
+			last_conn_save_s = 0;  // immediate snapshot
+			printf("[%u] %s have UDP conn2[%u] from %s\n",
+			       unsigned(p->port2), time_string(),
+			       unsigned(idx+1),
+			       addr_to_str(from));
+			break;
+		    }
+		}
+	    }
+
+	    if (idx != -1) {
+		mavlink_message_t msg {};
+		// count1>0 means we've processed at least one user-side
+		// event, so conn1's transport is decided (raw vs
+		// WebSocket). Forwarding before that can write plain
+		// MAVLink onto a freshly-accepted TCP socket that then
+		// turns out to be WebSocket — landing ahead of the HTTP
+		// 101 and corrupting the handshake.
+		if (have_conn1 && count1 > 0) {
+		    uint8_t *buf0 = buf;
+		    bool failed = false;
+		    auto &c2 = conn2[idx];
+		    while (n > 0 && c2.mav.receive_message(buf0, n, msg)) {
+			c2.rx_msgs++;
+			ensure_tlog_open();
+			tlog_write_message(tlog_ptr(), msg);
+			if (!mav1.send_message(msg)) {
+			    failed = true;
+			    break;
+			}
+			mav1_tx_msgs++;
+		    }
+		    if (failed) {
+			break;
+		    }
+		}
+	    }
+	}
+
+	/*
+	  check for TCP user new connections
+	 */
+	if (!have_conn1 &&
+	    p->sock1_tcp != -1 &&
+	    FD_ISSET(p->sock1_tcp, &fds)) {
+	    close_fd(p->sock1_udp);
+	    struct sockaddr_in from;
+	    socklen_t fromlen = sizeof(from);
+	    int fd2 = accept(p->sock1_tcp, (struct sockaddr *)&from, &fromlen);
+	    if (fd2 < 0) {
+		break;
+	    }
+	    set_tcp_options(fd2);
+	    set_nonblocking(fd2);
+	    close(p->sock1_tcp);
+	    p->sock1_tcp = fd2;
+	    fdmax = MAX(fdmax, p->sock1_tcp);
+	    have_conn1 = true;
+	    mav1_peer = from;
+	    mav1_connected_at = time(nullptr);
+	    mav1_is_tcp = true;
+	    last_conn_save_s = 0;  // immediate snapshot
+	    printf("[%d] %s have TCP conn1 for from %s\n", unsigned(p->port2), time_string(), addr_to_str(from));
+	    mav1.init(p->sock1_tcp, CHAN_COMM1, bidi, false, true, conn1_key_id);
+	    last_pkt1 = now;
+	    continue;
+	}
+
+	/*
+	  check for TCP user data
+	 */
+	if (p->sock1_tcp != -1 &&
+	    FD_ISSET(p->sock1_tcp, &fds)) {
+	    close_fd(p->sock1_udp);
+
+	    if (count1 == 0 && !p->ws) {
+		ws_detect_t d = WebSocket::detect(p->sock1_tcp);
+		if (d == WS_MORE) {
+		    // fragmented handshake prefix: wait for more bytes
+		    // rather than committing to raw. Committing early
+		    // would leave mav1 in raw mode and forward raw
+		    // MAVLink onto a socket that is actually WebSocket,
+		    // corrupting the handshake. Brief sleep bounds CPU
+		    // while the rest of the request arrives; the conn1
+		    // idle timeout still applies.
+		    struct timespec ts { 0, 2 * 1000 * 1000 };
+		    nanosleep(&ts, nullptr);
+		    continue;
+		}
+		if (d == WS_YES) {
+		    p->ws = new WebSocket(p->sock1_tcp);
+		    if (p->ws == nullptr) {
+			break;
+		    }
+		    mav1.set_ws(p->ws);
+		    printf("[%d] %s WebSocket%s conn1\n", unsigned(p->port2), time_string(),
+			   p->ws->is_SSL()?" SSL":"");
+		}
+	    }
+	    ssize_t n;
+	    if (p->ws) {
+		n = p->ws->recv(buf, sizeof(buf)-1);
+	    } else {
+		n = recv(p->sock1_tcp, buf, sizeof(buf)-1, 0);
+	    }
+	    if (p->ws) {
+		    if (n < 0) { printf("[%d] %s EOF TCP conn1\n", unsigned(p->port2), time_string()); break; }
+		    if (n == 0) { /* no complete frame yet */ ; }
+		} else {
+		    if (n <= 0) { printf("[%d] %s EOF TCP conn1\n", unsigned(p->port2), time_string()); break; }
+		}
+	    last_pkt1 = now;
+            count1++;
+	    mavlink_message_t msg {};
+	    // Parse whenever a downstream consumer needs it (engineer
+	    // forward, tlog, binlog, or video). Otherwise just discard.
+	    //
+	    // video_enabled is load-bearing here, not just symmetry. On
+	    // this TCP path conn1 latches at accept(), before any
+	    // signature check, and receive_message() below is the only
+	    // thing that ever sets is_authenticated(). A bidi entry with
+	    // video but no engineer/tlog/binlog would therefore never
+	    // authenticate, and the CONN1_BIDI_PREAUTH_SECONDS check
+	    // would kill the session. (The UDP path differs: it
+	    // validates inside its latch block, so it authenticates
+	    // regardless of this gate.)
+	    if (conn2_count > 0 || binlog_enabled || tlog_enabled || video_enabled) {
+		uint8_t *buf0 = buf;
+		while (n > 0 && mav1.receive_message(buf0, n, msg)) {
+		    mav1_rx_msgs++;
+		    ensure_tlog_open();
+		    tlog_write_message(tlog_ptr(), msg);
+		    if (binlog_handle_user_msg(msg)) {
+			continue;  // strip REMOTE_LOG_* from user→engineer
+		    }
+		    for (uint8_t i=0; i<max_conn2_count; i++) {
+			auto &c2 = conn2[i];
+			if (!c2.used) {
+			    continue;
+			}
+			if (!c2.mav.send_message(msg)) {
+			    close_conn2(c2);
+			} else {
+			    c2.tx_msgs++;
+			}
+		    }
+		}
+	    }
+	}
+
+	/*
+	  check for new TCP support engineer connection
+	 */
+	if (p->sock2_listen != -1 &&
+	    FD_ISSET(p->sock2_listen, &fds)) {
+	    struct sockaddr_in from;
+	    socklen_t fromlen = sizeof(from);
+	    int fd2 = accept(p->sock2_listen, (struct sockaddr *)&from, &fromlen);
+	    if (fd2 < 0) {
+		continue;
+	    }
+	    if (conn2_count >= MAX_COMM2_LINKS) {
+		close(fd2);
+		continue;
+	    }
+
+	    set_tcp_options(fd2);
+	    set_nonblocking(fd2);
+
+	    uint8_t i;
+	    for (i=0; i<MAX_COMM2_LINKS; i++) {
+		if (!conn2[i].used) {
+		    break;
+		}
+	    }
+	    if (i == MAX_COMM2_LINKS) {
+		printf("[%d] %s too many TCP connections BUG: max %u\n", unsigned(p->port2), time_string(), unsigned(MAX_COMM2_LINKS));
+		close(fd2);
+		continue;
+	    }
+	    auto &c2 = conn2[i];
+	    c2.sock = fd2;
+	    c2.tcp_active = false;
+	    c2.used = true;
+	    c2.is_udp = false;
+	    c2.from = from;
+	    c2.fromlen = fromlen;
+	    c2.connected_at = time(nullptr);
+	    c2.rx_msgs = 0;
+	    c2.tx_msgs = 0;
+	    last_conn_save_s = 0;  // immediate snapshot
+	    fdmax = MAX(fdmax, c2.sock);
+	    printf("[%d] %s have TCP conn2[%u] for from %s\n", unsigned(p->port2), time_string(), unsigned(i+1), addr_to_str(from));
+	    c2.mav.init(c2.sock, CHAN_COMM2(i), true, true, true, p->port2);
+	    conn2_count++;
+	    max_conn2_count = MAX(max_conn2_count, conn2_count);
+	    continue;
+	}
+
+	/*
+	  check for new TCP support engineer data
+	 */
+	for (uint8_t i=0; i<max_conn2_count; i++) {
+	    auto &c2 = conn2[i];
+	    if (c2.is_udp || !c2.used || c2.sock == -1) {
+		continue;
+	    }
+	    if (FD_ISSET(c2.sock, &fds)) {
+		if (!c2.tcp_active && !c2.ws) {
+		    ws_detect_t d = WebSocket::detect(c2.sock);
+		    if (d == WS_MORE) {
+			// fragmented handshake prefix; wait for the rest
+			// rather than misclassifying it as raw MAVLink
+			struct timespec ts { 0, 2 * 1000 * 1000 };
+			nanosleep(&ts, nullptr);
+			continue;
+		    }
+		    if (d == WS_YES) {
+			c2.ws = new WebSocket(c2.sock);
+			if (c2.ws == nullptr) {
+			    break;
+			}
+			c2.mav.set_ws(c2.ws);
+			printf("[%d] %s WebSocket%s conn2\n", unsigned(p->port2), time_string(), c2.ws->is_SSL()?" SSL":"");
+		    }
+		}
+		ssize_t n;
+		if (c2.ws) {
+		    n = c2.ws->recv(buf, sizeof(buf)-1);
+		} else {
+		    n = recv(c2.sock, buf, sizeof(buf)-1, 0);
+		}
+		if (c2.ws) {
+		            if (n < 0) {
+		                printf("[%d] %s EOF TCP conn2[%u]\n", unsigned(p->port2), time_string(), unsigned(i+1));
+		                close_conn2(c2);
+		                continue;
+		            }
+		            if (n == 0) {
+		                // no complete frame yet
+		                continue;
+		            }
+		        } else {
+		            if (n <= 0) {
+		                printf("[%d] %s EOF TCP conn2[%u]\n", unsigned(p->port2), time_string(), unsigned(i+1));
+		                close_conn2(c2);
+		                continue;
+		            }
+		        }
+		buf[n] = 0;
+		count2++;
+		c2.tcp_active = true;
+		mavlink_message_t msg {};
+		// see the note at the UDP-engineer forward: don't forward
+		// to conn1 until its transport is decided (count1>0)
+		if (have_conn1 && count1 > 0) {
+		    uint8_t *buf0 = buf;
+		    bool failed = false;
+		    while (n > 0 && c2.mav.receive_message(buf0, n, msg)) {
+			c2.rx_msgs++;
+			ensure_tlog_open();
+			tlog_write_message(tlog_ptr(), msg);
+			if (!mav1.send_message(msg)) {
+			    failed = true;
+			    break;
+			}
+			mav1_tx_msgs++;
+		    }
+		    if (failed) {
+			break;
+		    }
+		}
+	    }
+	}
+
+	// Pump binlog state: before the first DATA_BLOCK this emits the
+	// magic START to nudge the vehicle into streaming (and to make
+	// its pre-arm logging check pass); afterwards it drains pending
+	// ACKs / NACKs. Needs to fire whenever binlog is enabled, not
+	// just when the file is open, since the START phase predates
+	// the file.
+	if (binlog_enabled && have_conn1) {
+	    binlog.tick(mav1);
+	}
+
+	/*
+	  Heartbeat snapshot of live connections to connections.tdb.
+	  Throttled to 5s and forked into a grandchild so we don't
+	  block main_loop on disk I/O. Same pattern as
+	  save_signing_timestamp() in mavlink.cpp. The web UI's
+	  http-equiv refresh runs at the same cadence.
+	 */
+	{
+	    double snap_now = time_seconds();
+	    if (snap_now - last_conn_save_s > 5) {
+		last_conn_save_s = snap_now;
+		// Safety net: rescan for webadmin drop requests on the
+		// snapshot cadence. A request whose SIGUSR1 raced a
+		// snapshot rewrite would otherwise be lost for good.
+		if (process_drops()) {
+		    break;
+		}
+		signal(SIGCHLD, SIG_IGN);
+		if (fork() == 0) {
+		    auto *db = conn_db_open_transaction();
+		    if (db != nullptr) {
+			// drop requests that landed since we forked must
+			// survive the delete+rewrite below
+			const uint32_t drop_mask = conn_drop_mask(db, p->port2);
+			conn_delete_for_port2(db, p->port2);
+			time_t now_t = time(nullptr);
+			if (have_conn1) {
+			    struct ConnEntry e {};
+			    e.magic = CONN_MAGIC;
+			    e.connected_at = mav1_connected_at;
+			    e.last_update = now_t;
+			    e.port2 = p->port2;
+			    e.conn_index = 0;
+			    e.pid = my_pid;
+			    e.rx_msgs = mav1_rx_msgs;
+			    e.tx_msgs = mav1_tx_msgs;
+			    e.peer_ip_be = mav1_peer.sin_addr.s_addr;
+			    e.peer_port_be = mav1_peer.sin_port;
+			    if (p->ws) {
+				e.transport = p->ws->is_SSL() ? CONN_TRANSPORT_WSS : CONN_TRANSPORT_WS;
+			    } else {
+				e.transport = mav1_is_tcp ? CONN_TRANSPORT_TCP : CONN_TRANSPORT_UDP;
+			    }
+			    e.is_user = 1;
+			    e.authenticated = mav1.is_authenticated() ? 1 : 0;
+			    if (drop_mask & 1u) {
+				e.flags |= CONN_FLAG_DROP_REQUESTED;
+			    }
+			    conn_write(db, e);
+			}
+			for (uint8_t i = 0; i < max_conn2_count; i++) {
+			    const auto &c2 = conn2[i];
+			    if (!c2.used) {
+				continue;
+			    }
+			    struct ConnEntry e {};
+			    e.magic = CONN_MAGIC;
+			    e.connected_at = c2.connected_at;
+			    e.last_update = now_t;
+			    e.port2 = p->port2;
+			    e.conn_index = i + 1;
+			    e.pid = my_pid;
+			    e.rx_msgs = c2.rx_msgs;
+			    e.tx_msgs = c2.tx_msgs;
+			    e.peer_ip_be = c2.from.sin_addr.s_addr;
+			    e.peer_port_be = c2.from.sin_port;
+			    if (c2.is_udp) {
+				e.transport = CONN_TRANSPORT_UDP;
+			    } else if (c2.ws) {
+				e.transport = c2.ws->is_SSL() ? CONN_TRANSPORT_WSS : CONN_TRANSPORT_WS;
+			    } else {
+				e.transport = CONN_TRANSPORT_TCP;
+			    }
+			    e.is_user = 0;
+			    if (drop_mask & (1u << (i + 1))) {
+				e.flags |= CONN_FLAG_DROP_REQUESTED;
+			    }
+			    conn_write(db, e);
+			}
+			conn_db_close_commit(db);
+		    }
+		    exit(0);
+		}
+	    }
+	}
+    }
+
+    if (count1 != 0 || count2 != 0) {
+        printf("[%d] %s Closed connection count1=%u count2=%u\n",
+               p->port2,
+               time_string(),
+               unsigned(count1),
+	       unsigned(count2));
+        // update database
+        auto *db = db_open_transaction();
+        if (db != nullptr) {
+            struct KeyEntry ke;
+            if (db_load_key(db, p->port2, ke)) {
+                ke.count1 += count1;
+		ke.count2 += count2;
+                ke.connections++;
+                db_save_key(db, p->port2, ke);
+                db_close_commit(db);
+            } else {
+                db_close_cancel(db);
+            }
+        }
+    }
+}
+
+static void close_socket(int *s)
+{
+    if (*s != -1) {
+	close(*s);
+	*s = -1;
+    }
+}
+
+/*
+  close all sockets
+ */
+static void close_sockets(struct listen_port *p)
+{
+    close_socket(&p->sock1_udp);
+    close_socket(&p->sock2_udp);
+    close_socket(&p->sock1_tcp);
+    close_socket(&p->sock2_listen);
+}
+
+/*
+  open one socket pair
+ */
+static void open_sockets(struct listen_port *p)
+{
+    if (p->sock1_udp == -1) {
+	p->sock1_udp = open_socket_in_udp(p->port1);
+	if (p->sock1_udp == -1) {
+	    printf("[%d] Failed to open UDP port %d - %s\n", p->port2, p->port1, strerror(errno));
+	}
+    }
+    if (p->sock2_udp == -1) {
+	p->sock2_udp = open_socket_in_udp(p->port2);
+	if (p->sock2_udp == -1) {
+	    printf("[%d] Failed to open UDP port %d - %s\n", p->port2, p->port2, strerror(errno));
+	}
+    }
+    if (p->sock1_tcp == -1) {
+	p->sock1_tcp = open_socket_in_tcp(p->port1);
+	if (p->sock1_tcp == -1) {
+	    printf("[%d] Failed to open TCP port %d - %s\n", p->port2, p->port1, strerror(errno));
+	}
+    }
+    if (p->sock2_listen == -1) {
+	p->sock2_listen = open_socket_in_tcp(p->port2);
+	if (p->sock2_listen == -1) {
+	    printf("[%d] Failed to open TCP port %d - %s\n", p->port2, p->port2, strerror(errno));
+	}
+    }
+}
+
+/*
+  Fork the long-lived video child for one entry.
+
+  Unlike handle_connection()'s per-pair child this is forked from
+  reload_ports() rather than on traffic, and it outlives any MAVLink
+  session. The parent owns it directly, which is what makes shutdown
+  ordering knowable: check_children() reaps it and clears video_pid.
+ */
+static void fork_video_child(struct listen_port *p)
+{
+    int ready[2] = { -1, -1 };
+    if (pipe(ready) != 0) {
+        printf("[%d] video: pipe failed - %s\n", p->port2, strerror(errno));
+        return;
+    }
+
+    pid_t pid = fork();
+    if (pid < 0) {
+        printf("[%d] video: fork failed - %s\n", p->port2, strerror(errno));
+        close(ready[0]);
+        close(ready[1]);
+        return;
+    }
+    if (pid == 0) {
+        close(ready[0]);
+        // Die with the parent. PDEATHSIG only fires for a parent that
+        // was alive when it was armed, hence the getppid() recheck.
+        prctl(PR_SET_PDEATHSIG, SIGTERM);
+        if (getppid() == 1) {
+            _exit(0);
+        }
+        // The session children set SIGCHLD to SIG_IGN, which makes
+        // waitpid() fail with ECHILD. We are not descended from them,
+        // but be explicit: this child supervises its own subprocesses
+        // in later phases and needs real exit statuses.
+        signal(SIGCHLD, SIG_DFL);
+        signal(SIGUSR1, SIG_DFL);
+
+        // fd sanitation. Being a child of the *parent* rather than of a
+        // session child, we never inherit conn1, the accepted engineer
+        // sockets, SSL state or the open tlog/binlog fds -- only the
+        // listeners and the epoll instance, which all go here.
+        if (g_epfd != -1) {
+            close(g_epfd);
+            g_epfd = -1;
+        }
+        for (auto *p2 = ports; p2; p2 = p2->next) {
+            close_sockets(p2);
+        }
+        video_child_main(p->port2, ready[1]);
+        // video_child_main is noreturn and _exit()s: never fall back
+        // into the parent's code with copied destructors that would
+        // close fd numbers we have since reused.
+    }
+
+    close(ready[1]);
+    p->video_pid = pid;
+
+    // Read the readiness byte. The child writes it right after binding,
+    // and closes the fd on any exit path, so this cannot hang.
+    uint8_t st = 0;
+    ssize_t n = read(ready[0], &st, 1);
+    close(ready[0]);
+    if (n == 1 && st != 0) {
+        printf("[%d] video child %d started but a port failed to bind - %s\n",
+               p->port2, int(pid), strerror(int(st)));
+    } else if (n == 1) {
+        printf("[%d] video child %d ready\n", p->port2, int(pid));
+    } else {
+        printf("[%d] video child %d exited before signalling ready\n",
+               p->port2, int(pid));
+    }
+}
+
+/*
+  Start or stop video children so the running set matches keys.tdb.
+
+  Called from main() as well as reload_ports(): without the startup
+  call, an entry with video enabled would sit with its ports unbound
+  until the first 5 s reload, which looks like the feature is broken.
+ */
+static void reconcile_video_children(void)
+{
+    const time_t now = time(nullptr);
+    for (auto *p = ports; p; p=p->next) {
+        const bool want = !p->removed
+            && video_entry_wants_child(p->flags, p->video_ports);
+        if (want && p->video_pid == 0 && now >= p->video_respawn_after) {
+            fork_video_child(p);
+        } else if (!want && p->video_pid != 0) {
+            video_stop_child(p, "video disabled");
+        }
+    }
+}
+
+/*
+  check for child exit. Returns true if a per-port-pair child was
+  reaped (the caller should refresh the epoll set so the reopened
+  listeners are watched again).
+ */
+static bool check_children(void)
+{
+    int wstatus = 0;
+    bool reaped = false;
+    while (true) {
+        pid_t pid = waitpid(-1, &wstatus, WNOHANG);
+        if (pid <= 0) {
+            break;
+        }
+        if (pid == cleanup_child_pid) {
+            printf("log cleanup child %d exited; respawning\n", int(pid));
+            cleanup_child_pid = 0;
+            fork_cleanup_child();
+            continue;
+        }
+        bool found_child = false;
+        for (auto *p = ports; p; p=p->next) {
+            if (p->video_pid == pid) {
+                // Video children are long-lived, so an exit is either a
+                // config change we asked for or a crash. Either way the
+                // backoff keeps a child that dies immediately from being
+                // re-forked in a tight loop; reload_ports() re-forks it.
+                printf("[%d] video child %d exited (status %d)\n",
+                       p->port2, int(pid),
+                       WIFEXITED(wstatus) ? WEXITSTATUS(wstatus) : -1);
+                p->video_pid = 0;
+                p->video_respawn_after = time(nullptr) + 2;
+                conn_remove_video(p->port2);
+                found_child = true;
+                break;
+            }
+            if (p->pid == pid) {
+                printf("[%d] Child %d exited\n", p->port2, int(pid));
+                p->pid = 0;
+		// Drop the records this child wrote -- but only its own
+		// index range. A video child for the same entry may still
+		// be running, and whole-port2 delete would erase its rows.
+		{
+		    auto *cdb = conn_db_open_transaction();
+		    if (cdb != nullptr) {
+			conn_delete_index_range(cdb, p->port2, 0,
+						VIDEO_CONN_INDEX_BASE - 1);
+			conn_db_close_commit(cdb);
+		    }
+		}
+		found_child = true;
+		reaped = true;
+		// Don't reopen listening sockets for an entry that was
+		// removed from keys.tdb between fork and exit; that would
+		// rebind the port for a record that no longer exists.
+		if (!p->removed) {
+			open_sockets(p);
+		}
+                break;
+            }
+        }
+        if (!found_child) {
+            printf("No child for %d found\n", int(pid));
+        }
+    }
+    return reaped;
+}
+
+/*
+  fork the long-lived cleanup child once. The child closes all listening
+  sockets it inherited from the parent (so it doesn't keep the ports
+  bound), then runs log_cleanup_loop forever.
+ */
+static void fork_cleanup_child(void)
+{
+    pid_t pid = fork();
+    if (pid == 0) {
+        // die with the parent: this loop never exits on its own, so
+        // without this every proxy shutdown leaked an orphan process
+        prctl(PR_SET_PDEATHSIG, SIGTERM);
+        if (getppid() == 1) {
+            _exit(0);   // parent already gone before prctl took effect
+        }
+        if (g_epfd != -1) {
+            close(g_epfd);
+            g_epfd = -1;
+        }
+        for (auto *p = ports; p; p = p->next) {
+            close_sockets(p);
+        }
+        log_cleanup_loop();
+        _exit(0);
+    }
+    if (pid < 0) {
+        perror("fork(cleanup)");
+        return;
+    }
+    cleanup_child_pid = pid;
+    printf("log cleanup child %d started\n", int(pid));
+}
+
+/*
+  deregister a pair's listening sockets from the parent's epoll set
+ */
+static void epoll_del_sockets(struct listen_port *p)
+{
+    if (g_epfd == -1) {
+	return;
+    }
+    const int fds[4] = { p->sock1_udp, p->sock2_udp,
+			 p->sock1_tcp, p->sock2_listen };
+    for (int fd : fds) {
+	if (fd != -1) {
+	    epoll_ctl(g_epfd, EPOLL_CTL_DEL, fd, nullptr);
+	}
+    }
+}
+
+/*
+  handle a new connection
+ */
+static void handle_connection(struct listen_port *p)
+{
+    pid_t pid = fork();
+    if (pid < 0) {
+	// keep the sockets open and registered; the pending event fires
+	// again and we retry. Storing -1 in p->pid would kill the pair
+	// for good (nothing ever reaps pid -1) and a later
+	// kill(p->pid, ...) would signal every process on the system.
+	printf("[%d] fork failed - %s\n", p->port2, strerror(errno));
+	return;
+    }
+    if (pid == 0) {
+	// the epoll instance is the parent's; drop our copy so a
+	// parent-side close/recreate doesn't leave it pinned here
+	if (g_epfd != -1) {
+	    close(g_epfd);
+	    g_epfd = -1;
+	}
+	for (auto *p2 = ports; p2; p2=p2->next) {
+	    if (p2 != p) {
+		close_sockets(p2);
+	    }
+	}
+	main_loop(p);
+	exit(0);
+    }
+    p->pid = pid;
+    printf("[%d] New child %d\n", p->port2, int(p->pid));
+
+    // deregister before close: fork gave the child references to these
+    // descriptions, so close() alone leaves the registrations live
+    epoll_del_sockets(p);
+    close_sockets(p);
+}
+
+static void reload_ports(void)
+{
+    // mark every port pair we know about as "unseen". upsert_port()
+    // will set seen=true for any port2 it finds in the DB; entries
+    // still unseen after the traverse are gone from keys.tdb and
+    // need to be torn down.
+    for (auto *p = ports; p; p = p->next) {
+        p->seen = false;
+    }
+
+    // wrap the traversal in a transaction so we see a consistent snapshot
+    // even if keydb.py / the web admin UI is mutating in parallel
+    auto *db = db_open_transaction();
+    if (db == nullptr) {
+        // transient open/lock failure: skip this cycle rather than
+        // killing the proxy (and every active session) at runtime
+        printf("reload: failed to open %s - %s\n", KEY_FILE, strerror(errno));
+        return;
+    }
+    tdb_traverse(db, handle_record, nullptr);
+    db_close_cancel(db);
+
+    // any port pair not seen during the traverse has been removed from
+    // keys.tdb. Close listening sockets, signal the running child to
+    // exit so any active conn1/conn2 dies, and mark the struct removed
+    // so we don't reopen sockets when the child exits.
+    for (auto *p = ports; p; p = p->next) {
+        if (!p->seen && !p->removed) {
+            printf("[%d] removed from keys.tdb\n", p->port2);
+            p->removed = true;
+            close_sockets(p);
+            if (p->pid != 0) {
+                kill(p->pid, SIGTERM);
+            }
+            video_stop_child(p, "entry removed");
+            conn_remove_port2(p->port2);
+        }
+    }
+
+    // see if any sockets need opening
+    for (auto *p = ports; p; p=p->next) {
+	if (p->pid == 0 && !p->removed) {
+	    open_sockets(p);
+	}
+    }
+
+    reconcile_video_children();
+}
+
+/*
+  wait for incoming connections
+ */
+static void wait_connection(void)
+{
+    int epfd = epoll_create1(0);
+    if (epfd == -1) {
+        perror("epoll_create1");
+        exit(1);
+    }
+    g_epfd = epfd;
+
+    /*
+      rebuild epoll structure for current list of connections
+     */
+    auto rebuild_epoll_set = [&]() {
+        epoll_ctl(epfd, EPOLL_CTL_DEL, -1, nullptr); // dummy cleanup if needed
+        for (auto *p = ports; p; p = p->next) {
+            if (p->pid != 0 || p->removed) continue;
+
+            struct epoll_event ev = {};
+            ev.events = EPOLLIN;
+            ev.data.ptr = p;
+
+            if (p->sock1_udp != -1) {
+                ev.data.fd = p->sock1_udp;
+                epoll_ctl(epfd, EPOLL_CTL_ADD, p->sock1_udp, &ev);
+            }
+            if (p->sock2_udp != -1) {
+                ev.data.fd = p->sock2_udp;
+                epoll_ctl(epfd, EPOLL_CTL_ADD, p->sock2_udp, &ev);
+            }
+            if (p->sock1_tcp != -1) {
+                ev.data.fd = p->sock1_tcp;
+                epoll_ctl(epfd, EPOLL_CTL_ADD, p->sock1_tcp, &ev);
+            }
+            if (p->sock2_listen != -1) {
+                ev.data.fd = p->sock2_listen;
+                epoll_ctl(epfd, EPOLL_CTL_ADD, p->sock2_listen, &ev);
+            }
+        }
+    };
+
+    rebuild_epoll_set();
+
+    double last_reload = time_seconds();
+    struct epoll_event events[MAX_EPOLL_EVENTS];
+
+    while (true) {
+	int ret = epoll_wait(epfd, events, MAX_EPOLL_EVENTS, 1000); // 1 second timeout
+
+        if (ret == -1) {
+            if (errno == EINTR) continue;
+            perror("epoll_wait");
+            break;
+        }
+
+        for (int i = 0; i < ret; i++) {
+            int fd = events[i].data.fd;
+
+            for (auto *p = ports; p; p = p->next) {
+                if (p->pid != 0 || p->removed) continue;
+                if ((p->sock1_udp == fd || p->sock2_udp == fd ||
+                     p->sock1_tcp == fd || p->sock2_listen == fd)) {
+                    handle_connection(p);
+                    break;
+                }
+            }
+        }
+
+        /*
+          Housekeeping must run on every iteration, not only when
+          epoll_wait times out. Children inherit the listening sockets,
+          so their traffic can keep waking us via registrations that
+          survived our close() after fork; gating on ret==0 starved
+          child reaping and DB reloads whenever any session was busy,
+          leaving killed connections dead until all sessions went idle.
+          Reaping a child forces an immediate reload so its reopened
+          listeners get back into the epoll set without the 5s wait.
+         */
+        const bool reaped = check_children();
+        double now = time_seconds();
+        if (reaped || now - last_reload > 5) {
+            last_reload = now;
+            reload_ports();
+            close(epfd);
+            epfd = epoll_create1(0);
+            g_epfd = epfd;
+            rebuild_epoll_set();
+        }
+    }
+    close(epfd);
+}
+
+int main(int argc, char *argv[])
+{
+    setvbuf(stdout, nullptr, _IOLBF, 4096);
+    // Unit checks for the TS scanner's bit twiddling. End-to-end tests
+    // find that class of bug only intermittently, so it gets a direct
+    // entry point that the suite invokes.
+    if (argc > 1 && strcmp(argv[1], "--selftest-video") == 0) {
+        int rc = videots_selftest();
+        if (rc == 0) {
+            rc = videostream_selftest();
+        }
+        if (rc == 0) {
+            // A short deterministic fuzz run on every invocation, so a
+            // regression in the PSI parsing shows up in the normal
+            // suite rather than only in a dedicated campaign.
+            const unsigned iters = argc > 2 ? unsigned(atoi(argv[2])) : 2000;
+            const uint32_t seed = argc > 3 ? uint32_t(atoi(argv[3])) : 1;
+            rc = videots_fuzz(iters, seed);
+        }
+        return rc;
+    }
+    // a peer-closed TCP/WS/SSL connection must fail the write with
+    // EPIPE, not kill the child (and its whole session) with SIGPIPE
+    signal(SIGPIPE, SIG_IGN);
+    printf("Opening sockets\n");
+    // Wipe any connections.tdb records left behind by a previous run.
+    // Per-port-pair children write into this file; on a fresh start no
+    // record can be live yet. Doing this in the parent before any fork
+    // means we never race with a live writer.
+    conn_recreate_empty();
+    auto *db = db_open_transaction();
+    if (db == nullptr) {
+        printf("Database not found\n");
+        exit(1);
+    }
+    tdb_traverse(db, handle_record, nullptr);
+    printf("Added %u ports\n", unsigned(count_ports()));
+    db_close_cancel(db);
+
+    reconcile_video_children();
+    fork_cleanup_child();
+
+    wait_connection();
+
+    return 0;
+}

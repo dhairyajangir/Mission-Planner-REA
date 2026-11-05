@@ -1,0 +1,124 @@
+{
+  "scope": "Disposable source-built Copter SITL; standalone MAVLink 2 client; no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "fence_baseline": {
+      "passed": true,
+      "upload": {
+        "requests": [
+          0,
+          1
+        ],
+        "ack": 0,
+        "ack_name": "MAV_MISSION_ACCEPTED"
+      },
+      "readback": [
+        {
+          "seq": 0,
+          "lat": -353632610,
+          "lon": 1491652300,
+          "alt": 0.0,
+          "command": 5003,
+          "param1": 100.0
+        },
+        {
+          "seq": 1,
+          "lat": -353622610,
+          "lon": 1491662300,
+          "alt": 0.0,
+          "command": 5003,
+          "param1": 100.0
+        }
+      ]
+    },
+    "fence_rejection": {
+      "passed": true,
+      "upload": {
+        "requests": [
+          0,
+          1
+        ],
+        "ack": 2,
+        "ack_name": "MAV_MISSION_UNSUPPORTED_FRAME"
+      },
+      "readback": [
+        {
+          "seq": 0,
+          "lat": -353632610,
+          "lon": 1491652300,
+          "alt": 0.0,
+          "command": 5003,
+          "param1": 100.0
+        },
+        {
+          "seq": 1,
+          "lat": -353622610,
+          "lon": 1491662300,
+          "alt": 0.0,
+          "command": 5003,
+          "param1": 100.0
+        }
+      ]
+    },
+    "rally_baseline": {
+      "passed": true,
+      "upload": {
+        "requests": [
+          0,
+          1
+        ],
+        "ack": 0,
+        "ack_name": "MAV_MISSION_ACCEPTED"
+      },
+      "readback": [
+        {
+          "seq": 0,
+          "lat": -353632610,
+          "lon": 1491652300,
+          "alt": 20.0,
+          "command": 5100,
+          "param1": 0.0
+        },
+        {
+          "seq": 1,
+          "lat": -353622610,
+          "lon": 1491662300,
+          "alt": 20.0,
+          "command": 5100,
+          "param1": 0.0
+        }
+      ]
+    },
+    "rally_rejection": {
+      "passed": true,
+      "upload": {
+        "requests": [
+          0,
+          1
+        ],
+        "ack": 2,
+        "ack_name": "MAV_MISSION_UNSUPPORTED_FRAME"
+      },
+      "readback": [
+        {
+          "seq": 0,
+          "lat": -353627610,
+          "lon": 1491652300,
+          "alt": 20.0,
+          "command": 5100,
+          "param1": 0.0
+        },
+        {
+          "seq": 1,
+          "lat": -353622610,
+          "lon": 1491662300,
+          "alt": 20.0,
+          "command": 5100,
+          "param1": 0.0
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "passed": true
+}

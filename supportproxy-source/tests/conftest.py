@@ -1,0 +1,216 @@
+"""
+Test configuration and shared utilities for SupportProxy testing.
+"""
+import os
+
+# Resolve worker ID and per-worker port pair *before* importing test_config so
+# its module-level constants pick up the right values. We assign directly
+# (rather than os.environ.setdefault) because the pytest-xdist controller
+# imports this module first and exports its env to workers; a setdefault would
+# leave every worker stuck on worker 0's ports.
+_worker = os.environ.get('PYTEST_XDIST_WORKER', 'gw0')
+_WORKER_ID = int(_worker[2:]) if _worker.startswith('gw') else 0
+os.environ['TEST_PORT_USER'] = str(14552 + _WORKER_ID * 2)
+os.environ['TEST_PORT_ENGINEER'] = str(14553 + _WORKER_ID * 2)
+os.environ['TEST_PORT_USER_BIDI'] = str(14652 + _WORKER_ID * 2)
+os.environ['TEST_PORT_ENGINEER_BIDI'] = str(14653 + _WORKER_ID * 2)
+
+import subprocess
+import threading
+import time
+import pytest
+from test_config import (TEST_PORT_USER, TEST_PORT_ENGINEER, TEST_PASSPHRASE,
+                         TEST_PORT_USER_BIDI, TEST_PORT_ENGINEER_BIDI,
+                         KEYDB_PY, SUPPORTPROXY_BIN)
+
+os.environ['MAVLINK_DIALECT'] = 'all'
+os.environ['MAVLINK20'] = '1'  # Ensure MAVLink2 is used
+
+
+class SupportProxyProcess:
+    def __init__(self, executable=SUPPORTPROXY_BIN, cwd=None):
+        self.proc = subprocess.Popen(
+            [executable],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            bufsize=1,
+            universal_newlines=True,
+            cwd=cwd,
+        )
+        self._stdout_lines = []
+        self._stderr_lines = []
+        self._stdout_thread = threading.Thread(
+            target=self._read_stream, args=(self.proc.stdout, self._stdout_lines))
+        self._stderr_thread = threading.Thread(
+            target=self._read_stream, args=(self.proc.stderr, self._stderr_lines))
+        self._stdout_thread.daemon = True
+        self._stderr_thread.daemon = True
+        self._stdout_thread.start()
+        self._stderr_thread.start()
+        self._stdout_last_idx = 0
+        self._stderr_last_idx = 0
+
+    def _read_stream(self, stream, lines):
+        for line in iter(stream.readline, ''):
+            lines.append(line)
+        stream.close()
+
+    def get_new_output_since_last_check(self):
+        stdout_new = self._stdout_lines[self._stdout_last_idx:]
+        stderr_new = self._stderr_lines[self._stderr_last_idx:]
+        self._stdout_last_idx = len(self._stdout_lines)
+        self._stderr_last_idx = len(self._stderr_lines)
+        return ''.join(stdout_new), ''.join(stderr_new)
+
+    def get_latest_output(self, num_lines=5):
+        """Get the latest N lines from stdout/stderr combined."""
+        if len(self._stdout_lines) >= num_lines:
+            latest_stdout = self._stdout_lines[-num_lines:]
+        else:
+            latest_stdout = self._stdout_lines
+
+        if len(self._stderr_lines) >= num_lines:
+            latest_stderr = self._stderr_lines[-num_lines:]
+        else:
+            latest_stderr = self._stderr_lines
+
+        return ''.join(latest_stdout), ''.join(latest_stderr)
+
+    def terminate(self):
+        self.proc.terminate()
+        try:
+            self.proc.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            self.proc.kill()
+
+
+def _wait_listening(ports, timeout=15.0):
+    """Block until every port is in LISTEN.
+
+    Read from /proc rather than probed with a connection: connecting to
+    a user port latches conn1, which would consume the very thing the
+    test is about to set up.
+    """
+    want = {'%04X' % p for p in ports}
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        listening = set()
+        try:
+            with open('/proc/net/tcp') as f:
+                next(f)
+                for line in f:
+                    fields = line.split()
+                    if fields[3] == '0A':            # LISTEN
+                        listening.add(fields[1].split(':')[1].upper())
+        except OSError:
+            pass
+        if want <= listening:
+            return
+        time.sleep(0.05)
+    raise RuntimeError('SupportProxy never listened on %s'
+                       % sorted(ports))
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _worker_cwd(tmp_path_factory):
+    """Each xdist worker runs in its own tmpdir so workers don't share a
+    keys.tdb. cwd-relative paths in tests resolve to the per-worker dir."""
+    workdir = tmp_path_factory.mktemp(f"supportproxy_w{_WORKER_ID}")
+    os.chdir(workdir)
+    yield workdir
+
+
+@pytest.fixture(scope="session")
+def test_server(_worker_cwd):
+    """Pytest fixture to provide a test server instance."""
+    workdir = _worker_cwd
+    print(f"DEBUG: Setting up test_server (worker={_WORKER_ID}, cwd={workdir})")
+
+    # Initialize the per-worker keys.tdb in the worker's cwd. We use the
+    # absolute KEYDB_PY because cwd is no longer the repo root.
+    subprocess.check_call(['python', KEYDB_PY, 'initialise'])
+
+    port1, port2 = TEST_PORT_USER, TEST_PORT_ENGINEER
+    port1_b, port2_b = TEST_PORT_USER_BIDI, TEST_PORT_ENGINEER_BIDI
+
+    # Idempotent: remove any prior entries, then add the test entries.
+    for p2 in (port2, port2_b):
+        subprocess.run(['python', KEYDB_PY, 'remove', str(p2)],
+                       capture_output=True)
+
+    result = subprocess.run([
+        'python', KEYDB_PY, 'add', str(port1), str(port2),
+        'test_user', TEST_PASSPHRASE
+    ], capture_output=True, text=True)
+    assert result.returncode == 0, f"Failed to setup database: {result.stderr}"
+
+    # Second pair with KEY_FLAG_BIDI_SIGN set so bidi tests can target it.
+    result = subprocess.run([
+        'python', KEYDB_PY, 'add', str(port1_b), str(port2_b),
+        'test_user_bidi', TEST_PASSPHRASE
+    ], capture_output=True, text=True)
+    assert result.returncode == 0, f"Failed to setup bidi database: {result.stderr}"
+
+    result = subprocess.run([
+        'python', KEYDB_PY, 'setflag', str(port2_b), 'bidi_sign'
+    ], capture_output=True, text=True)
+    assert result.returncode == 0, f"Failed to set bidi_sign: {result.stderr}"
+
+    # Verify database entries
+    result = subprocess.run(['python', KEYDB_PY, 'list'],
+                            capture_output=True, text=True)
+    print(f"DEBUG: Database contents before starting SupportProxy:\n{result.stdout}")
+
+    # Generate a per-worker self-signed cert for the proxy's WSS listener.
+    # The proxy reads fullchain.pem/privkey.pem from cwd when a TLS client
+    # ClientHello arrives. The cert never needs to validate (test client
+    # disables verification), it just has to load.
+    subprocess.check_call([
+        'openssl', 'req', '-x509', '-newkey', 'rsa:2048', '-nodes',
+        '-keyout', 'privkey.pem', '-out', 'fullchain.pem',
+        '-days', '1', '-subj', '/CN=localhost',
+    ], stderr=subprocess.DEVNULL)
+
+    print("DEBUG: Starting SupportProxy with database ready...")
+    server = SupportProxyProcess()  # cwd is already the worker's tmpdir
+
+    # Wait for SupportProxy to load both port pairs before yielding.
+    markers = {f"Added port {port1}/{port2}": False,
+               f"Added port {port1_b}/{port2_b}": False}
+    max_wait = 10
+    start_time = time.time()
+
+    while time.time() - start_time < max_wait:
+        time.sleep(0.5)
+        stdout, stderr = server.get_new_output_since_last_check()
+        output = stdout + stderr
+
+        if "Opening sockets" in output:
+            print("DEBUG: SupportProxy has started opening sockets")
+        for m in markers:
+            if not markers[m] and m in output:
+                markers[m] = True
+                print(f"DEBUG: SupportProxy loaded {m.replace('Added port ', '')}")
+        if all(markers.values()):
+            # The marker is printed before the socket is bound
+            # (supportproxy.cpp prints "Added port" and then calls
+            # open_sockets), so a test that connects on the strength of
+            # it alone is racing. Harmless on an idle machine, and it
+            # starts losing when the runner is busy.
+            _wait_listening([port1, port2, port1_b, port2_b])
+            print("DEBUG: SupportProxy ready for testing!")
+            break
+    else:
+        stdout, stderr = server.get_new_output_since_last_check()
+        output = stdout + stderr
+        print(f"DEBUG: SupportProxy initialization timeout. Output so far:\n{output}")
+        server.terminate()
+        raise RuntimeError(
+            "SupportProxy failed to initialize properly within timeout")
+
+    print("DEBUG: test_server fixture setup complete")
+    yield server
+
+    print("DEBUG: Tearing down test_server fixture")
+    server.terminate()
+    print("DEBUG: test_server fixture teardown complete")

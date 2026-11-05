@@ -1,0 +1,13 @@
+{
+  "assembly_sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+  "selection": "AForge.Math.Gaussian",
+  "normalized_results_equal": true,
+  "coverage": {
+    "state": "complete",
+    "issues": []
+  },
+  "capture_sha256": {
+    "rea-agents": "9b607e3f27c6eef3fad495776898f1f690c98c56f50eb7f7c4a661b629fa5bd4",
+    "rea-agents-raised-budget": "9b607e3f27c6eef3fad495776898f1f690c98c56f50eb7f7c4a661b629fa5bd4"
+  }
+}

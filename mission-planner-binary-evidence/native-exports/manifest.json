@@ -1,0 +1,495 @@
+{
+  "requested": 70,
+  "results": [
+    {
+      "path": "AdbWinApi.dll",
+      "sha256": "d60103a5e99bc9888f786ee916f5d6e45493c3247972cb053833803de7e95cf9",
+      "status": "complete",
+      "evidence": "d60103a5e99bc9888f786ee916f5d6e45493c3247972cb053833803de7e95cf9-ce218b63ec5d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "adb.exe",
+      "sha256": "78009a831f3455bce238ebf9b65170cba9a6782a60eff2284d5bfeb54c19e088",
+      "status": "complete",
+      "evidence": "78009a831f3455bce238ebf9b65170cba9a6782a60eff2284d5bfeb54c19e088-73325fd6fd22.json",
+      "exit_code": 0
+    },
+    {
+      "path": "arm64/libSkiaSharp.dll",
+      "sha256": "d8ea5ff8d04bc7909a8aa38f7cd28962c6a6036e6683d0032b7af999b6260f18",
+      "status": "complete",
+      "evidence": "d8ea5ff8d04bc7909a8aa38f7cd28962c6a6036e6683d0032b7af999b6260f18-5fbf30771229.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/amd64/WdfCoInstaller01009.dll",
+      "sha256": "56af50768ee1095db0fec866a8e545d13e2e43ef108f0a4dbd12aff1de962f11",
+      "status": "complete",
+      "evidence": "56af50768ee1095db0fec866a8e545d13e2e43ef108f0a4dbd12aff1de962f11-504a83ad59ee.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/amd64/winusbcoinstaller2.dll",
+      "sha256": "6a3cdfd1c28a5e7c242b6824ed6f4281519079c632453734c4ac03d387048f3f",
+      "status": "complete",
+      "evidence": "6a3cdfd1c28a5e7c242b6824ed6f4281519079c632453734c4ac03d387048f3f-f83a74c08460.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/devcon.exe",
+      "sha256": "24f585e58a7c4fd289dc9ff782eb3d82c125aefdafab11aafbb877d0282304bd",
+      "status": "complete",
+      "evidence": "24f585e58a7c4fd289dc9ff782eb3d82c125aefdafab11aafbb877d0282304bd-49c7931f039c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/DPInstx86.exe",
+      "sha256": "4478f6fcfd2fc9be012668592bfbf6838a115d983f9d30171669b20cafe529b9",
+      "status": "complete",
+      "evidence": "4478f6fcfd2fc9be012668592bfbf6838a115d983f9d30171669b20cafe529b9-29aeb86dbaa2.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/DPInstx64.exe",
+      "sha256": "c20a5d3f5be543a8e73cd25f9dbf14aa0fc4ba1fdc249ee4ff91d159d174d0ea",
+      "status": "complete",
+      "evidence": "c20a5d3f5be543a8e73cd25f9dbf14aa0fc4ba1fdc249ee4ff91d159d174d0ea-2571d7a74f5c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/x86/WdfCoInstaller01009.dll",
+      "sha256": "bb7d3c9d5390edb179154296516b5ef0be6684ff8018795518ad39d18022aab3",
+      "status": "complete",
+      "evidence": "bb7d3c9d5390edb179154296516b5ef0be6684ff8018795518ad39d18022aab3-edb5aa5067a4.json",
+      "exit_code": 0
+    },
+    {
+      "path": "Drivers/x86/winusbcoinstaller2.dll",
+      "sha256": "c3b92d5028e20de8ca386256ab93b3f6d811f837af7e9ed617745dca5513ff3a",
+      "status": "complete",
+      "evidence": "c3b92d5028e20de8ca386256ab93b3f6d811f837af7e9ed617745dca5513ff3a-670890f1f3d8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/expat.dll",
+      "sha256": "d352d38310c33bdeff494fa50119f18fa05acee94805e797f9126d126e4a93f0",
+      "status": "complete",
+      "evidence": "d352d38310c33bdeff494fa50119f18fa05acee94805e797f9126d126e4a93f0-e397baa1d2b0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/freexl.dll",
+      "sha256": "b7f42e03260614b640d24e91056ab4a6d54f7580bdd4e1319dc5b659c914adb2",
+      "status": "complete",
+      "evidence": "b7f42e03260614b640d24e91056ab4a6d54f7580bdd4e1319dc5b659c914adb2-95e46be08917.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/gdal_wrap.dll",
+      "sha256": "41d432d871095888e56161b36b560b3df1427c1606389026c7578c8545aa6bf6",
+      "status": "complete",
+      "evidence": "41d432d871095888e56161b36b560b3df1427c1606389026c7578c8545aa6bf6-b7ec13e3765b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/gdal203.dll",
+      "sha256": "df17ebd757ae16f624c3af56d042b6c38c6cfdaf92d662f89a57d6640910eb74",
+      "status": "complete",
+      "evidence": "df17ebd757ae16f624c3af56d042b6c38c6cfdaf92d662f89a57d6640910eb74-2f7b6f205caf.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/gdalconst_wrap.dll",
+      "sha256": "465ff4f10b0bc90c41417496aca758b716efc9a972384b5d3e0a46454487e06b",
+      "status": "complete",
+      "evidence": "465ff4f10b0bc90c41417496aca758b716efc9a972384b5d3e0a46454487e06b-df2b92b58d6c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/geos.dll",
+      "sha256": "9c6349e8b2cdc89b98f7a20823ea6779838f3fc025156051e618f14e58681f4b",
+      "status": "complete",
+      "evidence": "9c6349e8b2cdc89b98f7a20823ea6779838f3fc025156051e618f14e58681f4b-d28bed9c7641.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/geos_c.dll",
+      "sha256": "5a7104dc4dab81957d3d4185ee71a7846984e0f7c601c2b17794b997dfc74847",
+      "status": "complete",
+      "evidence": "5a7104dc4dab81957d3d4185ee71a7846984e0f7c601c2b17794b997dfc74847-0b4c86367974.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/iconv.dll",
+      "sha256": "2ec67483ee5bb43c69273566c36639d27259769b10e7afe4acadd969a9caf6b2",
+      "status": "complete",
+      "evidence": "2ec67483ee5bb43c69273566c36639d27259769b10e7afe4acadd969a9caf6b2-6b5fece357c0.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/libcurl.dll",
+      "sha256": "b6ae38488b6476eb1ffdd601cd8c7c905f912ad7ac82c289ba6102a6de09110e",
+      "status": "complete",
+      "evidence": "b6ae38488b6476eb1ffdd601cd8c7c905f912ad7ac82c289ba6102a6de09110e-04fa5a72250d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/libeay32.dll",
+      "sha256": "31488251a8252540ba12c303c2a5c39c1db89a31900507b2cfc0152b5d62bf83",
+      "status": "complete",
+      "evidence": "31488251a8252540ba12c303c2a5c39c1db89a31900507b2cfc0152b5d62bf83-533284e42947.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/libmysql.dll",
+      "sha256": "5cafbf258c98d8aeb377d260d7d73fbf4a3adfdc5800be98202eafcda9e281f1",
+      "status": "complete",
+      "evidence": "5cafbf258c98d8aeb377d260d7d73fbf4a3adfdc5800be98202eafcda9e281f1-e74d4bd07258.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/libpq.dll",
+      "sha256": "f186124e7c243570b50e81e962f983b4b71cf3b4f4b0a6ec9c0cae94531b6bea",
+      "status": "complete",
+      "evidence": "f186124e7c243570b50e81e962f983b4b71cf3b4f4b0a6ec9c0cae94531b6bea-46a2142c7363.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/libxml2.dll",
+      "sha256": "82362a3844656790e901878e60dbe6ea26f8ebf11769930f2818f9974df5a0f5",
+      "status": "complete",
+      "evidence": "82362a3844656790e901878e60dbe6ea26f8ebf11769930f2818f9974df5a0f5-3a1cd8847644.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/msvcp140.dll",
+      "sha256": "be2ef4f6d540d0ac5fddd556dcb6bfaf6cb6288679e4d64882d625ff35f173aa",
+      "status": "complete",
+      "evidence": "be2ef4f6d540d0ac5fddd556dcb6bfaf6cb6288679e4d64882d625ff35f173aa-79dd5478adea.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/ogr_wrap.dll",
+      "sha256": "c6837ea97c4d9e19ee33d2d3edaad2e68229626abac289a8e612c26bdb9a1656",
+      "status": "complete",
+      "evidence": "c6837ea97c4d9e19ee33d2d3edaad2e68229626abac289a8e612c26bdb9a1656-7ad5e36ee145.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/openjp2.dll",
+      "sha256": "4ca6a687f143523c3e5e1bd9bc8be2ce8b21d48c9ab3861f2484ac06b52a3073",
+      "status": "complete",
+      "evidence": "4ca6a687f143523c3e5e1bd9bc8be2ce8b21d48c9ab3861f2484ac06b52a3073-777c24e9d400.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/osr_wrap.dll",
+      "sha256": "caade96331142c58d8adfcd5d3e804a4b89d10f171ebe13fcc387d6189dc9cf2",
+      "status": "complete",
+      "evidence": "caade96331142c58d8adfcd5d3e804a4b89d10f171ebe13fcc387d6189dc9cf2-30526f19463c.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/proj.dll",
+      "sha256": "e1e30c07a6a71e5fd5cd91452920e1a70ef8aef61090bac545baceee1441e8a7",
+      "status": "complete",
+      "evidence": "e1e30c07a6a71e5fd5cd91452920e1a70ef8aef61090bac545baceee1441e8a7-7cc634b3c10b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/spatialite.dll",
+      "sha256": "0e3d5e722d5187eff7ea1baa879f27c0a375c03ff4b13dc81925e89c5cf5d764",
+      "status": "complete",
+      "evidence": "0e3d5e722d5187eff7ea1baa879f27c0a375c03ff4b13dc81925e89c5cf5d764-c2fc7498ebfc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/sqlite3.dll",
+      "sha256": "81432a0d658122a398b6342850d8b0130c4eef36c576ec7ebffa8d4753b0ec25",
+      "status": "complete",
+      "evidence": "81432a0d658122a398b6342850d8b0130c4eef36c576ec7ebffa8d4753b0ec25-0265afc73fbc.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/ssleay32.dll",
+      "sha256": "ef9d893a2f26656cfd7887fc81ddedd7b4bffa1e20ccb53d75ecf2493dc39d29",
+      "status": "complete",
+      "evidence": "ef9d893a2f26656cfd7887fc81ddedd7b4bffa1e20ccb53d75ecf2493dc39d29-6e7a97cf48e6.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/vcruntime140.dll",
+      "sha256": "d58e3ff10fd96a22a8e6d2fd76146a282cc45ccfaf2301257e76e7c2771cbd41",
+      "status": "complete",
+      "evidence": "d58e3ff10fd96a22a8e6d2fd76146a282cc45ccfaf2301257e76e7c2771cbd41-d7cc90dacf7b.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/zlib1.dll",
+      "sha256": "cc7c0a9ab68afd006a91d2e927fc6a0d47ca2c21a2bf7428f046d79d8d746639",
+      "status": "complete",
+      "evidence": "cc7c0a9ab68afd006a91d2e927fc6a0d47ca2c21a2bf7428f046d79d8d746639-5651d18cc9fe.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x64/xerces-c_3_2.dll",
+      "sha256": "955f5e7341ab27d65d5b931fad418348f5027c9cca068996e385df465a7e9cef",
+      "status": "complete",
+      "evidence": "955f5e7341ab27d65d5b931fad418348f5027c9cca068996e385df465a7e9cef-bcdf9bcc86d8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/expat.dll",
+      "sha256": "4bb8025fdb66bc586035dd832cbbb5bf17653ce3d58162e7bbad3daa5fef1396",
+      "status": "complete",
+      "evidence": "4bb8025fdb66bc586035dd832cbbb5bf17653ce3d58162e7bbad3daa5fef1396-4b3d1aa24d10.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/freexl.dll",
+      "sha256": "da3535cae2ca1cd71c2d327e1097f6ba25a76c71b4ed01aa54376bf91db16076",
+      "status": "complete",
+      "evidence": "da3535cae2ca1cd71c2d327e1097f6ba25a76c71b4ed01aa54376bf91db16076-7e69b2f93595.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/gdal_wrap.dll",
+      "sha256": "1631e37e2ff43eaef9917b3031c55a6ab74a03f87fff3a9d9b89072d6ec916fb",
+      "status": "complete",
+      "evidence": "1631e37e2ff43eaef9917b3031c55a6ab74a03f87fff3a9d9b89072d6ec916fb-622fe4a5669d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/gdal203.dll",
+      "sha256": "5f12cd952a4162de0cf8557c994c31235561489dda3d25f8be77f1a3d781d36a",
+      "status": "complete",
+      "evidence": "5f12cd952a4162de0cf8557c994c31235561489dda3d25f8be77f1a3d781d36a-fec46b8d78c8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/gdalconst_wrap.dll",
+      "sha256": "a770bc328b11cc1073b77a33d7397bca776396053659cdd92998063173677399",
+      "status": "complete",
+      "evidence": "a770bc328b11cc1073b77a33d7397bca776396053659cdd92998063173677399-40cb374e9ab7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/geos.dll",
+      "sha256": "e31ac4131a6f2ae487d21b630f7e79832276dcf36b730982fd0f3014a2a238fe",
+      "status": "complete",
+      "evidence": "e31ac4131a6f2ae487d21b630f7e79832276dcf36b730982fd0f3014a2a238fe-237727f775db.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/geos_c.dll",
+      "sha256": "47aab7a58e989afafd7fc6644f16192aeee966faaf6254395f09aa1f38828841",
+      "status": "complete",
+      "evidence": "47aab7a58e989afafd7fc6644f16192aeee966faaf6254395f09aa1f38828841-9ec1f9df7050.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/iconv.dll",
+      "sha256": "cc24ad2e2af27b4f0afc9f677e8b71b9eff8f9f9272d172c846639219ea458bb",
+      "status": "complete",
+      "evidence": "cc24ad2e2af27b4f0afc9f677e8b71b9eff8f9f9272d172c846639219ea458bb-145eefd1d99d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/libcurl.dll",
+      "sha256": "1a491f54009f0c480e889a25f4c359d91d44fc67c7ebfff4f458bb6d56a8d9ae",
+      "status": "complete",
+      "evidence": "1a491f54009f0c480e889a25f4c359d91d44fc67c7ebfff4f458bb6d56a8d9ae-e52c612585b8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/libeay32.dll",
+      "sha256": "7de436dfcbad2db6c5ff4ef83b339d3d5364358dcfd9b34f990ee68b53d3063c",
+      "status": "complete",
+      "evidence": "7de436dfcbad2db6c5ff4ef83b339d3d5364358dcfd9b34f990ee68b53d3063c-8e0fd40ddcfa.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/libmysql.dll",
+      "sha256": "a6303840440680eeaab820d56ce0928630928a57fb535f0703a6c50c90b2417e",
+      "status": "complete",
+      "evidence": "a6303840440680eeaab820d56ce0928630928a57fb535f0703a6c50c90b2417e-b67ea614591a.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/libpq.dll",
+      "sha256": "84d0d1b074c61f05a023a54b9039e5c82e7b89bce79a0d167a13b9476def0fa0",
+      "status": "complete",
+      "evidence": "84d0d1b074c61f05a023a54b9039e5c82e7b89bce79a0d167a13b9476def0fa0-7bddfcb19877.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/libxml2.dll",
+      "sha256": "7797006774efda6dda52fdec7cfcb1cd5e7390afdcc41bfba3e1acc79740930a",
+      "status": "complete",
+      "evidence": "7797006774efda6dda52fdec7cfcb1cd5e7390afdcc41bfba3e1acc79740930a-864bc05fc509.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/msvcp140.dll",
+      "sha256": "334e69ac9367f708ce601a6f490ff227d6c20636da5222f148b25831d22e13d4",
+      "status": "complete",
+      "evidence": "334e69ac9367f708ce601a6f490ff227d6c20636da5222f148b25831d22e13d4-f3701ae99091.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/ogr_wrap.dll",
+      "sha256": "2c21beb5bf1c0b3e5735e40182225a72f358823091ee647fa0c2ff2b047bbe49",
+      "status": "complete",
+      "evidence": "2c21beb5bf1c0b3e5735e40182225a72f358823091ee647fa0c2ff2b047bbe49-8e9fe02285eb.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/openjp2.dll",
+      "sha256": "74c86764254e6fa62398a68bc74b4940417b012af126c6865fe0398c4f8621d9",
+      "status": "complete",
+      "evidence": "74c86764254e6fa62398a68bc74b4940417b012af126c6865fe0398c4f8621d9-2f4b5c6bfa60.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/osr_wrap.dll",
+      "sha256": "0c49012fe0c14ebe56b6d7c731bc1aeb37f13a3ba2cb21536d2535d804b9d119",
+      "status": "complete",
+      "evidence": "0c49012fe0c14ebe56b6d7c731bc1aeb37f13a3ba2cb21536d2535d804b9d119-d63a99e37d5d.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/proj.dll",
+      "sha256": "37611d6396ea2ceea251465d3782889f7bcb60c440062ae2fd1147c1af91d4b2",
+      "status": "complete",
+      "evidence": "37611d6396ea2ceea251465d3782889f7bcb60c440062ae2fd1147c1af91d4b2-34f3cebdde4e.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/spatialite.dll",
+      "sha256": "55e107cb30169b600a27ce92a71f328e3ab5d6e8e73b7c0000a9fca96a3a770b",
+      "status": "complete",
+      "evidence": "55e107cb30169b600a27ce92a71f328e3ab5d6e8e73b7c0000a9fca96a3a770b-8422e4749a85.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/sqlite3.dll",
+      "sha256": "e3553ae3754ba294f560d1060e09701ee96b3522d1ddec923b44dd1bb1eaf39a",
+      "status": "complete",
+      "evidence": "e3553ae3754ba294f560d1060e09701ee96b3522d1ddec923b44dd1bb1eaf39a-8f0c4a5df282.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/ssleay32.dll",
+      "sha256": "2fa0c5645eefe78af2bd2f9c9d2cdc2eb26d6066f6eee341f50362969295a4ba",
+      "status": "complete",
+      "evidence": "2fa0c5645eefe78af2bd2f9c9d2cdc2eb26d6066f6eee341f50362969295a4ba-63234dca79ec.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/vcruntime140.dll",
+      "sha256": "c40bb03199a2054dabfc7a8e01d6098e91de7193619effbd0f142a7bf031c14d",
+      "status": "complete",
+      "evidence": "c40bb03199a2054dabfc7a8e01d6098e91de7193619effbd0f142a7bf031c14d-eb995aa53cb1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/zlib1.dll",
+      "sha256": "775a07dc265b55fea5ab6bcb269a09d36cb08b7d0d34c6046ea2be293d24c721",
+      "status": "complete",
+      "evidence": "775a07dc265b55fea5ab6bcb269a09d36cb08b7d0d34c6046ea2be293d24c721-0ee05ff933ff.json",
+      "exit_code": 0
+    },
+    {
+      "path": "gdal/x86/xerces-c_3_2.dll",
+      "sha256": "67fb2214006eb1cfc45889bb25958de518a34f46336ee7767865c326682e55e5",
+      "status": "complete",
+      "evidence": "67fb2214006eb1cfc45889bb25958de518a34f46336ee7767865c326682e55e5-e27c1f8baa37.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-10.0-amd64.exe",
+      "sha256": "b2e32b3fa44b3a9a8fdfa906627355f6f48b4821929f9bce5ded2d07894361d4",
+      "status": "complete",
+      "evidence": "b2e32b3fa44b3a9a8fdfa906627355f6f48b4821929f9bce5ded2d07894361d4-c8ea5319a607.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-10.0.exe",
+      "sha256": "1aa3927c7985386d42759656665c7b422ee226df16a19446af6d9a6613b8ae9b",
+      "status": "complete",
+      "evidence": "1aa3927c7985386d42759656665c7b422ee226df16a19446af6d9a6613b8ae9b-d0ab551f2b34.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-6.0.exe",
+      "sha256": "751941b4e09898c31791efeb5f90fc7367c89831d4a98637ed505e40763e287b",
+      "status": "complete",
+      "evidence": "751941b4e09898c31791efeb5f90fc7367c89831d4a98637ed505e40763e287b-afd358af78ea.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-7.1.exe",
+      "sha256": "4a3387a54eeca83f3a8ff1f5f282f7966c9e7bfe159c8eb45444cab01b3e167e",
+      "status": "complete",
+      "evidence": "4a3387a54eeca83f3a8ff1f5f282f7966c9e7bfe159c8eb45444cab01b3e167e-d990ea02c8f1.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-8.0.exe",
+      "sha256": "e362670f93cdd952335b1a41e5529f184f2022ea4d41817a9781b150b062511c",
+      "status": "complete",
+      "evidence": "e362670f93cdd952335b1a41e5529f184f2022ea4d41817a9781b150b062511c-9ab7c3a6e193.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-9.0-amd64.exe",
+      "sha256": "84fe7824717bb55d7f32c7487e37012a1bc6cd4c8c0202be4bfb07e770f8dc51",
+      "status": "complete",
+      "evidence": "84fe7824717bb55d7f32c7487e37012a1bc6cd4c8c0202be4bfb07e770f8dc51-8a31125232e7.json",
+      "exit_code": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-9.0.exe",
+      "sha256": "13b98844b2fa4a39a4d8ebb414fc79450d5ab4f0c8f5141ac06d40b2a0431ea4",
+      "status": "complete",
+      "evidence": "13b98844b2fa4a39a4d8ebb414fc79450d5ab4f0c8f5141ac06d40b2a0431ea4-8cea95d50bf8.json",
+      "exit_code": 0
+    },
+    {
+      "path": "libusb-1.0.dll",
+      "sha256": "d4e5db4fad8bef7201dc5a4a71ca997e6dccc9da25e8a988d4be63b13a02208d",
+      "status": "complete",
+      "evidence": "d4e5db4fad8bef7201dc5a4a71ca997e6dccc9da25e8a988d4be63b13a02208d-facb7f7c3640.json",
+      "exit_code": 0
+    },
+    {
+      "path": "simpleble-c.dll",
+      "sha256": "01aaf090b3b89139d5325b1f8b280a0cd15c5b8f85493e33bf4a0d5f8065e985",
+      "status": "complete",
+      "evidence": "01aaf090b3b89139d5325b1f8b280a0cd15c5b8f85493e33bf4a0d5f8065e985-974d973fff04.json",
+      "exit_code": 0
+    },
+    {
+      "path": "simpleble.dll",
+      "sha256": "633fe9f757376544c57ab982d5ca139571d2a6a1ee6659441a90ab36491b16a7",
+      "status": "complete",
+      "evidence": "633fe9f757376544c57ab982d5ca139571d2a6a1ee6659441a90ab36491b16a7-f55fc0cbc066.json",
+      "exit_code": 0
+    },
+    {
+      "path": "x64/libSkiaSharp.dll",
+      "sha256": "2ca940b7c4621ecd27d2f07c5f46fafa0375f493692cd4e6e1e66c07fbc8109a",
+      "status": "complete",
+      "evidence": "2ca940b7c4621ecd27d2f07c5f46fafa0375f493692cd4e6e1e66c07fbc8109a-aee67383b4bf.json",
+      "exit_code": 0
+    },
+    {
+      "path": "x86/libSkiaSharp.dll",
+      "sha256": "ef408a6d691acca4428926c58333ebe2a7358b31fc1ded55124abcd969fab925",
+      "status": "complete",
+      "evidence": "ef408a6d691acca4428926c58333ebe2a7358b31fc1ded55124abcd969fab925-b6c1e149f403.json",
+      "exit_code": 0
+    }
+  ]
+}

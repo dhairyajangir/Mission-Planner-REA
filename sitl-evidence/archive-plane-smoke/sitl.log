@@ -1,0 +1,20 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9605
+Using \clock topic for DDS timing: disabled
+bind port 6360 for SERIAL0
+SERIAL0 on TCP port 6360
+Waiting for connection ....
+Connection on serial port 6360
+Loaded defaults from @ROMFS/models/plane.parm
+Smoothing reset at 0.001
+bind port 6362 for SERIAL1
+SERIAL1 on TCP port 6362
+bind port 6363 for SERIAL2
+SERIAL2 on TCP port 6363
+validate_structures:546: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+Closed connection on SERIAL0
+Exitting

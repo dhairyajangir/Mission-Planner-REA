@@ -1,0 +1,24 @@
+{
+  "scope": "Disposable Copter SITL; drop all MAVFTP write requests",
+  "case": "fence_mavftp_drop_writes",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "dropped_ftp_writes": 30,
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "de74dd40477d509b194c218e7362c30a47db5e638f17abed2a97cb4a22358078",
+    "to_client_input.bin": "2215d695fd81a94a1721570c019df4f037b9fe56eda8aaf7510306447cb3e0e7",
+    "to_client_output.bin": "2215d695fd81a94a1721570c019df4f037b9fe56eda8aaf7510306447cb3e0e7",
+    "to_sitl_input.bin": "8ebb024caffdb9e51c0cd5ec6a51b4e6cfcc4a11889dd5a9b6b49742c6ad2217",
+    "to_sitl_output.bin": "f9511623f906deefa7dded6c2aae5cc61c3410623c2b073b32f6bf8a3ab530ec"
+  }
+}

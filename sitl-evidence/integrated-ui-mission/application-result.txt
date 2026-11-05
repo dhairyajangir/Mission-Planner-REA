@@ -1,0 +1,4 @@
+scope=modified app, plugin-disabled, file-spool transport, local SITL
+open=True
+upload_results=MAV_MISSION_ACCEPTED,MAV_MISSION_ACCEPTED
+mission_count=2

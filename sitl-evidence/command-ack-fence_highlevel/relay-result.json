@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; typed mission and fence roundtrip; no deliberate loss",
+  "case": "fence_highlevel",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7490,
+  "proxy_port": 7491,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "7ec90b1cdc45185f6967ee5de834febb8b3faec587f82be9fbb3f08224d7b336",
+    "to_client_output.bin": "7ec90b1cdc45185f6967ee5de834febb8b3faec587f82be9fbb3f08224d7b336",
+    "to_sitl_input.bin": "d1d392e0394ab63de7c19595cf2ebaf5b09307cf8657dc34897d52a8c27a497c",
+    "to_sitl_output.bin": "d1d392e0394ab63de7c19595cf2ebaf5b09307cf8657dc34897d52a8c27a497c"
+  }
+}

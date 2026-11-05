@@ -1,0 +1,49 @@
+{
+  "scope": "Original tracker string setter, in-memory capture",
+  "capture_sha256": "65b3fef7549e11be73223fdb64e3420e7e960e10a23240d827d1a03132165363",
+  "bytes": 69,
+  "frames": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 176,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 2.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 2,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "log_lines": [
+    "INVALID_BYTES=0",
+    "VALID_BYTES=69"
+  ]
+}

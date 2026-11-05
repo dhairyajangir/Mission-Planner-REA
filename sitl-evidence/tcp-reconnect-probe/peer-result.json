@@ -1,0 +1,12 @@
+{
+  "scope": "Synthetic local TCP peer; controlled FIN and explicit reconnect; no vehicle",
+  "events": [
+    "first_accept",
+    "first_received=58",
+    "first_fin_sent",
+    "first_client_eof",
+    "second_accept",
+    "second_client_eof"
+  ],
+  "errors": []
+}

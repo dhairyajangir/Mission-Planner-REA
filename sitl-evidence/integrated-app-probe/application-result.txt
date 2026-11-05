@@ -1,0 +1,4 @@
+scope=isolated Mission Planner data-path test copy, local SITL
+open=False
+system=0
+component=0

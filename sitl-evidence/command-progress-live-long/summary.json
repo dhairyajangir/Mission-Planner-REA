@@ -1,0 +1,87 @@
+{
+  "scope": "Original library and disposable Copter SITL; relay inserts unsigned synthetic progress ACK",
+  "form": "long",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; relay inserts one IN_PROGRESS ACK before the real ACK",
+    "case": "inject_progress",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7090,
+    "proxy_port": 7091,
+    "requests": [
+      {
+        "confirmation": 0,
+        "target": [
+          1,
+          1
+        ]
+      }
+    ],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "injected_acks": 1,
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "injected_ack.bin": "efed3e99b95027bebb77a81cdec68c9acfe4ad833c3c8b08a6b45ca849a4372f",
+      "original_ack.bin": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734",
+      "to_client_input.bin": "755da4d25a0c1da40e46a03ae6e6912659d6092cd8e7e730ee70f3ad05300776",
+      "to_client_output.bin": "29ca5fdaef2a8ff01370e39568092af929bb548a68c530d6cd599e0e7cbd0506",
+      "to_sitl_input.bin": "e7e9b565124acba24e52bcac085f996ec03cc02e3197786f2477cd344f7a464e",
+      "to_sitl_output.bin": "e7e9b565124acba24e52bcac085f996ec03cc02e3197786f2477cd344f7a464e"
+    }
+  },
+  "original": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 0,
+    "target": [
+      255,
+      190
+    ],
+    "seq": 56
+  },
+  "injected": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 5,
+    "target": [
+      255,
+      190
+    ],
+    "seq": 56
+  },
+  "byte_differences": [
+    12,
+    20,
+    21
+  ],
+  "requests": [
+    {
+      "type": "COMMAND_LONG",
+      "source": [
+        255,
+        190
+      ],
+      "target": [
+        1,
+        1
+      ],
+      "param1": 30.0
+    }
+  ],
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "FORM=long RESULT=True"
+  ]
+}

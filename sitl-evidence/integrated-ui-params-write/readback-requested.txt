@@ -1,0 +1,1 @@
+read and restore disposable simulator value

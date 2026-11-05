@@ -1,0 +1,5 @@
+{
+  "outcome": "probe timeout after 90 seconds; wrapper did not persist stdout",
+  "simulator": "terminated after client close",
+  "note": "Original packet captures retained; cause unestablished"
+}

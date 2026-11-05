@@ -1,0 +1,26 @@
+{
+  "case": "mavproxy_mission_normal",
+  "scope": "Pinned MAVProxy mission upload and separate SERIAL1 client; disposable disarmed Copter SITL",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "commands": [
+    "wp load '/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_mission_normal/input.waypoints'"
+  ],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/research-tools/mavproxy-mission-probe.py\", line 33, in <module>\n    else:raise TimeoutError('MAVProxy did not report sending mission')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: MAVProxy did not report sending mission\n"
+  ],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7551",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--cmd=set requireexit true",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_mission_normal"
+  ],
+  "artifacts": {
+    "input.waypoints": "37a45aafd7a55cf697e0cfdeca99d56d1ad0c86db42efd0387c602dad9c58fbf",
+    "mavproxy.log": "dd01b30df9eec8ab824919275f94ab7612bd842ee5b6e460d7251e201033b78e"
+  }
+}

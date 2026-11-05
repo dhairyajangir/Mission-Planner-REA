@@ -1,0 +1,220 @@
+{
+  "scope": "Original library, disarmed disposable Copter SITL, controlled mode-packet loss",
+  "case": "normal",
+  "relay": {
+    "scope": "Disposable disarmed Copter SITL; relay selectively drops mode-setting messages",
+    "case": "mode_normal",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7150,
+    "proxy_port": 7151,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "mode_packets": {
+      "command_seen": 1,
+      "command_dropped": 0,
+      "legacy_seen": 2,
+      "legacy_dropped": 0
+    },
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "f40be43ac8a27f406d54e94068cb50f84e82216eddd280d67770e95c0c06a23f",
+      "to_client_output.bin": "f40be43ac8a27f406d54e94068cb50f84e82216eddd280d67770e95c0c06a23f",
+      "to_sitl_input.bin": "0695b07ca4baf35b4a90b2fe6ecd7e3d3f083a25398fee476071a4ca95285882",
+      "to_sitl_output.bin": "0695b07ca4baf35b4a90b2fe6ecd7e3d3f083a25398fee476071a4ca95285882"
+    }
+  },
+  "sent": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 176,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 4.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "delivered": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 176,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 4.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "SET_MODE",
+      "target_system": 1,
+      "base_mode": 1,
+      "custom_mode": 4,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "dropped": [],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 4,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "final_observed_mode": 4,
+  "bad_data_fragments": {
+    "uplink_input": 0,
+    "uplink_output": 0,
+    "dropped": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "INITIAL_MODE=0 ARMED=False",
+    "SET_MODE_RETURNED",
+    "FINAL_MODE=4 ARMED=False"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "scope": "Synthetic MAVLink 2 ACK target fields; original library; no vehicle",
+  "fixtures": {
+    "wrong-target-then-denied": {
+      "sha256": "87eb7a1bfbcf9be0b209eaa3b9a7b62f28e89a5c5e022d94c4e4dc915f2f4111",
+      "bytes": 44
+    },
+    "matching-denied": {
+      "sha256": "3371710c94c29c0cec014746e88bf9a495aef2432f4fb272709909afb84d0072",
+      "bytes": 22
+    },
+    "broadcast-accepted": {
+      "sha256": "c32721f26cd6ef1dd339065ca8faf831bb852bc885da836c658e76633b1cc81a",
+      "bytes": 14
+    }
+  },
+  "cases": {
+    "wrong-target-then-denied": {
+      "frames": [
+        [
+          1,
+          1,
+          510,
+          0,
+          42,
+          17
+        ],
+        [
+          1,
+          1,
+          510,
+          2,
+          255,
+          190
+        ]
+      ],
+      "result": true,
+      "remaining": 22,
+      "lines": [
+        "FORM=long CASE=wrong-target-then-denied RESULT=True REMAINING=22 GIVE=False",
+        "FORM=int CASE=wrong-target-then-denied RESULT=True REMAINING=22 GIVE=False"
+      ]
+    },
+    "matching-denied": {
+      "frames": [
+        [
+          1,
+          1,
+          510,
+          2,
+          255,
+          190
+        ]
+      ],
+      "result": false,
+      "remaining": 0,
+      "lines": [
+        "FORM=long CASE=matching-denied RESULT=False REMAINING=0 GIVE=False",
+        "FORM=int CASE=matching-denied RESULT=False REMAINING=0 GIVE=False"
+      ]
+    },
+    "broadcast-accepted": {
+      "frames": [
+        [
+          1,
+          1,
+          510,
+          0,
+          0,
+          0
+        ]
+      ],
+      "result": true,
+      "remaining": 0,
+      "lines": [
+        "FORM=long CASE=broadcast-accepted RESULT=True REMAINING=0 GIVE=False",
+        "FORM=int CASE=broadcast-accepted RESULT=True REMAINING=0 GIVE=False"
+      ]
+    }
+  }
+}

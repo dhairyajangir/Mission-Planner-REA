@@ -1,0 +1,18 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'Rover'
+Starting SITL input
+Using Irlock at port : 9615
+Using \clock topic for DDS timing: disabled
+bind port 6370 for SERIAL0
+SERIAL0 on TCP port 6370
+Waiting for connection ....
+Connection on serial port 6370
+Loaded defaults from @ROMFS/default_params/rover.parm
+bind port 6372 for SERIAL1
+SERIAL1 on TCP port 6372
+bind port 6373 for SERIAL2
+SERIAL2 on TCP port 6373
+validate_structures:546: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Closed connection on SERIAL0
+Exitting

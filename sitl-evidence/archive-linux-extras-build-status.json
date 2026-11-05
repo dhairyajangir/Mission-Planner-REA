@@ -1,0 +1,47 @@
+{
+  "temp_directory": "/tmp/ardupilot-sitl-72b23820-5ygmsuuy",
+  "commit": "72b238201f5ea3b556e3809b2ec704fcf701474a",
+  "status": "running",
+  "steps": [
+    {
+      "step": "create temporary workspace",
+      "status": "running"
+    },
+    {
+      "step": "copy verified source ZIP",
+      "status": "complete",
+      "sha256": "7edc50142718c3c98c1c679cf398ce7e258e29ec889ae65a53855b7a2bce931d"
+    },
+    {
+      "step": "extract source ZIP",
+      "status": "complete"
+    },
+    {
+      "step": "extract verified pinned dependencies",
+      "status": "complete",
+      "count": 16
+    },
+    {
+      "step": "verify copied Git revision metadata",
+      "status": "complete",
+      "head": "72b238201f5ea3b556e3809b2ec704fcf701474a"
+    },
+    {
+      "step": "configure",
+      "status": "running"
+    },
+    {
+      "step": "configure",
+      "status": "complete",
+      "log": "archive-linux-extras-configure.log"
+    },
+    {
+      "step": "build blimp",
+      "status": "running"
+    }
+  ],
+  "limitations": [
+    "Temporary source tree uses verified archives and copied Git metadata; it is not a pristine recursive Git checkout.",
+    "Compiler output is a local build, not an official release."
+  ]
+}

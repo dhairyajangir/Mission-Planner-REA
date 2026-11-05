@@ -1,0 +1,18 @@
+[
+  {
+    "file": "MissionPlanner.exe",
+    "sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "output": "MissionPlanner.exe.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  },
+  {
+    "file": "MissionPlanner.Utilities.dll",
+    "sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "output": "MissionPlanner.Utilities.dll.json",
+    "exit_code": 0,
+    "digest_matches": true,
+    "coverage": "complete"
+  }
+]

@@ -1,0 +1,265 @@
+{
+  "source_sha256": "432225014551de3a5f754ce72ed4fab0c962cfbe74474b2175d4d9639bfa827e",
+  "scope": "Message-arrival times relative to harness start, not exact fault or flight timing",
+  "checks": {
+    "gps_initially_enabled": {
+      "passed": true,
+      "value": 1.0
+    },
+    "armed": {
+      "passed": true
+    },
+    "takeoff_and_initial_fix": {
+      "passed": true,
+      "peak_relative_alt_m": 3.433,
+      "fix_type": 6
+    },
+    "gps_disabled": {
+      "passed": true,
+      "value": 0.0
+    },
+    "gps_fix_lost": {
+      "passed": true,
+      "lowest_fix_type": 1
+    },
+    "gps_reenabled": {
+      "passed": true,
+      "value": 1.0
+    },
+    "gps_fix_recovered": {
+      "passed": true,
+      "fix_type": 6
+    },
+    "guided_armed_after_recovery": {
+      "passed": true,
+      "mode": 4
+    },
+    "land_requested": {
+      "passed": true,
+      "mode": 9
+    },
+    "disarmed": {
+      "passed": true
+    }
+  },
+  "transitions": [
+    {
+      "seconds": 2.087,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 2.856,
+      "type": "STATUSTEXT",
+      "text": "Barometer 1 calibration complete"
+    },
+    {
+      "seconds": 2.856,
+      "type": "STATUSTEXT",
+      "text": "Barometer 2 calibration complete"
+    },
+    {
+      "seconds": 3.386,
+      "type": "STATUSTEXT",
+      "text": "ArduPilot Ready"
+    },
+    {
+      "seconds": 3.596,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 3.683,
+      "type": "STATUSTEXT",
+      "text": "RC7: SaveWaypoint LOW"
+    },
+    {
+      "seconds": 4.6,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 5.388,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 initialised"
+    },
+    {
+      "seconds": 5.388,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 initialised"
+    },
+    {
+      "seconds": 5.388,
+      "type": "STATUSTEXT",
+      "text": "AHRS: EKF3 active"
+    },
+    {
+      "seconds": 6.6,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 0
+    },
+    {
+      "seconds": 6.734,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 tilt alignment complete"
+    },
+    {
+      "seconds": 6.734,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 tilt alignment complete"
+    },
+    {
+      "seconds": 6.833,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 6.833,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 6.851,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 10.746,
+      "type": "STATUSTEXT",
+      "text": "GPS 1: probing for u-blox at 230400 baud"
+    },
+    {
+      "seconds": 10.763,
+      "type": "STATUSTEXT",
+      "text": "GPS 1: detected u-blox"
+    },
+    {
+      "seconds": 10.851,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 11.097,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 20.959,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 origin set"
+    },
+    {
+      "seconds": 20.985,
+      "type": "STATUSTEXT",
+      "text": "Field Elevation Set: 584m"
+    },
+    {
+      "seconds": 21.149,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 origin set"
+    },
+    {
+      "seconds": 27.108,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 27.114,
+      "type": "STATUSTEXT",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 27.389,
+      "type": "STATUSTEXT",
+      "text": "PreArm: Need Position Estimate"
+    },
+    {
+      "seconds": 35.357,
+      "type": "STATUSTEXT",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 42.556,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 is using GPS"
+    },
+    {
+      "seconds": 42.556,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 is using GPS"
+    },
+    {
+      "seconds": 42.604,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 43.361,
+      "type": "STATUSTEXT",
+      "text": "Arming motors"
+    },
+    {
+      "seconds": 43.979,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 49.032,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 MAG0 in-flight yaw alignment complete"
+    },
+    {
+      "seconds": 49.038,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 MAG0 in-flight yaw alignment complete"
+    },
+    {
+      "seconds": 49.359,
+      "type": "gps_disable_confirmed"
+    },
+    {
+      "seconds": 49.856,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 52.368,
+      "type": "gps_restore_confirmed"
+    },
+    {
+      "seconds": 52.86,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 52.984,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 63.41,
+      "type": "STATUSTEXT",
+      "text": "SIM Hit ground at 0.498794 m/s"
+    },
+    {
+      "seconds": 65.515,
+      "type": "STATUSTEXT",
+      "text": "Disarming motors"
+    },
+    {
+      "seconds": 65.982,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": false
+    }
+  ]
+}

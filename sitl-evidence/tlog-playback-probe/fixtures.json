@@ -1,0 +1,32 @@
+{
+  "source": "mission-planner-runtime\\isolated-data\\logs\\SITL\\QUADROTOR\\1\\2026-11-04 10-21-47.tlog",
+  "source_sha256": "e8282ec1e0551dfde9e384bd576001322257b432d59f41def3b9dfac958ae076",
+  "record_length": 25,
+  "frame_length": 17,
+  "files": {
+    "control.tlog": {
+      "size": 25,
+      "sha256": "e0f93933fdafb37a1e8b0fb6b0d453a64978d9ec5dbec0f69e865da1bec78670"
+    },
+    "truncated-one.tlog": {
+      "size": 24,
+      "sha256": "cf8c135090f427784a3abb2ff2df78c1d752978fe273673d3b96d65babbd04c0"
+    },
+    "truncated-four.tlog": {
+      "size": 21,
+      "sha256": "942b276a38cf6791c5dcb2d8321152fc4f2d213dbf7409d6c179eaf7bc0eff21"
+    },
+    "checksum-flipped.tlog": {
+      "size": 25,
+      "sha256": "82fd326e856e01c4ee51356afb9747072bbc2ffd679ee2ac2cf63378b610666f"
+    },
+    "zero-crc-control.tlog": {
+      "size": 25,
+      "sha256": "b426181bcfe76b873a207d9abc4f5d2fef29e0eaa3b964089129b793f5564f89"
+    },
+    "zero-crc-truncated.tlog": {
+      "size": 24,
+      "sha256": "e1340277465736bf7f93ddf2c5ea02e375342d9d3de73f50301d2b77a10b1565"
+    }
+  }
+}

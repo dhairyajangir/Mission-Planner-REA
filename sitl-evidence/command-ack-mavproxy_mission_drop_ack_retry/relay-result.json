@@ -1,0 +1,25 @@
+{
+  "scope": "Disposable Copter SITL; MAVProxy mission upload with optional dropped ACK",
+  "case": "mavproxy_mission_drop_ack_retry",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "dropped_mission_acks": 1,
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "2519c17f69f06329238dec737bff26736ec234bd376accd9795d65545ff7c267",
+    "independent-downlink.bin": "59eed2ed69cf4fe89866977482cd9e51e9cf3e0d161f29d6692e5d0eba4e49b5",
+    "to_client_input.bin": "908adc752265d7e4f5f81994ea20c26950bce977e66233a93e0da8e80300379b",
+    "to_client_output.bin": "dd6b33758295ce6a1ff3f55c9d3084374fd0bd1324e91f75e1ce3d0f695a6b95",
+    "to_sitl_input.bin": "a84b506e46fe2030b843a3fd23e8508ebf5cc3c828f848973ad77c00a1a4bba2",
+    "to_sitl_output.bin": "a84b506e46fe2030b843a3fd23e8508ebf5cc3c828f848973ad77c00a1a4bba2"
+  }
+}

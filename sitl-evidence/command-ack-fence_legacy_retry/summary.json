@@ -1,0 +1,819 @@
+{
+  "scope": "Legacy point transfer in disposable disarmed Copter SITL; no rendered UI or enforcement",
+  "relay": {
+    "scope": "Disposable Copter SITL; legacy fence points; no deliberate loss",
+    "case": "fence_legacy_retry",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7510,
+    "proxy_port": 7511,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "a682d46e59b00b049a052cd0110aa62a6214164c86b80057b669d6f5877cdb61",
+      "to_client_output.bin": "a682d46e59b00b049a052cd0110aa62a6214164c86b80057b669d6f5877cdb61",
+      "to_sitl_input.bin": "be9b17c87853b75618a263f07de3d3aa8f926d6474f9e1441e3dbc2688f2a2d6",
+      "to_sitl_output.bin": "be9b17c87853b75618a263f07de3d3aa8f926d6474f9e1441e3dbc2688f2a2d6"
+    }
+  },
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "library_hashes": {
+    "ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "mavlink": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "valuetuple": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4"
+  },
+  "probe_source_sha256": "cf034299b1aeaf90de6f5cdb77d698482ea2537b669e3049e3c501f53af45697",
+  "probe_exe_sha256": "22ae064cdc283a7e6ac725320cb36bd70068613ef0613955dc14ed2a465303d0",
+  "probe_log_sha256": "596a1b9708ac4886bb6b7e1490e451195c9f9c58506b99da3137c847af00006e",
+  "points": [
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "fetches": [
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "received": [],
+  "sets": [
+    {
+      "mavpackettype": "PARAM_SET",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_SET",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "params": [
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ENABLE",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 1.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_ACTION",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "FENCE_TOTAL",
+      "param_value": 5.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67633152,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        55,
+        50,
+        98,
+        50,
+        51,
+        56,
+        50,
+        48
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        232,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67633152,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        55,
+        50,
+        98,
+        50,
+        51,
+        56,
+        50,
+        48
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        232,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67633152,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        55,
+        50,
+        98,
+        50,
+        51,
+        56,
+        50,
+        48
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        232,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67633152,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        55,
+        50,
+        98,
+        50,
+        51,
+        56,
+        50,
+        48
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        232,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "AUTOPILOT_VERSION",
+      "capabilities": 64495,
+      "flight_sw_version": 67633152,
+      "middleware_sw_version": 0,
+      "os_sw_version": 0,
+      "board_version": 0,
+      "flight_custom_version": [
+        55,
+        50,
+        98,
+        50,
+        51,
+        56,
+        50,
+        48
+      ],
+      "middleware_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "os_custom_version": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vendor_id": 0,
+      "product_id": 0,
+      "uid": 0,
+      "uid2": [
+        232,
+        48,
+        52,
+        99,
+        102,
+        101,
+        97,
+        53,
+        99,
+        55,
+        99,
+        102,
+        52,
+        102,
+        49,
+        102,
+        98,
+        0
+      ],
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "notices": [],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "INITIAL_ENABLE=0 TOTAL=0",
+    "SET_TOTAL=True READBACK=5",
+    "SET_ACTION_ZERO=True READBACK=0",
+    "ERROR=System.TimeoutException: Timeout on read - getFencePoint"
+  ]
+}

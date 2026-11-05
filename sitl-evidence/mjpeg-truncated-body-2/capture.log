@@ -1,0 +1,9 @@
+107 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - OK
+123 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - --frame
+123 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Type: image/jpeg
+139 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - Content-Length: 685
+139 [mjpg stream reader] DEBUG MissionPlanner.Utilities.CaptureMJPEG (null) - 
+FRAMES=0
+CLEAR_EVENTS=0
+WORKER_ALIVE_AFTER_STOP=True
+CPU_MS_DURING_STOP_WAIT=1515.625

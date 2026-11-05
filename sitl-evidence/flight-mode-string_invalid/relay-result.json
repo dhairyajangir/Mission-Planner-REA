@@ -1,0 +1,29 @@
+{
+  "scope": "Disposable disarmed Copter SITL; relay selectively drops mode-setting messages",
+  "case": "mode_string_invalid",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7220,
+  "proxy_port": 7221,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "mode_packets": {
+    "command_seen": 0,
+    "command_dropped": 0,
+    "legacy_seen": 0,
+    "legacy_dropped": 0
+  },
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "802ce164762531262636653528f4605bbb34eaa1dcec3dc1517355a46cb07867",
+    "to_client_output.bin": "802ce164762531262636653528f4605bbb34eaa1dcec3dc1517355a46cb07867",
+    "to_sitl_input.bin": "7ac83b559725a301fc447bee49e6bd4dbc52148fb7cfb5ad202330618a691bb7",
+    "to_sitl_output.bin": "7ac83b559725a301fc447bee49e6bd4dbc52148fb7cfb5ad202330618a691bb7"
+  }
+}

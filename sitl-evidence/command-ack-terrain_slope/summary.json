@@ -1,0 +1,1864 @@
+{
+  "scope": "Synthetic sloped HGT; patched Utilities; disposable SITL; no physical navigation",
+  "relay": {
+    "scope": "Disposable Copter SITL; synthetic terrain fixture; no deliberate packet loss",
+    "case": "terrain_slope",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7410,
+    "proxy_port": 7411,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "1ce88541ddf62adcec5e7873b84bd04a201899268b81a1e138476f5ba6d8e092",
+      "to_client_output.bin": "1ce88541ddf62adcec5e7873b84bd04a201899268b81a1e138476f5ba6d8e092",
+      "to_sitl_input.bin": "948e1fde5db9d6935c3b4e92c81ea60800937943aaf81c6de393a1c0b316004d",
+      "to_sitl_output.bin": "948e1fde5db9d6935c3b4e92c81ea60800937943aaf81c6de393a1c0b316004d"
+    }
+  },
+  "fixture_sha256": "e94fa1713b8ebde9e83b48273226ee5c0b913523a0be746f28d55b577ea89fcd",
+  "library_hashes": {
+    "original_ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "test_ardupilot": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "original_utilities": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "test_utilities": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022"
+  },
+  "probe_source_sha256": "5d3795eab228beeed1bfa2cd8986570a640166a841f31a49f4266dc66399aae2",
+  "probe_exe_sha256": "93a81bc4a039875773d13a0ecdbbe6dc88ceb3adba8fc90b79c971da00c83d84",
+  "probe_log_sha256": "0705a9d82e9fc062c04db1bbf1304ab4d5c7879108882ba90a477d45a70a8419",
+  "checks": [
+    {
+      "mavpackettype": "TERRAIN_CHECK",
+      "lat": -353632610,
+      "lon": 1491652300,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_CHECK",
+      "lat": -353632610,
+      "lon": 1491652300,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "mavpackettype": "REQUEST_DATA_STREAM",
+      "target_system": 1,
+      "target_component": 1,
+      "req_stream_id": 0,
+      "req_message_rate": 4,
+      "start_stop": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "REQUEST_DATA_STREAM",
+      "target_system": 1,
+      "target_component": 1,
+      "req_stream_id": 0,
+      "req_message_rate": 4,
+      "start_stop": 1,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "data": [
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 0,
+      "data": [
+        821,
+        823,
+        826,
+        829,
+        820,
+        822,
+        825,
+        828,
+        819,
+        821,
+        824,
+        827,
+        818,
+        820,
+        823,
+        826
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 1,
+      "data": [
+        831,
+        834,
+        837,
+        839,
+        830,
+        833,
+        836,
+        838,
+        829,
+        832,
+        835,
+        837,
+        828,
+        831,
+        833,
+        836
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 2,
+      "data": [
+        842,
+        845,
+        847,
+        850,
+        841,
+        844,
+        846,
+        849,
+        840,
+        842,
+        845,
+        848,
+        839,
+        841,
+        844,
+        847
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 3,
+      "data": [
+        853,
+        855,
+        858,
+        861,
+        851,
+        854,
+        857,
+        859,
+        850,
+        853,
+        856,
+        858,
+        849,
+        852,
+        855,
+        857
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 4,
+      "data": [
+        863,
+        866,
+        868,
+        871,
+        862,
+        865,
+        867,
+        870,
+        861,
+        864,
+        866,
+        869,
+        860,
+        863,
+        865,
+        868
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 5,
+      "data": [
+        874,
+        876,
+        879,
+        882,
+        873,
+        875,
+        878,
+        881,
+        872,
+        874,
+        877,
+        880,
+        870,
+        873,
+        876,
+        878
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 6,
+      "data": [
+        884,
+        887,
+        890,
+        892,
+        883,
+        886,
+        889,
+        891,
+        882,
+        885,
+        887,
+        890,
+        881,
+        884,
+        886,
+        889
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 7,
+      "data": [
+        895,
+        898,
+        900,
+        903,
+        894,
+        896,
+        899,
+        902,
+        893,
+        895,
+        898,
+        901,
+        892,
+        894,
+        897,
+        900
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 8,
+      "data": [
+        817,
+        819,
+        822,
+        824,
+        815,
+        818,
+        821,
+        823,
+        814,
+        817,
+        820,
+        822,
+        813,
+        816,
+        819,
+        821
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 9,
+      "data": [
+        827,
+        830,
+        832,
+        835,
+        826,
+        829,
+        831,
+        834,
+        825,
+        828,
+        830,
+        833,
+        824,
+        827,
+        829,
+        832
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 10,
+      "data": [
+        838,
+        840,
+        843,
+        846,
+        837,
+        839,
+        842,
+        845,
+        836,
+        838,
+        841,
+        843,
+        834,
+        837,
+        840,
+        842
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 11,
+      "data": [
+        848,
+        851,
+        854,
+        856,
+        847,
+        850,
+        852,
+        855,
+        846,
+        849,
+        851,
+        854,
+        845,
+        848,
+        850,
+        853
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 12,
+      "data": [
+        859,
+        861,
+        864,
+        867,
+        858,
+        860,
+        863,
+        866,
+        857,
+        859,
+        862,
+        865,
+        856,
+        858,
+        861,
+        864
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 13,
+      "data": [
+        869,
+        872,
+        875,
+        877,
+        868,
+        871,
+        874,
+        876,
+        867,
+        870,
+        873,
+        875,
+        866,
+        869,
+        871,
+        874
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 14,
+      "data": [
+        880,
+        883,
+        885,
+        888,
+        879,
+        882,
+        884,
+        887,
+        878,
+        880,
+        883,
+        886,
+        877,
+        879,
+        882,
+        885
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 15,
+      "data": [
+        891,
+        893,
+        896,
+        898,
+        889,
+        892,
+        895,
+        897,
+        888,
+        891,
+        894,
+        896,
+        887,
+        890,
+        893,
+        895
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 16,
+      "data": [
+        812,
+        815,
+        818,
+        820,
+        811,
+        814,
+        816,
+        819,
+        810,
+        813,
+        815,
+        818,
+        809,
+        812,
+        814,
+        817
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 17,
+      "data": [
+        823,
+        825,
+        828,
+        831,
+        822,
+        824,
+        827,
+        830,
+        821,
+        823,
+        826,
+        829,
+        820,
+        822,
+        825,
+        827
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 18,
+      "data": [
+        833,
+        836,
+        839,
+        841,
+        832,
+        835,
+        838,
+        840,
+        831,
+        834,
+        837,
+        839,
+        830,
+        833,
+        835,
+        838
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 19,
+      "data": [
+        844,
+        847,
+        849,
+        852,
+        843,
+        846,
+        848,
+        851,
+        842,
+        844,
+        847,
+        850,
+        841,
+        843,
+        846,
+        849
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 20,
+      "data": [
+        855,
+        857,
+        860,
+        862,
+        853,
+        856,
+        859,
+        861,
+        852,
+        855,
+        858,
+        860,
+        851,
+        854,
+        857,
+        859
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 21,
+      "data": [
+        865,
+        868,
+        870,
+        873,
+        864,
+        867,
+        869,
+        872,
+        863,
+        866,
+        868,
+        871,
+        862,
+        865,
+        867,
+        870
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 22,
+      "data": [
+        876,
+        878,
+        881,
+        884,
+        875,
+        877,
+        880,
+        883,
+        874,
+        876,
+        879,
+        881,
+        872,
+        875,
+        878,
+        880
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 23,
+      "data": [
+        886,
+        889,
+        892,
+        894,
+        885,
+        888,
+        890,
+        893,
+        884,
+        887,
+        889,
+        892,
+        883,
+        886,
+        888,
+        891
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 24,
+      "data": [
+        808,
+        811,
+        813,
+        816,
+        807,
+        809,
+        812,
+        815,
+        806,
+        808,
+        811,
+        814,
+        805,
+        807,
+        810,
+        813
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 25,
+      "data": [
+        818,
+        821,
+        824,
+        826,
+        817,
+        820,
+        823,
+        825,
+        816,
+        819,
+        822,
+        824,
+        815,
+        818,
+        821,
+        823
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 26,
+      "data": [
+        829,
+        832,
+        834,
+        837,
+        828,
+        831,
+        833,
+        836,
+        827,
+        830,
+        832,
+        835,
+        826,
+        828,
+        831,
+        834
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 27,
+      "data": [
+        840,
+        842,
+        845,
+        848,
+        839,
+        841,
+        844,
+        846,
+        837,
+        840,
+        843,
+        845,
+        836,
+        839,
+        842,
+        844
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 28,
+      "data": [
+        850,
+        853,
+        855,
+        858,
+        849,
+        852,
+        854,
+        857,
+        848,
+        851,
+        853,
+        856,
+        847,
+        850,
+        852,
+        855
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 29,
+      "data": [
+        861,
+        863,
+        866,
+        869,
+        860,
+        862,
+        865,
+        868,
+        859,
+        861,
+        864,
+        867,
+        858,
+        860,
+        863,
+        865
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 30,
+      "data": [
+        871,
+        874,
+        877,
+        879,
+        870,
+        873,
+        876,
+        878,
+        869,
+        872,
+        874,
+        877,
+        868,
+        871,
+        873,
+        876
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 31,
+      "data": [
+        882,
+        885,
+        887,
+        890,
+        881,
+        883,
+        886,
+        889,
+        880,
+        882,
+        885,
+        888,
+        879,
+        881,
+        884,
+        887
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 32,
+      "data": [
+        804,
+        806,
+        809,
+        812,
+        803,
+        805,
+        808,
+        810,
+        801,
+        804,
+        807,
+        809,
+        800,
+        803,
+        806,
+        808
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 33,
+      "data": [
+        814,
+        817,
+        819,
+        822,
+        813,
+        816,
+        818,
+        821,
+        812,
+        815,
+        817,
+        820,
+        811,
+        814,
+        816,
+        819
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 34,
+      "data": [
+        825,
+        827,
+        830,
+        833,
+        824,
+        826,
+        829,
+        832,
+        823,
+        825,
+        828,
+        831,
+        822,
+        824,
+        827,
+        829
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 35,
+      "data": [
+        835,
+        838,
+        841,
+        843,
+        834,
+        837,
+        840,
+        842,
+        833,
+        836,
+        838,
+        841,
+        832,
+        835,
+        837,
+        840
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 36,
+      "data": [
+        846,
+        849,
+        851,
+        854,
+        845,
+        847,
+        850,
+        853,
+        844,
+        846,
+        849,
+        852,
+        843,
+        845,
+        848,
+        851
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 37,
+      "data": [
+        856,
+        859,
+        862,
+        864,
+        855,
+        858,
+        861,
+        863,
+        854,
+        857,
+        860,
+        862,
+        853,
+        856,
+        859,
+        861
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 38,
+      "data": [
+        867,
+        870,
+        872,
+        875,
+        866,
+        869,
+        871,
+        874,
+        865,
+        868,
+        870,
+        873,
+        864,
+        866,
+        869,
+        872
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 39,
+      "data": [
+        878,
+        880,
+        883,
+        886,
+        877,
+        879,
+        882,
+        884,
+        875,
+        878,
+        881,
+        883,
+        874,
+        877,
+        880,
+        882
+      ],
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_DATA",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "gridbit": 40,
+      "data": [
+        799,
+        802,
+        805,
+        807,
+        798,
+        801,
+        803,
+        806,
+        797,
+        800,
+        802,
+        805,
+        796,
+        799,
+        801,
+        804
+      ],
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037927935,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037927928,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037927904,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037927680,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037925888,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037919744,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037862400,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594037403648,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594035830784,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057594021150720,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057593903710208,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057593501057024,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057589742960640,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057559678189568,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72057456598974464,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REQUEST",
+      "lat": -353747690,
+      "lon": 1491548424,
+      "grid_spacing": 100,
+      "mask": 72056494526300160,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": -353632610,
+      "lon": 1491652300,
+      "spacing": 0,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 56,
+      "loaded": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 56,
+      "loaded": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 53,
+      "loaded": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 51,
+      "loaded": 5,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 48,
+      "loaded": 8,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 45,
+      "loaded": 11,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 43,
+      "loaded": 13,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 40,
+      "loaded": 16,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 37,
+      "loaded": 19,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 35,
+      "loaded": 21,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 32,
+      "loaded": 24,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 29,
+      "loaded": 27,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 27,
+      "loaded": 29,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 24,
+      "loaded": 32,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 21,
+      "loaded": 35,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 19,
+      "loaded": 37,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": 0,
+      "lon": 0,
+      "spacing": 100,
+      "terrain_height": 0.0,
+      "current_height": 0.0,
+      "pending": 16,
+      "loaded": 40,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "TERRAIN_REPORT",
+      "lat": -353632610,
+      "lon": 1491652300,
+      "spacing": 100,
+      "terrain_height": 831.994873046875,
+      "current_height": 0.0,
+      "pending": 16,
+      "loaded": 40,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "sample_comparisons": 656,
+  "max_sample_error_m": 0,
+  "swapped_axis_differences": 492,
+  "expected_home_height": 832.4652000000214,
+  "matched_home_report": {
+    "mavpackettype": "TERRAIN_REPORT",
+    "lat": -353632610,
+    "lon": 1491652300,
+    "spacing": 100,
+    "terrain_height": 831.994873046875,
+    "current_height": 0.0,
+    "pending": 16,
+    "loaded": 40,
+    "source": [
+      1,
+      1
+    ]
+  },
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "FIXTURE_SHA256=e94fa1713b8ebde9e83b48273226ee5c0b913523a0be746f28d55b577ea89fcd",
+    "REQUESTED_ALL_STREAMS_HZ=4",
+    "FIXTURE_REPORT_MATCH=True"
+  ]
+}

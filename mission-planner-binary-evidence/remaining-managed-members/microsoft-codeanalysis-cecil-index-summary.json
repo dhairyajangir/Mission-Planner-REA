@@ -1,0 +1,11 @@
+{
+  "assembly_sha256": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97",
+  "type_inventory_sha256": "265c60fddb0120782f54dd4f9d99a1b95f4a7cd56e67430d86d9d9e2a8247386",
+  "capture_sha256": "60d2086badba5031daf6fbea7950192a97e23aea59f5c699ebf9d39ce2dbcc53",
+  "database_sha256": "db4539bbee4aecebd2a5c469306217217c83d983e549228027531902cdcb9d96",
+  "counts": {
+    "methods": 16043,
+    "method_references": 46845
+  },
+  "scope": "Cecil static method definitions and method-reference IL instructions; not REA and not runtime execution"
+}

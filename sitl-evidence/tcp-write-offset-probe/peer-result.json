@@ -1,0 +1,6 @@
+{
+  "scope": "Synthetic local TCP peer; one buffer slice; no vehicle",
+  "errors": [],
+  "bytes_hex": "414243",
+  "ascii": "ABC"
+}

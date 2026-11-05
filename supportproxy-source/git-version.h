@@ -1,0 +1,1 @@
+#define GIT_VERSION 0x21ca252

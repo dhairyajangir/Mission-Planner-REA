@@ -1,0 +1,13 @@
+{
+  "assembly": "OpenTK.dll",
+  "selection": "Ext",
+  "process_exit": 0,
+  "coverage": {
+    "state": "complete",
+    "issues": []
+  },
+  "types": 7,
+  "methods": 6044,
+  "capture_sha256": "49b8ae088e46cac3dc7ee8b240a426e39706191a2d9c7473962b80f8271cdbce",
+  "tool_modification": "../rea-raised-budget-modification.json"
+}

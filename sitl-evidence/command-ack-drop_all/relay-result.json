@@ -1,0 +1,52 @@
+{
+  "scope": "Disposable source-built Copter SITL; read-only interval request; targeted downlink ACK loss",
+  "case": "drop_all",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7020,
+  "proxy_port": 7021,
+  "requests": [
+    {
+      "confirmation": 0,
+      "target": [
+        1,
+        1
+      ]
+    },
+    {
+      "confirmation": 1,
+      "target": [
+        1,
+        1
+      ]
+    },
+    {
+      "confirmation": 2,
+      "target": [
+        1,
+        1
+      ]
+    },
+    {
+      "confirmation": 3,
+      "target": [
+        1,
+        1
+      ]
+    }
+  ],
+  "dropped_acks": 4,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "cce2d26f02d41d4db15645a6c44a7f9afe7512d06522f4f224a4a12ed31414d3",
+    "to_client_input.bin": "134929e4401e6e7272fed7bd9437c72d3cc16cdbea80ff24e06b165ba80e8ceb",
+    "to_client_output.bin": "f2711c78660c9f939a83d0d50cf4e7584dbf5a4ce07ed4d45d7d84a57b0a8d0a",
+    "to_sitl_input.bin": "9e46f6919c3703a881a9a653f17e03b7593bd9db820e0ae19f34dd849364b9da",
+    "to_sitl_output.bin": "9e46f6919c3703a881a9a653f17e03b7593bd9db820e0ae19f34dd849364b9da"
+  }
+}

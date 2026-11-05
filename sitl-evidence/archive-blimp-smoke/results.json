@@ -1,0 +1,37 @@
+{
+  "scope": "ArduPilot SITL, MAVLink client; Mission Planner not exercised",
+  "binary": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built-variants/blimp",
+  "binary_sha256": "740ebf25ff675ed85f93e9cf803db8b80d3312f873faf711bc40a60ed961395c",
+  "model": "blimp",
+  "checks": {
+    "heartbeat": {
+      "passed": true,
+      "system": 1,
+      "component": 0,
+      "type": 7,
+      "autopilot": 3
+    },
+    "ATTITUDE": {
+      "passed": true
+    },
+    "GLOBAL_POSITION_INT": {
+      "passed": true
+    },
+    "SYS_STATUS": {
+      "passed": true
+    },
+    "parameter_read": {
+      "passed": true,
+      "name": "LOG_DISARMED",
+      "value": 0.0
+    },
+    "mission_list": {
+      "passed": true,
+      "count": 0
+    }
+  },
+  "errors": [],
+  "port": 6560,
+  "process_exit_code": 0,
+  "passed": true
+}

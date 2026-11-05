@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "assemblies": 260,
+    "references": 1063,
+    "references_no_exact_candidate": 661,
+    "references_one_exact_candidate": 402,
+    "references_multiple_exact_candidates": 0,
+    "references_no_exact_but_same_name": 71,
+    "candidate_edges": 402
+  },
+  "sqlite_sha256": "c023bb4bced7f49c4755c6f584dd83ddb8bb7095097dd38ea800f4989d80213e",
+  "manifest_sha256": "db15253fb5f5a46cdebe7f4fad066b33e8d148cd5f17003f1bbb096e39c057fe",
+  "limitations": [
+    "Matches use declared name, version, culture and public-key token only.",
+    "No CLR binding, redirects, probing paths, native or dynamically loaded dependencies were resolved.",
+    "A missing exact candidate can be a framework assembly, an external dependency, or another version."
+  ]
+}

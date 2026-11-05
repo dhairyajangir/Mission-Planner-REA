@@ -1,0 +1,7 @@
+AcceptedFixture:Init
+RejectInitFixture:Init
+RejectLoadedFixture:Init
+ThrowInitFixture:Init
+AcceptedFixture:Loaded
+RejectLoadedFixture:Loaded
+AcceptedFixture:Exit

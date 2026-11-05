@@ -1,0 +1,173 @@
+{
+  "scope": "Unrendered BackstageView disposal; patched Utilities; worker disarm with message pump; disposable SITL",
+  "relay": {
+    "scope": "Disposable Copter SITL; armed-state calibration rejection; no deliberate packet loss",
+    "case": "calibration_page_close_retry",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7370,
+    "proxy_port": 7371,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "33f06b86b64096a9daecbf4434d7c757e1da9f3490759fecb087c0af23731d6b",
+      "to_client_output.bin": "33f06b86b64096a9daecbf4434d7c757e1da9f3490759fecb087c0af23731d6b",
+      "to_sitl_input.bin": "f61315f61ca5a3a4ce3a65ae9e446761de1fa1e8949a1a590a9c70a6005ea3bd",
+      "to_sitl_output.bin": "f61315f61ca5a3a4ce3a65ae9e446761de1fa1e8949a1a590a9c70a6005ea3bd"
+    }
+  },
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 2989.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "verified_probe_lines": [
+    "ARMED_HEARTBEAT=True",
+    "SUBSCRIPTIONS_BEFORE_DEACTIVATE=2",
+    "AFTER_DEACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "SAME_CONTROL=True",
+    "AFTER_REACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "AFTER_RESTART_ACTIVE=True BUTTON_TEXT=Click when Done SUBSCRIPTIONS=4",
+    "RESTART_ACK_RESULT=4",
+    "DISARM_RETURN=True",
+    "AFTER_CLOSE_DISPOSED=True SUBSCRIPTIONS=4"
+  ],
+  "probe_exit": 0,
+  "library_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "main_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "controls_sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+  "utilities_sha256": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022",
+  "probe_source_sha256": "acbfe7b107e38eca6b7118af093cb4bbd689db328cb8f83c8847bf9ef289dbc2",
+  "probe_exe_sha256": "c766baa30ae8490d5e1a057cac0d74fa092bf5c07d55010a135f4010225fb60a",
+  "log_sha256": "7cd51ddb30ac27e14bee437ff456e17c90927fb30d02e3f34d664e98854c8cc0"
+}

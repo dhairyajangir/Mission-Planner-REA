@@ -1,0 +1,21 @@
+{
+  "source_sha256": "e0f93933fdafb37a1e8b0fb6b0d453a64978d9ec5dbec0f69e865da1bec78670",
+  "files": {
+    "two-valid.tlog": {
+      "size": 50,
+      "sha256": "e5ca2b86b934084c7b959c0430aaf4ddf01df170e96952f900e2a60d52508010"
+    },
+    "bad-then-valid.tlog": {
+      "size": 50,
+      "sha256": "b9135eb3c12d11fdee166d600d3d778e75c61f098767ba3ffb55f2a5323fc091"
+    },
+    "noise-before-frame.tlog": {
+      "size": 53,
+      "sha256": "135e3aa2d8614b40a6311de4cfea9aa8140e12e7a82963f25e7b85ac80f5e7fd"
+    },
+    "noise-to-eof.tlog": {
+      "size": 11,
+      "sha256": "fb517ba1576fce83001a3fcd6d076a4743305e739e375e21d6cf1bfe8c5194e6"
+    }
+  }
+}

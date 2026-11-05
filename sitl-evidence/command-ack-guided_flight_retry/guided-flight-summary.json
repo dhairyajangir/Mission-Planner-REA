@@ -1,0 +1,53 @@
+{
+  "scope": "disposable source-built Copter SITL; original Mission Planner library; no UI or physical aircraft",
+  "target": {
+    "mavpackettype": "SET_POSITION_TARGET_GLOBAL_INT",
+    "time_boot_ms": 0,
+    "target_system": 1,
+    "target_component": 1,
+    "coordinate_frame": 6,
+    "type_mask": 65016,
+    "lat_int": -353631809,
+    "lon_int": 1491652298,
+    "alt": 5.0,
+    "vx": 0.0,
+    "vy": 0.0,
+    "vz": 0.0,
+    "afx": 0.0,
+    "afy": 0.0,
+    "afz": 0.0,
+    "yaw": 0.0,
+    "yaw_rate": 0.0
+  },
+  "logged_position_before_target": [
+    -35.3632609,
+    149.1652298,
+    3.771
+  ],
+  "closest_airborne_position": {
+    "mavpackettype": "GLOBAL_POSITION_INT",
+    "time_boot_ms": 69537,
+    "lat": -353631819,
+    "lon": 1491652299,
+    "alt": 588970,
+    "relative_alt": 4890,
+    "vx": 109,
+    "vy": 0,
+    "vz": 21,
+    "hdg": 4
+  },
+  "closest_airborne_distance_m": 0.11168954789452869,
+  "peak_relative_altitude_m": 5.278,
+  "final_heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 3,
+    "base_mode": 89,
+    "custom_mode": 9,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "outbound_sha256": "f8ba8a77606e6f9ac0f8b60b1d288f761d4fe0280c491f7268ed50c2e552a0ce",
+  "inbound_sha256": "1106087e81905b5ceb66db990e0bc98e0486f2ab8d1f1c723e40393605567011",
+  "probe_exit": 0
+}

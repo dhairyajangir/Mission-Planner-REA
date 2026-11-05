@@ -1,0 +1,369 @@
+{
+  "groups": {
+    "Accelerometer-Calibration-Trace.md": {
+      "files": 1,
+      "bytes": 14604
+    },
+    "ArduPilot-Organization-Inventory.md": {
+      "files": 1,
+      "bytes": 11525
+    },
+    "ArduPilot-Scripting-Trace.md": {
+      "files": 1,
+      "bytes": 4561
+    },
+    "ArduPilot-Source-Map.md": {
+      "files": 1,
+      "bytes": 9272
+    },
+    "Command-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 11181
+    },
+    "Connection-Telemetry-Trace.md": {
+      "files": 1,
+      "bytes": 24221
+    },
+    "Estimator-Trace.md": {
+      "files": 1,
+      "bytes": 4529
+    },
+    "Fence-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 15503
+    },
+    "Firmware-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 6740
+    },
+    "Flight-Mode-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 7196
+    },
+    "Guided-Position-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 10050
+    },
+    "Log-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 11384
+    },
+    "Map-Video-Trace.md": {
+      "files": 1,
+      "bytes": 8027
+    },
+    "MAVProxy-Architecture-Trace.md": {
+      "files": 1,
+      "bytes": 9131
+    },
+    "Mission-Execution-Trace.md": {
+      "files": 1,
+      "bytes": 8469
+    },
+    "Mission-File-Trace.md": {
+      "files": 1,
+      "bytes": 6855
+    },
+    "Mission-Planner-Investigation.md": {
+      "files": 1,
+      "bytes": 20889
+    },
+    "Mission-Planner-Managed-References.md": {
+      "files": 1,
+      "bytes": 12791
+    },
+    "Mission-Planner-Screen-Map.md": {
+      "files": 1,
+      "bytes": 2091
+    },
+    "Mission-Planner-UI-Observations.md": {
+      "files": 1,
+      "bytes": 9538
+    },
+    "Mission-Transfer-Trace.md": {
+      "files": 1,
+      "bytes": 11426
+    },
+    "Parameter-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 12640
+    },
+    "Plugin-Lifecycle-Trace.md": {
+      "files": 1,
+      "bytes": 3789
+    },
+    "research-evidence-verification.json": {
+      "files": 1,
+      "bytes": 50498
+    },
+    "Reverse-Engineering-Coverage.md": {
+      "files": 1,
+      "bytes": 29563
+    },
+    "SupportProxy-Architecture-Trace.md": {
+      "files": 1,
+      "bytes": 3756
+    },
+    "Terrain-Workflow-Trace.md": {
+      "files": 1,
+      "bytes": 6813
+    },
+    "Vehicle-Mode-Failsafe-Trace.md": {
+      "files": 1,
+      "bytes": 9498
+    },
+    "ardupilot-mavproxy-source": {
+      "files": 476,
+      "bytes": 8642627
+    },
+    "ardupilot-source": {
+      "files": 25246,
+      "bytes": 1076819156
+    },
+    "mission-planner-1.3.83-source": {
+      "files": 7251,
+      "bytes": 335037128
+    },
+    "mission-planner-binary-evidence": {
+      "files": 3969,
+      "bytes": 1930201161
+    },
+    "mission-planner-isolated": {
+      "files": 1349,
+      "bytes": 310541194
+    },
+    "mission-planner-portable": {
+      "files": 1461,
+      "bytes": 311658342
+    },
+    "mission-planner-research": {
+      "files": 7098,
+      "bytes": 335192661
+    },
+    "mission-planner-runtime": {
+      "files": 233,
+      "bytes": 69054979
+    },
+    "research-tools": {
+      "files": 428,
+      "bytes": 121922815
+    },
+    "sitl-evidence": {
+      "files": 2837,
+      "bytes": 290749948
+    },
+    "supportproxy-deps": {
+      "files": 930,
+      "bytes": 20513110
+    },
+    "supportproxy-evidence": {
+      "files": 10,
+      "bytes": 2626042
+    },
+    "supportproxy-source": {
+      "files": 1028,
+      "bytes": 36381947
+    }
+  },
+  "oversized": [
+    {
+      "path": "mission-planner-binary-evidence/rea-remaining-index.sqlite",
+      "bytes": 154841088
+    }
+  ],
+  "sensitive_names": [
+    "ardupilot-source/ardupilot-master/.github/actions/setup-ccache/ccache.env",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____auth_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____auth_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____discard___u_s_c_o_r_eauth_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____discard___u_s_c_o_r_eauth_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____get___u_s_c_o_r_eauth_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/uddi2/html/classuddi2____get___u_s_c_o_r_eauth_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____derived_key_token_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____security_context_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/structwsc_____security_context_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____binary_security_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____binary_security_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____password-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____password.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____security_token_reference-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____security_token_reference.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____security_token_reference__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____security_token_reference__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____security_token_reference__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____username_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____username_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____username_token__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____username_token__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/struct__wsse_____username_token__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse/html/unionwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence_1_1__wsc____union___derived_key_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____binary_security_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____binary_security_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____password-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____password.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____security_token_reference-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____security_token_reference.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____security_token_reference__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____security_token_reference__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____security_token_reference__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____username_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____username_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____username_token__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____username_token__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wsse-lite/html/struct__wsse_____username_token__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____derived_key_token_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____security_context_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwsc_____security_context_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____binary_secret_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____binary_secret_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____key_exchange_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_proof_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_proof_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_proof_token_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_proof_token_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_proof_token_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_security_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_security_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_security_token_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_security_token_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_security_token_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____requested_token_cancelled_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_collection_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_collection_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_collection_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_collection_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_collection_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_collection_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_collection_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_collection_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_collection_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_collection_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_response_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_type-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_type__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_type__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/structwst_____request_security_token_type__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____binary_security_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____binary_security_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____password-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____password.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____security_token_reference-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____security_token_reference.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____security_token_reference__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____security_token_reference__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____security_token_reference__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____username_token-members.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____username_token.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____username_token__coll__graph.map",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____username_token__coll__graph.md5",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/struct__wsse_____username_token__coll__graph.png",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/doc/wst/html/unionwsc_____derived_key_token_type_1_1____wsc_____derived_key_token_type__sequence_1_1__wsc____union___derived_key_token_type.html",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENAttribute/echoNMTOKENAttribute-NMTOKENAttribute01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENAttribute/echoNMTOKENAttribute-NMTOKENAttribute01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENAttribute/echoNMTOKENAttribute-NMTOKENAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENAttribute/NMTOKENAttribute-NMTOKENAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement02-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement02-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/echoNMTOKENElement-NMTOKENElement02.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/NMTOKENElement-NMTOKENElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENElement/NMTOKENElement-NMTOKENElement02.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENEnumerationType/echoNMTOKENEnumerationType-NMTOKENEnumerationType01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENEnumerationType/echoNMTOKENEnumerationType-NMTOKENEnumerationType01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENEnumerationType/echoNMTOKENEnumerationType-NMTOKENEnumerationType01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENEnumerationType/NMTOKENEnumerationType-NMTOKENEnumerationType01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSAttribute/echoNMTOKENSAttribute-NMTOKENSAttribute01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSAttribute/echoNMTOKENSAttribute-NMTOKENSAttribute01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSAttribute/echoNMTOKENSAttribute-NMTOKENSAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSAttribute/NMTOKENSAttribute-NMTOKENSAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSElement/echoNMTOKENSElement-NMTOKENSElement01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSElement/echoNMTOKENSElement-NMTOKENSElement01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSElement/echoNMTOKENSElement-NMTOKENSElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/NMTOKENSElement/NMTOKENSElement-NMTOKENSElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenAttribute/echoTokenAttribute-TokenAttribute01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenAttribute/echoTokenAttribute-TokenAttribute01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenAttribute/echoTokenAttribute-TokenAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenAttribute/TokenAttribute-TokenAttribute01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenElement/echoTokenElement-TokenElement01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenElement/echoTokenElement-TokenElement01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenElement/echoTokenElement-TokenElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenElement/TokenElement-TokenElement01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType02-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType02-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/echoTokenEnumerationType-TokenEnumerationType02.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/TokenEnumerationType-TokenEnumerationType01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenEnumerationType/TokenEnumerationType-TokenEnumerationType02.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenSimpleTypePattern/echoTokenSimpleTypePattern-TokenSimpleTypePattern01-soap11.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenSimpleTypePattern/echoTokenSimpleTypePattern-TokenSimpleTypePattern01-soap12.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenSimpleTypePattern/echoTokenSimpleTypePattern-TokenSimpleTypePattern01.xml",
+    "ardupilot-source/ardupilot-master/modules/gsoap/gsoap/samples/autotest/databinding/examples/6/09/TokenSimpleTypePattern/TokenSimpleTypePattern-TokenSimpleTypePattern01.xml",
+    "ardupilot-source/ardupilot-master/modules/gtest/googlemock/scripts/generator/cpp/tokenize.py",
+    "mission-planner-1.3.83-source/ExtLibs/AltitudeAngelWings/Clients/BearerTokenHttpMessageHandler.cs",
+    "mission-planner-1.3.83-source/ExtLibs/AltitudeAngelWings/Clients/ITokenProvider.cs",
+    "mission-planner-1.3.83-source/ExtLibs/AltitudeAngelWings/Clients/UserAuthenticationTokenProvider.cs",
+    "mission-planner-1.3.83-source/ExtLibs/AltitudeAngelWings/Clients/Auth/Model/TokenResponse.cs",
+    "mission-planner-1.3.83-source/ExtLibs/AltitudeAngelWings/Clients/Auth/Model/TokenResponseExtensions.cs",
+    "mission-planner-1.3.83-source/ExtLibs/ProjNet/IO/CoordinateSystems/StreamTokenizer.cs",
+    "mission-planner-1.3.83-source/ExtLibs/ProjNet/IO/CoordinateSystems/TokenType.cs",
+    "mission-planner-1.3.83-source/ExtLibs/ProjNet/IO/CoordinateSystems/WKTStreamTokenizer.cs",
+    "mission-planner-1.3.83-source/ExtLibs/Utilities/Password.cs",
+    "mission-planner-1.3.83-source/ExtLibs/WebAPIs/Dowding/src/Dowding/Model/AuthToken.cs",
+    "mission-planner-isolated/lib/token.py",
+    "mission-planner-isolated/lib/tokenize.py",
+    "mission-planner-isolated/lib/lib2to3/pgen2/token.py",
+    "mission-planner-isolated/lib/lib2to3/pgen2/tokenize.py",
+    "mission-planner-isolated/plugins-disabled-for-test/Microsoft.IdentityModel.JsonWebTokens.dll",
+    "mission-planner-isolated/plugins-disabled-for-test/Microsoft.IdentityModel.Tokens.dll",
+    "mission-planner-isolated/plugins-disabled-for-test/System.IdentityModel.Tokens.Jwt.dll",
+    "mission-planner-portable/lib/token.py",
+    "mission-planner-portable/lib/tokenize.py",
+    "mission-planner-portable/lib/lib2to3/pgen2/token.py",
+    "mission-planner-portable/lib/lib2to3/pgen2/tokenize.py",
+    "mission-planner-portable/plugins/Microsoft.IdentityModel.JsonWebTokens.dll",
+    "mission-planner-portable/plugins/Microsoft.IdentityModel.Tokens.dll",
+    "mission-planner-portable/plugins/System.IdentityModel.Tokens.Jwt.dll",
+    "mission-planner-research/ExtLibs/ProjNet/IO/CoordinateSystems/StreamTokenizer.cs",
+    "mission-planner-research/ExtLibs/ProjNet/IO/CoordinateSystems/TokenType.cs",
+    "mission-planner-research/ExtLibs/ProjNet/IO/CoordinateSystems/WKTStreamTokenizer.cs",
+    "mission-planner-research/ExtLibs/Utilities/Password.cs",
+    "mission-planner-research/ExtLibs/WebAPIs/Dowding/src/Dowding/Model/AuthToken.cs",
+    "supportproxy-deps/python/packaging/_tokenizer.py",
+    "supportproxy-deps/python/pygments/token.py",
+    "supportproxy-source/webadmin/videotoken.py",
+    "supportproxy-source/webadmin/static/password-toggle.js"
+  ],
+  "skipped_directories": {
+    ".git": 5,
+    "__pycache__": 103,
+    "node_modules": 3,
+    ".pytest_cache": 1
+  }
+}

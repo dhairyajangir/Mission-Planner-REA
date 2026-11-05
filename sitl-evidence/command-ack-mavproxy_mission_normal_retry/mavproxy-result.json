@@ -1,0 +1,81 @@
+{
+  "case": "mavproxy_mission_normal_retry",
+  "scope": "Pinned MAVProxy mission upload and separate SERIAL1 client; disposable disarmed Copter SITL",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "commands": [
+    "wp load input.waypoints",
+    "exit"
+  ],
+  "errors": [],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7551",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--cmd=set requireexit true",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_mission_normal_retry"
+  ],
+  "independent_heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 3,
+    "base_mode": 81,
+    "custom_mode": 0,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "mission_count": {
+    "mavpackettype": "MISSION_COUNT",
+    "target_system": 254,
+    "target_component": 188,
+    "count": 2,
+    "mission_type": 0
+  },
+  "readback": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 254,
+      "target_component": 188,
+      "seq": 0,
+      "frame": 0,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "mission_type": 0
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 254,
+      "target_component": 188,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 2.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353625000,
+      "y": 1491660000,
+      "z": 25.0,
+      "mission_type": 0
+    }
+  ],
+  "proxy_exit": 1,
+  "artifacts": {
+    "input.waypoints": "37a45aafd7a55cf697e0cfdeca99d56d1ad0c86db42efd0387c602dad9c58fbf",
+    "mavproxy.log": "a2092f1c728452a8a13bb8c58cef6c17e77827a0586773f5b895272e372eaf98",
+    "independent-downlink.bin": "59eed2ed69cf4fe89866977482cd9e51e9cf3e0d161f29d6692e5d0eba4e49b5"
+  }
+}

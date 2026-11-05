@@ -1,0 +1,17 @@
+{
+  "unit_id_count_differences": {
+    "45": {
+      "pymavlink": 1,
+      "mission_planner": 0
+    }
+  },
+  "pymavlink_unit_45": [
+    {
+      "mavpackettype": "UNIT",
+      "TimeUS": 2459849,
+      "Id": 45,
+      "Label": ""
+    }
+  ],
+  "scope": "UNIT ID counts only; does not diagnose converter exceptions or verify field values."
+}

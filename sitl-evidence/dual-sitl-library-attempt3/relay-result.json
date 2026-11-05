@@ -1,0 +1,24 @@
+{
+  "errors": [],
+  "dropped_bad_data": [
+    2,
+    12
+  ],
+  "configured": [
+    {
+      "system": 1,
+      "value": 0.0
+    },
+    {
+      "system": 2,
+      "value": 1.0
+    }
+  ],
+  "ended_by": "client_eof",
+  "sha256": {
+    "downlink.bin": "79bb59a5924eb9befae0b74387df1da9efed82f439996a29f602308759d20976",
+    "uplink.bin": "dca387fab3d7b8232cddda66036bab17fa8a4a54ee7e94173f94290af1ce8689",
+    "upstream1-raw.bin": "66434038799c47a0e6501df557573831a7101ddab906734002e84bdf99104488",
+    "upstream2-raw.bin": "bcf29486c7d3638e98426c9b5690369d226a87b8c9738ba1b6b7ea7963809739"
+  }
+}

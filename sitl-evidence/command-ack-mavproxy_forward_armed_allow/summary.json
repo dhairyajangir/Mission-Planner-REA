@@ -1,0 +1,372 @@
+{
+  "case": "mavproxy_forward_armed_allow",
+  "relay": {
+    "scope": "Disposable Copter SITL; MAVProxy downstream read-only request forwarding",
+    "case": "mavproxy_forward_armed_allow",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7560,
+    "proxy_port": 7561,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [
+      "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-relay.py\", line 206, in <module>\n    chunk = source.recv(65536)\n            ^^^^^^^^^^^^^^^^^^\nConnectionResetError: [Errno 104] Connection reset by peer\n"
+    ],
+    "capture_sha256": {
+      "control-downlink.bin": "fcd56fac72ed4a64bff8f456029734a7ef18228030dcda722997223e8e4d2b7c",
+      "control-uplink.bin": "e776db5e76630e1ac999e8e4d9ba5f327997d4361d8e8ee19b3e4bf5eb2ff42f",
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "658fd6b3bb1ef4a6f7e64e0533390e17ba90c45b88b7cf44fd5bc2eb081156e4",
+      "to_client_output.bin": "658fd6b3bb1ef4a6f7e64e0533390e17ba90c45b88b7cf44fd5bc2eb081156e4",
+      "to_sitl_input.bin": "aeacbf00baf4d4a4969e76f3e1f31f6459a405b4a2da0e98f54fa35e1cfa24ef",
+      "to_sitl_output.bin": "aeacbf00baf4d4a4969e76f3e1f31f6459a405b4a2da0e98f54fa35e1cfa24ef",
+      "udp-after.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "udp-armed-before.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "udp-before.bin": "90338c41a249ce4a77cfce4cb4123a97e6ca229753671a75331ebbb550cfa557"
+    }
+  },
+  "probe": {
+    "scope": "Disposable SITL only; synthetic forced arm, MAVProxy downstream read-only request, explicit disarm",
+    "case": "mavproxy_forward_armed_allow",
+    "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+    "configured": {
+      "mavfwd": "true",
+      "mavfwd_disarmed": "false"
+    },
+    "errors": [
+      "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/research-tools/mavproxy-forward-armed-probe.py\", line 40, in <module>\n    result['armed_heartbeat']=wait_hb(True).to_dict()\n                              ^^^^^^^^^^^^^\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/research-tools/mavproxy-forward-armed-probe.py\", line 25, in wait_hb\n    raise TimeoutError('heartbeat armed='+str(armed))\nTimeoutError: heartbeat armed=True\n"
+    ],
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "MAVProxy.mavproxy",
+      "--master=tcp:127.0.0.1:7561",
+      "--out=udpout:127.0.0.1:7569",
+      "--no-state",
+      "--no-startup-scripts",
+      "--default-modules=param,wp",
+      "--cmd=set requireexit true;set mavfwd true;set mavfwd_disarmed false;set mavfwd;set mavfwd_disarmed",
+      "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_forward_armed_allow"
+    ],
+    "initial_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3
+    },
+    "artifacts": {
+      "mavproxy.log": "a52e3007ae2fb4ed13c1eed745f7a1ee090706bcfb19edb4b7743d4e796e4ae7",
+      "udp-before.bin": "90338c41a249ce4a77cfce4cb4123a97e6ca229753671a75331ebbb550cfa557",
+      "udp-armed-before.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "udp-after.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "control-uplink.bin": "e776db5e76630e1ac999e8e4d9ba5f327997d4361d8e8ee19b3e4bf5eb2ff42f",
+      "control-downlink.bin": "fcd56fac72ed4a64bff8f456029734a7ef18228030dcda722997223e8e4d2b7c"
+    }
+  },
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        254,
+        188
+      ],
+      "raw_hex": "fd20000000febc4c00000000803f0098a546000000000000000000000000000000000000000090010101cc64"
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 254,
+      "target_component": 188,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0a00000301014d00009001040000000000febcf235"
+    }
+  ],
+  "control_heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000000101000000000000000203510303e292"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000010101000000000000000203510303f21c"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900000b01010000000000000002035103030758"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001001010000000000000002035103036a33"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001101010000000000000002035103037abd"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001201010000000000000002035103035b27"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001301010000000000000002035103034ba9"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000160101000000000000000203510303390f"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000180101000000000000000203510303ae63"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090000190101000000000000000203510303beed"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001a01010000000000000002035103039f77"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001b01010000000000000002035103038ff9"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001c0101000000000000000203510303cc4b"
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0900001d0101000000000000000203510303dcc5"
+    }
+  ],
+  "armed_output_heartbeats": [],
+  "request_window_heartbeats": [],
+  "forwarded": [],
+  "replies": [],
+  "arm_notices": [
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 2,
+      "text": "Arm: AHRS: not using configured AHRS type",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd2a0000040101fd00000241726d3a20414852533a206e6f74207573696e6720636f6e666967757265642041485253207479706502c1"
+    },
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 2,
+      "text": "Arm: Accels inconsistent",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd190000050101fd00000241726d3a20416363656c7320696e636f6e73697374656e749258"
+    },
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 2,
+      "text": "Arm: EKF attitude is bad",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd190000060101fd00000241726d3a20454b4620617474697475646520697320626164ad5a"
+    },
+    {
+      "mavpackettype": "STATUSTEXT",
+      "severity": 2,
+      "text": "Arm: AHRS: not using configured AHRS type",
+      "id": 0,
+      "chunk_seq": 0,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd2a0000070101fd00000241726d3a20414852533a206e6f74207573696e6720636f6e6669677572656420414852532074797065a3ac"
+    }
+  ],
+  "bad_data_fragments": {
+    "control_up": 0,
+    "control_down": 0,
+    "master_up": 0,
+    "udp_before": 0,
+    "udp_armed": 0,
+    "udp_after": 0
+  },
+  "runner_sha256": "49ce463ecbcfe47cbb3bb462306913ba23cacc00d30779fee631281f409ffc74",
+  "relay_source_sha256": "821648978f6b1fb88c7151a558394e64ff2ccc3093a81b1c075f36eda144f7e3",
+  "source_inventory_sha256": "cb04e3589d82f1d895878701dd226528d357c188c58bea3e7cadbdab1b807cfd"
+}

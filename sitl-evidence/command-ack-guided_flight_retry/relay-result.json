@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; guided flight target test",
+  "case": "guided_flight_retry",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "1106087e81905b5ceb66db990e0bc98e0486f2ab8d1f1c723e40393605567011",
+    "to_client_output.bin": "1106087e81905b5ceb66db990e0bc98e0486f2ab8d1f1c723e40393605567011",
+    "to_sitl_input.bin": "f8ba8a77606e6f9ac0f8b60b1d288f761d4fe0280c491f7268ed50c2e552a0ce",
+    "to_sitl_output.bin": "f8ba8a77606e6f9ac0f8b60b1d288f761d4fe0280c491f7268ed50c2e552a0ce"
+  }
+}

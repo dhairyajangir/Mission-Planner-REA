@@ -1,0 +1,24 @@
+{
+  "scope": "Original library and synthetic file against disposable source-built localhost SITL; not GUI or hardware",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sha256": {
+    "sitl-evidence/missionplanner-nonfinite-probe/probe.log": "752f09e308d989a955992c474b508c4024ed654c24bd5ed0318f3beab5de1548",
+    "sitl-evidence/missionplanner-nonfinite-probe/input.param": "9a933c78e69d1f67c67b5a9736f9117419f208aaf47d0c9476e9908dc1c5aa54",
+    "sitl-evidence/missionplanner-nonfinite-probe/host-result.json": "62cbf9e7c6312cfc010e504d0621af28e0dac12e67a8f5e6548f49ce5dc199c5",
+    "sitl-evidence/missionplanner-nonfinite-probe/ready.json": "39ff7b1533631b78759f3f08dcfa6efe4758c33ceab54e178b49e4eb2d28ca1c",
+    "research-tools/MissionPlannerNonfiniteProbe.cs": "41f673f64699e8ef15e2ca9a617c0b136c1ca5eeefd2c52aebac19de88b2ff6c",
+    "mission-planner-portable/MissionPlannerNonfiniteProbe.exe": "0b4c89e5042c5d62acbef35b5813a127ba6546369ceb766e42118b4ae0a2a8a9",
+    "mission-planner-portable/MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "mission-planner-portable/MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6"
+  },
+  "checks": {
+    "parsed_nan": true,
+    "error_enum_absent": true,
+    "connected_and_baseline": true,
+    "unknown_id_and_retries": true,
+    "timeout_and_unchanged": true,
+    "finite_and_restore": true,
+    "host_clean": true
+  },
+  "passed": true
+}

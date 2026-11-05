@@ -1,0 +1,442 @@
+{
+  "scope": "REA static records; not runtime page navigation",
+  "assembly_sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+  "index_sha256": "81e26a1f6c5271a3e3041777fb5fb2b3e9e4251a79e7fefc357da27a0cbea50e",
+  "methods": [
+    {
+      "declaring_type": "MissionPlanner.Controls.BackstageView.BackstageView",
+      "name": "ActivatePage",
+      "il_sha256": "c10632bcd6b50d168e953b2754559588ab9b534d86e0dda3460c3b4cfdf3d7f3",
+      "body_status": "present",
+      "token": "0x06000341",
+      "calls": [
+        {
+          "il_offset": 0,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "<>c__DisplayClass60_0"
+        },
+        {
+          "il_offset": 39,
+          "opcode": "call",
+          "name": "DrawMenu",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageView"
+        },
+        {
+          "il_offset": 62,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 67,
+          "opcode": "callvirt",
+          "name": "GetType",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 72,
+          "opcode": "callvirt",
+          "name": "ToString",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 83,
+          "opcode": "callvirt",
+          "name": "get_LinkText",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 88,
+          "opcode": "callvirt",
+          "name": "Invoke",
+          "type": "TrackingEventHandler"
+        },
+        {
+          "il_offset": 93,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 100,
+          "opcode": "call",
+          "name": "SuspendLayout",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 111,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 116,
+          "opcode": "callvirt",
+          "name": "SuspendLayout",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 129,
+          "opcode": "call",
+          "name": "DrawMenu",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageView"
+        },
+        {
+          "il_offset": 148,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 166,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 176,
+          "opcode": "callvirt",
+          "name": "Deactivate",
+          "type": "MissionPlanner.Controls.IDeactivate"
+        },
+        {
+          "il_offset": 190,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 211,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 224,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 230,
+          "opcode": "callvirt",
+          "name": "set_Visible",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 250,
+          "opcode": "callvirt",
+          "name": "get_Controls",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 255,
+          "opcode": "call",
+          "name": "OfType",
+          "type": "System.Linq.Enumerable"
+        },
+        {
+          "il_offset": 261,
+          "opcode": "ldftn",
+          "name": "<ActivatePage>b__0",
+          "type": "<>c__DisplayClass60_0"
+        },
+        {
+          "il_offset": 267,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.Func`2"
+        },
+        {
+          "il_offset": 272,
+          "opcode": "call",
+          "name": "Single",
+          "type": "System.Linq.Enumerable"
+        },
+        {
+          "il_offset": 278,
+          "opcode": "callvirt",
+          "name": "set_IsSelected",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewButton"
+        },
+        {
+          "il_offset": 294,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 307,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 313,
+          "opcode": "callvirt",
+          "name": "ResumeLayout",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 320,
+          "opcode": "call",
+          "name": "ResumeLayout",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 331,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 337,
+          "opcode": "callvirt",
+          "name": "set_Visible",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 348,
+          "opcode": "callvirt",
+          "name": "get_Controls",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 359,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 364,
+          "opcode": "callvirt",
+          "name": "Contains",
+          "type": "ControlCollection"
+        },
+        {
+          "il_offset": 377,
+          "opcode": "callvirt",
+          "name": "get_Controls",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 388,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 393,
+          "opcode": "callvirt",
+          "name": "Add",
+          "type": "ControlCollection"
+        },
+        {
+          "il_offset": 404,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 422,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 432,
+          "opcode": "callvirt",
+          "name": "Activate",
+          "type": "MissionPlanner.Controls.IActivate"
+        },
+        {
+          "il_offset": 448,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 462,
+          "opcode": "callvirt",
+          "name": "get_Controls",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 467,
+          "opcode": "call",
+          "name": "OfType",
+          "type": "System.Linq.Enumerable"
+        },
+        {
+          "il_offset": 473,
+          "opcode": "ldftn",
+          "name": "<ActivatePage>b__1",
+          "type": "<>c__DisplayClass60_0"
+        },
+        {
+          "il_offset": 479,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.Func`2"
+        },
+        {
+          "il_offset": 484,
+          "opcode": "call",
+          "name": "Single",
+          "type": "System.Linq.Enumerable"
+        },
+        {
+          "il_offset": 490,
+          "opcode": "callvirt",
+          "name": "set_IsSelected",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewButton"
+        },
+        {
+          "il_offset": 506,
+          "opcode": "callvirt",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 513,
+          "opcode": "call",
+          "name": "get_Now",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 535,
+          "opcode": "callvirt",
+          "name": "get_Page",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 540,
+          "opcode": "callvirt",
+          "name": "GetType",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 545,
+          "opcode": "callvirt",
+          "name": "ToString",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 556,
+          "opcode": "callvirt",
+          "name": "get_LinkText",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 563,
+          "opcode": "call",
+          "name": "op_Subtraction",
+          "type": "System.DateTime"
+        },
+        {
+          "il_offset": 572,
+          "opcode": "call",
+          "name": "get_TotalMilliseconds",
+          "type": "System.TimeSpan"
+        },
+        {
+          "il_offset": 582,
+          "opcode": "callvirt",
+          "name": "DebugFormat",
+          "type": "log4net.ILog"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Controls.BackstageView.BackstageViewPage",
+      "name": "get_Page",
+      "il_sha256": "b2fb108b7329347113464499d559843daca91810cf6a13cca7d03dfdd9c085ef",
+      "body_status": "present",
+      "token": "0x06000364",
+      "calls": [
+        {
+          "il_offset": 12,
+          "opcode": "call",
+          "name": "get_DesignMode",
+          "type": "System.ComponentModel.Component"
+        },
+        {
+          "il_offset": 23,
+          "opcode": "call",
+          "name": "get_PageType",
+          "type": "MissionPlanner.Controls.BackstageView.BackstageViewPage"
+        },
+        {
+          "il_offset": 28,
+          "opcode": "call",
+          "name": "CreateInstance",
+          "type": "System.Activator"
+        },
+        {
+          "il_offset": 50,
+          "opcode": "callvirt",
+          "name": "set_Enabled",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 62,
+          "opcode": "callvirt",
+          "name": "set_Visible",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 75,
+          "opcode": "newobj",
+          "name": ".ctor",
+          "type": "System.Drawing.Point"
+        },
+        {
+          "il_offset": 80,
+          "opcode": "callvirt",
+          "name": "set_Location",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 92,
+          "opcode": "callvirt",
+          "name": "set_Dock",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 104,
+          "opcode": "callvirt",
+          "name": "set_AutoScroll",
+          "type": "System.Windows.Forms.ScrollableControl"
+        },
+        {
+          "il_offset": 126,
+          "opcode": "callvirt",
+          "name": "Invoke",
+          "type": "ThemeManager"
+        },
+        {
+          "il_offset": 138,
+          "opcode": "callvirt",
+          "name": "set_Enabled",
+          "type": "System.Windows.Forms.Control"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.Controls.BackstageView.BackstageViewPage",
+      "name": "set_Page",
+      "il_sha256": "2da2b50de5ba6bf03e032ecea7f9db7111a8875d08a37acb6a810cc21a9bea35",
+      "body_status": "present",
+      "token": "0x06000365",
+      "calls": [
+        {
+          "il_offset": 23,
+          "opcode": "callvirt",
+          "name": "Invoke",
+          "type": "ThemeManager"
+        }
+      ]
+    }
+  ]
+}

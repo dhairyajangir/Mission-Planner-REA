@@ -1,0 +1,147 @@
+{
+  "scope": "Synthetic MAVLink 1 through in-memory library transport, including timed Open test; no UI, network or vehicles",
+  "sha256": {
+    "sitl-evidence/multivehicle-parser-probe/fixtures.json": "197b48cc7a6ec00a5c5d3cfb9626a3b0632b91dd3ab1c89fb4d0419db6afe877",
+    "sitl-evidence/multivehicle-parser-probe/isolation.log": "96c16a2864c810ad8e7117e5845d8348a9b7ed0d08cd255ce1be33ca8370705f",
+    "sitl-evidence/multivehicle-parser-probe/handshake.log": "22fc591187bc6074c0da4ffdd8216d6673395596f507a87fed4af73f916aee81",
+    "research-tools/HandshakeSelectionProbe.cs": "99d492ebb76675c1470797a9f654ea97ee7793175c191dd1ce5625ce2784c131",
+    "mission-planner-portable/HandshakeSelectionProbe.exe": "9ebd4f4155f0b80bca62f27c7d67d12b07c056b527caa36892d296126b546430",
+    "research-tools/MultiVehicleParserProbe.cs": "3f402e58750e18a510f69c2ec621742b233063fabaf06c8bd4ff2c09f6d37d1c",
+    "research-tools/make-multivehicle-fixtures.py": "17149e9b1b0cd031b911881662ce824c39c2bbf2fd8fb9c47aab5a6c4c8d35fe",
+    "mission-planner-portable/MultiVehicleIsolationProbe.exe": "683f8be465f669f9199e424661c9678ebaf8853be6cea6f1c6aef07c64b5f378",
+    "mission-planner-portable/LiveSigningProbe.exe": "a6f7ae349e943903864373bb0bf94d54575384d62dfcba832ce160b9d390d782",
+    "mission-planner-portable/MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "mission-planner-portable/MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6"
+  },
+  "fixtures": {
+    "vehicle-first.bin": {
+      "sha256": "27ab7dcfbc3cd044becc2d627b588039051bf2e983540ce4a1b3d92713ab1247",
+      "size": 85,
+      "frame_count": 5
+    },
+    "gcs-first.bin": {
+      "sha256": "6eca69a41220a1546b79c0039cdbb0ace1dce6f1e949a8e089933653fb0943d6",
+      "size": 51,
+      "frame_count": 3
+    },
+    "bad-only.bin": {
+      "sha256": "ec41735dd0856d3fcc7476a12d491f8486b76dab086e71b671d1503690395ec7",
+      "size": 17,
+      "frame_count": 1
+    },
+    "param-isolation.bin": {
+      "sha256": "2069af2b467c078e3909649eb6468ac4c726287bc616e72a7eec614f18e91986",
+      "size": 183,
+      "frame_count": 7
+    }
+  },
+  "decoded": {
+    "vehicle-first.bin": {
+      "messages": [
+        {
+          "type": "HEARTBEAT",
+          "system": 1,
+          "component": 1
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 2,
+          "component": 1
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 255,
+          "component": 190
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 1,
+          "component": 100
+        }
+      ],
+      "bad_reasons": [
+        "invalid MAVLink CRC in msgID 0 0x1e8a should be 0x1f8a"
+      ]
+    },
+    "gcs-first.bin": {
+      "messages": [
+        {
+          "type": "HEARTBEAT",
+          "system": 255,
+          "component": 190
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 1,
+          "component": 1
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 2,
+          "component": 1
+        }
+      ],
+      "bad_reasons": []
+    },
+    "bad-only.bin": {
+      "messages": [],
+      "bad_reasons": [
+        "invalid MAVLink CRC in msgID 0 0x1e8a should be 0x1f8a"
+      ]
+    },
+    "param-isolation.bin": {
+      "messages": [
+        {
+          "type": "HEARTBEAT",
+          "system": 1,
+          "component": 1
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 2,
+          "component": 1
+        },
+        {
+          "type": "HEARTBEAT",
+          "system": 1,
+          "component": 100
+        },
+        {
+          "type": "PARAM_VALUE",
+          "system": 1,
+          "component": 1,
+          "name": "TEST_VAL",
+          "value": 12.5
+        },
+        {
+          "type": "PARAM_VALUE",
+          "system": 2,
+          "component": 1,
+          "name": "TEST_VAL",
+          "value": 87.5
+        },
+        {
+          "type": "PARAM_VALUE",
+          "system": 1,
+          "component": 100,
+          "name": "TEST_VAL",
+          "value": 42.0
+        }
+      ],
+      "bad_reasons": [
+        "invalid MAVLink CRC in msgID 22 0xd7c5 should be 0xd6c5"
+      ]
+    }
+  },
+  "checks": {
+    "independent_frame_decode": true,
+    "vehicle_first_selection": true,
+    "gcs_first_selection": true,
+    "bad_only_rejected": true,
+    "separate_parameter_values": true,
+    "corrupt_parameter_rejected": true,
+    "timed_open_selected_vehicle": true,
+    "timed_open_version_retries": true
+  },
+  "passed": true
+}

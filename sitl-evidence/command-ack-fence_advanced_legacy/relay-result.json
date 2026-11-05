@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; legacy fence points; no deliberate loss",
+  "case": "fence_advanced_legacy",
+  "binary_sha256": "caed35e4cb796ec06cac40b09566a18251771486b1cbac5e2bf16b7a5ed5045d",
+  "sitl_port": 7550,
+  "proxy_port": 7551,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 160,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "96a363ef9b6cceab651430c6e97edd1f586f99ab09b7767b92fe7a7a8c0471d3",
+    "to_client_output.bin": "96a363ef9b6cceab651430c6e97edd1f586f99ab09b7767b92fe7a7a8c0471d3",
+    "to_sitl_input.bin": "5dedb771bda5eee288ee4dac407537dc456c4e2e3069f5eec451e5abe52c7687",
+    "to_sitl_output.bin": "5dedb771bda5eee288ee4dac407537dc456c4e2e3069f5eec451e5abe52c7687"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "ArduCopter SITL only; no Mission Planner or aircraft",
+  "binary": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/archive-built/arducopter",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "mission_upload": {
+      "passed": true,
+      "sent_sequences": [
+        0,
+        1
+      ],
+      "request_types": [
+        "MISSION_REQUEST",
+        "MISSION_REQUEST"
+      ],
+      "ack": 0
+    },
+    "mission_count": {
+      "passed": true,
+      "count": 2
+    },
+    "waypoint_readback": {
+      "passed": true,
+      "sequence": 1,
+      "lat_e7": -353630000,
+      "lon_e7": 1491655000,
+      "alt": 20.0
+    }
+  },
+  "errors": [],
+  "port": 6230,
+  "process_exit_code": 0,
+  "passed": true
+}

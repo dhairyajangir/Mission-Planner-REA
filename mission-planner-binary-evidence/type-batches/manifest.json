@@ -1,0 +1,522 @@
+{
+  "assembly_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "total_requested": 294,
+  "batches": [
+    {
+      "types": [
+        "<>f__AnonymousType0`2",
+        "<>f__AnonymousType1`10",
+        "<>f__AnonymousType2`2",
+        "<>f__AnonymousType3`3",
+        "<>f__AnonymousType4`2",
+        "Microsoft.CodeAnalysis.EmbeddedAttribute",
+        "System.Runtime.CompilerServices.IsUnmanagedAttribute",
+        "Win32DeviceMgmt"
+      ],
+      "path": "8946b54089dfafd3.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "RFDLib.Array",
+        "RFDLib.Collections",
+        "RFDLib.Utils",
+        "RFDLib.Text",
+        "RFDLib.IO.TSerialPort",
+        "RFDLib.IO.TSystemIOPortsSerialPort",
+        "RFDLib.IO.ATCommand.TClient",
+        "RFDLib.IO.ATCommand.TServer"
+      ],
+      "path": "4c4207711e8efb40.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "RFDLib.GUI.Settings.TLabelEditorPair",
+        "RFDLib.GUI.Settings.TOrigLabelEditorPair",
+        "RFDLib.GUI.Settings.TLabelEditorPairRegister",
+        "RFDLib.GUI.Settings.TDynamicLabelEditorPair",
+        "RFDLib.GUI.Settings.TDynamicLabelEditorPairRegister",
+        "RFD.RFD900.TSession",
+        "RFD.RFD900.TSettings",
+        "RFD.RFD900.TBaseSetting"
+      ],
+      "path": "17a89cac88da2b21.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "RFD.RFD900.TTextSetting",
+        "RFD.RFD900.TShortSetting",
+        "RFD.RFD900.TSetting",
+        "RFD.RFD900.RFD900",
+        "RFD.RFD900.RFD900APU",
+        "RFD.RFD900.RFD900a",
+        "RFD.RFD900.RFD900p",
+        "RFD.RFD900.RFD900u"
+      ],
+      "path": "9b41c1dc4ceab94b.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "RFD.RFD900.RFD900xuxRevN",
+        "RFD.RFD900.RFD900xux",
+        "RFD.RFD900.RFD900x",
+        "RFD.RFD900.HB1060",
+        "RFD.RFD900.HM_TRP",
+        "RFD.RFD900.RFD900ux",
+        "RFD.RFD900.RFD900xuxRev2",
+        "RFD.RFD900.RFD900X2"
+      ],
+      "path": "f3e8d45d2ecea7bf.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "RFD.RFD900.RFD900UX2",
+        "RFD.RFD900.TMissionPlannerSerialPort",
+        "RFD.RFD900.TATCClient",
+        "SikRadio.ISikRadioForm",
+        "resedit.Form1",
+        "MissionPlanner.Common",
+        "MissionPlanner.L10N",
+        "MissionPlanner.MagCalib"
+      ],
+      "path": "5d59933aa0384623.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.MainV2",
+        "MissionPlanner.NativeMethods",
+        "MissionPlanner.Program",
+        "MissionPlanner.Script",
+        "MissionPlanner.Splash",
+        "MissionPlanner.temp",
+        "MissionPlanner.GdalConfiguration",
+        "MissionPlanner.Warnings.WarningControl"
+      ],
+      "path": "04755ab32748427d.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Warnings.WarningsManager",
+        "MissionPlanner.Utilities.AirMarketUI",
+        "MissionPlanner.Utilities.AirMarket",
+        "MissionPlanner.Utilities.BoardDetect",
+        "MissionPlanner.Utilities.CircleSurveyMission",
+        "MissionPlanner.Utilities.ExtensionsMP",
+        "MissionPlanner.Utilities.Firmware",
+        "MissionPlanner.Utilities.GStreamerUI"
+      ],
+      "path": "b00853962ee38762.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Utilities.httpserver",
+        "MissionPlanner.Utilities.ImageMatch",
+        "MissionPlanner.Utilities.CultureInfoEx",
+        "MissionPlanner.Utilities.ComponentResourceManagerEx",
+        "MissionPlanner.Utilities.LogAnalyzer",
+        "MissionPlanner.Utilities.NativeLibrary",
+        "MissionPlanner.Utilities.OsdTuningSlotProvider",
+        "MissionPlanner.Utilities.OsdTuningSlotGetter"
+      ],
+      "path": "23ab627481a0090e.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Utilities.POI",
+        "MissionPlanner.Utilities.Speech",
+        "MissionPlanner.Utilities.SSHTerminal",
+        "MissionPlanner.Utilities.ThemeColor",
+        "MissionPlanner.Utilities.ThemeColorList",
+        "MissionPlanner.Utilities.ThemeColorTable",
+        "MissionPlanner.Utilities.PreventThemingAttribute",
+        "MissionPlanner.Utilities.ThemeManager"
+      ],
+      "path": "73d41a254ff0787c.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Utilities.Update",
+        "MissionPlanner.Utilities.XmlColor",
+        "MissionPlanner.test.FirmwareSelection",
+        "MissionPlanner.test.IClose",
+        "MissionPlanner.Swarm.DroneBase",
+        "MissionPlanner.Swarm.FollowPath",
+        "MissionPlanner.Swarm.FollowPathControl",
+        "MissionPlanner.Swarm.Formation"
+      ],
+      "path": "939c31b53e1e46b3.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Swarm.PID",
+        "MissionPlanner.Swarm.FormationControl",
+        "MissionPlanner.Swarm.Grid",
+        "MissionPlanner.Swarm.Status",
+        "MissionPlanner.Swarm.Swarm",
+        "MissionPlanner.Swarm.WaypointLeader.Drone",
+        "MissionPlanner.Swarm.WaypointLeader.DroneGroup",
+        "MissionPlanner.Swarm.WaypointLeader.Path"
+      ],
+      "path": "3e5aaaad01541d66.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Swarm.WaypointLeader.WPControl",
+        "MissionPlanner.Swarm.SRB.Control",
+        "MissionPlanner.Swarm.SRB.Controller",
+        "MissionPlanner.Swarm.SRB.Drone",
+        "MissionPlanner.Swarm.SRB.DroneGroup",
+        "MissionPlanner.Swarm.Sequence.Controller",
+        "MissionPlanner.Swarm.Sequence.Drone",
+        "MissionPlanner.Swarm.Sequence.DroneGroup"
+      ],
+      "path": "a8fece1727fffd46.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Swarm.Sequence.Sequence",
+        "MissionPlanner.Swarm.Sequence.Layout",
+        "MissionPlanner.Swarm.Sequence.LayoutEditor",
+        "MissionPlanner.Swarm.FollowLeader.Control",
+        "MissionPlanner.Swarm.FollowLeader.Drone",
+        "MissionPlanner.Swarm.FollowLeader.DroneGroup",
+        "MissionPlanner.Radio.ComPort",
+        "MissionPlanner.Radio.IHex"
+      ],
+      "path": "f7a332d19d1afca8.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Radio.Model",
+        "MissionPlanner.Radio.ExtraParamControlsSet",
+        "MissionPlanner.Radio.LabelComboBoxPair",
+        "MissionPlanner.Radio.Sikradio",
+        "MissionPlanner.Radio.Uploader",
+        "MissionPlanner.Radio.XModem",
+        "MissionPlanner.Properties.Resources",
+        "MissionPlanner.Plugin.Plugin"
+      ],
+      "path": "50e773f6dd009833.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Plugin.PluginHost",
+        "MissionPlanner.Plugin.PluginLoader",
+        "MissionPlanner.NoFly.NoFly",
+        "MissionPlanner.Log.LogBrowse",
+        "MissionPlanner.Log.LogDownload",
+        "MissionPlanner.Log.LogDownloadMavLink",
+        "MissionPlanner.Log.LogDownloadscp",
+        "MissionPlanner.Log.LogIndex"
+      ],
+      "path": "5435b5ed33405551.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Log.LogStrings",
+        "MissionPlanner.Log.MatLabForms",
+        "MissionPlanner.Log.MavlinkLog",
+        "MissionPlanner.Log.MavlinkLogBase",
+        "MissionPlanner.Joystick.JoystickAxis",
+        "MissionPlanner.Joystick.JoystickSetup",
+        "MissionPlanner.Joystick.Joy_Button_axis",
+        "MissionPlanner.Joystick.Joy_ChangeMode"
+      ],
+      "path": "4c412ac80d9a9674.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Joystick.Joy_Do_Repeat_Relay",
+        "MissionPlanner.Joystick.Joy_Do_Repeat_Servo",
+        "MissionPlanner.Joystick.Joy_Do_Set_Relay",
+        "MissionPlanner.Joystick.Joy_Do_Set_Servo",
+        "MissionPlanner.Joystick.Joy_Mount_Mode",
+        "MissionPlanner.Grid.camerainfo",
+        "MissionPlanner.Grid.GridData",
+        "MissionPlanner.Grid.GridPlugin"
+      ],
+      "path": "ea6bb9be06b91fe5.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Grid.GridUI",
+        "MissionPlanner.GeoRef.Georefimage",
+        "MissionPlanner.GCSViews.FlightData",
+        "MissionPlanner.GCSViews.FlightPlanner",
+        "MissionPlanner.GCSViews.Help",
+        "MissionPlanner.GCSViews.InitialSetup",
+        "MissionPlanner.GCSViews.SITL",
+        "MissionPlanner.GCSViews.SoftwareConfig"
+      ],
+      "path": "0baf025d85b66f22.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAC_Fence",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigADSB",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAdvanced",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAntennaTracker",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigArducopter",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigArduplane",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigArdurover"
+      ],
+      "path": "a0398f7af6db2840.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAteryx",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigAteryxSensors",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigBatteryMonitoring",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigBatteryMonitoring2",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigCompassMot",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigCubeID",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigESCCalibration"
+      ],
+      "path": "9fd2d0e5f5446d57.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFailSafe",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFFT",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFirmware",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFirmwareDisabled",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFirmwareManifest",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFrameClassType",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFrameType"
+      ],
+      "path": "4191485b8b0b435a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFriendlyParams",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigFriendlyParamsAdv",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigGPSOrder",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWAirspeed",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWBT",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWCAN",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass2"
+      ],
+      "path": "5647a8c89262d0a3.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWESP8266",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWIDs",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWOptFlow",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWOSD",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWParachute",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWPX4Flow",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigHWRangeFinder",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigInitialParams"
+      ],
+      "path": "e6f1e1799f1cb1e2.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigMandatory",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigMotorTest",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigMount",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigOptional",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigOSD",
+        "MissionPlanner.GCSViews.ConfigurationView.OsdItemCaptionProvider",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigParamLoading",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner"
+      ],
+      "path": "9d1dd02f50a84cbd.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigPlannerAdv",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigRadioInput",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigRadioOutput",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigRawParams",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigREPL",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigSecure",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigSecureAP",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigSerial"
+      ],
+      "path": "8095783cf8e931a8.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.SerialOptionRuleItem",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigSerialInjectGPS",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigSimplePids",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigTerminal",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigTradHeli",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigTradHeli4",
+        "MissionPlanner.GCSViews.ConfigurationView.ConfigUserDefined",
+        "MissionPlanner.GCSViews.ConfigurationView.DeviceInfo"
+      ],
+      "path": "20bd1a0289a4b44a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.GCSViews.ConfigurationView.DroneCANModel",
+        "MissionPlanner.GCSViews.ConfigurationView.uitype",
+        "MissionPlanner.Controls.AuthKeys",
+        "MissionPlanner.Controls.AuxOptions",
+        "MissionPlanner.Controls.ConnectionControl",
+        "MissionPlanner.Controls.ConnectionOptions",
+        "MissionPlanner.Controls.ConnectionStats",
+        "MissionPlanner.Controls.CompositeDisposableEx"
+      ],
+      "path": "7e66460d3b139df6.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.ControlSensorsStatus",
+        "MissionPlanner.Controls.DefaultSettings",
+        "MissionPlanner.Controls.DevopsUI",
+        "MissionPlanner.Controls.DigitalSkyUI",
+        "MissionPlanner.Controls.DistanceBar",
+        "MissionPlanner.Controls.DroneCANFileUI",
+        "MissionPlanner.Controls.DroneCANInspector",
+        "MissionPlanner.Controls.DroneCANParams"
+      ],
+      "path": "be1313ad8be7388f.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.DroneCANSubscriber",
+        "MissionPlanner.Controls.EKFStatus",
+        "MissionPlanner.Controls.ElevationProfile",
+        "MissionPlanner.Controls.fftui",
+        "MissionPlanner.Controls.FollowMe",
+        "MissionPlanner.Controls.GimbalControlSettingsForm",
+        "MissionPlanner.Controls.ControlType",
+        "MissionPlanner.Controls.PreferencesAttribute"
+      ],
+      "path": "5879e01dcd3e811c.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.GimbalControlSettings",
+        "MissionPlanner.Controls.GimbalVideoControl",
+        "MissionPlanner.Controls.GMAPCache",
+        "MissionPlanner.Controls.Loading",
+        "MissionPlanner.Controls.LogAnalyzer",
+        "MissionPlanner.Controls.MavCommandSelection",
+        "MissionPlanner.Controls.MavFTPUI",
+        "MissionPlanner.Controls.MavlinkCheckBox"
+      ],
+      "path": "28a37de7c4fcb55c.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.MavlinkCheckBoxBitMask",
+        "MissionPlanner.Controls.MavlinkComboBox",
+        "MissionPlanner.Controls.MAVLinkInspector",
+        "MissionPlanner.Controls.MavlinkNumericUpDown",
+        "MissionPlanner.Controls.MAVLinkParamChanged",
+        "MissionPlanner.Controls.ModifyandSet",
+        "MissionPlanner.Controls.MovingBase",
+        "MissionPlanner.Controls.MyDataGridView"
+      ],
+      "path": "a0a5cd5b82344ace.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.OpenGLtest",
+        "MissionPlanner.Controls.OpenGLtest2",
+        "MissionPlanner.Controls.OSDVideo",
+        "MissionPlanner.Controls.ParamCompare",
+        "MissionPlanner.Controls.PrearmStatus",
+        "MissionPlanner.Controls.PropagationSettings",
+        "MissionPlanner.Controls.ProximityControl",
+        "MissionPlanner.Controls.RAW_Sensor"
+      ],
+      "path": "5ab38d6b0c263d16.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.RelayOptions",
+        "MissionPlanner.Controls.SB",
+        "MissionPlanner.Controls.ScriptConsole",
+        "MissionPlanner.Controls.SerialOutputCoT",
+        "MissionPlanner.Controls.Utf8StringWriter",
+        "MissionPlanner.Controls.SerialOutputMD",
+        "MissionPlanner.Controls.SerialOutputNMEA",
+        "MissionPlanner.Controls.SerialOutputPass"
+      ],
+      "path": "452585d83c04dc10.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.SerialSupportProxy",
+        "MissionPlanner.Controls.ServoOptions",
+        "MissionPlanner.Controls.SpectrogramUI",
+        "MissionPlanner.Controls.ImageSharpExtensions",
+        "MissionPlanner.Controls.Status",
+        "MissionPlanner.Controls.ThemeEditor",
+        "MissionPlanner.Controls.ToolStripConnectionControl",
+        "MissionPlanner.Controls.Vibration"
+      ],
+      "path": "aea76565b069eb47.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.Video",
+        "MissionPlanner.Controls.VideoStreamSelector",
+        "MissionPlanner.Controls.PluginUI",
+        "MissionPlanner.Controls.PreFlight.CheckListControl",
+        "MissionPlanner.Controls.PreFlight.CheckListEditor",
+        "MissionPlanner.Controls.PreFlight.CheckListInput",
+        "MissionPlanner.Controls.PreFlight.CheckListItem",
+        "MissionPlanner.Controls.Icon.File"
+      ],
+      "path": "21f14d7c73982ec6.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MissionPlanner.Controls.Icon.Icon",
+        "MissionPlanner.Controls.Icon.Polygon",
+        "MissionPlanner.Controls.Icon.Zoom",
+        "MissionPlanner.Antenna.TrackerGeneric",
+        "MissionPlanner.Antenna.TrackerUI",
+        "<PrivateImplementationDetails>"
+      ],
+      "path": "dc70f62f92e79542.json",
+      "status": "complete"
+    }
+  ]
+}

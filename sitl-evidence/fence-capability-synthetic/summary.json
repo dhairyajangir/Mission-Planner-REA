@@ -1,0 +1,15 @@
+{
+  "scope": "Synthetic in-memory transport with zero capabilities and MAVLink 1; no vehicle or UI",
+  "lines": [
+    "FENCE_UPLOAD=Fence mission items not supported, please use legacy geofence BYTES=0",
+    "FENCE_DOWNLOAD=Fence mission items not supported, please use legacy geofence BYTES=0",
+    "RALLY_UPLOAD=Mission type only supported under mavlink2 BYTES=0",
+    "RALLY_DOWNLOAD=Mission type only supported under mavlink2 BYTES=0"
+  ],
+  "capture_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "probe_log_sha256": "bc9359a7a99033b1e8043549e4dbe749d6a01248a3d1224aaebf2d7930ca065f",
+  "probe_source_sha256": "52e488593840f8ac62a3065f02926e167a928eaf9a14558c9d00b5fcd395bfff",
+  "transport_source_sha256": "e3cf2b18424b8765049b16c218165ffc4e9f5f66fabc05430cbc8d82efe2603e",
+  "probe_exe_sha256": "f01c7779860f18793c6ec9cc6ed8843c14fd0542eedff9d76f576587dc507cb7",
+  "library_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c"
+}

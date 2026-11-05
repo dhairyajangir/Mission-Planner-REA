@@ -1,0 +1,3965 @@
+{
+  "scope": "Disposable source-built Copter SITL; standalone MAVLink client; no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "gps_initially_enabled": {
+      "passed": true,
+      "value": 1.0
+    },
+    "armed": {
+      "passed": true
+    },
+    "takeoff_and_initial_fix": {
+      "passed": true,
+      "peak_relative_alt_m": 3.428,
+      "fix_type": 6
+    },
+    "gps_disabled": {
+      "passed": true,
+      "value": 0.0
+    },
+    "gps_fix_lost": {
+      "passed": true,
+      "lowest_fix_type": 1
+    },
+    "gps_reenabled": {
+      "passed": true,
+      "value": 1.0
+    },
+    "gps_fix_recovered": {
+      "passed": true,
+      "fix_type": 6
+    },
+    "land_requested": {
+      "passed": true,
+      "mode": 9
+    },
+    "disarmed": {
+      "passed": true
+    }
+  },
+  "status_messages": [
+    "Barometer 1 calibration complete",
+    "Barometer 2 calibration complete",
+    "ArduPilot Ready",
+    "RC7: SaveWaypoint LOW",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "AHRS: EKF3 active",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "EKF3 IMU0 origin set",
+    "Field Elevation Set: 584m",
+    "EKF3 IMU1 origin set",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors",
+    "EKF3 IMU1 MAG0 in-flight yaw alignment complete",
+    "EKF3 IMU0 MAG0 in-flight yaw alignment complete",
+    "EKF3 lane switch 1",
+    "EKF3 primary changed:1",
+    "EKF variance: position lost",
+    "EKF Failsafe: changed to Land Mode",
+    "EKF3 IMU1 stopped aiding",
+    "EKF3 IMU0 stopped aiding",
+    "SmartRTL deactivated: bad position",
+    "SIM Hit ground at 0.500459 m/s",
+    "Disarming motors",
+    "EKF3 primary changed:0",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "EKF Failsafe Cleared"
+  ],
+  "events": [
+    {
+      "seconds": 2.066,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 2.851,
+      "type": "STATUSTEXT",
+      "text": "Barometer 1 calibration complete"
+    },
+    {
+      "seconds": 2.851,
+      "type": "STATUSTEXT",
+      "text": "Barometer 2 calibration complete"
+    },
+    {
+      "seconds": 2.929,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 2.982,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 3.38,
+      "type": "STATUSTEXT",
+      "text": "ArduPilot Ready"
+    },
+    {
+      "seconds": 3.577,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 3.676,
+      "type": "STATUSTEXT",
+      "text": "RC7: SaveWaypoint LOW"
+    },
+    {
+      "seconds": 3.819,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 3.964,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 4.071,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 4.322,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 4.57,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 4.57,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 4.82,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 4.82,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 4.966,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 5.072,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 5.072,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 5.318,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 5.318,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 5.383,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 initialised"
+    },
+    {
+      "seconds": 5.383,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 initialised"
+    },
+    {
+      "seconds": 5.383,
+      "type": "STATUSTEXT",
+      "text": "AHRS: EKF3 active"
+    },
+    {
+      "seconds": 5.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 5.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 5.819,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 5.819,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 5.964,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 6.071,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 6.071,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 6.318,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 6.318,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 1024
+    },
+    {
+      "seconds": 6.569,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 6.57,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 0
+    },
+    {
+      "seconds": 6.731,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 tilt alignment complete"
+    },
+    {
+      "seconds": 6.731,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 tilt alignment complete"
+    },
+    {
+      "seconds": 6.82,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 6.82,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 0
+    },
+    {
+      "seconds": 6.825,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 6.825,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 MAG0 initial yaw alignment complete"
+    },
+    {
+      "seconds": 6.965,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 7.071,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 7.071,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 7.322,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 7.322,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 7.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 7.573,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 7.819,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 7.819,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 7.964,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 8.069,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 8.07,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 8.32,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 8.32,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 8.571,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 8.571,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 8.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 8.823,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 8.963,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 9.069,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 9.069,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 9.322,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 9.323,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 9.568,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 9.568,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 9.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 9.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 9.964,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 10.072,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 10.072,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 10.321,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 10.321,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 10.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 0,
+      "satellites_visible": 0
+    },
+    {
+      "seconds": 10.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 10.736,
+      "type": "STATUSTEXT",
+      "text": "GPS 1: probing for u-blox at 230400 baud"
+    },
+    {
+      "seconds": 10.759,
+      "type": "STATUSTEXT",
+      "text": "GPS 1: detected u-blox"
+    },
+    {
+      "seconds": 10.819,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 10.82,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 10.965,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 11.071,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 11.071,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 11.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 11.324,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 11.571,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 11.571,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 11.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 11.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 11.964,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 12.07,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 12.07,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 12.319,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 12.319,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 12.57,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 12.57,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 12.82,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 12.82,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 12.965,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 13.07,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 13.071,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 13.322,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 13.322,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 13.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 13.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 13.822,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 13.822,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 13.963,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 14.069,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 14.069,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 14.32,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 14.32,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 14.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 14.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 14.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 14.823,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 14.963,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 15.069,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 15.069,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 15.32,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 15.32,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 15.57,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 15.57,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 15.821,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 15.821,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 15.966,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 16.071,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 16.072,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 16.323,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 16.323,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 16.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 16.573,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 16.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 16.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 16.963,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 17.069,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 17.069,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 17.32,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 17.32,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 17.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 17.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 17.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 17.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 17.969,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 18.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 18.074,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 18.32,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 18.32,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 18.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 18.573,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 18.821,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 18.822,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 18.966,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 19.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 19.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 19.325,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 19.325,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 19.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 19.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 19.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 19.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 19.967,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 20.072,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 20.073,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 20.326,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 20.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 20.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 20.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 20.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 20.823,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 20.95,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 origin set"
+    },
+    {
+      "seconds": 20.966,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 20.979,
+      "type": "STATUSTEXT",
+      "text": "Field Elevation Set: 584m"
+    },
+    {
+      "seconds": 21.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 21.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 21.143,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 origin set"
+    },
+    {
+      "seconds": 21.323,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 21.323,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 21.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 21.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 21.822,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 21.822,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 21.968,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 22.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 22.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 22.326,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 22.326,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 22.571,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 22.571,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 22.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 22.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 22.968,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 23.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 23.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 23.326,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 23.326,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 23.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 23.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 23.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 23.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 23.969,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 24.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 24.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 24.323,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 24.323,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 24.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 24.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 24.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 24.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 24.969,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 25.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 25.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 25.321,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 25.322,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 25.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 25.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 25.822,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 25.822,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 25.968,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 26.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 26.074,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 26.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 26.324,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 26.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 26.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 26.826,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 26.826,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 26.965,
+      "type": "HEARTBEAT",
+      "mode": 0,
+      "armed": false
+    },
+    {
+      "seconds": 27.072,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 27.072,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 27.08,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 27.085,
+      "type": "STATUSTEXT",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 27.325,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 27.325,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 27.383,
+      "type": "STATUSTEXT",
+      "text": "PreArm: Need Position Estimate"
+    },
+    {
+      "seconds": 27.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 27.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 27.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 27.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 27.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 28.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 28.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 28.321,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 28.321,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 28.572,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 28.572,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 28.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 28.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 28.967,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 29.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 29.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 29.323,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 29.323,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 29.576,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 29.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 29.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 29.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 29.968,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 30.072,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 30.072,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 30.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 30.325,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 30.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 30.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 30.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 30.826,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 30.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 31.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 31.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 31.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 31.324,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 31.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 31.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 31.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 31.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 31.969,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 32.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 32.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 32.322,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 32.322,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 32.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 32.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 32.827,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 32.827,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 32.968,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 33.077,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 33.077,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 33.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 33.324,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 33.576,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 33.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 33.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 33.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 33.971,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 34.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 34.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 34.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 34.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 34.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 34.573,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 34.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 34.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 34.967,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 35.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 35.078,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 35.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 35.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 35.332,
+      "type": "STATUSTEXT",
+      "text": "Arm: Need Position Estimate"
+    },
+    {
+      "seconds": 35.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 35.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 35.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 35.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 35.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 36.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 36.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 36.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 36.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 36.573,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 36.573,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 36.823,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 36.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 36.968,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 37.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 37.074,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 37.325,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 37.325,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 37.576,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 37.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 37.827,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 37.827,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 37.968,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 38.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 38.074,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 38.324,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 38.325,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 38.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 38.575,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 38.826,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 38.826,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 38.971,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 39.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 39.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 39.328,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 39.328,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 39.578,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 39.578,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 39.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 39.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 39.969,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 40.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 40.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 40.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 40.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 40.574,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 40.574,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 40.826,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 40.826,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 40.972,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 41.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 41.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 41.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 41.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 41.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 41.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 41.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 41.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 41.972,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 42.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 42.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 42.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 42.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 42.551,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 is using GPS"
+    },
+    {
+      "seconds": 42.551,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 is using GPS"
+    },
+    {
+      "seconds": 42.575,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 42.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 42.824,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 42.824,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 42.969,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": false
+    },
+    {
+      "seconds": 43.074,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 43.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 43.326,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 43.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 43.332,
+      "type": "STATUSTEXT",
+      "text": "Arming motors"
+    },
+    {
+      "seconds": 43.577,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 43.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 43.829,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 43.829,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 43.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 44.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 44.075,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 44.326,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 44.326,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 44.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 44.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 44.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 44.826,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 44.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 45.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 45.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 45.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 45.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 45.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 45.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 45.825,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 45.825,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 45.971,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 46.077,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 46.077,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 46.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 46.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 46.578,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 46.578,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 46.83,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 46.83,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 46.969,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 47.075,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 47.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 47.33,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 47.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 47.576,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 47.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 47.829,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 47.83,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 47.974,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 48.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 48.081,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 48.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 48.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 48.58,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 48.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 48.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 48.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 48.973,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 49.025,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 MAG0 in-flight yaw alignment complete"
+    },
+    {
+      "seconds": 49.031,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 MAG0 in-flight yaw alignment complete"
+    },
+    {
+      "seconds": 49.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 49.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 49.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 49.328,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 49.333,
+      "type": "gps_disable_confirmed"
+    },
+    {
+      "seconds": 49.578,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 49.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 49.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 49.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 49.971,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 50.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 50.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 50.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 50.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 50.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 50.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 50.827,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 50.827,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 50.973,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 51.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 51.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 51.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 51.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 51.577,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 51.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 51.832,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 51.832,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 51.972,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 52.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 52.08,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 52.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 52.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 52.576,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 52.576,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 52.83,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 52.83,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 52.97,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 53.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 53.078,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 53.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 53.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 53.577,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 53.577,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 53.828,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 53.828,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 53.972,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 54.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 54.078,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 54.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 54.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 54.58,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 54.58,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 54.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 54.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 54.971,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 55.076,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 55.076,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 55.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 55.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 55.578,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 55.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 55.829,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 55.829,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 55.974,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 56.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 56.08,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 56.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 56.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 56.581,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 56.582,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 56.827,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 56.827,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 56.972,
+      "type": "HEARTBEAT",
+      "mode": 4,
+      "armed": true
+    },
+    {
+      "seconds": 57.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 57.078,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 57.33,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 57.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 57.387,
+      "type": "STATUSTEXT",
+      "text": "EKF3 lane switch 1"
+    },
+    {
+      "seconds": 57.387,
+      "type": "STATUSTEXT",
+      "text": "EKF3 primary changed:1"
+    },
+    {
+      "seconds": 57.486,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 57.487,
+      "type": "STATUSTEXT",
+      "text": "EKF variance: position lost"
+    },
+    {
+      "seconds": 57.487,
+      "type": "STATUSTEXT",
+      "text": "EKF Failsafe: changed to Land Mode"
+    },
+    {
+      "seconds": 57.58,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 57.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 57.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 57.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 57.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 58.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 58.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 58.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 58.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 58.58,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 58.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 58.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 58.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 58.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 59.081,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 59.082,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 59.327,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 59.327,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 59.577,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 59.578,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 59.828,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 59.828,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 59.973,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 60.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 60.08,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 60.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 60.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 60.581,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 60.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 60.832,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 60.832,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 60.971,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 61.077,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 61.077,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 61.328,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 61.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 61.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 61.58,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 61.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 61.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 61.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 62.083,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 62.083,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 62.33,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 62.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 62.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 62.583,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 62.829,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 62.83,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 62.974,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 63.082,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 63.083,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 63.328,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 63.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 63.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 63.579,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 63.83,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 63.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 63.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 64.081,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 64.082,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 64.332,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 64.332,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 37
+    },
+    {
+      "seconds": 64.564,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 stopped aiding"
+    },
+    {
+      "seconds": 64.565,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 stopped aiding"
+    },
+    {
+      "seconds": 64.583,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 64.583,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 64.828,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 64.828,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 64.973,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 65.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 65.079,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 65.33,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 65.33,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 65.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 65.583,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 65.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 65.832,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 65.978,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 66.083,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 66.083,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 66.332,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 66.332,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 66.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 66.582,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 66.833,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 66.833,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 66.973,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 67.078,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 67.078,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 67.329,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 67.329,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 67.58,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 67.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 67.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 67.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 67.975,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 68.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 68.081,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 68.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 68.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 68.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 68.582,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 68.83,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 68.83,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 68.975,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 69.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 69.08,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 69.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 69.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 69.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 69.582,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 69.833,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 69.833,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 69.977,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 70.083,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 70.083,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 70.334,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 70.334,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 70.579,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 70.58,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 70.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 70.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 70.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 71.081,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 71.082,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 71.333,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 71.333,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 71.548,
+      "type": "STATUSTEXT",
+      "text": "SmartRTL deactivated: bad position"
+    },
+    {
+      "seconds": 71.583,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 71.584,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 71.829,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 71.829,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 71.928,
+      "type": "STATUSTEXT",
+      "text": "SIM Hit ground at 0.500459 m/s"
+    },
+    {
+      "seconds": 71.975,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 72.08,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 72.081,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 72.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 72.331,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 72.582,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 72.582,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 72.833,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 72.833,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 72.978,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 73.083,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 73.083,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 73.334,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 73.334,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 73.581,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 73.581,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 73.833,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 73.834,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 73.973,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": true
+    },
+    {
+      "seconds": 74.032,
+      "type": "STATUSTEXT",
+      "text": "Disarming motors"
+    },
+    {
+      "seconds": 74.033,
+      "type": "STATUSTEXT",
+      "text": "EKF3 primary changed:0"
+    },
+    {
+      "seconds": 74.082,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 74.082,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 74.333,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 74.333,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 74.584,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 74.584,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 74.59,
+      "type": "gps_restore_confirmed"
+    },
+    {
+      "seconds": 74.831,
+      "type": "GPS_RAW_INT",
+      "fix_type": 1,
+      "satellites_visible": 3
+    },
+    {
+      "seconds": 74.831,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 167
+    },
+    {
+      "seconds": 74.953,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU0 is using GPS"
+    },
+    {
+      "seconds": 74.959,
+      "type": "STATUSTEXT",
+      "text": "EKF3 IMU1 is using GPS"
+    },
+    {
+      "seconds": 74.976,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": false
+    },
+    {
+      "seconds": 75.082,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 75.082,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 75.333,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 75.333,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 75.584,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 75.584,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 75.834,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 75.834,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 75.886,
+      "type": "STATUSTEXT",
+      "text": "EKF Failsafe Cleared"
+    },
+    {
+      "seconds": 75.974,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": false
+    },
+    {
+      "seconds": 76.079,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 76.08,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 76.331,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 76.332,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 76.586,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 76.586,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 76.834,
+      "type": "GPS_RAW_INT",
+      "fix_type": 6,
+      "satellites_visible": 10
+    },
+    {
+      "seconds": 76.835,
+      "type": "EKF_STATUS_REPORT",
+      "flags": 831
+    },
+    {
+      "seconds": 76.975,
+      "type": "HEARTBEAT",
+      "mode": 9,
+      "armed": false
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

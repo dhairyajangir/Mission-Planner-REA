@@ -1,0 +1,28 @@
+{
+  "scope": "Disposable source-built Copter SITL; benign script and standalone client; no physical aircraft",
+  "scenario": "disabled_directory",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "script_sha256": "7efa109ef085d925b7217e07cc64c1c2af50c9842ea383fc57ed6a9b62e3364a",
+  "messages": [],
+  "status_text": [
+    "Barometer 1 calibration complete",
+    "Barometer 2 calibration complete",
+    "ArduPilot Ready",
+    "Lua: All directory's disabled see SCR_DIR_DISABLE",
+    "RC7: SaveWaypoint LOW",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "AHRS: EKF3 active",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox"
+  ],
+  "errors": [],
+  "scr_enable": 1.0,
+  "scr_dir_disable": 2.0,
+  "observation_seconds": 15.02753824599995,
+  "passed": true
+}

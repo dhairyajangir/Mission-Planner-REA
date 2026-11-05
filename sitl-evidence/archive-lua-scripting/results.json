@@ -1,0 +1,8 @@
+{
+  "scope": "Disposable source-built Copter SITL; benign script and standalone client; no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "script_sha256": "7efa109ef085d925b7217e07cc64c1c2af50c9842ea383fc57ed6a9b62e3364a",
+  "messages": [],
+  "errors": [],
+  "passed": false
+}

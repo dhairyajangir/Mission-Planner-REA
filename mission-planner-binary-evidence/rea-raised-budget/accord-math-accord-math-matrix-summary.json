@@ -1,0 +1,13 @@
+{
+  "assembly": "Accord.Math.dll",
+  "selection": "Accord.Math.Matrix",
+  "process_exit": 0,
+  "coverage": {
+    "state": "complete",
+    "issues": []
+  },
+  "types": 1,
+  "methods": 7578,
+  "capture_sha256": "32b28e2a15012a72ddb0d7e222950b1977b76b17e2587407c012b704bb9e0496",
+  "tool_modification": "../rea-raised-budget-modification.json"
+}

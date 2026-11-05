@@ -1,0 +1,36 @@
+{
+  "fileType": "Plan",
+  "version": 1,
+  "mission": {
+    "plannedHomePosition": [
+      -35.363261,
+      149.16523,
+      584
+    ],
+    "items": [
+      {
+        "type": "SimpleItem",
+        "command": 16,
+        "frame": 3,
+        "doJumpId": 1,
+        "autoContinue": true,
+        "params": [
+          2,
+          null,
+          0,
+          0,
+          -35.3625,
+          149.166,
+          25
+        ]
+      },
+      {
+        "type": "ComplexItem",
+        "complexItemType": "survey"
+      },
+      {
+        "type": "UnrecognizedItem"
+      }
+    ]
+  }
+}

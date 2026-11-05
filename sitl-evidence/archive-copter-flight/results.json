@@ -1,0 +1,17 @@
+{
+  "scope": "Local source-built ArduCopter SITL only; no Mission Planner or physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "guided_mode": {
+      "passed": true,
+      "mode": 4
+    },
+    "armed": {
+      "passed": false
+    }
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/copter-flight-probe.py\", line 70, in <module>\n    raise RuntimeError('simulator did not arm with its normal checks')\nRuntimeError: simulator did not arm with its normal checks\n"
+  ],
+  "passed": false
+}

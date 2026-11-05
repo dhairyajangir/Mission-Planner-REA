@@ -1,0 +1,18 @@
+{
+  "scope": "Original library through test TCP relay to one disposable source-built Copter SITL",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "events": [
+    "session1_accept",
+    "session1_reset",
+    "session2_accept",
+    "session2_client_eof"
+  ],
+  "errors": [],
+  "captures_sha256": {
+    "downlink1.bin": "70fec308a3c6482743593922943255a70b433d3833e0f7be2deac1dc4de36285",
+    "downlink2.bin": "57daa1342c4b44763198d333244201ad0a09eb7fb3989d5e7bf8fa5deb446394",
+    "eeprom.bin": "c8bb967a0f03b0a840353b7475806e16e73919e7c3d3ac372505e512cef9cccb",
+    "uplink1.bin": "71abfe25cb3f78d4c4727571563bc3def9433860c20e6e337babe545d7aa1e46",
+    "uplink2.bin": "2c985e690b6af69e9fb3febd0537792865f83fef7dd5c8d42a69f197991c83f9"
+  }
+}

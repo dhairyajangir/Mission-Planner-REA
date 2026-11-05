@@ -1,0 +1,217 @@
+FIXTURE_SHA256=e94fa1713b8ebde9e83b48273226ee5c0b913523a0be746f28d55b577ea89fcd
+251 [1] INFO MissionPlanner.Utilities.srtm (null) - .cctor
+336 [1] INFO MissionPlanner.Utilities.srtm (null) - requestRunner start
+358 [1] INFO MissionPlanner.Utilities.srtm (null) - C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\terrain-slope-fixture-data
+SRTM_TYPE=valid HEIGHT=832.465200000021 SOURCE=SRTM
+583 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+591 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+591 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+591 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+603 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+615 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+630 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+637 [4] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+637 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 266 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+637 [4] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7411 0
+644 [4] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7411
+646 [4] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+646 [4] INFO MissionPlanner.MAVLinkInterface (null) - 183 Start connect loop 
+670 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+702 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+702 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+761 [4] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+769 [4] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 4.693359375 mav2 False sign False mav1 0 mav2 0 signed 0      
+806 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+806 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+811 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+811 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+811 [6] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+821 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+821 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+899 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:45 PM 7 RCInput: decoding UDP (Pulses)
+933 [5] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:45 PM 6 Calibrating barometer
+1661 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+bps 521 loss 0 left 0 mem 4.982421875 mav2 False sign False mav1 0 mav2 14 signed 0      
+1803 [7] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1803 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1806 [4] INFO MissionPlanner.MAVLinkInterface (null) - 343 Start connect loop 
+1813 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1813 [4] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1813 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1813 [4] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1813 [4] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1821 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 42 loss 0 left 276 mem 13.60546875 mav2 True sign False mav1 0 mav2 2 signed 0      
+2595 [7] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2596 [7] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:47 PM 6 Barometer 1 calibration complete
+2596 [7] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:47 PM 6 Barometer 2 calibration complete
+Init Gyro*2668 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2668 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2688 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2688 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2703 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2704 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2704 [4] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2704 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+3248 [7] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+3793 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+4365 [5] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4916 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1410018405
+4929 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4929 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4931 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4931 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4931 [4] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4931 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+OPEN=True SELECTED=1:1
+4939 [1] INFO MissionPlanner.MAVLinkInterface (null) - Request stream ALL at 4 hz for 1:1
+REQUESTED_ALL_STREAMS_HZ=4
+SENT_TERRAIN_CHECK
+bps 333 loss 0 left 1201 mem 13.8544921875 mav2 True sign False mav1 0 mav2 9 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+4939 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+4939 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4939 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4950 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 ArduCopter V4.8.0-dev (72b23820)
+4950 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 �04cfea5c7cf4f1fb8b47f8b3e8289cf
+4950 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 Frame: QUAD/PLUS
+REPORT_LAT=-353632610 LON=1491652300 HEIGHT=0 PENDING=56 LOADED=0
+5039 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 EKF3 IMU0 initialised
+5040 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 EKF3 IMU1 initialised
+5040 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:49 PM 6 AHRS: EKF3 active
+5450 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - received TERRAIN_REQUEST -35.374769 149.1548424 space 100 11111111111111111111111111111111111111111111111111111111
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037927935
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=56 LOADED=0
+5454 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+5457 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374769 149.1548424 space 100 bit 0
+5550 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747689200003 149.159249265008 space 100 bit 1
+bps 2207 loss 0 left 0 mem 14.337890625 mav2 True sign False mav1 0 mav2 60 signed 0      
+5645 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.374768680001 149.163656129998 space 100 bit 2
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037927928
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=53 LOADED=3
+5672 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+5733 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747682800023 149.168062994954 space 100 bit 3
+5827 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747677200041 149.172469859857 space 100 bit 4
+5917 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747670000065 149.17687672469 space 100 bit 5
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037927904
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=51 LOADED=5
+5917 [1] INFO MissionPlanner.CurrentState (null) - EKF red uninit EKF_UNINITIALIZED
+6012 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747661200093 149.181283589435 space 100 bit 6
+6102 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3747650800127 149.185690454076 space 100 bit 7
+6197 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711757180187 149.1548424 space 100 bit 8
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037927680
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=48 LOADED=8
+6292 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711756380248 149.159249068796 space 100 bit 9
+6338 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:50 PM 6 EKF3 IMU0 tilt alignment complete
+6360 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:50 PM 6 EKF3 IMU1 tilt alignment complete
+6384 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711753980434 149.163655737575 space 100 bit 10
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037925888
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=45 LOADED=11
+6449 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:50 PM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+6450 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 12:45:50 PM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+6479 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711749980742 149.168062406318 space 100 bit 11
+bps 3481 loss 0 left 0 mem 15.125 mav2 True sign False mav1 0 mav2 105 signed 0      
+6567 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711744381174 149.17246907501 space 100 bit 12
+6663 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371173718173 149.176875743631 space 100 bit 13
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037919744
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=43 LOADED=13
+6750 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.371172838241 149.181282412165 space 100 bit 14
+6846 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3711717983213 149.185689080594 space 100 bit 15
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037862400
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=40 LOADED=16
+6935 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675824360373 149.1548424 space 100 bit 16
+7021 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675823560494 149.159248872613 space 100 bit 17
+7115 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675821160857 149.163655345209 space 100 bit 18
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594037403648
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=37 LOADED=19
+7204 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675817161461 149.16806181777 space 100 bit 19
+7299 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675811562308 149.172468290279 space 100 bit 20
+7394 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675804363396 149.176874762718 space 100 bit 21
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594035830784
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=35 LOADED=21
+7486 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675795564726 149.181281235069 space 100 bit 22
+bps 3589 loss 0 left 0 mem 14.2158203125 mav2 True sign False mav1 0 mav2 105 signed 0      
+7581 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3675785166299 149.185687707316 space 100 bit 23
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057594021150720
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=32 LOADED=24
+7671 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989154056 149.1548424 space 100 bit 24
+7704 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7713 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7713 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+7736 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7736 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7736 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7751 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7751 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7751 [6] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7751 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7767 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363989074074 149.15924867646 space 100 bit 25
+7862 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988834128 149.163654952902 space 100 bit 26
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057593903710208
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=29 LOADED=27
+7950 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.363988434218 149.168061229309 space 100 bit 27
+8045 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639878743441 149.172467505664 space 100 bit 28
+8131 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639871545061 149.17687378195 space 100 bit 29
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057593501057024
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=27 LOADED=29
+8220 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639862747043 149.181280058147 space 100 bit 30
+8313 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3639852349384 149.18568633424 space 100 bit 31
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057589742960640
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=24 LOADED=32
+8404 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603958720746 149.1548424 space 100 bit 32
+8494 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603957920985 149.159248480335 space 100 bit 33
+bps 3655 loss 0 left 0 mem 15.1123046875 mav2 True sign False mav1 0 mav2 108 signed 0      
+8581 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603955521703 149.163654560653 space 100 bit 34
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057559678189568
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=21 LOADED=35
+8669 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603951522899 149.168060640936 space 100 bit 35
+8766 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603945924574 149.172466721166 space 100 bit 36
+8862 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603938726727 149.176872801326 space 100 bit 37
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72057456598974464
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=19 LOADED=37
+8949 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603929929359 149.1812788814 space 100 bit 38
+9042 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3603919532469 149.185684961368 space 100 bit 39
+SENT_TERRAIN_CHECK
+9131 [5] INFO MissionPlanner.Utilities.TerrainFollow (null) - SendGrid -35.3568025900933 149.1548424 space 100 bit 40
+REQUEST_LAT=-353747690 LON=1491548424 SPACING=100 MASK=72056494526300160
+REPORT_LAT=0 LON=0 HEIGHT=0 PENDING=16 LOADED=40
+REPORT_LAT=-353632610 LON=1491652300 HEIGHT=831.9949 PENDING=16 LOADED=40
+FIXTURE_REPORT_MATCH=True
+9133 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+9135 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+9135 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+9137 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7411

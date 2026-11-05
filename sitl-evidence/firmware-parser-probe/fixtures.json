@@ -1,0 +1,32 @@
+[
+  {
+    "file": "exact-4.apj",
+    "declared": 4,
+    "decompressed_hex": "41424344",
+    "sha256": "fe3a19bf8abd10b3ec962230505be3252dac52b1212fbedc54509e4f785243c5"
+  },
+  {
+    "file": "short-image.apj",
+    "declared": 8,
+    "decompressed_hex": "41424344",
+    "sha256": "88a28fabcfff0d9b024f26e304550fab7696b092e47a999c5e35504c1c0af83b"
+  },
+  {
+    "file": "exact-3.apj",
+    "declared": 3,
+    "decompressed_hex": "414243",
+    "sha256": "c4517e7f7d10efab051958e25a04f6cfa29b2f6b42b67120de7147f3ee65fd42"
+  },
+  {
+    "file": "exact-5.apj",
+    "declared": 5,
+    "decompressed_hex": "4142434445",
+    "sha256": "ec559b3731d680906cdce4d532492d0110d288a806c26744d458b493988afa8a"
+  },
+  {
+    "file": "exact-7.apj",
+    "declared": 7,
+    "decompressed_hex": "41424344454647",
+    "sha256": "4470d80ee8cb22ed7b397bb2a25ac58f98afb604af8ed88fd8c7cfbb5ae47362"
+  }
+]

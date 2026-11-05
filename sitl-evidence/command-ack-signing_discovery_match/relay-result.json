@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable disarmed Copter SITL; synthetic MAVLink signing key",
+  "case": "signing_discovery_match",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7550,
+  "proxy_port": 7551,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "899bf11abb34ac703a4874f1135ebbb56095d889ad69c42ed0d5f3d5e1090f27",
+    "to_client_output.bin": "899bf11abb34ac703a4874f1135ebbb56095d889ad69c42ed0d5f3d5e1090f27",
+    "to_sitl_input.bin": "ac48b698b0a320c9dc08d02db7cd60a2c796c3b47871bf80ad91448eddbcafcf",
+    "to_sitl_output.bin": "ac48b698b0a320c9dc08d02db7cd60a2c796c3b47871bf80ad91448eddbcafcf"
+  }
+}

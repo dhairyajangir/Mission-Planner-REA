@@ -1,0 +1,390 @@
+{
+  "scope": "Disposable source-built Copter SITL; standalone MAVLink client; no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "auto_option": {
+      "passed": true,
+      "value": 2
+    },
+    "resume_option": {
+      "passed": true,
+      "value": 0.0
+    },
+    "upload": {
+      "passed": true,
+      "ack": 0,
+      "sent": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "armed": {
+      "passed": true
+    },
+    "auto_mode": {
+      "passed": true
+    },
+    "waypoint_selected": {
+      "passed": true,
+      "seq": 2
+    },
+    "pause_mode": {
+      "passed": true,
+      "mode": 5
+    },
+    "paused_sequence": {
+      "passed": true,
+      "sequences": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "resumed_mode": {
+      "passed": false
+    }
+  },
+  "status_messages": [
+    "Flight plan received",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors",
+    "Mission: 1 Takeoff",
+    "EKF3 IMU0 MAG0 in-flight yaw alignment complete",
+    "EKF3 IMU1 MAG0 in-flight yaw alignment complete",
+    "Mission: 2 WP",
+    "SIM Hit ground at 2.435611 m/s",
+    "Auto: Missing Takeoff Cmd",
+    "Mode change to Auto failed: init failed",
+    "Disarming motors"
+  ],
+  "mission_current": [],
+  "mission_reached": [],
+  "events": [
+    {
+      "seconds": 45.055,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.305,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.556,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.802,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.055,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.301,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.552,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.803,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.055,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.306,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.556,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.802,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.054,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.305,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.555,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.803,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.054,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.305,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.556,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.807,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.057,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.302,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.553,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.804,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.056,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.303,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.555,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.56,
+      "type": "LOITER_observed",
+      "observed": true
+    },
+    {
+      "seconds": 51.805,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.056,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.307,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.553,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.804,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.055,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.307,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.557,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.803,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.052,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.304,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.555,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.802,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.053,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.304,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.556,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.805,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.056,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.307,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.557,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.803,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 76.974,
+      "type": "AUTO_resumed",
+      "observed": false
+    }
+  ],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/copter-mission-resume-probe.py\", line 160, in <module>\n    raise RuntimeError('resumed AUTO not observed')\nRuntimeError: resumed AUTO not observed\n"
+  ],
+  "passed": false
+}

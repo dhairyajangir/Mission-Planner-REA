@@ -1,0 +1,87 @@
+{
+  "scope": "Original library and disposable Copter SITL; relay inserts unsigned synthetic progress ACK",
+  "form": "int",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; relay inserts one IN_PROGRESS ACK before the real ACK",
+    "case": "inject_progress",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7100,
+    "proxy_port": 7101,
+    "requests": [
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      }
+    ],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "injected_acks": 1,
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "injected_ack.bin": "efed3e99b95027bebb77a81cdec68c9acfe4ad833c3c8b08a6b45ca849a4372f",
+      "original_ack.bin": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734",
+      "to_client_input.bin": "aee789052af9a1ee6f0d3e451d282758c311574a63a487e03ff2c92ece3c5ff1",
+      "to_client_output.bin": "ee7c1a4631f5f33820fbed855f5a668201d00ebca067cf744d2a9e96bd9e98eb",
+      "to_sitl_input.bin": "382b82bae377ae30a71d3b2645628d3c8a4da59a012218bee86d8770fa0a4968",
+      "to_sitl_output.bin": "382b82bae377ae30a71d3b2645628d3c8a4da59a012218bee86d8770fa0a4968"
+    }
+  },
+  "original": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 0,
+    "target": [
+      255,
+      190
+    ],
+    "seq": 56
+  },
+  "injected": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 5,
+    "target": [
+      255,
+      190
+    ],
+    "seq": 56
+  },
+  "byte_differences": [
+    12,
+    20,
+    21
+  ],
+  "requests": [
+    {
+      "type": "COMMAND_INT",
+      "source": [
+        255,
+        190
+      ],
+      "target": [
+        1,
+        1
+      ],
+      "param1": 30.0
+    }
+  ],
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "FORM=int RESULT=False"
+  ]
+}

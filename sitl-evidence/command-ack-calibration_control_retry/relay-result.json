@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; armed-state calibration rejection; no deliberate packet loss",
+  "case": "calibration_control_retry",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7310,
+  "proxy_port": 7311,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "ff6492dbafbc22fe11faa2c3ed815bb1e5e3c278b42377e12357f3aed52a28b7",
+    "to_client_output.bin": "ff6492dbafbc22fe11faa2c3ed815bb1e5e3c278b42377e12357f3aed52a28b7",
+    "to_sitl_input.bin": "781a0fca151b2c2ccb78d777b36f91cf6332dfcad20bc30817d0f66fc2fa2748",
+    "to_sitl_output.bin": "781a0fca151b2c2ccb78d777b36f91cf6332dfcad20bc30817d0f66fc2fa2748"
+  }
+}

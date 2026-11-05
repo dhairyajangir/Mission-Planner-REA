@@ -1,0 +1,4 @@
+FENCE_UPLOAD=Fence mission items not supported, please use legacy geofence BYTES=0
+FENCE_DOWNLOAD=Fence mission items not supported, please use legacy geofence BYTES=0
+RALLY_UPLOAD=Mission type only supported under mavlink2 BYTES=0
+RALLY_DOWNLOAD=Mission type only supported under mavlink2 BYTES=0

@@ -1,0 +1,15 @@
+{
+  "module": "modules/mavlink/pymavlink",
+  "windows_extraction": "symlink payloads stored as ordinary files",
+  "linux_temporary_build": "safe relative symlinks recreated",
+  "entries": [
+    {
+      "archive_path": "pymavlink-eb88edf2f802d012be9d566800d74d5ca9f7fb89/generator/javascript/node_modules/jspack",
+      "link_target": "../local_modules/jspack"
+    },
+    {
+      "archive_path": "pymavlink-eb88edf2f802d012be9d566800d74d5ca9f7fb89/generator/javascript/node_modules/long",
+      "link_target": "../local_modules/long"
+    }
+  ]
+}

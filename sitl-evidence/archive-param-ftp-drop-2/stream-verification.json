@@ -1,0 +1,25 @@
+{
+  "scope": "offline comparison of captured proxy streams, with independent CRC decoding of dropped frames",
+  "downlink_input_sha256": "e3efbbf182676dc6327fdf81a871f82d3a27a3227dd35596567d603f411cab14",
+  "downlink_output_sha256": "79febe08a910848076a481e903902c61f0b748289c14033e1673309076d954b8",
+  "uplink_input_sha256": "2525c45655c5aa3974f9300bf82cde8d10cc8b52e9c3b289337b3b495fc41160",
+  "uplink_output_sha256": "2525c45655c5aa3974f9300bf82cde8d10cc8b52e9c3b289337b3b495fc41160",
+  "stray_bytes": 164,
+  "stray_hex": "0a0a496e69742041726475436f707465722056342e382e302d64657620283732623233383230290a0a467265652052414d3a203532343238380a426f6f74696e6720302f300a4669726d77617265206368616e67653a2065726173696e6720454550524f4d2e2e2e0a646f6e652e0a30203020302041505f4c6f676765725f46696c653a206275666665722073697a653d3230343830300a496e6974204779726f2a2a0a",
+  "dropped_valid_ftp_frames": 10,
+  "uplink_message_counts": {
+    "HEARTBEAT": 3,
+    "STATUSTEXT": 3,
+    "COMMAND_LONG": 7,
+    "AUTOPILOT_VERSION_REQUEST": 4,
+    "MISSION_REQUEST_LIST": 1,
+    "TIMESYNC": 3,
+    "FILE_TRANSFER_PROTOCOL": 10,
+    "PARAM_REQUEST_LIST": 1
+  },
+  "downlink_matches_filtered_input": true,
+  "uplink_unchanged": true,
+  "dropped_capture_matches": true,
+  "errors": [],
+  "passed": true
+}

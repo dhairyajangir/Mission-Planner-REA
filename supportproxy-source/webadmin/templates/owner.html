@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% from "_macros.html" import row, check, tip %}
+{% block title %}My entry — {{ config.WEBUI_TITLE }}{% endblock %}
+{% block auto_refresh_seconds %}5{% endblock %}
+{% block content %}
+<h2>Active connections ({{ active | length }})</h2>
+<table class="entries">
+  <thead><tr>
+    <th>side</th><th>transport</th><th>peer</th>
+    <th>uptime</th><th>rx</th><th>tx</th>
+    <th></th>
+  </tr></thead>
+  <tbody>
+    {% for c in active %}
+    <tr>
+      <td>{{ 'user' if c.is_user else 'engineer #%d' % c.conn_index }}</td>
+      <td>{{ c.transport_name }}</td>
+      <td>{{ c.peer }}</td>
+      <td>{{ c.uptime_s() }}s</td>
+      <td>{{ c.rx_msgs }}</td>
+      <td>{{ c.tx_msgs }}</td>
+      <td>
+        <form method="post"
+              action="{{ url_for('owner.kill_connection', conn_index=c.conn_index) }}"
+              class="inline">
+          {{ kill_form.csrf_token }}
+          <button type="submit" class="danger"
+                  onclick="return confirm({% if c.is_user %}'Drop the user connection? This ends the whole session.'{% else %}'Drop engineer #{{ c.conn_index }}? Other connections stay up.'{% endif %});">
+            kill
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7"><em>(none)</em></td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>My entry</h2>
+<dl class="entry-info">
+  <dt>port1 (user side)</dt><dd>{{ entry.port1 }}</dd>
+  <dt>port2 (engineer side)</dt><dd>{{ entry.port2 }}</dd>
+  <dt>traffic counters (port1 / port2)</dt><dd>{{ entry.count1 }} / {{ entry.count2 }}</dd>
+  <dt>connections</dt><dd>{{ entry.connections }}</dd>
+  <dt>signing timestamp</dt><dd>{{ entry.timestamp }}</dd>
+  <dt>flags</dt><dd>{{ entry.flag_names() | join(', ') or '(none)' }}</dd>
+</dl>
+<form method="post" action="{{ url_for('owner.me') }}">
+  {{ form.csrf_token }}
+  {{ row(form.name) }}
+  {{ row(form.new_passphrase) }}
+  {{ row(form.confirm_passphrase) }}
+  {{ check(form.bidi_sign) }}
+  {{ check(form.tlog_enabled) }}
+  {{ check(form.binlog_enabled) }}
+  {{ row(form.log_retention_days) }}
+  {{ row(form.log_access) }}
+  {{ row(form.fc_sysid) }}
+  {{ check(form.use_tz) }}
+  {{ row(form.tz_offset_hours) }}
+  <div class="field">
+    <a href="{{ url_for('owner_logs.owner_dates') }}">browse logs &rarr;</a>
+    {% if entry.log_access() %}
+    · <a href="{{ url_for('admin_logs.admin_dates', port2=entry.port2) }}">shared read-only link &rarr;</a>
+    {% endif %}
+  </div>
+  {% include "_video_fields.html" %}
+  {{ check(form.reset_timestamp) }}
+  <div>{{ form.submit() }}</div>
+  {% for field, errors in form.errors.items() %}
+    {% for e in errors %}<div class="flash flash-error">{{ field }}: {{ e }}</div>{% endfor %}
+  {% endfor %}
+</form>
+{% endblock %}

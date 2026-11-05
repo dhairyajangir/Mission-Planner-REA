@@ -1,0 +1,377 @@
+"""End-to-end test for tlog capture.
+
+Sets up an isolated workdir with keys.tdb (KEY_FLAG_TLOG enabled),
+starts supportproxy there, drives a few HEARTBEATs in each direction,
+kills the proxy, and asserts:
+
+  * logs/<port2>/<today>/<ts>.tlog exists, is non-empty, and parses
+    with pymavlink.mavutil.mavlink_connection
+  * a second connection (after the first child idles out) produces a
+    second .tlog
+  * timestamps in the tlog are monotonic
+  * messages from BOTH directions appear (at minimum, both sides'
+    HEARTBEATs are seen)
+"""
+import datetime
+import os
+import signal
+import socket
+import struct
+import subprocess
+import sys
+import threading
+import time
+
+import pytest
+
+_REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
+
+import keydb_lib  # noqa: E402
+
+SUPPORTPROXY_BIN = os.path.join(_REPO_ROOT, 'supportproxy')
+
+# Worker-aware ports so xdist runs don't fight over them.
+_W = int(os.environ.get('PYTEST_XDIST_WORKER', 'gw0')[2:]
+         if os.environ.get('PYTEST_XDIST_WORKER', 'gw0').startswith('gw') else 0)
+PORT_USER = 17500 + _W * 4
+PORT_ENG  = 17501 + _W * 4
+
+os.environ.setdefault('MAVLINK_DIALECT', 'all')
+os.environ.setdefault('MAVLINK20', '1')
+
+
+def _today_str():
+    """Match the proxy's date-dir naming. With no per-entry timezone set
+    the proxy names in the server's local timezone (the default), so use
+    localtime here."""
+    return time.strftime('%Y-%m-%d', time.localtime())
+
+
+def _tlogs(workdir, port_eng):
+    """All .tlog files under today's dir for port_eng, oldest-first."""
+    d = workdir / 'logs' / str(port_eng) / _today_str()
+    if not d.is_dir():
+        return []
+    fs = [p for p in d.iterdir() if p.suffix == '.tlog']
+    fs.sort(key=lambda p: (p.stat().st_mtime, p.name))
+    return fs
+
+
+def _only_tlog(workdir, port_eng):
+    """The single .tlog for this session, or a placeholder path that
+    doesn't exist yet."""
+    fs = _tlogs(workdir, port_eng)
+    if fs:
+        return fs[0]
+    return workdir / 'logs' / str(port_eng) / _today_str() / '__pending.tlog'
+
+
+@pytest.fixture
+def proxy_workdir(tmp_path):
+    p = tmp_path / 'work'
+    p.mkdir()
+    db_path = str(p / 'keys.tdb')
+    db = keydb_lib.init_db(db_path)
+    db.transaction_start()
+    keydb_lib.add_entry(db, PORT_USER, PORT_ENG, 'tlog_test', 'tlogpw')
+    keydb_lib.set_flag(db, PORT_ENG, 'tlog')
+    keydb_lib.set_log_retention(db, PORT_ENG, 7.0)
+    db.transaction_prepare_commit()
+    db.transaction_commit()
+    db.close()
+    return p
+
+
+def _start_proxy(workdir, env_extra=None):
+    """Spawn supportproxy and drain its stdout in a background thread.
+
+    The drain is essential: the proxy logs per-connection events to
+    stdout, and if the pipe fills (~64 KiB) the child blocks on write
+    inside printf(), which stalls main_loop and stops the tlog tap.
+    """
+    env = os.environ.copy()
+    if env_extra:
+        env.update(env_extra)
+    proc = subprocess.Popen(
+        [SUPPORTPROXY_BIN], cwd=str(workdir), env=env,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        bufsize=1, text=True, start_new_session=True,
+    )
+    proc._lines = []
+    proc._ready = threading.Event()
+
+    def _drain():
+        for line in iter(proc.stdout.readline, ''):
+            proc._lines.append(line)
+            if 'Added port %d/%d' % (PORT_USER, PORT_ENG) in line:
+                proc._ready.set()
+        proc.stdout.close()
+
+    proc._thread = threading.Thread(target=_drain, daemon=True)
+    proc._thread.start()
+    if not proc._ready.wait(timeout=10):
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        proc.wait(timeout=2)
+        raise RuntimeError(
+            'proxy did not load test port pair; stdout: '
+            + ''.join(proc._lines))
+    return proc
+
+
+def _wait_for_log(proc, needle, timeout=10.0):
+    """Spin until any line in proc._lines contains `needle`, or timeout."""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        if any(needle in line for line in proc._lines):
+            return True
+        time.sleep(0.1)
+    return False
+
+
+def _terminate(proc):
+    # End the whole test session so children cannot keep the next test's ports.
+    try:
+        os.killpg(proc.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass
+    try:
+        proc.wait(timeout=5)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        proc.wait(timeout=2)
+    if hasattr(proc, '_thread'):
+        proc._thread.join(timeout=2)
+
+
+def _drive_traffic(passphrase, duration=2.5):
+    """Open a user UDP and a signed engineer UDP and pump HEARTBEATs in
+    both directions. We return after `duration` seconds."""
+    from pymavlink import mavutil
+
+    user = mavutil.mavlink_connection('udpout:127.0.0.1:%d' % PORT_USER,
+                                      source_system=10, source_component=20)
+    eng = mavutil.mavlink_connection('udpout:127.0.0.1:%d' % PORT_ENG,
+                                     source_system=11, source_component=21)
+    # Engineer side requires signing.
+    import hashlib
+    secret = hashlib.sha256(passphrase.encode('utf-8')).digest()
+    eng.setup_signing(secret, sign_outgoing=True)
+
+    # Send the user's HEARTBEAT first so the proxy registers conn1, then
+    # alternate directions for ~duration.
+    user.mav.heartbeat_send(mavutil.mavlink.MAV_TYPE_QUADROTOR,
+                            mavutil.mavlink.MAV_AUTOPILOT_ARDUPILOTMEGA,
+                            0, 0, 0)
+    time.sleep(0.2)
+
+    deadline = time.time() + duration
+    user_count = 0
+    eng_count = 0
+    while time.time() < deadline:
+        user.mav.heartbeat_send(mavutil.mavlink.MAV_TYPE_QUADROTOR,
+                                mavutil.mavlink.MAV_AUTOPILOT_ARDUPILOTMEGA,
+                                0, 0, 0)
+        user_count += 1
+        eng.mav.heartbeat_send(mavutil.mavlink.MAV_TYPE_GCS,
+                               mavutil.mavlink.MAV_AUTOPILOT_INVALID,
+                               0, 0, 0)
+        eng_count += 1
+        time.sleep(0.1)
+
+    user.close()
+    eng.close()
+    return user_count, eng_count
+
+
+def _read_tlog_records(path):
+    """Yield (timestamp_us, frame_bytes) tuples from a MAVProxy tlog.
+
+    We don't try to MAVLink-parse the frame here; we just walk records
+    by reading the 8-byte timestamp + length-from-header. This avoids
+    pulling pymavlink into the assertion loop and lets us validate the
+    raw on-disk shape directly.
+    """
+    with open(path, 'rb') as f:
+        data = f.read()
+    i = 0
+    while i + 8 <= len(data):
+        ts = struct.unpack('>Q', data[i:i+8])[0]
+        i += 8
+        if i + 1 > len(data):
+            break
+        stx = data[i]
+        if stx == 0xFD:
+            if i + 10 > len(data):
+                break
+            payload_len = data[i+1]
+            incompat = data[i+2]
+            sig = 13 if (incompat & 0x01) else 0
+            frame_len = 10 + payload_len + 2 + sig
+        elif stx == 0xFE:
+            if i + 6 > len(data):
+                break
+            payload_len = data[i+1]
+            frame_len = 6 + payload_len + 2
+        else:
+            break  # desync
+        if i + frame_len > len(data):
+            break
+        yield ts, data[i:i+frame_len]
+        i += frame_len
+
+
+def _parse_tlog_with_pymavlink(path):
+    """Open the tlog with pymavlink and pull a few messages out so we
+    confirm mavlogdump-equivalent readers can consume it."""
+    from pymavlink import mavutil
+    m = mavutil.mavlink_connection(path)
+    msgs = []
+    while True:
+        msg = m.recv_match(blocking=False)
+        if msg is None:
+            break
+        msgs.append(msg)
+    m.close()
+    return msgs
+
+
+@pytest.mark.skipif(not os.path.exists(SUPPORTPROXY_BIN),
+                    reason='supportproxy binary not built')
+class TestTlogCapture:
+    def test_session1_created_with_bidirectional_traffic(self, proxy_workdir):
+        proc = _start_proxy(proxy_workdir)
+        try:
+            _drive_traffic('tlogpw', duration=2.0)
+            # give the proxy a moment to flush any buffered writes
+            time.sleep(0.5)
+        finally:
+            _terminate(proc)
+
+        tlog = _only_tlog(proxy_workdir, PORT_ENG)
+        assert tlog.exists(), 'expected a .tlog to exist; proxy stdout: %s' % (
+            ''.join(getattr(proc, '_lines', [])))
+        assert tlog.stat().st_size > 0
+
+        # Validate every record has a sane framed packet behind its 8-byte ts.
+        records = list(_read_tlog_records(str(tlog)))
+        assert len(records) > 0, 'tlog had no records'
+
+        # Timestamps should be monotonic.
+        prev = 0
+        for ts, _ in records:
+            assert ts >= prev, 'timestamps regressed: %d < %d' % (ts, prev)
+            prev = ts
+
+        # Both directions must show up. We track sysid (10 = user, 11 = eng).
+        sysids = set()
+        for _, frame in records:
+            if frame[0] == 0xFD:
+                # v2: header at [0..10), payload at [10..10+len), sysid at byte 5
+                sysids.add(frame[5])
+            elif frame[0] == 0xFE:
+                # v1: sysid at byte 3
+                sysids.add(frame[3])
+        proxy_log = ''.join(getattr(proc, '_lines', []))
+        assert 10 in sysids, 'no user frames (sysid 10); have %r\nproxy log:\n%s' % (
+            sysids, proxy_log)
+        assert 11 in sysids, 'no engineer frames (sysid 11); have %r\nproxy log:\n%s' % (
+            sysids, proxy_log)
+
+    def test_pymavlink_can_read_tlog(self, proxy_workdir):
+        proc = _start_proxy(proxy_workdir)
+        try:
+            _drive_traffic('tlogpw', duration=1.5)
+            time.sleep(0.5)
+        finally:
+            _terminate(proc)
+
+        tlog = _only_tlog(proxy_workdir, PORT_ENG)
+        assert tlog.exists()
+        msgs = _parse_tlog_with_pymavlink(str(tlog))
+        # We sent at minimum a few HEARTBEATs each way; pymavlink should
+        # decode at least one of them.
+        types = {m.get_type() for m in msgs}
+        assert 'HEARTBEAT' in types, (
+            'pymavlink did not decode any HEARTBEAT; saw %r' % types)
+
+    def test_user_only_traffic_records_to_tlog(self, proxy_workdir):
+        """KEY_FLAG_TLOG is supposed to mean 'record this port pair's
+        traffic'. Before the fix at supportproxy.cpp the parse loop
+        was gated on (conn2_count>0 || binlog_enabled), so a tlog-only
+        entry with no engineer connected silently discarded the
+        user-side packets without parsing them. With tlog_enabled in
+        the gate, user-only traffic shows up in sessionN.tlog from
+        the first packet."""
+        from pymavlink import mavutil
+        proc = _start_proxy(proxy_workdir)
+        try:
+            user = mavutil.mavlink_connection(
+                'udpout:127.0.0.1:%d' % PORT_USER,
+                source_system=10, source_component=20)
+            # Drive only the user side. No engineer ever connects.
+            deadline = time.time() + 2.0
+            n_sent = 0
+            while time.time() < deadline:
+                user.mav.heartbeat_send(
+                    mavutil.mavlink.MAV_TYPE_QUADROTOR,
+                    mavutil.mavlink.MAV_AUTOPILOT_ARDUPILOTMEGA,
+                    0, 0, 0)
+                n_sent += 1
+                time.sleep(0.05)
+            user.close()
+            time.sleep(0.5)
+        finally:
+            _terminate(proc)
+
+        tlog = _only_tlog(proxy_workdir, PORT_ENG)
+        proxy_log = ''.join(getattr(proc, '_lines', []))
+        assert tlog.exists(), \
+            ('.tlog missing — user-only traffic was discarded.\n'
+             'sent %d heartbeats. proxy log:\n%s' % (n_sent, proxy_log))
+        assert tlog.stat().st_size > 0, \
+            'tlog is empty; parse loop did not write the user frames'
+        # The tlog should contain user heartbeats (sysid=10).
+        records = list(_read_tlog_records(str(tlog)))
+        assert records, 'no records in tlog'
+        user_frames = 0
+        for _, frame in records:
+            if frame[0] == 0xFD and frame[5] == 10:
+                user_frames += 1
+            elif frame[0] == 0xFE and frame[3] == 10:
+                user_frames += 1
+        assert user_frames > 0, \
+            'no user-sysid frames in tlog despite tlog-only traffic'
+
+    def test_second_connection_creates_session2(self, proxy_workdir):
+        proc = _start_proxy(proxy_workdir)
+        try:
+            _drive_traffic('tlogpw', duration=1.5)
+            # The per-port-pair child idles out after 10s of conn1 silence,
+            # then the parent reaps it and reopens the listening sockets.
+            # Those sockets aren't re-added to the parent's epoll set until
+            # the next 5s reload tick, so we wait for "Child ... exited" and
+            # then a further ~6s before sending the second batch — anything
+            # tighter races the rebuild cadence.
+            assert _wait_for_log(proc, 'exited', timeout=15.0), \
+                'first child never exited'
+            time.sleep(6.0)
+            _drive_traffic('tlogpw', duration=1.5)
+            time.sleep(0.5)
+        finally:
+            _terminate(proc)
+
+        date_dir = proxy_workdir / 'logs' / str(PORT_ENG) / _today_str()
+        proxy_log = ''.join(getattr(proc, '_lines', []))
+        tlogs = _tlogs(proxy_workdir, PORT_ENG)
+        assert len(tlogs) == 2, (
+            'expected two .tlog files after a second connection; have %r\n'
+            'proxy log:\n%s' % (
+                sorted(p.name for p in date_dir.iterdir()), proxy_log))

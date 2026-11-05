@@ -1,0 +1,11 @@
+{
+  "scope": "Synthetic localhost TCP peer; deliberate RST; no vehicle",
+  "events": [
+    "first_accept",
+    "first_received=58",
+    "first_reset",
+    "second_accept",
+    "second_client_eof"
+  ],
+  "errors": []
+}

@@ -1,0 +1,25 @@
+{
+  "control_sha256": "e0f93933fdafb37a1e8b0fb6b0d453a64978d9ec5dbec0f69e865da1bec78670",
+  "timestamp_us": [
+    1600000000123456,
+    1600000001124690
+  ],
+  "files": {
+    "timestamped.tlog": {
+      "size": 50,
+      "sha256": "6a7d68d199d3348dd1894ddbc38549745cc2cf18d103e14472d20b2cbfa367d8"
+    },
+    "backward.tlog": {
+      "size": 50,
+      "sha256": "326820bba5b9ad3162d4e2261d98c676aba95348d239d7e3a5753ba312f99e8d"
+    },
+    "raw.rlog": {
+      "size": 34,
+      "sha256": "4cb5a06e5a6751c9772e4fd96ad291a661dd44ae805430a79c7cb828aeb06cba"
+    },
+    "raw.tlog": {
+      "size": 34,
+      "sha256": "4cb5a06e5a6751c9772e4fd96ad291a661dd44ae805430a79c7cb828aeb06cba"
+    }
+  }
+}

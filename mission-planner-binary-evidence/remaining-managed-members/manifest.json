@@ -1,0 +1,3532 @@
+{
+  "requested_paths": [
+    "7zip.dll",
+    "Accord.dll",
+    "Accord.MachineLearning.dll",
+    "Accord.Imaging.dll",
+    "Accord.Math.Core.dll",
+    "Accord.Math.dll",
+    "Accord.Statistics.dll",
+    "Accord.Video.dll",
+    "Accord.Vision.dll",
+    "alglibnet.dll",
+    "ar/MissionPlanner.resources.dll",
+    "AviFile.dll",
+    "az-Latn-AZ/MissionPlanner.resources.dll",
+    "az-Latn-AZ/MissionPlanner.Strings.resources.dll",
+    "BaseClasses.dll",
+    "BitMiracle.LibTiff.NET40.dll",
+    "BitMiracle.LibTiff.NetStandard.dll",
+    "BouncyCastle.Cryptography.dll",
+    "BruTile.dll",
+    "BSE.Windows.Forms.dll",
+    "Core.dll",
+    "Crc32.NET.dll",
+    "cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "cs/Microsoft.CodeAnalysis.resources.dll",
+    "csmatio.dll",
+    "de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "de/Microsoft.CodeAnalysis.resources.dll",
+    "de/ZedGraph.resources.dll",
+    "de-DE/MissionPlanner.resources.dll",
+    "de-DE/MissionPlanner.Strings.resources.dll",
+    "DirectShowLib.dll",
+    "DotNetZip.dll",
+    "DotSpatial.Data.dll",
+    "DotSpatial.NTSExtension.dll",
+    "DotSpatial.Serialization.dll",
+    "DotSpatial.Projections.dll",
+    "Drivers/DriverCleanup.exe",
+    "es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "es/Microsoft.CodeAnalysis.resources.dll",
+    "es/ZedGraph.resources.dll",
+    "es-ES/MissionPlanner.resources.dll",
+    "ExifLibrary.dll",
+    "Flurl.dll",
+    "Flurl.Http.dll",
+    "fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "fr/MissionPlanner.resources.dll",
+    "fr/Microsoft.CodeAnalysis.resources.dll",
+    "fr/ZedGraph.resources.dll",
+    "GDAL.NET.dll",
+    "gdal_csharp.dll",
+    "gdalconst_csharp.dll",
+    "GeoAPI.CoordinateSystems.dll",
+    "GeoAPI.dll",
+    "GeoidHeights.dll",
+    "GeoJSON.Net.dll",
+    "GeoUtility.dll",
+    "GMap.NET.Core.dll",
+    "GMap.NET.Drawing.dll",
+    "GMap.NET.WindowsForms.dll",
+    "hu/ZedGraph.resources.dll",
+    "ICSharpCode.SharpZipLib.dll",
+    "id-ID/MissionPlanner.Strings.resources.dll",
+    "id-ID/MissionPlanner.resources.dll",
+    "Ionic.Zip.NetStandard.dll",
+    "Interfaces.dll",
+    "IronPython.Modules.dll",
+    "IronPython.dll",
+    "IronPython.SQLite.dll",
+    "IronPython.Wpf.dll",
+    "it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "it/Microsoft.CodeAnalysis.resources.dll",
+    "it/ZedGraph.resources.dll",
+    "it-IT/MissionPlanner.resources.dll",
+    "ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "ja/Microsoft.CodeAnalysis.resources.dll",
+    "ja/ZedGraph.resources.dll",
+    "ja-JP/MissionPlanner.resources.dll",
+    "ja-JP/MissionPlanner.Strings.resources.dll",
+    "JetBrains.Profiler.Api.dll",
+    "JetBrains.Profiler.SelfApi.dll",
+    "KMLib.dll",
+    "ko/Microsoft.CodeAnalysis.resources.dll",
+    "ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "ko-KR/MissionPlanner.Strings.resources.dll",
+    "ko-KR/MissionPlanner.resources.dll",
+    "LibTessDotNet.dll",
+    "LibUsbDfu.dll",
+    "LibUsbDotNet.LibUsbDotNet.dll",
+    "LibVLC.NET.dll",
+    "log4net.dll",
+    "ManagedNativeWifi.Simple.dll",
+    "MathParser.org-mXparser.dll",
+    "MetaDataExtractor.dll",
+    "Microsoft.CodeAnalysis.CSharp.dll",
+    "Microsoft.CodeAnalysis.dll",
+    "Microsoft.Diagnostics.Runtime.dll",
+    "Microsoft.Dynamic.dll",
+    "Microsoft.Extensions.Caching.Abstractions.dll",
+    "Microsoft.Extensions.Caching.Memory.dll",
+    "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+    "Microsoft.Extensions.Logging.Abstractions.dll",
+    "Microsoft.Extensions.Options.dll",
+    "Microsoft.Extensions.Primitives.dll",
+    "Microsoft.Scripting.dll",
+    "Microsoft.Scripting.Metadata.dll",
+    "Microsoft.Win32.Registry.dll",
+    "Mono.Posix.NETStandard.dll",
+    "netDxf.dll",
+    "NetTopologySuite.dll",
+    "Newtonsoft.Json.dll",
+    "ObjectListView.dll",
+    "ogr_csharp.dll",
+    "Onvif.Core.dll",
+    "Onvif.dll",
+    "OpenTK.dll",
+    "OpenTK.GLControl.dll",
+    "osr_csharp.dll",
+    "pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "pl/Microsoft.CodeAnalysis.resources.dll",
+    "pl/MissionPlanner.resources.dll",
+    "plugins/ko-KR/MissionPlanner.Gridv2.resources.dll",
+    "plugins/ko-KR/MissionPlanner.SimpleGrid.resources.dll",
+    "plugins/Markdig.dll",
+    "plugins/Microsoft.Bcl.AsyncInterfaces.dll",
+    "plugins/Microsoft.IdentityModel.Abstractions.dll",
+    "plugins/Microsoft.IdentityModel.JsonWebTokens.dll",
+    "plugins/Microsoft.IdentityModel.Logging.dll",
+    "plugins/Microsoft.IdentityModel.Tokens.dll",
+    "plugins/NodaTime.dll",
+    "plugins/NodaTime.Serialization.JsonNet.dll",
+    "plugins/Polly.dll",
+    "plugins/pt/MissionPlanner.SimpleGrid.resources.dll",
+    "plugins/System.IdentityModel.Tokens.Jwt.dll",
+    "plugins/System.Text.Encodings.Web.dll",
+    "plugins/System.Text.Json.dll",
+    "ProjNET.dll",
+    "pt/MissionPlanner.resources.dll",
+    "pt/MissionPlanner.Strings.resources.dll",
+    "pt/ZedGraph.resources.dll",
+    "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "pt-BR/Microsoft.CodeAnalysis.resources.dll",
+    "Renci.SshNet.dll",
+    "RestSharp.dll",
+    "ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "ru/Microsoft.CodeAnalysis.resources.dll",
+    "ru/ZedGraph.resources.dll",
+    "ru-KZ/MissionPlanner.resources.dll",
+    "ru-KZ/MissionPlanner.Strings.resources.dll",
+    "ru-RU/MissionPlanner.resources.dll",
+    "SharpAdbClient.dll",
+    "SharpCompress.dll",
+    "SharpDX.DirectInput.dll",
+    "SharpDX.dll",
+    "SharpKml.dll",
+    "SixLabors.ImageSharp.dll",
+    "sk/ZedGraph.resources.dll",
+    "SkiaSharp.dll",
+    "SkiaSharp.Views.Desktop.Common.dll",
+    "SkiaSharp.Views.Desktop.dll",
+    "SkiaSharp.Views.Gtk.dll",
+    "SkiaSharp.Views.WindowsForms.dll",
+    "SkiaSharp.Views.WPF.dll",
+    "SocketIOClient.dll",
+    "solo.dll",
+    "SuperSocket.ClientEngine.dll",
+    "sv/ZedGraph.resources.dll",
+    "SvgNet.dll",
+    "System.Buffers.dll",
+    "System.CodeDom.dll",
+    "System.Collections.Immutable.dll",
+    "System.ComponentModel.Annotations.dll",
+    "System.Configuration.ConfigurationManager.dll",
+    "System.Data.OleDb.dll",
+    "System.Drawing.Common.dll",
+    "System.Geometry.dll",
+    "System.Geometry.Text.dll",
+    "System.IO.Compression.dll",
+    "System.IO.Ports.dll",
+    "System.Memory.dll",
+    "System.Numerics.Vectors.dll",
+    "System.Reactive.Core.dll",
+    "System.Reactive.dll",
+    "System.Reactive.Linq.dll",
+    "System.Reflection.Metadata.dll",
+    "System.Resources.Extensions.dll",
+    "System.Runtime.CompilerServices.Unsafe.dll",
+    "System.Security.AccessControl.dll",
+    "System.Security.Permissions.dll",
+    "System.Security.Principal.Windows.dll",
+    "System.ServiceModel.Duplex.dll",
+    "System.ServiceModel.Http.dll",
+    "System.ServiceModel.NetTcp.dll",
+    "System.ServiceModel.Primitives.dll",
+    "System.ServiceModel.Security.dll",
+    "System.Speech.dll",
+    "System.Text.Encoding.CodePages.dll",
+    "System.Threading.Tasks.Extensions.dll",
+    "System.ValueTuple.dll",
+    "tlogThumbnailHandler.dll",
+    "tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "tr/Microsoft.CodeAnalysis.resources.dll",
+    "tr/MissionPlanner.resources.dll",
+    "tr/MissionPlanner.Strings.resources.dll",
+    "tr/ZedGraph.resources.dll",
+    "Transitions.dll",
+    "uk/MissionPlanner.resources.dll",
+    "uk/MissionPlanner.Strings.resources.dll",
+    "WebSocket4Net.dll",
+    "Xamarin.Essentials.dll",
+    "Xamarin.Forms.Core.dll",
+    "Xamarin.Forms.Platform.dll",
+    "Xamarin.Forms.Platform.WinForms.dll",
+    "Xamarin.Forms.Xaml.dll",
+    "ZedGraph.dll",
+    "Zeroconf.dll",
+    "zh-cn/MissionPlanner.resources.dll",
+    "zh-cn/ZedGraph.resources.dll",
+    "zh-Hans/GMap.NET.Core.resources.dll",
+    "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+    "zh-Hans/MissionPlanner.Controls.resources.dll",
+    "zh-Hans/MissionPlanner.resources.dll",
+    "zh-Hans/MissionPlanner.Strings.resources.dll",
+    "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "zh-Hant/Microsoft.CodeAnalysis.resources.dll",
+    "zh-Hant/MissionPlanner.resources.dll",
+    "zh-tw/MissionPlanner.resources.dll",
+    "zh-tw/ZedGraph.resources.dll",
+    "zlib.net.dll"
+  ],
+  "results": [
+    {
+      "path": "7zip.dll",
+      "sha256": "845ff05fcdf9e09ded1446e3e4c94ff13362d8d5a3d73045e6ffd0f552974a09",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 54,
+      "methods": 284,
+      "call_edges": 724,
+      "evidence": "845ff05fcdf9e09ded1446e3e4c94ff13362d8d5a3d73045e6ffd0f552974a09-e0e0fb79c7ca.json.gz"
+    },
+    {
+      "path": "Accord.dll",
+      "sha256": "d36c225a84415c01bc2a8e84096590a7206dfc3d36173e3c7b6a62a04c0a33a9",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 151,
+      "methods": 1090,
+      "call_edges": 2156,
+      "evidence": "d36c225a84415c01bc2a8e84096590a7206dfc3d36173e3c7b6a62a04c0a33a9-bf184c1459e4.json.gz"
+    },
+    {
+      "path": "Accord.MachineLearning.dll",
+      "sha256": "cb958d8674b4da412db8e0292fcae62ca239e617298a3123d058203c1e75bef5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 509,
+      "methods": 3237,
+      "call_edges": 8891,
+      "evidence": "cb958d8674b4da412db8e0292fcae62ca239e617298a3123d058203c1e75bef5-3ceec5b9fde6.json.gz"
+    },
+    {
+      "path": "Accord.Imaging.dll",
+      "sha256": "febabb148e6ceeb3421075e353f3ebe1b436912d625620888c97fb58cba0c2aa",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 341,
+      "methods": 2870,
+      "call_edges": 11348,
+      "evidence": "febabb148e6ceeb3421075e353f3ebe1b436912d625620888c97fb58cba0c2aa-85f2ac4f4ca9.json.gz"
+    },
+    {
+      "path": "Accord.Math.Core.dll",
+      "sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 3,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8-d6031c434de1.json.gz"
+    },
+    {
+      "path": "Accord.Math.dll",
+      "sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 892298,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 467,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2-ad013a40c163.json.gz"
+    },
+    {
+      "path": "Accord.Statistics.dll",
+      "sha256": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 680,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00-1f2442449b14.json.gz"
+    },
+    {
+      "path": "Accord.Video.dll",
+      "sha256": "5feaaa1d49f2c2c8363a0a6f0ef42df5ebefcdb8989c707d93adc3eb9db10874",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 20,
+      "methods": 225,
+      "call_edges": 459,
+      "evidence": "5feaaa1d49f2c2c8363a0a6f0ef42df5ebefcdb8989c707d93adc3eb9db10874-930d069423df.json.gz"
+    },
+    {
+      "path": "Accord.Vision.dll",
+      "sha256": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 307772,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 60,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a-e7e429cf0ea3.json.gz"
+    },
+    {
+      "path": "alglibnet.dll",
+      "sha256": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 369,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3-de86ab293103.json.gz"
+    },
+    {
+      "path": "ar/MissionPlanner.resources.dll",
+      "sha256": "e5cfa03c463c62e3d05a33857b9fc9a68df2d196e415341e2502d37f7123d7bf",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "e5cfa03c463c62e3d05a33857b9fc9a68df2d196e415341e2502d37f7123d7bf-ff9067f6fe1d.json.gz"
+    },
+    {
+      "path": "AviFile.dll",
+      "sha256": "91aa38d7c5494473784092bb6e6c18284e158bc03bc54f1a8925be8bb7e74fd6",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 16,
+      "methods": 107,
+      "call_edges": 360,
+      "evidence": "91aa38d7c5494473784092bb6e6c18284e158bc03bc54f1a8925be8bb7e74fd6-4602e3729798.json.gz"
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.resources.dll",
+      "sha256": "81502eff8beb6637c9931a85b4364e126add5f09b8f854b9cdb1d1e8349ebf7d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "81502eff8beb6637c9931a85b4364e126add5f09b8f854b9cdb1d1e8349ebf7d-c4f52b909fbd.json.gz"
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.Strings.resources.dll",
+      "sha256": "4cba20588b6d00b5773d04d9f28020ee1a5270d73356e5fef10f7ec6961bdcd8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "4cba20588b6d00b5773d04d9f28020ee1a5270d73356e5fef10f7ec6961bdcd8-c5f1de16e262.json.gz"
+    },
+    {
+      "path": "BaseClasses.dll",
+      "sha256": "ea49f439d977b27c6891dbcd43ec979f71b9edc0252e9f0c71644bc95dd6271c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 321,
+      "methods": 2298,
+      "call_edges": 7286,
+      "evidence": "ea49f439d977b27c6891dbcd43ec979f71b9edc0252e9f0c71644bc95dd6271c-96d3e19341b5.json.gz"
+    },
+    {
+      "path": "BitMiracle.LibTiff.NET40.dll",
+      "sha256": "6fd42ad8cf7b7a0d78eb1eadbd4853de3ddf5f8deee0535812e47436fd893554",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 220,
+      "methods": 1774,
+      "call_edges": 7007,
+      "evidence": "6fd42ad8cf7b7a0d78eb1eadbd4853de3ddf5f8deee0535812e47436fd893554-a44da55e562d.json.gz"
+    },
+    {
+      "path": "BitMiracle.LibTiff.NetStandard.dll",
+      "sha256": "7b67fdda9c5611f996cd4dd96de816e4e693a81802aa5c6693bf9ab012c65e59",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 220,
+      "methods": 1774,
+      "call_edges": 7204,
+      "evidence": "7b67fdda9c5611f996cd4dd96de816e4e693a81802aa5c6693bf9ab012c65e59-ec5811fd324c.json.gz"
+    },
+    {
+      "path": "BouncyCastle.Cryptography.dll",
+      "sha256": "aec227154fc549739ff5a07920723641f773ce65d05dca70b215183c93e9641d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 685198,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 2631,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "aec227154fc549739ff5a07920723641f773ce65d05dca70b215183c93e9641d-bb633dab6aa6.json.gz"
+    },
+    {
+      "path": "BruTile.dll",
+      "sha256": "ff321342a2ac49dc796c4523e19205e8f1b996c7f091bf7aded0ea86091cf2aa",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 206,
+      "methods": 1565,
+      "call_edges": 4768,
+      "evidence": "ff321342a2ac49dc796c4523e19205e8f1b996c7f091bf7aded0ea86091cf2aa-744a292c771e.json.gz"
+    },
+    {
+      "path": "BSE.Windows.Forms.dll",
+      "sha256": "46491df9e66e38bb4d97fcfca0e28c8b2731080c782b52872fc2be2373291d85",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 53,
+      "methods": 579,
+      "call_edges": 3716,
+      "evidence": "46491df9e66e38bb4d97fcfca0e28c8b2731080c782b52872fc2be2373291d85-19c0fb0cb9fd.json.gz"
+    },
+    {
+      "path": "Core.dll",
+      "sha256": "8d6eb327cc2d214e1cf59fce5da946aa4c0fe073b612c2d4e5e7007b7ef82104",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 43,
+      "methods": 422,
+      "call_edges": 1297,
+      "evidence": "8d6eb327cc2d214e1cf59fce5da946aa4c0fe073b612c2d4e5e7007b7ef82104-5de601e12e22.json.gz"
+    },
+    {
+      "path": "Crc32.NET.dll",
+      "sha256": "9eafbec3431a3ddc072d870dd71f96d4fd421eff27b3f855fb29dde31463803a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 5,
+      "methods": 34,
+      "call_edges": 42,
+      "evidence": "9eafbec3431a3ddc072d870dd71f96d4fd421eff27b3f855fb29dde31463803a-b0f8c5fc74ca.json.gz"
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "24c11d138b9c977f338a43e60586cd6e6b8590b9ccbdcb161c5fac55c7a07575",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "24c11d138b9c977f338a43e60586cd6e6b8590b9ccbdcb161c5fac55c7a07575-96c71e7d1d63.json.gz"
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "bb2a25b9e01d9557cb4b1eecaa3ad803f711e41ed11d47916710a3644fd4521a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "bb2a25b9e01d9557cb4b1eecaa3ad803f711e41ed11d47916710a3644fd4521a-fc5b9f786fbe.json.gz"
+    },
+    {
+      "path": "csmatio.dll",
+      "sha256": "8345cd7f6008bc7eb732b7c79e0d1efae947afd789adbfaa840be403197334b1",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 33,
+      "methods": 326,
+      "call_edges": 1176,
+      "evidence": "8345cd7f6008bc7eb732b7c79e0d1efae947afd789adbfaa840be403197334b1-3b1ec570d5a7.json.gz"
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "a31bc80583f1dc1a458bc11fd29aafc74c7486d393e3d689897377937c72271c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "a31bc80583f1dc1a458bc11fd29aafc74c7486d393e3d689897377937c72271c-dbfefc66ccbd.json.gz"
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "ebc3cd419b1a792f82d5f065622750611b473ee9bf3c8909e3601e99a856ed97",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ebc3cd419b1a792f82d5f065622750611b473ee9bf3c8909e3601e99a856ed97-9eb2239231e4.json.gz"
+    },
+    {
+      "path": "de/ZedGraph.resources.dll",
+      "sha256": "2674facab0f04a7d1788eec6b14fa66a8ae385b1107b57af2368e451427beba0",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "2674facab0f04a7d1788eec6b14fa66a8ae385b1107b57af2368e451427beba0-268c1be31104.json.gz"
+    },
+    {
+      "path": "de-DE/MissionPlanner.resources.dll",
+      "sha256": "2029b3c401a2012abd0c420adaf1b459e94f3e2c90bbd1b04cd57c33c68838c1",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "2029b3c401a2012abd0c420adaf1b459e94f3e2c90bbd1b04cd57c33c68838c1-26a4aa4b4103.json.gz"
+    },
+    {
+      "path": "de-DE/MissionPlanner.Strings.resources.dll",
+      "sha256": "9a0d6da6b0c5c55478be5faf0f37cff41e78c811312e3b1a14e8f97cd65b6f30",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "9a0d6da6b0c5c55478be5faf0f37cff41e78c811312e3b1a14e8f97cd65b6f30-786a74d8def8.json.gz"
+    },
+    {
+      "path": "DirectShowLib.dll",
+      "sha256": "af97430187c697be5ec7e378a78512cec70e76400d664d7878f9b05800271140",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 828,
+      "methods": 2917,
+      "call_edges": 862,
+      "evidence": "af97430187c697be5ec7e378a78512cec70e76400d664d7878f9b05800271140-af38eba83e44.json.gz"
+    },
+    {
+      "path": "DotNetZip.dll",
+      "sha256": "8e9c0362e9bfb3c49af59e1b4d376d3e85b13aed0fbc3f5c0e1ebc99c07345f3",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 145,
+      "methods": 1383,
+      "call_edges": 4840,
+      "evidence": "8e9c0362e9bfb3c49af59e1b4d376d3e85b13aed0fbc3f5c0e1ebc99c07345f3-0c695688831e.json.gz"
+    },
+    {
+      "path": "DotSpatial.Data.dll",
+      "sha256": "333d2b9b9e3d6fb5df3c0a01e94a32981e9bb64591b8ce5447659ac0a4fe2ec5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 268,
+      "methods": 3235,
+      "call_edges": 14307,
+      "evidence": "333d2b9b9e3d6fb5df3c0a01e94a32981e9bb64591b8ce5447659ac0a4fe2ec5-512318500400.json.gz"
+    },
+    {
+      "path": "DotSpatial.NTSExtension.dll",
+      "sha256": "bb76f1ba7efc499de6bb9927a83ec6ddeb2c9ef576dde4037be877da3e8f9ff7",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 33,
+      "methods": 381,
+      "call_edges": 1403,
+      "evidence": "bb76f1ba7efc499de6bb9927a83ec6ddeb2c9ef576dde4037be877da3e8f9ff7-bb44472476c9.json.gz"
+    },
+    {
+      "path": "DotSpatial.Serialization.dll",
+      "sha256": "3222801c3899e0b79b76efe75be11718eb432794778daec238b1282c79745c88",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 33,
+      "methods": 193,
+      "call_edges": 984,
+      "evidence": "3222801c3899e0b79b76efe75be11718eb432794778daec238b1282c79745c88-7fcaa6160640.json.gz"
+    },
+    {
+      "path": "DotSpatial.Projections.dll",
+      "sha256": "78efeb72ac2a37482f56ecf5ecf6cb74c2ba8ff014c0682483a92f445811b3c4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 199,
+      "methods": 978,
+      "call_edges": 28117,
+      "evidence": "78efeb72ac2a37482f56ecf5ecf6cb74c2ba8ff014c0682483a92f445811b3c4-07a3228f5b0b.json.gz"
+    },
+    {
+      "path": "Drivers/DriverCleanup.exe",
+      "sha256": "7d647a1b6028f69d3f4b5fa500adf2eed5eb112772129be117c05bb2eab05900",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 2,
+      "methods": 2,
+      "call_edges": 112,
+      "evidence": "7d647a1b6028f69d3f4b5fa500adf2eed5eb112772129be117c05bb2eab05900-4da48f466c4c.json.gz"
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "a49af3679897cc3946f407f98fdedda995811b9ed026e5e41d461096dc39bde6",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "a49af3679897cc3946f407f98fdedda995811b9ed026e5e41d461096dc39bde6-dec99952d39b.json.gz"
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d219d9c1195a71ec75fa3e38b84148a4291158131f39644bd131836fbc075332",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "d219d9c1195a71ec75fa3e38b84148a4291158131f39644bd131836fbc075332-e2dc7584edc6.json.gz"
+    },
+    {
+      "path": "es/ZedGraph.resources.dll",
+      "sha256": "c37d5ccff6626ade11dacbce7d65ef263e7b6af8179ebdb041a8a5e653c4aa5a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c37d5ccff6626ade11dacbce7d65ef263e7b6af8179ebdb041a8a5e653c4aa5a-d9301cbd777f.json.gz"
+    },
+    {
+      "path": "es-ES/MissionPlanner.resources.dll",
+      "sha256": "8b82f3ca5199f236ba4bee9e3158dfcf4dd26b6e3b8ae282f68fc8d98fb54bb0",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "8b82f3ca5199f236ba4bee9e3158dfcf4dd26b6e3b8ae282f68fc8d98fb54bb0-8b2dbf0407e9.json.gz"
+    },
+    {
+      "path": "ExifLibrary.dll",
+      "sha256": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 148,
+      "methods": 919,
+      "call_edges": 3062,
+      "evidence": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16-800867ea44f5.json.gz"
+    },
+    {
+      "path": "Flurl.dll",
+      "sha256": "1c25f0dfdfe39768961bc9928a09c6f7cc663914adb4b5ecfe96756b02f73e99",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 32,
+      "methods": 257,
+      "call_edges": 741,
+      "evidence": "1c25f0dfdfe39768961bc9928a09c6f7cc663914adb4b5ecfe96756b02f73e99-d83fcfc6e81c.json.gz"
+    },
+    {
+      "path": "Flurl.Http.dll",
+      "sha256": "6a2d5d2045f62ade4406b6f100820cb98177c0a050b38c08b0e2f3462f3dcea2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 137,
+      "methods": 808,
+      "call_edges": 2679,
+      "evidence": "6a2d5d2045f62ade4406b6f100820cb98177c0a050b38c08b0e2f3462f3dcea2-5e7b502b201b.json.gz"
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "59ffbfea7ae84c97f175a04415fc3e9fe0cf9ab12147f1f4d8694c83b7bf349f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "59ffbfea7ae84c97f175a04415fc3e9fe0cf9ab12147f1f4d8694c83b7bf349f-f0af9507e614.json.gz"
+    },
+    {
+      "path": "fr/MissionPlanner.resources.dll",
+      "sha256": "ff9807699f6730e3351cf5f419b8a013b3289dd2871c57a0f5a3ddff856751ad",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ff9807699f6730e3351cf5f419b8a013b3289dd2871c57a0f5a3ddff856751ad-c29b25a41451.json.gz"
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "591d091fac6e9476ac7309636063c8683f6822ee281e66d73f0b8863784afc8e",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "591d091fac6e9476ac7309636063c8683f6822ee281e66d73f0b8863784afc8e-95da747ba5a0.json.gz"
+    },
+    {
+      "path": "fr/ZedGraph.resources.dll",
+      "sha256": "41893f26063c1201bd45db4cfa651b53f8b13cfbf9613d32156d3869a2acffc8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "41893f26063c1201bd45db4cfa651b53f8b13cfbf9613d32156d3869a2acffc8-c8ee05811d84.json.gz"
+    },
+    {
+      "path": "GDAL.NET.dll",
+      "sha256": "b435a537b1bc1d70d55235e648e28a11c67d8b67a71f16fb9791061b3a864165",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 12,
+      "methods": 71,
+      "call_edges": 643,
+      "evidence": "b435a537b1bc1d70d55235e648e28a11c67d8b67a71f16fb9791061b3a864165-4265f5918f8b.json.gz"
+    },
+    {
+      "path": "gdal_csharp.dll",
+      "sha256": "0596b046c29fd5db88f9853c8a09e957332c9c7e7caec3c8a690c2c18358596c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 50,
+      "methods": 1003,
+      "call_edges": 2158,
+      "evidence": "0596b046c29fd5db88f9853c8a09e957332c9c7e7caec3c8a690c2c18358596c-016eff3a7e76.json.gz"
+    },
+    {
+      "path": "gdalconst_csharp.dll",
+      "sha256": "baca2ce971e79c5cbb7f0c18aed1b99702b9985ac08ac9b3ad68131f14b694c7",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 9,
+      "methods": 189,
+      "call_edges": 241,
+      "evidence": "baca2ce971e79c5cbb7f0c18aed1b99702b9985ac08ac9b3ad68131f14b694c7-3c4d96db30ab.json.gz"
+    },
+    {
+      "path": "GeoAPI.CoordinateSystems.dll",
+      "sha256": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 39,
+      "methods": 183,
+      "call_edges": 46,
+      "evidence": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b-037246eeaa09.json.gz"
+    },
+    {
+      "path": "GeoAPI.dll",
+      "sha256": "34a045a45f50d113f2fe150340fa98ae7f3e8c10b2aa4ac616eaf644a673d687",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 64,
+      "methods": 506,
+      "call_edges": 616,
+      "evidence": "34a045a45f50d113f2fe150340fa98ae7f3e8c10b2aa4ac616eaf644a673d687-e5f0e62ce1a9.json.gz"
+    },
+    {
+      "path": "GeoidHeights.dll",
+      "sha256": "b23e30873fc46134aacccd0a0041809418e7e93f76bb91ddbc2ba1a514ad714e",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 5,
+      "methods": 8,
+      "call_edges": 25,
+      "evidence": "b23e30873fc46134aacccd0a0041809418e7e93f76bb91ddbc2ba1a514ad714e-78f9c32cdc8a.json.gz"
+    },
+    {
+      "path": "GeoJSON.Net.dll",
+      "sha256": "f26a99aa9dcc15dd7799fc5dbf369aedb5ca3151680f4e00ecaf9d07378eb6a4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 48,
+      "methods": 250,
+      "call_edges": 680,
+      "evidence": "f26a99aa9dcc15dd7799fc5dbf369aedb5ca3151680f4e00ecaf9d07378eb6a4-b58664fbb16c.json.gz"
+    },
+    {
+      "path": "GeoUtility.dll",
+      "sha256": "e51c3821c5ec47b05b698a1a00c9da94285120578fcc027be9c5b3b1bd10284b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 30,
+      "methods": 354,
+      "call_edges": 1783,
+      "evidence": "e51c3821c5ec47b05b698a1a00c9da94285120578fcc027be9c5b3b1bd10284b-c824a7ea8c88.json.gz"
+    },
+    {
+      "path": "GMap.NET.Core.dll",
+      "sha256": "c3fc6cc387a0e3c2bb756847d1c5826f76c4a93a7976868e3ef8f5fde0715431",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 198,
+      "methods": 1652,
+      "call_edges": 5151,
+      "evidence": "c3fc6cc387a0e3c2bb756847d1c5826f76c4a93a7976868e3ef8f5fde0715431-87e3680247ab.json.gz"
+    },
+    {
+      "path": "GMap.NET.Drawing.dll",
+      "sha256": "fb08a403bf9b1cbc1c45fe46581d4d524439328b37c6d69f59e80422845336ea",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 30,
+      "methods": 249,
+      "call_edges": 1065,
+      "evidence": "fb08a403bf9b1cbc1c45fe46581d4d524439328b37c6d69f59e80422845336ea-212f1da7cc19.json.gz"
+    },
+    {
+      "path": "GMap.NET.WindowsForms.dll",
+      "sha256": "c4ad59f05dea6aa83188feae9f41f4ca1c509e61ad86df36df6b59ef929c6d2a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 8,
+      "methods": 189,
+      "call_edges": 1688,
+      "evidence": "c4ad59f05dea6aa83188feae9f41f4ca1c509e61ad86df36df6b59ef929c6d2a-f68b56b8797f.json.gz"
+    },
+    {
+      "path": "hu/ZedGraph.resources.dll",
+      "sha256": "81704ef79a67333f073b848e8b6bb59b8c34e0df7aeaf453ad85a72022bb0b1b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "81704ef79a67333f073b848e8b6bb59b8c34e0df7aeaf453ad85a72022bb0b1b-3e46a1e35aaa.json.gz"
+    },
+    {
+      "path": "ICSharpCode.SharpZipLib.dll",
+      "sha256": "e260680904a46eb1c6847a604a791d20851f90a04f9a785b4d8d1d90793d7284",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 150,
+      "methods": 1317,
+      "call_edges": 4163,
+      "evidence": "e260680904a46eb1c6847a604a791d20851f90a04f9a785b4d8d1d90793d7284-06e16145056f.json.gz"
+    },
+    {
+      "path": "id-ID/MissionPlanner.Strings.resources.dll",
+      "sha256": "ef4114f88c8a8915998c061596ac1d39b1bedd21095da26700e1f988cd7a7671",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ef4114f88c8a8915998c061596ac1d39b1bedd21095da26700e1f988cd7a7671-073fa496a52f.json.gz"
+    },
+    {
+      "path": "id-ID/MissionPlanner.resources.dll",
+      "sha256": "fe7f1a11e2aed706c4e74a874880d844f1b63bac29803cabfb38089d77a990a4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "fe7f1a11e2aed706c4e74a874880d844f1b63bac29803cabfb38089d77a990a4-af880a444d03.json.gz"
+    },
+    {
+      "path": "Ionic.Zip.NetStandard.dll",
+      "sha256": "c4e3bc5933f4064d27527463d89e4bde76a64707dfefd74861e57dc3f826a25f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 127,
+      "methods": 1237,
+      "call_edges": 4193,
+      "evidence": "c4e3bc5933f4064d27527463d89e4bde76a64707dfefd74861e57dc3f826a25f-92d692a37803.json.gz"
+    },
+    {
+      "path": "Interfaces.dll",
+      "sha256": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 6,
+      "methods": 225,
+      "call_edges": 15,
+      "evidence": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205-032ab2cde724.json.gz"
+    },
+    {
+      "path": "IronPython.Modules.dll",
+      "sha256": "42154d6cf9fc8c15571140f0656bd98a127814e40f8cea1fb567d9d97cde0aa5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 395,
+      "methods": 4013,
+      "call_edges": 17452,
+      "evidence": "42154d6cf9fc8c15571140f0656bd98a127814e40f8cea1fb567d9d97cde0aa5-ec864f01fb2a.json.gz"
+    },
+    {
+      "path": "IronPython.dll",
+      "sha256": "fa31585f4ee4140ee4dc3e4130643ea21f514d142a8dbacbc12afba5ed7bb5a3",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 1785725,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 1204,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "fa31585f4ee4140ee4dc3e4130643ea21f514d142a8dbacbc12afba5ed7bb5a3-6f32bdec3b33.json.gz"
+    },
+    {
+      "path": "IronPython.SQLite.dll",
+      "sha256": "5c43c75d7d88df61cf76c4739346a1f7947671019c08785457e61dc790ecb0a5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 340,
+      "methods": 2671,
+      "call_edges": 12682,
+      "evidence": "5c43c75d7d88df61cf76c4739346a1f7947671019c08785457e61dc790ecb0a5-29fb919c1278.json.gz"
+    },
+    {
+      "path": "IronPython.Wpf.dll",
+      "sha256": "4e3c9e0d0ec9120de35521ee3c3e7a5ad6709686edc26e7b2b746973ba9c1a47",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 2,
+      "methods": 7,
+      "call_edges": 48,
+      "evidence": "4e3c9e0d0ec9120de35521ee3c3e7a5ad6709686edc26e7b2b746973ba9c1a47-226ab7cb0427.json.gz"
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "19b188f164f970f5598bca806c900027c7aac5ab02dfec45e9d883bc3d7c1ead",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "19b188f164f970f5598bca806c900027c7aac5ab02dfec45e9d883bc3d7c1ead-cf56ff26cb00.json.gz"
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "53fb4185f37ff46c4807692b37db021d33d3d8ad7aff62f85450553006fd0faf",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "53fb4185f37ff46c4807692b37db021d33d3d8ad7aff62f85450553006fd0faf-102e64585183.json.gz"
+    },
+    {
+      "path": "it/ZedGraph.resources.dll",
+      "sha256": "536e25b406c4716bd6990ed8998272658359868003b925e9e8ff65472bba345a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "536e25b406c4716bd6990ed8998272658359868003b925e9e8ff65472bba345a-63889b3c3a61.json.gz"
+    },
+    {
+      "path": "it-IT/MissionPlanner.resources.dll",
+      "sha256": "7de1e0dd5c2cc44040205637ec3757bf33a6941c18cec4e257950949af816b21",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "7de1e0dd5c2cc44040205637ec3757bf33a6941c18cec4e257950949af816b21-be90b1a04fcc.json.gz"
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "888e69f650722b6dcff4da7645a1fa9783fafb70a028fa08c446619288537121",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "888e69f650722b6dcff4da7645a1fa9783fafb70a028fa08c446619288537121-b3b6e16caf9b.json.gz"
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "c3df6306011e06e99234eb004ab924bc21bd40c23ccb50c64ed398e1cac088dc",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c3df6306011e06e99234eb004ab924bc21bd40c23ccb50c64ed398e1cac088dc-6d42c32934ac.json.gz"
+    },
+    {
+      "path": "ja/ZedGraph.resources.dll",
+      "sha256": "8d1d721b1adaf57a21ba8a2861c4dc46591852faf965ea962761f6f2d0ce2872",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "8d1d721b1adaf57a21ba8a2861c4dc46591852faf965ea962761f6f2d0ce2872-2d6afad19862.json.gz"
+    },
+    {
+      "path": "ja-JP/MissionPlanner.resources.dll",
+      "sha256": "c843f84195229d2b9cb2285d5b78a86f9938f8882304e6f60c8c49c7e1f477b0",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c843f84195229d2b9cb2285d5b78a86f9938f8882304e6f60c8c49c7e1f477b0-0f21b1e381b4.json.gz"
+    },
+    {
+      "path": "ja-JP/MissionPlanner.Strings.resources.dll",
+      "sha256": "e79802bc2098170416f129fe8c044f62b8b8007ad1ca060871b836c9b0e8418b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "e79802bc2098170416f129fe8c044f62b8b8007ad1ca060871b836c9b0e8418b-e6b8dafa846f.json.gz"
+    },
+    {
+      "path": "JetBrains.Profiler.Api.dll",
+      "sha256": "0e81d6dd31052e029c0f7e74dce0deddc6179a3955be5762ea8a2dbff5f42f3a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 20,
+      "methods": 72,
+      "call_edges": 206,
+      "evidence": "0e81d6dd31052e029c0f7e74dce0deddc6179a3955be5762ea8a2dbff5f42f3a-9c20c2d17685.json.gz"
+    },
+    {
+      "path": "JetBrains.Profiler.SelfApi.dll",
+      "sha256": "ae3fc72f428ae9b804b1ab3df4a6e9ffb96a56afd18ff18d8cb3c7c9d63ab18c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 48,
+      "methods": 190,
+      "call_edges": 892,
+      "evidence": "ae3fc72f428ae9b804b1ab3df4a6e9ffb96a56afd18ff18d8cb3c7c9d63ab18c-084fd5f2d3dd.json.gz"
+    },
+    {
+      "path": "KMLib.dll",
+      "sha256": "1952af7cb6095ab76750ceb278a1cae308718398896938c5b97ead0ea40325c9",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 60,
+      "methods": 276,
+      "call_edges": 209,
+      "evidence": "1952af7cb6095ab76750ceb278a1cae308718398896938c5b97ead0ea40325c9-e3303980c320.json.gz"
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "ec13f51ce899bd1ce7f780921386cb017d477d8f4cd3745a0425582306683ee4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ec13f51ce899bd1ce7f780921386cb017d477d8f4cd3745a0425582306683ee4-6923c6cf04eb.json.gz"
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "de24e9ad5e3e332851a25fc17474e242dbb383ed5f82029d264035e50f4025a0",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "de24e9ad5e3e332851a25fc17474e242dbb383ed5f82029d264035e50f4025a0-eab1681d93ef.json.gz"
+    },
+    {
+      "path": "ko-KR/MissionPlanner.Strings.resources.dll",
+      "sha256": "06a395d82f8dd07d96a2d09ad3172e2c952343f3f26c640e8ef90a0b930f4df8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "06a395d82f8dd07d96a2d09ad3172e2c952343f3f26c640e8ef90a0b930f4df8-65c962e37712.json.gz"
+    },
+    {
+      "path": "ko-KR/MissionPlanner.resources.dll",
+      "sha256": "a17c8a941b90633dd8d6cc985cde0e8262a06e5c101d6692abf59e1c302fe269",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "a17c8a941b90633dd8d6cc985cde0e8262a06e5c101d6692abf59e1c302fe269-d8331a910088.json.gz"
+    },
+    {
+      "path": "LibTessDotNet.dll",
+      "sha256": "2df563dfe20d8201089dfde79efcbe38b0d82cd503ff0ec429de67ec2f67ba5d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 26,
+      "methods": 173,
+      "call_edges": 526,
+      "evidence": "2df563dfe20d8201089dfde79efcbe38b0d82cd503ff0ec429de67ec2f67ba5d-0074ae938fbd.json.gz"
+    },
+    {
+      "path": "LibUsbDfu.dll",
+      "sha256": "f577d659edfe5c240830ba16dcb43fe94dfa4586eb94834c925f4eefd8b73093",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 31,
+      "call_edges": 133,
+      "evidence": "f577d659edfe5c240830ba16dcb43fe94dfa4586eb94834c925f4eefd8b73093-898db5d3ad75.json.gz"
+    },
+    {
+      "path": "LibUsbDotNet.LibUsbDotNet.dll",
+      "sha256": "b6de87ff6fdde6d0a245ef37fe81fac49523c35115c61bc002e4935d99875508",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 193,
+      "methods": 1139,
+      "call_edges": 2993,
+      "evidence": "b6de87ff6fdde6d0a245ef37fe81fac49523c35115c61bc002e4935d99875508-11e13e8aabc4.json.gz"
+    },
+    {
+      "path": "LibVLC.NET.dll",
+      "sha256": "74d0b2ac1bec034ab5c541ef211eeb708fb224a5013be718550ff0c354f052df",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 130,
+      "methods": 512,
+      "call_edges": 715,
+      "evidence": "74d0b2ac1bec034ab5c541ef211eeb708fb224a5013be718550ff0c354f052df-9b32e13ab70e.json.gz"
+    },
+    {
+      "path": "log4net.dll",
+      "sha256": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 296,
+      "methods": 2226,
+      "call_edges": 6387,
+      "evidence": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d-8cadc865da93.json.gz"
+    },
+    {
+      "path": "ManagedNativeWifi.Simple.dll",
+      "sha256": "ae1c9dff1d88f92e47addc3a16f69a63acd5803e10933d2dd61ba8bfde7fbda8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 20,
+      "methods": 34,
+      "call_edges": 74,
+      "evidence": "ae1c9dff1d88f92e47addc3a16f69a63acd5803e10933d2dd61ba8bfde7fbda8-73c954d9d89e.json.gz"
+    },
+    {
+      "path": "MathParser.org-mXparser.dll",
+      "sha256": "b2dde6c274ff0ad287442bf9d86fb580dce3c99ef27775dcdbdcc854df5b91b9",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 93,
+      "methods": 1071,
+      "call_edges": 21141,
+      "evidence": "b2dde6c274ff0ad287442bf9d86fb580dce3c99ef27775dcdbdcc854df5b91b9-a2b86a54a716.json.gz"
+    },
+    {
+      "path": "MetaDataExtractor.dll",
+      "sha256": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 85,
+      "methods": 604,
+      "call_edges": 3345,
+      "evidence": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8-4b4e00e3fcd0.json.gz"
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.CSharp.dll",
+      "sha256": "58fc067e6cfb52480ce558eed5c55b6806e602ea235acd0fd0634dd771c9b715",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 2550,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "58fc067e6cfb52480ce558eed5c55b6806e602ea235acd0fd0634dd771c9b715-2b222679073e.json.gz"
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.dll",
+      "sha256": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 2241350,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 1994,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97-f416783903d7.json.gz"
+    },
+    {
+      "path": "Microsoft.Diagnostics.Runtime.dll",
+      "sha256": "902514bc754baa9466ceab24f387784e31d54ee89b00f539f28765b4be44e344",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1221,
+      "methods": 7491,
+      "call_edges": 10105,
+      "evidence": "902514bc754baa9466ceab24f387784e31d54ee89b00f539f28765b4be44e344-d8761cba3b0c.json.gz"
+    },
+    {
+      "path": "Microsoft.Dynamic.dll",
+      "sha256": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 730,
+      "methods": 5783,
+      "call_edges": 22994,
+      "evidence": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca-c461013d68be.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Abstractions.dll",
+      "sha256": "fa446e68a7d85d47163ed76be91553ec0c4ada77b740474b7d1215de72c9048f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 19,
+      "methods": 101,
+      "call_edges": 183,
+      "evidence": "fa446e68a7d85d47163ed76be91553ec0c4ada77b740474b7d1215de72c9048f-1d376cbb606c.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Memory.dll",
+      "sha256": "bf65e4e121d2a2233caf70bf0b6089c88c8851c9e232bc0b048e6a40ad746ece",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 12,
+      "methods": 109,
+      "call_edges": 404,
+      "evidence": "bf65e4e121d2a2233caf70bf0b6089c88c8851c9e232bc0b048e6a40ad746ece-3a2abe199c18.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "sha256": "3ad1dde935aae2f332bae842c7e360dfb8be0ff8774564771b77405b2ba0ebd2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 21,
+      "methods": 146,
+      "call_edges": 576,
+      "evidence": "3ad1dde935aae2f332bae842c7e360dfb8be0ff8774564771b77405b2ba0ebd2-5a0a47897f93.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.Logging.Abstractions.dll",
+      "sha256": "750955eea05d92071f032de955d5ba2c93c247ff6c7db4c81f27105dc99bde34",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 65,
+      "methods": 307,
+      "call_edges": 553,
+      "evidence": "750955eea05d92071f032de955d5ba2c93c247ff6c7db4c81f27105dc99bde34-3b406b2e36a2.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.Options.dll",
+      "sha256": "71e2aab1bd158a5499f5a6b7c6f5a0f13a4f6ddaa24e1d7c4a7445ceb8ec9b6c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 64,
+      "methods": 299,
+      "call_edges": 642,
+      "evidence": "71e2aab1bd158a5499f5a6b7c6f5a0f13a4f6ddaa24e1d7c4a7445ceb8ec9b6c-ec4690909a59.json.gz"
+    },
+    {
+      "path": "Microsoft.Extensions.Primitives.dll",
+      "sha256": "4fa020c0e576e0c2332de41f27a0934dd13160017b201844a6b139ea389b1e90",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 27,
+      "methods": 217,
+      "call_edges": 495,
+      "evidence": "4fa020c0e576e0c2332de41f27a0934dd13160017b201844a6b139ea389b1e90-8171a4fa76af.json.gz"
+    },
+    {
+      "path": "Microsoft.Scripting.dll",
+      "sha256": "2dfbeb0f68ee9828f50c246f379d60da5f37ddda07e07acce92cca2ded9f3a7f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 133,
+      "methods": 1289,
+      "call_edges": 3219,
+      "evidence": "2dfbeb0f68ee9828f50c246f379d60da5f37ddda07e07acce92cca2ded9f3a7f-4dc716d61291.json.gz"
+    },
+    {
+      "path": "Microsoft.Scripting.Metadata.dll",
+      "sha256": "9748910fefa76dc8770fde957ec5eebe55cd27bae0c1e1d5d859c9aac1d89af3",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 120,
+      "methods": 677,
+      "call_edges": 1523,
+      "evidence": "9748910fefa76dc8770fde957ec5eebe55cd27bae0c1e1d5d859c9aac1d89af3-93e57b5079a0.json.gz"
+    },
+    {
+      "path": "Microsoft.Win32.Registry.dll",
+      "sha256": "619737e2af8fb713085726631dd2e522fe130cac1d388a59c38907a47d7aadea",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 37,
+      "call_edges": 58,
+      "evidence": "619737e2af8fb713085726631dd2e522fe130cac1d388a59c38907a47d7aadea-2353e68bca99.json.gz"
+    },
+    {
+      "path": "Mono.Posix.NETStandard.dll",
+      "sha256": "e67e359a40feb8665adbbd8f781e9e512866d103f2870ba57aab4aa59de83fee",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "e67e359a40feb8665adbbd8f781e9e512866d103f2870ba57aab4aa59de83fee-d871a06c7aec.json.gz"
+    },
+    {
+      "path": "netDxf.dll",
+      "sha256": "c04b89cd13234021ab6e1a8edb0cd145c60b05a8297597ac5e83473b0d69350a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 314,
+      "methods": 3548,
+      "call_edges": 26991,
+      "evidence": "c04b89cd13234021ab6e1a8edb0cd145c60b05a8297597ac5e83473b0d69350a-2f3b09f280ed.json.gz"
+    },
+    {
+      "path": "NetTopologySuite.dll",
+      "sha256": "456dfab0684e2a48af46962ad46bd3e34bd40153cab9832306ce59d7a6f7aa69",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 679,
+      "methods": 6192,
+      "call_edges": 21669,
+      "evidence": "456dfab0684e2a48af46962ad46bd3e34bd40153cab9832306ce59d7a6f7aa69-19609ea9b1ca.json.gz"
+    },
+    {
+      "path": "Newtonsoft.Json.dll",
+      "sha256": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 500,
+      "methods": 4213,
+      "call_edges": 19109,
+      "evidence": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d-75b8fe214af2.json.gz"
+    },
+    {
+      "path": "ObjectListView.dll",
+      "sha256": "76b2120588c0b1582d1784a7d2719ed662fc3462cce005d3a30cf9873e4e01ff",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 294,
+      "methods": 3124,
+      "call_edges": 10580,
+      "evidence": "76b2120588c0b1582d1784a7d2719ed662fc3462cce005d3a30cf9873e4e01ff-ff4a7b27ef2d.json.gz"
+    },
+    {
+      "path": "ogr_csharp.dll",
+      "sha256": "48c275f1b26f0c7d157410698c0246aece07052c95da31c70a926820f87d6a86",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 29,
+      "methods": 935,
+      "call_edges": 1764,
+      "evidence": "48c275f1b26f0c7d157410698c0246aece07052c95da31c70a926820f87d6a86-2ce194be9830.json.gz"
+    },
+    {
+      "path": "Onvif.Core.dll",
+      "sha256": "0ebffc8fe7b3cce0b2b8df23043e697225de6b9e217a254dff532246dfe085b1",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 649,
+      "methods": 4125,
+      "call_edges": 1942,
+      "evidence": "0ebffc8fe7b3cce0b2b8df23043e697225de6b9e217a254dff532246dfe085b1-c515f6ce7e60.json.gz"
+    },
+    {
+      "path": "Onvif.dll",
+      "sha256": "d2faf23f2590a499d9c3d437e86e4139a110c31259408f4c85f017970c24cfb7",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 5,
+      "methods": 40,
+      "call_edges": 161,
+      "evidence": "d2faf23f2590a499d9c3d437e86e4139a110c31259408f4c85f017970c24cfb7-1cdc00a79e1a.json.gz"
+    },
+    {
+      "path": "OpenTK.dll",
+      "sha256": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 3870,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4-c76ff9042fa2.json.gz"
+    },
+    {
+      "path": "OpenTK.GLControl.dll",
+      "sha256": "13763605654dc50b83844dcb23c4530cf8d1f443a4dade3abc485c1cc9a93318",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 34,
+      "methods": 210,
+      "call_edges": 471,
+      "evidence": "13763605654dc50b83844dcb23c4530cf8d1f443a4dade3abc485c1cc9a93318-3ff5acf59a7b.json.gz"
+    },
+    {
+      "path": "osr_csharp.dll",
+      "sha256": "8a41651ffb53279e6e70bf3d4e294adb00558483327659b693e8cb6406ba356f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 16,
+      "methods": 345,
+      "call_edges": 588,
+      "evidence": "8a41651ffb53279e6e70bf3d4e294adb00558483327659b693e8cb6406ba356f-7f54b2a4506c.json.gz"
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "5c75908c05d6088306aa52cf915972bfbe5b15fb21699cac61b0d37c91bad68a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "5c75908c05d6088306aa52cf915972bfbe5b15fb21699cac61b0d37c91bad68a-3d9378acbd96.json.gz"
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d110bf0f1f620c40e2cbc0459438a6fa937b6bf85e75e0b97fa24e7a381b617b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "d110bf0f1f620c40e2cbc0459438a6fa937b6bf85e75e0b97fa24e7a381b617b-c863ff624b36.json.gz"
+    },
+    {
+      "path": "pl/MissionPlanner.resources.dll",
+      "sha256": "f31d4cf77c9421dc62900dcdb8653b9c6cdf9b9912464e7250cf96b6e24d1d2a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "f31d4cf77c9421dc62900dcdb8653b9c6cdf9b9912464e7250cf96b6e24d1d2a-11f66475f483.json.gz"
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.Gridv2.resources.dll",
+      "sha256": "e014d74a6daf6b9e4fff3be680abbba8bd594c336f89d5999da378e756116157",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "e014d74a6daf6b9e4fff3be680abbba8bd594c336f89d5999da378e756116157-95b96437ba61.json.gz"
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.SimpleGrid.resources.dll",
+      "sha256": "bbc2ed044c36a78af507fc372b9815389a0f7fd9408f98b82c7ef4d61aeb7246",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "bbc2ed044c36a78af507fc372b9815389a0f7fd9408f98b82c7ef4d61aeb7246-efb34d7700f6.json.gz"
+    },
+    {
+      "path": "plugins/Markdig.dll",
+      "sha256": "4b693316ca1215a4adeff6f00807a967b07087230ca9da9ed1f69abde24ccd85",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 384,
+      "methods": 2131,
+      "call_edges": 13583,
+      "evidence": "4b693316ca1215a4adeff6f00807a967b07087230ca9da9ed1f69abde24ccd85-6db7e4e12e3e.json.gz"
+    },
+    {
+      "path": "plugins/Microsoft.Bcl.AsyncInterfaces.dll",
+      "sha256": "ed5bc605f7f9fcc382183abef06c354dad946abb42a07631712077b2157d6bc9",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 16,
+      "methods": 46,
+      "call_edges": 87,
+      "evidence": "ed5bc605f7f9fcc382183abef06c354dad946abb42a07631712077b2157d6bc9-03f6a8396576.json.gz"
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Abstractions.dll",
+      "sha256": "f737853a563d87774707623484eb23072992848b6767626024a37d9d9d2fa51b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 13,
+      "methods": 48,
+      "call_edges": 22,
+      "evidence": "f737853a563d87774707623484eb23072992848b6767626024a37d9d9d2fa51b-ac90628233b6.json.gz"
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.JsonWebTokens.dll",
+      "sha256": "342ead1b0d42192f3d26d0788d1e34d44bbbb26a2433d9a6c5703453be2d9b21",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 37,
+      "methods": 296,
+      "call_edges": 2560,
+      "evidence": "342ead1b0d42192f3d26d0788d1e34d44bbbb26a2433d9a6c5703453be2d9b21-2f3dbc3f21b7.json.gz"
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Logging.dll",
+      "sha256": "888ce7235ac4edf45ff7be366ce4c0f1d62d8dd8dd01eec72b4f05632171ceeb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 17,
+      "methods": 125,
+      "call_edges": 376,
+      "evidence": "888ce7235ac4edf45ff7be366ce4c0f1d62d8dd8dd01eec72b4f05632171ceeb-7bfa5cca29a8.json.gz"
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Tokens.dll",
+      "sha256": "18ceaf81c268fe652a7f3b0a852e71aff3cb4505743d706526ee088fc284d6d6",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 175,
+      "methods": 1286,
+      "call_edges": 5654,
+      "evidence": "18ceaf81c268fe652a7f3b0a852e71aff3cb4505743d706526ee088fc284d6d6-00e81503efa2.json.gz"
+    },
+    {
+      "path": "plugins/NodaTime.dll",
+      "sha256": "82a5a58a4fb623c85534d20750ef39b482a5f261e3d3b3e91b49180f63c51b3a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 377,
+      "methods": 2930,
+      "call_edges": 9028,
+      "evidence": "82a5a58a4fb623c85534d20750ef39b482a5f261e3d3b3e91b49180f63c51b3a-6645da7c9bd7.json.gz"
+    },
+    {
+      "path": "plugins/NodaTime.Serialization.JsonNet.dll",
+      "sha256": "4902e29b0fbcdb85a630d27e85504c1f40db79958fe356465eadcc989fb33f47",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 14,
+      "methods": 73,
+      "call_edges": 314,
+      "evidence": "4902e29b0fbcdb85a630d27e85504c1f40db79958fe356465eadcc989fb33f47-53c8eac4f807.json.gz"
+    },
+    {
+      "path": "plugins/Polly.dll",
+      "sha256": "fc859b5e11d4d9ad76a767381438969062ff7780c495f5fe30b12b13b97eb283",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 648,
+      "methods": 2315,
+      "call_edges": 5236,
+      "evidence": "fc859b5e11d4d9ad76a767381438969062ff7780c495f5fe30b12b13b97eb283-41d641e8e55c.json.gz"
+    },
+    {
+      "path": "plugins/pt/MissionPlanner.SimpleGrid.resources.dll",
+      "sha256": "238c85d447dae137d22de893f599d7412dd12e0ec0b6c46feabd81c7ac002c4b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "238c85d447dae137d22de893f599d7412dd12e0ec0b6c46feabd81c7ac002c4b-bc2f47ba844e.json.gz"
+    },
+    {
+      "path": "plugins/System.IdentityModel.Tokens.Jwt.dll",
+      "sha256": "a99a847bdb8e4b5352ffc966d77860835919921561e6e26cbacde0b46b01c2a8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 20,
+      "methods": 219,
+      "call_edges": 1591,
+      "evidence": "a99a847bdb8e4b5352ffc966d77860835919921561e6e26cbacde0b46b01c2a8-e2d510626533.json.gz"
+    },
+    {
+      "path": "plugins/System.Text.Encodings.Web.dll",
+      "sha256": "09f7d7e7f98be4c21c4dba8c3be7bf9516dbae6dddfb1b827188a9bd874c6724",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 25,
+      "methods": 333,
+      "call_edges": 644,
+      "evidence": "09f7d7e7f98be4c21c4dba8c3be7bf9516dbae6dddfb1b827188a9bd874c6724-8cb7154ae549.json.gz"
+    },
+    {
+      "path": "plugins/System.Text.Json.dll",
+      "sha256": "d2608254043e5b19f6e8335569fc2dd72ae4ce11a3df0d3f1425ac158df93237",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 141,
+      "methods": 1656,
+      "call_edges": 9738,
+      "evidence": "d2608254043e5b19f6e8335569fc2dd72ae4ce11a3df0d3f1425ac158df93237-226cfe5585be.json.gz"
+    },
+    {
+      "path": "ProjNET.dll",
+      "sha256": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 56,
+      "methods": 574,
+      "call_edges": 2621,
+      "evidence": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48-4235ce7a42a7.json.gz"
+    },
+    {
+      "path": "pt/MissionPlanner.resources.dll",
+      "sha256": "37da327c9f50190a480baa764826cc84beb243af86287ede13109edb668245c9",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "37da327c9f50190a480baa764826cc84beb243af86287ede13109edb668245c9-3b10ccd0a9fc.json.gz"
+    },
+    {
+      "path": "pt/MissionPlanner.Strings.resources.dll",
+      "sha256": "d2f2424b30c2076cfdbdfcde9e6ba16a83ed849564b5f47130a1e3dcea7f60fe",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "d2f2424b30c2076cfdbdfcde9e6ba16a83ed849564b5f47130a1e3dcea7f60fe-6af846e518d5.json.gz"
+    },
+    {
+      "path": "pt/ZedGraph.resources.dll",
+      "sha256": "cca886440642650914f3f56bd6a9e0a00fb65e575cdae797664689414f121800",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "cca886440642650914f3f56bd6a9e0a00fb65e575cdae797664689414f121800-508fedd7aa99.json.gz"
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "d14623ab457697e3644c12a6091fe896103a13f920b36e4ca52e309510ff9545",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "d14623ab457697e3644c12a6091fe896103a13f920b36e4ca52e309510ff9545-a65b0a7d584d.json.gz"
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "891348b007d7fa8b92aadd88d2ec3f30b67936810c3fc5e46e8afe3c1abf37bf",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "891348b007d7fa8b92aadd88d2ec3f30b67936810c3fc5e46e8afe3c1abf37bf-1fcee580e1d7.json.gz"
+    },
+    {
+      "path": "Renci.SshNet.dll",
+      "sha256": "f6a4be2a762ffd5a1f8d47c0deb34c3015d479bd409d01cc96f1d2d0be55caa2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 547,
+      "methods": 5039,
+      "call_edges": 17043,
+      "evidence": "f6a4be2a762ffd5a1f8d47c0deb34c3015d479bd409d01cc96f1d2d0be55caa2-89d3f298aa8e.json.gz"
+    },
+    {
+      "path": "RestSharp.dll",
+      "sha256": "55ca753ccad95b3845ef735252ec35ebd0a3a5e420625393e32032add2331378",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 206,
+      "methods": 1771,
+      "call_edges": 4512,
+      "evidence": "55ca753ccad95b3845ef735252ec35ebd0a3a5e420625393e32032add2331378-b8a8f69e2093.json.gz"
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "2eaba6b072a203a5cb52a9df72326c7fc0f20bb29488f0abdf6a5b94bbc90509",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "2eaba6b072a203a5cb52a9df72326c7fc0f20bb29488f0abdf6a5b94bbc90509-e707664c51fc.json.gz"
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "591798c606db1084be5620a8203f117f453d2cae284c7b79d5751b9f04b9ecfb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "591798c606db1084be5620a8203f117f453d2cae284c7b79d5751b9f04b9ecfb-1b24a6c0355e.json.gz"
+    },
+    {
+      "path": "ru/ZedGraph.resources.dll",
+      "sha256": "72e955e6f936393fac3ccb2cb68386ee9a7da313dea4133fb85e0f42d3a4caa4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "72e955e6f936393fac3ccb2cb68386ee9a7da313dea4133fb85e0f42d3a4caa4-77635d3ac2a3.json.gz"
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.resources.dll",
+      "sha256": "3cb748ea82f6e82f1f89e7c3ef3b5e0181b9dd18a1e09218316f97f96a488b09",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "3cb748ea82f6e82f1f89e7c3ef3b5e0181b9dd18a1e09218316f97f96a488b09-fe47fef7c474.json.gz"
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.Strings.resources.dll",
+      "sha256": "65f8725582f6161d95c4627667249087dd59f44a6f02afe7de41b8add6ff8825",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "65f8725582f6161d95c4627667249087dd59f44a6f02afe7de41b8add6ff8825-6216dce2b4b4.json.gz"
+    },
+    {
+      "path": "ru-RU/MissionPlanner.resources.dll",
+      "sha256": "94da5403af631b728605618403b624e46d8512192f13a4bc2270051ef23e30c4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "94da5403af631b728605618403b624e46d8512192f13a4bc2270051ef23e30c4-aa8bdc8994a0.json.gz"
+    },
+    {
+      "path": "SharpAdbClient.dll",
+      "sha256": "87ef276ebd015b24253c4c4db4b655d1f630a6713d8278081f52a5601d9d235d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 84,
+      "methods": 523,
+      "call_edges": 1454,
+      "evidence": "87ef276ebd015b24253c4c4db4b655d1f630a6713d8278081f52a5601d9d235d-01e9e3c087f1.json.gz"
+    },
+    {
+      "path": "SharpCompress.dll",
+      "sha256": "01cb5fbfb6dabdd5a84ecdbf88797c78e4b4602fb82e44daee5cd9b219b90289",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 480,
+      "methods": 3556,
+      "call_edges": 11455,
+      "evidence": "01cb5fbfb6dabdd5a84ecdbf88797c78e4b4602fb82e44daee5cd9b219b90289-d3aa592d3470.json.gz"
+    },
+    {
+      "path": "SharpDX.DirectInput.dll",
+      "sha256": "582ab6ecf6753cfaef4a45ddc7b723407d2e83d5d9d65b549f48d751f1030519",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 174,
+      "methods": 621,
+      "call_edges": 1302,
+      "evidence": "582ab6ecf6753cfaef4a45ddc7b723407d2e83d5d9d65b549f48d751f1030519-b8fd57f0ccd5.json.gz"
+    },
+    {
+      "path": "SharpDX.dll",
+      "sha256": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 178,
+      "methods": 878,
+      "call_edges": 1958,
+      "evidence": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b-d4ca9fd65131.json.gz"
+    },
+    {
+      "path": "SharpKml.dll",
+      "sha256": "4e4687e0545849538ffd5d9971be0512a683848b27864f7aeb988053b483909d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 178,
+      "methods": 1151,
+      "call_edges": 2192,
+      "evidence": "4e4687e0545849538ffd5d9971be0512a683848b27864f7aeb988053b483909d-6c88ecf66d4c.json.gz"
+    },
+    {
+      "path": "SixLabors.ImageSharp.dll",
+      "sha256": "0672a08b23b909c336ff6feaf7a0dab22cc57ae709dc6f95b013799b0128c2a7",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": 663729,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 1501,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "0672a08b23b909c336ff6feaf7a0dab22cc57ae709dc6f95b013799b0128c2a7-c8109a4a994d.json.gz"
+    },
+    {
+      "path": "sk/ZedGraph.resources.dll",
+      "sha256": "5cd46cbec89cc968656a5ad984bd15c60ebad060df8efabe5661bdfb36e101c0",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "5cd46cbec89cc968656a5ad984bd15c60ebad060df8efabe5661bdfb36e101c0-f20477d933dd.json.gz"
+    },
+    {
+      "path": "SkiaSharp.dll",
+      "sha256": "9d329d01e929fb81eaaa451d0909859a85507ea7268f6039156d56ba69fd8d53",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1278,
+      "methods": 8430,
+      "call_edges": 11119,
+      "evidence": "9d329d01e929fb81eaaa451d0909859a85507ea7268f6039156d56ba69fd8d53-210421cf54bf.json.gz"
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.Common.dll",
+      "sha256": "5b0f5714f9e1bb8d0fc8de352512eecfbe55e0474536060fcb15fb4a96eef37f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 7,
+      "methods": 63,
+      "call_edges": 167,
+      "evidence": "5b0f5714f9e1bb8d0fc8de352512eecfbe55e0474536060fcb15fb4a96eef37f-474da5b4e8be.json.gz"
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.dll",
+      "sha256": "dcd6938d8a12d2fbe69585843283cfeee3cc44808307e49569588a21c1af3675",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 2,
+      "methods": 1,
+      "call_edges": 1,
+      "evidence": "dcd6938d8a12d2fbe69585843283cfeee3cc44808307e49569588a21c1af3675-f5d462865d08.json.gz"
+    },
+    {
+      "path": "SkiaSharp.Views.Gtk.dll",
+      "sha256": "e536e972b843365a923bc67bbbac0d0bfab751c67d304c3e976b18d9a72c05dc",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 4,
+      "methods": 28,
+      "call_edges": 137,
+      "evidence": "e536e972b843365a923bc67bbbac0d0bfab751c67d304c3e976b18d9a72c05dc-b2e97576280f.json.gz"
+    },
+    {
+      "path": "SkiaSharp.Views.WindowsForms.dll",
+      "sha256": "9e5a55a4be89af4bf581d85b0c40dc0b44afd21f35bce9263d4e609ea34c9ccc",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 4,
+      "methods": 21,
+      "call_edges": 102,
+      "evidence": "9e5a55a4be89af4bf581d85b0c40dc0b44afd21f35bce9263d4e609ea34c9ccc-34e22e5a5980.json.gz"
+    },
+    {
+      "path": "SkiaSharp.Views.WPF.dll",
+      "sha256": "c5828f134c52d8e3c4ca07408d19ad7336d61971c014581487e2fcaaa274e55a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 4,
+      "methods": 27,
+      "call_edges": 150,
+      "evidence": "c5828f134c52d8e3c4ca07408d19ad7336d61971c014581487e2fcaaa274e55a-2e2a80b1c98d.json.gz"
+    },
+    {
+      "path": "SocketIOClient.dll",
+      "sha256": "b7d41eb88f72faea3e28d8c3875d1ba3990482a68fb108d24caf3af108f852e7",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 47,
+      "methods": 205,
+      "call_edges": 816,
+      "evidence": "b7d41eb88f72faea3e28d8c3875d1ba3990482a68fb108d24caf3af108f852e7-c9825aced31e.json.gz"
+    },
+    {
+      "path": "solo.dll",
+      "sha256": "ef7dc3e396d41470d4f0d7725b95941afd45e6381a369185668d78cac8fa7dcc",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 6,
+      "methods": 18,
+      "call_edges": 265,
+      "evidence": "ef7dc3e396d41470d4f0d7725b95941afd45e6381a369185668d78cac8fa7dcc-1ffa848fc8e0.json.gz"
+    },
+    {
+      "path": "SuperSocket.ClientEngine.dll",
+      "sha256": "9863a8ca0fd55fdf1de8d64cb89d034fc009a58220d45c5f4f83c6cdd0c5cbfd",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 36,
+      "methods": 306,
+      "call_edges": 895,
+      "evidence": "9863a8ca0fd55fdf1de8d64cb89d034fc009a58220d45c5f4f83c6cdd0c5cbfd-4b7d52b083ba.json.gz"
+    },
+    {
+      "path": "sv/ZedGraph.resources.dll",
+      "sha256": "4a161f8805802a5da16569cbb060698b29956bcc7a445c95386b99823b2cbdcf",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "4a161f8805802a5da16569cbb060698b29956bcc7a445c95386b99823b2cbdcf-9c791f88258c.json.gz"
+    },
+    {
+      "path": "SvgNet.dll",
+      "sha256": "458e85b54b54c800657552638a6d20bb4570a222a7b8a0c018af3a57aab03c7d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 88,
+      "methods": 1415,
+      "call_edges": 5467,
+      "evidence": "458e85b54b54c800657552638a6d20bb4570a222a7b8a0c018af3a57aab03c7d-3b4c413a2c84.json.gz"
+    },
+    {
+      "path": "System.Buffers.dll",
+      "sha256": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 9,
+      "methods": 34,
+      "call_edges": 104,
+      "evidence": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb-9f6277c79a36.json.gz"
+    },
+    {
+      "path": "System.CodeDom.dll",
+      "sha256": "e8c88b0448083663910587efeacb6a1977749fe3ffe83b263fc01f7b63d7dfd2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 14,
+      "methods": 61,
+      "call_edges": 68,
+      "evidence": "e8c88b0448083663910587efeacb6a1977749fe3ffe83b263fc01f7b63d7dfd2-2b0a9e16cbdc.json.gz"
+    },
+    {
+      "path": "System.Collections.Immutable.dll",
+      "sha256": "646d3b52a4898078f46534727bdb06ff23b72523441458b9f49ecc315bf3ef5c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 132,
+      "methods": 1656,
+      "call_edges": 4122,
+      "evidence": "646d3b52a4898078f46534727bdb06ff23b72523441458b9f49ecc315bf3ef5c-fcf15524aead.json.gz"
+    },
+    {
+      "path": "System.ComponentModel.Annotations.dll",
+      "sha256": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 60,
+      "call_edges": 70,
+      "evidence": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4-47ef5eeecbba.json.gz"
+    },
+    {
+      "path": "System.Configuration.ConfigurationManager.dll",
+      "sha256": "370fa504e5766c703ddef43abddbbe3e373362207a1704d7baa67206c888c51c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 212,
+      "call_edges": 233,
+      "evidence": "370fa504e5766c703ddef43abddbbe3e373362207a1704d7baa67206c888c51c-82079eef6cb1.json.gz"
+    },
+    {
+      "path": "System.Data.OleDb.dll",
+      "sha256": "3dfa99916e6b64f9d4143059d57e0bdfc3cc3218cf65f5a3879d2f5b9835fbca",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 163,
+      "call_edges": 184,
+      "evidence": "3dfa99916e6b64f9d4143059d57e0bdfc3cc3218cf65f5a3879d2f5b9835fbca-0ee85d94c8ce.json.gz"
+    },
+    {
+      "path": "System.Drawing.Common.dll",
+      "sha256": "0b1e23603f49613b623a82a2b04260642ab8b118d138726dda6556bead77b966",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 106,
+      "call_edges": 116,
+      "evidence": "0b1e23603f49613b623a82a2b04260642ab8b118d138726dda6556bead77b966-5b48b1dd17d6.json.gz"
+    },
+    {
+      "path": "System.Geometry.dll",
+      "sha256": "4faca517db47fee12381c8c449785e3acd803c5dbb89df6b6d7fc86fc4292bd8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 24,
+      "methods": 165,
+      "call_edges": 695,
+      "evidence": "4faca517db47fee12381c8c449785e3acd803c5dbb89df6b6d7fc86fc4292bd8-9a6d34a3fe25.json.gz"
+    },
+    {
+      "path": "System.Geometry.Text.dll",
+      "sha256": "3313d2bff1e4092ca5fbdc1b6d53b53f8a4194c08f495caf28a1da1505a4b1a2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 48,
+      "methods": 99,
+      "call_edges": 482,
+      "evidence": "3313d2bff1e4092ca5fbdc1b6d53b53f8a4194c08f495caf28a1da1505a4b1a2-8dbe0ca44be4.json.gz"
+    },
+    {
+      "path": "System.IO.Compression.dll",
+      "sha256": "e9c71ebf653159ee260640f152f677b33d30796307803fb5340f522abff17691",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 6,
+      "methods": 25,
+      "call_edges": 0,
+      "evidence": "e9c71ebf653159ee260640f152f677b33d30796307803fb5340f522abff17691-bfce40334ad7.json.gz"
+    },
+    {
+      "path": "System.IO.Ports.dll",
+      "sha256": "96d4e1871ac699f6dbc0ecc54e38bead6e52db64c3b43fb7330362b299bff0f4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 62,
+      "call_edges": 83,
+      "evidence": "96d4e1871ac699f6dbc0ecc54e38bead6e52db64c3b43fb7330362b299bff0f4-d08b4574ef91.json.gz"
+    },
+    {
+      "path": "System.Memory.dll",
+      "sha256": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 76,
+      "methods": 703,
+      "call_edges": 4308,
+      "evidence": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f-777f3785b9e0.json.gz"
+    },
+    {
+      "path": "System.Numerics.Vectors.dll",
+      "sha256": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 11,
+      "methods": 188,
+      "call_edges": 3026,
+      "evidence": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183-93fb3a32595d.json.gz"
+    },
+    {
+      "path": "System.Reactive.Core.dll",
+      "sha256": "b4ff782c1aa2aba5db4a06adb37c3ec2b9c2d7f13861cb73b2617db722b27354",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "b4ff782c1aa2aba5db4a06adb37c3ec2b9c2d7f13861cb73b2617db722b27354-bff10114ad10.json.gz"
+    },
+    {
+      "path": "System.Reactive.dll",
+      "sha256": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 1372,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172-bf70b13c9fd0.json.gz"
+    },
+    {
+      "path": "System.Reactive.Linq.dll",
+      "sha256": "32cc235df1bf5e272536f95cd41b216215e1fa6540650a30f5ad9e002fd25a72",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "32cc235df1bf5e272536f95cd41b216215e1fa6540650a30f5ad9e002fd25a72-276757d3b6d4.json.gz"
+    },
+    {
+      "path": "System.Reflection.Metadata.dll",
+      "sha256": "46451e1168dd11d450aa9b6119f17cec9a70928a40ac3c752abf61ce809cba6f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 535,
+      "methods": 3432,
+      "call_edges": 8346,
+      "evidence": "46451e1168dd11d450aa9b6119f17cec9a70928a40ac3c752abf61ce809cba6f-45d7f331ebcd.json.gz"
+    },
+    {
+      "path": "System.Resources.Extensions.dll",
+      "sha256": "8d328477d48f1ed9ea795b22e84ace6e983b939c6bb743c14d460c17c8e4ba4e",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 40,
+      "methods": 195,
+      "call_edges": 1034,
+      "evidence": "8d328477d48f1ed9ea795b22e84ace6e983b939c6bb743c14d460c17c8e4ba4e-0db6ada62a02.json.gz"
+    },
+    {
+      "path": "System.Runtime.CompilerServices.Unsafe.dll",
+      "sha256": "2d6f419d641682d8efc4a40e850d2e85de519d6823b93daf2aeee63206d4e32d",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 6,
+      "methods": 47,
+      "call_edges": 5,
+      "evidence": "2d6f419d641682d8efc4a40e850d2e85de519d6823b93daf2aeee63206d4e32d-e2838bca8c49.json.gz"
+    },
+    {
+      "path": "System.Security.AccessControl.dll",
+      "sha256": "aced52254a8c3cb6ad30f99f8b745296926c49373cab00824c2c4c10ad325b10",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 58,
+      "call_edges": 79,
+      "evidence": "aced52254a8c3cb6ad30f99f8b745296926c49373cab00824c2c4c10ad325b10-81aa6bd5d4da.json.gz"
+    },
+    {
+      "path": "System.Security.Permissions.dll",
+      "sha256": "50653deedf757fd1669f54c1cbac2c2d1403d5864b73f63454ac4adc9619d831",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 19,
+      "call_edges": 40,
+      "evidence": "50653deedf757fd1669f54c1cbac2c2d1403d5864b73f63454ac4adc9619d831-9c22c94de1f7.json.gz"
+    },
+    {
+      "path": "System.Security.Principal.Windows.dll",
+      "sha256": "c3ae599b5218516915f6542779ef577d5ad5de3d84a116e671c09e15e4591285",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "c3ae599b5218516915f6542779ef577d5ad5de3d84a116e671c09e15e4591285-2c8b045d6b80.json.gz"
+    },
+    {
+      "path": "System.ServiceModel.Duplex.dll",
+      "sha256": "6071201eac2294b1b9779c57f61471d486b4b65b029d1cb82f0ed2fc6af73c17",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "6071201eac2294b1b9779c57f61471d486b4b65b029d1cb82f0ed2fc6af73c17-4bd600d220ed.json.gz"
+    },
+    {
+      "path": "System.ServiceModel.Http.dll",
+      "sha256": "4d9db4c6bf44373ffac62f5c42f456aa88cd26e857fdd1bfda28ef15277171cf",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "4d9db4c6bf44373ffac62f5c42f456aa88cd26e857fdd1bfda28ef15277171cf-17069ba41f38.json.gz"
+    },
+    {
+      "path": "System.ServiceModel.NetTcp.dll",
+      "sha256": "eb874bed139c2e486c9923a39b5c9278707dee9e3906459efc325e76e7a594e2",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "eb874bed139c2e486c9923a39b5c9278707dee9e3906459efc325e76e7a594e2-c23244e6bcb0.json.gz"
+    },
+    {
+      "path": "System.ServiceModel.Primitives.dll",
+      "sha256": "50cadbf608dc09a77953eaf4a9dd4eb74048a521d6c91509f9dbf8e206b79534",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "50cadbf608dc09a77953eaf4a9dd4eb74048a521d6c91509f9dbf8e206b79534-1d081b2cfc12.json.gz"
+    },
+    {
+      "path": "System.ServiceModel.Security.dll",
+      "sha256": "5b04f069c797001ebc5cb5248aa78baae5165a42d3299650ca32083a7d687dee",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "5b04f069c797001ebc5cb5248aa78baae5165a42d3299650ca32083a7d687dee-aefc0b5a40fe.json.gz"
+    },
+    {
+      "path": "System.Speech.dll",
+      "sha256": "a84cc9f552f3de369891466659c3a69eb8014114d316c9c15120569f515ff69c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 490,
+      "methods": 3079,
+      "call_edges": 11101,
+      "evidence": "a84cc9f552f3de369891466659c3a69eb8014114d316c9c15120569f515ff69c-e1ec158723e3.json.gz"
+    },
+    {
+      "path": "System.Text.Encoding.CodePages.dll",
+      "sha256": "93da6a111239a3804da2efd6a6faa92bf5cbfe3b2b079ad3c04be643179f4088",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 67,
+      "methods": 454,
+      "call_edges": 1417,
+      "evidence": "93da6a111239a3804da2efd6a6faa92bf5cbfe3b2b079ad3c04be643179f4088-718103b9f63f.json.gz"
+    },
+    {
+      "path": "System.Threading.Tasks.Extensions.dll",
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 26,
+      "methods": 110,
+      "call_edges": 220,
+      "evidence": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6-2722433c33ff.json.gz"
+    },
+    {
+      "path": "System.ValueTuple.dll",
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 11,
+      "call_edges": 21,
+      "evidence": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4-064ac5b625a1.json.gz"
+    },
+    {
+      "path": "tlogThumbnailHandler.dll",
+      "sha256": "8764d7918098e3be2b05b05bdab2ec023a903700be24d6d0794d03ed642927c1",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 10,
+      "methods": 26,
+      "call_edges": 120,
+      "evidence": "8764d7918098e3be2b05b05bdab2ec023a903700be24d6d0794d03ed642927c1-9dc6f9eeff8f.json.gz"
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "723a7ab2e7b204c06d4c5b7a8a39155343358cbf2abf9dfa8b42681136f5ca4b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "723a7ab2e7b204c06d4c5b7a8a39155343358cbf2abf9dfa8b42681136f5ca4b-1fff52a0d85a.json.gz"
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "0f0629546bf2130a53393bdd3aa98e61c742ac8463858c31881e90414381a52c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "0f0629546bf2130a53393bdd3aa98e61c742ac8463858c31881e90414381a52c-1f19989d2183.json.gz"
+    },
+    {
+      "path": "tr/MissionPlanner.resources.dll",
+      "sha256": "3dc759f06bfa1e4d8ed2d6602988c50819435289fb026b360092e6d115055690",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "3dc759f06bfa1e4d8ed2d6602988c50819435289fb026b360092e6d115055690-c787536c5941.json.gz"
+    },
+    {
+      "path": "tr/MissionPlanner.Strings.resources.dll",
+      "sha256": "219f3fb65d8e1e289bc2e4fe51d87d67bccb6664a51e84cab9fcb52baa3aa0e5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "219f3fb65d8e1e289bc2e4fe51d87d67bccb6664a51e84cab9fcb52baa3aa0e5-c9f9a70c913b.json.gz"
+    },
+    {
+      "path": "tr/ZedGraph.resources.dll",
+      "sha256": "40a2b09551b7c83780fda95426009472d504f10e3dd3f06ad7f12f52b709b1cc",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "40a2b09551b7c83780fda95426009472d504f10e3dd3f06ad7f12f52b709b1cc-39c652ab5769.json.gz"
+    },
+    {
+      "path": "Transitions.dll",
+      "sha256": "6fdf5524bfb3115fbd4de12b6dfedcf5eea79b97f3ba7c3fcf4151551a282e27",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 26,
+      "methods": 88,
+      "call_edges": 296,
+      "evidence": "6fdf5524bfb3115fbd4de12b6dfedcf5eea79b97f3ba7c3fcf4151551a282e27-ac8b2be82a97.json.gz"
+    },
+    {
+      "path": "uk/MissionPlanner.resources.dll",
+      "sha256": "6eb8c534c537c7e126b6d4c76935fe552c6b2f1e5637b7aeafc65868b3a1c29b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "6eb8c534c537c7e126b6d4c76935fe552c6b2f1e5637b7aeafc65868b3a1c29b-9d47b9f0f6dc.json.gz"
+    },
+    {
+      "path": "uk/MissionPlanner.Strings.resources.dll",
+      "sha256": "eee1f29ce0fc9939467158c54d2e10354b53dc979656c5018ab47f8b2d1e21cb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "eee1f29ce0fc9939467158c54d2e10354b53dc979656c5018ab47f8b2d1e21cb-7be7a26c992b.json.gz"
+    },
+    {
+      "path": "WebSocket4Net.dll",
+      "sha256": "bbaf622cc3f4b512c6c131ab7ccad2db6b0662c03367afc10f1aab3deff5efcb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 69,
+      "methods": 516,
+      "call_edges": 1454,
+      "evidence": "bbaf622cc3f4b512c6c131ab7ccad2db6b0662c03367afc10f1aab3deff5efcb-e790af94968e.json.gz"
+    },
+    {
+      "path": "Xamarin.Essentials.dll",
+      "sha256": "62148ef21a1cfc093a7987d598218b2b88f622af902343e91688a768d55326f8",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 181,
+      "methods": 960,
+      "call_edges": 1865,
+      "evidence": "62148ef21a1cfc093a7987d598218b2b88f622af902343e91688a768d55326f8-715cd91f9a18.json.gz"
+    },
+    {
+      "path": "Xamarin.Forms.Core.dll",
+      "sha256": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "types": 1263,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47-51a87fbcee9d.json.gz"
+    },
+    {
+      "path": "Xamarin.Forms.Platform.dll",
+      "sha256": "ee361236c5240e2889d907077a0806df1714ef7fbd5ce4ef7fced7e3e650e2f4",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 47,
+      "methods": 46,
+      "call_edges": 45,
+      "evidence": "ee361236c5240e2889d907077a0806df1714ef7fbd5ce4ef7fced7e3e650e2f4-80148db99c84.json.gz"
+    },
+    {
+      "path": "Xamarin.Forms.Platform.WinForms.dll",
+      "sha256": "3405d211dae27ca83051a68bba4bcca97920a46d57287c6a26d943eb273ea896",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 104,
+      "methods": 589,
+      "call_edges": 2663,
+      "evidence": "3405d211dae27ca83051a68bba4bcca97920a46d57287c6a26d943eb273ea896-62b8084d361a.json.gz"
+    },
+    {
+      "path": "Xamarin.Forms.Xaml.dll",
+      "sha256": "8a92f612f553ce950132a1ec073719767be2b3e0e5296cb0d823b93f7fcbcefa",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 104,
+      "methods": 646,
+      "call_edges": 3041,
+      "evidence": "8a92f612f553ce950132a1ec073719767be2b3e0e5296cb0d823b93f7fcbcefa-f49da238127b.json.gz"
+    },
+    {
+      "path": "ZedGraph.dll",
+      "sha256": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 186,
+      "methods": 2167,
+      "call_edges": 8300,
+      "evidence": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5-961be3922bd7.json.gz"
+    },
+    {
+      "path": "Zeroconf.dll",
+      "sha256": "57f59d5627e8a0868311f657eaf6bb9561276f4be0b19b7ea53e0e806e0502af",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 71,
+      "methods": 267,
+      "call_edges": 985,
+      "evidence": "57f59d5627e8a0868311f657eaf6bb9561276f4be0b19b7ea53e0e806e0502af-63c4ef2b80df.json.gz"
+    },
+    {
+      "path": "zh-cn/MissionPlanner.resources.dll",
+      "sha256": "03f1084da43a574e2d0a7edc82cb4132dea214ae14d66c49bbae59a061256d96",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "03f1084da43a574e2d0a7edc82cb4132dea214ae14d66c49bbae59a061256d96-55484a62696b.json.gz"
+    },
+    {
+      "path": "zh-cn/ZedGraph.resources.dll",
+      "sha256": "dea0d230b808cbb695ca4ce8fea6834f18acff47e028f4942873caa427e3af76",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "dea0d230b808cbb695ca4ce8fea6834f18acff47e028f4942873caa427e3af76-2897669e24de.json.gz"
+    },
+    {
+      "path": "zh-Hans/GMap.NET.Core.resources.dll",
+      "sha256": "92ce09b1805e05cd454f8da7d5998030fc9c8bc6d9446b5a7a987a344339d87b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "92ce09b1805e05cd454f8da7d5998030fc9c8bc6d9446b5a7a987a344339d87b-7d9b93fc7209.json.gz"
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "6a7f287826260478b24cd2c1a6b93b682e99e1b9f036f18299996dfd4450d05f",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "6a7f287826260478b24cd2c1a6b93b682e99e1b9f036f18299996dfd4450d05f-ceb824875762.json.gz"
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "d5d653fbac1bb7aa95dbe6e98d432aa0ba82ebc3d4c76c97d57f84d052041599",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "d5d653fbac1bb7aa95dbe6e98d432aa0ba82ebc3d4c76c97d57f84d052041599-7d99018221ab.json.gz"
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Controls.resources.dll",
+      "sha256": "ad3f29e6f4907c240ae586bdac5035b27b51ac8e8e1791f200a35427483040f5",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ad3f29e6f4907c240ae586bdac5035b27b51ac8e8e1791f200a35427483040f5-fc516e90ebb1.json.gz"
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.resources.dll",
+      "sha256": "fb0dcbbaac3188fb247c1abadd9328894f6527cfb598c3a75e26c5a00027e9f1",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "fb0dcbbaac3188fb247c1abadd9328894f6527cfb598c3a75e26c5a00027e9f1-3bbb319ef247.json.gz"
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Strings.resources.dll",
+      "sha256": "1f5218244520f8166ddfe4c059cdd9bbb8b06d20b8521678f6c7821b93fe4f5b",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "1f5218244520f8166ddfe4c059cdd9bbb8b06d20b8521678f6c7821b93fe4f5b-07f95f968fa2.json.gz"
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "sha256": "f9e4534149a8421c7efe9ee3406fc645f940de25da78047cc6915a7d521acddb",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "f9e4534149a8421c7efe9ee3406fc645f940de25da78047cc6915a7d521acddb-017be99aa7cb.json.gz"
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.resources.dll",
+      "sha256": "5997803e4a28b8fd2a72d3cf213632d8cac2130156b1ed536aab7383b432af5c",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "5997803e4a28b8fd2a72d3cf213632d8cac2130156b1ed536aab7383b432af5c-d9dc4b0b87e0.json.gz"
+    },
+    {
+      "path": "zh-Hant/MissionPlanner.resources.dll",
+      "sha256": "ba67ca2dd02f4d18bc6db6401a5ab362e1b21088f5a1f133ac03056abbd6f121",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "ba67ca2dd02f4d18bc6db6401a5ab362e1b21088f5a1f133ac03056abbd6f121-f686d6250d28.json.gz"
+    },
+    {
+      "path": "zh-tw/MissionPlanner.resources.dll",
+      "sha256": "623581707bcc43a582fff314ab7b459f29e66546d0bd675224dbcef5224e725a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "623581707bcc43a582fff314ab7b459f29e66546d0bd675224dbcef5224e725a-167e54b0ff32.json.gz"
+    },
+    {
+      "path": "zh-tw/ZedGraph.resources.dll",
+      "sha256": "786dfeffaf91ff2176e230d2dcf33379f662e5050e4fb16b85ee897bb203ad1e",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 1,
+      "methods": 0,
+      "call_edges": 0,
+      "evidence": "786dfeffaf91ff2176e230d2dcf33379f662e5050e4fb16b85ee897bb203ad1e-60caf00370ef.json.gz"
+    },
+    {
+      "path": "zlib.net.dll",
+      "sha256": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a",
+      "exit_code": 0,
+      "subject_matches": true,
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 36,
+      "methods": 153,
+      "call_edges": 361,
+      "evidence": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a-a02871a286c6.json.gz"
+    }
+  ]
+}

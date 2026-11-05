@@ -1,0 +1,13 @@
+{
+  "scope": "static managed declarations only; not proof of native resolution or execution",
+  "manifest_sha256": "4082515cc0fa0192d1feaf22a467259de151c06e787dd16a64235b7b9ef1a207",
+  "database_sha256": "35df934838702787e1a9a964e41a8024062d6beb5841ec58e7a17e3fad9768d2",
+  "counts": {
+    "assemblies": 260,
+    "imports": 2868,
+    "native_implementations": 11065
+  },
+  "coverage": {
+    "complete": 260
+  }
+}

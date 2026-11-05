@@ -1,0 +1,38 @@
+{
+  "scope": "Disposable Copter SITL; synthetic key provisioned on SERIAL0; local relay to SERIAL1",
+  "case": "match",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "test_key_hex": "ae21e430a53c5df57629657cfc7db868fd78003a1aa8e8ab88cfb3cc33c68b0e",
+  "errors": [],
+  "initial_primary": {
+    "signed": false,
+    "valid_test_key": false,
+    "raw_hex": "fd09000000010100000000000000020359010382c2"
+  },
+  "initial_secondary": {
+    "signed": false,
+    "valid_test_key": false,
+    "raw_hex": "fd09000000010100000000000000020359010382c2"
+  },
+  "configured_primary": {
+    "signed": true,
+    "valid_test_key": true,
+    "raw_hex": "fd09010001010100000000000000020359010375b400b8fc8e77ff2178533d1a4a40"
+  },
+  "configured_secondary": {
+    "signed": true,
+    "valid_test_key": true,
+    "raw_hex": "fd09010001010100000000000000020359010375b401b8fc8e77ff21ce8e3db1d0cc"
+  },
+  "injected_sample_sha256": "acbbac097cd1ba45328863e98ed117fbc19b5a5e5e3a1f8951c4520a98f3c113",
+  "injected_bad_sha256": "e86a9c3078faec20ab677a6df24d71257d1e8c7b135726ebbc342124233ffe3f",
+  "closed_by": "client",
+  "capture_sha256": {
+    "bootstrap-primary-down.bin": "8488294081a262491ac8244495ed1d52a1be5bc19bde21f779588c4302c96b07",
+    "bootstrap-primary-up.bin": "96f354feb9cc54fae3e5187b577fa0639328764cfb1a1546418c6faacdd826b3",
+    "bootstrap-secondary-down.bin": "bd8c5515c08e6871969a5180105fa11b4a8fcd1df1feb58f4edbdad211e46b2c",
+    "downlink.bin": "0e6659ea331e9c91abafa55a50b974f44193a2ceb21cb478538bc26a4f5d9a56",
+    "injected.bin": "c54d2c24a5b77e1502c316082b7a186810bc8d9470f39bfd2fda3a8f3b5b7153",
+    "uplink.bin": "8d84fbde2f6bfaee508b6d2e5d4760c9a084a055d49fa4e5fbd7f1fe5d960af5"
+  }
+}

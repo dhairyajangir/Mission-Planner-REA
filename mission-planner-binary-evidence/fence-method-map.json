@@ -1,0 +1,1785 @@
+{
+  "scope": "REA static identities and call references; no UI execution claim",
+  "groups": [
+    {
+      "index_path": "mission-planner-binary-evidence/rea-supporting-index.sqlite",
+      "assembly_path": "mission-planner-portable/MissionPlanner.ArduPilot.dll",
+      "index_sha256": "81e26a1f6c5271a3e3041777fb5fb2b3e9e4251a79e7fefc357da27a0cbea50e",
+      "assembly_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+      "methods": [
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "getWPAsync",
+          "il_sha256": "dd6aca488d8c31b4ca228984449d9033355aec307da34cf86a6c69cbd022a22b",
+          "body_status": "present",
+          "token": "0x06000475",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 70,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 82,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "setWPTotalAsync",
+          "il_sha256": "46c8c9469f9996f30080e71bf73977e4e2fc3a653b154ff01c27c88e9a532ce1",
+          "body_status": "present",
+          "token": "0x0600047d",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+            },
+            {
+              "il_offset": 70,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+            },
+            {
+              "il_offset": 82,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "setWPAsync",
+          "il_sha256": "5494e16c5b46d1742a22388301301c0e267e4ed44a53bf50bdec60ad285bd585",
+          "body_status": "present",
+          "token": "0x06000482",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 115,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 127,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "setWPAsync",
+          "il_sha256": "404cdd687e9d511609b66a809901f293f1d487e923388c2bc33360d880b6317e",
+          "body_status": "present",
+          "token": "0x06000483",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 45,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 57,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "setWPAsync",
+          "il_sha256": "0c7336f94c75fa5b12783132cb0059bb6942b8dca7cc6ff8558b8b8c6dcdc27c",
+          "body_status": "present",
+          "token": "0x06000484",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 45,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 57,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "getFencePoint",
+          "il_sha256": "6356eb1f7b44f0ea5516fae40b5d914c64bd49e6e9c25e072cd90ba1aa19a2ae",
+          "body_status": "present",
+          "token": "0x060004a0",
+          "calls": [
+            {
+              "il_offset": 2,
+              "opcode": "call",
+              "name": "Create",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 45,
+              "opcode": "call",
+              "name": "Start",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            },
+            {
+              "il_offset": 57,
+              "opcode": "call",
+              "name": "get_Task",
+              "type": "System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.MAVLinkInterface",
+          "name": "setFencePoint",
+          "il_sha256": "d52c81f2d358591858e647267f4e5232c7b49fdfdd3b7dd0afa2896b3d3b2cf6",
+          "body_status": "present",
+          "token": "0x060004a9",
+          "calls": [
+            {
+              "il_offset": 27,
+              "opcode": "callvirt",
+              "name": "get_Lat",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 41,
+              "opcode": "callvirt",
+              "name": "get_Lng",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 55,
+              "opcode": "call",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 60,
+              "opcode": "callvirt",
+              "name": "get_compid",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 73,
+              "opcode": "call",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 78,
+              "opcode": "callvirt",
+              "name": "get_sysid",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 104,
+              "opcode": "call",
+              "name": "generatePacket",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 116,
+              "opcode": "call",
+              "name": "getFencePoint",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 121,
+              "opcode": "call",
+              "name": "AwaitSync",
+              "type": "MissionPlanner.Utilities.Extensions"
+            },
+            {
+              "il_offset": 134,
+              "opcode": "callvirt",
+              "name": "GetDistance",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 165,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "System.Exception"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index_path": "mission-planner-binary-evidence/rea-main-index.sqlite",
+      "assembly_path": "mission-planner-portable/MissionPlanner.exe",
+      "index_sha256": "a5f228d903a3b9c800ef16158803f9e49b2964528a957bbc42662efa5cc2d1a7",
+      "assembly_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+      "methods": [
+        {
+          "declaring_type": "MissionPlanner.GCSViews.FlightPlanner",
+          "name": "GeoFencedownloadToolStripMenuItem_Click",
+          "il_sha256": "563202ab52eab8cf15c1e675ea3b14eb3736f5de6ee8a436d7b35abe758b02c5",
+          "body_status": "present",
+          "token": "0x06000b91",
+          "calls": [
+            {
+              "il_offset": 9,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 14,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 24,
+              "opcode": "callvirt",
+              "name": "get_capabilities",
+              "type": "MissionPlanner.CurrentState"
+            },
+            {
+              "il_offset": 38,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 43,
+              "opcode": "callvirt",
+              "name": "get_BaseStream",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 48,
+              "opcode": "callvirt",
+              "name": "get_IsOpen",
+              "type": "MissionPlanner.Comms.ICommsSerial"
+            },
+            {
+              "il_offset": 55,
+              "opcode": "call",
+              "name": "get_PleaseConnect",
+              "type": "MissionPlanner.Strings"
+            },
+            {
+              "il_offset": 60,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 68,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 73,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 78,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 83,
+              "opcode": "callvirt",
+              "name": "get_sysid",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 88,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 93,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 98,
+              "opcode": "callvirt",
+              "name": "get_compid",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 105,
+              "opcode": "call",
+              "name": "download",
+              "type": "MissionPlanner.ArduPilot.mav_mission"
+            },
+            {
+              "il_offset": 110,
+              "opcode": "call",
+              "name": "AwaitSync",
+              "type": "MissionPlanner.Utilities.Extensions"
+            },
+            {
+              "il_offset": 124,
+              "opcode": "call",
+              "name": "get_ERROR",
+              "type": "MissionPlanner.Strings"
+            },
+            {
+              "il_offset": 129,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 138,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 143,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 148,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 158,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 165,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 170,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 175,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 185,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 197,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 204,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 209,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 214,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 224,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 229,
+              "opcode": "callvirt",
+              "name": "ToString",
+              "type": "System.Object"
+            },
+            {
+              "il_offset": 234,
+              "opcode": "call",
+              "name": "Parse",
+              "type": "System.Int32"
+            },
+            {
+              "il_offset": 247,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 265,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 281,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 297,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 307,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 313,
+              "opcode": "callvirt",
+              "name": "getFencePoint",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 318,
+              "opcode": "call",
+              "name": "AwaitSync",
+              "type": "MissionPlanner.Utilities.Extensions"
+            },
+            {
+              "il_offset": 348,
+              "opcode": "callvirt",
+              "name": "get_Lat",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 359,
+              "opcode": "callvirt",
+              "name": "get_Lng",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 364,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 369,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 382,
+              "opcode": "call",
+              "name": "get_ERROR",
+              "type": "MissionPlanner.Strings"
+            },
+            {
+              "il_offset": 387,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 429,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 437,
+              "opcode": "call",
+              "name": "get_Lat",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 454,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 462,
+              "opcode": "call",
+              "name": "get_Lng",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 467,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 474,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.WindowsForms.Markers.GMarkerGoogle"
+            },
+            {
+              "il_offset": 492,
+              "opcode": "callvirt",
+              "name": "set_ToolTipText",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 497,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 514,
+              "opcode": "callvirt",
+              "name": "RemoveAt",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 536,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 551,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 566,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 597,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.WindowsForms.GMapPolygon"
+            },
+            {
+              "il_offset": 620,
+              "opcode": "call",
+              "name": "get_Transparent",
+              "type": "System.Drawing.Brushes"
+            },
+            {
+              "il_offset": 630,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 657,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 662,
+              "opcode": "callvirt",
+              "name": "get_Position",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 669,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.WindowsForms.Markers.GMarkerGoogle"
+            },
+            {
+              "il_offset": 687,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 692,
+              "opcode": "callvirt",
+              "name": "get_ToolTipText",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 697,
+              "opcode": "callvirt",
+              "name": "set_ToolTipText",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 715,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 730,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 747,
+              "opcode": "callvirt",
+              "name": "UpdatePolygonLocalPosition",
+              "type": "GMap.NET.WindowsForms.GMapControl"
+            },
+            {
+              "il_offset": 770,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 775,
+              "opcode": "callvirt",
+              "name": "UpdateMarkerLocalPosition",
+              "type": "GMap.NET.WindowsForms.GMapControl"
+            },
+            {
+              "il_offset": 786,
+              "opcode": "callvirt",
+              "name": "Invalidate",
+              "type": "MissionPlanner.Controls.myGMAP"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.GCSViews.FlightPlanner",
+          "name": "FenceExclusionToolStripMenuItem_Click",
+          "il_sha256": "e0ca2e321853631ab9516ba1c9cdac6227fa8fb1e14b1f0d44ed1c7093734ef7",
+          "body_status": "present",
+          "token": "0x06000bd4",
+          "calls": [
+            {
+              "il_offset": 0,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "<>c__DisplayClass144_0"
+            },
+            {
+              "il_offset": 32,
+              "opcode": "ldftn",
+              "name": "<FenceExclusionToolStripMenuItem_Click>b__0",
+              "type": "<>c__DisplayClass144_0"
+            },
+            {
+              "il_offset": 38,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "System.Action`1"
+            },
+            {
+              "il_offset": 43,
+              "opcode": "callvirt",
+              "name": "ForEach",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 51,
+              "opcode": "call",
+              "name": "clearPolygonToolStripMenuItem_Click",
+              "type": "MissionPlanner.GCSViews.FlightPlanner"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.GCSViews.FlightPlanner",
+          "name": "FenceInclusionToolStripMenuItem_Click",
+          "il_sha256": "36b4e3bbfb81d2193cdae4a246962709255abf62d5fb14365f2355a98399d5d8",
+          "body_status": "present",
+          "token": "0x06000bd5",
+          "calls": [
+            {
+              "il_offset": 0,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "<>c__DisplayClass145_0"
+            },
+            {
+              "il_offset": 32,
+              "opcode": "ldftn",
+              "name": "<FenceInclusionToolStripMenuItem_Click>b__0",
+              "type": "<>c__DisplayClass145_0"
+            },
+            {
+              "il_offset": 38,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "System.Action`1"
+            },
+            {
+              "il_offset": 43,
+              "opcode": "callvirt",
+              "name": "ForEach",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 51,
+              "opcode": "call",
+              "name": "clearPolygonToolStripMenuItem_Click",
+              "type": "MissionPlanner.GCSViews.FlightPlanner"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.GCSViews.FlightPlanner",
+          "name": "DoGeofencePointsUpload",
+          "il_sha256": "c7e899ebc3dccfcc4582eaf93a6a710b1b7872a105b641cac2aa460f6051b060",
+          "body_status": "present",
+          "token": "0x06000bde",
+          "calls": [
+            {
+              "il_offset": 11,
+              "opcode": "callvirt",
+              "name": "get_Count",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 29,
+              "opcode": "callvirt",
+              "name": "UpdateProgressAndStatus",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 34,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 52,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 57,
+              "opcode": "callvirt",
+              "name": "get_Position",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 62,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 68,
+              "opcode": "callvirt",
+              "name": "setFencePoint",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 90,
+              "opcode": "callvirt",
+              "name": "GetEnumerator",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 100,
+              "opcode": "call",
+              "name": "get_Current",
+              "type": "Enumerator"
+            },
+            {
+              "il_offset": 118,
+              "opcode": "callvirt",
+              "name": "UpdateProgressAndStatus",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 123,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 130,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 136,
+              "opcode": "callvirt",
+              "name": "setFencePoint",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 149,
+              "opcode": "call",
+              "name": "MoveNext",
+              "type": "Enumerator"
+            },
+            {
+              "il_offset": 166,
+              "opcode": "callvirt",
+              "name": "Dispose",
+              "type": "System.IDisposable"
+            },
+            {
+              "il_offset": 184,
+              "opcode": "callvirt",
+              "name": "UpdateProgressAndStatus",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 189,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 207,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 212,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "MissionPlanner.Utilities.PointLatLngAlt"
+            },
+            {
+              "il_offset": 218,
+              "opcode": "callvirt",
+              "name": "setFencePoint",
+              "type": "MissionPlanner.MAVLinkInterface"
+            }
+          ]
+        },
+        {
+          "declaring_type": "MissionPlanner.GCSViews.FlightPlanner",
+          "name": "GeoFenceuploadToolStripMenuItem_Click",
+          "il_sha256": "10d927a3670dbcf1698b23e4b50eadc49f5f72ae8c6357bdfd57a5f747531680",
+          "body_status": "present",
+          "token": "0x06000bdf",
+          "calls": [
+            {
+              "il_offset": 7,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 12,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 17,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 27,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 34,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 39,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 44,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 54,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 66,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 86,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 104,
+              "opcode": "callvirt",
+              "name": "get_Count",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 116,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 134,
+              "opcode": "callvirt",
+              "name": "get_Count",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 146,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 164,
+              "opcode": "callvirt",
+              "name": "ToArray",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 169,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 178,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 183,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 190,
+              "opcode": "callvirt",
+              "name": "ToArray",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 207,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 212,
+              "opcode": "callvirt",
+              "name": "get_Position",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 221,
+              "opcode": "call",
+              "name": "get_Lat",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 238,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 243,
+              "opcode": "callvirt",
+              "name": "get_Position",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 252,
+              "opcode": "call",
+              "name": "get_Lng",
+              "type": "GMap.NET.PointLatLng"
+            },
+            {
+              "il_offset": 257,
+              "opcode": "call",
+              "name": "pnpoly",
+              "type": "MissionPlanner.GCSViews.FlightPlanner"
+            },
+            {
+              "il_offset": 269,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 280,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 285,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 290,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 300,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 307,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 312,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 317,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 327,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 332,
+              "opcode": "callvirt",
+              "name": "ToString",
+              "type": "System.Object"
+            },
+            {
+              "il_offset": 337,
+              "opcode": "call",
+              "name": "Parse",
+              "type": "System.Int32"
+            },
+            {
+              "il_offset": 358,
+              "opcode": "call",
+              "name": "ToString",
+              "type": "System.Single"
+            },
+            {
+              "il_offset": 380,
+              "opcode": "call",
+              "name": "Show",
+              "type": "MissionPlanner.Controls.InputBox"
+            },
+            {
+              "il_offset": 392,
+              "opcode": "call",
+              "name": "TryParse",
+              "type": "System.Int32"
+            },
+            {
+              "il_offset": 404,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 411,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 416,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 421,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 431,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 438,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 443,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 448,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 458,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 463,
+              "opcode": "callvirt",
+              "name": "ToString",
+              "type": "System.Object"
+            },
+            {
+              "il_offset": 468,
+              "opcode": "call",
+              "name": "Parse",
+              "type": "System.Int32"
+            },
+            {
+              "il_offset": 489,
+              "opcode": "call",
+              "name": "ToString",
+              "type": "System.Single"
+            },
+            {
+              "il_offset": 511,
+              "opcode": "call",
+              "name": "Show",
+              "type": "MissionPlanner.Controls.InputBox"
+            },
+            {
+              "il_offset": 523,
+              "opcode": "call",
+              "name": "TryParse",
+              "type": "System.Int32"
+            },
+            {
+              "il_offset": 535,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 543,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 548,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 553,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 563,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 570,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 575,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 580,
+              "opcode": "callvirt",
+              "name": "get_sysidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 586,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 591,
+              "opcode": "callvirt",
+              "name": "get_compidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 605,
+              "opcode": "callvirt",
+              "name": "setParam",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 611,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 616,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 621,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 631,
+              "opcode": "callvirt",
+              "name": "ContainsKey",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 638,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 643,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 648,
+              "opcode": "callvirt",
+              "name": "get_sysidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 654,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 659,
+              "opcode": "callvirt",
+              "name": "get_compidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 673,
+              "opcode": "callvirt",
+              "name": "setParam",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 690,
+              "opcode": "callvirt",
+              "name": "Error",
+              "type": "log4net.ILog"
+            },
+            {
+              "il_offset": 700,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 711,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 716,
+              "opcode": "callvirt",
+              "name": "get_MAV",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 721,
+              "opcode": "callvirt",
+              "name": "get_param",
+              "type": "MissionPlanner.MAVState"
+            },
+            {
+              "il_offset": 731,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "MAVLinkParamList"
+            },
+            {
+              "il_offset": 736,
+              "opcode": "call",
+              "name": "op_Explicit",
+              "type": "MAVLinkParam"
+            },
+            {
+              "il_offset": 743,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 748,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 753,
+              "opcode": "callvirt",
+              "name": "get_sysidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 759,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 764,
+              "opcode": "callvirt",
+              "name": "get_compidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 785,
+              "opcode": "callvirt",
+              "name": "setParam",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 799,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 821,
+              "opcode": "callvirt",
+              "name": "get_Count",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 831,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 836,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 841,
+              "opcode": "callvirt",
+              "name": "get_sysidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 847,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 852,
+              "opcode": "callvirt",
+              "name": "get_compidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 867,
+              "opcode": "callvirt",
+              "name": "setParam",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 881,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 893,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "MissionPlanner.Controls.ProgressReporterDialogue"
+            },
+            {
+              "il_offset": 900,
+              "opcode": "callvirt",
+              "name": "set_StartPosition",
+              "type": "System.Windows.Forms.Form"
+            },
+            {
+              "il_offset": 911,
+              "opcode": "callvirt",
+              "name": "set_Text",
+              "type": "System.Windows.Forms.Control"
+            },
+            {
+              "il_offset": 918,
+              "opcode": "ldftn",
+              "name": "DoGeofencePointsUpload",
+              "type": "MissionPlanner.GCSViews.FlightPlanner"
+            },
+            {
+              "il_offset": 924,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "MissionPlanner.Utilities.DoWorkEventHandler"
+            },
+            {
+              "il_offset": 929,
+              "opcode": "callvirt",
+              "name": "add_DoWork",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 941,
+              "opcode": "callvirt",
+              "name": "UpdateProgressAndStatus",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 947,
+              "opcode": "call",
+              "name": "ApplyThemeTo",
+              "type": "MissionPlanner.Utilities.ThemeManager"
+            },
+            {
+              "il_offset": 953,
+              "opcode": "callvirt",
+              "name": "RunBackgroundOperationAsync",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 958,
+              "opcode": "callvirt",
+              "name": "Dispose",
+              "type": "MissionPlanner.Utilities.IProgressReporterDialogue"
+            },
+            {
+              "il_offset": 963,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 968,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 973,
+              "opcode": "callvirt",
+              "name": "get_sysidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 979,
+              "opcode": "call",
+              "name": "get_comPort",
+              "type": "MissionPlanner.MainV2"
+            },
+            {
+              "il_offset": 984,
+              "opcode": "callvirt",
+              "name": "get_compidcurrent",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 998,
+              "opcode": "callvirt",
+              "name": "setParam",
+              "type": "MissionPlanner.MAVLinkInterface"
+            },
+            {
+              "il_offset": 1012,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            },
+            {
+              "il_offset": 1034,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1050,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1066,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1082,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 1109,
+              "opcode": "callvirt",
+              "name": "ToArray",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 1114,
+              "opcode": "callvirt",
+              "name": "AddRange",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 1130,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.Generic.List`1"
+            },
+            {
+              "il_offset": 1152,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1167,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1182,
+              "opcode": "callvirt",
+              "name": "Clear",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1213,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.WindowsForms.GMapPolygon"
+            },
+            {
+              "il_offset": 1236,
+              "opcode": "call",
+              "name": "get_Transparent",
+              "type": "System.Drawing.Brushes"
+            },
+            {
+              "il_offset": 1246,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1273,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1278,
+              "opcode": "callvirt",
+              "name": "get_Position",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 1285,
+              "opcode": "newobj",
+              "name": ".ctor",
+              "type": "GMap.NET.WindowsForms.Markers.GMarkerGoogle"
+            },
+            {
+              "il_offset": 1303,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1308,
+              "opcode": "callvirt",
+              "name": "get_ToolTipText",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 1313,
+              "opcode": "callvirt",
+              "name": "set_ToolTipText",
+              "type": "GMap.NET.WindowsForms.GMapMarker"
+            },
+            {
+              "il_offset": 1331,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1346,
+              "opcode": "callvirt",
+              "name": "Add",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1363,
+              "opcode": "callvirt",
+              "name": "UpdatePolygonLocalPosition",
+              "type": "GMap.NET.WindowsForms.GMapControl"
+            },
+            {
+              "il_offset": 1386,
+              "opcode": "callvirt",
+              "name": "get_Item",
+              "type": "System.Collections.ObjectModel.Collection`1"
+            },
+            {
+              "il_offset": 1391,
+              "opcode": "callvirt",
+              "name": "UpdateMarkerLocalPosition",
+              "type": "GMap.NET.WindowsForms.GMapControl"
+            },
+            {
+              "il_offset": 1402,
+              "opcode": "callvirt",
+              "name": "Invalidate",
+              "type": "MissionPlanner.Controls.myGMAP"
+            },
+            {
+              "il_offset": 1425,
+              "opcode": "callvirt",
+              "name": "ToString",
+              "type": "System.Object"
+            },
+            {
+              "il_offset": 1430,
+              "opcode": "call",
+              "name": "Concat",
+              "type": "System.String"
+            },
+            {
+              "il_offset": 1435,
+              "opcode": "call",
+              "name": "get_ERROR",
+              "type": "MissionPlanner.Strings"
+            },
+            {
+              "il_offset": 1440,
+              "opcode": "call",
+              "name": "Show",
+              "type": "System.CustomMessageBox"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

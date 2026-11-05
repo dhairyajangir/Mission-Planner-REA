@@ -1,0 +1,675 @@
+{
+  "case": "match",
+  "scope": "Disposable Copter SITL, SERIAL0 setup and Mission Planner original library on SERIAL1",
+  "relay": {
+    "scope": "Disposable Copter SITL; synthetic key provisioned on SERIAL0; local relay to SERIAL1",
+    "case": "match",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "test_key_hex": "ae21e430a53c5df57629657cfc7db868fd78003a1aa8e8ab88cfb3cc33c68b0e",
+    "errors": [],
+    "initial_primary": {
+      "signed": false,
+      "valid_test_key": false,
+      "raw_hex": "fd09000000010100000000000000020359010382c2"
+    },
+    "initial_secondary": {
+      "signed": false,
+      "valid_test_key": false,
+      "raw_hex": "fd09000000010100000000000000020359010382c2"
+    },
+    "configured_primary": {
+      "signed": true,
+      "valid_test_key": true,
+      "raw_hex": "fd09010001010100000000000000020359010375b400d1727175ff21162cad638450"
+    },
+    "configured_secondary": {
+      "signed": true,
+      "valid_test_key": true,
+      "raw_hex": "fd09010001010100000000000000020359010375b401d1727175ff21fd11250785ca"
+    },
+    "closed_by": "client",
+    "capture_sha256": {
+      "bootstrap-primary-down.bin": "2b958ded218c04773471f8932e415337ed5b6790549301a15bca49c10924e67d",
+      "bootstrap-primary-up.bin": "2426c8bc7fe2d21d19fbaa85745ec10f5f2aa6f34817cdb6fce9df5e759c87d2",
+      "bootstrap-secondary-down.bin": "bc87ee4a772b22f9eb860fe19e72d2f7794537678cef143fd916feeaa39b9402",
+      "downlink.bin": "496df631f4a686375c833212d6d75331e0f00f2bafebb79f1aa03a9e0aeb4e80",
+      "uplink.bin": "4acdc380fb28823821a3e47b073e3c1fff2963b40995c8539593a3aa5daeb5c1"
+    }
+  },
+  "setup": [
+    {
+      "mavpackettype": "SETUP_SIGNING",
+      "target_system": 1,
+      "target_component": 1,
+      "secret_key": [
+        174,
+        33,
+        228,
+        48,
+        165,
+        60,
+        93,
+        245,
+        118,
+        41,
+        101,
+        124,
+        252,
+        125,
+        184,
+        104,
+        253,
+        120,
+        0,
+        58,
+        26,
+        168,
+        232,
+        171,
+        136,
+        207,
+        179,
+        204,
+        51,
+        198,
+        139,
+        14
+      ],
+      "initial_timestamp": 37381064746321,
+      "source": [
+        255,
+        189
+      ],
+      "raw_hex": "fd2a000000ffbd00010051e51575ff2100000101ae21e430a53c5df57629657cfc7db868fd78003a1aa8e8ab88cfb3cc33c68b0efe08",
+      "signed": false
+    }
+  ],
+  "bootstrap_primary": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09000000010100000000000000020359010382c2",
+      "signed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09010001010100000000000000020359010375b400d1727175ff21162cad638450",
+      "signed": true,
+      "valid_test_key": true
+    }
+  ],
+  "bootstrap_secondary": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09000000010100000000000000020359010382c2",
+      "signed": false
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09010001010100000000000000020359010375b401d1727175ff21fd11250785ca",
+      "signed": true,
+      "valid_test_key": true
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100020101000000000000000203590103542e01d2727175ff21789e60e7fbdb",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09010003010100000000000000020359010344a001d3727175ff21e19d2f0f1a17",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100040101000000000000000203510303674201d4727175ff2195afb8a090e6",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09010005010100000000000000020351030377cc01d5727175ff21d3531f1eb072",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100060101000000000000000203510303565601d6727175ff21e695c17cc988",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd09010007010100000000000000020351030346d801d7727175ff21587d73463816",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100080101000000000000000203510303c13a01d8727175ff21ea817e523694",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100090101000000000000000203510303d1b401d9727175ff217430ffe612cf",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901000a0101000000000000000203510303f02e01da727175ff214e96c6aee21c",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901000c0101000000000000000203510303a31201dc727175ff21732f773c34af",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901000d0101000000000000000203510303b39c01dd727175ff21e4d0e3bfe3b7",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901000e0101000000000000000203510303920601de727175ff217e401a4ab80f",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901000f0101000000000000000203510303828801df727175ff2149653487eacf",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001001010000000000000002035103038dcb01e0727175ff21050227794d30",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001101010000000000000002035103039d4501e1727175ff2127d5067f97eb",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100120101000000000000000203510303bcdf01e2727175ff2181741bc60522",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100130101000000000000000203510303ac5101e3727175ff214c4c2e6931be",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100140101000000000000000203510303efe301e4727175ff2176d706f497d3",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100150101000000000000000203510303ff6d01e5727175ff21d51bd84e933e",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100190101000000000000000203510303591501e9727175ff21c54c7c517fa4",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001a0101000000000000000203510303788f01ea727175ff21dbd05baf6b65",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001b0101000000000000000203510303680101eb727175ff21c2767f82b76c",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001c01010000000000000002035103032bb301ec727175ff2154c4084eb69f",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001d01010000000000000002035103033b3d01ed727175ff214c073c76f4b9",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001e01010000000000000002035103031aa701ee727175ff213ce08ab47ee2",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd0901001f01010000000000000002035103030a2901ef727175ff217144ba9b6196",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100200101000000000000000203510303042101f0727175ff218983f5b5b7e7",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100260101000000000000000203510303571d01f6727175ff214d79db06676a",
+      "signed": true,
+      "valid_test_key": true
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd090100290101000000000000000203510303d0ff01f9727175ff21c3b50f103f64",
+      "signed": true,
+      "valid_test_key": true
+    }
+  ],
+  "requests": [
+    {
+      "mavpackettype": "PARAM_REQUEST_READ",
+      "target_system": 1,
+      "target_component": 1,
+      "param_id": "LOG_DISARMED",
+      "param_index": -1,
+      "source": [
+        255,
+        190
+      ],
+      "raw_hex": "fd1001000dffbe140000ffff01014c4f475f44495341524d4544c11844c1dd4075ff21e1c52be900c4",
+      "signed": true,
+      "valid_test_key": true
+    }
+  ],
+  "responses": [
+    {
+      "mavpackettype": "PARAM_VALUE",
+      "param_id": "LOG_DISARMED",
+      "param_value": 0.0,
+      "param_type": 2,
+      "param_count": 1431,
+      "param_index": 65535,
+      "source": [
+        1,
+        1
+      ],
+      "raw_hex": "fd1901002e0101160000000000009705ffff4c4f475f44495341524d454400000000025d0c01fe727175ff214581ef5629e7",
+      "signed": true,
+      "valid_test_key": true
+    }
+  ],
+  "bad_data_fragments": {
+    "setup": 0,
+    "bootstrap_primary": 152,
+    "bootstrap_secondary": 0,
+    "uplink": 0,
+    "downlink": 0
+  },
+  "hashes": {
+    "probe-source.cs": "198956bbb11e79070e4f2b3341134076fcf2c1914bebaa2d7bfc4303f51e17fb",
+    "probe.exe": "96da1823932ef5f151ebcd82d03abdbfe0b6b576a1a4bc387a47acb0864f68a5",
+    "probe.log": "c88c089e1e83fd14e2e17829de48d5bf03d77260e381fd7359c5a23ce2a25ce9",
+    "probe-exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "relay-source.py": "6ae1d8cf43e9094489da452c0938481eb5331f6439e47f176f10a626505dc35c"
+  },
+  "library_hashes": {
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MissionPlanner.Comms.dll": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "Interfaces.dll": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+    "System.ValueTuple.dll": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+    "SigningSerial1Probe.exe.config": "19363792acd6a1e4b7c6ae980fb5450f57387e910f74dac1dd51ac91f783e9ef"
+  }
+}

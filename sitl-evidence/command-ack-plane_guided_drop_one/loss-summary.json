@@ -1,0 +1,21 @@
+{
+  "case": "plane_guided_drop_one",
+  "sent_items": 2,
+  "simulator_accepted_acks": 2,
+  "dropped_acks": 1,
+  "delivered_acks": 1,
+  "elapsed_ms": 1001,
+  "timeout_logged": false,
+  "returned_to_caller": true,
+  "guided_state_after": [
+    "-353632011",
+    "1491652069",
+    "22"
+  ],
+  "hashes": {
+    "to_sitl_output.bin": "1a97cb196a275e99547fde262ec9a662e78b64b62307a70ea7d8a661ba5803d8",
+    "to_client_input.bin": "53c513248640e3d380836ddabd16b6692890132994eac558abfb1990a8772d75",
+    "to_client_output.bin": "dde9cb8ed383be4cc8e04977152016357559841a0921db4be0122f0f61b2d5f2",
+    "dropped.bin": "e47387da3d2343b3e73ecc2d3ca1e9b5073b581d567e3ed279f6fc679390aa3d"
+  }
+}

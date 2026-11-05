@@ -1,0 +1,135 @@
+{
+  "case": "mavproxy_mission_reject",
+  "scope": "MAVProxy valid mission then invalid replacement; disposable disarmed Copter SITL",
+  "source_commit": "8258c223d8da58f2db71a1c2eabb6834f35e8d8c",
+  "commands": [
+    "wp load baseline.waypoints",
+    "wp load invalid.waypoints",
+    "exit"
+  ],
+  "phases": {
+    "baseline": {
+      "count": {
+        "mavpackettype": "MISSION_COUNT",
+        "target_system": 254,
+        "target_component": 188,
+        "count": 2,
+        "mission_type": 0
+      },
+      "items": [
+        {
+          "mavpackettype": "MISSION_ITEM_INT",
+          "target_system": 254,
+          "target_component": 188,
+          "seq": 0,
+          "frame": 0,
+          "command": 16,
+          "current": 0,
+          "autocontinue": 1,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": 0,
+          "y": 0,
+          "z": 0.0,
+          "mission_type": 0
+        },
+        {
+          "mavpackettype": "MISSION_ITEM_INT",
+          "target_system": 254,
+          "target_component": 188,
+          "seq": 1,
+          "frame": 3,
+          "command": 16,
+          "current": 0,
+          "autocontinue": 1,
+          "param1": 2.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353625000,
+          "y": 1491660000,
+          "z": 25.0,
+          "mission_type": 0
+        }
+      ]
+    },
+    "after_invalid": {
+      "count": {
+        "mavpackettype": "MISSION_COUNT",
+        "target_system": 254,
+        "target_component": 188,
+        "count": 2,
+        "mission_type": 0
+      },
+      "items": [
+        {
+          "mavpackettype": "MISSION_ITEM_INT",
+          "target_system": 254,
+          "target_component": 188,
+          "seq": 0,
+          "frame": 0,
+          "command": 16,
+          "current": 0,
+          "autocontinue": 1,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": 0,
+          "y": 0,
+          "z": 0.0,
+          "mission_type": 0
+        },
+        {
+          "mavpackettype": "MISSION_ITEM_INT",
+          "target_system": 254,
+          "target_component": 188,
+          "seq": 1,
+          "frame": 3,
+          "command": 16,
+          "current": 0,
+          "autocontinue": 1,
+          "param1": 2.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353625000,
+          "y": 1491660000,
+          "z": 25.0,
+          "mission_type": 0
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "MAVProxy.mavproxy",
+    "--master=tcp:127.0.0.1:7561",
+    "--no-state",
+    "--no-startup-scripts",
+    "--default-modules=param,wp",
+    "--cmd=set requireexit true",
+    "--state-basedir=/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/command-ack-mavproxy_mission_reject"
+  ],
+  "independent_heartbeat": {
+    "mavpackettype": "HEARTBEAT",
+    "type": 2,
+    "autopilot": 3,
+    "base_mode": 81,
+    "custom_mode": 0,
+    "system_status": 3,
+    "mavlink_version": 3
+  },
+  "proxy_exit": 1,
+  "artifacts": {
+    "baseline.waypoints": "37a45aafd7a55cf697e0cfdeca99d56d1ad0c86db42efd0387c602dad9c58fbf",
+    "invalid.waypoints": "9c3ff0ce05917ba1ac34add51ec970ee6973b89c9b0c01ef7894d435b8508c08",
+    "mavproxy.log": "45fef52761cc2d17ce8ec75ad9c80f3d238f70d8e002050894a73e409d29711a",
+    "baseline-downlink.bin": "ff382f12d428cfd57c495a22a9fb1e9a353c456b4ff4cf17cbfbba4a7a2bb7fd",
+    "after_invalid-downlink.bin": "56c058722ebd9ac544efb0d2c37a02fde0d5445e9255ae6c26cf56ebe4c54a00"
+  }
+}

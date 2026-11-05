@@ -1,0 +1,680 @@
+{
+  "scope": "REA static method records and call references; no runtime UI execution implied",
+  "assembly_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "index_sha256": "a5f228d903a3b9c800ef16158803f9e49b2964528a957bbc42662efa5cc2d1a7",
+  "methods": [
+    {
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration",
+      "name": "BUT_calib_accell_Click",
+      "il_sha256": "2047a259147ed9cd61a90b897427c2a9700f3fc5be3a9c76f86d0283e847bee2",
+      "body_status": "present",
+      "token": "0x06000d3a",
+      "calls": [
+        {
+          "il_offset": 23,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 68,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 73,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 78,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 83,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 88,
+          "opcode": "callvirt",
+          "target_token": "0x0a00053e",
+          "name": "sendPacket",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 96,
+          "opcode": "call",
+          "target_token": "0x0a00111b",
+          "name": "get_CommandFailed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 101,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 106,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        },
+        {
+          "il_offset": 136,
+          "opcode": "callvirt",
+          "target_token": "0x0a00022e",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 141,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 146,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 151,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 157,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 162,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 210,
+          "opcode": "callvirt",
+          "target_token": "0x0a000441",
+          "name": "doCommand",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 228,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 239,
+          "opcode": "ldftn",
+          "target_token": "0x06000d3b",
+          "name": "receivedPacket",
+          "type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration"
+        },
+        {
+          "il_offset": 245,
+          "opcode": "newobj",
+          "target_token": "0x0a000217",
+          "name": ".ctor",
+          "type": "System.Func`2"
+        },
+        {
+          "il_offset": 250,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 255,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 261,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 266,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 273,
+          "opcode": "callvirt",
+          "target_token": "0x0a000218",
+          "name": "SubscribeToPacketType",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 284,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 292,
+          "opcode": "ldftn",
+          "target_token": "0x06000d3b",
+          "name": "receivedPacket",
+          "type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration"
+        },
+        {
+          "il_offset": 298,
+          "opcode": "newobj",
+          "target_token": "0x0a000217",
+          "name": ".ctor",
+          "type": "System.Func`2"
+        },
+        {
+          "il_offset": 303,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 308,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 314,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 319,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 326,
+          "opcode": "callvirt",
+          "target_token": "0x0a000218",
+          "name": "SubscribeToPacketType",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 342,
+          "opcode": "call",
+          "target_token": "0x0a0015ca",
+          "name": "get_Click_when_Done",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 347,
+          "opcode": "callvirt",
+          "target_token": "0x0a00008e",
+          "name": "set_Text",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 354,
+          "opcode": "call",
+          "target_token": "0x0a00111b",
+          "name": "get_CommandFailed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 359,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 364,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        },
+        {
+          "il_offset": 391,
+          "opcode": "callvirt",
+          "target_token": "0x0a0003d1",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 401,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 406,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration",
+      "name": "receivedPacket",
+      "il_sha256": "5a334717c5e043a8c042b8741eb9e8d2a4e131631179b3e9b184f354f77db5ed",
+      "body_status": "present",
+      "token": "0x06000d3b",
+      "calls": [
+        {
+          "il_offset": 1,
+          "opcode": "callvirt",
+          "target_token": "0x0a0001fb",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 16,
+          "opcode": "call",
+          "target_token": "0x0a0000f3",
+          "name": "get_ASCII",
+          "type": "System.Text.Encoding"
+        },
+        {
+          "il_offset": 22,
+          "opcode": "callvirt",
+          "target_token": "0x2b00007e",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 32,
+          "opcode": "callvirt",
+          "target_token": "0x0a0011a7",
+          "name": "GetString",
+          "type": "System.Text.Encoding"
+        },
+        {
+          "il_offset": 40,
+          "opcode": "call",
+          "target_token": "0x06000d3c",
+          "name": "UpdateUserMessage",
+          "type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration"
+        },
+        {
+          "il_offset": 46,
+          "opcode": "callvirt",
+          "target_token": "0x0a0000ee",
+          "name": "ToLower",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 56,
+          "opcode": "callvirt",
+          "target_token": "0x0a00007a",
+          "name": "Contains",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 64,
+          "opcode": "callvirt",
+          "target_token": "0x0a0000ee",
+          "name": "ToLower",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 74,
+          "opcode": "callvirt",
+          "target_token": "0x0a00007a",
+          "name": "Contains",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 84,
+          "opcode": "ldftn",
+          "target_token": "0x06000d42",
+          "name": "<receivedPacket>b__12_0",
+          "type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration"
+        },
+        {
+          "il_offset": 90,
+          "opcode": "newobj",
+          "target_token": "0x0a0003db",
+          "name": ".ctor",
+          "type": "System.Windows.Forms.MethodInvoker"
+        },
+        {
+          "il_offset": 95,
+          "opcode": "call",
+          "target_token": "0x0a0001dd",
+          "name": "Invoke",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 108,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 119,
+          "opcode": "callvirt",
+          "target_token": "0x0a00023d",
+          "name": "UnSubscribeToPacketType",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 124,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 135,
+          "opcode": "callvirt",
+          "target_token": "0x0a00023d",
+          "name": "UnSubscribeToPacketType",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 146,
+          "opcode": "callvirt",
+          "target_token": "0x0a0001fb",
+          "name": "get_msgid",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 156,
+          "opcode": "callvirt",
+          "target_token": "0x2b00017b",
+          "name": "ToStructure",
+          "type": "MAVLinkMessage"
+        },
+        {
+          "il_offset": 206,
+          "opcode": "callvirt",
+          "target_token": "0x0a00000c",
+          "name": "ToString",
+          "type": "System.Object"
+        },
+        {
+          "il_offset": 211,
+          "opcode": "call",
+          "target_token": "0x0a00004d",
+          "name": "Concat",
+          "type": "System.String"
+        },
+        {
+          "il_offset": 216,
+          "opcode": "call",
+          "target_token": "0x06000d3c",
+          "name": "UpdateUserMessage",
+          "type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration",
+      "name": "BUT_level_Click",
+      "il_sha256": "612fc0528afdf211521834ea7caed6ad8e0a31c6d9ca4de60de32a96d4681367",
+      "body_status": "present",
+      "token": "0x06000d3d",
+      "calls": [
+        {
+          "il_offset": 10,
+          "opcode": "callvirt",
+          "target_token": "0x0a00022e",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 15,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 20,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 25,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 31,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 36,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 84,
+          "opcode": "callvirt",
+          "target_token": "0x0a000441",
+          "name": "doCommand",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 97,
+          "opcode": "call",
+          "target_token": "0x0a0015cb",
+          "name": "get_Completed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 102,
+          "opcode": "callvirt",
+          "target_token": "0x0a00008e",
+          "name": "set_Text",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 109,
+          "opcode": "call",
+          "target_token": "0x0a00111b",
+          "name": "get_CommandFailed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 114,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 119,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        },
+        {
+          "il_offset": 139,
+          "opcode": "callvirt",
+          "target_token": "0x0a0003d1",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 149,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 154,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        }
+      ]
+    },
+    {
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration",
+      "name": "BUT_simpleAccelCal_Click",
+      "il_sha256": "2791060abc444a8e1da724d7fa2670cdfe4d37380815d35c53de7745986d46c3",
+      "body_status": "present",
+      "token": "0x06000d3e",
+      "calls": [
+        {
+          "il_offset": 10,
+          "opcode": "callvirt",
+          "target_token": "0x0a00022e",
+          "name": "Info",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 15,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 20,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 25,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020d",
+          "name": "get_sysidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 31,
+          "opcode": "call",
+          "target_token": "0x06000188",
+          "name": "get_comPort",
+          "type": "MissionPlanner.MainV2"
+        },
+        {
+          "il_offset": 36,
+          "opcode": "callvirt",
+          "target_token": "0x0a00020e",
+          "name": "get_compidcurrent",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 84,
+          "opcode": "callvirt",
+          "target_token": "0x0a000441",
+          "name": "doCommand",
+          "type": "MissionPlanner.MAVLinkInterface"
+        },
+        {
+          "il_offset": 97,
+          "opcode": "call",
+          "target_token": "0x0a0015cb",
+          "name": "get_Completed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 102,
+          "opcode": "callvirt",
+          "target_token": "0x0a00008e",
+          "name": "set_Text",
+          "type": "System.Windows.Forms.Control"
+        },
+        {
+          "il_offset": 109,
+          "opcode": "call",
+          "target_token": "0x0a00111b",
+          "name": "get_CommandFailed",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 114,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 119,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        },
+        {
+          "il_offset": 139,
+          "opcode": "callvirt",
+          "target_token": "0x0a0003d1",
+          "name": "Error",
+          "type": "log4net.ILog"
+        },
+        {
+          "il_offset": 149,
+          "opcode": "call",
+          "target_token": "0x0a0003b4",
+          "name": "get_ERROR",
+          "type": "MissionPlanner.Strings"
+        },
+        {
+          "il_offset": 154,
+          "opcode": "call",
+          "target_token": "0x0a000283",
+          "name": "Show",
+          "type": "System.CustomMessageBox"
+        }
+      ]
+    }
+  ]
+}

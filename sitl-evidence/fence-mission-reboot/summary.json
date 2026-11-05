@@ -1,0 +1,157 @@
+{
+  "scope": "Standalone MAVLink client, copied simulator storage; not a physical controller",
+  "outcome": "incomplete; received mission error after first item",
+  "result": {
+    "scope": "Copter SITL reboot from a copy of mission/fence run storage; standalone MAVLink client",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "source_storage_sha256": "bd3c86405bd3377425bd88e7f1e2171b4e615e03beca503766f5f528db4faa4b",
+    "copied_storage_sha256": "bd3c86405bd3377425bd88e7f1e2171b4e615e03beca503766f5f528db4faa4b",
+    "source_summary_sha256": "64ff6297fdb171495488f1fea2ff4606450e34df58f0ce9743e2a59577296994",
+    "expected": {
+      "0": [
+        {
+          "seq": 0,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": 0,
+          "y": 0,
+          "z": 0.0,
+          "mission_type": 0
+        },
+        {
+          "seq": 1,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491655000,
+          "z": 20.0,
+          "mission_type": 0
+        }
+      ],
+      "1": [
+        {
+          "seq": 0,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353640000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 1,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353620000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 2,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491670000,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 3,
+          "command": 5004,
+          "param1": 25.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491658000,
+          "z": 0.0,
+          "mission_type": 1
+        }
+      ]
+    },
+    "observed": {},
+    "errors": [
+      "RuntimeError('missing item (0, 1)')"
+    ],
+    "initial_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3
+    },
+    "post_shutdown_storage_sha256": "e18033c71bda6182c78c30d85000dbb840dc63186b12cbf6a696ce575897ff7e",
+    "downlink_sha256": "38006c537236464b9c9d990eadf4e6b79866abcf820e19c4193aa6b8c5a6fdab"
+  },
+  "source_summary_sha256": "64ff6297fdb171495488f1fea2ff4606450e34df58f0ce9743e2a59577296994",
+  "readback_source_sha256": "9266524406001dc1f3de6453aa747f9da4bfb5991a11ec9cb6ea24169ef2b36c",
+  "counts": [
+    {
+      "mavpackettype": "MISSION_COUNT",
+      "target_system": 255,
+      "target_component": 190,
+      "count": 2,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "items": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "frame": 0,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "MISSION_ACK",
+      "target_system": 255,
+      "target_component": 190,
+      "type": 1,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": 123
+}

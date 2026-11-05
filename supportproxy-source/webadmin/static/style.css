@@ -1,0 +1,247 @@
+html { font-family: system-ui, sans-serif; color: #222; background: #fafafa; }
+body { max-width: 960px; margin: 0 auto; padding: 1rem; }
+/* ArduPilot-blue header bar so the logo's transparent PNG blends in. */
+header { display: flex; justify-content: space-between; align-items: center;
+         background: #3a7cb3; color: #fff;
+         border-bottom: 1px solid #2a5e88;
+         padding: 0.4rem 0.8rem; margin: -1rem -1rem 1rem; }
+header h1 { font-size: 1.2rem; margin: 0; color: #fff; }
+header .brand { display: flex; align-items: center; gap: 0.6rem;
+                text-decoration: none; color: inherit; }
+header .brand .logo { height: 2.4rem; width: auto; display: block; }
+header nav { display: flex; gap: 1rem; align-items: center; font-size: 0.9rem; }
+header nav a { color: #fff; }
+header nav form.inline { display: inline; }
+header nav button { background: #fff; color: #3a7cb3; border: 1px solid #2a5e88; }
+header nav button:hover { background: #e6f0fa; }
+main { padding: 0.5rem 0; }
+
+.field { margin: 0.5rem 0; }
+.field label { display: inline-block; min-width: 18em; }
+input[type=text], input[type=password], input[type=number] {
+    padding: 0.3rem; font-size: 1rem; min-width: 18em; }
+button { padding: 0.4rem 0.9rem; font-size: 1rem; cursor: pointer; }
+button.danger { background: #b03030; color: white; border: 1px solid #802020; }
+
+table.entries { border-collapse: collapse; width: 100%; }
+table.entries th, table.entries td {
+    border: 1px solid #ccc; padding: 0.3rem 0.6rem; text-align: left; }
+table.entries th { background: #eee; }
+table.entries tr:nth-child(even) td { background: #f4f4f4; }
+/* Stop time cells reflowing when localtime.js rewrites the visible
+   text on the auto-refresh: tabular-nums keeps every digit the same
+   width regardless of value (e.g. '08:11' and '11:11' line up). */
+table.entries time {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+dl.entry-info { display: grid; grid-template-columns: max-content auto; column-gap: 1rem; }
+dl.entry-info dt { font-weight: 600; }
+dl.entry-info dd { margin: 0; font-family: monospace; }
+
+.flash { padding: 0.5rem 0.8rem; margin: 0.5rem 0; border-radius: 3px; }
+.flash-success { background: #dff5d0; border: 1px solid #80b060; }
+.flash-error   { background: #fbd5d5; border: 1px solid #c06060; }
+
+a { color: #2050a0; }
+
+footer.version {
+    margin: 2rem 1rem 0.5rem;
+    color: #888;
+    font-size: 0.85rem;
+    text-align: right;
+    font-family: monospace;
+}
+footer.version a { color: #888; text-decoration: none; }
+footer.version a:hover { text-decoration: underline; }
+
+/* Show/hide eye toggle attached to every password input by
+   static/password-toggle.js. The button sits over the input's right
+   edge; we extend the input's right padding so the text doesn't run
+   under the icon. The selector covers both type=password (default)
+   and type=text (after revealing) since the JS toggles the type. */
+.password-wrap { display: inline-block; position: relative; vertical-align: middle; }
+.password-wrap input[type=password],
+.password-wrap input[type=text] {
+    padding-right: 2.2rem;
+}
+.password-wrap button.toggle {
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 0.15rem;
+    cursor: pointer;
+    color: #666;
+    line-height: 0;
+}
+.password-wrap button.toggle:hover { color: #222; }
+.password-wrap button.toggle svg { width: 18px; height: 18px; display: block; }
+
+/* "Generate" button next to a passphrase field on the admin-add
+   form, injected by admin-add.js. Sits alongside the password-wrap
+   eye button on the same .field row. */
+button.generate-passphrase {
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.9em;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* The "send this to the partner" blurb shown after creating one or
+   more IDs via the admin add form. */
+.flash-partner-text { background: #f3f8ff; border: 1px solid #b8d4f0; }
+.flash-partner-text p { margin: 0 0 0.4rem; }
+textarea.partner-text-box {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    white-space: pre;
+    overflow: auto;
+    margin-bottom: 0.4rem;
+}
+button.copy-partner-text {
+    padding: 0.2rem 0.7rem;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+p.hint { font-size: 0.9em; color: #555; max-width: 48em; }
+
+/* Per-field help tooltips (templates/_macros.html).
+
+   The whole .field row is the hover target. An earlier version put the
+   text behind a small "?" you had to aim at, which is more work than
+   reading the sentence is worth.
+
+   `.field:hover > .tip` is deliberately a direct-child selector: the
+   per-slot video row holds three separately documented checkboxes, and
+   a descendant selector would throw all three tooltips up together.
+   Those inner ones are triggered by their own .opt instead, while
+   still being positioned against the row so they cannot run off the
+   page.
+
+   Shown with opacity rather than display so appearing can be delayed.
+   Without the delay, every row you cross on the way to the one you want
+   flashes a tooltip at you. Hiding has no delay -- the delay is only
+   applied in the :hover rule. */
+.field { position: relative; }
+.field.has-tip > label,
+.opt { text-decoration: underline dotted #999; text-underline-offset: 3px; }
+/* The underline is the "there is help here" cue. On a slot row each
+   control is its own hover target, so the cue belongs on each of them
+   rather than on the row's label. */
+.opt input { text-decoration: none; }
+.tip {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 0.2rem;
+    z-index: 20;
+    width: max-content;
+    max-width: min(42em, calc(100vw - 2rem));
+    padding: 0.5rem 0.7rem;
+    background: #2c2c2c;
+    color: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    white-space: normal;
+    pointer-events: none;   /* never steal a click from the field */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.12s linear, visibility 0s linear 0.12s;
+}
+.field:hover > .tip,
+.field:focus-within > .tip,
+.opt:hover .tip,
+.opt:focus-within .tip {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.12s linear 0.4s, visibility 0s linear 0.4s;
+}
+.tip code { color: #ffd9a0; }
+
+/* Static help under a password field. Password rows deliberately do not
+   get the hover tooltip above: pasting into one while the tip is up
+   wedges Chrome's renderer and the tab stops accepting input. */
+.field-hint {
+    display: block;
+    margin: 0.15rem 0 0.4rem;
+    max-width: 48em;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Per-slot video options. Each checkbox, its text and its help marker
+   are one unbreakable unit, or the marker wraps onto a line of its own
+   and reads as belonging to the next row. The group as a whole still
+   wraps between options on a narrow screen. */
+.video-slot-opts .opt { white-space: nowrap; margin-right: 0.7rem; }
+
+/* A port is five digits, so the global 18em minimum on inputs just
+   pushes the per-slot options onto a second line. */
+.video-slot input[type=number] { min-width: 7em; width: 7em; }
+
+/* Server page: the daemon's own log and controls. */
+.logview {
+    background: #111;
+    color: #ddd;
+    padding: 0.6em 0.8em;
+    border-radius: 4px;
+    max-height: 60vh;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.85em;
+    line-height: 1.35;
+}
+.log-controls {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 0.4em 0;
+}
+.help-inline {
+    font-size: 0.85em;
+    opacity: 0.75;
+    margin-left: 0.6em;
+}
+
+/* Action icons in the log listings.
+
+   The cell holds a mix of links and a one-button form; without
+   inline-block on both, the form takes a line of its own and the
+   delete drops below the other actions. */
+.icon {
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.2em;
+    fill: currentColor;
+}
+td.actions { white-space: nowrap; }
+td.actions > a,
+td.actions > form { display: inline-block; vertical-align: middle; }
+.iconbtn {
+    background: none;
+    border: none;
+    padding: 0.15em 0.35em;
+    font: inherit;
+    color: #1a4f8a;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 3px;
+}
+.iconbtn:hover { background: rgba(0, 0, 0, 0.07); }
+.iconbtn.danger-icon { color: #b03030; }
+button.danger .icon { vertical-align: -0.2em; margin-right: 0.2em; }
+form.day-delete { margin-top: 0.6em; }

@@ -1,0 +1,24 @@
+{
+  "scope": "in-memory bootloader fake; no operating-system serial port or physical hardware",
+  "checks": [
+    {
+      "file": "complete.apj",
+      "input_sha256": "649405e2d27b79f5135612d1314cada9e93605a9cf45e44028069f8f3374063b",
+      "decompressed_length": 252,
+      "programmed_length": 252,
+      "programmed_sha256": "240410c028e64ba00e43fe3068b67ec00860f9c688e8f4b914271065955d34cc",
+      "matches_decompressed_plus_zeros": true,
+      "passed": true
+    },
+    {
+      "file": "short.apj",
+      "input_sha256": "a35e917e59720f4d4b1d6e955148292f25dd18d69e1d4f6e5f3dea9f31f4c689",
+      "decompressed_length": 248,
+      "programmed_length": 252,
+      "programmed_sha256": "5d111c11373631e1bf849a7ad417c40752b36a7dfd9e7b58d8adfef3e98b0a4f",
+      "matches_decompressed_plus_zeros": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

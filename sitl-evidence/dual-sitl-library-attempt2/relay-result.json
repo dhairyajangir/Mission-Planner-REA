@@ -1,0 +1,16 @@
+{
+  "errors": [
+    "RuntimeError('unexpected heartbeat system for 2: HEARTBEAT {type : 2, autopilot : 3, base_mode : 81, custom_mode : 0, system_status : 3, mavlink_version : 3}')"
+  ],
+  "dropped_bad_data": [
+    0,
+    0
+  ],
+  "configured": [
+    {
+      "system": 1,
+      "value": 0.0
+    }
+  ],
+  "sha256": {}
+}

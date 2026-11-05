@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable disarmed Plane SITL; guided mission-item test",
+  "case": "plane_guided_state",
+  "binary_sha256": "fc75bbfea710a9c41d863126b2f691976427a3263cacbb237ef5a72427b4187b",
+  "sitl_port": 7560,
+  "proxy_port": 7561,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 151,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "7cd869e64c9a7ef23b69d0c4e51707f1b5135a9d15e466f6624e777779bdaccc",
+    "to_client_output.bin": "7cd869e64c9a7ef23b69d0c4e51707f1b5135a9d15e466f6624e777779bdaccc",
+    "to_sitl_input.bin": "7e0867f85489d90a5ae47914330d6731fd5a8227e17f154672f0ec7e4bdfe1f8",
+    "to_sitl_output.bin": "7e0867f85489d90a5ae47914330d6731fd5a8227e17f154672f0ec7e4bdfe1f8"
+  }
+}

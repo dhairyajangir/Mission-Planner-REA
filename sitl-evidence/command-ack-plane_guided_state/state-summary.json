@@ -1,0 +1,120 @@
+{
+  "scope": "disarmed source-built Plane; ordinary mission count and item 1 only",
+  "guided_items": [
+    {
+      "mavpackettype": "MISSION_ITEM",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 0,
+      "frame": 3,
+      "command": 16,
+      "current": 2,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -35.36309814453125,
+      "y": 149.16510009765625,
+      "z": 21.0,
+      "mission_type": 0
+    },
+    {
+      "mavpackettype": "MISSION_ITEM",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 0,
+      "frame": 3,
+      "command": 16,
+      "current": 2,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -35.36320114135742,
+      "y": 149.1652069091797,
+      "z": 22.0,
+      "mission_type": 0
+    }
+  ],
+  "ack_results": [
+    0,
+    1,
+    0
+  ],
+  "mission_counts": [
+    2,
+    2,
+    2
+  ],
+  "readback_items": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0,
+      "mission_type": 0
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0,
+      "mission_type": 0
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0,
+      "mission_type": 0
+    }
+  ],
+  "cache_after_rejection": [
+    -353630981,
+    1491651000,
+    21
+  ],
+  "cache_after_acceptance": [
+    -353632011,
+    1491652069,
+    22
+  ],
+  "outbound_sha256": "7e0867f85489d90a5ae47914330d6731fd5a8227e17f154672f0ec7e4bdfe1f8",
+  "inbound_sha256": "7cd869e64c9a7ef23b69d0c4e51707f1b5135a9d15e466f6624e777779bdaccc",
+  "probe_exit": 0
+}

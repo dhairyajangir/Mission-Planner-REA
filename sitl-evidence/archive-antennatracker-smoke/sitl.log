@@ -1,0 +1,17 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'AntennaTracker'
+Starting SITL input
+Using Irlock at port : 9815
+Using \clock topic for DDS timing: disabled
+bind port 6570 for SERIAL0
+SERIAL0 on TCP port 6570
+Waiting for connection ....
+Connection on serial port 6570
+bind port 6572 for SERIAL1
+SERIAL1 on TCP port 6572
+bind port 6573 for SERIAL2
+SERIAL2 on TCP port 6573
+validate_structures:546: Validating structures
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+Closed connection on SERIAL0
+Exitting

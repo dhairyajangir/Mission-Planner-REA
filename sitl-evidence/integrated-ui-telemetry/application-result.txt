@@ -1,0 +1,6 @@
+scope=modified app, plugin-disabled, file-spool transport, local SITL
+open=True
+system=1
+component=1
+state_lat=-35.363261000000001
+state_lng=149.16522990000001

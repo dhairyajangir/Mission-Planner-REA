@@ -1,0 +1,342 @@
+{
+  "scope": "Standalone MAVLink client, copied simulator storage; not a physical controller",
+  "outcome": "six selected mission and fence fields matched after reboot",
+  "result": {
+    "scope": "Copter SITL reboot from a copy of mission/fence run storage; standalone MAVLink client",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "source_storage_sha256": "ad7578018a907ce4ff8a898cc106efb686d2084f26eda8bbcf62133ff0b4613b",
+    "copied_storage_sha256": "ad7578018a907ce4ff8a898cc106efb686d2084f26eda8bbcf62133ff0b4613b",
+    "source_summary_sha256": "c84234a3e885ce24edbe7763efd5566f70c8cc3d36493d2d33fdfb62d5c75b3c",
+    "expected": {
+      "0": [
+        {
+          "seq": 0,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": 0,
+          "y": 0,
+          "z": 0.0,
+          "mission_type": 0
+        },
+        {
+          "seq": 1,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491655000,
+          "z": 20.0,
+          "mission_type": 0
+        }
+      ],
+      "1": [
+        {
+          "seq": 0,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353640000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 1,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353620000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 2,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491670000,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 3,
+          "command": 5004,
+          "param1": 25.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491658000,
+          "z": 0.0,
+          "mission_type": 1
+        }
+      ]
+    },
+    "observed": {
+      "0": [
+        {
+          "seq": 0,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": 0,
+          "y": 0,
+          "z": 0.0,
+          "mission_type": 0
+        },
+        {
+          "seq": 1,
+          "command": 16,
+          "param1": 0.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491655000,
+          "z": 20.0,
+          "mission_type": 0
+        }
+      ],
+      "1": [
+        {
+          "seq": 0,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353640000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 1,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353620000,
+          "y": 1491639999,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 2,
+          "command": 5001,
+          "param1": 3.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491670000,
+          "z": 0.0,
+          "mission_type": 1
+        },
+        {
+          "seq": 3,
+          "command": 5004,
+          "param1": 25.0,
+          "param2": 0.0,
+          "param3": 0.0,
+          "param4": 0.0,
+          "x": -353630000,
+          "y": 1491658000,
+          "z": 0.0,
+          "mission_type": 1
+        }
+      ]
+    },
+    "errors": [],
+    "initial_heartbeat": {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3
+    },
+    "startup_wait_seconds": 12,
+    "post_shutdown_storage_sha256": "d9db020a79cf684c21898a6941b1fb587e28229a5703314fe894ce3d471c9fde",
+    "downlink_sha256": "3b38b366d1ced2289db33e5c55f28dc05269bdb48542ef4a0faa67711307c129"
+  },
+  "source_summary_sha256": "c84234a3e885ce24edbe7763efd5566f70c8cc3d36493d2d33fdfb62d5c75b3c",
+  "readback_source_sha256": "195ff4e1f3cb08fa3324e5f2bcf50ec327e7d2aff9513e9ef239f6479813b500",
+  "counts": [
+    {
+      "mavpackettype": "MISSION_COUNT",
+      "target_system": 255,
+      "target_component": 190,
+      "count": 2,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_COUNT",
+      "target_system": 255,
+      "target_component": 190,
+      "count": 4,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "items": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "frame": 0,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 3,
+      "command": 16,
+      "current": 0,
+      "autocontinue": 1,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491655000,
+      "z": 20.0,
+      "mission_type": 0,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353640000,
+      "y": 1491639999,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353620000,
+      "y": 1491639999,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 2,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491670000,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 3,
+      "frame": 0,
+      "command": 5004,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 25.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353630000,
+      "y": 1491658000,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "acks": [],
+  "bad_data_fragments": 123
+}

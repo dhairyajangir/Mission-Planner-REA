@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable Copter SITL; synthetic terrain fixture; no deliberate packet loss",
+  "case": "terrain_invalid",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7420,
+  "proxy_port": 7421,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "0cc3d6264e9a1583f4a8723c971ca6b9e06a25e25576e6b487e81146d2d2da6a",
+    "to_client_output.bin": "0cc3d6264e9a1583f4a8723c971ca6b9e06a25e25576e6b487e81146d2d2da6a",
+    "to_sitl_input.bin": "d7ff8e98acd8015a3392605b6b429a86ae618dd87a22b8d842bafa379530d548",
+    "to_sitl_output.bin": "d7ff8e98acd8015a3392605b6b429a86ae618dd87a22b8d842bafa379530d548"
+  }
+}

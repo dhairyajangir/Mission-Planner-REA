@@ -1,0 +1,14 @@
+{
+  "assembly_sha256": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00",
+  "expected_types": 679,
+  "expected_methods": 7812,
+  "observed_types": 679,
+  "observed_methods": 7812,
+  "unexpected_types": [],
+  "missing_types": [],
+  "method_count_mismatches": [],
+  "errors": [],
+  "complete_batches": 78,
+  "partial_batches": 0,
+  "complete": true
+}

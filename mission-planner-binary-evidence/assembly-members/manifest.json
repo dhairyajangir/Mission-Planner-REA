@@ -1,0 +1,184 @@
+[
+  {
+    "file": "MissionPlanner.Antenna.dll",
+    "exit_code": 0,
+    "sha256": "56ef179ca0cfc55dcbaef975f38e683b2409fb4c5c2cedd3aff4d1169f415d0e",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 5,
+    "methods": 173,
+    "call_edges": 145,
+    "evidence": "MissionPlanner.Antenna.dll.json"
+  },
+  {
+    "file": "MissionPlanner.ArduPilot.dll",
+    "exit_code": 0,
+    "sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 232,
+    "methods": 2437,
+    "call_edges": 10674,
+    "evidence": "MissionPlanner.ArduPilot.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Comms.dll",
+    "exit_code": 0,
+    "sha256": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 52,
+    "methods": 677,
+    "call_edges": 1596,
+    "evidence": "MissionPlanner.Comms.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Controls.dll",
+    "exit_code": 0,
+    "sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 102,
+    "methods": 1155,
+    "call_edges": 6782,
+    "evidence": "MissionPlanner.Controls.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Drawing.dll",
+    "exit_code": 0,
+    "sha256": "26ac32bd57e107e39b5b877cae4bfe5c762b164dc508defd4c05e11c4e92d20b",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 138,
+    "methods": 1716,
+    "call_edges": 5653,
+    "evidence": "MissionPlanner.Drawing.dll.json"
+  },
+  {
+    "file": "MissionPlanner.HIL.dll",
+    "exit_code": 0,
+    "sha256": "7a2e5ec6fb854d0a57ac8a03c9353f2464907830c01312d08ad4730c58e8627b",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 12,
+    "methods": 74,
+    "call_edges": 391,
+    "evidence": "MissionPlanner.HIL.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Maps.dll",
+    "exit_code": 0,
+    "sha256": "8a8b97526f8c1f94057df356496bf82ea8b144f4372792e8f0b60bd9e588e6ec",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 63,
+    "methods": 538,
+    "call_edges": 3594,
+    "evidence": "MissionPlanner.Maps.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Strings.dll",
+    "exit_code": 0,
+    "sha256": "a48e47b8dbf4f5f93e582423418614c709b16ef65c71245ae3727cecb266a165",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 2,
+    "methods": 188,
+    "call_edges": 372,
+    "evidence": "MissionPlanner.Strings.dll.json"
+  },
+  {
+    "file": "MissionPlanner.Utilities.dll",
+    "exit_code": 0,
+    "sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 582,
+    "methods": 3442,
+    "call_edges": 19015,
+    "evidence": "MissionPlanner.Utilities.dll.json"
+  },
+  {
+    "file": "MissionPlanner.WebAPIs.dll",
+    "exit_code": 0,
+    "sha256": "6c2ee11f045a400c3150ecd52aa72170458e92861ae8cccc8e1937b474b57e08",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 222,
+    "methods": 2174,
+    "call_edges": 13261,
+    "evidence": "MissionPlanner.WebAPIs.dll.json"
+  },
+  {
+    "file": "MAVLink.dll",
+    "exit_code": 0,
+    "sha256": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 581,
+    "methods": 920,
+    "call_edges": 1280,
+    "evidence": "MAVLink.dll.json"
+  },
+  {
+    "file": "plugins/MissionPlanner.Gridv2.dll",
+    "exit_code": 0,
+    "sha256": "7946dce696d4ba17a53ce5bbf740272af327fe78fbed41bac63c963d39e27e63",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 10,
+    "methods": 86,
+    "call_edges": 1254,
+    "evidence": "plugins__MissionPlanner.Gridv2.dll.json"
+  },
+  {
+    "file": "plugins/MissionPlanner.SimpleGrid.dll",
+    "exit_code": 0,
+    "sha256": "dead106e5105751bee486df097ed339af506586d06529fab6c11e23f619a170c",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 6,
+    "methods": 38,
+    "call_edges": 701,
+    "evidence": "plugins__MissionPlanner.SimpleGrid.dll.json"
+  },
+  {
+    "file": "plugins/MissionPlanner.Stats.dll",
+    "exit_code": 0,
+    "sha256": "618aacade8d1198d38d410d623cb03fc1fb82f8c52991f7900b999ebc6765e03",
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "types": 3,
+    "methods": 15,
+    "call_edges": 144,
+    "evidence": "plugins__MissionPlanner.Stats.dll.json"
+  }
+]

@@ -1,0 +1,16 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduSub'
+Starting SITL input
+Using Irlock at port : 9525
+bind port 6280 for SERIAL0
+SERIAL0 on TCP port 6280
+Waiting for connection ....
+Connection on serial port 6280
+bind port 6282 for SERIAL1
+SERIAL1 on TCP port 6282
+bind port 6283 for SERIAL2
+SERIAL2 on TCP port 6283
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Closed connection on SERIAL0
+Exitting

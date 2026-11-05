@@ -1,0 +1,74 @@
+{
+  "scope": "Local source-built ArduCopter SITL only; no Mission Planner or physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "guided_mode": {
+      "passed": true,
+      "mode": 4
+    },
+    "armed": {
+      "passed": true
+    },
+    "takeoff": {
+      "passed": true,
+      "peak_relative_alt_m": 3.502
+    },
+    "land_mode": {
+      "passed": true,
+      "mode": 9
+    },
+    "landed_and_disarmed": {
+      "passed": true
+    }
+  },
+  "errors": [],
+  "status_messages": [
+    "Barometer 1 calibration complete",
+    "Barometer 2 calibration complete",
+    "ArduPilot Ready",
+    "RC7: SaveWaypoint LOW",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "AHRS: EKF3 active",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "EKF3 IMU0 origin set",
+    "Field Elevation Set: 584m",
+    "EKF3 IMU1 origin set",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors",
+    "SIM Hit ground at 0.496933 m/s",
+    "Disarming motors"
+  ],
+  "command_acknowledgements": [
+    {
+      "command": 176,
+      "result": 0
+    },
+    {
+      "command": 400,
+      "result": 4
+    },
+    {
+      "command": 400,
+      "result": 4
+    },
+    {
+      "command": 400,
+      "result": 0
+    },
+    {
+      "command": 176,
+      "result": 0
+    }
+  ],
+  "passed": true
+}

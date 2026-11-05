@@ -1,0 +1,5 @@
+LEFT_METHODS=3442
+RIGHT_METHODS=3442
+SYMBOLIC_IL_DIFFERENCES=2
+DIFF=System.String MissionPlanner.Utilities.Settings::GetDataDirectory()
+DIFF=System.String MissionPlanner.Utilities.Settings::GetUserDataDirectory()

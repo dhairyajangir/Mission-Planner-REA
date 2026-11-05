@@ -1,0 +1,105 @@
+{
+  "pymavlink": [
+    {
+      "index_1based": 1661,
+      "type": "UNIT",
+      "fields": {
+        "mavpackettype": "UNIT",
+        "TimeUS": 2459849,
+        "Id": 121,
+        "Label": "l/s"
+      }
+    },
+    {
+      "index_1based": 1662,
+      "type": "UNIT",
+      "fields": {
+        "mavpackettype": "UNIT",
+        "TimeUS": 2459849,
+        "Id": 89,
+        "Label": "us"
+      }
+    },
+    {
+      "index_1based": 1663,
+      "type": "UNIT",
+      "fields": {
+        "mavpackettype": "UNIT",
+        "TimeUS": 2459849,
+        "Id": 122,
+        "Label": "Hz"
+      }
+    },
+    {
+      "index_1based": 1664,
+      "type": "UNIT",
+      "fields": {
+        "mavpackettype": "UNIT",
+        "TimeUS": 2459849,
+        "Id": 35,
+        "Label": "instance"
+      }
+    },
+    {
+      "index_1based": 1665,
+      "type": "MULT",
+      "fields": {
+        "mavpackettype": "MULT",
+        "TimeUS": 2459849,
+        "Id": 45,
+        "Mult": 0.0
+      }
+    },
+    {
+      "index_1based": 1666,
+      "type": "MULT",
+      "fields": {
+        "mavpackettype": "MULT",
+        "TimeUS": 2459849,
+        "Id": 63,
+        "Mult": 1.0
+      }
+    },
+    {
+      "index_1based": 1667,
+      "type": "MULT",
+      "fields": {
+        "mavpackettype": "MULT",
+        "TimeUS": 2459849,
+        "Id": 50,
+        "Mult": 100.0
+      }
+    }
+  ],
+  "converted_lines": [
+    {
+      "line_1based": 1661,
+      "text": "UNIT, 2459849, 89, us"
+    },
+    {
+      "line_1based": 1662,
+      "text": "UNIT, 2459849, 122, Hz"
+    },
+    {
+      "line_1based": 1663,
+      "text": "UNIT, 2459849, 35, instance"
+    },
+    {
+      "line_1based": 1664,
+      "text": "MULT, 2459849, 45, 0"
+    },
+    {
+      "line_1based": 1665,
+      "text": "MULT, 2459849, 63, 1"
+    },
+    {
+      "line_1based": 1666,
+      "text": "MULT, 2459849, 50, 100"
+    },
+    {
+      "line_1based": 1667,
+      "text": "MULT, 2459849, 49, 10"
+    }
+  ],
+  "scope": "Local divergence context; values and parser behavior are not independently validated."
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "read-only standalone MAVLink client via SITL secondary TCP serial endpoint",
+  "target": "127.0.0.1:6582",
+  "parameter": "LOG_DISARMED",
+  "errors": [],
+  "value": 1.0,
+  "system": 1,
+  "component": 1,
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Synthetic local TCP peer; reset after marker; no vehicle",
+  "events": [
+    "accepted",
+    "marker=58",
+    "reset"
+  ],
+  "errors": []
+}

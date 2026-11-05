@@ -1,0 +1,14 @@
+{
+  "valid.plan": {
+    "sha256": "93e5c40ccb5d5cabe0e9e8e95e17f45870a5bf663b82004332bf2cb02dbe858f",
+    "size": 1409
+  },
+  "complex-missing.plan": {
+    "sha256": "270c0f0b835967fec0cfc4cb41d8383059d08498b7bf970a886e7c289f71e6c1",
+    "size": 578
+  },
+  "short-params.plan": {
+    "sha256": "273f6457f035430839741dc7168a5ca1d87e0879fa96f0d761bc6edf9eb34867",
+    "size": 1392
+  }
+}

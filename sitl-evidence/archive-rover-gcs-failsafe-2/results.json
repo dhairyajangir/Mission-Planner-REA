@@ -1,0 +1,55 @@
+{
+  "scope": "Stationary source-built Rover SITL; standalone MAVLink client; no physical vehicle",
+  "binary_sha256": "34d5ffdcd6e2c09d7df87dcfa0aa67132c345a8eaa02b61b10133f90e561fbb3",
+  "checks": {
+    "configuration": {
+      "passed": true,
+      "values": {
+        "FS_THR_ENABLE": 0.0,
+        "FS_GCS_ENABLE": 1.0,
+        "FS_GCS_TIMEOUT": 3.0,
+        "FS_TIMEOUT": 1.0,
+        "FS_ACTION": 2.0
+      }
+    },
+    "armed_guided": {
+      "passed": true,
+      "guided_mode": 15
+    },
+    "gcs_loss_hold": {
+      "passed": false,
+      "hold_mode": 4
+    }
+  },
+  "status_messages": [
+    "Barometer 1 calibration complete",
+    "Barometer 2 calibration complete",
+    "Beginning INS calibration. Do not move vehicle",
+    "INS: alloc 6144 bytes for ISB (free=524288)",
+    "ArduPilot Ready",
+    "RCInput: decoding UDP (Pulses)",
+    "EKF3 IMU0 initialised",
+    "EKF3 IMU1 initialised",
+    "EKF3 IMU0 tilt alignment complete",
+    "EKF3 IMU1 tilt alignment complete",
+    "EKF3 IMU0 MAG0 initial yaw alignment complete",
+    "EKF3 IMU1 MAG0 initial yaw alignment complete",
+    "AHRS: EKF3 active",
+    "GPS 1: probing for u-blox at 230400 baud",
+    "GPS 1: detected u-blox",
+    "Set HOME to -35.36326 149.1652 at 584.00m",
+    "EKF3 IMU0 origin set",
+    "EKF3 IMU1 origin set",
+    "Field Elevation Set: 584m",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Throttle armed"
+  ],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/sitl-evidence/rover-gcs-failsafe-probe-2.py\", line 106, in <module>\n    raise RuntimeError('HOLD and GCS failsafe notice not both observed')\nRuntimeError: HOLD and GCS failsafe notice not both observed\n"
+  ],
+  "passed": false
+}

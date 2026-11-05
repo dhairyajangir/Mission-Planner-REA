@@ -1,0 +1,720 @@
+{
+  "scope": "One disarmed Copter 4.7.2 SITL run; legacy write then typed fence read",
+  "relay": {
+    "scope": "Disposable Copter SITL; legacy fence points; no deliberate loss",
+    "case": "fence_legacy_interop",
+    "binary_sha256": "caed35e4cb796ec06cac40b09566a18251771486b1cbac5e2bf16b7a5ed5045d",
+    "sitl_port": 7530,
+    "proxy_port": 7531,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 160,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "daa85e2401a4786bba4e53296a6d2947c48ce420b5a2846cdb89b99321647e51",
+      "to_client_output.bin": "daa85e2401a4786bba4e53296a6d2947c48ce420b5a2846cdb89b99321647e51",
+      "to_sitl_input.bin": "a78bf8e5216c827e4ce0c03e2e43ecb64c9454b9fd952b3395944d6b47f97051",
+      "to_sitl_output.bin": "a78bf8e5216c827e4ce0c03e2e43ecb64c9454b9fd952b3395944d6b47f97051"
+    }
+  },
+  "points": [
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.36399841308594,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.36399841308594,
+      "lng": 149.16400146484375,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "fetches": [
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 2,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 3,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_FETCH_POINT",
+      "target_system": 1,
+      "target_component": 1,
+      "idx": 4,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 0,
+      "count": 5,
+      "lat": -35.36326217651367,
+      "lng": 149.1652374267578,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 1,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 2,
+      "count": 5,
+      "lat": -35.36199951171875,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 3,
+      "count": 5,
+      "lat": -35.362998962402344,
+      "lng": 149.16700744628906,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "FENCE_POINT",
+      "target_system": 255,
+      "target_component": 190,
+      "idx": 4,
+      "count": 5,
+      "lat": -35.3640022277832,
+      "lng": 149.16400146484375,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "typed_counts": [
+    {
+      "mavpackettype": "MISSION_COUNT",
+      "target_system": 255,
+      "target_component": 190,
+      "count": 4,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "typed_requests": [
+    {
+      "mavpackettype": "MISSION_REQUEST_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 0,
+      "mission_type": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_REQUEST_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 1,
+      "mission_type": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_REQUEST_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 2,
+      "mission_type": 1,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_REQUEST_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "seq": 3,
+      "mission_type": 1,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "typed_items": [
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 0,
+      "frame": 0,
+      "command": 5000,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353632608,
+      "y": 1491652352,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 1,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353640000,
+      "y": 1491640064,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 2,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353620000,
+      "y": 1491640064,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "MISSION_ITEM_INT",
+      "target_system": 255,
+      "target_component": 190,
+      "seq": 3,
+      "frame": 0,
+      "command": 5001,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 3.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": -353629984,
+      "y": 1491670016,
+      "z": 0.0,
+      "mission_type": 1,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "heartbeats": [
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 89,
+      "custom_mode": 0,
+      "system_status": 1,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "HEARTBEAT",
+      "type": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "system_status": 3,
+      "mavlink_version": 3,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 160
+  },
+  "hashes": {
+    "probe-source.cs": "d1f327f84eb52c788dafbf8a55a82e9a1f1a2396e53f124129720a8ba2cf7853",
+    "probe.exe": "9586e5f08d1537c633289b3d6d4703a7fe739fbf9d285477e1ccfcf00f0e3b09",
+    "probe.log": "378e25d8274319b42040b1cc63882992bdb9bfe2bf04b36b5456a27c3718841c",
+    "probe-exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "probe-retry.log": "6d055e0e58348a2df6b170fd59cef361e8b2f6251d7110bee9f74f92d1d6d84f",
+    "probe-retry-exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+  },
+  "library_hashes": {
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MissionPlanner.Comms.dll": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "Interfaces.dll": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+    "System.ValueTuple.dll": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+    "FenceLegacyInteropProbe.exe.config": "19363792acd6a1e4b7c6ae980fb5450f57387e910f74dac1dd51ac91f783e9ef"
+  }
+}

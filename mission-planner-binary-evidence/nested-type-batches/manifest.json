@@ -1,0 +1,714 @@
+{
+  "assembly_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "total_requested": 402,
+  "batches": [
+    {
+      "types": [
+        "SPDRP",
+        "SP_DEVINFO_DATA",
+        "SP_DEVICE_INTERFACE_DATA",
+        "DEVPROPKEY",
+        "USB_DEVICE_DESCRIPTOR",
+        "USB_STRING_DESCRIPTOR",
+        "USB_SETUP_PACKET",
+        "USB_DESCRIPTOR_REQUEST"
+      ],
+      "path": "969a0faeafde3383.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c",
+        "<>c__DisplayClass1_0",
+        "TCommand",
+        "TQuery",
+        "TSetValue",
+        "TSettingNameLabelTextPair",
+        "TMode",
+        "TNameAndValue"
+      ],
+      "path": "4de22d7eea1300d5.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "TRange",
+        "TSimpleRange",
+        "TMultiRange",
+        "TOption",
+        "<>c__DisplayClass2_0",
+        "TCountry",
+        "<>c__DisplayClass15_0",
+        "<>c__DisplayClass3_0"
+      ],
+      "path": "0a7272c1ad94f907.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<ProcessLog>d__8",
+        "<getOffsets>d__23",
+        "<test>d__19",
+        "menuicons",
+        "burntkermitmenuicons",
+        "highcontrastmenuicons",
+        "WMDeviceChangeEventHandler",
+        "ProcessCmdKeyHandler"
+      ],
+      "path": "9601a5a9ba02afd0.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "DEV_BROADCAST_HDR",
+        "DEV_BROADCAST_PORT",
+        "DEV_BROADCAST_DEVICEINTERFACE",
+        "WM_DEVICECHANGE_enum",
+        "<<OnLoad>b__142_0>d",
+        "<>c__DisplayClass124_0",
+        "<>c__DisplayClass124_1",
+        "<>c__DisplayClass141_0"
+      ],
+      "path": "5797e0c895a55411.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass142_0",
+        "<>c__DisplayClass142_1",
+        "<>c__DisplayClass142_10",
+        "<>c__DisplayClass142_2",
+        "<>c__DisplayClass142_3",
+        "<>c__DisplayClass142_4",
+        "<>c__DisplayClass142_5",
+        "<>c__DisplayClass142_6"
+      ],
+      "path": "569d0d0f4c88164f.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass142_7",
+        "<>c__DisplayClass142_8",
+        "<>c__DisplayClass142_9",
+        "<>c__DisplayClass187_0",
+        "<ADSBRunner>d__141",
+        "<SerialReader>d__139",
+        "<joysticksend>d__134",
+        "LoadLibraryFlags"
+      ],
+      "path": "2d84e929b194d27f.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<TraceMe>d__19",
+        "Conditional",
+        "<>c__DisplayClass16_0",
+        "<>c__DisplayClass42_0",
+        "<>c__DisplayClass52_0",
+        "<>c__DisplayClass61_0",
+        "<>c__DisplayClass61_1",
+        "<>c__DisplayClass65_0"
+      ],
+      "path": "4fcc2a69f6c3aa2d.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass66_0",
+        "<>c__DisplayClass70_0",
+        "<>c__DisplayClass72_0",
+        "<BUT_magfit2_Click>d__24",
+        "<But_stayoutest_Click>d__67",
+        "<but_gpsinj_Click>d__43",
+        "<but_verify_Click>d__13",
+        "<>c__DisplayClass10_0"
+      ],
+      "path": "3854d5e5bb328945.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass11_0",
+        "<>c__DisplayClass11_1",
+        "<ScanTLogs>d__10",
+        "<StartUploader>d__11",
+        "<ValidateCredentials>d__9",
+        "boards",
+        "<>c__DisplayClass0_0`1",
+        "<>c__DisplayClass7_0"
+      ],
+      "path": "e541d22fd74c1d06.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "optionsObject",
+        "software",
+        "<>c__DisplayClass24_0",
+        "<>c__DisplayClass24_1",
+        "<>c__DisplayClass25_0",
+        "<>c__DisplayClass27_0",
+        "<>c__DisplayClass0_0",
+        "META_LINKQUALITY"
+      ],
+      "path": "9350f5dc88d68b72.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "Messagejson",
+        "Message2",
+        "<<ProcessClient>b__0>d",
+        "<>c__DisplayClass13_0",
+        "analysis",
+        "result",
+        "<>c__DisplayClass3_1",
+        "<>c__DisplayClass45_0"
+      ],
+      "path": "5ac2af79d1bafe7a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "IconSet",
+        "<>c__DisplayClass41_0",
+        "<>c__DisplayClass8_0",
+        "<>c__DisplayClass9_0",
+        "<>c__DisplayClass9_1",
+        "<>c__DisplayClass9_2",
+        "<>c__DisplayClass9_3",
+        "flags"
+      ],
+      "path": "7f9750c17d7dc4a5.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "pid_info",
+        "UpdateOffsetsEvent",
+        "icon",
+        "Mode",
+        "<>c__DisplayClass41_1",
+        "ButtonList",
+        "mButton",
+        "<GetEnumerator>d__2"
+      ],
+      "path": "fdf7e2842e06c7a8.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "LogEventHandler",
+        "ProgressEventHandler",
+        "TBaseSetting",
+        "TSetting`1",
+        "mavlink_option",
+        "mavlink_option_simple",
+        "Board",
+        "Code"
+      ],
+      "path": "e3a9d20a7e524eca.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "Frequency",
+        "NoFlyEventArgs",
+        "<>c__DisplayClass7_1",
+        "<>c__DisplayClass7_2",
+        "<>c__DisplayClass7_3",
+        "<>c__DisplayClass7_4",
+        "<>c__DisplayClass7_5",
+        "<>c__DisplayClass7_6"
+      ],
+      "path": "4167bf8862602130.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass7_7",
+        "<>c__DisplayClass7_8",
+        "DataModifer",
+        "ext",
+        "LogRouteInfo",
+        "MetaData",
+        "<>c__DisplayClass26_0",
+        "<>c__DisplayClass33_0"
+      ],
+      "path": "990f096671f1922d.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass42_1",
+        "<>c__DisplayClass43_0",
+        "<>c__DisplayClass43_1",
+        "<>c__DisplayClass48_0",
+        "<>c__DisplayClass48_1",
+        "<>c__DisplayClass48_2",
+        "<>c__DisplayClass49_0",
+        "<>c__DisplayClass49_1"
+      ],
+      "path": "7f25e4dcadc5d51a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass49_2",
+        "<>c__DisplayClass50_0",
+        "<>c__DisplayClass50_1",
+        "<>c__DisplayClass50_2",
+        "<>c__DisplayClass51_0",
+        "<>c__DisplayClass51_1",
+        "<>c__DisplayClass51_2",
+        "<>c__DisplayClass51_3"
+      ],
+      "path": "01dd630ffcdc0675.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass52_1",
+        "<>c__DisplayClass52_2",
+        "<>c__DisplayClass53_0",
+        "<>c__DisplayClass53_1",
+        "<>c__DisplayClass55_0",
+        "<>c__DisplayClass55_1",
+        "<>c__DisplayClass89_0",
+        "<>o__43"
+      ],
+      "path": "1e5339fe4440b706.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<DrawEV>d__50",
+        "<DrawErrors>d__49",
+        "<DrawMSG>d__52",
+        "<DrawMap>d__55",
+        "<DrawModes>d__51",
+        "<DrawTime>d__53",
+        "<zg1_ZoomEvent>d__63",
+        "serialstatus"
+      ],
+      "path": "6a3b1f3d71870c99.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass18_0",
+        "SerialStatus",
+        "<>c__DisplayClass17_0",
+        "<>c__DisplayClass28_0",
+        "<>c__DisplayClass29_0",
+        "<>c__DisplayClass32_0",
+        "<DownloadThread>d__24",
+        "<GetAllLogIndices>d__26"
+      ],
+      "path": "8d5b3e0d45866dcf.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<GetLog>d__18",
+        "<GetSelectedLogIndices>d__25",
+        "<>c__DisplayClass14_0",
+        "<>c__DisplayClass19_0",
+        "<>c__DisplayClass30_0",
+        "<>c__DisplayClass31_0",
+        "<>c__DisplayClass34_0",
+        "<GetAllLogIndices>d__29"
+      ],
+      "path": "d68cd0d0246f067c.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<GetSelectedLogIndices>d__28",
+        "loginfo",
+        "NonSelectableRenderer",
+        "<<queueRunner>b__6_1>d",
+        "<ProcessFile>d__7",
+        "<processbg>d__10",
+        "<BUT_convertcsv_Click>d__28",
+        "<BUT_graphmavlog_Click>d__10"
+      ],
+      "path": "39abf3ff89cd1b2c.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<BUT_humanreadable_Click>d__9",
+        "<BUT_redokml_Click>d__8",
+        "<GetLogFileValidFields>d__12",
+        "<but_cs_Click>d__34",
+        "<>c__DisplayClass4_0",
+        "<>c__DisplayClass40_0",
+        "<domainUpDown1_ValueChanged>d__37",
+        "actions"
+      ],
+      "path": "ca5f360c16d8142b.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__210`2",
+        "<>c__DisplayClass127_0",
+        "<>c__DisplayClass128_0",
+        "<>c__DisplayClass129_0",
+        "<>c__DisplayClass133_0",
+        "<>c__DisplayClass201_0",
+        "<>c__DisplayClass203_0",
+        "<>c__DisplayClass205_0"
+      ],
+      "path": "77cfaeb756971905.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass206_0",
+        "<>c__DisplayClass209_0",
+        "<>c__DisplayClass209_1",
+        "<>c__DisplayClass210_0`2",
+        "<>c__DisplayClass210_1`2",
+        "<>c__DisplayClass210_2`2",
+        "<>c__DisplayClass210_3`2",
+        "<>c__DisplayClass210_4`2"
+      ],
+      "path": "d3cf3b09691a67f1.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass211_0",
+        "<>c__DisplayClass217_0",
+        "<>c__DisplayClass222_0",
+        "<>c__DisplayClass224_0",
+        "<>c__DisplayClass260_0",
+        "<>c__DisplayClass261_0",
+        "<>c__DisplayClass262_0",
+        "<>c__DisplayClass266_0"
+      ],
+      "path": "1587d7091accf81a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<modifyandSetSpeed_Click>d__214",
+        "<setHomeHereToolStripMenuItem_Click>d__234",
+        "altmode",
+        "midline",
+        "<>c__DisplayClass144_0",
+        "<>c__DisplayClass145_0",
+        "<>c__DisplayClass153_0",
+        "<>c__DisplayClass159_0"
+      ],
+      "path": "51b365d4dc5628c7.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass193_0",
+        "<>c__DisplayClass193_1",
+        "<>c__DisplayClass198_0",
+        "<<saveWPs>b__2>d",
+        "<>c__DisplayClass210_0",
+        "<>c__DisplayClass237_0",
+        "<>c__DisplayClass238_0",
+        "<>c__DisplayClass246_0"
+      ],
+      "path": "3fa258a8f22c7626.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass246_1",
+        "<>c__DisplayClass246_2",
+        "<>c__DisplayClass248_0",
+        "<>c__DisplayClass80_0",
+        "<>c__DisplayClass83_0",
+        "<>c__DisplayClass86_0",
+        "<>c__DisplayClass88_0",
+        "<>c__DisplayClass88_1"
+      ],
+      "path": "c6a87b5f18dfd980.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass91_0",
+        "<>c__DisplayClass91_1",
+        "<>c__DisplayClass91_2",
+        "pageOptions",
+        "pluginPage",
+        "<>c__DisplayClass46_0",
+        "<CheckandGetSITLImage>d__34",
+        "<GetDefaultConfig>d__35"
+      ],
+      "path": "4a54be60621daa23.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<StartSITL>d__38",
+        "<StartSwarmChain>d__47",
+        "<StartSwarmSeperate>d__46",
+        "<pictureBoxheli_Click>d__22",
+        "<pictureBoxplane_Click>d__19",
+        "<pictureBoxquad_Click>d__21",
+        "<pictureBoxrover_Click>d__20",
+        "paramsettings"
+      ],
+      "path": "5eaf4f51bf9c3924.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "ConnectionTypes",
+        "CanStats",
+        "Stats",
+        "mcasthdr",
+        "mcastcanbody",
+        "<>c__DisplayClass18_1",
+        "<>c__DisplayClass18_2",
+        "<>c__DisplayClass25_1"
+      ],
+      "path": "31bed108c18184ba.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass25_2",
+        "<>c__DisplayClass31_1",
+        "<>c__DisplayClass32_1",
+        "<>c__DisplayClass32_2",
+        "<>c__DisplayClass35_0",
+        "<>c__DisplayClass35_1",
+        "<>c__DisplayClass35_2",
+        "<>c__DisplayClass35_3"
+      ],
+      "path": "ec73a13fb70f64bd.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass13_1",
+        "<>c__DisplayClass13_2",
+        "SimpleMode",
+        "<>c__DisplayClass20_0",
+        "<>c__DisplayClass21_0",
+        "GPSCAN",
+        "CompassNumber",
+        "<BUT_MagCalibrationLog_Click>d__13"
+      ],
+      "path": "498f657dcfd70802.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "CompassDeviceInfo",
+        "<>c__DisplayClass8_1",
+        "<>c__DisplayClass8_2",
+        "<UpdateFirst3>d__12",
+        "<but_missing_ClickAsync>d__23",
+        "<myDataGridView1_CellContentClick>d__11",
+        "_motors",
+        "_layouts"
+      ],
+      "path": "4f3eb3e482989c87.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "JSON_motors",
+        "<but_mot_spin_arm_Click>d__16",
+        "<but_mot_spin_min_Click>d__17",
+        "Channelap",
+        "Channelac",
+        "ChannelCameraShutter",
+        "Channelinput",
+        "OSDSetting"
+      ],
+      "path": "e9358004e9706fb8.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass12_0",
+        "<>c__DisplayClass5_0",
+        "<>c__DisplayClass5_1",
+        "<>c__DisplayClass6_0",
+        "GCSBitmapInfo",
+        "NaturalStringComparer",
+        "<>c__DisplayClass43_2",
+        "<>c__DisplayClass43_3"
+      ],
+      "path": "e707b42a04563860.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<but_bootloader_Click>d__17",
+        "<but_dfu_Click>d__16",
+        "<but_firmware_Click>d__18",
+        "<but_login_Click>d__12",
+        "<>c__DisplayClass23_0",
+        "<>c__DisplayClass23_1",
+        "<>c__DisplayClass44_0",
+        "<BUT_connect_Click>d__28"
+      ],
+      "path": "4a5934a105f778fa.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<ConfigureSeptentrioReceiver>d__31",
+        "<ConfigureUnicoreReceiver>d__30",
+        "<DoConnect>d__29",
+        "<UpdateSeptentrioBasePosition>d__69",
+        "<UpdateSeptentrioRTCMSettings>d__71",
+        "<button_septentriortcminterval_Click>d__72",
+        "<button_septentriosetposition_Click>d__68",
+        "<chk_septentrioconstellation_Click>d__73"
+      ],
+      "path": "fb11a8430efe7c71.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<chk_septentriofixedposition_Click>d__67",
+        "<cmb_septentriortcmamount_SelectedIndexChanged>d__70",
+        "configitem",
+        "relationitem",
+        "<BUT_RebootAPM_Click>d__32",
+        "<start_Terminal>d__24",
+        "ItemInfo",
+        "port_sysid"
+      ],
+      "path": "323e7e07b7b82451.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass6_0`2",
+        "<But_dlartifact_Click>d__8",
+        "<But_login_Click>d__5",
+        "<But_uploadflightlog_Click>d__9",
+        "<Cmb_drones_SelectedIndexChanged>d__6",
+        "<test>d__3",
+        "DirectoryInfo",
+        "<GetDirectories>d__9"
+      ],
+      "path": "a4cef0fbbce9a848.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<GetFiles>d__10",
+        "<DownloadToolStripMenuItem_Click>d__10",
+        "<GetDirectories>d__5",
+        "<ListView1_DragDrop>d__8",
+        "<PopulateTreeView>d__4",
+        "<TreeView1_NodeMouseClick>d__6",
+        "<UploadFile>d__12",
+        "<UploadToolStripMenuItem_Click>d__11"
+      ],
+      "path": "e620f9b5dcd3b4a4.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "MyTreeView",
+        "<>c__DisplayClass19_1",
+        "<>c__DisplayClass19_2",
+        "<>o__21",
+        "<>c__DisplayClass12_1",
+        "<>c__DisplayClass4_1",
+        "<GetDirectories>d__8",
+        "<GetFiles>d__9"
+      ],
+      "path": "2829dea8b406a65a.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass22_0",
+        "<>c__DisplayClass22_1",
+        "<DownloadToolStripMenuItem_Click>d__11",
+        "<ListView1_DragDrop>d__9",
+        "<PopulateDirectories>d__6",
+        "<PopulateTreeView>d__5",
+        "<TreeView1_NodeMouseClick>d__7",
+        "<UploadFile>d__13"
+      ],
+      "path": "f0fbcb51ed484ffd.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<UploadToolStripMenuItem_Click>d__12",
+        "<>o__20",
+        "tileZoomArea",
+        "Lines",
+        "tileInfo",
+        "Vertex",
+        "<>c__DisplayClass92_0",
+        "<>c__DisplayClass94_0"
+      ],
+      "path": "ae28e37717a8d1fd.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass94_1",
+        "<>c__DisplayClass94_2",
+        "NativeMethods",
+        "<BUT_start_Click>d__53",
+        "<dolog>d__39",
+        "<startup>d__35",
+        "dtlvcallbackHandler",
+        "plot"
+      ],
+      "path": "df1302c3eacef8c2.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "<>c__DisplayClass2_1",
+        "<>c__DisplayClass2_2",
+        "internaldata",
+        "interfaces",
+        "__StaticArrayInitTypeSize=3",
+        "__StaticArrayInitTypeSize=5",
+        "__StaticArrayInitTypeSize=6",
+        "__StaticArrayInitTypeSize=12"
+      ],
+      "path": "03dc86da3bd620ea.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "__StaticArrayInitTypeSize=16",
+        "__StaticArrayInitTypeSize=18",
+        "__StaticArrayInitTypeSize=20",
+        "__StaticArrayInitTypeSize=24",
+        "__StaticArrayInitTypeSize=32",
+        "__StaticArrayInitTypeSize=40",
+        "__StaticArrayInitTypeSize=48",
+        "__StaticArrayInitTypeSize=56"
+      ],
+      "path": "28d7a65a2146fd8e.json",
+      "status": "complete"
+    },
+    {
+      "types": [
+        "__StaticArrayInitTypeSize=64",
+        "__StaticArrayInitTypeSize=72"
+      ],
+      "path": "3721abb576f17a68.json",
+      "status": "complete"
+    }
+  ]
+}

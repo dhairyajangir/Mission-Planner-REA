@@ -1,0 +1,99 @@
+{
+  "scope": "Original library and disposable Copter SITL; relay rewrites one unsigned ACK target and CRC",
+  "form": "int",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; relay alters one ACK target and recalculates checksum",
+    "case": "retarget",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7080,
+    "proxy_port": 7081,
+    "requests": [
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      }
+    ],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "original_ack": {
+      "source": [
+        1,
+        1
+      ],
+      "target": [
+        255,
+        190
+      ],
+      "result": 0
+    },
+    "retargeted_acks": 1,
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified_ack.bin": "711ea57ca4c89700c213d06eb8422c10fe5b817c9f900fe028b909f8a05eae83",
+      "original_ack.bin": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734",
+      "to_client_input.bin": "dcfda24b6969bb329095eb29930dbe61868dfe96e30319f77db266af04b866c1",
+      "to_client_output.bin": "d070c2ae78c9976fa571b1efc564060a6b38c6d2b08dabfa062b09a6e8864bcd",
+      "to_sitl_input.bin": "7e1f77babc99950a22655b725e4e463eb71b509112ab8bdd03165037b1713e86",
+      "to_sitl_output.bin": "7e1f77babc99950a22655b725e4e463eb71b509112ab8bdd03165037b1713e86"
+    }
+  },
+  "original": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 0,
+    "target": [
+      255,
+      190
+    ],
+    "seq": 56
+  },
+  "modified": {
+    "source": [
+      1,
+      1
+    ],
+    "command": 510,
+    "result": 0,
+    "target": [
+      42,
+      17
+    ],
+    "seq": 56
+  },
+  "byte_differences": [
+    18,
+    19,
+    20,
+    21
+  ],
+  "requests": [
+    {
+      "type": "COMMAND_INT",
+      "source": [
+        255,
+        190
+      ],
+      "target": [
+        1,
+        1
+      ],
+      "param1": 30.0
+    }
+  ],
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "COMMAND_RESULT=True"
+  ]
+}

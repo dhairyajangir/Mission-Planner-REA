@@ -1,0 +1,3308 @@
+{
+  "scope": "portable ZIP DLL/EXE files; excludes local test harness",
+  "limitations": [
+    "Header classification is not runtime loading or full dependency verification."
+  ],
+  "files": [
+    {
+      "path": "7zip.dll",
+      "size": 50688,
+      "sha256": "845ff05fcdf9e09ded1446e3e4c94ff13362d8d5a3d73045e6ffd0f552974a09",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.dll",
+      "size": 131072,
+      "sha256": "d36c225a84415c01bc2a8e84096590a7206dfc3d36173e3c7b6a62a04c0a33a9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Imaging.dll",
+      "size": 479232,
+      "sha256": "febabb148e6ceeb3421075e353f3ebe1b436912d625620888c97fb58cba0c2aa",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.MachineLearning.dll",
+      "size": 442368,
+      "sha256": "cb958d8674b4da412db8e0292fcae62ca239e617298a3123d058203c1e75bef5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Math.Core.dll",
+      "size": 1441792,
+      "sha256": "777da4849d8f7897a13818eb9fab05b2ecb80de848b3019aafefd34b28f791a8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Math.dll",
+      "size": 2220032,
+      "sha256": "1b1c40f63b7b98e82878ce8656390c12d9a2ed72ca451d6e7adcb46555cccbf2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Statistics.dll",
+      "size": 897024,
+      "sha256": "5230d2cb7a0b48eea0fb369b6ef40197f148af6fbda3652e6f01bef4ab0f5d00",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Video.dll",
+      "size": 40960,
+      "sha256": "5feaaa1d49f2c2c8363a0a6f0ef42df5ebefcdb8989c707d93adc3eb9db10874",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Accord.Vision.dll",
+      "size": 1249280,
+      "sha256": "c6f2672e8cc9d9029baee0b28b0de43cc1ac84241584b9329c95e99c9efbc73a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "adb.exe",
+      "size": 1479680,
+      "sha256": "78009a831f3455bce238ebf9b65170cba9a6782a60eff2284d5bfeb54c19e088",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "AdbWinApi.dll",
+      "size": 97792,
+      "sha256": "d60103a5e99bc9888f786ee916f5d6e45493c3247972cb053833803de7e95cf9",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "alglibnet.dll",
+      "size": 1662976,
+      "sha256": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ar/MissionPlanner.resources.dll",
+      "size": 66048,
+      "sha256": "e5cfa03c463c62e3d05a33857b9fc9a68df2d196e415341e2502d37f7123d7bf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Arduino.dll",
+      "size": 13312,
+      "sha256": "1120deb2fc632aa10887f057159a5efd52bfaa4030e0670579000e441de4a903",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "arm64/libSkiaSharp.dll",
+      "size": 7948320,
+      "sha256": "d8ea5ff8d04bc7909a8aa38f7cd28962c6a6036e6683d0032b7af999b6260f18",
+      "classification": "native-or-other-pe",
+      "machine": "0xaa64",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "AviFile.dll",
+      "size": 32768,
+      "sha256": "91aa38d7c5494473784092bb6e6c18284e158bc03bc54f1a8925be8bb7e74fd6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.resources.dll",
+      "size": 87040,
+      "sha256": "81502eff8beb6637c9931a85b4364e126add5f09b8f854b9cdb1d1e8349ebf7d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "az-Latn-AZ/MissionPlanner.Strings.resources.dll",
+      "size": 14336,
+      "sha256": "4cba20588b6d00b5773d04d9f28020ee1a5270d73356e5fef10f7ec6961bdcd8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BaseClasses.dll",
+      "size": 235520,
+      "sha256": "ea49f439d977b27c6891dbcd43ec979f71b9edc0252e9f0c71644bc95dd6271c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BitMiracle.LibTiff.NET40.dll",
+      "size": 645120,
+      "sha256": "6fd42ad8cf7b7a0d78eb1eadbd4853de3ddf5f8deee0535812e47436fd893554",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BitMiracle.LibTiff.NetStandard.dll",
+      "size": 645120,
+      "sha256": "7b67fdda9c5611f996cd4dd96de816e4e693a81802aa5c6693bf9ab012c65e59",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BouncyCastle.Cryptography.dll",
+      "size": 6867224,
+      "sha256": "aec227154fc549739ff5a07920723641f773ce65d05dca70b215183c93e9641d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BruTile.dll",
+      "size": 194560,
+      "sha256": "ff321342a2ac49dc796c4523e19205e8f1b996c7f091bf7aded0ea86091cf2aa",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "BSE.Windows.Forms.dll",
+      "size": 117248,
+      "sha256": "46491df9e66e38bb4d97fcfca0e28c8b2731080c782b52872fc2be2373291d85",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Core.dll",
+      "size": 45056,
+      "sha256": "8d6eb327cc2d214e1cf59fce5da946aa4c0fe073b612c2d4e5e7007b7ef82104",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Crc32.NET.dll",
+      "size": 7680,
+      "sha256": "9eafbec3431a3ddc072d870dd71f96d4fd421eff27b3f855fb29dde31463803a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 346000,
+      "sha256": "24c11d138b9c977f338a43e60586cd6e6b8590b9ccbdcb161c5fac55c7a07575",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "cs/Microsoft.CodeAnalysis.resources.dll",
+      "size": 42896,
+      "sha256": "bb2a25b9e01d9557cb4b1eecaa3ad803f711e41ed11d47916710a3644fd4521a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "csmatio.dll",
+      "size": 45568,
+      "sha256": "8345cd7f6008bc7eb732b7c79e0d1efae947afd789adbfaa840be403197334b1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 368528,
+      "sha256": "a31bc80583f1dc1a458bc11fd29aafc74c7486d393e3d689897377937c72271c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "de/Microsoft.CodeAnalysis.resources.dll",
+      "size": 44944,
+      "sha256": "ebc3cd419b1a792f82d5f065622750611b473ee9bf3c8909e3601e99a856ed97",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "de/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "2674facab0f04a7d1788eec6b14fa66a8ae385b1107b57af2368e451427beba0",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "de-DE/MissionPlanner.resources.dll",
+      "size": 70144,
+      "sha256": "2029b3c401a2012abd0c420adaf1b459e94f3e2c90bbd1b04cd57c33c68838c1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "de-DE/MissionPlanner.Strings.resources.dll",
+      "size": 4608,
+      "sha256": "9a0d6da6b0c5c55478be5faf0f37cff41e78c811312e3b1a14e8f97cd65b6f30",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DeviceProgramming.dll",
+      "size": 35328,
+      "sha256": "3379ea9353d7bb226aaadd4b0f680ce930cee31ee4f786359bd7cacbacc48e3e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DirectShowLib.dll",
+      "size": 291840,
+      "sha256": "af97430187c697be5ec7e378a78512cec70e76400d664d7878f9b05800271140",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DotNetZip.dll",
+      "size": 472064,
+      "sha256": "8e9c0362e9bfb3c49af59e1b4d376d3e85b13aed0fbc3f5c0e1ebc99c07345f3",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DotSpatial.Data.dll",
+      "size": 386048,
+      "sha256": "333d2b9b9e3d6fb5df3c0a01e94a32981e9bb64591b8ce5447659ac0a4fe2ec5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DotSpatial.NTSExtension.dll",
+      "size": 51200,
+      "sha256": "bb76f1ba7efc499de6bb9927a83ec6ddeb2c9ef576dde4037be877da3e8f9ff7",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DotSpatial.Projections.dll",
+      "size": 1542656,
+      "sha256": "78efeb72ac2a37482f56ecf5ecf6cb74c2ba8ff014c0682483a92f445811b3c4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "DotSpatial.Serialization.dll",
+      "size": 36864,
+      "sha256": "3222801c3899e0b79b76efe75be11718eb432794778daec238b1282c79745c88",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Drivers/amd64/WdfCoInstaller01009.dll",
+      "size": 1731664,
+      "sha256": "56af50768ee1095db0fec866a8e545d13e2e43ef108f0a4dbd12aff1de962f11",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/amd64/winusbcoinstaller2.dll",
+      "size": 1012808,
+      "sha256": "6a3cdfd1c28a5e7c242b6824ed6f4281519079c632453734c4ac03d387048f3f",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/devcon.exe",
+      "size": 75776,
+      "sha256": "24f585e58a7c4fd289dc9ff782eb3d82c125aefdafab11aafbb877d0282304bd",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/DPInstx64.exe",
+      "size": 1047632,
+      "sha256": "c20a5d3f5be543a8e73cd25f9dbf14aa0fc4ba1fdc249ee4ff91d159d174d0ea",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/DPInstx86.exe",
+      "size": 922176,
+      "sha256": "4478f6fcfd2fc9be012668592bfbf6838a115d983f9d30171669b20cafe529b9",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/DriverCleanup.exe",
+      "size": 10752,
+      "sha256": "7d647a1b6028f69d3f4b5fa500adf2eed5eb112772129be117c05bb2eab05900",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Drivers/x86/WdfCoInstaller01009.dll",
+      "size": 1472080,
+      "sha256": "bb7d3c9d5390edb179154296516b5ef0be6684ff8018795518ad39d18022aab3",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Drivers/x86/winusbcoinstaller2.dll",
+      "size": 861256,
+      "sha256": "c3b92d5028e20de8ca386256ab93b3f6d811f837af7e9ed617745dca5513ff3a",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "DroneCAN.dll",
+      "size": 344064,
+      "sha256": "8e411332d81479355b7b9fdf0793d80acaa2a537ecdd3f8b50bdfb0e60d76314",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 360848,
+      "sha256": "a49af3679897cc3946f407f98fdedda995811b9ed026e5e41d461096dc39bde6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "es/Microsoft.CodeAnalysis.resources.dll",
+      "size": 44432,
+      "sha256": "d219d9c1195a71ec75fa3e38b84148a4291158131f39644bd131836fbc075332",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "es/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "c37d5ccff6626ade11dacbce7d65ef263e7b6af8179ebdb041a8a5e653c4aa5a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "es-ES/MissionPlanner.resources.dll",
+      "size": 85504,
+      "sha256": "8b82f3ca5199f236ba4bee9e3158dfcf4dd26b6e3b8ae282f68fc8d98fb54bb0",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ExifLibrary.dll",
+      "size": 112640,
+      "sha256": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Flurl.dll",
+      "size": 37376,
+      "sha256": "1c25f0dfdfe39768961bc9928a09c6f7cc663914adb4b5ecfe96756b02f73e99",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Flurl.Http.dll",
+      "size": 106496,
+      "sha256": "6a2d5d2045f62ade4406b6f100820cb98177c0a050b38c08b0e2f3462f3dcea2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 368528,
+      "sha256": "59ffbfea7ae84c97f175a04415fc3e9fe0cf9ab12147f1f4d8694c83b7bf349f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "fr/Microsoft.CodeAnalysis.resources.dll",
+      "size": 44944,
+      "sha256": "591d091fac6e9476ac7309636063c8683f6822ee281e66d73f0b8863784afc8e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "fr/MissionPlanner.resources.dll",
+      "size": 61440,
+      "sha256": "ff9807699f6730e3351cf5f419b8a013b3289dd2871c57a0f5a3ddff856751ad",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "fr/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "41893f26063c1201bd45db4cfa651b53f8b13cfbf9613d32156d3869a2acffc8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "gdal/x64/expat.dll",
+      "size": 138240,
+      "sha256": "d352d38310c33bdeff494fa50119f18fa05acee94805e797f9126d126e4a93f0",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/freexl.dll",
+      "size": 79360,
+      "sha256": "b7f42e03260614b640d24e91056ab4a6d54f7580bdd4e1319dc5b659c914adb2",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/gdal203.dll",
+      "size": 20630016,
+      "sha256": "df17ebd757ae16f624c3af56d042b6c38c6cfdaf92d662f89a57d6640910eb74",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/gdal_wrap.dll",
+      "size": 107008,
+      "sha256": "41d432d871095888e56161b36b560b3df1427c1606389026c7578c8545aa6bf6",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/gdalconst_wrap.dll",
+      "size": 17408,
+      "sha256": "465ff4f10b0bc90c41417496aca758b716efc9a972384b5d3e0a46454487e06b",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/geos.dll",
+      "size": 1320960,
+      "sha256": "9c6349e8b2cdc89b98f7a20823ea6779838f3fc025156051e618f14e58681f4b",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/geos_c.dll",
+      "size": 283136,
+      "sha256": "5a7104dc4dab81957d3d4185ee71a7846984e0f7c601c2b17794b997dfc74847",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/iconv.dll",
+      "size": 916992,
+      "sha256": "2ec67483ee5bb43c69273566c36639d27259769b10e7afe4acadd969a9caf6b2",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/libcurl.dll",
+      "size": 331264,
+      "sha256": "b6ae38488b6476eb1ffdd601cd8c7c905f912ad7ac82c289ba6102a6de09110e",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/libeay32.dll",
+      "size": 1608704,
+      "sha256": "31488251a8252540ba12c303c2a5c39c1db89a31900507b2cfc0152b5d62bf83",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/libmysql.dll",
+      "size": 4107776,
+      "sha256": "5cafbf258c98d8aeb377d260d7d73fbf4a3adfdc5800be98202eafcda9e281f1",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/libpq.dll",
+      "size": 155136,
+      "sha256": "f186124e7c243570b50e81e962f983b4b71cf3b4f4b0a6ec9c0cae94531b6bea",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/libxml2.dll",
+      "size": 1323008,
+      "sha256": "82362a3844656790e901878e60dbe6ea26f8ebf11769930f2818f9974df5a0f5",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/msvcp140.dll",
+      "size": 641696,
+      "sha256": "be2ef4f6d540d0ac5fddd556dcb6bfaf6cb6288679e4d64882d625ff35f173aa",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/ogr_wrap.dll",
+      "size": 102912,
+      "sha256": "c6837ea97c4d9e19ee33d2d3edaad2e68229626abac289a8e612c26bdb9a1656",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/openjp2.dll",
+      "size": 283136,
+      "sha256": "4ca6a687f143523c3e5e1bd9bc8be2ce8b21d48c9ab3861f2484ac06b52a3073",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/osr_wrap.dll",
+      "size": 46592,
+      "sha256": "caade96331142c58d8adfcd5d3e804a4b89d10f171ebe13fcc387d6189dc9cf2",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/proj.dll",
+      "size": 381952,
+      "sha256": "e1e30c07a6a71e5fd5cd91452920e1a70ef8aef61090bac545baceee1441e8a7",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/spatialite.dll",
+      "size": 11749888,
+      "sha256": "0e3d5e722d5187eff7ea1baa879f27c0a375c03ff4b13dc81925e89c5cf5d764",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/sqlite3.dll",
+      "size": 974848,
+      "sha256": "81432a0d658122a398b6342850d8b0130c4eef36c576ec7ebffa8d4753b0ec25",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/ssleay32.dll",
+      "size": 350208,
+      "sha256": "ef9d893a2f26656cfd7887fc81ddedd7b4bffa1e20ccb53d75ecf2493dc39d29",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/vcruntime140.dll",
+      "size": 87728,
+      "sha256": "d58e3ff10fd96a22a8e6d2fd76146a282cc45ccfaf2301257e76e7c2771cbd41",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/xerces-c_3_2.dll",
+      "size": 2925056,
+      "sha256": "955f5e7341ab27d65d5b931fad418348f5027c9cca068996e385df465a7e9cef",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x64/zlib1.dll",
+      "size": 75264,
+      "sha256": "cc7c0a9ab68afd006a91d2e927fc6a0d47ca2c21a2bf7428f046d79d8d746639",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/expat.dll",
+      "size": 111104,
+      "sha256": "4bb8025fdb66bc586035dd832cbbb5bf17653ce3d58162e7bbad3daa5fef1396",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/freexl.dll",
+      "size": 58368,
+      "sha256": "da3535cae2ca1cd71c2d327e1097f6ba25a76c71b4ed01aa54376bf91db16076",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/gdal203.dll",
+      "size": 16885760,
+      "sha256": "5f12cd952a4162de0cf8557c994c31235561489dda3d25f8be77f1a3d781d36a",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/gdal_wrap.dll",
+      "size": 80896,
+      "sha256": "1631e37e2ff43eaef9917b3031c55a6ab74a03f87fff3a9d9b89072d6ec916fb",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/gdalconst_wrap.dll",
+      "size": 15872,
+      "sha256": "a770bc328b11cc1073b77a33d7397bca776396053659cdd92998063173677399",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/geos.dll",
+      "size": 1012224,
+      "sha256": "e31ac4131a6f2ae487d21b630f7e79832276dcf36b730982fd0f3014a2a238fe",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/geos_c.dll",
+      "size": 227840,
+      "sha256": "47aab7a58e989afafd7fc6644f16192aeee966faaf6254395f09aa1f38828841",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/iconv.dll",
+      "size": 900608,
+      "sha256": "cc24ad2e2af27b4f0afc9f677e8b71b9eff8f9f9272d172c846639219ea458bb",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/libcurl.dll",
+      "size": 291840,
+      "sha256": "1a491f54009f0c480e889a25f4c359d91d44fc67c7ebfff4f458bb6d56a8d9ae",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/libeay32.dll",
+      "size": 1175552,
+      "sha256": "7de436dfcbad2db6c5ff4ef83b339d3d5364358dcfd9b34f990ee68b53d3063c",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/libmysql.dll",
+      "size": 3905024,
+      "sha256": "a6303840440680eeaab820d56ce0928630928a57fb535f0703a6c50c90b2417e",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/libpq.dll",
+      "size": 125440,
+      "sha256": "84d0d1b074c61f05a023a54b9039e5c82e7b89bce79a0d167a13b9476def0fa0",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/libxml2.dll",
+      "size": 1016832,
+      "sha256": "7797006774efda6dda52fdec7cfcb1cd5e7390afdcc41bfba3e1acc79740930a",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/msvcp140.dll",
+      "size": 440120,
+      "sha256": "334e69ac9367f708ce601a6f490ff227d6c20636da5222f148b25831d22e13d4",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/ogr_wrap.dll",
+      "size": 81408,
+      "sha256": "2c21beb5bf1c0b3e5735e40182225a72f358823091ee647fa0c2ff2b047bbe49",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/openjp2.dll",
+      "size": 240128,
+      "sha256": "74c86764254e6fa62398a68bc74b4940417b012af126c6865fe0398c4f8621d9",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/osr_wrap.dll",
+      "size": 39424,
+      "sha256": "0c49012fe0c14ebe56b6d7c731bc1aeb37f13a3ba2cb21536d2535d804b9d119",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/proj.dll",
+      "size": 314880,
+      "sha256": "37611d6396ea2ceea251465d3782889f7bcb60c440062ae2fd1147c1af91d4b2",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/spatialite.dll",
+      "size": 10138112,
+      "sha256": "55e107cb30169b600a27ce92a71f328e3ab5d6e8e73b7c0000a9fca96a3a770b",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/sqlite3.dll",
+      "size": 735744,
+      "sha256": "e3553ae3754ba294f560d1060e09701ee96b3522d1ddec923b44dd1bb1eaf39a",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/ssleay32.dll",
+      "size": 273408,
+      "sha256": "2fa0c5645eefe78af2bd2f9c9d2cdc2eb26d6066f6eee341f50362969295a4ba",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/vcruntime140.dll",
+      "size": 83784,
+      "sha256": "c40bb03199a2054dabfc7a8e01d6098e91de7193619effbd0f142a7bf031c14d",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/xerces-c_3_2.dll",
+      "size": 2415104,
+      "sha256": "67fb2214006eb1cfc45889bb25958de518a34f46336ee7767865c326682e55e5",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "gdal/x86/zlib1.dll",
+      "size": 62976,
+      "sha256": "775a07dc265b55fea5ab6bcb269a09d36cb08b7d0d34c6046ea2be293d24c721",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "GDAL.NET.dll",
+      "size": 25600,
+      "sha256": "b435a537b1bc1d70d55235e648e28a11c67d8b67a71f16fb9791061b3a864165",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "gdal_csharp.dll",
+      "size": 96768,
+      "sha256": "0596b046c29fd5db88f9853c8a09e957332c9c7e7caec3c8a690c2c18358596c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "gdalconst_csharp.dll",
+      "size": 19968,
+      "sha256": "baca2ce971e79c5cbb7f0c18aed1b99702b9985ac08ac9b3ad68131f14b694c7",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GeoAPI.CoordinateSystems.dll",
+      "size": 16896,
+      "sha256": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GeoAPI.dll",
+      "size": 44544,
+      "sha256": "34a045a45f50d113f2fe150340fa98ae7f3e8c10b2aa4ac616eaf644a673d687",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GeoidHeights.dll",
+      "size": 2097664,
+      "sha256": "b23e30873fc46134aacccd0a0041809418e7e93f76bb91ddbc2ba1a514ad714e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GeoJSON.Net.dll",
+      "size": 34816,
+      "sha256": "f26a99aa9dcc15dd7799fc5dbf369aedb5ca3151680f4e00ecaf9d07378eb6a4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GeoUtility.dll",
+      "size": 57856,
+      "sha256": "e51c3821c5ec47b05b698a1a00c9da94285120578fcc027be9c5b3b1bd10284b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GMap.NET.Core.dll",
+      "size": 228864,
+      "sha256": "c3fc6cc387a0e3c2bb756847d1c5826f76c4a93a7976868e3ef8f5fde0715431",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GMap.NET.Drawing.dll",
+      "size": 94720,
+      "sha256": "fb08a403bf9b1cbc1c45fe46581d4d524439328b37c6d69f59e80422845336ea",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "GMap.NET.WindowsForms.dll",
+      "size": 52736,
+      "sha256": "c4ad59f05dea6aa83188feae9f41f4ca1c509e61ad86df36df6b59ef929c6d2a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "hu/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "81704ef79a67333f073b848e8b6bb59b8c34e0df7aeaf453ad85a72022bb0b1b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ICSharpCode.SharpZipLib.dll",
+      "size": 196608,
+      "sha256": "e260680904a46eb1c6847a604a791d20851f90a04f9a785b4d8d1d90793d7284",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "id-ID/MissionPlanner.resources.dll",
+      "size": 92672,
+      "sha256": "fe7f1a11e2aed706c4e74a874880d844f1b63bac29803cabfb38089d77a990a4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "id-ID/MissionPlanner.Strings.resources.dll",
+      "size": 15360,
+      "sha256": "ef4114f88c8a8915998c061596ac1d39b1bedd21095da26700e1f988cd7a7671",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Interfaces.dll",
+      "size": 15872,
+      "sha256": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Ionic.Zip.NetStandard.dll",
+      "size": 259072,
+      "sha256": "c4e3bc5933f4064d27527463d89e4bde76a64707dfefd74861e57dc3f826a25f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "IronPython.dll",
+      "size": 2242560,
+      "sha256": "fa31585f4ee4140ee4dc3e4130643ea21f514d142a8dbacbc12afba5ed7bb5a3",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "IronPython.Modules.dll",
+      "size": 795136,
+      "sha256": "42154d6cf9fc8c15571140f0656bd98a127814e40f8cea1fb567d9d97cde0aa5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "IronPython.SQLite.dll",
+      "size": 636416,
+      "sha256": "5c43c75d7d88df61cf76c4739346a1f7947671019c08785457e61dc790ecb0a5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "IronPython.Wpf.dll",
+      "size": 7168,
+      "sha256": "4e3c9e0d0ec9120de35521ee3c3e7a5ad6709686edc26e7b2b746973ba9c1a47",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 366992,
+      "sha256": "19b188f164f970f5598bca806c900027c7aac5ab02dfec45e9d883bc3d7c1ead",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "it/Microsoft.CodeAnalysis.resources.dll",
+      "size": 44944,
+      "sha256": "53fb4185f37ff46c4807692b37db021d33d3d8ad7aff62f85450553006fd0faf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "it/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "536e25b406c4716bd6990ed8998272658359868003b925e9e8ff65472bba345a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "it-IT/MissionPlanner.resources.dll",
+      "size": 68096,
+      "sha256": "7de1e0dd5c2cc44040205637ec3757bf33a6941c18cec4e257950949af816b21",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 403344,
+      "sha256": "888e69f650722b6dcff4da7645a1fa9783fafb70a028fa08c446619288537121",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ja/Microsoft.CodeAnalysis.resources.dll",
+      "size": 48016,
+      "sha256": "c3df6306011e06e99234eb004ab924bc21bd40c23ccb50c64ed398e1cac088dc",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ja/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "8d1d721b1adaf57a21ba8a2861c4dc46591852faf965ea962761f6f2d0ce2872",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ja-JP/MissionPlanner.resources.dll",
+      "size": 88064,
+      "sha256": "c843f84195229d2b9cb2285d5b78a86f9938f8882304e6f60c8c49c7e1f477b0",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ja-JP/MissionPlanner.Strings.resources.dll",
+      "size": 15360,
+      "sha256": "e79802bc2098170416f129fe8c044f62b8b8007ad1ca060871b836c9b0e8418b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "JetBrains.Profiler.Api.dll",
+      "size": 13824,
+      "sha256": "0e81d6dd31052e029c0f7e74dce0deddc6179a3955be5762ea8a2dbff5f42f3a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "JetBrains.Profiler.SelfApi.dll",
+      "size": 51712,
+      "sha256": "ae3fc72f428ae9b804b1ab3df4a6e9ffb96a56afd18ff18d8cb3c7c9d63ab18c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "KMLib.dll",
+      "size": 24576,
+      "sha256": "1952af7cb6095ab76750ceb278a1cae308718398896938c5b97ead0ea40325c9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 372112,
+      "sha256": "de24e9ad5e3e332851a25fc17474e242dbb383ed5f82029d264035e50f4025a0",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ko/Microsoft.CodeAnalysis.resources.dll",
+      "size": 45456,
+      "sha256": "ec13f51ce899bd1ce7f780921386cb017d477d8f4cd3745a0425582306683ee4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ko-KR/MissionPlanner.resources.dll",
+      "size": 3005440,
+      "sha256": "a17c8a941b90633dd8d6cc985cde0e8262a06e5c101d6692abf59e1c302fe269",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ko-KR/MissionPlanner.Strings.resources.dll",
+      "size": 18432,
+      "sha256": "06a395d82f8dd07d96a2d09ad3172e2c952343f3f26c640e8ef90a0b930f4df8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "lib/distutils/command/wininst-10.0-amd64.exe",
+      "size": 222208,
+      "sha256": "b2e32b3fa44b3a9a8fdfa906627355f6f48b4821929f9bce5ded2d07894361d4",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-10.0.exe",
+      "size": 190976,
+      "sha256": "1aa3927c7985386d42759656665c7b422ee226df16a19446af6d9a6613b8ae9b",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-6.0.exe",
+      "size": 61440,
+      "sha256": "751941b4e09898c31791efeb5f90fc7367c89831d4a98637ed505e40763e287b",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-7.1.exe",
+      "size": 65536,
+      "sha256": "4a3387a54eeca83f3a8ff1f5f282f7966c9e7bfe159c8eb45444cab01b3e167e",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-8.0.exe",
+      "size": 61440,
+      "sha256": "e362670f93cdd952335b1a41e5529f184f2022ea4d41817a9781b150b062511c",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-9.0-amd64.exe",
+      "size": 224256,
+      "sha256": "84fe7824717bb55d7f32c7487e37012a1bc6cd4c8c0202be4bfb07e770f8dc51",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "lib/distutils/command/wininst-9.0.exe",
+      "size": 196096,
+      "sha256": "13b98844b2fa4a39a4d8ebb414fc79450d5ab4f0c8f5141ac06d40b2a0431ea4",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "LibTessDotNet.dll",
+      "size": 32768,
+      "sha256": "2df563dfe20d8201089dfde79efcbe38b0d82cd503ff0ec429de67ec2f67ba5d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "libusb-1.0.dll",
+      "size": 157184,
+      "sha256": "d4e5db4fad8bef7201dc5a4a71ca997e6dccc9da25e8a988d4be63b13a02208d",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "LibUsbDfu.dll",
+      "size": 10752,
+      "sha256": "f577d659edfe5c240830ba16dcb43fe94dfa4586eb94834c925f4eefd8b73093",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "LibUsbDotNet.LibUsbDotNet.dll",
+      "size": 156672,
+      "sha256": "b6de87ff6fdde6d0a245ef37fe81fac49523c35115c61bc002e4935d99875508",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "LibVLC.NET.dll",
+      "size": 57344,
+      "sha256": "74d0b2ac1bec034ab5c541ef211eeb708fb224a5013be718550ff0c354f052df",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "log4net.dll",
+      "size": 270336,
+      "sha256": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ManagedNativeWifi.Simple.dll",
+      "size": 15360,
+      "sha256": "ae1c9dff1d88f92e47addc3a16f69a63acd5803e10933d2dd61ba8bfde7fbda8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MathParser.org-mXparser.dll",
+      "size": 799744,
+      "sha256": "b2dde6c274ff0ad287442bf9d86fb580dce3c99ef27775dcdbdcc854df5b91b9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MAVLink.dll",
+      "size": 596992,
+      "sha256": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MetaDataExtractor.dll",
+      "size": 215552,
+      "sha256": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.CSharp.dll",
+      "size": 6018960,
+      "sha256": "58fc067e6cfb52480ce558eed5c55b6806e602ea235acd0fd0634dd771c9b715",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.CodeAnalysis.dll",
+      "size": 2806160,
+      "sha256": "44297d9a467210a10a8c66573297956cee1f3ab4290d126eb53cf3aed0de1d97",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Diagnostics.Runtime.dll",
+      "size": 800120,
+      "sha256": "902514bc754baa9466ceab24f387784e31d54ee89b00f539f28765b4be44e344",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Dynamic.dll",
+      "size": 847360,
+      "sha256": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Abstractions.dll",
+      "size": 27024,
+      "sha256": "fa446e68a7d85d47163ed76be91553ec0c4ada77b740474b7d1215de72c9048f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.Caching.Memory.dll",
+      "size": 32120,
+      "sha256": "bf65e4e121d2a2233caf70bf0b6089c88c8851c9e232bc0b048e6a40ad746ece",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "size": 37752,
+      "sha256": "3ad1dde935aae2f332bae842c7e360dfb8be0ff8774564771b77405b2ba0ebd2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.Logging.Abstractions.dll",
+      "size": 48504,
+      "sha256": "750955eea05d92071f032de955d5ba2c93c247ff6c7db4c81f27105dc99bde34",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.Options.dll",
+      "size": 50552,
+      "sha256": "71e2aab1bd158a5499f5a6b7c6f5a0f13a4f6ddaa24e1d7c4a7445ceb8ec9b6c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Extensions.Primitives.dll",
+      "size": 38776,
+      "sha256": "4fa020c0e576e0c2332de41f27a0934dd13160017b201844a6b139ea389b1e90",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Scripting.dll",
+      "size": 142336,
+      "sha256": "2dfbeb0f68ee9828f50c246f379d60da5f37ddda07e07acce92cca2ded9f3a7f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Scripting.Metadata.dll",
+      "size": 89088,
+      "sha256": "9748910fefa76dc8770fde957ec5eebe55cd27bae0c1e1d5d859c9aac1d89af3",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Microsoft.Win32.Registry.dll",
+      "size": 23112,
+      "sha256": "619737e2af8fb713085726631dd2e522fe130cac1d388a59c38907a47d7aadea",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Antenna.dll",
+      "size": 14848,
+      "sha256": "56ef179ca0cfc55dcbaef975f38e683b2409fb4c5c2cedd3aff4d1169f415d0e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.ArduPilot.dll",
+      "size": 492032,
+      "sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Comms.dll",
+      "size": 81408,
+      "sha256": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Controls.dll",
+      "size": 379904,
+      "sha256": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Drawing.dll",
+      "size": 256000,
+      "sha256": "26ac32bd57e107e39b5b877cae4bfe5c762b164dc508defd4c05e11c4e92d20b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.exe",
+      "size": 8899584,
+      "sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.HIL.dll",
+      "size": 24576,
+      "sha256": "7a2e5ec6fb854d0a57ac8a03c9353f2464907830c01312d08ad4730c58e8627b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Maps.dll",
+      "size": 2937856,
+      "sha256": "8a8b97526f8c1f94057df356496bf82ea8b144f4372792e8f0b60bd9e588e6ec",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Strings.dll",
+      "size": 36864,
+      "sha256": "a48e47b8dbf4f5f93e582423418614c709b16ef65c71245ae3727cecb266a165",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.Utilities.dll",
+      "size": 773120,
+      "sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "MissionPlanner.WebAPIs.dll",
+      "size": 357888,
+      "sha256": "6c2ee11f045a400c3150ecd52aa72170458e92861ae8cccc8e1937b474b57e08",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Mono.Posix.NETStandard.dll",
+      "size": 13376,
+      "sha256": "e67e359a40feb8665adbbd8f781e9e512866d103f2870ba57aab4aa59de83fee",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "netDxf.dll",
+      "size": 609792,
+      "sha256": "c04b89cd13234021ab6e1a8edb0cd145c60b05a8297597ac5e83473b0d69350a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "NetTopologySuite.dll",
+      "size": 714752,
+      "sha256": "456dfab0684e2a48af46962ad46bd3e34bd40153cab9832306ce59d7a6f7aa69",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Newtonsoft.Json.dll",
+      "size": 711952,
+      "sha256": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ObjectListView.dll",
+      "size": 407040,
+      "sha256": "76b2120588c0b1582d1784a7d2719ed662fc3462cce005d3a30cf9873e4e01ff",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ogr_csharp.dll",
+      "size": 80896,
+      "sha256": "48c275f1b26f0c7d157410698c0246aece07052c95da31c70a926820f87d6a86",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Onvif.Core.dll",
+      "size": 398336,
+      "sha256": "0ebffc8fe7b3cce0b2b8df23043e697225de6b9e217a254dff532246dfe085b1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Onvif.dll",
+      "size": 13824,
+      "sha256": "d2faf23f2590a499d9c3d437e86e4139a110c31259408f4c85f017970c24cfb7",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "OpenTK.dll",
+      "size": 5745152,
+      "sha256": "cc028843e1bada8c1ef321d91924ec29899c535e93ce538c8e1c548e856e24a4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "OpenTK.GLControl.dll",
+      "size": 45056,
+      "sha256": "13763605654dc50b83844dcb23c4530cf8d1f443a4dade3abc485c1cc9a93318",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "OSDConfigurator.dll",
+      "size": 66560,
+      "sha256": "086ad37894d13a337b43f9aafa3ebb0d346b6d389ba4e94a9b152c3f1f57cc3e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "osr_csharp.dll",
+      "size": 46592,
+      "sha256": "8a41651ffb53279e6e70bf3d4e294adb00558483327659b693e8cb6406ba356f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 372112,
+      "sha256": "5c75908c05d6088306aa52cf915972bfbe5b15fb21699cac61b0d37c91bad68a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pl/Microsoft.CodeAnalysis.resources.dll",
+      "size": 44944,
+      "sha256": "d110bf0f1f620c40e2cbc0459438a6fa937b6bf85e75e0b97fa24e7a381b617b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pl/MissionPlanner.resources.dll",
+      "size": 83968,
+      "sha256": "f31d4cf77c9421dc62900dcdb8653b9c6cdf9b9912464e7250cf96b6e24d1d2a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/AltitudeAngelWings.dll",
+      "size": 214016,
+      "sha256": "9dfd3293d5eff37503706a269b97ead17c2375d99013fb2bab5403260f58e38d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/AltitudeAngelWings.Plugin.dll",
+      "size": 626688,
+      "sha256": "b44113352912531aac6dfbaf92efc0ad6d514a002db2e73708e1dd82fd9c5daf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Bulb.dll",
+      "size": 139264,
+      "sha256": "84a2ec5aef458c015d55dba468403b4307f4799a9658a9544f8c8cf001f41d39",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/FaceMap.dll",
+      "size": 198656,
+      "sha256": "6f23cdf4f36d32e2b588cce87e3da39f1facd99c0a629b05ff18349297223d6f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.Gridv2.resources.dll",
+      "size": 66560,
+      "sha256": "e014d74a6daf6b9e4fff3be680abbba8bd594c336f89d5999da378e756116157",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/ko-KR/MissionPlanner.SimpleGrid.resources.dll",
+      "size": 38912,
+      "sha256": "bbc2ed044c36a78af507fc372b9815389a0f7fd9408f98b82c7ef4d61aeb7246",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Markdig.dll",
+      "size": 460800,
+      "sha256": "4b693316ca1215a4adeff6f00807a967b07087230ca9da9ed1f69abde24ccd85",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/MavlinkMessagePlugin.dll",
+      "size": 5632,
+      "sha256": "5e4a44b7cca7b67623a9b0b1f4e3b8a1e11350a0843b12a45681152986b369d9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Microsoft.Bcl.AsyncInterfaces.dll",
+      "size": 21064,
+      "sha256": "ed5bc605f7f9fcc382183abef06c354dad946abb42a07631712077b2157d6bc9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Abstractions.dll",
+      "size": 20000,
+      "sha256": "f737853a563d87774707623484eb23072992848b6767626024a37d9d9d2fa51b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.JsonWebTokens.dll",
+      "size": 128032,
+      "sha256": "342ead1b0d42192f3d26d0788d1e34d44bbbb26a2433d9a6c5703453be2d9b21",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Logging.dll",
+      "size": 38944,
+      "sha256": "888ce7235ac4edf45ff7be366ce4c0f1d62d8dd8dd01eec72b4f05632171ceeb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Microsoft.IdentityModel.Tokens.dll",
+      "size": 290232,
+      "sha256": "18ceaf81c268fe652a7f3b0a852e71aff3cb4505743d706526ee088fc284d6d6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/MissionPlanner.Gridv2.dll",
+      "size": 101888,
+      "sha256": "7946dce696d4ba17a53ce5bbf740272af327fe78fbed41bac63c963d39e27e63",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/MissionPlanner.SimpleGrid.dll",
+      "size": 59392,
+      "sha256": "dead106e5105751bee486df097ed339af506586d06529fab6c11e23f619a170c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/MissionPlanner.Stats.dll",
+      "size": 9216,
+      "sha256": "618aacade8d1198d38d410d623cb03fc1fb82f8c52991f7900b999ebc6765e03",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/NodaTime.dll",
+      "size": 498176,
+      "sha256": "82a5a58a4fb623c85534d20750ef39b482a5f261e3d3b3e91b49180f63c51b3a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/NodaTime.Serialization.JsonNet.dll",
+      "size": 18944,
+      "sha256": "4902e29b0fbcdb85a630d27e85504c1f40db79958fe356465eadcc989fb33f47",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/opendroneid.dll",
+      "size": 43520,
+      "sha256": "944bab400dffd76fca7e2652598d0dfeb32ebea45a9dc169cc10a68b35379da1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/Polly.dll",
+      "size": 287984,
+      "sha256": "fc859b5e11d4d9ad76a767381438969062ff7780c495f5fe30b12b13b97eb283",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/pt/MissionPlanner.SimpleGrid.resources.dll",
+      "size": 4096,
+      "sha256": "238c85d447dae137d22de893f599d7412dd12e0ec0b6c46feabd81c7ac002c4b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/System.IdentityModel.Tokens.Jwt.dll",
+      "size": 82976,
+      "sha256": "a99a847bdb8e4b5352ffc966d77860835919921561e6e26cbacde0b46b01c2a8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/System.Text.Encodings.Web.dll",
+      "size": 59768,
+      "sha256": "09f7d7e7f98be4c21c4dba8c3be7bf9516dbae6dddfb1b827188a9bd874c6724",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/System.Text.Json.dll",
+      "size": 293248,
+      "sha256": "d2608254043e5b19f6e8335569fc2dd72ae4ce11a3df0d3f1425ac158df93237",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/TerrainMakerPlugin.dll",
+      "size": 14336,
+      "sha256": "72610cff944ce9db0486b9cc03581f3a2b6e127afea6072135e36c27f054cfb1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "plugins/TrackerHome.dll",
+      "size": 25600,
+      "sha256": "8db4eaa432359a2949a3ef4f3eaf3da64c20c6d26f3b43caffab767bf0272afb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ProjNET.dll",
+      "size": 101376,
+      "sha256": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pt/MissionPlanner.resources.dll",
+      "size": 81408,
+      "sha256": "37da327c9f50190a480baa764826cc84beb243af86287ede13109edb668245c9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pt/MissionPlanner.Strings.resources.dll",
+      "size": 15872,
+      "sha256": "d2f2424b30c2076cfdbdfcde9e6ba16a83ed849564b5f47130a1e3dcea7f60fe",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pt/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "cca886440642650914f3f56bd6a9e0a00fb65e575cdae797664689414f121800",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 355216,
+      "sha256": "d14623ab457697e3644c12a6091fe896103a13f920b36e4ca52e309510ff9545",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "pt-BR/Microsoft.CodeAnalysis.resources.dll",
+      "size": 43920,
+      "sha256": "891348b007d7fa8b92aadd88d2ec3f30b67936810c3fc5e46e8afe3c1abf37bf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "px4uploader.dll",
+      "size": 57344,
+      "sha256": "96c74a1ff1dac2ae5a68787e1cf66617dbee2cde74f68ac4389423bca7ac39c6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Renci.SshNet.dll",
+      "size": 804352,
+      "sha256": "f6a4be2a762ffd5a1f8d47c0deb34c3015d479bd409d01cc96f1d2d0be55caa2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "RestSharp.dll",
+      "size": 190976,
+      "sha256": "55ca753ccad95b3845ef735252ec35ebd0a3a5e420625393e32032add2331378",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 487824,
+      "sha256": "2eaba6b072a203a5cb52a9df72326c7fc0f20bb29488f0abdf6a5b94bbc90509",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru/Microsoft.CodeAnalysis.resources.dll",
+      "size": 54160,
+      "sha256": "591798c606db1084be5620a8203f117f453d2cae284c7b79d5751b9f04b9ecfb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru/ZedGraph.resources.dll",
+      "size": 4608,
+      "sha256": "72e955e6f936393fac3ccb2cb68386ee9a7da313dea4133fb85e0f42d3a4caa4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.resources.dll",
+      "size": 134144,
+      "sha256": "3cb748ea82f6e82f1f89e7c3ef3b5e0181b9dd18a1e09218316f97f96a488b09",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru-KZ/MissionPlanner.Strings.resources.dll",
+      "size": 20992,
+      "sha256": "65f8725582f6161d95c4627667249087dd59f44a6f02afe7de41b8add6ff8825",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ru-RU/MissionPlanner.resources.dll",
+      "size": 19456,
+      "sha256": "94da5403af631b728605618403b624e46d8512192f13a4bc2270051ef23e30c4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SharpAdbClient.dll",
+      "size": 68096,
+      "sha256": "87ef276ebd015b24253c4c4db4b655d1f630a6713d8278081f52a5601d9d235d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SharpCompress.dll",
+      "size": 544768,
+      "sha256": "01cb5fbfb6dabdd5a84ecdbf88797c78e4b4602fb82e44daee5cd9b219b90289",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SharpDX.DirectInput.dll",
+      "size": 151040,
+      "sha256": "582ab6ecf6753cfaef4a45ddc7b723407d2e83d5d9d65b549f48d751f1030519",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SharpDX.dll",
+      "size": 274944,
+      "sha256": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SharpKml.dll",
+      "size": 119808,
+      "sha256": "4e4687e0545849538ffd5d9971be0512a683848b27864f7aeb988053b483909d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "simpleble-c.dll",
+      "size": 56832,
+      "sha256": "01aaf090b3b89139d5325b1f8b280a0cd15c5b8f85493e33bf4a0d5f8065e985",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "simpleble.dll",
+      "size": 352256,
+      "sha256": "633fe9f757376544c57ab982d5ca139571d2a6a1ee6659441a90ab36491b16a7",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "SixLabors.ImageSharp.dll",
+      "size": 1729024,
+      "sha256": "0672a08b23b909c336ff6feaf7a0dab22cc57ae709dc6f95b013799b0128c2a7",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "sk/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "5cd46cbec89cc968656a5ad984bd15c60ebad060df8efabe5661bdfb36e101c0",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.dll",
+      "size": 805920,
+      "sha256": "9d329d01e929fb81eaaa451d0909859a85507ea7268f6039156d56ba69fd8d53",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.Common.dll",
+      "size": 23904,
+      "sha256": "5b0f5714f9e1bb8d0fc8de352512eecfbe55e0474536060fcb15fb4a96eef37f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.Views.Desktop.dll",
+      "size": 13664,
+      "sha256": "dcd6938d8a12d2fbe69585843283cfeee3cc44808307e49569588a21c1af3675",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.Views.Gtk.dll",
+      "size": 19304,
+      "sha256": "e536e972b843365a923bc67bbbac0d0bfab751c67d304c3e976b18d9a72c05dc",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.Views.WindowsForms.dll",
+      "size": 19808,
+      "sha256": "9e5a55a4be89af4bf581d85b0c40dc0b44afd21f35bce9263d4e609ea34c9ccc",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SkiaSharp.Views.WPF.dll",
+      "size": 20320,
+      "sha256": "c5828f134c52d8e3c4ca07408d19ad7336d61971c014581487e2fcaaa274e55a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SocketIOClient.dll",
+      "size": 36864,
+      "sha256": "b7d41eb88f72faea3e28d8c3875d1ba3990482a68fb108d24caf3af108f852e7",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "solo.dll",
+      "size": 14848,
+      "sha256": "ef7dc3e396d41470d4f0d7725b95941afd45e6381a369185668d78cac8fa7dcc",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SuperSocket.ClientEngine.dll",
+      "size": 41984,
+      "sha256": "9863a8ca0fd55fdf1de8d64cb89d034fc009a58220d45c5f4f83c6cdd0c5cbfd",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "sv/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "4a161f8805802a5da16569cbb060698b29956bcc7a445c95386b99823b2cbdcf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "SvgNet.dll",
+      "size": 152064,
+      "sha256": "458e85b54b54c800657552638a6d20bb4570a222a7b8a0c018af3a57aab03c7d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Buffers.dll",
+      "size": 20856,
+      "sha256": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.CodeDom.dll",
+      "size": 30984,
+      "sha256": "e8c88b0448083663910587efeacb6a1977749fe3ffe83b263fc01f7b63d7dfd2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Collections.Immutable.dll",
+      "size": 189312,
+      "sha256": "646d3b52a4898078f46534727bdb06ff23b72523441458b9f49ecc315bf3ef5c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ComponentModel.Annotations.dll",
+      "size": 43152,
+      "sha256": "04113c8549185519f3202790ceb23df609644872b9c249a56d2bcf59566102c4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Configuration.ConfigurationManager.dll",
+      "size": 83528,
+      "sha256": "370fa504e5766c703ddef43abddbbe3e373362207a1704d7baa67206c888c51c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Data.OleDb.dll",
+      "size": 93560,
+      "sha256": "3dfa99916e6b64f9d4143059d57e0bdfc3cc3218cf65f5a3879d2f5b9835fbca",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Drawing.Common.dll",
+      "size": 44424,
+      "sha256": "0b1e23603f49613b623a82a2b04260642ab8b118d138726dda6556bead77b966",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Geometry.dll",
+      "size": 29696,
+      "sha256": "4faca517db47fee12381c8c449785e3acd803c5dbb89df6b6d7fc86fc4292bd8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Geometry.Text.dll",
+      "size": 28672,
+      "sha256": "3313d2bff1e4092ca5fbdc1b6d53b53f8a4194c08f495caf28a1da1505a4b1a2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.IO.Compression.dll",
+      "size": 29888,
+      "sha256": "e9c71ebf653159ee260640f152f677b33d30796307803fb5340f522abff17691",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.IO.Ports.dll",
+      "size": 29560,
+      "sha256": "96d4e1871ac699f6dbc0ecc54e38bead6e52db64c3b43fb7330362b299bff0f4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Memory.dll",
+      "size": 142240,
+      "sha256": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Numerics.Vectors.dll",
+      "size": 115856,
+      "sha256": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Reactive.Core.dll",
+      "size": 14848,
+      "sha256": "b4ff782c1aa2aba5db4a06adb37c3ec2b9c2d7f13861cb73b2617db722b27354",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Reactive.dll",
+      "size": 1211392,
+      "sha256": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Reactive.Linq.dll",
+      "size": 14336,
+      "sha256": "32cc235df1bf5e272536f95cd41b216215e1fa6540650a30f5ad9e002fd25a72",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Reflection.Metadata.dll",
+      "size": 462728,
+      "sha256": "46451e1168dd11d450aa9b6119f17cec9a70928a40ac3c752abf61ce809cba6f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Resources.Extensions.dll",
+      "size": 59504,
+      "sha256": "8d328477d48f1ed9ea795b22e84ace6e983b939c6bb743c14d460c17c8e4ba4e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 19224,
+      "sha256": "2d6f419d641682d8efc4a40e850d2e85de519d6823b93daf2aeee63206d4e32d",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Security.AccessControl.dll",
+      "size": 30792,
+      "sha256": "aced52254a8c3cb6ad30f99f8b745296926c49373cab00824c2c4c10ad325b10",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Security.Permissions.dll",
+      "size": 25464,
+      "sha256": "50653deedf757fd1669f54c1cbac2c2d1403d5864b73f63454ac4adc9619d831",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Security.Principal.Windows.dll",
+      "size": 15224,
+      "sha256": "c3ae599b5218516915f6542779ef577d5ad5de3d84a116e671c09e15e4591285",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ServiceModel.Duplex.dll",
+      "size": 14216,
+      "sha256": "6071201eac2294b1b9779c57f61471d486b4b65b029d1cb82f0ed2fc6af73c17",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ServiceModel.Http.dll",
+      "size": 15240,
+      "sha256": "4d9db4c6bf44373ffac62f5c42f456aa88cd26e857fdd1bfda28ef15277171cf",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ServiceModel.NetTcp.dll",
+      "size": 14720,
+      "sha256": "eb874bed139c2e486c9923a39b5c9278707dee9e3906459efc325e76e7a594e2",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ServiceModel.Primitives.dll",
+      "size": 21384,
+      "sha256": "50cadbf608dc09a77953eaf4a9dd4eb74048a521d6c91509f9dbf8e206b79534",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ServiceModel.Security.dll",
+      "size": 15240,
+      "sha256": "5b04f069c797001ebc5cb5248aa78baae5165a42d3299650ca32083a7d687dee",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Speech.dll",
+      "size": 688128,
+      "sha256": "a84cc9f552f3de369891466659c3a69eb8014114d316c9c15120569f515ff69c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Text.Encoding.CodePages.dll",
+      "size": 758664,
+      "sha256": "93da6a111239a3804da2efd6a6faa92bf5cbfe3b2b079ad3c04be643179f4088",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "System.ValueTuple.dll",
+      "size": 25232,
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tlogThumbnailHandler.dll",
+      "size": 12288,
+      "sha256": "8764d7918098e3be2b05b05bdab2ec023a903700be24d6d0794d03ed642927c1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 351632,
+      "sha256": "723a7ab2e7b204c06d4c5b7a8a39155343358cbf2abf9dfa8b42681136f5ca4b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tr/Microsoft.CodeAnalysis.resources.dll",
+      "size": 43408,
+      "sha256": "0f0629546bf2130a53393bdd3aa98e61c742ac8463858c31881e90414381a52c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tr/MissionPlanner.resources.dll",
+      "size": 86528,
+      "sha256": "3dc759f06bfa1e4d8ed2d6602988c50819435289fb026b360092e6d115055690",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tr/MissionPlanner.Strings.resources.dll",
+      "size": 16384,
+      "sha256": "219f3fb65d8e1e289bc2e4fe51d87d67bccb6664a51e84cab9fcb52baa3aa0e5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "tr/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "40a2b09551b7c83780fda95426009472d504f10e3dd3f06ad7f12f52b709b1cc",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Transitions.dll",
+      "size": 17408,
+      "sha256": "6fdf5524bfb3115fbd4de12b6dfedcf5eea79b97f3ba7c3fcf4151551a282e27",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "uk/MissionPlanner.resources.dll",
+      "size": 403456,
+      "sha256": "6eb8c534c537c7e126b6d4c76935fe552c6b2f1e5637b7aeafc65868b3a1c29b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "uk/MissionPlanner.Strings.resources.dll",
+      "size": 23552,
+      "sha256": "eee1f29ce0fc9939467158c54d2e10354b53dc979656c5018ab47f8b2d1e21cb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Updater.exe",
+      "size": 18216,
+      "sha256": "191cb00b3d3aeada878089cbe05d188f6785ffef6b384f2a686a6e788f0e9056",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "version.exe",
+      "size": 5632,
+      "sha256": "3577923f32cd98a3f553319ce4dfad1f7b17fe6ecaa1feaf8d2e4507b57d40b9",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "WebCamService.dll",
+      "size": 12288,
+      "sha256": "46dcb01fcf061a9bc84f1228e69cd9a9245994ffc001f0b8744fecae534eeb29",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "WebSocket4Net.dll",
+      "size": 64000,
+      "sha256": "bbaf622cc3f4b512c6c131ab7ccad2db6b0662c03367afc10f1aab3deff5efcb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "x64/libSkiaSharp.dll",
+      "size": 9414184,
+      "sha256": "2ca940b7c4621ecd27d2f07c5f46fafa0375f493692cd4e6e1e66c07fbc8109a",
+      "classification": "native-or-other-pe",
+      "machine": "0x8664",
+      "pe_magic": "0x20b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "x86/libSkiaSharp.dll",
+      "size": 7980592,
+      "sha256": "ef408a6d691acca4428926c58333ebe2a7358b31fc1ded55124abcd969fab925",
+      "classification": "native-or-other-pe",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 0,
+      "cli_size": 0
+    },
+    {
+      "path": "Xamarin.Essentials.dll",
+      "size": 106888,
+      "sha256": "62148ef21a1cfc093a7987d598218b2b88f622af902343e91688a768d55326f8",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Xamarin.Forms.Core.dll",
+      "size": 1222032,
+      "sha256": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Xamarin.Forms.Platform.dll",
+      "size": 16784,
+      "sha256": "ee361236c5240e2889d907077a0806df1714ef7fbd5ce4ef7fced7e3e650e2f4",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Xamarin.Forms.Platform.WinForms.dll",
+      "size": 90624,
+      "sha256": "3405d211dae27ca83051a68bba4bcca97920a46d57287c6a26d943eb273ea896",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Xamarin.Forms.Xaml.dll",
+      "size": 113552,
+      "sha256": "8a92f612f553ce950132a1ec073719767be2b3e0e5296cb0d823b93f7fcbcefa",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "ZedGraph.dll",
+      "size": 295424,
+      "sha256": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "Zeroconf.dll",
+      "size": 52224,
+      "sha256": "57f59d5627e8a0868311f657eaf6bb9561276f4be0b19b7ea53e0e806e0502af",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-cn/MissionPlanner.resources.dll",
+      "size": 10752,
+      "sha256": "03f1084da43a574e2d0a7edc82cb4132dea214ae14d66c49bbae59a061256d96",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-cn/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "dea0d230b808cbb695ca4ce8fea6834f18acff47e028f4942873caa427e3af76",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/GMap.NET.Core.resources.dll",
+      "size": 4096,
+      "sha256": "92ce09b1805e05cd454f8da7d5998030fc9c8bc6d9446b5a7a987a344339d87b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 313744,
+      "sha256": "6a7f287826260478b24cd2c1a6b93b682e99e1b9f036f18299996dfd4450d05f",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/Microsoft.CodeAnalysis.resources.dll",
+      "size": 40848,
+      "sha256": "d5d653fbac1bb7aa95dbe6e98d432aa0ba82ebc3d4c76c97d57f84d052041599",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Controls.resources.dll",
+      "size": 6656,
+      "sha256": "ad3f29e6f4907c240ae586bdac5035b27b51ac8e8e1791f200a35427483040f5",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.resources.dll",
+      "size": 221184,
+      "sha256": "fb0dcbbaac3188fb247c1abadd9328894f6527cfb598c3a75e26c5a00027e9f1",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hans/MissionPlanner.Strings.resources.dll",
+      "size": 14336,
+      "sha256": "1f5218244520f8166ddfe4c059cdd9bbb8b06d20b8521678f6c7821b93fe4f5b",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
+      "size": 313744,
+      "sha256": "f9e4534149a8421c7efe9ee3406fc645f940de25da78047cc6915a7d521acddb",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hant/Microsoft.CodeAnalysis.resources.dll",
+      "size": 40848,
+      "sha256": "5997803e4a28b8fd2a72d3cf213632d8cac2130156b1ed536aab7383b432af5c",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-Hant/MissionPlanner.resources.dll",
+      "size": 458240,
+      "sha256": "ba67ca2dd02f4d18bc6db6401a5ab362e1b21088f5a1f133ac03056abbd6f121",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-tw/MissionPlanner.resources.dll",
+      "size": 492544,
+      "sha256": "623581707bcc43a582fff314ab7b459f29e66546d0bd675224dbcef5224e725a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zh-tw/ZedGraph.resources.dll",
+      "size": 4096,
+      "sha256": "786dfeffaf91ff2176e230d2dcf33379f662e5050e4fb16b85ee897bb203ad1e",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    },
+    {
+      "path": "zlib.net.dll",
+      "size": 69632,
+      "sha256": "4167b599f36af0781b81563bd2179a6d35daa3145f0b6f99ac6d9ee1894b516a",
+      "classification": "managed-candidate",
+      "machine": "0x14c",
+      "pe_magic": "0x10b",
+      "cli_rva": 8200,
+      "cli_size": 72
+    }
+  ]
+}

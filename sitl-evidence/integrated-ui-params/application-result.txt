@@ -1,0 +1,6 @@
+scope=modified app, plugin-disabled, file-spool transport, local SITL
+open=True
+params_received=1431
+params_reported=1431
+initial_value=0.0
+readback=0.0

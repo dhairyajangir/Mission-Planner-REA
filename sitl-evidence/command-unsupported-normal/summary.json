@@ -1,0 +1,96 @@
+{
+  "scope": "Unknown command 65530, both forms, original library and disposable source-built SITL",
+  "relay_scope_correction": "relay-result.json scope describes interval request but this case sent command 65530",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; read-only interval request; targeted downlink ACK loss",
+    "case": "normal",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7060,
+    "proxy_port": 7061,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "dcb3987b80a0a4e484797cba43ab4d3649fea6173727c56c8fc62fcb6260dded",
+      "to_client_output.bin": "dcb3987b80a0a4e484797cba43ab4d3649fea6173727c56c8fc62fcb6260dded",
+      "to_sitl_input.bin": "47c46d9d52ff5402030ba0af503cd9ddb5461f2d5cf568bdf75dd83fb05c676b",
+      "to_sitl_output.bin": "47c46d9d52ff5402030ba0af503cd9ddb5461f2d5cf568bdf75dd83fb05c676b"
+    }
+  },
+  "requests": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 65530,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source_system": 255,
+      "source_component": 190
+    },
+    {
+      "mavpackettype": "COMMAND_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "frame": 0,
+      "command": 65530,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "source_system": 255,
+      "source_component": 190
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 65530,
+      "result": 3,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 65530,
+      "result": 3,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source_system": 1,
+      "source_component": 1
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink": 164
+  },
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "LONG_RESULT=False",
+    "INT_RESULT=False"
+  ]
+}

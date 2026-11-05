@@ -1,0 +1,23 @@
+{
+  "scope": "Disposable disarmed Copter SITL; accelerometer calibration interaction; no deliberate packet loss",
+  "case": "calibration_full",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7250,
+  "proxy_port": 7251,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 176,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "to_client_input.bin": "a5fea0976271fc2bdb2125b2b8d999169e6844f421628620fed2298614e09760",
+    "to_client_output.bin": "a5fea0976271fc2bdb2125b2b8d999169e6844f421628620fed2298614e09760",
+    "to_sitl_input.bin": "5a681fb8f20187d7f2a751be206ba09c8211f57ed70ff9e673327c155297482d",
+    "to_sitl_output.bin": "5a681fb8f20187d7f2a751be206ba09c8211f57ed70ff9e673327c155297482d"
+  }
+}

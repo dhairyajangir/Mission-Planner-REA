@@ -1,0 +1,170 @@
+{
+  "scope": "Direct unrendered control lifecycle; patched Utilities; worker disarm with UI message pump; disposable SITL",
+  "relay": {
+    "scope": "Disposable Copter SITL; armed-state calibration rejection; no deliberate packet loss",
+    "case": "calibration_lifecycle_pumped",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7340,
+    "proxy_port": 7341,
+    "requests": [],
+    "dropped_acks": 0,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "to_client_input.bin": "3615d3daed847fd12e15d1c16fd35a126bc5e4d09ddb6be1c5745e69ebd06b00",
+      "to_client_output.bin": "3615d3daed847fd12e15d1c16fd35a126bc5e4d09ddb6be1c5745e69ebd06b00",
+      "to_sitl_input.bin": "c13210d87e80551c1134750ed8618189381e510b567ac971dfb460f8f0aca34e",
+      "to_sitl_output.bin": "c13210d87e80551c1134750ed8618189381e510b567ac971dfb460f8f0aca34e"
+    }
+  },
+  "commands": [
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 1.0,
+      "param2": 2989.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 241,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 1.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_LONG",
+      "target_system": 1,
+      "target_component": 1,
+      "command": 400,
+      "confirmation": 0,
+      "param1": 0.0,
+      "param2": 21196.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "param5": 0.0,
+      "param6": 0.0,
+      "param7": 0.0,
+      "source": [
+        255,
+        190
+      ]
+    }
+  ],
+  "acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 241,
+      "result": 4,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 400,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ]
+    }
+  ],
+  "verified_probe_lines": [
+    "ARMED_HEARTBEAT=True",
+    "SUBSCRIPTIONS_BEFORE_DEACTIVATE=2",
+    "AFTER_DEACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "AFTER_REACTIVATE_ACTIVE=False BUTTON_TEXT=Click when Done SUBSCRIPTIONS=2",
+    "AFTER_RESTART_ACTIVE=True BUTTON_TEXT=Click when Done SUBSCRIPTIONS=4",
+    "RESTART_ACK_RESULT=4",
+    "DISARM_RETURN=True"
+  ],
+  "probe_exit": 0,
+  "library_sha256": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "main_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "utilities_sha256": "bb783601bc4c1e04de2ef9860d831d1eb3480036258eddfad0845be56ca86022",
+  "probe_source_sha256": "48a33cddb782946f0344f659534aa186c8eed398e37440ad2f15ec1fec58647b",
+  "probe_exe_sha256": "23bcd3e9863fad5fdeab3bad75840f66b68c38f01f2914231f859b850ac110df",
+  "log_sha256": "26b1835ac24e8d2fc28ca5622b8f6ca00b97ae69ee9fb8218bd4f37b36007962"
+}

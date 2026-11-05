@@ -1,0 +1,24 @@
+{
+  "scope": "Disposable Copter SITL; simulated partial MAVFTP write or acknowledgment loss",
+  "case": "fence_mavftp_partial",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "sitl_port": 7550,
+  "proxy_port": 7551,
+  "requests": [],
+  "dropped_acks": 0,
+  "stray_bytes": {
+    "to_client": 164,
+    "to_sitl": 0
+  },
+  "errors": [],
+  "dropped_ftp_packets": 1,
+  "closed_by": "client",
+  "buffered_bytes_at_close": 0,
+  "capture_sha256": {
+    "dropped.bin": "419d976cf4ce61e033db615884aa951dca16b2565575a3f3a3e23cb53c5a803e",
+    "to_client_input.bin": "d7b7b0e30a3ded6fdf7ce47d8d2be61b52d8ea3780e48e3b8fb7425fdc1d129b",
+    "to_client_output.bin": "d7b7b0e30a3ded6fdf7ce47d8d2be61b52d8ea3780e48e3b8fb7425fdc1d129b",
+    "to_sitl_input.bin": "8973a3e02e16ec9179ee8e901211981b970d419b3217ad59f6593dddcab21ae9",
+    "to_sitl_output.bin": "0c74fbd243dac1d0490f4e3eb5ef8a6af726a4364094b289e269f110b93de0d1"
+  }
+}

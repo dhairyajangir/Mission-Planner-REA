@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "_macros.html" import row, check, tip %}
+{% block title %}Log in — {{ config.WEBUI_TITLE }}{% endblock %}
+{% block content %}
+<h2>Log in</h2>
+<p>Enter the user-side port (port1) <em>or</em> the engineer-side port (port2)
+   for your entry, plus the shared MAVLink passphrase you set with
+   <code>keydb.py</code> — not a separate web login.</p>
+<form method="post" action="{{ url_for('auth.login', next=request.args.get('next')) }}">
+  {{ form.csrf_token }}
+  {{ row(form.port, autofocus=True) }}
+  {{ row(form.passphrase) }}
+  <div>{{ form.submit() }}</div>
+  {% for field, errors in form.errors.items() %}
+    {% for e in errors %}<div class="flash flash-error">{{ field }}: {{ e }}</div>{% endfor %}
+  {% endfor %}
+</form>
+{% endblock %}

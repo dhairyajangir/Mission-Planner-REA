@@ -1,0 +1,13 @@
+{
+  "assembly": "Accord.Math.Core.dll",
+  "selection": "Accord.Math.Elementwise",
+  "process_exit": 0,
+  "coverage": {
+    "state": "complete",
+    "issues": []
+  },
+  "types": 1,
+  "methods": 10540,
+  "capture_sha256": "239dad0cba5fe3e56c09a516f08922623fd7feca2442afe3e54c7751b850cbd9",
+  "tool_modification": "../rea-raised-budget-modification.json"
+}

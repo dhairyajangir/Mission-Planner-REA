@@ -1,0 +1,10 @@
+Read File C:\Users\think\OneDrive\Documents\ChatGPT\The Drone Project\sitl-evidence\mock-uploader-invalid\invalid.apj
+Possible bad file - usually safe to ignore
+image_size 252 size 252
+RESULT|invalid.apj|mismatch|Exception:Firmware not suitable for this board fw:9999 - board:10000|writes=0|erased=False|rebooted=False|bytes=0|tail=
+RESULT|invalid.apj|too-small|Exception:Firmware image is too large for this board|writes=0|erased=False|rebooted=False|bytes=0|tail=
+erase...
+program...
+verify...
+done, rebooting.
+RESULT|invalid.apj|matching|OK|writes=9|erased=True|rebooted=True|bytes=252|tail=0000000000000000

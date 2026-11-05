@@ -1,0 +1,190 @@
+{
+  "scope": "Two identical read-only COMMAND_INT requests; local relay inserts progress and drops second ACK",
+  "relay": {
+    "scope": "Disposable source-built Copter SITL; relay inserts progress, shifts first ACK and drops second ACK",
+    "case": "stale_ack_test",
+    "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+    "sitl_port": 7140,
+    "proxy_port": 7141,
+    "requests": [
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      },
+      {
+        "frame": 0,
+        "target": [
+          1,
+          1
+        ]
+      }
+    ],
+    "dropped_acks": 1,
+    "stray_bytes": {
+      "to_client": 164,
+      "to_sitl": 0
+    },
+    "errors": [],
+    "command_events": [
+      "request1",
+      "first_progress_and_accepted_forwarded",
+      "request2",
+      "second_ack_dropped"
+    ],
+    "injected_acks": 1,
+    "shifted_acks": 1,
+    "closed_by": "client",
+    "buffered_bytes_at_close": 0,
+    "capture_sha256": {
+      "dropped.bin": "e429da1822f299cf26eb6ca1bb8263837898ee91429788b021b9bfc7a226d4ac",
+      "injected_ack.bin": "efed3e99b95027bebb77a81cdec68c9acfe4ad833c3c8b08a6b45ca849a4372f",
+      "modified_ack.bin": "ad5087d5c216fa51f7c405892852886d3b0e876275e569f7f8a9ab87927dbfb2",
+      "original_ack.bin": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734",
+      "to_client_input.bin": "e11c29555d3f5fd9ecc932f905b5cc3d54791c2bde808de51353c38d5436bf7a",
+      "to_client_output.bin": "a70e303edccbebe5ce691d60f8cf909f59b5302d90811e9485486090325dfe59",
+      "to_sitl_input.bin": "57b6f955f56b20d536fd1dbdaf26790e8d2b3026ee5872c868f9ffd75de54930",
+      "to_sitl_output.bin": "57b6f955f56b20d536fd1dbdaf26790e8d2b3026ee5872c868f9ffd75de54930"
+    }
+  },
+  "requests": [
+    {
+      "mavpackettype": "COMMAND_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "frame": 0,
+      "command": 510,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 30.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "source": [
+        255,
+        190
+      ],
+      "seq": 13,
+      "raw_sha256": "bf0d1834287480382da0aa26e5a9875dfa46fe4406074a557a9a3c7f412301a6"
+    },
+    {
+      "mavpackettype": "COMMAND_INT",
+      "target_system": 1,
+      "target_component": 1,
+      "frame": 0,
+      "command": 510,
+      "current": 0,
+      "autocontinue": 0,
+      "param1": 30.0,
+      "param2": 0.0,
+      "param3": 0.0,
+      "param4": 0.0,
+      "x": 0,
+      "y": 0,
+      "z": 0.0,
+      "source": [
+        255,
+        190
+      ],
+      "seq": 14,
+      "raw_sha256": "17fde2dbb4b1b1ed7af7751bcc07d7e4b05aa2c1eaaa22d24288dadfada2b4ef"
+    }
+  ],
+  "simulator_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ],
+      "seq": 56,
+      "raw_sha256": "48b9f26969bad412efb1082a932008240c5a1edfc657ce581604178a1e1ea734"
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ],
+      "seq": 61,
+      "raw_sha256": "e429da1822f299cf26eb6ca1bb8263837898ee91429788b021b9bfc7a226d4ac"
+    }
+  ],
+  "forwarded_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 5,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ],
+      "seq": 56,
+      "raw_sha256": "efed3e99b95027bebb77a81cdec68c9acfe4ad833c3c8b08a6b45ca849a4372f"
+    },
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ],
+      "seq": 57,
+      "raw_sha256": "ad5087d5c216fa51f7c405892852886d3b0e876275e569f7f8a9ab87927dbfb2"
+    }
+  ],
+  "dropped_acks": [
+    {
+      "mavpackettype": "COMMAND_ACK",
+      "command": 510,
+      "result": 0,
+      "progress": 0,
+      "result_param2": 0,
+      "target_system": 255,
+      "target_component": 190,
+      "source": [
+        1,
+        1
+      ],
+      "seq": 61,
+      "raw_sha256": "e429da1822f299cf26eb6ca1bb8263837898ee91429788b021b9bfc7a226d4ac"
+    }
+  ],
+  "bad_data_fragments": {
+    "uplink": 0,
+    "downlink_input": 164,
+    "downlink_output": 164,
+    "dropped": 0
+  },
+  "verified_probe_lines": [
+    "OPEN=True SELECTED=1:1",
+    "FIRST_RESULT=False",
+    "SECOND_RESULT=True"
+  ]
+}

@@ -1,0 +1,5 @@
+scope=modified app, plugin-disabled, file-spool transport, disposable local SITL
+arm_return=True
+armed_state=True
+disarm_return=True
+final_armed=False

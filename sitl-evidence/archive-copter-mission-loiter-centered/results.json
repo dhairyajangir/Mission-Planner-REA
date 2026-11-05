@@ -1,0 +1,1131 @@
+{
+  "scope": "Disposable source-built Copter SITL; standalone MAVLink client; no physical aircraft",
+  "binary_sha256": "646e5b5a2d294a200dfeee25558963ca50141b6dc5c08c1dd6880607e0c35a57",
+  "checks": {
+    "auto_option": {
+      "passed": true,
+      "value": 2
+    },
+    "resume_option": {
+      "passed": true,
+      "value": 0.0
+    },
+    "upload": {
+      "passed": true,
+      "ack": 0,
+      "sent": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "armed": {
+      "passed": true
+    },
+    "auto_mode": {
+      "passed": true
+    },
+    "waypoint_selected": {
+      "passed": true,
+      "seq": 2,
+      "relative_alt_m": 5.065
+    },
+    "pause_mode": {
+      "passed": true,
+      "mode": 5
+    },
+    "paused_sequence": {
+      "passed": true,
+      "sequences": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "altitude_samples_m": [
+        5.061,
+        5.031,
+        4.999,
+        4.976,
+        4.964,
+        4.961,
+        4.963,
+        4.967,
+        4.973,
+        4.977,
+        4.981,
+        4.984,
+        4.986,
+        4.987,
+        4.987,
+        4.988,
+        4.988,
+        4.989,
+        4.989,
+        4.99,
+        4.991
+      ]
+    },
+    "throttle_override_observed": {
+      "passed": true,
+      "samples_pwm": [
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500
+      ]
+    },
+    "resumed_mode": {
+      "passed": true
+    },
+    "takeoff": {
+      "passed": true,
+      "peak_relative_alt_m": 5.014
+    },
+    "mission_progress": {
+      "passed": true,
+      "current_sequences": [
+        2,
+        3,
+        1
+      ]
+    },
+    "disarmed": {
+      "passed": true
+    }
+  },
+  "status_messages": [
+    "Flight plan received",
+    "Arm: Need Position Estimate",
+    "PreArm: Need Position Estimate",
+    "Arm: Need Position Estimate",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors",
+    "Mission: 1 Takeoff",
+    "EKF3 IMU0 MAG0 in-flight yaw alignment complete",
+    "EKF3 IMU1 MAG0 in-flight yaw alignment complete",
+    "Mission: 2 WP",
+    "Mission: 2 WP",
+    "Reached command #2",
+    "Mission: 3 Land",
+    "SIM Hit ground at 0.498420 m/s",
+    "Disarming motors",
+    "Mission: 1 Takeoff"
+  ],
+  "mission_current": [
+    2,
+    3,
+    1
+  ],
+  "mission_reached": [
+    2
+  ],
+  "events": [
+    {
+      "seconds": 45.091,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.342,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.588,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 45.84,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.092,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.343,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.594,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 46.845,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.091,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.343,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.588,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 47.842,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.094,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.344,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.595,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 48.841,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.094,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.34,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.592,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 49.84,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.092,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.343,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.593,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 50.844,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.095,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.341,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.592,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "before_pause"
+    },
+    {
+      "seconds": 51.597,
+      "type": "LOITER_observed",
+      "observed": true
+    },
+    {
+      "seconds": 51.84,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.091,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.342,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.596,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 52.842,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.094,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.342,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.593,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 53.843,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.089,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.345,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.593,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 54.843,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.095,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.345,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.591,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 55.841,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.092,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.343,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.594,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "pause"
+    },
+    {
+      "seconds": 56.85,
+      "type": "AUTO_resumed",
+      "observed": true
+    },
+    {
+      "seconds": 57.092,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 57.344,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 57.59,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 57.841,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 58.092,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 58.343,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 58.595,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 58.846,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 59.097,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 59.342,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 59.593,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 59.843,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 60.09,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 60.342,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 60.593,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 60.844,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 61.095,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 61.343,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 61.594,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 61.845,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 62.09,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 62.341,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 62.594,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 62.847,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 63.093,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 63.344,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 63.595,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 63.841,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 64.092,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 64.344,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 64.595,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 64.845,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 65.096,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 65.347,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 65.593,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 65.845,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 66.096,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 66.341,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 66.592,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 66.848,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 67.093,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 67.344,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 67.596,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 67.845,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 68.096,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 68.342,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 68.594,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 68.845,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 69.097,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 69.348,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 69.598,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 69.843,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 70.094,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 70.346,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 70.592,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 70.843,
+      "type": "MISSION_CURRENT",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 70.978,
+      "type": "MISSION_ITEM_REACHED",
+      "seq": 2,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 71.096,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 71.346,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 71.597,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 71.848,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 72.099,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 72.344,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 72.595,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 72.846,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 73.094,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 73.346,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 73.596,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 73.847,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 74.098,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 74.344,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 74.597,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 74.846,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 75.098,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 75.348,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 75.599,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 75.845,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 76.096,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 76.347,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 76.594,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 76.845,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 77.095,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 77.345,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 77.597,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 77.847,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 78.098,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 78.349,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 78.594,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 78.845,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 79.095,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 79.346,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 79.597,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 79.847,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 80.098,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 80.349,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 80.595,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 80.845,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 81.094,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 81.346,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 81.596,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 81.847,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 82.099,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 82.35,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 82.595,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 82.846,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 83.097,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 83.348,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 83.599,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 83.85,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 84.1,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 84.348,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 84.599,
+      "type": "MISSION_CURRENT",
+      "seq": 3,
+      "phase": "after_resume"
+    },
+    {
+      "seconds": 84.845,
+      "type": "MISSION_CURRENT",
+      "seq": 1,
+      "phase": "after_resume"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

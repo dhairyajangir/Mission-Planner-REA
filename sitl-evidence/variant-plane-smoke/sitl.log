@@ -1,0 +1,17 @@
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9505
+bind port 6260 for SERIAL0
+SERIAL0 on TCP port 6260
+Waiting for connection ....
+Connection on serial port 6260
+Smoothing reset at 0.001
+bind port 6262 for SERIAL1
+SERIAL1 on TCP port 6262
+bind port 6263 for SERIAL2
+SERIAL2 on TCP port 6263
+validate_structures:538: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Closed connection on SERIAL0
+Exitting

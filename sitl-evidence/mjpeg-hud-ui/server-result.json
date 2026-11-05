@@ -1,0 +1,8 @@
+{
+  "scope": "synthetic MJPEG fixture on localhost only",
+  "requests": 0,
+  "frames_sent": 0,
+  "fixture_sha256": "efdd96afb240e76fb7d960a25d6a6f87a0e5752829dade47166647dffa58c9f5",
+  "errors": [],
+  "passed": false
+}

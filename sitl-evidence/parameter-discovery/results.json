@@ -1,0 +1,27 @@
+{
+  "scope": "read-only ArduCopter 4.7.2 SITL discovery",
+  "parameters": {
+    "WPNAV_SPEED": null,
+    "LOG_DISARMED": {
+      "value": 0.0,
+      "type": 2,
+      "count": 1350
+    },
+    "FRAME_CLASS": {
+      "value": 0.0,
+      "type": 2,
+      "count": 1350
+    },
+    "SIM_SPEEDUP": {
+      "value": 1.0,
+      "type": 9,
+      "count": 1350
+    },
+    "RTL_ALT_M": {
+      "value": 15.0,
+      "type": 9,
+      "count": 1350
+    }
+  },
+  "errors": []
+}

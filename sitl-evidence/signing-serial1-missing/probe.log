@@ -1,0 +1,208 @@
+CASE=missing CANDIDATES=1
+257 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+289 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+302 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1043 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+302 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1098 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+339 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+345 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+362 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+376 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+376 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+376 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7561 0
+376 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7561
+392 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 946
+395 [3] INFO MissionPlanner.MAVLinkInterface (null) - 802 Start connect loop 
+418 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+442 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+443 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+bps 0 loss 0 left 0 mem 1.62109375 mav2 False sign False mav1 0 mav2 0 signed 0      
+860 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+871 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+873 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+873 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+873 [6] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+873 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+873 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+887 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+1408 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+bps 34 loss 0 left 0 mem 1.81640625 mav2 False sign False mav1 0 mav2 1 signed 1      
+1856 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+2411 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 28
+bps 34 loss 0 left 0 mem 1.88671875 mav2 False sign False mav1 0 mav2 1 signed 1      
+2862 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+2862 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2873 [3] INFO MissionPlanner.MAVLinkInterface (null) - 280 Start connect loop 
+2878 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+3425 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 27
+bps 34 loss 0 left 0 mem 1.9873046875 mav2 False sign False mav1 0 mav2 1 signed 1      
+3855 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+4439 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 26
+bps 34 loss 0 left 0 mem 2.0732421875 mav2 False sign False mav1 0 mav2 1 signed 1      
+4950 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+5456 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 25
+bps 34 loss 0 left 0 mem 2.134765625 mav2 False sign False mav1 0 mav2 1 signed 1      
+6045 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+6046 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+6046 [3] INFO MissionPlanner.MAVLinkInterface (null) - 453 Start connect loop 
+6063 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+6462 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 24
+bps 34 loss 0 left 0 mem 2.2197265625 mav2 False sign False mav1 0 mav2 1 signed 1      
+7110 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+7478 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 23
+bps 34 loss 0 left 0 mem 2.2822265625 mav2 False sign False mav1 0 mav2 1 signed 1      
+8076 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+8107 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+8493 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 22
+bps 72 loss 0 left 0 mem 2.359375 mav2 False sign False mav1 0 mav2 2 signed 2      
+9077 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+9077 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+9077 [3] INFO MissionPlanner.MAVLinkInterface (null) - 485 Start connect loop 
+9093 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+9493 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 21
+bps 34 loss 0 left 0 mem 2.4375 mav2 False sign False mav1 0 mav2 1 signed 1      
+10045 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+10494 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 20
+bps 34 loss 0 left 0 mem 2.5146484375 mav2 False sign False mav1 0 mav2 1 signed 1      
+11015 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+11495 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 19
+bps 34 loss 0 left 0 mem 2.5771484375 mav2 False sign False mav1 0 mav2 1 signed 1      
+11996 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+11996 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+11998 [3] INFO MissionPlanner.MAVLinkInterface (null) - 405 Start connect loop 
+12012 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+12510 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 18
+bps 34 loss 0 left 0 mem 2.646484375 mav2 False sign False mav1 0 mav2 1 signed 1      
+12997 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+13525 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 17
+bps 34 loss 0 left 0 mem 2.724609375 mav2 False sign False mav1 0 mav2 1 signed 1      
+13997 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+14529 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 16
+bps 34 loss 0 left 0 mem 2.7861328125 mav2 False sign False mav1 0 mav2 1 signed 1      
+14987 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+14987 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+14987 [3] INFO MissionPlanner.MAVLinkInterface (null) - 394 Start connect loop 
+14996 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+15542 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 15
+bps 34 loss 0 left 0 mem 2.8720703125 mav2 False sign False mav1 0 mav2 1 signed 1      
+15983 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+16556 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 14
+bps 34 loss 0 left 0 mem 2.93359375 mav2 False sign False mav1 0 mav2 1 signed 1      
+16982 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+17556 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 13
+bps 34 loss 0 left 0 mem 2.99609375 mav2 False sign False mav1 0 mav2 1 signed 1      
+17950 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+17951 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+17951 [3] INFO MissionPlanner.MAVLinkInterface (null) - 358 Start connect loop 
+17966 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+17966 [3] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+18562 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 12
+bps 72 loss 0 left 0 mem 3.0888671875 mav2 False sign False mav1 0 mav2 2 signed 2      
+18957 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+19573 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 11
+bps 34 loss 0 left 0 mem 3.1591796875 mav2 False sign False mav1 0 mav2 1 signed 1      
+19952 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+20577 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 10
+bps 34 loss 0 left 0 mem 3.228515625 mav2 False sign False mav1 0 mav2 1 signed 1      
+20971 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+20971 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+20971 [3] INFO MissionPlanner.MAVLinkInterface (null) - 378 Start connect loop 
+20987 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+21576 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 9
+bps 34 loss 0 left 0 mem 3.3134765625 mav2 False sign False mav1 0 mav2 1 signed 1      
+21997 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+22594 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 8
+bps 34 loss 0 left 0 mem 3.3759765625 mav2 False sign False mav1 0 mav2 1 signed 1      
+23036 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+23597 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 7
+bps 34 loss 0 left 0 mem 3.453125 mav2 False sign False mav1 0 mav2 1 signed 1      
+24029 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+24029 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+24029 [3] INFO MissionPlanner.MAVLinkInterface (null) - 436 Start connect loop 
+24045 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+24607 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 6
+bps 34 loss 0 left 0 mem 3.515625 mav2 False sign False mav1 0 mav2 1 signed 1      
+25029 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+25611 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 5
+bps 34 loss 0 left 0 mem 3.5927734375 mav2 False sign False mav1 0 mav2 1 signed 1      
+26029 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+26611 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 4
+bps 34 loss 0 left 0 mem 3.6630859375 mav2 False sign False mav1 0 mav2 1 signed 1      
+27012 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+27013 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+27013 [3] INFO MissionPlanner.MAVLinkInterface (null) - 420 Start connect loop 
+27015 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+27623 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 3
+bps 34 loss 0 left 0 mem 3.740234375 mav2 False sign False mav1 0 mav2 1 signed 1      
+27989 [4] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+28027 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+28626 [7] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 2
+bps 72 loss 0 left 0 mem 3.818359375 mav2 False sign False mav1 0 mav2 2 signed 2      
+29045 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+29626 [6] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 1
+bps 34 loss 0 left 0 mem 3.8876953125 mav2 False sign False mav1 0 mav2 1 signed 1      
+30077 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+30077 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+30078 [3] INFO MissionPlanner.MAVLinkInterface (null) - 485 Start connect loop 
+30094 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+30636 [4] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 0
+bps 34 loss 0 left 0 mem 3.9658203125 mav2 False sign False mav1 0 mav2 1 signed 1      
+31095 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+bps 34 loss 0 left 0 mem 4.02734375 mav2 False sign False mav1 0 mav2 1 signed 1      
+32094 [6] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+bps 34 loss 0 left 0 mem 0.759765625 mav2 False sign False mav1 0 mav2 1 signed 1      
+33094 [7] INFO MissionPlanner.MAVLinkInterface (null) - Packet failed signature but passed crc
+33094 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+33094 [3] INFO MissionPlanner.MAVLinkInterface (null) - 501 Start connect loop 
+33096 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+33096 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+33096 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+33096 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7561
+33096 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close  7561
+33096 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+33096 [3] ERROR MissionPlanner.MAVLinkInterface (null) - System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.Aggregate[TSource](IEnumerable`1 source, Func`3 func)
+   at MissionPlanner.MAVLinkInterface.OpenBg(IProgressReporterDialogue PRsender, Boolean getparams)
+OPEN_RETURNED=True ISOPEN=False SELECTED=0:0
+ADOPTED=False KEY_NULL=True
+SERIAL1_PROBE_COMPLETE=True
+33113 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False

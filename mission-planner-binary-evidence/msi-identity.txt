@@ -1,0 +1,10 @@
+PROPERTIES
+Manufacturer	Michael Oborne
+ProductCode	{61CB34BE-E247-4439-A356-615ACEAC3C64}
+ProductName	Mission Planner
+ProductVersion	1.3.83
+MAIN APPLICATION CANDIDATES
+_137	xuhtofre.exe|MissionPlanner.exe	_1	8899584	1.3.83.0
+MissionPlanner_exe_config	katmnopp.con|MissionPlanner.exe.config	_1	13500	
+MEDIA
+1	1319	#product.cab

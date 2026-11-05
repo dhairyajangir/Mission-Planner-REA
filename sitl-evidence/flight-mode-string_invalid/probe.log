@@ -1,0 +1,141 @@
+COPTER_METADATA_SHA256=546fd71183653babc06ec0e99f9e085345f07e1f908df22528110e299ed120c6
+148 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+189 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+191 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1046 in file:line:column <filename unknown>:0:0
+ <Start>b__8_0 <>c System.EventHandler`1[MAVLink+MAVLinkMessage]
+192 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed .ctor at offset 1101 in file:line:column <filename unknown>:0:0
+ OnMAVDetected MAVLinkInterface System.EventHandler`1[System.ValueTuple`2[System.Byte,System.Byte]]
+217 [1] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+227 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork
+227 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Mavlink Connecting...
+227 [3] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived to packets
+243 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed OpenBg at offset 281 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+243 [3] INFO MissionPlanner.MAVLinkInterface (null) - Open port with TCP7221 0
+243 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Open 127.0.0.1 7221
+260 [3] INFO MissionPlanner.Comms.TcpSerial (null) - TcpSerial DiscardInBuffer 0
+260 [3] INFO MissionPlanner.MAVLinkInterface (null) - 404 Start connect loop 
+285 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+295 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+295 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - 
+Init ArduCopter V4.8.0-dev (72b23820)
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - Init ArduCopter V4.8.0-dev (72b23820)
+Free RAM: 524288
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - Free RAM: 524288
+Booting 0/0
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - Booting 0/0
+Firmware change: erasing EEPROM...
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - Firmware change: erasing EEPROM...
+done.
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - done.
+0 0 0 AP_Logger_File: buffer size=204800
+338 [3] INFO MissionPlanner.MAVLinkInterface (null) - 0 0 0 AP_Logger_File: buffer size=204800
+bps 0 loss 0 left 0 mem 1.8720703125 mav2 False sign False mav1 0 mav2 0 signed 0      
+390 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+390 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType DISTANCE_SENSOR System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+400 [6] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+400 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType OBSTACLE_DISTANCE System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+400 [6] INFO MissionPlanner.Utilities.Proximity (null) - created for 1 - 1
+400 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed set_parent at offset 100 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+400 [6] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed set_parent at offset 165 in file:line:column <filename unknown>:0:0
+ Parent_OnPacketReceived CurrentState System.EventHandler`1[MAVLink+MAVLinkMessage]
+448 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:38:56 AM 7 RCInput: decoding UDP (Pulses)
+510 [4] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:38:56 AM 6 Calibrating barometer
+bps 521 loss 0 left 0 mem 2.14453125 mav2 False sign False mav1 0 mav2 14 signed 0      
+1274 [8] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - -1% Trying to connect.
+Timeout in 29
+1277 [6] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1277 [6] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1280 [3] INFO MissionPlanner.MAVLinkInterface (null) - 423 Start connect loop 
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - HB Selection 1-1 seen 2
+1289 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+bps 42 loss 0 left 276 mem 10.841796875 mav2 True sign False mav1 0 mav2 2 signed 0      
+2111 [8] INFO MissionPlanner.MAVLinkInterface (null) - mav 1-1 seqno 16 exp 15 pkts lost 1
+2111 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:38:58 AM 6 Barometer 1 calibration complete
+2111 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:38:58 AM 6 Barometer 2 calibration complete
+Init Gyro*2191 [8] INFO MissionPlanner.MAVLinkInterface (null) - ID sys 1 comp 1 ver3 type QUADROTOR name ARDUPILOTMEGA
+2191 [8] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+2191 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 148 0 0 0 0 0 0
+2191 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2191 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_AUTOPILOT_CAPABILITIES 0 0 0 0 0 0 0
+2191 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+2207 [3] INFO MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean] False 1 1
+2207 [3] DEBUG MissionPlanner.MAVLinkInterface (null) - SubscribeToPacketType AUTOPILOT_VERSION System.Func`2[MAVLink+MAVLinkMessage,System.Boolean]
+2760 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 3
+3301 [6] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 2
+3841 [4] INFO MissionPlanner.MAVLinkInterface (null) - getVersion Retry 1
+4398 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribeToPacketType -1410018405
+4398 [3] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd DO_SEND_BANNER 0 0 0 0 0 0 0
+4398 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4398 [3] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+4398 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - 100% Done
+4398 [3] INFO MissionPlanner.MAVLinkInterface (null) - Done open 1 1
+4398 [3] INFO MissionPlanner.MAVLinkInterface+NoUIReporter (null) - DoWork Done
+OPEN=True SELECTED=1:1
+bps 333 loss 0 left 1149 mem 11.076171875 mav2 True sign False mav1 0 mav2 9 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+INITIAL_MODE=0 ARMED=False FIRMWARE=ArduCopter2
+4398 [1] ERROR MissionPlanner.MAVLinkInterface (null) - No Mode Changed not-a-mode
+INVALID_STRING_RETURNED
+PDEF_LOADED=True XML_MATCH=True VALUES_NONEMPTY=True VALUES_MATCH=True
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+*
+4444 [1] INFO MissionPlanner.MAVLinkInterface (null) - Init Gyro**
+4444 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 ArduPilot Ready
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4446 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 RC7: SaveWaypoint LOW
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+4446 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 ArduCopter V4.8.0-dev (72b23820)
+4448 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 ï¿½04cfea5c7cf4f1fb8b47f8b3e8289cf
+4448 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 Frame: QUAD/PLUS
+4634 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 EKF3 IMU0 initialised
+4634 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 EKF3 IMU1 initialised
+4634 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:00 AM 6 AHRS: EKF3 active
+bps 1408 loss 0 left 0 mem 20.986328125 mav2 True sign False mav1 0 mav2 34 signed 0      
+bps 21 loss 0 left 46 mem 21.033203125 mav2 True sign False mav1 0 mav2 1 signed 0      
+5980 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:02 AM 6 EKF3 IMU0 tilt alignment complete
+5980 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:02 AM 6 EKF3 IMU1 tilt alignment complete
+6074 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:02 AM 6 EKF3 IMU0 MAG0 initial yaw alignment complete
+6074 [1] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:02 AM 6 EKF3 IMU1 MAG0 initial yaw alignment complete
+bps 229 loss 0 left 0 mem 21.1416015625 mav2 True sign False mav1 0 mav2 5 signed 0      
+7282 [7] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed Discover at offset 93 in file:line:column <filename unknown>:0:0
+ MessagesHandler GimbalManagerProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7282 [7] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 280 0 0 0 0 0 0
+7282 [4] DEBUG MissionPlanner.MAVLinkInterface (null) - Subscribed StartID at offset 86 in file:line:column <filename unknown>:0:0
+ ParseMessages CameraProtocol System.EventHandler`1[MAVLink+MAVLinkMessage]
+7286 [7] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+7286 [4] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 259 0 0 0 0 0 0
+7286 [4] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new True
+7313 [8] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd resp REQUEST_MESSAGE - ACCEPTED
+7313 [8] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current True new False
+7313 [8] INFO MissionPlanner.MAVLinkInterface (null) - doCommand cmd REQUEST_MESSAGE 269 0 0 0 0 0 0
+7314 [8] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+bps 87 loss 0 left 0 mem 21.3115234375 mav2 True sign False mav1 0 mav2 4 signed 0      
+bps 21 loss 0 left 0 mem 21.380859375 mav2 True sign False mav1 0 mav2 1 signed 0      
+bps 21 loss 0 left 0 mem 21.427734375 mav2 True sign False mav1 0 mav2 1 signed 0      
+9994 [6] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:06 AM 6 GPS 1: probing for u-blox at 230400 baud
+10010 [8] INFO MissionPlanner.MAVLinkInterface (null) - 11/5/2026 10:39:06 AM 6 GPS 1: detected u-blox
+bps 134 loss 0 left 0 mem 21.5283203125 mav2 True sign False mav1 0 mav2 4 signed 0      
+bps 21 loss 0 left 0 mem 21.60546875 mav2 True sign False mav1 0 mav2 1 signed 0      
+FINAL_MODE=0 ARMED=False HEARTBEATS=10
+12217 [1] INFO MissionPlanner.Utilities.TerrainFollow (null) - OnPacketReceived remove to packets
+12217 [1] DEBUG MissionPlanner.MAVLinkInterface (null) - UnSubscribed Close at offset 36 in file:line:column <filename unknown>:0:0
+ _interface_OnPacketReceived TerrainFollow System.EventHandler`1[MAVLink+MAVLinkMessage]
+12217 [1] INFO MissionPlanner.MAVLinkInterface (null) - set giveComport  current False new False
+12217 [1] INFO MissionPlanner.Comms.TcpSerial (null) - TCP Close 127.0.0.1 7221

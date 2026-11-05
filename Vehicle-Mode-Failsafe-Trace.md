@@ -1,0 +1,47 @@
+# Vehicle mode and failsafe trace
+
+Source snapshot: ArduPilot commit `72b238201f5ea3b556e3809b2ec704fcf701474a`, from the supplied archive. This is a selective source trace with specific local simulator tests, not an inventory of every failsafe. Compile-time options, configuration, vehicle state and other code affect the result.
+
+## Copter mode changes
+
+`ArduCopter/mode.cpp`, `Copter::set_mode` (line 318), first handles a request for the current mode. For a GCS-commanded change it checks `FLTMODE_GCSBLOCK`, resolves the requested mode, then applies entry checks. Depending on state and build configuration, these include throttle, position, altitude estimate, fence recovery and radio-failsafe checks. It calls the new mode's `init`; if successful it exits the previous mode, updates the active mode and reason, logs the change when enabled and sends a heartbeat. An accepted request is therefore not established merely by sending a command: the application should observe the actual vehicle mode and any rejection messages.
+
+`Copter::update_flight_mode` in the same file (line 502) updates controller state and invokes the active mode's `run` method. Individual mode implementations and their controller behavior have not been mapped in this trace.
+
+## Copter failsafes
+
+`ArduCopter/events.cpp`, `failsafe_radio_on_event` (line 13), selects an initial action from the throttle failsafe setting, then adjusts it for conditions such as disarming on the ground, an existing landing, or configured continuation in Auto or Guided. It announces the event and calls `do_failsafe_action`. The radio recovery handler logs resolution and sends a warning; its comments say the pilot can use the mode switch to restore a prior mode. This is not proof of automatic mode restoration.
+
+`failsafe_gcs_check` (line 126) returns when the GCS failsafe is disabled or the configured GCS has never been seen. It compares time since the configured GCS's last heartbeat against the configured timeout and calls the appropriate on/off event on a transition. `failsafe_gcs_on_event` clears RC overrides and chooses an action with additional state-dependent branches. Exact behavior requires tracing those branches and testing the configuration used.
+
+`handle_battery_failsafe` (line 98) receives an action from the battery failsafe system and can change that action when disarming on the ground or continuing a landing. It passes the resulting action to the same action handler. Threshold detection and battery-monitor logic are outside this trace.
+
+## Different vehicle implementations
+
+`Rover/failsafe.cpp`, `Rover::failsafe_trigger` (line 47), tracks active and triggered failsafe bits, a timeout, current mode and configured action. The source includes continuation and fallback branches. Its separate `failsafe_check` monitors scheduler ticks and can disarm after a main-loop stall.
+
+`ArduPlane/failsafe.cpp`, `Plane::failsafe_check` (line 17), also watches scheduler ticks, but its stall response includes passing valid RC inputs to configured outputs, subject to the code's checks. This is a distinct main-loop failure path, not a description of every Plane radio or GCS failsafe. Plane's long-event handling is elsewhere in `ArduPlane/events.cpp`.
+
+## Evidence and gaps
+
+The local source-built Copter simulator confirmed a transition to GUIDED mode in two initial flight-probe runs, but both stopped when the simulator did not arm (`sitl-evidence/archive-copter-flight/results.json` and `archive-copter-flight-2/results.json`). The second captured an arming denial, `Need Position Estimate`, followed by EKF GPS-fusion status. It did not reach takeoff.
+
+A third run retried arming while leaving the normal checks enabled. It recorded two position-estimate denials, then GPS-fusion messages and an accepted arm. The simulator reached 3.502 metres relative altitude, entered LAND mode and later reported disarmed (`sitl-evidence/archive-copter-flight-3/results.json`).
+
+A separate simulator run set `FS_GCS_TIMEOUT=5` and `FS_GCS_ENABLE=1`, sent GCS heartbeats during takeoff, then stopped them while keeping the connection open. After reaching 3.407 metres relative altitude, the simulator reported `GCS Failsafe` and a heartbeat in RTL mode. When the harness resumed heartbeats it observed `GCS Failsafe Cleared`, requested LAND and later observed a disarmed heartbeat (`sitl-evidence/archive-copter-gcs-failsafe/results.json`). This is one configured GCS-loss case; it does not prove the exact timeout duration or other failsafe actions.
+
+A separate Copter simulator run configured a maximum-altitude fence at 10 metres with action 2, Always Land, while the fence was disabled. With normal arming checks enabled, initial arm attempts were denied until the position estimate became ready. The simulator then armed, took off, and reported 11.651 metres relative altitude. The standalone test client enabled the fence while above the configured limit. It observed `Max Alt fence breached`, a heartbeat in LAND mode, `Fence breach cleared`, and eventually a disarmed heartbeat (`sitl-evidence/archive-copter-alt-fence/results.json`). The source checks new breaches in `ArduCopter/fence.cpp:39` and selects LAND for the Always Land action at `:83`. This test enables an already-breached fence in a disposable simulator; it does not establish fence behavior for every flight path, fence type, action, configuration or physical aircraft.
+
+A separate low-battery test configured `BATT_LOW_TIMER=2` seconds and `BATT_FS_LOW_ACT=1` (Land), initially leaving the low and critical voltage thresholds at zero. After normal arming checks passed and the simulator reached 3.428 metres, the client observed 12.287 V in `SYS_STATUS` and raised `BATT_LOW_VOLT` to 14.3 V. The simulator reported `Battery 1 is low 12.31V`, then `Battery Failsafe`, entered LAND and later reported disarmed (`sitl-evidence/archive-copter-battery-failsafe/results.json`). The initial connection was refused while the simulator was starting, and two arm attempts were denied pending a position estimate before the successful arm. The threshold was deliberately raised above the measured simulated voltage; this does not simulate a battery's physical discharge or validate a real aircraft. The source's low-voltage timer and threshold test are in `libraries/AP_BattMonitor/AP_BattMonitor_Backend.cpp:176` and `:269`; `AP_BattMonitor.cpp:932` dispatches the selected action while armed, and `ArduCopter/events.cpp:98` handles it. This single run does not establish actual trigger duration, recovery, critical-battery behavior, other action settings or vehicles.
+
+A separate Copter run disabled the simulated GPS after takeoff. It observed loss of GPS fix, an EKF position-loss notice, an EKF-directed change to LAND and disarming. After GPS was re-enabled following a disarming notice, the fix and EKF status recovered. A shorter outage in another run recovered the fix while the simulator was still armed in GUIDED, before the client requested LAND. The event records and limits are in `Estimator-Trace.md`, `sitl-evidence/archive-copter-gps-loss/` and `sitl-evidence/archive-copter-gps-short-loss/`.
+
+An initial Rover GCS-loss test observed HOLD and a later `GCS Failsafe Cleared` notice, but also observed `Radio Failsafe` and did not record a `GCS Failsafe` notice. Although the original harness marked its checks passed, those checks did not rule out the radio failsafe as the cause of HOLD. Treat the outcome as confounded, not proof of the GCS-loss action. The original results and harness are retained under `sitl-evidence/archive-rover-gcs-failsafe/`. A second run disabled the simulated throttle failsafe but failed its combined HOLD-and-notice check (`archive-rover-gcs-failsafe-2/results.json`); that check did not record the two observations separately.
+
+In a third run, `FS_THR_ENABLE=0`, `FS_GCS_ENABLE=1`, `FS_GCS_TIMEOUT=3`, `FS_TIMEOUT=1` and `FS_ACTION=2` were confirmed. After the source-built Rover armed in GUIDED, the client stopped GCS heartbeats without sending a movement command. The instrumented run observed HOLD, then `GCS Failsafe`, followed by `GCS Failsafe Cleared` after heartbeats resumed; it then commanded disarming (`archive-rover-gcs-failsafe-3/results.json`). In that run the HOLD heartbeat was recorded immediately before the failsafe notice, explaining why a check that stops reading on the first HOLD heartbeat can miss the notice; it does not prove that this caused the second run's failure. The client did not measure vehicle movement, timeout accuracy, physical behavior, or automatic restoration of GUIDED. The source detects GCS heartbeat loss in `Rover/Rover.cpp:343` and applies configured action logic in `Rover/failsafe.cpp:47`.
+
+These runs used a standalone MAVLink client, not the Mission Planner UI. The code checks a disarmed heartbeat after requesting LAND; it does not independently validate touchdown position or landing quality. No physical aircraft was tested. Future validation needs isolated simulator cases for each selected vehicle, configuration, trigger, observed mode and recovery behavior; a successful result for one vehicle or configuration does not establish another's behavior.
+# Mission Planner mode-selection cross-reference
+
+See `Flight-Mode-Workflow-Trace.md` for the original library's mode packets, REA method records, disarmed Copter SITL loss tests and tracker string-translation fixture. These results do not replace the vehicle-side mode and failsafe tests below.
+

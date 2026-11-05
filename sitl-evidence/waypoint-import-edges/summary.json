@@ -1,0 +1,17 @@
+{
+  "scope": "synthetic files and original distributed Utilities library; no UI or vehicle",
+  "fixture_hashes": {
+    "short_row.waypoints": "7d819cfd64e571171c53c3e4ce9a3f26acf940fc64c2e2d1c33511932477d3fb",
+    "duplicate_sequence.waypoints": "9e67a1a64b0c7ec975f5e9c0d509e2895349f46643d48ec5dc178c82348bb02a",
+    "nonfinite.waypoints": "e6dfb9ca0d52cd62a95564497aca4d75666d055b0f631381caec62ff017f82da",
+    "loose_header.waypoints": "dcac0b204197e9a9e485b957bebf05e47f134c6d88fa8a75279d611bf64e5c0e",
+    "gap_sequence.waypoints": "108cbfac2fc1138851a03a39c9a020348219624dd9beae24c0d13eb0f89f0c98",
+    "probe.log": "7b366429c382aa50d09e9d1b16a301ae586874df7f43a5509ee6f1d4a44f23bf",
+    "probe-source.cs": "e7c74d05167a5897828d6d39d94b52db4cbf3f5c193480c61aa412a0bb9e9cdc",
+    "probe.exe": "1eee2ee7820ff8f962fdbb6dcc05d92087ffddd375b43fb2152e9fe8548ee48f"
+  },
+  "utilities_sha256": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+  "rea_method_token": "0x060005ce",
+  "rea_il_sha256": "6e5c384b378854c093386d3af4e52bbb82c24cebdce58f18dca7996b13a9e6b8",
+  "probe_exit": 0
+}

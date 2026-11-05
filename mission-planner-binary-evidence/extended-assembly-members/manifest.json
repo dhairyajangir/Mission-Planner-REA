@@ -1,0 +1,246 @@
+{
+  "requested": [
+    "plugins/AltitudeAngelWings.dll",
+    "plugins/AltitudeAngelWings.Plugin.dll",
+    "plugins/Bulb.dll",
+    "plugins/FaceMap.dll",
+    "plugins/MavlinkMessagePlugin.dll",
+    "plugins/opendroneid.dll",
+    "plugins/TerrainMakerPlugin.dll",
+    "plugins/TrackerHome.dll",
+    "Arduino.dll",
+    "DeviceProgramming.dll",
+    "DroneCAN.dll",
+    "OSDConfigurator.dll",
+    "px4uploader.dll",
+    "WebCamService.dll",
+    "Updater.exe",
+    "version.exe"
+  ],
+  "results": [
+    {
+      "file": "plugins/AltitudeAngelWings.dll",
+      "exit_code": 0,
+      "sha256": "9dfd3293d5eff37503706a269b97ead17c2375d99013fb2bab5403260f58e38d",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 288,
+      "methods": 1717,
+      "call_edges": 3592,
+      "evidence": "plugins__AltitudeAngelWings.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/AltitudeAngelWings.Plugin.dll",
+      "exit_code": 0,
+      "sha256": "b44113352912531aac6dfbaf92efc0ad6d514a002db2e73708e1dd82fd9c5daf",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 63,
+      "methods": 345,
+      "call_edges": 2337,
+      "evidence": "plugins__AltitudeAngelWings.Plugin.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/Bulb.dll",
+      "exit_code": 0,
+      "sha256": "84a2ec5aef458c015d55dba468403b4307f4799a9658a9544f8c8cf001f41d39",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 6,
+      "methods": 27,
+      "call_edges": 378,
+      "evidence": "plugins__Bulb.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/FaceMap.dll",
+      "exit_code": 0,
+      "sha256": "6f23cdf4f36d32e2b588cce87e3da39f1facd99c0a629b05ff18349297223d6f",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 12,
+      "methods": 73,
+      "call_edges": 2716,
+      "evidence": "plugins__FaceMap.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/MavlinkMessagePlugin.dll",
+      "exit_code": 0,
+      "sha256": "5e4a44b7cca7b67623a9b0b1f4e3b8a1e11350a0843b12a45681152986b369d9",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 7,
+      "call_edges": 12,
+      "evidence": "plugins__MavlinkMessagePlugin.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/opendroneid.dll",
+      "exit_code": 0,
+      "sha256": "944bab400dffd76fca7e2652598d0dfeb32ebea45a9dc169cc10a68b35379da1",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 10,
+      "methods": 134,
+      "call_edges": 1303,
+      "evidence": "plugins__opendroneid.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/TerrainMakerPlugin.dll",
+      "exit_code": 0,
+      "sha256": "72610cff944ce9db0486b9cc03581f3a2b6e127afea6072135e36c27f054cfb1",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 8,
+      "methods": 32,
+      "call_edges": 177,
+      "evidence": "plugins__TerrainMakerPlugin.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "plugins/TrackerHome.dll",
+      "exit_code": 0,
+      "sha256": "8db4eaa432359a2949a3ef4f3eaf3da64c20c6d26f3b43caffab767bf0272afb",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 26,
+      "methods": 60,
+      "call_edges": 231,
+      "evidence": "plugins__TrackerHome.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "Arduino.dll",
+      "exit_code": 0,
+      "sha256": "1120deb2fc632aa10887f057159a5efd52bfaa4030e0670579000e441de4a903",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 8,
+      "methods": 53,
+      "call_edges": 239,
+      "evidence": "Arduino.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "DeviceProgramming.dll",
+      "exit_code": 0,
+      "sha256": "3379ea9353d7bb226aaadd4b0f680ce930cee31ee4f786359bd7cacbacc48e3e",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 42,
+      "methods": 193,
+      "call_edges": 698,
+      "evidence": "DeviceProgramming.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "DroneCAN.dll",
+      "exit_code": 0,
+      "sha256": "8e411332d81479355b7b9fdf0793d80acaa2a537ecdd3f8b50bdfb0e60d76314",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 294,
+      "methods": 2012,
+      "call_edges": 7762,
+      "evidence": "DroneCAN.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "OSDConfigurator.dll",
+      "exit_code": 0,
+      "sha256": "086ad37894d13a337b43f9aafa3ebb0d346b6d389ba4e94a9b152c3f1f57cc3e",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 42,
+      "methods": 223,
+      "call_edges": 1677,
+      "evidence": "OSDConfigurator.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "px4uploader.dll",
+      "exit_code": 0,
+      "sha256": "96c74a1ff1dac2ae5a68787e1cf66617dbee2cde74f68ac4389423bca7ac39c6",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 34,
+      "methods": 195,
+      "call_edges": 1558,
+      "evidence": "px4uploader.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "WebCamService.dll",
+      "exit_code": 0,
+      "sha256": "46dcb01fcf061a9bc84f1228e69cd9a9245994ffc001f0b8744fecae534eeb29",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 3,
+      "methods": 28,
+      "call_edges": 127,
+      "evidence": "WebCamService.dll.json",
+      "digest_matches": true
+    },
+    {
+      "file": "Updater.exe",
+      "exit_code": 0,
+      "sha256": "191cb00b3d3aeada878089cbe05d188f6785ffef6b384f2a686a6e788f0e9056",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 4,
+      "methods": 10,
+      "call_edges": 101,
+      "evidence": "Updater.exe.json",
+      "digest_matches": true
+    },
+    {
+      "file": "version.exe",
+      "exit_code": 0,
+      "sha256": "3577923f32cd98a3f553319ce4dfad1f7b17fe6ecaa1feaf8d2e4507b57d40b9",
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "types": 2,
+      "methods": 3,
+      "call_edges": 26,
+      "evidence": "version.exe.json",
+      "digest_matches": true
+    }
+  ]
+}
