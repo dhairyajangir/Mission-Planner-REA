@@ -53,14 +53,6 @@
       "reason": "repository metadata or symlink directory"
     },
     {
-      "path": "supportproxy-deps/root/usr/lib/x86_64-linux-gnu/libtdb.so.1",
-      "reason": "repository metadata or symlink"
-    },
-    {
-      "path": "supportproxy-deps/root/usr/share/doc/python3-tdb/changelog.Debian.gz",
-      "reason": "repository metadata or symlink"
-    },
-    {
       "path": "supportproxy-source/.git",
       "reason": "repository metadata or symlink directory"
     },
@@ -71,23 +63,33 @@
     {
       "path": "supportproxy-source/modules/mavlink/pymavlink/.git",
       "reason": "repository metadata or symlink"
+    }
+  ],
+  "errors": [],
+  "restored_symlinks": [
+    {
+      "path": "supportproxy-deps/root/usr/lib/x86_64-linux-gnu/libtdb.so.1",
+      "target": "libtdb.so.1.4.10"
+    },
+    {
+      "path": "supportproxy-deps/root/usr/share/doc/python3-tdb/changelog.Debian.gz",
+      "target": "../libtdb1/changelog.Debian.gz"
     },
     {
       "path": "supportproxy-deps/root/usr/lib/x86_64-linux-gnu/libtdb.so",
-      "reason": "Windows cannot access this WSL symlink"
+      "target": "libtdb.so.1.4.10"
     },
     {
       "path": "supportproxy-deps/root/usr/share/doc/libtdb-dev/changelog.Debian.gz",
-      "reason": "Windows cannot access this WSL symlink"
+      "target": "../libtdb1/changelog.Debian.gz"
     },
     {
       "path": "supportproxy-evidence/auth-tests/tmp/supportproxy_w0current",
-      "reason": "Windows cannot access this WSL symlink"
+      "target": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/supportproxy-evidence/auth-tests/tmp/supportproxy_w00"
     },
     {
       "path": "supportproxy-evidence/local-network-tests/tmp/supportproxy_w0current",
-      "reason": "Windows cannot access this WSL symlink"
+      "target": "/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project/supportproxy-evidence/local-network-tests/tmp/supportproxy_w00"
     }
-  ],
-  "errors": []
+  ]
 }
