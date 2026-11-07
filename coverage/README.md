@@ -6,7 +6,7 @@
 
 | Column | Meaning |
 | --- | --- |
-| `level` | **L0** inventoried (source exists, nothing else). **L1** a trace or source-map document names it (automatic text match). **L2** the type exists in the REA main-executable index (automatic; Mission Planner rows only). **L3** exercised in SITL (only via `claims.csv`). |
+| `level` | **L0** inventoried (source exists, nothing else). **L1** a trace or source-map document names it (automatic text match). **L2** the type exists in the REA main-executable index (automatic; Mission Planner rows only). **L3** executed against the original library or a simulator (only via `claims.csv`); the cited trace says whether a vehicle or simulator was involved. |
 | `fault_injected` | `yes` when drops, corruption, resets or invalid input were injected during the L3 evidence. |
 | `gui_kind` | `none`, `modified-copy` (patched data paths / disabled plugins) or `original` (unmodified release executable). A modified copy never counts as original. |
 | `target` / `at_target` | Required minimum: `L3`, `L3+fault`, or `L3+gui` (original GUI). Defaults per area are in `build-coverage-matrix.py`. |

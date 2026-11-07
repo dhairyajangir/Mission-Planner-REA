@@ -71,7 +71,7 @@ mp-module:MagCalib,mp-module,MagCalib,mission-planner-1.3.83-source/MagCalib.cs,
 mp-module:Controls,mp-module,Controls,mission-planner-1.3.83-source/Controls,2,,,L3+gui,,,,,
 mp-module:Plugin,mp-module,Plugin,mission-planner-1.3.83-source/Plugin,3,,none,L3+gui,,partial,Plugin-Lifecycle-Trace.md,d5b94e495349,Loader harness only.
 mp-module:Grid,mp-module,Grid,mission-planner-1.3.83-source/Grid,2,,,L3+gui,,,,,
-mp-module:Joystick,mp-module,Joystick,mission-planner-1.3.83-source/Joystick,2,,,L3+gui,,,,,
+mp-module:Joystick,mp-module,Joystick,mission-planner-1.3.83-source/Joystick,3,,none,L3+gui,,partial,Joystick-Workflow-Trace.md;coverage/golden/joystick-pickchannel.csv;coverage/golden/joystick-probe-output.txt;research-tools/JoystickMappingProbe.cs,44760c2bacf3;b85b18b2ab8b;15cdb5939d83;33699111e2b0,"Library probe with fake device; no vehicle, MainV2 sender and real devices not run."
 mp-module:Swarm,mp-module,Swarm,mission-planner-1.3.83-source/Swarm,2,,,L3+gui,,,,,
 mp-module:Antenna,mp-module,Antenna,mission-planner-1.3.83-source/Antenna,2,,,L3+gui,,,,,
 mp-module:Log,mp-module,Log,mission-planner-1.3.83-source/Log,3,,modified-copy,L3+gui,,partial,Log-Workflow-Trace.md,b8916c612d5c,Converter and modified Log Browser.
@@ -359,3 +359,4 @@ ledger:mavproxy,ledger,mavproxy,Reverse-Engineering-Coverage.md,3,yes,none,L3+fa
 ledger:supportproxy,ledger,supportproxy,Reverse-Engineering-Coverage.md,3,,none,L3+fault,,partial,SupportProxy-Architecture-Trace.md,a068884bd257,Selected database and loopback transport tests.
 ledger:accelerometer-calibration,ledger,accelerometer-calibration,Reverse-Engineering-Coverage.md,3,yes,none,L3+fault,yes,partial,Accelerometer-Calibration-Trace.md,0fde0bf1ca42,Wrong-position and forced-armed rejection tests; rendered UI interaction untested.
 ledger:org-repositories,ledger,org-repositories,Reverse-Engineering-Coverage.md,1,,none,L3+fault,,partial,ArduPilot-Organization-Inventory.md,b1e6d6cea9e9,Inventory of 86 repositories; most not reviewed.
+ledger:joystick-control,ledger,joystick-control,Reverse-Engineering-Coverage.md,3,,none,L3+fault,,partial,Joystick-Workflow-Trace.md;coverage/golden/joystick-pickchannel.csv;coverage/golden/joystick-probe-output.txt;research-tools/JoystickMappingProbe.cs,44760c2bacf3;b85b18b2ab8b;15cdb5939d83;33699111e2b0,"Mapping and lifecycle of the original JoystickBase only; no fault injection, no GUI."

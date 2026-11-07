@@ -41,3 +41,5 @@ ap-mode:ArduCopter/mode_auto,3,,none,,partial,Mission-Execution-Trace.md,
 ap-mode:ArduCopter/mode_brake,3,,none,,partial,Mission-Execution-Trace.md,
 ap-mode:ArduCopter/mode_loiter,3,,none,,partial,Mission-Execution-Trace.md,
 ap-mode:Rover/mode_hold,3,,none,,partial,Vehicle-Mode-Failsafe-Trace.md,
+mp-module:Joystick,3,,none,,partial,Joystick-Workflow-Trace.md;coverage/golden/joystick-pickchannel.csv;coverage/golden/joystick-probe-output.txt;research-tools/JoystickMappingProbe.cs,"Library probe with fake device; no vehicle, MainV2 sender and real devices not run."
+ledger:joystick-control,3,,none,,partial,Joystick-Workflow-Trace.md;coverage/golden/joystick-pickchannel.csv;coverage/golden/joystick-probe-output.txt;research-tools/JoystickMappingProbe.cs,"Mapping and lifecycle of the original JoystickBase only; no fault injection, no GUI."

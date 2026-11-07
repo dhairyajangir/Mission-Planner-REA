@@ -1,0 +1,13 @@
+USER_DATA_DIR=<workspace>/mission-planner-runtime/isolated-data/
+GOLDEN_ROWS=1092
+EXPO input=-500 expo=20 min=1000 max=2000 mid=1500 -> 1000
+EXPO input=-250 expo=20 min=1000 max=2000 mid=1500 -> 1300
+EXPO input=-100 expo=20 min=1000 max=2000 mid=1500 -> 1420
+EXPO input=0 expo=20 min=1000 max=2000 mid=1500 -> 1500
+EXPO input=100 expo=20 min=1000 max=2000 mid=1500 -> 1580
+EXPO input=250 expo=20 min=1000 max=2000 mid=1500 -> 1700
+EXPO input=500 expo=20 min=1000 max=2000 mid=1500 -> 2000
+LIFE_STARTED=True ENABLED=True CH1=2000 CH3=1000 CH2=0
+LIFE_AXIS_MOVED CH1=1000
+LIFE_AFTER_UNPLUG ENABLED=True CH1=1000 CH3=1000
+LIFE_AFTER_CLEAR ENABLED=False CH1=0 CH3=0
