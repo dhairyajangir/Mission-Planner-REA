@@ -1,0 +1,43 @@
+row_id,level,fault_injected,gui_kind,target,status,evidence,note
+ledger:connection-telemetry,3,yes,modified-copy,,partial,Connection-Telemetry-Trace.md;sitl-evidence/mavlink-reconnect-probe/summary.json;sitl-evidence/dual-sitl-library-attempt3/summary.json,"Relay reset/reconnect and signing tests; direct TCP/serial UI, key management, link-failure UI unverified."
+ledger:mavlink-commands,3,yes,none,,partial,Command-Workflow-Trace.md,ACK dropping and synthetic ACK variants; only a read-only interval request and one unsupported command exercised.
+ledger:mission-transfer,3,yes,modified-copy,,partial,Mission-Transfer-Trace.md;Mission-Planner-UI-Observations.md,Library and modified-app Read/Write; ACK/request loss injected; UI fence/rally writes untested.
+ledger:mission-file,3,,none,,partial,Mission-File-Trace.md,"Library harness only, not a GUI save/open. NaN upload SITL exception unresolved."
+ledger:parameter-file,3,,none,,partial,Parameter-Workflow-Trace.md,Parser tests plus non-finite writes to SITL; no UI write.
+ledger:mission-pause-restart,3,,none,,partial,Mission-Execution-Trace.md,"SITL via client, not the Mission Planner UI."
+ledger:parameters-calibration,3,yes,modified-copy,,partial,Parameter-Workflow-Trace.md;Accelerometer-Calibration-Trace.md,List/FTP loss injected; one modified-app parameter write; physical sensors untested.
+ledger:logs,3,,modified-copy,,partial,Log-Workflow-Trace.md,Download and converter parity gaps; modified Log Browser graph.
+ledger:video-maps-terrain,3,yes,modified-copy,,partial,Map-Video-Trace.md;Terrain-Workflow-Trace.md,Synthetic tiles/MJPEG/terrain; one terrain block drop; no live providers.
+ledger:firmware-loading,3,,none,,partial,Firmware-Workflow-Trace.md,Parser and in-memory fake bootloader only; no hardware.
+ledger:plugins-scripts,3,,none,,partial,Plugin-Lifecycle-Trace.md,Standalone harness with synthetic DLLs.
+ledger:lua-scripting,3,,none,,partial,ArduPilot-Scripting-Trace.md,Benign and looping scripts in Copter SITL.
+ledger:simulation-variants,3,,none,,partial,sitl-evidence/archive-plane-smoke/results.json;sitl-evidence/archive-rover-smoke/results.json;sitl-evidence/archive-sub-smoke/results.json;sitl-evidence/archive-blimp-smoke/results.json;sitl-evidence/archive-antennatracker-smoke/results.json;sitl-evidence/variant-plane-smoke/results.json;sitl-evidence/variant-rover-smoke/results.json;sitl-evidence/variant-sub-smoke/results.json,"Basic smoke checks with a standalone MAVLink client; no Mission Planner, tracking or flight."
+ledger:vehicle-internals,3,,none,,partial,Vehicle-Mode-Failsafe-Trace.md;Estimator-Trace.md,Selected modes and failsafes only.
+ledger:fence-workflow,3,yes,none,,partial,Fence-Workflow-Trace.md,MAVFTP and ACK loss injected; legacy/typed mixing hazard; UI and enforcement untested.
+ledger:flight-mode,3,yes,none,,partial,Flight-Mode-Workflow-Trace.md,Mode packets dropped/invalid; metadata download and fallback untested.
+ledger:guided-position,3,yes,none,,partial,Guided-Position-Workflow-Trace.md,Lost guided-waypoint ACKs; Plane movement untested.
+ledger:message-signing,3,yes,none,,partial,Connection-Telemetry-Trace.md,"Wrong-key, replay and corrupted-signature cases on SITL; persisted keys and UI untested."
+ledger:mavproxy,3,yes,none,,partial,MAVProxy-Architecture-Trace.md,Pinned source in SITL with a dropped final ACK and a rejected replacement.
+ledger:supportproxy,3,,none,,partial,SupportProxy-Architecture-Trace.md,Selected database and loopback transport tests.
+ledger:accelerometer-calibration,3,yes,none,,partial,Accelerometer-Calibration-Trace.md,Wrong-position and forced-armed rejection tests; rendered UI interaction untested.
+ledger:org-repositories,1,,none,,partial,ArduPilot-Organization-Inventory.md,Inventory of 86 repositories; most not reviewed.
+mp-page:ConfigAccelerometerCalibration,3,,none,,partial,Accelerometer-Calibration-Trace.md,Unrendered control handlers invoked by instrumentation.
+mp-module:FlightPlanner,3,,modified-copy,,partial,Mission-Transfer-Trace.md;Mission-Planner-UI-Observations.md,Modified-copy Read/Write only.
+mp-module:FlightData,3,,modified-copy,,partial,Mission-Planner-UI-Observations.md,Modified-copy HUD rendering only.
+mp-module:Plugin,3,,none,,partial,Plugin-Lifecycle-Trace.md,Loader harness only.
+mp-module:Log,3,,modified-copy,,partial,Log-Workflow-Trace.md,Converter and modified Log Browser.
+ap-lib:AP_Terrain,3,,none,,partial,Terrain-Workflow-Trace.md,Synthetic HGT tiles in SITL.
+ap-lib:AP_Scripting,3,,none,,partial,ArduPilot-Scripting-Trace.md,
+ap-lib:GCS_MAVLink,3,,none,,partial,Command-Workflow-Trace.md;Mission-Transfer-Trace.md,"Command, mission and parameter protocols as exercised by clients."
+ap-lib:AP_Mission,3,,none,,partial,Mission-Execution-Trace.md;Mission-Transfer-Trace.md,
+ap-lib:AC_Fence,3,yes,none,,partial,Fence-Workflow-Trace.md,
+ap-lib:AP_Param,3,,none,,partial,Parameter-Workflow-Trace.md,
+ap-lib:AP_Logger,3,,none,,partial,Log-Workflow-Trace.md,
+ap-lib:AP_NavEKF3,3,,none,,partial,Estimator-Trace.md,Simulated GPS loss/recovery only.
+ap-mode:ArduCopter/mode_guided,3,,none,,partial,Guided-Position-Workflow-Trace.md,
+ap-mode:ArduCopter/mode_land,3,,none,,partial,Vehicle-Mode-Failsafe-Trace.md,
+ap-mode:ArduCopter/mode_rtl,3,,none,,partial,Vehicle-Mode-Failsafe-Trace.md,
+ap-mode:ArduCopter/mode_auto,3,,none,,partial,Mission-Execution-Trace.md,
+ap-mode:ArduCopter/mode_brake,3,,none,,partial,Mission-Execution-Trace.md,
+ap-mode:ArduCopter/mode_loiter,3,,none,,partial,Mission-Execution-Trace.md,
+ap-mode:Rover/mode_hold,3,,none,,partial,Vehicle-Mode-Failsafe-Trace.md,

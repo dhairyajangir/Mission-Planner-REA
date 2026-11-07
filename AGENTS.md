@@ -22,3 +22,9 @@ The saved research used Mission Planner 1.3.83 and an ArduPilot firmware snapsho
 ## Resume
 
 Read the coverage ledger and choose a substantive unresolved workflow. Use REA where appropriate, inspect the matching source and retain tests or simulator captures that distinguish observed behavior from inference. Update the relevant trace and evidence verifier. The NaN waypoint upload observations in `Mission-File-Trace.md` include one simulator-side exception whose cause and reproducibility are not yet established.
+
+## Phase 2 (started 7 November 2026)
+
+- `PHASE0-BASELINE.md` records the environment, workspace linkage, the verifier baseline (241/241) and gaps found.
+- `coverage/README.md` explains the coverage matrix. Run `python research-tools/build-coverage-matrix.py --check` before committing.
+- REA needs Node 22.15 or newer (set `MPREA_NODE`); other overrides are in `research-tools/env.example`.
