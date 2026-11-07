@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 import sqlite3
 import zlib
+from env_paths import INTEGRATION_DIR
 
 root = Path(__file__).resolve().parent.parent
 checks = []
@@ -1331,7 +1332,7 @@ check('vehicle selection change events', selection_log.splitlines() ==
       selection_playback_log.splitlines() == selection_clear_log.splitlines() +
       ['AFTER_PLAYBACK_SET_HIDDEN=True AFTER_PLAYBACK_SET_VISIBLE=False'],
       'Property-only original library harness; no UI subscriber or vehicle behavior claim.')
-source_index = root / 'integration-research/ardupilot-source-index.sqlite'
+source_index = INTEGRATION_DIR / 'ardupilot-source-index.sqlite'
 source_summary = json.loads((source_index.parent / 'ardupilot-source-index-summary.json').read_text())
 with sqlite3.connect(f'file:{source_index.as_posix()}?mode=ro', uri=True) as connection:
     source_counts = dict(connection.execute('SELECT status, COUNT(*) FROM files GROUP BY status'))
@@ -1346,7 +1347,7 @@ check('ArduPilot source text index',
       sum(source_counts.values()) == 8475 and source_integrity == 'ok' and sample_count == 1,
       'Tracked main Git tree only; indexed bytes matched blob hashes when captured, with listed exclusions.')
 for source_slug, expected_count in (('mission-planner', 2973), ('mission-planner-normalized', 6020)):
-    source_path = root / 'integration-research' / (source_slug + '-source-index.sqlite')
+    source_path = INTEGRATION_DIR / (source_slug + '-source-index.sqlite')
     source_data = json.loads((source_path.parent / (source_slug + '-source-index-summary.json')).read_text())
     with sqlite3.connect(f'file:{source_path.as_posix()}?mode=ro', uri=True) as connection:
         counts = dict(connection.execute('SELECT status, COUNT(*) FROM files GROUP BY status'))
@@ -1361,7 +1362,7 @@ for source_slug, expected_count in (('mission-planner', 2973), ('mission-planner
           rows == counts.get('indexed', 0) + counts.get('indexed-crlf-normalized', 0) and
           integrity == 'ok' and (sample == 1 if source_slug.endswith('-normalized') else True),
           'Git blob-matched UTF-8 source snapshot; normalized variant records CRLF-to-LF matches separately.')
-sub_index = root / 'integration-research/ardupilot-submodules-index.sqlite'
+sub_index = INTEGRATION_DIR / 'ardupilot-submodules-index.sqlite'
 sub_summary = json.loads((sub_index.parent / 'ardupilot-submodules-index-summary.json').read_text())
 sub_names = {'modules/waf':'waf', 'modules/mavlink':'mavlink', 'modules/mavlink/pymavlink':'pymavlink',
              'modules/DroneCAN/DSDL':'dsdl', 'modules/DroneCAN/dronecan_dsdlc':'dsdlc',

@@ -1,9 +1,10 @@
 from pathlib import Path
 import subprocess
+from env_paths import wsl_path
 root = Path(__file__).resolve().parent.parent
 out = root/'supportproxy-evidence/auth-tests'
 out.mkdir(parents=True, exist_ok=False)
-base = '/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project'
+base = wsl_path(root)
 dep = base + '/supportproxy-deps'
 repo = base + '/supportproxy-source'
 shell = 'export PATH="' + dep + '/python-bin:$PATH"; exec /usr/bin/python3 -m pytest -q "' + repo + '/tests/test_authentication.py" --basetemp="' + base + '/supportproxy-evidence/auth-tests/tmp"'

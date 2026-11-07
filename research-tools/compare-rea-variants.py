@@ -3,9 +3,10 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 binary = root / 'mission-planner-portable/Accord.Math.dll'
 out = root / 'mission-planner-binary-evidence/rea-raised-budget'
 results = []

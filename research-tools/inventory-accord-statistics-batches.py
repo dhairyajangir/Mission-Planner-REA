@@ -11,6 +11,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 base = root / 'mission-planner-binary-evidence/remaining-managed-members'
@@ -20,7 +21,7 @@ if Path(relative).name != relative or relative in ('.', '..'):
 slug = Path(relative).stem.lower().replace('.', '-')
 out = root / 'mission-planner-binary-evidence' / (slug + '-batches')
 out.mkdir(exist_ok=True)
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 binary = root / 'mission-planner-portable' / relative
 digest = hashlib.sha256(binary.read_bytes()).hexdigest()

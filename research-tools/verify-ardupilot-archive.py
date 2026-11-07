@@ -3,9 +3,10 @@ import hashlib
 import json
 from pathlib import Path
 import zipfile
+from env_paths import ARDUPILOT_ZIP
 
 root = Path(__file__).resolve().parent.parent
-archive = Path(r'C:\Users\think\OneDrive\Desktop\Projects\drone\ardupilot-master.zip')
+archive = ARDUPILOT_ZIP
 tree = json.loads((root / 'research-tools/archive-candidate-tree.json').read_text(encoding='utf-8'))
 if tree.get('truncated') or not isinstance(tree.get('tree'), list):
     raise ValueError('GitHub tree is incomplete')

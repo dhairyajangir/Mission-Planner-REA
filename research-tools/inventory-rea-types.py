@@ -9,9 +9,9 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from env_paths import NODE
 
 ROOT = Path(__file__).resolve().parent.parent
-NODE = Path(r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe')
 CLI = ROOT / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 ASSEMBLY = ROOT / 'mission-planner-binary-evidence/_137'
 NESTED = '--nested' in sys.argv[1:]

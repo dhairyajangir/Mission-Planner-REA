@@ -1,13 +1,14 @@
 """Store omitted Linux symbolic links as Git symlink entries, without dereferencing."""
 from pathlib import Path
 import json, subprocess
+from env_paths import wsl_path
 stage = Path(__file__).resolve().parent.parent
 root = stage.parent
 git_dir = root/'research-upload.git'
 manifest_path = stage/'UPLOAD-MANIFEST.json'
 manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
 paths = [x['path'] for x in manifest['omitted'] if 'symlink' in x['reason'] and not x['path'].endswith('/.git')]
-linux_root = '/mnt/c/Users/think/OneDrive/Documents/ChatGPT/The Drone Project'
+linux_root = wsl_path(root)
 script = ('import json,os,sys; root=sys.argv[1]; paths=json.loads(sys.argv[2]); '
           'print(json.dumps({p:os.readlink(os.path.join(root,p)) for p in paths}))')
 raw = subprocess.check_output(['wsl.exe','-e','python3','-c',script,linux_root,json.dumps(paths)])

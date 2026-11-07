@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 dist = (root / 'mission-planner-portable').resolve()
@@ -17,7 +18,7 @@ manifest = json.loads(manifest_file.read_text()) if manifest_file.exists() else 
     'input_sha256': hashlib.sha256(inventory.read_bytes()).hexdigest(), 'requested': len(inputs), 'results': []}
 if manifest['input_sha256'] != hashlib.sha256(inventory.read_bytes()).hexdigest(): raise ValueError('inventory changed')
 done = {x['path'] for x in manifest['results']}
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 for entry in inputs:
     relative = entry['path']

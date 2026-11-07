@@ -3,6 +3,7 @@ import gzip
 import json
 from pathlib import Path
 import subprocess
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 base = root / 'mission-planner-binary-evidence'
@@ -21,7 +22,7 @@ input_path = out / 'ogr-rea-verification-input.json'
 output_path = out / 'ogr-rea-verification-output.json'
 if input_path.exists() or output_path.exists(): raise FileExistsError(input_path)
 input_path.write_text(json.dumps(payload), encoding='utf-8')
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 result = subprocess.run([node, str(cli), 'verify-managed-native-boundaries', str(input_path), '--json'],
                         capture_output=True, timeout=180)

@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 assembly, selection = sys.argv[1:3]
@@ -17,7 +18,7 @@ stem = Path(assembly).stem.lower().replace('.', '-') + '-' + selection.lower().r
 temporary, result = out / (stem + '.tmp.json'), out / (stem + '.json.gz')
 if temporary.exists() or result.exists(): raise FileExistsError(stem)
 if shutil.disk_usage(root).free < 4 * 1024**3: raise RuntimeError('less than 4 GiB free')
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents-raised-budget/scripts/rea.mjs'
 binary = root / 'mission-planner-portable' / assembly
 with temporary.open('wb') as stream:

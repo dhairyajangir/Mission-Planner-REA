@@ -11,11 +11,12 @@ import shutil
 import subprocess
 import sys
 import traceback
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 evidence = root / 'mission-planner-binary-evidence'
 dist = root / 'mission-planner-portable'
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 out = evidence / 'remaining-managed-members'
 out.mkdir(exist_ok=True)

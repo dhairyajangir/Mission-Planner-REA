@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import sqlite3
+from env_paths import INTEGRATION_DIR
 
 root = Path(__file__).resolve().parent.parent
 source = root / 'ardupilot-source/ardupilot-master'
@@ -17,7 +18,7 @@ names = {'modules/waf':'waf', 'modules/mavlink':'mavlink', 'modules/mavlink/pyma
          'modules/gsoap':'gsoap', 'modules/gtest':'gtest', 'modules/lwip':'lwip',
          'modules/Micro-CDR':'microcdr', 'modules/Micro-XRCE-DDS-Client':'microxrce',
          'modules/DroneCAN/libcanard/drivers/avr/avr-can-lib':'avrcan'}
-target = root / 'integration-research/ardupilot-submodules-index.sqlite'
+target = INTEGRATION_DIR / 'ardupilot-submodules-index.sqlite'
 temporary = target.with_suffix('.sqlite.tmp')
 if target.exists() or temporary.exists(): raise FileExistsError(target)
 db = sqlite3.connect(temporary)

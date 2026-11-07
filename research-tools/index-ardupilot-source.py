@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import sqlite3
+from env_paths import INTEGRATION_DIR
 import subprocess
 import sys
 
@@ -21,7 +22,7 @@ head = subprocess.check_output(['git', '-C', str(source), 'rev-parse', 'HEAD']).
 if head != commit: raise ValueError('source checkout HEAD changed')
 env = dict(os.environ, GIT_NO_LAZY_FETCH='1')
 tree = subprocess.check_output(['git', '-C', str(source), 'ls-tree', '-r', '-z', commit], env=env)
-target = root / ('integration-research/' + project + '-source-index.sqlite')
+target = INTEGRATION_DIR / (project + '-source-index.sqlite')
 temporary = target.with_suffix('.sqlite.tmp')
 if target.exists() or temporary.exists(): raise FileExistsError(target)
 db = sqlite3.connect(temporary)

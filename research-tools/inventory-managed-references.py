@@ -8,11 +8,12 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
 dist = root / 'mission-planner-portable'
 evidence = root / 'mission-planner-binary-evidence'
-node = Path(r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe')
+node = NODE
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 inventory = json.loads((evidence / 'portable-binary-inventory.json').read_text(encoding='utf-8'))
 files = [row for row in inventory['files'] if row['classification'] == 'managed-candidate']

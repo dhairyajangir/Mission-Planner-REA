@@ -3,9 +3,10 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from env_paths import NODE
 
 root = Path(__file__).resolve().parent.parent
-node = r'C:\Users\think\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe'
+node = str(NODE)
 cli = root / 'research-tools/node_modules/rea-agents/scripts/rea.mjs'
 dist = root / 'mission-planner-portable'
 out = root / 'mission-planner-binary-evidence/assemblies'
