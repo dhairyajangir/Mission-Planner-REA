@@ -1,0 +1,13 @@
+GRID_POINTS=5175 NONDETERMINISTIC=0 CASE_ERRORS=0
+EDGE empty-polygon points=0 13ms OK
+EDGE one-point points=0 1ms OK
+EDGE two-points points=20 1ms OK
+EDGE collinear-three points=20 2ms OK
+EDGE identical-four points=0 1ms OK
+EDGE distance-0-clamped points=9748 2397ms OK
+EDGE distance-negative points=19362 2856ms OK
+EDGE spacing-0.05-clamped points=9595 326ms OK
+EDGE distance-1e6 points=0 0ms OK
+EDGE home-start-null-home points=-1 1ms EXCEPTION NullReferenceException
+EDGE utm-zone-boundary points=64 4ms OK
+EDGE nan-latitude-vertex points=0 1ms OK

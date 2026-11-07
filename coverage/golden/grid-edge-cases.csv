@@ -1,0 +1,13 @@
+name,points,elapsed_ms,outcome
+empty-polygon,0,13,OK
+one-point,0,1,OK
+two-points,20,1,OK
+collinear-three,20,2,OK
+identical-four,0,1,OK
+distance-0-clamped,9748,2397,OK
+distance-negative,19362,2856,OK
+spacing-0.05-clamped,9595,326,OK
+distance-1e6,0,0,OK
+home-start-null-home,-1,1,EXCEPTION NullReferenceException
+utm-zone-boundary,64,4,OK
+nan-latitude-vertex,0,0,OK
