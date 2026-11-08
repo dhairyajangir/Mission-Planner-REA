@@ -33,4 +33,17 @@ Take off in GUIDED to about 20 m, switch to the mode, hold a known roll stick wi
 
 ## Not covered
 
-Turtle mode (needs a flipped vehicle) and Autorotate (needs a helicopter frame) were not tested. Logged SystemID data was not analysed. All numbers are one simulated quad on one build; no hardware.
+Turtle mode entry gates were tested separately (see the last section); flipping a crashed vehicle and Autorotate (needs a helicopter frame) were not tested. Logged SystemID data was not analysed. All numbers are one simulated quad on one build; no hardware.
+
+## Turtle mode entry gates
+
+`research-tools/sitl-copter-turtle-entry.py` (run with `run-copter-turtle-entry.sh`, evidence in `sitl-evidence/copter-turtle-entry/`) requests Turtle mode (28) from a fresh disposable Copter SITL in four steps and records the acknowledgement, the reported mode and the vehicle's own messages:
+
+| Step | Result |
+|---|---|
+| 1. defaults, no RC input | refused: ack 4, "Mode change to Turtle failed: init failed" |
+| 2. centred RC override only | refused, same message |
+| 3. `SERVO_DSHOT_ESC=1` only (RC override stopped) | refused, same message |
+| 4. `SERVO_DSHOT_ESC=1` and centred RC override | accepted: ack 0, reported mode 28, "Turtle: raise throttle to arm" |
+
+This matches the source (`ArduCopter/mode_turtle.cpp`: the mode is only enabled with a DShot ESC type, init fails when armed, when the motor-control checks fail or when a stick is off neutral). The refusal message is the same for every gate, so which gate refused in steps 1 to 3 is inferred from the combinations. An earlier first run with three steps could not separate the gates (it only had DShot without RC input before the combined step), which is why the four-step version exists. Arming in Turtle mode and flipping a crashed airframe were not tested.
