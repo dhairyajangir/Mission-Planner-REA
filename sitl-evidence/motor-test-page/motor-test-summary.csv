@@ -1,0 +1,4 @@
+action,window_s,servo1_min,servo1_max,servo2_min,servo2_max,servo3_min,servo3_max,servo4_min,servo4_max,servos_above_idle_by_20us_or_more
+but_TestAll,5.1,1000,1100,1000,1100,1000,1100,1000,1100,servo1 servo2 servo3 servo4
+but_TestAllSeq,14.0,1000,1100,1000,1100,1000,1100,1000,1100,servo1 servo2 servo3 servo4
+but_StopAll,3.1,1000,1000,1000,1000,1000,1000,1000,1000,none
