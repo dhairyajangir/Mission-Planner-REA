@@ -24,4 +24,21 @@ Getting the harness to connect took about eight runs; the page result itself was
 
 ## Not covered
 
-The other Copter setup pages (radio calibration, accelerometer and compass calibration, failsafe, tuning, motor test, frame selection), any page that opens a message box or file dialog, other vehicle types, the main flight data and planner screens, and the unmodified GUI driven by a person. A message box raised by the page would have blocked the harness (60 s limit); none appeared.
+For the flight-modes run: the other Copter setup pages (radio calibration, accelerometer and compass calibration, motor test, frame selection; the failsafe and tuning pages are covered in the section below), any page that opens a file dialog, other vehicle types, the main flight data and planner screens, and the unmodified GUI driven by a person. In that run no message box appeared; a message box would have blocked that harness (60 s limit), because it had no message box hook (the later probe installs one).
+
+## Parameter-bound controls on the failsafe and tuning pages
+
+`research-tools/PageControlsProbe.cs` (run with `run-page-controls-probe.ps1`, evidence in `sitl-evidence/page-controls/`) does the same kind of check across a page: it finds every `MavlinkNumericUpDown` and `MavlinkCheckBox` bound to a parameter that exists on the vehicle, changes it by one step, waits for the page's own write path, reads the parameter back with `GetParam` and puts it back. `MavlinkComboBox` controls are listed but not changed.
+
+| Page | Controls found | Changed | Applied | Restored |
+|---|---|---|---|---|
+| ConfigFailSafe | 4 numeric, 1 check box (2 combo boxes listed) | 4 + 1 | 5 | 5 |
+| ConfigArducopter | 30 numeric (8 combo boxes listed) | 29 | 29 | 29 |
+
+- The tuning page does not write when a control changes: it stages edits and writes them from its private `BUT_writePIDS_Click` handler. All 29 staged edits left the vehicle's old value in place until that handler ran (29 of 29 checked), then all were applied; setting the controls back and writing again restored them.
+- The page asks "has more than doubled the last input" when a value more than doubles (it fires for parameters starting at 0). The harness answered Yes to all five prompts; they are logged in `message-boxes.txt`. `ConfigFailSafe.Activate()` also shows a props warning, logged there as well.
+- The library's message box hook (`CustomMessageBox.ShowEvent`) is set by the full application at start-up. In the harness it is unset, so a message box throws an exception; the probe installs its own handler that records the text and answers Yes.
+
+Failed attempt kept on purpose: the first controls run showed "NOT applied" for all 29 tuning controls and an exception for the failsafe page. The first was the probe's mistake (it expected an immediate write, the page stages); the second was the missing message box hook. Both were fixed in the probe, not in Mission Planner.
+
+Not covered here: combo boxes, the other Copter pages (radio, accelerometer and compass calibration, motor test, battery monitor, frame type), pages that need real sensor or RC input, other vehicle types, and a person using the live application.

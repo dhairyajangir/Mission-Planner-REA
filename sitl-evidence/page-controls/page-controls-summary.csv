@@ -1,0 +1,3 @@
+page,status,detail,numeric_total,numeric_changed,numeric_applied,numeric_restored,checkbox_total,checkbox_changed,checkbox_applied,checkbox_restored,combo_listed
+ConfigFailSafe,ok,,4,4,4,4,1,1,1,1,2
+ConfigArducopter,ok,,30,29,29,29,0,0,0,0,8

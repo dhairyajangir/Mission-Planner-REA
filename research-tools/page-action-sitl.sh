@@ -28,8 +28,9 @@ case $1 in
     ;;
   stop)
     pkill -f 'build/sitl/bin/ardu' 2>/dev/null; sleep 1
-    mkdir -p "$REPO/sitl-evidence/page-actions"
-    cp ~/page-action-sitl/sitl.log "$REPO/sitl-evidence/page-actions/sitl.log"
+    DEST=${2:-$REPO/sitl-evidence/page-actions}      # optional second argument: folder to copy the simulator log into
+    mkdir -p "$DEST"
+    cp ~/page-action-sitl/sitl.log "$DEST/sitl.log"
     echo stopped
     ;;
 esac

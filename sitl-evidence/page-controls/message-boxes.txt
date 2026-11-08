@@ -1,0 +1,6 @@
+ConfigFailSafe | FailSafe | Ensure your props are not on the Plane/Quad
+ConfigArducopter | Large Value | ATC_RAT_YAW_D has more than doubled the last input. Are you sure?
+ConfigArducopter | Large Value | ATC_RAT_RLL_FLTE has more than doubled the last input. Are you sure?
+ConfigArducopter | Large Value | TUNE_MAX has more than doubled the last input. Are you sure?
+ConfigArducopter | Large Value | TUNE_MIN has more than doubled the last input. Are you sure?
+ConfigArducopter | Large Value | ATC_RAT_PIT_FLTE has more than doubled the last input. Are you sure?
