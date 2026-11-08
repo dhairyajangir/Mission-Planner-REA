@@ -42,3 +42,11 @@ For the flight-modes run: the other Copter setup pages (radio calibration, accel
 Failed attempt kept on purpose: the first controls run showed "NOT applied" for all 29 tuning controls and an exception for the failsafe page. The first was the probe's mistake (it expected an immediate write, the page stages); the second was the missing message box hook. Both were fixed in the probe, not in Mission Planner.
 
 Not covered here: combo boxes, the other Copter pages (radio, accelerometer and compass calibration, motor test, battery monitor, frame type), pages that need real sensor or RC input, other vehicle types, and a person using the live application.
+
+## More Copter pages (second controls run)
+
+The same probe was run over 17 more pages (`sitl-evidence/page-controls-2/`): 121 parameter changes (numeric steps and check-box toggles), 121 applied (read back from the vehicle), 121 restored. Pages with such controls: ConfigAC_Fence, ConfigESCCalibration, ConfigHWCompass, ConfigHWCompass2, ConfigHWParachute, ConfigRadioInput, ConfigRadioOutput, ConfigTradHeli4. Pages where no bound numeric or check-box control was found, so nothing was changed: ConfigADSB, ConfigBatteryMonitoring, ConfigBatteryMonitoring2, ConfigFFT, ConfigFrameClassType, ConfigHWOptFlow, ConfigInitialParams, ConfigOSD, ConfigUserDefined (they use other write paths or only combo boxes). `ConfigRadioOutput` accounted for 64 of the changes (48 numeric, 16 check boxes). `ConfigTradHeli4` is the traditional-helicopter page and was driven against the multirotor simulator, so those writes only show the controls work.
+
+One message box appeared: `ConfigAC_Fence` raised "Set FENCE_ENABLE Failed" even though the read-back shows both writes reached the vehicle; the check box's callback re-downloads the parameter list (`ConfigAC_Fence.cs` line 21) and I did not examine why the page reported a failure. Combo boxes were not changed in either run.
+
+The first controls run's results are in `sitl-evidence/page-controls/` (kept separate on purpose; this run first overwrote them in the working tree and they were restored from the commit).
