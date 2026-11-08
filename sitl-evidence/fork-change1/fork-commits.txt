@@ -1,0 +1,4 @@
+bc3373d2 AP_Math: check_lat/check_lng(int32_t) compare against exact integer limits
+2d30d4a5 AP_Math: check_lat/check_lng(float) reject non-finite input before comparing
+0af0c875 test: check_lat/check_lng must reject NaN and infinity and be exact at the integer limits
+e6811902 Baseline: ArduPilot snapshot 72b238201f5ea3b556e3809b2ec704fcf701474a (unchanged upstream tree)

@@ -1,0 +1,103 @@
+From 0af0c875922904253f0b49d0d905b028489535eb Mon Sep 17 00:00:00 2001
+From: ardupilot-rea fork <fork@localhost>
+Date: Sun, 8 Nov 2026 19:40:03 +0000
+Subject: [PATCH 1/3] test: check_lat/check_lng must reject NaN and infinity
+ and be exact at the integer limits
+
+Without the fix the NaN case dies with SIGFPE (SITL enables FE_INVALID) and the integer limit case accepts one unit past the limit.
+---
+ libraries/AP_Math/tests/test_check_latlng.cpp | 82 +++++++++++++++++++
+ 1 file changed, 82 insertions(+)
+ create mode 100755 libraries/AP_Math/tests/test_check_latlng.cpp
+
+diff --git a/libraries/AP_Math/tests/test_check_latlng.cpp b/libraries/AP_Math/tests/test_check_latlng.cpp
+new file mode 100755
+index 00000000..92836aa4
+--- /dev/null
++++ b/libraries/AP_Math/tests/test_check_latlng.cpp
+@@ -0,0 +1,82 @@
++/*
++  Unit test for check_lat/check_lng/check_latlng (float and int32 overloads) with non-finite input.
++
++  SITL turns on floating point exceptions (feenableexcept(FE_INVALID), AP_HAL_SITL/Scheduler.cpp), and an ordered
++  comparison such as fabsf(NaN) <= 90 then raises SIGFPE. This test enables the same trap around the calls, so on the
++  unpatched code it kills the test process and on the patched code it passes.
++ */
++#include <AP_gtest.h>
++
++#include <AP_Math/AP_Math.h>
++
++#include <cmath>
++#if defined(__GLIBC__)
++#include <fenv.h>
++#endif
++
++AP_GTEST_PANIC()
++
++// every AP_HAL based test program defines hal; without it the SITL libraries do not link
++const AP_HAL::HAL& hal = AP_HAL::get_HAL();
++
++namespace {
++// enable the invalid-operation trap for the lifetime of the object
++class TrapInvalid {
++public:
++    TrapInvalid() {
++#if defined(__GLIBC__)
++        feclearexcept(FE_ALL_EXCEPT);
++        feenableexcept(FE_INVALID);
++#endif
++    }
++    ~TrapInvalid() {
++#if defined(__GLIBC__)
++        fedisableexcept(FE_INVALID);
++#endif
++    }
++};
++}
++
++TEST(CheckLatLng, FiniteValuesKeepTheirMeaning)
++{
++    EXPECT_TRUE(check_lat(0.0f));
++    EXPECT_TRUE(check_lat(90.0f));
++    EXPECT_TRUE(check_lat(-90.0f));
++    EXPECT_FALSE(check_lat(90.1f));
++    EXPECT_TRUE(check_lng(180.0f));
++    EXPECT_FALSE(check_lng(-180.1f));
++    EXPECT_TRUE(check_latlng(-35.363261f, 149.165230f));
++    EXPECT_FALSE(check_latlng(91.0f, 0.0f));
++    EXPECT_TRUE(check_lat(int32_t(450000000)));
++    EXPECT_FALSE(check_lat(int32_t(950000000)));
++    EXPECT_TRUE(check_lng(int32_t(-900000000)));
++    EXPECT_FALSE(check_lng(int32_t(1900000000)));
++}
++
++// The integer overloads compare against 90*1e7 / 180*1e7. With -fsingle-precision-constant those constants are floats,
++// so the comparison is done in float and a value one unit past the limit rounds back onto it and is accepted.
++TEST(CheckLatLng, IntegerLimitsAreExact)
++{
++    EXPECT_TRUE(check_lat(int32_t(900000000)));
++    EXPECT_FALSE(check_lat(int32_t(900000001)));
++    EXPECT_TRUE(check_lat(int32_t(-900000000)));
++    EXPECT_FALSE(check_lat(int32_t(-900000001)));
++    EXPECT_TRUE(check_lng(int32_t(1800000000)));
++    EXPECT_FALSE(check_lng(int32_t(1800000001)));
++    EXPECT_FALSE(check_lng(int32_t(-1800000001)));
++}
++
++TEST(CheckLatLng, NonFiniteFloatIsRejectedWithoutRaisingFloatingPointException)
++{
++    TrapInvalid trap;
++    const float nan = std::nanf("");
++    const float inf = INFINITY;
++    EXPECT_FALSE(check_lat(nan));
++    EXPECT_FALSE(check_lng(nan));
++    EXPECT_FALSE(check_lat(inf));
++    EXPECT_FALSE(check_lng(-inf));
++    EXPECT_FALSE(check_latlng(nan, 0.0f));
++    EXPECT_FALSE(check_latlng(0.0f, nan));
++}
++
++AP_GTEST_MAIN()
+-- 
+2.43.0
+

@@ -1,0 +1,24 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from CheckLatLng
+[ RUN      ] CheckLatLng.FiniteValuesKeepTheirMeaning
+[       OK ] CheckLatLng.FiniteValuesKeepTheirMeaning (0 ms)
+[ RUN      ] CheckLatLng.IntegerLimitsAreExact
+../../libraries/AP_Math/tests/test_check_latlng.cpp:61: Failure
+Value of: check_lat(int32_t(900000001))
+  Actual: true
+Expected: false
+../../libraries/AP_Math/tests/test_check_latlng.cpp:63: Failure
+Value of: check_lat(int32_t(-900000001))
+  Actual: true
+Expected: false
+../../libraries/AP_Math/tests/test_check_latlng.cpp:65: Failure
+Value of: check_lng(int32_t(1800000001))
+  Actual: true
+Expected: false
+../../libraries/AP_Math/tests/test_check_latlng.cpp:66: Failure
+Value of: check_lng(int32_t(-1800000001))
+  Actual: true
+Expected: false
+[  FAILED  ] CheckLatLng.IntegerLimitsAreExact (0 ms)
+[ RUN      ] CheckLatLng.NonFiniteFloatIsRejectedWithoutRaisingFloatingPointException

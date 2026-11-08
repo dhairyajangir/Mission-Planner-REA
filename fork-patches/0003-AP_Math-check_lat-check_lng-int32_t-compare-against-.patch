@@ -1,0 +1,33 @@
+From bc3373d2b03e3bb0a686202bc7ff7b654acb46ea Mon Sep 17 00:00:00 2001
+From: ardupilot-rea fork <fork@localhost>
+Date: Sun, 8 Nov 2026 19:40:43 +0000
+Subject: [PATCH 3/3] AP_Math: check_lat/check_lng(int32_t) compare against
+ exact integer limits
+
+90*1e7 is a float constant when built with -fsingle-precision-constant, so a value one unit past the limit rounded onto it and was accepted.
+---
+ libraries/AP_Math/location.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/libraries/AP_Math/location.cpp b/libraries/AP_Math/location.cpp
+index 941bd20b..34e5df99 100755
+--- a/libraries/AP_Math/location.cpp
++++ b/libraries/AP_Math/location.cpp
+@@ -47,11 +47,12 @@ bool check_lng(float lng)
+ }
+ bool check_lat(int32_t lat)
+ {
+-    return labs(lat) <= 90*1e7;
++    // integer limit: 90*1e7 is a float constant under -fsingle-precision-constant and the comparison would round
++    return labs(lat) <= 900000000L;
+ }
+ bool check_lng(int32_t lng)
+ {
+-    return labs(lng) <= 180*1e7;
++    return labs(lng) <= 1800000000L;
+ }
+ bool check_latlng(float lat, float lng)
+ {
+-- 
+2.43.0
+

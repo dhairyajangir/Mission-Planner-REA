@@ -1,0 +1,2 @@
+build exit=0
+test exit=136 (139 = SIGSEGV, 136 = SIGFPE)

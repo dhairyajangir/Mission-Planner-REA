@@ -1,0 +1,27 @@
+Output of research-tools/fork-change1-sitl.sh (copied verbatim from the run's console output, 8 Nov 2026).
+Fork head: bc3373d2. Copter SITL built from the fork; float MISSION_ITEM replay under gdb.
+
+fork head: bc3373d2 AP_Math: check_lat/check_lng(int32_t) compare against exact integer limits
+copter build exit=0
+=== variant nan
+request after count: None None
+request after item 0: None None
+ack: 10
+gdb exit 0
+SIGFPE lines in gdb log: 0
+=== variant inf
+request after count: None None
+request after item 0: None None
+ack: 10
+gdb exit 0
+SIGFPE lines in gdb log: 0
+=== variant valid
+request after count: None None
+request after item 0: None None
+ack: 1
+gdb exit 0
+SIGFPE lines in gdb log: 0
+
+Notes: ack 10 = MAV_MISSION_INVALID_PARAM5_X, ack 1 = MAV_MISSION_ERROR. "request after ..." printed None in all variants (the script
+does not receive MISSION_REQUEST messages), the same as in the baseline replay described in Mission-File-Trace.md; the valid control
+returning ack 1 was also seen in the baseline. Baseline (unpatched) NaN result: SIGFPE in check_lat(float), see sitl-evidence/nan-wp-gdb/.

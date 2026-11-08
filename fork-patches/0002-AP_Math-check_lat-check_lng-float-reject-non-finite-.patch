@@ -1,0 +1,33 @@
+From 2d30d4a5c7708bfe4a21b3d3e4cff7bc55c01ecd Mon Sep 17 00:00:00 2001
+From: ardupilot-rea fork <fork@localhost>
+Date: Sun, 8 Nov 2026 19:40:31 +0000
+Subject: [PATCH 2/3] AP_Math: check_lat/check_lng(float) reject non-finite
+ input before comparing
+
+An ordered comparison with NaN raises FE_INVALID; SITL enables that trap, so a MISSION_ITEM with NaN latitude killed the simulator with SIGFPE.
+---
+ libraries/AP_Math/location.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/libraries/AP_Math/location.cpp b/libraries/AP_Math/location.cpp
+index 1d501e68..941bd20b 100755
+--- a/libraries/AP_Math/location.cpp
++++ b/libraries/AP_Math/location.cpp
+@@ -38,11 +38,12 @@ float get_bearing_cd(const Vector2f &origin, const Vector2f &destination)
+ // return true when lat and lng are within range
+ bool check_lat(float lat)
+ {
+-    return fabsf(lat) <= 90;
++    // isfinite() first: an ordered comparison with NaN raises FE_INVALID, which SITL turns into SIGFPE
++    return isfinite(lat) && fabsf(lat) <= 90;
+ }
+ bool check_lng(float lng)
+ {
+-    return fabsf(lng) <= 180;
++    return isfinite(lng) && fabsf(lng) <= 180;
+ }
+ bool check_lat(int32_t lat)
+ {
+-- 
+2.43.0
+
