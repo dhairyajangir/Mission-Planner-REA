@@ -1,0 +1,8 @@
+list_size,removed,largest_kept_dist,smallest_removed_dist
+15,0,15,
+16,1,15,16
+17,1,16,17
+31,1,30,31
+32,2,30,31
+100,6,94,95
+400,25,375,376

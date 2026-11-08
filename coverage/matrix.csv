@@ -67,7 +67,7 @@ mp-module:SoftwareConfig,mp-module,SoftwareConfig,mission-planner-1.3.83-source/
 mp-module:Help,mp-module,Help,mission-planner-1.3.83-source/GCSViews/Help.cs,2,,,L3+gui,,,,,
 mp-module:SITL,mp-module,SITL,mission-planner-1.3.83-source/GCSViews/SITL.cs,2,,,L3+gui,,,,,
 mp-module:MainV2,mp-module,MainV2,mission-planner-1.3.83-source/MainV2.cs,2,,,L3+gui,,,,,
-mp-module:MagCalib,mp-module,MagCalib,mission-planner-1.3.83-source/MagCalib.cs,2,,,L3+gui,,,,,
+mp-module:MagCalib,mp-module,MagCalib,mission-planner-1.3.83-source/MagCalib.cs,3,,none,L3+gui,,partial,Compass-Fit-Trace.md;coverage/golden/mag-fit-data.csv;coverage/golden/mag-fit-results.csv;coverage/golden/mag-fit-outliers.csv;coverage/golden/mag-fit-probe-output.txt;research-tools/MagCalibFitProbe.cs,043cf3b67f0b;4b35872b9aa9;e8ae97004563;62e219beb4b6;47031056770b;74e4d7d0c92e,"LeastSq and RemoveOutliers on synthetic data only; collection, save path and GUI not run."
 mp-module:Controls,mp-module,Controls,mission-planner-1.3.83-source/Controls,2,,,L3+gui,,,,,
 mp-module:Plugin,mp-module,Plugin,mission-planner-1.3.83-source/Plugin,3,,none,L3+gui,,partial,Plugin-Lifecycle-Trace.md,d5b94e495349,Loader harness only.
 mp-module:Grid,mp-module,Grid,mission-planner-1.3.83-source/Grid,3,,none,L3+gui,,partial,Grid-Workflow-Trace.md;coverage/golden/grid-cases.csv;coverage/golden/grid-points.csv;coverage/golden/grid-polygons.csv;coverage/golden/grid-edge-cases.csv;coverage/golden/grid-probe-output.txt;research-tools/GridGoldenProbe.cs,64dba2afddc8;113f4e1ab374;1c7a67a53114;b470d926f86a;ae7226dbbda5;50d0d6178c20;1278efef4942,"CreateGrid only (library probe, no vehicle); corridor/spiral generators and GridUI mission emission not run."
@@ -116,7 +116,7 @@ ap-lib:AP_Camera,ap-lib,AP_Camera,ardupilot-source/ardupilot-master/libraries/AP
 ap-lib:AP_CANManager,ap-lib,AP_CANManager,ardupilot-source/ardupilot-master/libraries/AP_CANManager,0,,,L3,,,,,
 ap-lib:AP_CheckFirmware,ap-lib,AP_CheckFirmware,ardupilot-source/ardupilot-master/libraries/AP_CheckFirmware,0,,,L3,,,,,
 ap-lib:AP_Common,ap-lib,AP_Common,ardupilot-source/ardupilot-master/libraries/AP_Common,0,,,L3,,,,,
-ap-lib:AP_Compass,ap-lib,AP_Compass,ardupilot-source/ardupilot-master/libraries/AP_Compass,0,,,L3,,,,,
+ap-lib:AP_Compass,ap-lib,AP_Compass,ardupilot-source/ardupilot-master/libraries/AP_Compass,1,,,L3,,,,,
 ap-lib:AP_CRSF,ap-lib,AP_CRSF,ardupilot-source/ardupilot-master/libraries/AP_CRSF,0,,,L3,,,,,
 ap-lib:AP_CSVReader,ap-lib,AP_CSVReader,ardupilot-source/ardupilot-master/libraries/AP_CSVReader,0,,,L3,,,,,
 ap-lib:AP_CustomControl,ap-lib,AP_CustomControl,ardupilot-source/ardupilot-master/libraries/AP_CustomControl,0,,,L3,,,,,
@@ -361,3 +361,4 @@ ledger:accelerometer-calibration,ledger,accelerometer-calibration,Reverse-Engine
 ledger:org-repositories,ledger,org-repositories,Reverse-Engineering-Coverage.md,1,,none,L3+fault,,partial,ArduPilot-Organization-Inventory.md,b1e6d6cea9e9,Inventory of 86 repositories; most not reviewed.
 ledger:joystick-control,ledger,joystick-control,Reverse-Engineering-Coverage.md,3,,none,L3+fault,,partial,Joystick-Workflow-Trace.md;coverage/golden/joystick-pickchannel.csv;coverage/golden/joystick-probe-output.txt;research-tools/JoystickMappingProbe.cs,44760c2bacf3;b85b18b2ab8b;15cdb5939d83;33699111e2b0,"Mapping and lifecycle of the original JoystickBase only; no fault injection, no GUI."
 ledger:survey-grid,ledger,survey-grid,Reverse-Engineering-Coverage.md,3,,none,L3+fault,,partial,Grid-Workflow-Trace.md;coverage/golden/grid-cases.csv;coverage/golden/grid-points.csv;coverage/golden/grid-polygons.csv;coverage/golden/grid-edge-cases.csv;coverage/golden/grid-probe-output.txt;research-tools/GridGoldenProbe.cs,64dba2afddc8;113f4e1ab374;1c7a67a53114;b470d926f86a;ae7226dbbda5;50d0d6178c20;1278efef4942,"Grid generator golden vectors and degenerate inputs; no flight test, no GUI."
+ledger:compass-fit,ledger,compass-fit,Reverse-Engineering-Coverage.md,3,,none,L3+fault,,partial,Compass-Fit-Trace.md;coverage/golden/mag-fit-data.csv;coverage/golden/mag-fit-results.csv;coverage/golden/mag-fit-outliers.csv;coverage/golden/mag-fit-probe-output.txt;research-tools/MagCalibFitProbe.cs,043cf3b67f0b;4b35872b9aa9;e8ae97004563;62e219beb4b6;47031056770b;74e4d7d0c92e,"Legacy offboard fit on synthetic data; no real magnetometer data, no vehicle."
