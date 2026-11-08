@@ -1,0 +1,2 @@
+start Sun Nov  8 17:32:50 UTC 2026 steps=build.Copter test.Copter.SMART_RTL_Repeat test.Copter.SMART_RTL_EnterLeave test.Copter.FlyMissionTwice speedup=1
+exit=1 Sun Nov  8 18:19:12 UTC 2026

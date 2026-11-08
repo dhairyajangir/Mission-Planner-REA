@@ -234,3 +234,433 @@ Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkStatuste
 Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,Scripting,"Scripting test",PASSED
 Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkHeaderTargets,"Wide target headers route independently of source ID width.",PASSED
 Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkTimesyncRTT,"Request cookies must not contribute to RTT, even across ID changes.",PASSED
+Copter-speedup8-run1,Copter.log,PIDTuning,"Test PID Tuning",PASSED
+Copter-speedup8-run1,Copter.log,ArmFeatures,"Arm features",PASSED
+Copter-speedup8-run1,Copter.log,SetHome,"Setting and fetching of home",PASSED
+Copter-speedup8-run1,Copter.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+Copter-speedup8-run1,Copter.log,CPUFailsafe,"Ensure we do something appropriate when the main loop stops",PASSED
+Copter-speedup8-run1,Copter.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+Copter-speedup8-run1,Copter.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+Copter-speedup8-run1,Copter.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+Copter-speedup8-run1,Copter.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+Copter-speedup8-run1,Copter.log,Logging,"Test Onboard Logging",PASSED
+Copter-speedup8-run1,Copter.log,GetCapabilities,"Get Capabilities",PASSED
+Copter-speedup8-run1,Copter.log,InitialMode,"Test initial mode switching",PASSED
+Copter-speedup8-run1,Copter.log,SetModesViaModeSwitch,"Set modes via modeswitch",PASSED
+Copter-speedup8-run1,Copter.log,WPArcs2,"more tests for waypoint arcs",PASSED
+Copter-speedup8-run1,Copter.log,BatteryFailsafeBrakeLandNoGPS,"Battery failsafe brake/land action falls back to LAND without GPS",PASSED
+Copter-speedup8-run1,Copter.log,AC_Avoidance_Proximity,"Test proximity avoidance slide behaviour",PASSED
+Copter-speedup8-run1,Copter.log,AC_Avoidance_Fence,"Test fence avoidance slide behaviour",PASSED
+Copter-speedup8-run1,Copter.log,SetpointGlobalVel,"Test set position message in guided mode.",PASSED
+Copter-speedup8-run1,Copter.log,SetpointBadVel,"try feeding in a very, very bad velocity and make sure it is ignored",PASSED
+Copter-speedup8-run1,Copter.log,ModeLoiter,"Hold loiter position.",PASSED
+Copter-speedup8-run1,Copter.log,CompassHealthArming,"compass-health arming check honours the ARMING_CHECK compass bit",PASSED
+Copter-speedup8-run1,Copter.log,OpticalFlowLocation,"test optical flow doesn't supply location",PASSED
+Copter-speedup8-run1,Copter.log,OpticalFlowCalibration,"test optical flow calibration",PASSED
+Copter-speedup8-run1,Copter.log,BeaconPosition,"Fly Beacon Position over each beacon backend type",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_DO_SET_ROI_WPNEXT_OFFSET,"check the MAV_CMD_DO_SET_ROI_WPNEXT_OFFSET mission item",PASSED
+Copter-speedup8-run1,Copter.log,SurfaceTracking,"Test Surface Tracking",PASSED
+Copter-speedup8-run1,Copter.log,SurfaceTracking2,"test the AP_SurfaceDistance library parameters",PASSED
+Copter-speedup8-run1,Copter.log,FlyRangeFinderMAVlink,"fly mavlink-connected rangefinder",PASSED
+Copter-speedup8-run1,Copter.log,FlyRangeFinderSITL,"fly the type=100 perfect rangefinder",PASSED
+Copter-speedup8-run1,Copter.log,RangeFinderDriversMaxAlt_AinsteinLRD1,"test max-height behaviour - Ainstein LRD1 - pre v19.0.0 firmware",PASSED
+Copter-speedup8-run1,Copter.log,RangeFinderDriversMaxAlt_AinsteinLRD1_v19,"test max-height behaviour - Ainstein LRD1 - v19.0.0 firmware",PASSED
+Copter-speedup8-run1,Copter.log,AltTypes,"Test Different Altitude Types",PASSED
+Copter-speedup8-run1,Copter.log,MAVLandedStateTakeoff,"check EXTENDED_SYS_STATE message",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_NAV_RETURN_TO_LAUNCH,"ensure MAV_CMD_NAV_RETURN_TO_LAUNCH via mavlink works",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToHomeMaxAltOriginAbove,"fence max-alt relative to home when origin is above home",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToHomeCliff,"home-relative min fence below arming altitude requires cliff to breach",PASSED
+Copter-speedup8-run1,Copter.log,DynamicRpmNotches,"Use dynamic harmonic notch to control motor noise via ESC telemetry.",PASSED
+Copter-speedup8-run1,Copter.log,DynamicRpmNotchesRateThread,"Use dynamic harmonic notch to control motor noise via ESC telemetry.",PASSED
+Copter-speedup8-run1,Copter.log,RateThreadPostFilterGyroLog,"Check post-filter gyro logging records every sample while the rate thread decimates.",PASSED
+Copter-speedup8-run1,Copter.log,DynamicRpmNotchesESCMask,"Check INS_HNTCH_ESCMSK excludes motors from the ESC telemetry notch.",PASSED
+Copter-speedup8-run1,Copter.log,WPYawBehaviour1RTL,"ensure behaviour 1 (face home) works in RTL",PASSED
+Copter-speedup8-run1,Copter.log,AHRSSwitchBackendPositionNEReset,"vehicle must not lurch when the active AHRS estimator is changed with divergent NE positions",PASSED
+Copter-speedup8-run1,Copter.log,GPSForYawAttitudeCorrection,"Moving baseline GPS yaw must correct for vehicle roll/pitch, incl. under a large board mounting trim",PASSED
+Copter-speedup8-run1,Copter.log,EK3_RNG_USE_HGT,"basic tests for using rangefinder when speed and height below thresholds",PASSED
+Copter-speedup8-run1,Copter.log,NoRC,"check what happens if we fly with no RC",PASSED
+Copter-speedup8-run1,Copter.log,ThrottleGainBoost,"Use PD and Angle P boost for anti-gravity.",PASSED
+Copter-speedup8-run1,Copter.log,ScriptMountPOI,"test the MountPOI example script",PASSED
+Copter-speedup8-run1,Copter.log,GuidedYawRate,"ensuer guided yaw rate is not affected by rate of sewt-attitude messages",PASSED
+Copter-speedup8-run1,Copter.log,MISSION_OPTION_CLEAR_MISSION_AT_BOOT,"check functionality of mission-clear-at-boot option",PASSED
+Copter-speedup8-run1,Copter.log,SafetySwitch,"test safety switch behaviour",PASSED
+Copter-speedup8-run1,Copter.log,HomeCircleInclusionFence_SetHome,"manipulate home position while using HOME_CIRCLE_FENCE",PASSED
+Copter-speedup8-run1,Copter.log,HomeCircleInclusionFence_Avoidance_SetHome,"Avoidance tracks home-circle fence boundary after home is relocated mid-flight",PASSED
+Copter-speedup8-run1,Copter.log,BatteryInternalUseOnly,"batteries marked as internal use only should not appear over mavlink",PASSED
+Copter-speedup8-run1,Copter.log,CommonOriginExternalAHRS,"ensure an ExternalAHRS origin is shared into EKF2 and EKF3",PASSED
+Copter-speedup8-run1,Copter.log,CommonOriginExternalAHRSReceives,"ensure an EKF-established origin is shared into the ExternalAHRS",PASSED
+Copter-speedup8-run1,Copter.log,AHRSExternalNoAttitudeAirspeedIndex,"the External AHRS backend reports which airspeed sensor is in",PASSED
+Copter-speedup8-run1,Copter.log,TestTetherStuck,"Test tethered vehicle stuck because of tether",PASSED
+Copter-speedup8-run1,Copter.log,EK3_EXT_NAV_vel_without_vert,"Test that EK3 External Navigation velocity works without vertical velocity.",PASSED
+Copter-speedup8-run1,Copter.log,test_EKF3_option_disable_lane_switch,"Test that EK3_OPTION disables lane switching, and EK3_PRIMARY forces switch when re-enabled",PASSED
+Copter-speedup8-run1,Copter.log,UTMGlobalPositionWaypoint,"test UTM_GLOBAL_POSITION waypoint fields in AUTO and GUIDED",PASSED
+Copter-speedup8-run1,Copter.log,DroneCANCompass,"check the compass in a simulated DroneCAN peripheral",PASSED
+Copter-speedup8-run1,Copter.log,NavDelayTakeoffAbsTime,"make sure taking off at a specific time works",PASSED
+Copter-speedup8-run1,Copter.log,NavDelay,"Fly a simple mission that has a delay in it.",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_CONDITION_YAW,"Test response to MAV_CMD_CONDITION_YAW via mavlink",PASSED
+Copter-speedup8-run1,Copter.log,SetModesViaAuxSwitch,"""Set modes via auxswitch""",PASSED
+Copter-speedup8-run1,Copter.log,AuxSwitchOptions,"Test random aux mode options",PASSED
+Copter-speedup8-run1,Copter.log,BrakeMode,"Fly Brake Mode",PASSED
+Copter-speedup8-run1,Copter.log,ThrottleFailsafePassthrough,"check servo passthrough on RC failsafe.  Make sure it doesn't glitch to the bad RC input value",PASSED
+Copter-speedup8-run1,Copter.log,ThrottleFailsafeValue,"check the throttle failsafe triggers on FS_THR_VALUE itself",PASSED
+Copter-speedup8-run1,Copter.log,BatteryMissing," Test battery health pre-arm and missing failsafe",PASSED
+Copter-speedup8-run1,Copter.log,VibrationFailsafe,"Test Vibration Failsafe",PASSED
+Copter-speedup8-run1,Copter.log,VibrationCompensationThrottle,"check throttle does not oscillate while vibration compensation is active",PASSED
+Copter-speedup8-run1,Copter.log,EK3_AccelBiasInhibitOnGroundMoving,"Test EKF3 inhibits accel bias learning when vehicle is moved on ground",PASSED
+Copter-speedup8-run1,Copter.log,EK3_ZeroVelFusionNotUsedWithGPS,"Test EKF3 zero velocity changes do not affect GPS-enabled setups",PASSED
+Copter-speedup8-run1,Copter.log,OBSTACLE_DISTANCE_3D,"Check round-trip behaviour of distance sensors",PASSED
+Copter-speedup8-run1,Copter.log,AC_Avoidance_Beacon,"Test beacon avoidance slide behaviour",PASSED
+Copter-speedup8-run1,Copter.log,BaroWindCorrection,"Test wind estimation and baro position error compensation",PASSED
+Copter-speedup8-run1,Copter.log,SplineTerrain,"Test Splines and Terrain",PASSED
+Copter-speedup8-run1,Copter.log,HorizontalAvoidFence,"Test horizontal Avoidance fence",PASSED
+Copter-speedup8-run1,Copter.log,ModeFlowHold,"test FlowHold mode - position hold and flow-based height estimation",PASSED
+Copter-speedup8-run1,Copter.log,SplineLastWaypoint,"Test Spline as last waypoint",PASSED
+Copter-speedup8-run1,Copter.log,SplineNavDelay,"Test spline waypoint followed by NAV_DELAY with ignored time fields",PASSED
+Copter-speedup8-run1,Copter.log,ATTITUDE_FAST,"ensure that when ATTITUDE_FAST is set we get many messages",PASSED
+Copter-speedup8-run1,Copter.log,PosHoldTakeOff,"ensure vehicle stays put until it is ready to fly",PASSED
+Copter-speedup8-run1,Copter.log,ParameterValidation,"Test parameters are checked for validity",PASSED
+Copter-speedup8-run1,Copter.log,IE24,"Test IntelligentEnergy 2.4kWh generator with V1 and V2 telemetry protocols",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToHomeMaxAlt,"fence max-alt threshold is measured relative to home, not EKF origin",PASSED
+Copter-speedup8-run1,Copter.log,PIDNotches,"Use dynamic harmonic notch to control motor noise.",PASSED
+Copter-speedup8-run1,Copter.log,mission_NAV_LOITER_TURNS_zero_radius,"radius-0 LOITER_TURNS holds position and spins yaw at CIRCLE_RATE (panorama)",PASSED
+Copter-speedup8-run1,Copter.log,SixCompassCalibrationAndReordering,"Test reordering of 6 simulated compasses by changing priority and appearance order",PASSED
+Copter-speedup8-run1,Copter.log,AltEstimation,"Test that Alt Estimation is mandatory for ALT_HOLD",PASSED
+Copter-speedup8-run1,Copter.log,FlyEachFrame,"Fly each supported internal frame",PASSED
+Copter-speedup8-run1,Copter.log,GPSBlendingLog,"Test GPS Blending",PASSED
+Copter-speedup8-run1,Copter.log,GPSBlendingAffinity,"test blending when affinity in use",PASSED
+Copter-speedup8-run1,Copter.log,ProximitySensors,"ensure proximity sensors return appropriate data",PASSED
+Copter-speedup8-run1,Copter.log,MISSION_START,"test mavlink command MAV_CMD_MISSION_START",PASSED
+Copter-speedup8-run1,Copter.log,AUTO_LAND_TO_BRAKE,"ensure terrain altitude is taken into account when braking",PASSED
+Copter-speedup8-run1,Copter.log,GPS_INPUT,"Test GPS data injected via the GPS_INPUT MAVLink message (GPS_TYPE=MAV)",PASSED
+Copter-speedup8-run1,Copter.log,ScriptMountAllModes,"test location from all mount modes using the scripting backend",PASSED
+Copter-speedup8-run1,Copter.log,MountTopotek,"test Topotek gimbal using SIM_Topotek simulator",PASSED
+Copter-speedup8-run1,Copter.log,MountAVTCM62,"test MAVLink (Gimbal Protocol v2) gimbal using SIM_AVT_CM62 simulator",PASSED
+Copter-speedup8-run1,Copter.log,MountMAVLinkROI,"route ROI and angle commands independently through two MAVLink mounts",PASSED
+Copter-speedup8-run1,Copter.log,MountMAVLinkTargetRefresh,"send changed gimbal commands immediately and refresh retained commands",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraCaptureStatus,"expire missing camera status and retain locally scheduled interval capture",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkUnicast,"unicast links forward addressed traffic but isolate broadcasts",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraRelay,"relay isolated camera broadcasts without losing camera identity",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraSelectors,"select cameras by component ID or legacy slot without confusing stream IDs",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraComponentIDs,"reject invalid or colliding camera component IDs without duplicate relays",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraMixed,"a native camera and an FC-owned camera must remain separate endpoints",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkCameraStreams,"complete a bounded stream list over a link smaller than the reply",PASSED
+Copter-speedup8-run1,Copter.log,MT11MAVFTP,"list and download the simulated camera definition through a unicast link",PASSED
+Copter-speedup8-run1,Copter.log,MT11MAVFTP32bit,"Camera discovery, telemetry and FTP with wide vehicle and GCS IDs.",PASSED
+Copter-speedup8-run1,Copter.log,MountMT11,"test the MAVLink camera and gimbal protocols using SIM_MT11",PASSED
+Copter-speedup8-run1,Copter.log,MountMT11Telemetry,"verify MT11 targeting uses only telemetry requested on its private link",PASSED
+Copter-speedup8-run1,Copter.log,IMUConsistency,"test IMUs must be consistent with one another",PASSED
+Copter-speedup8-run1,Copter.log,WaitAndMaintainAttitude_RCFlight,"just test WaitAndMaintainAttitude works",PASSED
+Copter-speedup8-run1,Copter.log,HomeCircleInclusionFence_MultipleHomeCircle,"upload multiple circles; should breach passing the innermost",PASSED
+Copter-speedup8-run1,Copter.log,HomeCircleInclusionFence_Avoidance,"Avoidance holds vehicle inside home-centered circle inclusion fence",PASSED
+Copter-speedup8-run1,Copter.log,HomeAltResetTest,"fly mission from cliff top to water, land, then RTL to cliff top",PASSED
+Copter-speedup8-run1,Copter.log,AuxFunctionsInMission,"Test use of auxiliary functions in missions",PASSED
+Copter-speedup8-run1,Copter.log,ThrowModeRPMMin,"Fly Throw Mode - with a minimum RPM set",PASSED
+Copter-speedup8-run1,Copter.log,GCSFailsafe,"Test GCS Failsafe",PASSED
+Copter-speedup8-run1,Copter.log,StabilityPatch,"Fly stability patch",PASSED
+Copter-speedup8-run1,Copter.log,AC_Avoidance_Proximity_AVOID_ALT_MIN,"Test proximity avoidance with AVOID_ALT_MIN",PASSED
+Copter-speedup8-run1,Copter.log,SetpointGlobalPos,"Test set position message in guided mode.",PASSED
+Copter-speedup8-run1,Copter.log,TakeoffCheck,"Test takeoff check",PASSED
+Copter-speedup8-run1,Copter.log,MaxAltFenceAvoid,"Test Max Alt Fence Avoidance",PASSED
+Copter-speedup8-run1,Copter.log,GPSGlitchLoiter2,"test vehicle handles GPS glitch (aka EKF Reset) without twitching",PASSED
+Copter-speedup8-run1,Copter.log,SuperSimpleCircle,"Fly a circle in SUPER SIMPLE mode",PASSED
+Copter-speedup8-run1,Copter.log,MagFail,"test failover of compass in EKF",PASSED
+Copter-speedup8-run1,Copter.log,LoiterNoCompassYaw,"Loiter indoors with optical flow and no GPS, compass not an EK3 yaw source",PASSED
+Copter-speedup8-run1,Copter.log,CopterMission,"fly mission which tests a significant number of commands",PASSED
+Copter-speedup8-run1,Copter.log,TakeoffAlt,"Test Takeoff command altitude",PASSED
+Copter-speedup8-run1,Copter.log,AutoYawDO_MOUNT_CONTROL,"test AutoYaw behaviour when MAV_CMD_DO_MOUNT_CONTROL sent to Mount without Yaw control",PASSED
+Copter-speedup8-run1,Copter.log,ParameterChecks,"Test Arming Parameter Checks",PASSED
+Copter-speedup8-run1,Copter.log,ModeFollow_with_FOLLOW_TARGET,"test ModeFollow passing in FOLLOW_TARGET messages",PASSED
+Copter-speedup8-run1,Copter.log,MAVLinkRangeFinderIDs,"test multiple MAVLink rangefinders selected by DISTANCE_SENSOR id",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_NAV_LOITER_UNLIM,"ensure MAV_CMD_NAV_LOITER_UNLIM via mavlink works",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativePreArms,"test fence altitude types",PASSED
+Copter-speedup8-run1,Copter.log,mission_NAV_LOITER_TURNS_off_center,"test that loiter turns basically works - copter on edge of circle",PASSED
+Copter-speedup8-run1,Copter.log,GyroFFTPostFilter,"Use FFT-driven dynamic harmonic notch to control post-RPM filter motor noise.",PASSED
+Copter-speedup8-run1,Copter.log,EK3_NoGPSLeakWhenNotSource,"verify EKF does not leak GPS position when GPS is not the configured source",PASSED
+Copter-speedup8-run1,Copter.log,AHRSSwitchBackendYawReset,"vehicle must not spin when the active AHRS estimator is changed with divergent yaws",PASSED
+Copter-speedup8-run1,Copter.log,SMART_RTL,"Check SMART_RTL",PASSED
+Copter-speedup8-run1,Copter.log,ScriptParamRegistration,"test parameter script registration",PASSED
+Copter-speedup8-run1,Copter.log,PerfInfo,"Test Scheduler PerfInfo output",PASSED
+Copter-speedup8-run1,Copter.log,FETtecESC,"Test FETtecESC",PASSED
+Copter-speedup8-run1,Copter.log,DO_CHANGE_SPEED,"Change speed during mission using waypoint items",PASSED
+Copter-speedup8-run1,Copter.log,GPSForYaw,"Moving baseline GPS yaw",PASSED
+Copter-speedup8-run1,Copter.log,GPSForYawWindEstimation,"Test drag-based wind estimation when using GPS yaw",PASSED
+Copter-speedup8-run1,Copter.log,GPSForYawCompassFallback,"EKF3 must fall back to the compass when GPS yaw is present but unusable",PASSED
+Copter-speedup8-run1,Copter.log,Sprayer,"Test sprayer functionality.",PASSED
+Copter-speedup8-run1,Copter.log,CircleManualControlEntryLeft,"Circle orbits at the configured rate when entered holding roll stick left",PASSED
+Copter-speedup8-run1,Copter.log,LuaCopterCircleSpeed,"test the consistent-ground-speed-circling works",PASSED
+Copter-speedup8-run1,Copter.log,MountViewPro,"test Viewpro gimbal using SIM_Viewpro simulator",PASSED
+Copter-speedup8-run1,Copter.log,AHRSTrimLand,"test land detector with significant AHRS trim",PASSED
+Copter-speedup8-run1,Copter.log,IBus,"test the IBus protocol",PASSED
+Copter-speedup8-run1,Copter.log,REQUIRE_LOCATION_FOR_ARMING,"check AP_Arming::Option::REQUIRE_LOCATION_FOR_ARMING works",PASSED
+Copter-speedup8-run1,Copter.log,MissionRTLYawBehaviour,"check end-of-mission yaw behaviour",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_MISSION_START_p1_p2,"make sure we deny MAV_CMD_MISSION_START if either p1 or p2 non-zero",PASSED
+Copter-speedup8-run1,Copter.log,ScriptingFlipMode,"test adding custom mode from scripting",PASSED
+Copter-speedup8-run1,Copter.log,UTMGlobalPosition,"test UTM_GLOBAL_POSITION message sending",PASSED
+Copter-speedup8-run1,Copter.log,NoRCOnBootPreArmFailure,"Ensure we can't arm with no RC on boot if THR_FS_VALUE set",PASSED
+Copter-speedup8-run1,Copter.log,BatteryFailsafeOptionsContinueLanding,"Battery failsafe with FS_OPTIONS set to continue landing",PASSED
+Copter-speedup8-run1,Copter.log,EK3AccelBias,"Test EK3 Accel Bias data",PASSED
+Copter-speedup8-run1,Copter.log,EK3_OptflowTerrainScaleHeight,"optical flow scale height from the terrain database is right over slopes",PASSED
+Copter-speedup8-run1,Copter.log,EK3_AccelBiasZeroVelOptFlow,"Test EKF3 zero velocity fusion learns bias with optical flow config",PASSED
+Copter-speedup8-run1,Copter.log,ThrowDoubleDrop,"Test a more complicated drop-mode scenario",PASSED
+Copter-speedup8-run1,Copter.log,HorizontalFence,"Test horizontal fence",PASSED
+Copter-speedup8-run1,Copter.log,MaxAltFence,"Test Max Alt Fences",PASSED
+Copter-speedup8-run1,Copter.log,ModeAltHold,"Test AltHold Mode",PASSED
+Copter-speedup8-run1,Copter.log,OpticalFlow,"test OpticalFlow in flight",PASSED
+Copter-speedup8-run1,Copter.log,OpticalFlowLimits,"test EKF navigation limiting",PASSED
+Copter-speedup8-run1,Copter.log,BodyFrameOdom,"Disable GPS navigation, enable input of VISION_POSITION_DELTA.",PASSED
+Copter-speedup8-run1,Copter.log,RTLSpeed,"Test RTL Speed parameters",PASSED
+Copter-speedup8-run1,Copter.log,MountYawVehicleForMountROI,"Test Camera/Antenna Mount vehicle yawing for ROI",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_DO_MOUNT_CONTROL,"test MAV_CMD_DO_MOUNT_CONTROL mavlink command",PASSED
+Copter-speedup8-run1,Copter.log,SurfaceTrackingCornerCases,"test the AP_SurfaceDistance library behaviour under real-life corner-cases",PASSED
+Copter-speedup8-run1,Copter.log,ManualThrottleModeChange,"Check manual throttle mode changes denied on high throttle",PASSED
+Copter-speedup8-run1,Copter.log,ModeZigZag,"test zigzag mode",PASSED
+Copter-speedup8-run1,Copter.log,ModeFollow,"Fly follow mode",PASSED
+Copter-speedup8-run1,Copter.log,RangeFinderDrivers,"Test rangefinder drivers",PASSED
+Copter-speedup8-run1,Copter.log,RichenPower,"Test RichenPower generator",PASSED
+Copter-speedup8-run1,Copter.log,MAV_CMD_NAV_VTOL_LAND,"ensure MAV_CMD_NAV_LAND via mavlink works",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToHomeMinAltOriginAbove,"fence min-alt relative to home when origin is above home",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToOriginMaxAltHomeAbove,"fence max-alt relative to origin when home is above origin",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToTerrainMaxAlt,"fence max-alt threshold is interpreted as AGL (terrain-relative)",PASSED
+Copter-speedup8-run1,Copter.log,FenceRelativeToTerrainMinAlt,"fence min-alt threshold is interpreted as AGL (terrain-relative)",PASSED
+Copter-speedup8-run1,Copter.log,RefindGPS,"Refind the GPS and attempt to RTL rather than continue to land",PASSED
+Copter-speedup8-run1,Copter.log,EK3SrcSwitchPosDownReset,"in-filter EKF position-down resets must be handled by the position controller",PASSED
+Copter-speedup8-run1,Copter.log,AP_Avoidance,"ADSB-based avoidance",PASSED
+Copter-speedup8-run1,Copter.log,GPSBlending,"Test GPS Blending",PASSED
+Copter-speedup8-run1,Copter.log,GPSWeightedBlending,"Test GPS Weighted Blending",PASSED
+Copter-speedup8-run1,Copter.log,DataFlashErase,"Test that erasing the dataflash chip and creating a new log is error free",PASSED
+Copter-speedup8-run1,Copter.log,WP_SPEED,"ensure resetting WP_SPD during a mission works",PASSED
+Copter-speedup8-run1,Copter.log,DeadReckoningInWind,"ensure copter dead-reckoning on drag does not destabilise the EKF in wind",PASSED
+Copter-speedup8-run1,Copter.log,ScriptCopterPosOffsets,"test the copter-posoffset.lua example script",PASSED
+Copter-speedup8-run1,Copter.log,MountSiyiZT30,"test Siyi ZT30 gimbal using SIM_Siyi_ZT30 simulator",PASSED
+Copter-speedup8-run1,Copter.log,CircleSpeed,"test the consistent-ground-speed-circling works",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AHRSAutoTrim,"calibrate AHRS trim using RC input",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AHRSOriginRecorded,"Test AHRS option to record and reuse origin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AHRSSwitchBackendPositionReset,"vehicle must not lurch when the active AHRS estimator is changed in flight",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AHRSTrim,"check RC stick inputs can be used to save an AHRS trim",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AirModeLanding,"test air-mode holds off landing detection rather than landing in mid-air",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AirModeStabZeroThrottle,"test air-mode gives attitude control with the throttle stick at zero",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ArmSwitchAfterReboot,"test that the arming switch does not trigger after a reboot",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoContinueOnRCFailsafe,"check LOITER when entered after RC failsafe is ignored in auto",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoRTL,"Test Auto RTL mode using do land start and return path start mission items",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoTune,"Test autotune mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoTuneAux,"Test autotune with gains being tested using the Aux function",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoTuneSwitch,"Test autotune on a switch with gains being saved",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AutoTuneYawD,"Test autotune mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,AvoidanceAltFence,"Test fence avoidance at minimum and maximum altitude",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BackupFence,"ensure the lateral backup fence functionality works",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BaroDrivers,"Test Baro Drivers",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BaroGroundEffectRangefinderSwitch,"EKF height survives a takeoff that switches from the range finder to a baro in ground effect",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BaseLoggingRates,"ensure messages come out at specific rates",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeBrakeLand,"Battery failsafe brake/land action triggers BRAKE",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeCriticalLanding,"Battery failsafe critical landing not interrupted by RC failure",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeDisabled,"Test that with battery failsafe disabled no action is taken",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeDisabledOnGround,"Test that with battery failsafe disabled the vehicle is not disarmed on the ground",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeTerminate,"Battery failsafe terminate action - copter disarms and crashes",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeTwoStage,"Two stage battery failsafe test with RTL and Land",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BatteryFailsafeTwoStageSmartRTL,"Two stage battery failsafe test with SmartRTL",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,BrakeZ,"check jerk limit correct in Brake mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Button,"Test Buttons",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,COMMAND_LONG_positional_command_int_only,"check positional commands with no COMMAND_LONG frame are refused as COMMAND_INT-only",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CRSF,"Test RC CRSF",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Callisto,"Test Callisto",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CameraLogMessages,"ensure Camera log messages are good",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CameraServoZoomFocusSpeed,"test CAM1_ZOM_RAT_MAX and CAM1_FOC_RAT_MAX set the servo camera zoom and focus rates",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Ch6TuningLoitMaxXYSpeed,"test loiter can be changed via Ch6 tuning knob",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Ch6TuningWPSpeed,"test waypoint speed can be changed via Ch6 tuning knob",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CircleManualControlEntryRight,"Circle orbits at the configured rate when entered holding roll stick right",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CirclePilotRadiusZero,"Circle pitch stick can reduce the radius to zero",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Clamp,"test Copter docking clamp",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CommonOrigin,"Test common origin between EKF2 and EKF3",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassLearnCopyFromEKF,"test compass learning whereby we copy learnt offsets from the EKF",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassLearnCopyFromEKFAffinity,"check EKF-learned offsets are saved for several compasses at once",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassLearnCopyFromSIM,"test COMPASS_LEARN=2 saves the ideal offsets from the SIM AHRS backend",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassMot,"test code that adjust mag field for motor interference",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassMotFastRate,"test compassmot with the rate thread driving the motors",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CompassReordering,"Test Compass reordering when priorities are changed",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CorrectedDeltaVelocity,"test that AHRS applies accel bias correctly",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,CustomController,"Test Custom Controller",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DO_CHANGE_SPEED_in_guided,"test Copter DO_CHANGE_SPEED handling in guided mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DO_WINCH,"test mavlink DO_WINCH command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DataFlash,"Test DataFlash SITL backend",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DefaultIntervalsFromFiles,"Test setting default mavlink message intervals from files",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DefaultsCommaList,"test that --defaults accepts multiple comma-separated files, with later files overriding earlier ones",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DualTuningChannels,"check tuning channel options work independently",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,DynamicNotches,"Use dynamic harmonic notch to control motor noise.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EK3_OGN_HGT_MASK,"test baraometer-alt-compensation based on long-term GPS readings",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EK3_OGN_HGT_MASK_climbing,"check combination of height bits doesn't cause climb",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EKF3SRCPerCore,"Check SP/SH values in XKF4 for GPS (core 0) vs VICON (core 1) with targeted glitches.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EKFBootstrapReset,"verify EKF reset aux switch is disarmed-only and preserves origin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EKFSource,"Check EKF Source Prearms work",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,EKFYawResetLogged,"in-filter EKF yaw resets must propagate through AHRS and be logged",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FTPScriptUpload,"upload a Lua script via MAVLink FTP and verify it runs",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FarOrigin,"fly a mission far from the vehicle origin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceAltFrameComparison,"check the alt fence limits are compared in a common frame",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceFloorAutoDisableLanding,"Ensures we can initiate and complete an RTL while the fence is enabled",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceFloorAutoEnableOnArming,"Ensures we can auto-enable fences on arming and still takeoff and land",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceFloorEnabledLanding,"Ensures we can initiate and complete an RTL while the fence is",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceMargin,"Test warning on crossing fence margin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceMarginTypeChange,"Test removing a margin-breached fence from FENCE_TYPE in flight",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToAMSLCliff,"AMSL min fence below arming altitude requires cliff to breach",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToAMSLMaxAlt,"fence max-alt threshold is interpreted as AMSL, not home-relative",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToAMSLMinAlt,"fence min-alt threshold is interpreted as AMSL, not home-relative",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToHomeMinAlt,"fence min-alt threshold is measured relative to home, not EKF origin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToOriginMaxAlt,"fence max-alt threshold is measured relative to EKF origin, not home",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToOriginMinAlt,"fence min-alt threshold is measured relative to EKF origin, not home",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceRelativeToOriginMinAltHomeAbove,"fence min-alt relative to origin when home is above origin",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FenceUpload_MissionItem,"Test MISSION_ITEM fence upload/download",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FixedYawCalibration,"Test Fixed Yaw Calibration",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FlowAidingRestartsWithoutYawFusion,"optical flow aiding restarts after a dropout while a configured compass is not fusing",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FlowGyroZBiasNoYawReference,"Z gyro bias is not learned from optical flow without a fused yaw reference",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,FlyMissionTwice,"fly a mission twice in a row without changing modes in between.",FAILED
+Copter-speedup8-rerun1,Copter-rerun1.log,FlyMissionTwiceWithReset,"Fly a mission twice in a row without changing modes in between.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSFixTypes,"Test that SIM_GPS1_FIXTYPE maps correctly to GPS_RAW_INT.fix_type",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSForYawCompassLearn,"Moving baseline GPS yaw - with compass learning",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSForYawVerticalBaseline,"Moving baseline GPS yaw must be rejected for a vertical baseline",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSGlitchAuto,"fly mission and test reaction to gps glitch",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSGlitchLoiter,"fly_gps_glitch_loiter_test. Fly south east in loiter and test",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSGlitchVelocity,"check SIM_GPS1_GLTV offsets the GPS velocity and moves the reported position with it",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSTypes,"check each simulated GPS works",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GPSViconSwitching,"Fly GPS and Vicon switching test",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GSF,"test the Gaussian Sum filter",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GSF_reset,"test the Gaussian Sum filter based Emergency reset",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GainBackoffTakeoff,"test gain backoff on takeoff",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Gripper,"Test gripper",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GripperInitialPosition,"test gripper initial position",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GripperReleaseOnThrustLoss,"tests that gripper is released on thrust loss if option set",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GroundEffectCompensation_takeOffExpected,"Test EKF's handling of takeoff-expected",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GroundEffectCompensation_touchDownExpected,"Test EKF's handling of touchdown-expected",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedEKFLaneChange,"test lane change with GPS diff on startup",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedForceArm,"ensure Guided acts appropriately when force-armed",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedModeThrust,"test handling of option-bit-3, where mavlink commands are",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedRejectOutsideFence,"ensure a GUIDED destination outside the fence is rejected",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedSubModeChange,"""Ensure we can move around in guided after a takeoff command.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GuidedWeatherVane,"check Copter Guided mode weathervane option",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GyroFFT,"Use dynamic harmonic notch to control motor noise.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GyroFFTAverage,"Use dynamic harmonic notch to control motor noise setup via FFT averaging.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GyroFFTContinuousAveraging,"Use dynamic harmonic notch with FFT averaging to control motor noise",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GyroFFTHarmonic,"Use dynamic harmonic notch to control motor noise with harmonic matching of the first harmonic.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,GyroFFTMotorNoiseCheck,"Use FFT to detect post-filter motor noise.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,HomeCircleInclusionFence,"Home Circle fence using MAV_CMD_NAV_FENCE_HOME_CIRCLE_INCLUSION.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,IgnorePilotYaw,"test RTL_OPTIONS bit 2, ""IgnorePilotYaw""",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,InvalidJumpTags,"Verify the behaviour when selecting invalid jump tags.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LUAConfigProfile,"test the config_profiles.lua example script",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Landing,"Test landing the aircraft.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoggingFormat,"ensure formats are emitted appropriately",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoiterFlowBrakeOvershoot,"Forward-jab overshoot in optical-flow Loiter at low height",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoiterNoCompassYawGPS,"Loiter with GPS and no optical flow, compass not an EK3 yaw source",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoiterToAlt,"Loiter-To-Alt",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoiterToGuidedHomeVSOrigin,"test moving from guided to loiter mode when home is a different alt",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoweheiserAuto,"Ensure the Loweheiser generator works as expected in auto-starter mode.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LoweheiserManual,"Ensure the Loweheiser generator works as expected in manual starter mode.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LuaMAVLinkTarget,"Lua sends legacy, broadcast and full-width targets without mutating payloads.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,LuaParamLockdown,"test param-lockdown.lua applet",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MANUAL_CONTROL,"test MANUAL_CONTROL mavlink message",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAVProximity,"Test MAVLink proximity driver",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_AIRFRAME_CONFIGURATION,"deploy/retract landing gear using mavlink command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_DO_FLIGHTTERMINATION,"test MAV_CMD_DO_FLIGHTTERMINATION works on Copter",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_DO_GIMBAL_MANAGER_CONFIGURE,"test MAV_CMD_DO_GIMBAL_MANAGER_CONFIGURE mavlink command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_DO_LAND_START,"test handling of mavlink-received MAV_CMD_DO_LAND_START command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_DO_SET_GLOBAL_ORIGIN,"test MAV_CMD_DO_SET_GLOBAL_ORIGIN command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_DO_SET_HOME_bad_location,"test setting of bad home location",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_NAV_TAKEOFF,"test issuing takeoff command via mavlink",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_NAV_TAKEOFF_command_int,"test issuing takeoff command via mavlink and command_int",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_NAV_TAKEOFF_no_location,"make sure nav_takeoff works in alt_hold when option forced",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MAV_CMD_SET_EKF_SOURCE_SET,"test setting of source sets using mavlink command",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MSPDisplayPortVTXConfig,"test changing VTX band/channel/frequency via MSP_SET_VTX_CONFIG on",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MSPVTXConfig,"test changing VTX band/channel/frequency via MSP_SET_VTX_CONFIG",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MaxBotixI2CXL,"Test maxbotix rangefinder drivers",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MinAltFence,"Test Min Alt Fences",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MinAltFenceAvoid,"Test Min Alt Fence Avoidance",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MissionIndexValidity,"Confirm that attempting to select an invalid mission item is rejected.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MissionRTLAltFinalContinue,"ensure AUTO mission can continue past a NAV_RETURN_TO_LAUNCH item",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ModeAllowsEntryWhenNoPilotInput,"test we can't enter modes when no RC input",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ModeCircle,"Fly CIRCLE mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ModeFlip,"Fly Flip Mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MotorFail,"Test flight with reduced motor efficiency",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MotorTest,"Run Motor Tests",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MotorVibration,"Test flight with motor vibration",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Mount,"test servo mount",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountAVTCM62Dual,"test two simultaneous MAVLink (Gimbal Protocol v2) gimbals using",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountAVTCM62DualImageStartCapture,"test MAV_CMD_IMAGE_START_CAPTURE mavlink command against two",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountAVTCM62DualMission,"test dual AVT CM62 cameras with photo capture, zoom and focus",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountPOIFromAuxFunction,"test we can lock onto a lat/lng/alt with the flick of a switch",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountRCFailAngle,"check mount behaviour when RC input becomes bad",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountRCFailRate,"check mount behaviour when RC input becomes bad - rates should zero",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountSolo,"test type=2, a ""Solo"" mount",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MountTopotekNetwork,"test Topotek gimbal connected via a network port rather than a serial port",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,MultipleGPS,"check ArduPilot behaviour across multiple GPS units",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,NavDelayAbsTime,"fly a simple mission that has a delay in it",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,NoArmWithoutMissionItems,"ensure we can't arm in auto mode without mission items present",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PAUSE_CONTINUE,"Test MAV_CMD_DO_PAUSE_CONTINUE in AUTO mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PAUSE_CONTINUE_GUIDED,"Test MAV_CMD_DO_PAUSE_CONTINUE in GUIDED mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PILOT_THR_BHV,"test the PILOT_THR_BHV parameter",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PLDNoParameters,"'try enabling PLD with lat/lng/alt all zero",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Parachute,"Test Parachute Functionality",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PayloadPlaceMission,"Test payload placing in auto.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PayloadPlaceMissionOpenGripper,"test running the mission when the gripper is open",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PeriphMultiUARTTunnel,"test peripheral multi-uart tunneling)"": CalledProcessError(1, ['./modules/waf/waf-light', 'build', '--target', 'bin/AP_Periph']) (see /home/think/buildlogs/ArduCopter-PeriphMultiUARTTunnel.txt)",FAILED
+Copter-speedup8-rerun1,Copter-rerun1.log,PosHoldDesiredAttitudeMonotonic,"check PosHold desired attitude does not reverse during a sustained stick input",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PositionWhenGPSIsZero,"Ensure position doesn't zero when GPS lost",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PrecisionLanding,"Use PrecLand backends precision messages to land aircraft.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,PrecisionLoiterCompanion,"Use Companion PrecLand backend precision messages to loiter.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RCOverridesClearByPilotInput,"Test RC_OPTIONS bit 14 on Copter: roll/pitch/yaw/throttle each clear overrides",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RCOverridesNoRCReceiver,"test RC override timeout with no RC receiver present",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RCProtocolFailsafe,"ensure we failsafe when the RC protocol failsafe is set",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RC_OPTIONS_1_FS_THR_ENABLE_0,"check behaviour with unusual RC parameters",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RPLidarA1,"test Raspberry Pi Lidar A1",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RPLidarA2,"test Raspberry Pi Lidar A2",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RTLStoppingDistanceSpeed,"test stopping distance unaffected by RTL speed",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RTLYaw,"test that vehicle yaws to original heading on RTL",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RTL_ALT_FINAL_M,"Test RTL with RTL_ALT_FINAL_M",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RTL_TO_RALLY,"Check RTL to rally point",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RangeFinder,"Test RangeFinder Basic Functionality",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RangeFinderDriversLongRange,"test rangefinder above 327m",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RangeFinderDriversMaxAlt_LightwareSerial,"test max-height behaviour - LightwareSerial",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RangeFinderPowerDown,"Test rangefinder power down by altitude for multiple backends",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RangeFinderSITLLongRange,"test rangefinder above 327m",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ReadOnlyDefaults,"test that defaults marked ""readonly"" can't be set",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RecordThenPlayMission,"Use switches to toggle in mission, then fly it",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Replay,"test replay correctness",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ReplayOriginFrame,"check an EKF origin set from a GCS is logged after the current replay frame",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ReplayShortMessage,"test replay of a log whose message is shorter than Replay's structure",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,RudderDisarmMidair,"check disarm behaviour mid-air",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,SITLCompassCalibration,"Test Compass Calibration""",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,SMART_RTL_EnterLeave,"check SmartRTL behaviour when entering/leaving)"": AutoTestTimeoutException('Did not receive heartbeat') (see /home/think/buildlogs/ArduCopter-SMART_RTL_EnterLeave.txt)",FAILED
+Copter-speedup8-rerun1,Copter-rerun1.log,SMART_RTL_Repeat,"Test whether Smart RTL catches the repeat)"": WaitModeTimeout('Did not change mode') (see /home/think/buildlogs/ArduCopter-SMART_RTL_Repeat.txt)",FAILED
+Copter-speedup8-rerun1,Copter-rerun1.log,ScriptMountDriver,"test scripting mount driver with all modes and camera",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Scripting6DoFMotors,"test 6DoF scripting motor matrix",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ScriptingAHRSSource,"test ahrs-source.lua script",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ScriptingFlyVelocity,"test flying a velocity vector using scripting",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ScriptingOSD,"test OSD scripting with waypoint mission - requires SFML OSD",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,SensorErrorFlags,"Test we get ERR messages when sensors have issues",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ShipTakeoff,"Fly Simulated Ship Takeoff",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,SimpleMode,"Fly in SIMPLE mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,StaticNotches,"Use static harmonic notch to control motor noise.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TakeoffGroundEffectAlt,"Test GNDEFF_ALT and GNDEFF_TMO gate the ground-effect compensation window",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TakeoffWithLocation,"test we ignore takeoff location",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TerrainDBPreArm,"test that pre-arm checks are working correctly for terrain database",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TerrainFailsafe,"test that auto mode triggers terrain failsafe if waypoint alt frame is terrain and terrain database is disabled",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TestEKF3CompassFailover,"Test if changed compasses goes back to primary in EKF3 on disarm",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TestGripperMission,"Test Gripper mission items",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TestLocalHomePosition,"Test local home position is sent in HOME_POSITION message",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ThrottleFailsafe,"Test Throttle Failsafe",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,ThrowMode,"Fly Throw Mode",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,TouchdownGroundEffectAlt,"Test GNDEFF_ALT gates the touchdown ground-effect signal",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,VisionPosition,"Disable GPS navigation, enable Vicon input.",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,WPArcs,"Test WP Arc functionality",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,WP_SPEED_DN,"Change speed (down) during mission",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,WP_SPEED_UP,"Change speed (up) during mission",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,WatchAlts,"Ensure we can monitor different altitudes",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,Weathervane,"Test copter weathervaning",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,clear_roi,"ensure three commands that clear ROI are equivalent",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,mission_NAV_LOITER_TURNS,"test that loiter turns basically works",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,mission_NAV_LOITER_TURNS_ccw,"test that a negative loiter radius gives a counter-clockwise circle",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,mission_NAV_LOITER_TURNS_direction,"LOITER_TURNS orbits the way the sign of param3 asks",PASSED
+Copter-speedup8-rerun1,Copter-rerun1.log,mission_NAV_LOITER_TURNS_speed,"LOITER_TURNS orbits at WP_SPD, not at CIRCLE_RATE * radius",PASSED
+Copter-speed1-rerun2,Copter-rerun2-speed1.log,FlyMissionTwice,"fly a mission twice in a row without changing modes in between.",FAILED
+Copter-speed1-rerun2,Copter-rerun2-speed1.log,SMART_RTL_EnterLeave,"check SmartRTL behaviour when entering/leaving)"": None (see /home/think/buildlogs/ArduCopter-SMART_RTL_EnterLeave.txt)",FAILED
+Copter-speed1-rerun3,Copter-rerun3-speed1.log,SMART_RTL_Repeat,"Test whether Smart RTL catches the repeat)"": WaitModeTimeout('Did not change mode') (see /home/think/buildlogs/ArduCopter-SMART_RTL_Repeat.txt)",FAILED
+Copter-nodebug-speed1-rerun4,Copter-rerun4-nodebug-speed1.log,SMART_RTL_Repeat,"Test whether Smart RTL catches the repeat)"": WaitModeTimeout('Did not change mode') (see /home/think/buildlogs/ArduCopter-SMART_RTL_Repeat.txt)",FAILED
+Copter-nodebug-speed1-rerun4,Copter-rerun4-nodebug-speed1.log,SMART_RTL_EnterLeave,"check SmartRTL behaviour when entering/leaving",PASSED
+Copter-nodebug-speed1-rerun4,Copter-rerun4-nodebug-speed1.log,FlyMissionTwice,"fly a mission twice in a row without changing modes in between.",FAILED
