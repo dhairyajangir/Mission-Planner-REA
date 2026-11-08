@@ -21,7 +21,7 @@ The saved research used Mission Planner 1.3.83 and an ArduPilot firmware snapsho
 
 ## Resume
 
-Read the coverage ledger and choose a substantive unresolved workflow. Use REA where appropriate, inspect the matching source and retain tests or simulator captures that distinguish observed behavior from inference. Update the relevant trace and evidence verifier. The NaN waypoint upload observations in `Mission-File-Trace.md` include one simulator-side exception whose cause and reproducibility are not yet established.
+Read the coverage ledger and choose a substantive unresolved workflow. Use REA where appropriate, inspect the matching source and retain tests or simulator captures that distinguish observed behavior from inference. Update the relevant trace and evidence verifier. The NaN waypoint upload observations in `Mission-File-Trace.md` include one simulator-side exception; it was reproduced under gdb and located in `check_lat(float)` (see the trace for what is and is not established, including that real hardware was not tested).
 
 ## Phase 2 (started 7 November 2026)
 

@@ -25,3 +25,9 @@ Claims are made by hand and only checked for existence, not truth. A cited file 
 ## Other generated files
 
 `mavlink-surface.csv` (`research-tools/build-mavlink-surface.py`): which Mission Planner types call each `MAVLinkInterface` action method, from IL call sites in `rea-main-index.sqlite`. Direct calls in `MissionPlanner.exe` only; delegates, reflection and other assemblies are not followed, and some compiler-generated closure types appear under their own names rather than their outer type.
+
+`ardupilot-param-names.csv` (`research-tools/build-ardupilot-param-names.py`) lists every parameter name the pinned snapshot's own metadata generator declares, per vehicle. `config-page-params.csv` and `config-page-params-summary.md` (`research-tools/build-config-param-map.py`, `--check` supported) map the quoted parameter names in `GCSViews/ConfigurationView/*.cs` to call shapes and to that list; it is a static text scan and does not see names built at run time.
+
+`page-catalogue.csv` (`research-tools/build-page-catalogue.py`, `--check` supported) lists, for each of 67 screens, the MAVLink calls, `MAV_CMD` names, parameter counts and network/file/dialog/thread references found in its source (static scan). `gaps.md` (`research-tools/build-gap-register.py`, `--check` supported) lists every matrix row that has not reached its target.
+
+`plugin-catalogue.csv` (`research-tools/build-plugin-catalogue.py`, `--check` supported) lists the 39 bundled plugin projects and loose example scripts under `Plugins/` with textual counts of Host calls, MAVLink calls, network, serial/UDP, file, UI, thread and process-start references (static scan only).
