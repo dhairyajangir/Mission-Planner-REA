@@ -1,0 +1,2 @@
+start Sun Nov  8 12:41:26 UTC 2026 steps=test.Rover.MAV_SYSID_32bit test.Rover.MAV_SYSID_FullRange test.Rover.MAVLinkStatustextWideSource test.Rover.Scripting test.Rover.MAVLinkHeaderTargets test.Rover.MAVLinkTimesyncRTT speedup=8
+exit=0 Sun Nov  8 12:43:45 UTC 2026

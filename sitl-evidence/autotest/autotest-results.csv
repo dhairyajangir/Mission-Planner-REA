@@ -90,3 +90,147 @@ AntennaTracker-speedup8,AntennaTracker.log,StationaryGlobalPositionIntAlt,"Test 
 AntennaTracker-speedup8,AntennaTracker.log,UndrivenServosHoldPosition,"check the simulated tracker does not move while its servos are not driven",PASSED
 AntennaTracker-speedup8,AntennaTracker.log,ServoRangeLimits,"check the simulated tracker stops at the limits of its range",PASSED
 AntennaTracker-speedup8,AntennaTracker.log,Tracking,"check the tracker points at a vehicle sending its position",PASSED
+Rover-speedup8-run1,Rover.log,PIDTuning,"Test PID Tuning",PASSED
+Rover-speedup8-run1,Rover.log,ArmFeatures,"Arm features",PASSED
+Rover-speedup8-run1,Rover.log,SetHome,"Setting and fetching of home",PASSED
+Rover-speedup8-run1,Rover.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+Rover-speedup8-run1,Rover.log,CPUFailsafe,"Ensure we do something appropriate when the main loop stops",PASSED
+Rover-speedup8-run1,Rover.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+Rover-speedup8-run1,Rover.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+Rover-speedup8-run1,Rover.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+Rover-speedup8-run1,Rover.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+Rover-speedup8-run1,Rover.log,Logging,"Test Onboard Logging",PASSED
+Rover-speedup8-run1,Rover.log,GetCapabilities,"Get Capabilities",PASSED
+Rover-speedup8-run1,Rover.log,InitialMode,"Test initial mode switching",PASSED
+Rover-speedup8-run1,Rover.log,MAVProxy_SetModeUsingSwitch,"Set modes via mavproxy switch",PASSED
+Rover-speedup8-run1,Rover.log,HIGH_LATENCY2,"test sending of HIGH_LATENCY2",PASSED
+Rover-speedup8-run1,Rover.log,MAVProxy_SetModeUsingMode,"Set modes via mavproxy mode command",PASSED
+Rover-speedup8-run1,Rover.log,ModeSwitch,"'Set modes via modeswitch",PASSED
+Rover-speedup8-run1,Rover.log,AuxModeSwitch,"Set modes via auxswitches",PASSED
+Rover-speedup8-run1,Rover.log,DriveRTL,"Drive an RTL Mission",PASSED
+Rover-speedup8-run1,Rover.log,SmartRTL,"Test SmartRTL",PASSED
+Rover-speedup8-run1,Rover.log,DriveSquare,"Learn/Drive Square with Ch7 option",PASSED
+Rover-speedup8-run1,Rover.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth",PASSED
+Rover-speedup8-run1,Rover.log,DriveMission,"Drive Mission rover1.txt",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_SEND_BANNER,"test MAV_CMD_DO_SEND_BANNER",PASSED
+Rover-speedup8-run1,Rover.log,DO_SET_MODE,"Set mode via MAV_COMMAND_DO_SET_MODE",PASSED
+Rover-speedup8-run1,Rover.log,MAVProxy_DO_SET_MODE,"Set mode using MAVProxy commandline DO_SET_MODE",PASSED
+Rover-speedup8-run1,Rover.log,ServoRelayEvents,"Test ServoRelayEvents",PASSED
+Rover-speedup8-run1,Rover.log,RCOverrides,"Test RC overrides",PASSED
+Rover-speedup8-run1,Rover.log,RCOverridesCancel,"Test RC overrides Cancel",PASSED
+Rover-speedup8-run1,Rover.log,RCOverrideEnableChannel,"Test RC Override Enable channel not overridden by GCS (issue #33161))"": NotAchievedException('chan1 dropped to TX value (issue #33161 reproduced): chan1_raw=1500 chan10_raw=2000') (see /home/think/buildlogs/Rover-RCOverrideEnableChannel.txt)",FAILED
+Rover-speedup8-run1,Rover.log,RCOverridesClearByPilotInput,"Test RC_OPTIONS bit 14 on Rover: steering/throttle clear, pitch/yaw do not",PASSED
+Rover-speedup8-run1,Rover.log,MANUAL_CONTROL,"Test mavlink MANUAL_CONTROL",PASSED
+Rover-speedup8-run1,Rover.log,Sprayer,"Test sprayer functionality.",PASSED
+Rover-speedup8-run1,Rover.log,AC_Avoidance,"Test AC Avoidance switch",PASSED
+Rover-speedup8-run1,Rover.log,CameraMission,"Test Camera Mission Items",PASSED
+Rover-speedup8-run1,Rover.log,Gripper,"Test gripper",PASSED
+Rover-speedup8-run1,Rover.log,GripperMission,"Test Gripper Mission Items",PASSED
+Rover-speedup8-run1,Rover.log,SET_MESSAGE_INTERVAL,"Test MAV_CMD_SET_MESSAGE_INTERVAL",PASSED
+Rover-speedup8-run1,Rover.log,MESSAGE_INTERVAL_COMMAND_INT,"Test MAV_CMD_SET_MESSAGE_INTERVAL works as COMMAND_INT",PASSED
+Rover-speedup8-run1,Rover.log,REQUEST_MESSAGE,"Test MAV_CMD_REQUEST_MESSAGE",PASSED
+Rover-speedup8-run1,Rover.log,MAV_GCS_ENFORCE,"Test enforcement of strict mode for MAV_GCS_SYSID",PASSED
+Rover-speedup8-run1,Rover.log,SET_ATTITUDE_TARGET,"Test handling of SET_ATTITUDE_TARGET",PASSED
+Rover-speedup8-run1,Rover.log,SET_ATTITUDE_TARGET_heading,"Test heading control and telemetry for SET_ATTITUDE_TARGET",PASSED
+Rover-speedup8-run1,Rover.log,SET_POSITION_TARGET_LOCAL_NED,"Test handling of SET_POSITION_TARGET_LOCAL_NED",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_SET_MISSION_CURRENT,"Test handling of CMD_DO_SET_MISSION_CURRENT",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_SET_MISSION_CURRENT_looped_mission,"Test param1=-1 with reset=1 resets DO_JUMP counter without changing current waypoint",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_CHANGE_SPEED,"test MAV_CMD_NAV_RETURN_TO_LAUNCH mavlink command",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_MISSION_START,"simple test for starting missing using this command",PASSED
+Rover-speedup8-run1,Rover.log,Button,"Test Buttons",PASSED
+Rover-speedup8-run1,Rover.log,Rally,"Test Rally Points",PASSED
+Rover-speedup8-run1,Rover.log,Offboard,"Test Offboard Control",PASSED
+Rover-speedup8-run1,Rover.log,MAVProxyParam,"Test MAVProxy parameter handling",PASSED
+Rover-speedup8-run1,Rover.log,GCSFence,"Upload and download of fence",PASSED
+Rover-speedup8-run1,Rover.log,GCSFenceInvalidPoint,"Test fetch non-existent fencepoint",PASSED
+Rover-speedup8-run1,Rover.log,GuidedRejectOutsideFence,"ensure a GUIDED destination outside the fence is rejected",PASSED
+Rover-speedup8-run1,Rover.log,GCSMission,"check MAVProxy's waypoint handling of missions",PASSED
+Rover-speedup8-run1,Rover.log,MotorTest,"Motor Test triggered via mavlink",PASSED
+Rover-speedup8-run1,Rover.log,WheelEncoders,"make sure wheel encoders are generally working",PASSED
+Rover-speedup8-run1,Rover.log,DataFlashOverMAVLink,"Test DataFlash over MAVLink",PASSED
+Rover-speedup8-run1,Rover.log,DataFlash,"Test DataFlash SITL backend",PASSED
+Rover-speedup8-run1,Rover.log,SkidSteer,"Check skid-steering",PASSED
+Rover-speedup8-run1,Rover.log,MotorBoatSkidGuided,"ensure a skid-steering motorboat does not spin in GUIDED when retargeting directly behind",PASSED
+Rover-speedup8-run1,Rover.log,PolyFence,"test fence-related functions",PASSED
+Rover-speedup8-run1,Rover.log,SDPolyFence,"test storage of fence on SD card",PASSED
+Rover-speedup8-run1,Rover.log,PolyFenceAvoidance,"PolyFence avoidance tests",PASSED
+Rover-speedup8-run1,Rover.log,PolyFenceObjectAvoidanceAuto,"PolyFence object avoidance tests - auto mode",PASSED
+Rover-speedup8-run1,Rover.log,PolyFenceObjectAvoidanceGuided,"PolyFence object avoidance tests - guided mode",PASSED
+Rover-speedup8-run1,Rover.log,SendToComponents,"Test ArduPilot send_to_components function",PASSED
+Rover-speedup8-run1,Rover.log,PolyFenceObjectAvoidanceBendyRulerEasierGuided,"finish-line issue means we can't complete the harder one.  This",PASSED
+Rover-speedup8-run1,Rover.log,PolyFenceObjectAvoidanceBendyRulerEasierAuto,"finish-line issue means we can't complete the harder one.  This",PASSED
+Rover-speedup8-run1,Rover.log,Scripting,"Scripting test)"": AutoTestTimeoutException('Failed to receive text: received heartbeat from') (see /home/think/buildlogs/Rover-Scripting.txt)",FAILED
+Rover-speedup8-run1,Rover.log,ScriptingMAVLink,"Exercise MAVLink layouts and script replies in the embedded Lua interpreter.",PASSED
+Rover-speedup8-run1,Rover.log,ScriptingSteeringAndThrottle,"Scripting test - steering and throttle",PASSED
+Rover-speedup8-run1,Rover.log,MissionFrames,"Upload/Download of items in different frames",PASSED
+Rover-speedup8-run1,Rover.log,SetpointGlobalPos,"Test set position message in guided mode.",PASSED
+Rover-speedup8-run1,Rover.log,SetpointGlobalVel,"Test set position message in guided mode.",PASSED
+Rover-speedup8-run1,Rover.log,AccelCal,"Accelerometer Calibration testing",PASSED
+Rover-speedup8-run1,Rover.log,RangeFinder,"Test RangeFinder",PASSED
+Rover-speedup8-run1,Rover.log,AIS,"Test AIS receiver",PASSED
+Rover-speedup8-run1,Rover.log,AISMultipleVessels,"Test tracking multiple AIS vessels",PASSED
+Rover-speedup8-run1,Rover.log,AISDataValidation,"Test AIS vessel data validity",PASSED
+Rover-speedup8-run1,Rover.log,AP_Proximity_MAV,"Test MAV proximity backend",PASSED
+Rover-speedup8-run1,Rover.log,EndMissionBehavior,"Test end mission behavior",PASSED
+Rover-speedup8-run1,Rover.log,PositionTargetGlobalIntAltFrame,"Test that POSITION_TARGET_GLOBAL_INT sends AMSL altitude",PASSED
+Rover-speedup8-run1,Rover.log,FlashStorage,"Test flash storage (for parameters etc)",PASSED
+Rover-speedup8-run1,Rover.log,FRAMStorage,"Test FRAM storage (for parameters etc)",PASSED
+Rover-speedup8-run1,Rover.log,DepthFinder,"Test multiple depthfinders for boats",PASSED
+Rover-speedup8-run1,Rover.log,ChangeModeByNumber,"ensure we can set a mode by number, handy when we don't have a",PASSED
+Rover-speedup8-run1,Rover.log,EStopAtBoot,"Ensure EStop prevents arming when asserted at boot time",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_NAV_RETURN_TO_LAUNCH,"test MAV_CMD_NAV_RETURN_TO_LAUNCH mavlink command",PASSED
+Rover-speedup8-run1,Rover.log,StickMixingAuto,"Ensure Stick Mixing works in auto",PASSED
+Rover-speedup8-run1,Rover.log,AutoDock,"Test automatic docking of rover for multiple FOVs of simulated beacon",PASSED
+Rover-speedup8-run1,Rover.log,BeaconPosition,"drive in MANUAL using only a (simulated) beacon for position",PASSED
+Rover-speedup8-run1,Rover.log,PrivateChannel,"test the serial option bit specifying a mavlink channel as private",PASSED
+Rover-speedup8-run1,Rover.log,GCSFailsafe,"Test GCS Failsafe",PASSED
+Rover-speedup8-run1,Rover.log,RoverInitialMode,"test INITIAL_MODE parameter works",PASSED
+Rover-speedup8-run1,Rover.log,DriveMaxRCIN,"Drive rover at max RC inputs",PASSED
+Rover-speedup8-run1,Rover.log,NoArmWithoutMissionItems,"ensure we can't arm in auto mode without mission items present",PASSED
+Rover-speedup8-run1,Rover.log,PARAM_ERROR,"test PARAM_ERROR mavlink message",PASSED
+Rover-speedup8-run1,Rover.log,CompassPrearms,"test compass prearm checks",PASSED
+Rover-speedup8-run1,Rover.log,ManyMAVLinkConnections,"test testing >8 MAVLink connections",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_SET_REVERSE,"test MAV_CMD_DO_SET_REVERSE command",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_GET_HOME_POSITION,"test handling of mavlink command MAV_CMD_GET_HOME_POSITION",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_DO_FENCE_ENABLE,"ensure MAV_CMD_DO_FENCE_ENABLE mavlink command works",PASSED
+Rover-speedup8-run1,Rover.log,MAV_CMD_BATTERY_RESET,"manipulate battery levels with MAV_CMD_BATTERY_RESET",PASSED
+Rover-speedup8-run1,Rover.log,GPSForYaw,"Test consumption of heading from NMEA GPS and its propagation to ATTITUDE",PASSED
+Rover-speedup8-run1,Rover.log,NetworkingWebServer,"web server",PASSED
+Rover-speedup8-run1,Rover.log,MAV_SYSID_32bit,"test 32 bit MAV_SYSID)"": NotAchievedException('pymavlink is too old for 32 bit system IDs') (see /home/think/buildlogs/Rover-MAV_SYSID_32bit.txt)",FAILED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,RCOverrideEnableChannel,"Test RC Override Enable channel not overridden by GCS (issue #33161)",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,Scripting,"Scripting test)"": AutoTestTimeoutException('Failed to receive text: received heartbeat from') (see /home/think/buildlogs/Rover-Scripting.txt)",FAILED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,MAV_SYSID_32bit,"test 32 bit MAV_SYSID)"": NotAchievedException('pymavlink is too old for 32 bit system IDs') (see /home/think/buildlogs/Rover-MAV_SYSID_32bit.txt)",FAILED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,MAVLinkStatustextWideSource,"Preserve the source prefix and all payload bytes in MSG logs.)"": error(""'B' format requires 0 <= number <= 255"") (see /home/think/buildlogs/Rover-MAVLinkStatustextWideSource.txt)",FAILED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,NetworkingWebServerPPP,"web server over PPP)"": CalledProcessError(1, ['./modules/waf/waf-light', 'build', '--target', 'bin/ardurover']) (see /home/think/buildlogs/Rover-NetworkingWebServerPPP.txt)",FAILED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,RTL_SPEED,"Test RTL_SPEED is honoured",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,ScriptingLocationBindings,"test scripting bindings",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,MissionRetransfer,"torture-test with MISSION_COUNT",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,FenceFullAndPartialTransfer,"ensure starting a fence transfer then a partial transfer behaves",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,MissionPolyEnabledPreArm,"check Polygon porearm checks",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,OpticalFlow,"lightly test OpticalFlow",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,RCDuplicateOptionsExist,"ensure duplicate RC option detection works",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,RCModeChannelOptionConflict,"ensure mode channel / RCn_OPTION conflict is a pre-arm failure",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,ClearMission,"check mission clearing",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,JammingSimulation,"Test jamming simulation works",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,BatteryInvalid,"check Battery prearms report useful data to user",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,REQUIRE_LOCATION_FOR_ARMING,"check DriveOption::REQUIRE_POSITION_FOR_ARMING works",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,AHRSOptionsDCMFallback,"check AHRS_OPTIONS inhibits DCM fallback when EKF lacks height data",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,GetMessageInterval,"check that the two methods for requesting a MESSAGE_INTERVAL message are equivalent",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,SafetySwitch,"check safety switch works",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,EnterModeOnSafetySwitch,"test mode enter behaviour when there's a safety switch involved",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,ThrottleFailsafe,"Trigger throttle failsafes",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,CrashCheck,"Test crash detection with FS_CRASH_CHECK 1 (hold) and 2 (hold+disarm)",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,DriveEachFrame,"drive each frame (except BalanceBot) in a mission to ensure basic functionality",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,AP_ROVER_AUTO_ARM_ONCE_ENABLED,"test Rover arm-once-when-ready behaviour",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,GPSAntennaPositionOffset,"test GPS antenna position offset is applied",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,UTMGlobalPosition,"test UTM_GLOBAL_POSITION message sending",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,UTMGlobalPositionWaypoint,"test UTM_GLOBAL_POSITION waypoint fields in AUTO and GUIDED",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,WP_SPEED,"ensure changing WP_SPEED during a mission works",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,AutoModeAccelChanges,"verify WP_ACCEL mid-mission change bakes at the next WP crossing and takes effect n+2 legs later",PASSED
+Rover-speedup8-rerun1,Rover-rerun-remaining.log,AutoModeAccelLimiting,"verify ATC_ACCEL_MAX and ATC_DECEL_MAX cap WP_ACCEL",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAV_SYSID_32bit,"test 32 bit MAV_SYSID",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAV_SYSID_FullRange,"Preserve unsigned system IDs through MAVFTP, reboot and consumers.",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkStatustextWideSource,"Preserve the source prefix and all payload bytes in MSG logs.",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,Scripting,"Scripting test",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkHeaderTargets,"Wide target headers route independently of source ID width.",PASSED
+Rover-speedup8-rerun2-intree-pymavlink,Rover-rerun-pymavlink.log,MAVLinkTimesyncRTT,"Request cookies must not contribute to RTT, even across ID changes.",PASSED
