@@ -66,3 +66,27 @@ Sub-speedup8,Sub.log,AutoTerrainRecover,"Test Auto_TerrainRecover",PASSED
 Sub-speedup8,Sub.log,IgnoreGPSDrift," Test GPS-DVL integration. DVL (VISO) should be able to filter the GPS noise.",PASSED
 Sub-speedup8,Sub.log,GuidedPosVelAccel,"Test Guided_PosVelAccel mode via SET_POSITION_TARGET_LOCAL_NED",PASSED
 Sub-speedup8,Sub.log,GuidedAboveTerrain,"Test Guided_PosVelAccel mode and position offsets via Lua",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,PIDTuning,"Test PID Tuning",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,SetHome,"Setting and fetching of home",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,Logging,"Test Onboard Logging",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,GetCapabilities,"Get Capabilities",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,InitialMode,"Test initial mode switching",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,GUIDED,"Test GUIDED mode",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,GUIDEDHoldsAttitudeOnEntry,"ensure entering GUIDED holds the current attitude until a target arrives",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,MANUAL,"Test MANUAL mode",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,MAV_CMD_DO_SET_SERVO,"Test SERVOTEST mode",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,MAV_CMD_MISSION_START,"test MAV_CMD_MISSION_START mavlink command",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,NMEAOutput,"Test AHRS NMEA Output can be read by out NMEA GPS",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,SCAN,"Test SCAN mode",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,BaseMessageSet,"ensure we're getting messages we expect",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,GPSForYaw,"Moving baseline GPS yaw",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,LoggerMsgChunks,"create MSG dataflash entries for very long messages",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,StationaryGlobalPositionIntAlt,"Test GLOBAL_POSITION_INT.alt is correct in stationary mode",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,UndrivenServosHoldPosition,"check the simulated tracker does not move while its servos are not driven",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,ServoRangeLimits,"check the simulated tracker stops at the limits of its range",PASSED
+AntennaTracker-speedup8,AntennaTracker.log,Tracking,"check the tracker points at a vehicle sending its position",PASSED

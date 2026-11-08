@@ -8,7 +8,7 @@ CSV="$OUT/autotest-results.csv"
 echo "label,log,test,description,result" > "$CSV"
 for spec in "$@"; do
   f=${spec%%:*}; label=${spec##*:}
-  grep -E ': (PASSED|FAILED): ' ~/autotest-logs/$f | sed -E 's/^AT-[0-9.]+: (PASSED|FAILED): "([^ ]+) \((.*)\)?"?.*$/\1|\2|\3/' | \
+  grep -E '^AT-[0-9.]+: (PASSED|FAILED): "' ~/autotest-logs/$f | sed -E 's/^AT-[0-9.]+: (PASSED|FAILED): "([^ ]+) \((.*)\)?"?.*$/\1|\2|\3/' | \
     awk -F'|' -v l="$label" -v f="$f" '{gsub(/"/,"\"\"",$3); printf "%s,%s,%s,\"%s\",%s\n", l, f, $2, $3, $1}' >> "$CSV"
   gzip -c ~/autotest-logs/$f > "$OUT/$f.gz"
   cp ~/autotest-logs/${f%.log}.progress "$OUT/${f%.log}.progress" 2>/dev/null
