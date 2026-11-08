@@ -1,0 +1,24 @@
+step,item,before,requested,read_back_from_vehicle,result
+page-shows,FLTMODE1,7,,7,page matches vehicle
+page-shows,FLTMODE2,9,,9,page matches vehicle
+page-shows,FLTMODE3,6,,6,page matches vehicle
+page-shows,FLTMODE4,3,,3,page matches vehicle
+page-shows,FLTMODE5,5,,5,page matches vehicle
+page-shows,FLTMODE6,0,,0,page matches vehicle
+save,button text,,,Complete,
+save,FLTMODE1,7,3,3,applied
+save,FLTMODE2,9,4,4,applied
+save,FLTMODE3,6,6,6,applied
+save,FLTMODE4,3,9,9,applied
+save,FLTMODE5,5,16,16,applied
+save,FLTMODE6,0,17,17,applied
+save,SIMPLE,,1,1,applied
+save,SUPER_SIMPLE,,2,2,applied
+restore,FLTMODE1,3,7,7,restored
+restore,FLTMODE2,4,9,9,restored
+restore,FLTMODE3,6,6,6,restored
+restore,FLTMODE4,9,3,3,restored
+restore,FLTMODE5,16,5,5,restored
+restore,FLTMODE6,17,0,0,restored
+restore,SIMPLE,,0,0,restored
+restore,SUPER_SIMPLE,,0,0,restored
