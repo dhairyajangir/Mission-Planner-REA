@@ -3,7 +3,8 @@
 // MavlinkCheckBox) whose parameter exists on the vehicle, change it by one step, wait for the control's own write path (the numeric
 // control writes through a 300 ms timer, the check box on CheckedChanged), read the parameter back from the vehicle with
 // MAVLinkInterface.GetParam(name), then put the control back and check the vehicle value was restored. Simulator only.
-// MavlinkComboBox controls are listed but not changed (their write value depends on an enum or key/value source).
+// MavlinkComboBox controls are moved to the next item on pages without a staged write button (the expected value is the selected key,
+// or the enum value parsed from the text, matching the control's two write paths) and then put back; on staged pages they are listed only.
 // A message box raised by a control would block its page thread; each page has a time limit and is then abandoned.
 // Usage: PageControlsProbe.exe <isolated dir> <out dir> <SITL tcp port> <page type names, comma separated>
 using System;
@@ -119,7 +120,7 @@ public static class PageControlsProbe
         paramList = mav.GetType().GetProperty("param").GetValue(mav, null);
         Console.WriteLine("connected; parameters: " + paramList.GetType().GetProperty("Count").GetValue(paramList, null));
 
-        var summary = new StringBuilder("page,status,detail,numeric_total,numeric_changed,numeric_applied,numeric_restored,checkbox_total,checkbox_changed,checkbox_applied,checkbox_restored,combo_listed\n");
+        var summary = new StringBuilder("page,status,detail,numeric_total,numeric_changed,numeric_applied,numeric_restored,checkbox_total,checkbox_changed,checkbox_applied,checkbox_restored,combo_listed,combo_changed,combo_applied,combo_restored\n");
         Type[] all;
         try { all = asm.GetTypes(); } catch (ReflectionTypeLoadException ex) { all = ex.Types.Where(t => t != null).ToArray(); }
         foreach (string pageName in pages)
@@ -128,7 +129,7 @@ public static class PageControlsProbe
             var type = all.FirstOrDefault(t => t.Name == pageName && typeof(Control).IsAssignableFrom(t));
             if (type == null) { summary.AppendFormat("{0},no-type,,,,,,,,,,\n", pageName); continue; }
             string status = "", detail = "";
-            int nTot = 0, nChg = 0, nApp = 0, nRes = 0, cTot = 0, cChg = 0, cApp = 0, cRes = 0, combos = 0;
+            int nTot = 0, nChg = 0, nApp = 0, nRes = 0, cTot = 0, cChg = 0, cApp = 0, cRes = 0, combos = 0, combosChg = 0, combosApp = 0, combosRes = 0;
             var th = new Thread(() =>
             {
                 try
@@ -155,7 +156,44 @@ public static class PageControlsProbe
                             if (tn != "MavlinkNumericUpDown" && tn != "MavlinkCheckBox" && tn != "MavlinkComboBox") continue;
                             string pname = (string)c.GetType().GetProperty("ParamName").GetValue(c, null);
                             if (string.IsNullOrEmpty(pname) || !HasParam(pname)) continue;
-                            if (tn == "MavlinkComboBox") { combos++; continue; }
+                            if (tn == "MavlinkComboBox")
+                            {
+                                combos++;
+                                if (commit != null) continue;     // staged pages: combo edits are collected by the page, not written (not tested)
+                                var cmb = (ComboBox)c;
+                                if (cmb.Items.Count < 2 || cmb.SelectedIndex < 0) continue;
+                                // the control writes either the selected key (key/value source) or the parsed enum name (enum source)
+                                var f2 = c.GetType().GetField("_source2", BindingFlags.Instance | BindingFlags.NonPublic);
+                                var f1 = c.GetType().GetField("_source", BindingFlags.Instance | BindingFlags.NonPublic);
+                                object src2 = f2 == null ? null : f2.GetValue(c), src1 = f1 == null ? null : f1.GetValue(c);
+                                Func<double?> expectedNow = () =>
+                                {
+                                    try
+                                    {
+                                        if (src1 != null) return (double)(int)Enum.Parse((Type)src1, cmb.Text);
+                                        if (src2 != null) return Convert.ToDouble(cmb.SelectedValue, CultureInfo.InvariantCulture);
+                                    }
+                                    catch { }
+                                    return null;
+                                };
+                                if (expectedNow() == null) continue;
+                                int origIdx = cmb.SelectedIndex;
+                                float beforeC = Get(pname);
+                                string origText = cmb.Text;
+                                cmb.SelectedIndex = (origIdx + 1) % cmb.Items.Count;
+                                Pump(600);
+                                string targetText = cmb.Text;      // captured before the control is put back
+                                double? exp = expectedNow();
+                                float readC = Get(pname);
+                                bool appliedC = exp.HasValue && Close(readC, exp.Value);
+                                cmb.SelectedIndex = origIdx;
+                                Pump(600);
+                                float backC = Get(pname);
+                                bool restoredC = Close(backC, beforeC);
+                                combosChg++; if (appliedC) combosApp++; if (restoredC) combosRes++;
+                                Row(pageName, c.Name, pname, "combo", beforeC + " (" + origText.Replace(",", ";") + ")", targetText.Replace(",", ";"), exp, "", readC, appliedC ? "applied" : "NOT applied", backC, restoredC ? "restored" : "NOT restored");
+                                continue;
+                            }
                             if (tn == "MavlinkNumericUpDown")
                             {
                                 var n = (NumericUpDown)c;
@@ -241,8 +279,8 @@ public static class PageControlsProbe
             th.IsBackground = true;
             th.Start();
             if (!th.Join(600000)) { status = "timeout"; detail = "page thread did not finish in 600 s (a message box may be open)"; }
-            summary.AppendFormat("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11}\n", pageName, status, detail, nTot, nChg, nApp, nRes, cTot, cChg, cApp, cRes, combos);
-            Console.WriteLine("{0}: {1} {2} numeric changed {3}/{4} applied {5} restored {6}; checkbox changed {7}/{8} applied {9} restored {10}; combos listed {11}", pageName, status, detail, nChg, nTot, nApp, nRes, cChg, cTot, cApp, cRes, combos);
+            summary.AppendFormat("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14}\n", pageName, status, detail, nTot, nChg, nApp, nRes, cTot, cChg, cApp, cRes, combos, combosChg, combosApp, combosRes);
+            Console.WriteLine("{0}: {1} {2} numeric changed {3}/{4} applied {5} restored {6}; checkbox changed {7}/{8} applied {9} restored {10}; combos {11} (changed {12} applied {13} restored {14})", pageName, status, detail, nChg, nTot, nApp, nRes, cChg, cTot, cApp, cRes, combos, combosChg, combosApp, combosRes);
             lock (boxes) File.WriteAllText(Path.Combine(outDir, "message-boxes.txt"), string.Join("\n", boxes) + "\n", new UTF8Encoding(false));
             File.WriteAllText(Path.Combine(outDir, "page-controls.csv"), csv.ToString().Replace("\r\n", "\n"), new UTF8Encoding(false));
             File.WriteAllText(Path.Combine(outDir, "page-controls-summary.csv"), summary.ToString().Replace("\r\n", "\n"), new UTF8Encoding(false));

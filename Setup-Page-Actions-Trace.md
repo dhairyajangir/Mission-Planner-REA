@@ -50,3 +50,9 @@ The same probe was run over 17 more pages (`sitl-evidence/page-controls-2/`): 12
 One message box appeared: `ConfigAC_Fence` raised "Set FENCE_ENABLE Failed" even though the read-back shows both writes reached the vehicle; the check box's callback re-downloads the parameter list (`ConfigAC_Fence.cs` line 21) and I did not examine why the page reported a failure. Combo boxes were not changed in either run.
 
 The first controls run's results are in `sitl-evidence/page-controls/` (kept separate on purpose; this run first overwrote them in the working tree and they were restored from the commit).
+
+## Combo boxes (third controls run)
+
+`PageControlsProbe` was extended to move each `MavlinkComboBox` to its next item on pages without a staged write button, compare the vehicle's value with what the control writes (the selected key for key/value sources, or the enum value parsed from the text for enum sources) and put it back. Run on 11 pages (`sitl-evidence/page-controls-3/`): 168 controls changed (84 numeric, 37 check box, 47 combo box), 168 applied, 168 restored. Examples: `BATT_MONITOR` moved from "Analog Voltage and Current" (4) to "Bebop" (6), `FENCE_ACTION` from "RTL or Land" (1) to "Always Land" (2), `COMPASS_ORIENT` from "None" (0) to "Yaw45" (1); each read back as expected and was restored.
+
+A first run of this version labelled the combo "target" text after the control had been put back, so it named the original item; the compared values were right but the label was wrong. I fixed the probe, discarded that output and reran; only the corrected run is in the repository. The combo boxes on the tuning page (staged write) and on pages not in this list were not changed. As before, `ConfigAC_Fence` raised "Set FENCE_ENABLE Failed" with a correct read-back, cause not examined.

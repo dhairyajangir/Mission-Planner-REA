@@ -1,0 +1,169 @@
+page,control,param,kind,before,target,expected,staged_read_before_commit,read_after,applied,restored_read,restored
+ConfigAC_Fence,FENCE_ACTION,FENCE_ACTION,combo,1 (RTL or Land),Always Land,2,,2,applied,1,restored
+ConfigAC_Fence,FENCE_ALT_MAX,FENCE_ALT_MAX,numeric,100,101,101,,101,applied,100,restored
+ConfigAC_Fence,FENCE_RADIUS,FENCE_RADIUS,numeric,150,151,151,,151,applied,150,restored
+ConfigAC_Fence,mavlinkCheckBox1,FENCE_ENABLE,checkbox,0,True,1,,1,applied,0,restored
+ConfigAC_Fence,FENCE_ALT_MIN,FENCE_ALT_MIN,numeric,-10,-9,-9,,-9,applied,-10,restored
+ConfigBatteryMonitoring,BATT_MONITOR,BATT_MONITOR,combo,4 (Analog Voltage and Current),Bebop,6,,6,applied,4,restored
+ConfigBatteryMonitoring2,BATT2_MONITOR,BATT2_MONITOR,combo,0 (Disabled),AD7091R5,28,,28,applied,0,restored
+ConfigHWCompass,CHK_compass3_external,COMPASS_EXTERN3,checkbox,0,True,1,,1,applied,0,restored
+ConfigHWCompass,CHK_compass3_use,COMPASS_USE3,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass,COMPASS_ORIENT3,COMPASS_ORIENT3,combo,0 (None),Yaw45,1,,1,applied,0,restored
+ConfigHWCompass,CHK_compass2_external,COMPASS_EXTERN2,checkbox,0,True,1,,1,applied,0,restored
+ConfigHWCompass,CHK_compass2_use,COMPASS_USE2,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass,COMPASS_ORIENT2,COMPASS_ORIENT2,combo,0 (None),Yaw45,1,,1,applied,0,restored
+ConfigHWCompass,CHK_compass1_external,COMPASS_EXTERNAL,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass,CHK_compass1_use,COMPASS_USE,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass,COMPASS_ORIENT,COMPASS_ORIENT,combo,0 (None),Yaw45,1,,1,applied,0,restored
+ConfigHWCompass,CHK_compass_learn,COMPASS_LEARN,checkbox,0,True,1,,1,applied,0,restored
+ConfigHWCompass,COMPASS_CAL_FIT,COMPASS_CAL_FIT,combo,16 (Default),Relaxed,32,,32,applied,16,restored
+ConfigHWCompass2,mavlinkCheckBoxUseCompass3,COMPASS_USE3,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass2,mavlinkCheckBoxUseCompass2,COMPASS_USE2,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWCompass2,CHK_compass_learn,COMPASS_LEARN,checkbox,0,True,1,,1,applied,0,restored
+ConfigHWCompass2,COMPASS_CAL_FIT,COMPASS_CAL_FIT,combo,16 (Default),Relaxed,32,,32,applied,16,restored
+ConfigHWCompass2,mavlinkCheckBoxUseCompass1,COMPASS_USE,checkbox,1,False,0,,0,applied,1,restored
+ConfigHWOptFlow,FLOW_TYPE,FLOW_TYPE,combo,0 (None),Bebop,3,,3,applied,0,restored
+ConfigRadioOutput,,SERVO1_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO1_FUNCTION,SERVO1_FUNCTION,combo,33 (Motor1),Motor10,83,,83,applied,33,restored
+ConfigRadioOutput,SERVO1_MIN,SERVO1_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO1_TRIM,SERVO1_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO1_MAX,SERVO1_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO2_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO2_FUNCTION,SERVO2_FUNCTION,combo,34 (Motor2),Motor20,167,,167,applied,34,restored
+ConfigRadioOutput,SERVO2_MIN,SERVO2_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO2_TRIM,SERVO2_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO2_MAX,SERVO2_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO3_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO3_FUNCTION,SERVO3_FUNCTION,combo,35 (Motor3),Motor30,177,,177,applied,35,restored
+ConfigRadioOutput,SERVO3_MIN,SERVO3_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO3_TRIM,SERVO3_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO3_MAX,SERVO3_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO4_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO4_FUNCTION,SERVO4_FUNCTION,combo,36 (Motor4),Motor5,37,,37,applied,36,restored
+ConfigRadioOutput,SERVO4_MIN,SERVO4_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO4_TRIM,SERVO4_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO4_MAX,SERVO4_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO5_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO5_FUNCTION,SERVO5_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO5_MIN,SERVO5_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO5_TRIM,SERVO5_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO5_MAX,SERVO5_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO6_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO6_FUNCTION,SERVO6_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO6_MIN,SERVO6_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO6_TRIM,SERVO6_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO6_MAX,SERVO6_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO7_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO7_FUNCTION,SERVO7_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO7_MIN,SERVO7_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO7_TRIM,SERVO7_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO7_MAX,SERVO7_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO8_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO8_FUNCTION,SERVO8_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO8_MIN,SERVO8_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO8_TRIM,SERVO8_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO8_MAX,SERVO8_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO9_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO9_FUNCTION,SERVO9_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO9_MIN,SERVO9_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO9_TRIM,SERVO9_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO9_MAX,SERVO9_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO10_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO10_FUNCTION,SERVO10_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO10_MIN,SERVO10_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO10_TRIM,SERVO10_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO10_MAX,SERVO10_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO11_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO11_FUNCTION,SERVO11_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO11_MIN,SERVO11_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO11_TRIM,SERVO11_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO11_MAX,SERVO11_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO12_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO12_FUNCTION,SERVO12_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO12_MIN,SERVO12_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO12_TRIM,SERVO12_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO12_MAX,SERVO12_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO13_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO13_FUNCTION,SERVO13_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO13_MIN,SERVO13_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO13_TRIM,SERVO13_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO13_MAX,SERVO13_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO14_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO14_FUNCTION,SERVO14_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO14_MIN,SERVO14_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO14_TRIM,SERVO14_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO14_MAX,SERVO14_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO15_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO15_FUNCTION,SERVO15_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO15_MIN,SERVO15_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO15_TRIM,SERVO15_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO15_MAX,SERVO15_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigRadioOutput,,SERVO16_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigRadioOutput,SERVO16_FUNCTION,SERVO16_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigRadioOutput,SERVO16_MIN,SERVO16_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigRadioOutput,SERVO16_TRIM,SERVO16_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigRadioOutput,SERVO16_MAX,SERVO16_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigESCCalibration,MOT_SPIN_MAX,MOT_SPIN_MAX,numeric,0.95,0.960,0.959999978542328,,0.96,applied,0.95,restored
+ConfigESCCalibration,MOT_SPIN_MIN,MOT_SPIN_MIN,numeric,0.15,0.160,0.159999996423721,,0.16,applied,0.15,restored
+ConfigESCCalibration,MOT_SPIN_ARM,MOT_SPIN_ARM,numeric,0.1,0.110,0.109999999403954,,0.11,applied,0.1,restored
+ConfigESCCalibration,MOT_PWM_MAX,MOT_PWM_MAX,numeric,2000,1999,1999,,1999,applied,2000,restored
+ConfigESCCalibration,MOT_PWM_MIN,MOT_PWM_MIN,numeric,1000,1001,1001,,1001,applied,1000,restored
+ConfigESCCalibration,MOT_PWM_TYPE,MOT_PWM_TYPE,combo,0 (Normal),OneShot,1,,1,applied,0,restored
+ConfigUserDefined,RC6_OPTION,RC6_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC7_OPTION,RC7_OPTION,combo,7 (Save WP),Scripting1,300,,300,applied,7,restored
+ConfigUserDefined,RC8_OPTION,RC8_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC9_OPTION,RC9_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC10_OPTION,RC10_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC11_OPTION,RC11_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC12_OPTION,RC12_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC13_OPTION,RC13_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC14_OPTION,RC14_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC15_OPTION,RC15_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigUserDefined,RC16_OPTION,RC16_OPTION,combo,0 (Do Nothing),ACRO Mode,52,,52,applied,0,restored
+ConfigFailSafe,BATT_LOW_TIMER,BATT_LOW_TIMER,numeric,10,11,11,,11,applied,10,restored
+ConfigFailSafe,BATT_FS_LOW_ACT,BATT_FS_LOW_ACT,combo,0 (Warn only),Land,1,,1,applied,0,restored
+ConfigFailSafe,BATT_LOW_VOLT,BATT_LOW_VOLT,numeric,10.5,10.6,10.6000003814697,,10.6,applied,10.5,restored
+ConfigFailSafe,BATT_LOW_MAH,BATT_LOW_MAH,numeric,0,50,50,,50,applied,0,restored
+ConfigFailSafe,mavlinkCheckBoxFS_GCS_ENABLE,FS_GCS_ENABLE,checkbox,0,True,1,,1,applied,0,restored
+ConfigFailSafe,FS_THR_ENABLE,FS_THR_ENABLE,combo,1 (Enabled always RTL),Enabled Continue with Mission in Auto Mode (Removed in 4.0+),2,,2,applied,1,restored
+ConfigFailSafe,FS_THR_VALUE,FS_THR_VALUE,numeric,975,976,976,,976,applied,975,restored
+ConfigTradHeli4,mavlinkCheckBoxrev8,SERVO8_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev7,SERVO7_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev6,SERVO6_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev5,SERVO5_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev4,SERVO4_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev3,SERVO3_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,mavlinkCheckBoxrev2,SERVO2_REVERSED,checkbox,0,True,1,,1,applied,0,restored
+ConfigTradHeli4,SERVO5_TRIM,SERVO5_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO5_MAX,SERVO5_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO5_MIN,SERVO5_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO4_TRIM,SERVO4_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO4_MAX,SERVO4_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO4_MIN,SERVO4_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO3_TRIM,SERVO3_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO3_MAX,SERVO3_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO3_MIN,SERVO3_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO2_TRIM,SERVO2_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO2_MAX,SERVO2_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO1_TRIM,SERVO1_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO1_MAX,SERVO1_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO1_FUNCTION,SERVO1_FUNCTION,combo,33 (Motor1),Motor10,83,,83,applied,33,restored
+ConfigTradHeli4,SERVO2_FUNCTION,SERVO2_FUNCTION,combo,34 (Motor2),Motor20,167,,167,applied,34,restored
+ConfigTradHeli4,SERVO3_FUNCTION,SERVO3_FUNCTION,combo,35 (Motor3),Motor30,177,,177,applied,35,restored
+ConfigTradHeli4,SERVO4_FUNCTION,SERVO4_FUNCTION,combo,36 (Motor4),Motor5,37,,37,applied,36,restored
+ConfigTradHeli4,SERVO5_FUNCTION,SERVO5_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigTradHeli4,SERVO6_FUNCTION,SERVO6_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigTradHeli4,SERVO7_FUNCTION,SERVO7_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigTradHeli4,SERVO8_FUNCTION,SERVO8_FUNCTION,combo,0 (Disabled),Alarm,138,,138,applied,0,restored
+ConfigTradHeli4,SERVO1_MIN,SERVO1_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO2_MIN,SERVO2_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO6_MIN,SERVO6_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO6_MAX,SERVO6_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO6_TRIM,SERVO6_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO7_MIN,SERVO7_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO7_MAX,SERVO7_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO7_TRIM,SERVO7_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,SERVO8_MIN,SERVO8_MIN,numeric,1100,1101,1101,,1101,applied,1100,restored
+ConfigTradHeli4,SERVO8_MAX,SERVO8_MAX,numeric,1900,1901,1901,,1901,applied,1900,restored
+ConfigTradHeli4,SERVO8_TRIM,SERVO8_TRIM,numeric,1500,1501,1501,,1501,applied,1500,restored
+ConfigTradHeli4,mavlinkCheckBoxrev1,SERVO1_REVERSED,checkbox,0,True,1,,1,applied,0,restored
