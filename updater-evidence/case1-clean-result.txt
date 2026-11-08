@@ -1,0 +1,6 @@
+case1-clean exited=True seconds=5.3
+a.dll = new-a
+b.dll = new-b
+sub\d.dll = new-d
+sub\d.dll.old = old-d
+Updater.exe.new = self-update

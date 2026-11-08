@@ -1,0 +1,18 @@
+Setting SIM_SPEEDUP=5.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'Rover'
+Starting SITL input
+Using Irlock at port : 9045
+Using \clock topic for DDS timing: disabled
+bind port 5800 for SERIAL0
+SERIAL0 on TCP port 5800
+Waiting for connection ....
+Connection on serial port 5800
+Loaded defaults from @ROMFS/default_params/rover.parm
+bind port 5802 for SERIAL1
+SERIAL1 on TCP port 5802
+bind port 5803 for SERIAL2
+SERIAL2 on TCP port 5803
+validate_structures:546: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Exitting

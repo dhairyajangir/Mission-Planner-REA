@@ -1,0 +1,8 @@
+mode,reported_mode,entered,sim_seconds,alt_start_m,alt_end_m,alt_min_m,alt_max_m,drift_start_to_end_m,max_ground_speed_ms,statustext
+FBWA,FBWA,True,8.1,53.06,69.85,53.06,69.85,204.61,26.53,
+FBWB,FBWB,True,8.1,71.28,70.03,70.01,71.28,179.52,22.28,
+CRUISE,CRUISE,True,8.1,69.94,69.88,69.86,69.94,180.6,22.31,
+LOITER,LOITER,True,8.1,69.83,70.97,69.83,72.13,122.67,25.41,
+CIRCLE,CIRCLE,True,8.1,70.91,70.73,70.59,71.92,174.45,22.96,
+STABILIZE,STABILIZE,True,8.1,70.93,84.43,70.93,84.43,199.7,25.06,
+GUIDED,GUIDED,True,8.2,86.55,87.87,86.55,89.35,123.49,25.22,

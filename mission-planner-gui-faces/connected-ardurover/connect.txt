@@ -1,0 +1,1 @@
+connected to SITL tcp 5840; parameters loaded: 1292

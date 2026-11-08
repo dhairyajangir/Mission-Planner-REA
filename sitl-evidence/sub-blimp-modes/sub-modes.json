@@ -1,0 +1,115 @@
+{
+ "events": [
+  [
+   "ready",
+   [
+    "EKF3 IMU1 origin set",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS"
+   ]
+  ],
+  [
+   "armed",
+   true,
+   [
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors"
+   ]
+  ],
+  [
+   "armed_on_ground",
+   0.011
+  ],
+  [
+   "no_rtl_mode_for_this_vehicle",
+   true
+  ],
+  [
+   "rtl_finished_disarmed",
+   false,
+   [],
+   0.009
+  ]
+ ],
+ "rows": [
+  {
+   "mode": "STABILIZE",
+   "reported_mode": "STABILIZE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 0.01,
+   "alt_end_m": 0.01,
+   "alt_min_m": 0.01,
+   "alt_max_m": 0.01,
+   "drift_start_to_end_m": 4.12,
+   "max_ground_speed_ms": 0.51,
+   "statustext": ""
+  },
+  {
+   "mode": "MANUAL",
+   "reported_mode": "MANUAL",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": 0.01,
+   "alt_end_m": 0.01,
+   "alt_min_m": 0.01,
+   "alt_max_m": 0.01,
+   "drift_start_to_end_m": 4.23,
+   "max_ground_speed_ms": 0.49,
+   "statustext": ""
+  },
+  {
+   "mode": "POSHOLD",
+   "reported_mode": "POSHOLD",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": -0.06,
+   "alt_end_m": -0.05,
+   "alt_min_m": -0.06,
+   "alt_max_m": -0.05,
+   "drift_start_to_end_m": 2.06,
+   "max_ground_speed_ms": 0.27,
+   "statustext": ""
+  },
+  {
+   "mode": "SURFACE",
+   "reported_mode": "ALT_HOLD",
+   "entered": false,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.09,
+   "alt_end_m": -0.06,
+   "alt_min_m": -0.09,
+   "alt_max_m": -0.06,
+   "drift_start_to_end_m": 4.19,
+   "max_ground_speed_ms": 0.49,
+   "statustext": ""
+  },
+  {
+   "mode": "CIRCLE",
+   "reported_mode": "CIRCLE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.04,
+   "alt_end_m": -0.01,
+   "alt_min_m": -0.04,
+   "alt_max_m": -0.01,
+   "drift_start_to_end_m": 2.56,
+   "max_ground_speed_ms": 0.33,
+   "statustext": ""
+  },
+  {
+   "mode": "ACRO",
+   "reported_mode": "ACRO",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": -0.0,
+   "alt_end_m": 0.01,
+   "alt_min_m": -0.0,
+   "alt_max_m": 0.01,
+   "drift_start_to_end_m": 4.23,
+   "max_ground_speed_ms": 0.49,
+   "statustext": ""
+  }
+ ]
+}

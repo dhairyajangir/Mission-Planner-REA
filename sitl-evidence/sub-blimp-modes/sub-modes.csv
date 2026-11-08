@@ -1,0 +1,7 @@
+mode,reported_mode,entered,sim_seconds,alt_start_m,alt_end_m,alt_min_m,alt_max_m,drift_start_to_end_m,max_ground_speed_ms,statustext
+STABILIZE,STABILIZE,True,8.1,0.01,0.01,0.01,0.01,4.12,0.51,
+MANUAL,MANUAL,True,8.2,0.01,0.01,0.01,0.01,4.23,0.49,
+POSHOLD,POSHOLD,True,8.2,-0.06,-0.05,-0.06,-0.05,2.06,0.27,
+SURFACE,ALT_HOLD,False,8.1,-0.09,-0.06,-0.09,-0.06,4.19,0.49,
+CIRCLE,CIRCLE,True,8.1,-0.04,-0.01,-0.04,-0.01,2.56,0.33,
+ACRO,ACRO,True,8.2,-0.0,0.01,-0.0,0.01,4.23,0.49,

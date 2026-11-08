@@ -1,0 +1,8 @@
+case3-file-named-dot-new exited=True seconds=18
+.new = dot-new
+a.dll = new-a
+a.dll.old = old-a
+b.dll = new-b
+sub\d.dll = old-d
+sub\d.dll.new = new-d
+Updater.exe.new = self-update

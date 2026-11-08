@@ -1,0 +1,7 @@
+mode,reported_mode,entered,sim_seconds,alt_start_m,alt_end_m,alt_min_m,alt_max_m,drift_start_to_end_m,max_ground_speed_ms,statustext
+MANUAL,MANUAL,True,8.1,0.0,0.0,0.0,0.0,0.47,0.11,
+VELOCITY,VELOCITY,True,8.1,-0.0,-0.01,-0.01,-0.0,0.15,0.08,
+LOITER,LOITER,True,8.2,-0.02,-0.02,-0.02,-0.02,0.18,0.07,
+HOLD,HOLD,True,8.1,-0.02,-0.02,-0.02,-0.02,0.41,0.1,
+LAND,LAND,True,8.3,-0.02,-0.67,-0.67,-0.02,0.2,0.09,
+RTL,RTL,True,8.1,-1.07,-0.08,-1.07,-0.08,1.1,0.2,

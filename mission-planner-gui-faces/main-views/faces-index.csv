@@ -1,0 +1,5 @@
+page,type,status,detail,controls,texts,png,width,height
+Help,MissionPlanner.GCSViews.Help,ok,"",6,4,png/Help.png,984,661
+InitialSetup,MissionPlanner.GCSViews.InitialSetup,timeout,"constructor or layout did not finish in 20 s (thread abandoned)",0,0,,0,0
+SoftwareConfig,MissionPlanner.GCSViews.SoftwareConfig,ok,"",4,0,png/SoftwareConfig.png,984,661
+FlightData,MissionPlanner.GCSViews.FlightData,ok,"",409,119,png/FlightData.png,984,661

@@ -1,0 +1,152 @@
+{
+ "events": [
+  [
+   "ready",
+   [
+    "Field Elevation Set: 584m",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS"
+   ]
+  ],
+  [
+   "armed",
+   true,
+   [
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Throttle armed"
+   ]
+  ],
+  [
+   "armed_on_ground",
+   -0.131
+  ],
+  [
+   "rtl_finished_disarmed",
+   false,
+   [
+    "Reached destination"
+   ],
+   -0.209
+  ]
+ ],
+ "rows": [
+  {
+   "mode": "MANUAL",
+   "reported_mode": "MANUAL",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.16,
+   "alt_end_m": -0.22,
+   "alt_min_m": -0.23,
+   "alt_max_m": -0.16,
+   "drift_start_to_end_m": 32.04,
+   "max_ground_speed_ms": 4.89,
+   "statustext": ""
+  },
+  {
+   "mode": "ACRO",
+   "reported_mode": "ACRO",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": -0.24,
+   "alt_end_m": -0.17,
+   "alt_min_m": -0.24,
+   "alt_max_m": -0.16,
+   "drift_start_to_end_m": 27.67,
+   "max_ground_speed_ms": 4.57,
+   "statustext": ""
+  },
+  {
+   "mode": "STEERING",
+   "reported_mode": "STEERING",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.19,
+   "alt_end_m": -0.2,
+   "alt_min_m": -0.21,
+   "alt_max_m": -0.18,
+   "drift_start_to_end_m": 27.25,
+   "max_ground_speed_ms": 4.58,
+   "statustext": ""
+  },
+  {
+   "mode": "HOLD",
+   "reported_mode": "HOLD",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": -0.2,
+   "alt_end_m": -0.19,
+   "alt_min_m": -0.24,
+   "alt_max_m": -0.19,
+   "drift_start_to_end_m": 0.18,
+   "max_ground_speed_ms": 0.07,
+   "statustext": ""
+  },
+  {
+   "mode": "SIMPLE",
+   "reported_mode": "SIMPLE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.21,
+   "alt_end_m": -0.19,
+   "alt_min_m": -0.22,
+   "alt_max_m": -0.18,
+   "drift_start_to_end_m": 27.43,
+   "max_ground_speed_ms": 4.65,
+   "statustext": ""
+  },
+  {
+   "mode": "LOITER",
+   "reported_mode": "LOITER",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.2,
+   "alt_end_m": -0.22,
+   "alt_min_m": -0.23,
+   "alt_max_m": -0.2,
+   "drift_start_to_end_m": 0.17,
+   "max_ground_speed_ms": 0.07,
+   "statustext": ""
+  },
+  {
+   "mode": "CIRCLE",
+   "reported_mode": "CIRCLE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.2,
+   "alt_end_m": -0.17,
+   "alt_min_m": -0.22,
+   "alt_max_m": -0.16,
+   "drift_start_to_end_m": 19.79,
+   "max_ground_speed_ms": 4.37,
+   "statustext": ""
+  },
+  {
+   "mode": "GUIDED",
+   "reported_mode": "GUIDED",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": -0.2,
+   "alt_end_m": -0.2,
+   "alt_min_m": -0.22,
+   "alt_max_m": -0.2,
+   "drift_start_to_end_m": 0.02,
+   "max_ground_speed_ms": 0.02,
+   "statustext": ""
+  },
+  {
+   "mode": "RTL",
+   "reported_mode": "RTL",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": -0.21,
+   "alt_end_m": -0.17,
+   "alt_min_m": -0.22,
+   "alt_max_m": -0.17,
+   "drift_start_to_end_m": 12.8,
+   "max_ground_speed_ms": 4.99,
+   "statustext": ""
+  }
+ ]
+}

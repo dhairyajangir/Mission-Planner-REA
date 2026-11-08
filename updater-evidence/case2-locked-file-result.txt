@@ -1,0 +1,7 @@
+case2-locked-file exited=True seconds=18.3
+a.dll = old-a
+a.dll.new = new-a
+b.dll = new-b
+sub\d.dll = old-d
+sub\d.dll.new = new-d
+Updater.exe.new = self-update

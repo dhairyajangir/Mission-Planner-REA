@@ -1,0 +1,40 @@
+Help                               ok 
+InitialSetup                       timeout constructor or layout did not finish in 20 s (thread abandoned)
+SoftwareConfig                     ok 
+HUD resize 298 320
+HUD resize 298 223
+HUD 1 hz drawtime 226 gl True
+HUD resize 298 221
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+HUD 2 hz drawtime 16 gl True
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FD Main loop exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at MissionPlanner.GCSViews.FlightData.mainloop()
+FlightData                         ok 
+FD Main loop exit

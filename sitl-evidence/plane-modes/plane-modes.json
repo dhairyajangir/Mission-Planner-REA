@@ -1,0 +1,124 @@
+{
+ "events": [
+  [
+   "ready",
+   [
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "AHRS: EKF3 active"
+   ]
+  ],
+  [
+   "armed",
+   true,
+   [
+    "Triggered AUTO. GPS speed = 0.0",
+    "Takeoff to 50m for 200.0m heading 0.0 deg",
+    "Autoland direction= 359"
+   ]
+  ],
+  [
+   "airborne",
+   48.578
+  ],
+  [
+   "rtl_finished_disarmed",
+   false,
+   [],
+   100.001
+  ]
+ ],
+ "rows": [
+  {
+   "mode": "FBWA",
+   "reported_mode": "FBWA",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 53.06,
+   "alt_end_m": 69.85,
+   "alt_min_m": 53.06,
+   "alt_max_m": 69.85,
+   "drift_start_to_end_m": 204.61,
+   "max_ground_speed_ms": 26.53,
+   "statustext": ""
+  },
+  {
+   "mode": "FBWB",
+   "reported_mode": "FBWB",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 71.28,
+   "alt_end_m": 70.03,
+   "alt_min_m": 70.01,
+   "alt_max_m": 71.28,
+   "drift_start_to_end_m": 179.52,
+   "max_ground_speed_ms": 22.28,
+   "statustext": ""
+  },
+  {
+   "mode": "CRUISE",
+   "reported_mode": "CRUISE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 69.94,
+   "alt_end_m": 69.88,
+   "alt_min_m": 69.86,
+   "alt_max_m": 69.94,
+   "drift_start_to_end_m": 180.6,
+   "max_ground_speed_ms": 22.31,
+   "statustext": ""
+  },
+  {
+   "mode": "LOITER",
+   "reported_mode": "LOITER",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 69.83,
+   "alt_end_m": 70.97,
+   "alt_min_m": 69.83,
+   "alt_max_m": 72.13,
+   "drift_start_to_end_m": 122.67,
+   "max_ground_speed_ms": 25.41,
+   "statustext": ""
+  },
+  {
+   "mode": "CIRCLE",
+   "reported_mode": "CIRCLE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 70.91,
+   "alt_end_m": 70.73,
+   "alt_min_m": 70.59,
+   "alt_max_m": 71.92,
+   "drift_start_to_end_m": 174.45,
+   "max_ground_speed_ms": 22.96,
+   "statustext": ""
+  },
+  {
+   "mode": "STABILIZE",
+   "reported_mode": "STABILIZE",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 70.93,
+   "alt_end_m": 84.43,
+   "alt_min_m": 70.93,
+   "alt_max_m": 84.43,
+   "drift_start_to_end_m": 199.7,
+   "max_ground_speed_ms": 25.06,
+   "statustext": ""
+  },
+  {
+   "mode": "GUIDED",
+   "reported_mode": "GUIDED",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": 86.55,
+   "alt_end_m": 87.87,
+   "alt_min_m": 86.55,
+   "alt_max_m": 89.35,
+   "drift_start_to_end_m": 123.49,
+   "max_ground_speed_ms": 25.22,
+   "statustext": ""
+  }
+ ]
+}

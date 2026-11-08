@@ -1,0 +1,140 @@
+{
+ "events": [
+  [
+   "ready",
+   [
+    "EKF3 IMU1 origin set",
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS"
+   ]
+  ],
+  [
+   "armed",
+   true,
+   [
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS",
+    "Arming motors"
+   ]
+  ],
+  [
+   "airborne",
+   14.867
+  ],
+  [
+   "rtl_finished_disarmed",
+   true,
+   [
+    "SIM Hit ground at 0.502318 m/s",
+    "Disarming motors"
+   ],
+   -0.01
+  ]
+ ],
+ "rows": [
+  {
+   "mode": "LOITER",
+   "reported_mode": "LOITER",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 15.03,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.03,
+   "alt_max_m": 15.11,
+   "drift_start_to_end_m": 0.01,
+   "max_ground_speed_ms": 0.03,
+   "statustext": ""
+  },
+  {
+   "mode": "ALT_HOLD",
+   "reported_mode": "ALT_HOLD",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 15.1,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.1,
+   "alt_max_m": 15.1,
+   "drift_start_to_end_m": 0.55,
+   "max_ground_speed_ms": 0.07,
+   "statustext": ""
+  },
+  {
+   "mode": "POSHOLD",
+   "reported_mode": "POSHOLD",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 15.1,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.1,
+   "alt_max_m": 15.1,
+   "drift_start_to_end_m": 0.02,
+   "max_ground_speed_ms": 0.03,
+   "statustext": ""
+  },
+  {
+   "mode": "BRAKE",
+   "reported_mode": "BRAKE",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": 15.1,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.1,
+   "alt_max_m": 15.1,
+   "drift_start_to_end_m": 0.01,
+   "max_ground_speed_ms": 0.01,
+   "statustext": ""
+  },
+  {
+   "mode": "CIRCLE",
+   "reported_mode": "CIRCLE",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": 15.1,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.1,
+   "alt_max_m": 15.1,
+   "drift_start_to_end_m": 18.3,
+   "max_ground_speed_ms": 3.46,
+   "statustext": ""
+  },
+  {
+   "mode": "DRIFT",
+   "reported_mode": "DRIFT",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 15.1,
+   "alt_end_m": 15.09,
+   "alt_min_m": 15.09,
+   "alt_max_m": 15.1,
+   "drift_start_to_end_m": 0.38,
+   "max_ground_speed_ms": 0.01,
+   "statustext": ""
+  },
+  {
+   "mode": "SPORT",
+   "reported_mode": "SPORT",
+   "entered": true,
+   "sim_seconds": 8.1,
+   "alt_start_m": 15.09,
+   "alt_end_m": 15.09,
+   "alt_min_m": 15.09,
+   "alt_max_m": 15.09,
+   "drift_start_to_end_m": 0.48,
+   "max_ground_speed_ms": 0.06,
+   "statustext": ""
+  },
+  {
+   "mode": "SMART_RTL",
+   "reported_mode": "SMART_RTL",
+   "entered": true,
+   "sim_seconds": 8.2,
+   "alt_start_m": 15.09,
+   "alt_end_m": 15.1,
+   "alt_min_m": 15.09,
+   "alt_max_m": 15.11,
+   "drift_start_to_end_m": 9.67,
+   "max_ground_speed_ms": 2.02,
+   "statustext": ""
+  }
+ ]
+}

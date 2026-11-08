@@ -1,0 +1,11 @@
+Microsoft Windows NT 6.2.9200.0
+dir: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean
+	 file: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\a.dll.new
+Move: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\a.dll.new TO C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\a.dll Done.
+	 file: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\b.dll.new
+Move: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\b.dll.new TO C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\b.dll Done.
+	 file: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\Updater.exe.new
+dir: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\sub
+	 file: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\sub\d.dll.new
+Move: C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\sub\d.dll.new TO C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\sub\d.dll Done.
+Start C:\Users\think\AppData\Local\Temp\claude\d808fb241da3c4f8\dbae9594-2be8-4d09-99c4-c0b2c02eef3b\scratchpad\upd\work\case1-clean\MissionPlanner.exe with 

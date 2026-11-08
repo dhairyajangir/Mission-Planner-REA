@@ -1,0 +1,1 @@
+connected to SITL tcp 5850; parameters loaded: 1438

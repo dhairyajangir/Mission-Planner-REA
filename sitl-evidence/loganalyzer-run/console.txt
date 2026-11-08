@@ -1,0 +1,49 @@
+Error parsing line 1942 of log file: copter-flight.log (skipping line)
+Error parsing line 2026 of log file: copter-flight.log (skipping line)
+Error parsing line 2078 of log file: copter-flight.log (skipping line)
+Error parsing line 2107 of log file: copter-flight.log (skipping line)
+Error parsing line 2228 of log file: copter-flight.log (skipping line)
+Error parsing line 2260 of log file: copter-flight.log (skipping line)
+Error parsing line 2300 of log file: copter-flight.log (skipping line)
+Error parsing line 2375 of log file: copter-flight.log (skipping line)
+Error parsing line 2414 of log file: copter-flight.log (skipping line)
+Error parsing line 2909 of log file: copter-flight.log (skipping line)
+Error parsing line 2947 of log file: copter-flight.log (skipping line)
+Dataflash log analysis report for file: copter-flight.log
+Log size: 35.20mb (322218 lines)
+Log duration: 0:03:03.799784
+
+Vehicle Type: ArduCopter
+Firmware Version: V4.8.0-dev (72b23820)
+Hardware: 
+Free RAM: 0
+
+WARNING: 11 malformed log lines skipped during read
+
+
+Test Results:
+              Autotune:  UNKNOWN    name 'VehicleType' is not defined                      
+                    PM:  UNKNOWN    name 'VehicleType' is not defined                      
+           OpticalFlow:  FAIL       'FLOW_FXSCALER' not found                                  [GRAPH]
+             Vibration:  UNKNOWN    name 'VehicleType' is not defined                      
+        Event/Failsafe:  GOOD                                                              
+               Compass:  UNKNOWN    '<' not supported between instances of 'float' and 'NoneType'
+            Parameters:  UNKNOWN    name 'VehicleType' is not defined                      
+         Motor Balance:  UNKNOWN    object of type 'zip' has no len()                      
+                Thrust:  UNKNOWN    name 'VehicleType' is not defined                      
+         Dupe Log Data:  UNKNOWN    'float' object cannot be interpreted as an integer     
+                  NaNs:  FAIL       Found NaN in CTUN.DSAlt                                    [GRAPH]
+                                    Found NaN in CTUN.TAlt
+              Brownout:  GOOD                                                              
+                   GPS:  GOOD                                                              
+            Pitch/Roll:  UNKNOWN    name 'VehicleType' is not defined                      
+                 Empty:  GOOD                                                              
+                   VCC:  UNKNOWN    No CURR log data                                       
+
+
+The Log Analyzer is currently BETA code.
+For any support or feedback on the log analyzer please email Andrew Chapman (amchapman@gmail.com)
+
+
+XML output written to file: out.xml
+
