@@ -1,0 +1,68 @@
+label,log,test,description,result
+Blimp-speedup10,Blimp-speedup10.log,FlyManualFinned,"test manual mode on the finned blimp frame",PASSED
+Blimp-speedup10,Blimp-speedup10.log,FlyManualFourMotor,"test manual mode on the four-motor blimp frame",PASSED
+Blimp-speedup10,Blimp-speedup10.log,FlyLoiter,"test loiter mode",PASSED
+Blimp-speedup10,Blimp-speedup10.log,FlyAuto,"test AUTO mode with a small mission ",PASSED
+Blimp-speedup10,Blimp-speedup10.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth)"": AutoTestTimeoutException('Failed to attain Distance want 0.0, reached 4.031612220683019') (see /home/think/buildlogs/Blimp-SIMCompare.txt)",FAILED
+Blimp-speedup10,Blimp-speedup10.log,PREFLIGHT_Pressure,"test triggering pressure calibration with mavlink command",PASSED
+Blimp-speedup10,Blimp-speedup10.log,UTMGlobalPosition,"test UTM_GLOBAL_POSITION message sending",PASSED
+Blimp-SIMCompare-speed1,Blimp-simcompare-speed1.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth",PASSED
+Sub-speedup8,Sub.log,PIDTuning,"Test PID Tuning",PASSED
+Sub-speedup8,Sub.log,ArmFeatures,"Arm features",PASSED
+Sub-speedup8,Sub.log,SetHome,"Setting and fetching of home",PASSED
+Sub-speedup8,Sub.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+Sub-speedup8,Sub.log,CPUFailsafe,"Ensure we do something appropriate when the main loop stops",PASSED
+Sub-speedup8,Sub.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+Sub-speedup8,Sub.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+Sub-speedup8,Sub.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+Sub-speedup8,Sub.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+Sub-speedup8,Sub.log,Logging,"Test Onboard Logging",PASSED
+Sub-speedup8,Sub.log,GetCapabilities,"Get Capabilities",PASSED
+Sub-speedup8,Sub.log,InitialMode,"Test initial mode switching",PASSED
+Sub-speedup8,Sub.log,DiveManual,"Dive manual",PASSED
+Sub-speedup8,Sub.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth",PASSED
+Sub-speedup8,Sub.log,GCSFailsafe,"Test GCSFailsafe",PASSED
+Sub-speedup8,Sub.log,ThrottleFailsafe,"Test RC and RC Failsafe",PASSED
+Sub-speedup8,Sub.log,AltitudeHold,"Test ALT_HOLD mode",PASSED
+Sub-speedup8,Sub.log,Surftrak,"Test SURFTRAK mode",PASSED
+Sub-speedup8,Sub.log,SimTerrainSurftrak,"Move at a constant height above synthetic sea floor",PASSED
+Sub-speedup8,Sub.log,SimTerrainMission,"Mission at a constant height above synthetic sea floor",PASSED
+Sub-speedup8,Sub.log,RngfndQuality,"Check lua Range Finder quality information flow",PASSED
+Sub-speedup8,Sub.log,PositionHold,"Test POSHOLD mode",PASSED
+Sub-speedup8,Sub.log,ModeChanges,"Check if alternating between ALTHOLD, STABILIZE, POSHOLD and SURFTRAK (mode 21) affects altitude",PASSED
+Sub-speedup8,Sub.log,MAV_mgs,"test individual GCS backends timestamps",PASSED
+Sub-speedup8,Sub.log,DiveMission,"Dive mission",PASSED
+Sub-speedup8,Sub.log,GripperMission,"Test gripper mission items",PASSED
+Sub-speedup8,Sub.log,DoubleCircle,"Test entering circle twice",PASSED
+Sub-speedup8,Sub.log,mission_NAV_LOITER_TURNS,"test that loiter turns basically works",PASSED
+Sub-speedup8,Sub.log,mission_NAV_LOITER_TURNS_ccw,"test that a negative loiter radius gives a counter-clockwise circle",PASSED
+Sub-speedup8,Sub.log,MotorThrustHoverParameterIgnore,"Test if we are ignoring MOT_THST_HOVER parameter",PASSED
+Sub-speedup8,Sub.log,SET_POSITION_TARGET_GLOBAL_INT,"Move vehicle using SET_POSITION_TARGET_GLOBAL_INT",PASSED
+Sub-speedup8,Sub.log,TestLogDownloadMAVProxy,"Download latest log.",PASSED
+Sub-speedup8,Sub.log,TestLogDownloadMAVProxyNetwork,"Download latest log over network port",PASSED
+Sub-speedup8,Sub.log,TestLogDownloadLogRestart,"test logging restarts after log download",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_NAV_LOITER_UNLIM,"test handling of MAV_CMD_NAV_LOITER_UNLIM received via mavlink",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_NAV_LAND,"test handling of MAV_CMD_NAV_LAND received via mavlink",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_MISSION_START,"test handling of MAV_CMD_MISSION_START received via mavlink",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_DO_CHANGE_SPEED,"ensure vehicle changes speeds when DO_CHANGE_SPEED received",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_CONDITION_YAW,"ensure vehicle yaws according to GCS command",PASSED
+Sub-speedup8,Sub.log,MAV_CMD_DO_REPOSITION,"Move vehicle using MAV_CMD_DO_REPOSITION",PASSED
+Sub-speedup8,Sub.log,TerrainMission,"Mission using surface tracking",PASSED
+Sub-speedup8,Sub.log,SetGlobalOrigin,"Test SET_GPS_GLOBAL_ORIGIN mav msg",PASSED
+Sub-speedup8,Sub.log,BackupOrigin,"Test AHRS_ORIGIN_LAT and AHRS_ORIGIN_LON parameters",PASSED
+Sub-speedup8,Sub.log,FuseMag,"Test EK3_MAG_CAL values",PASSED
+Sub-speedup8,Sub.log,INA3221,"test INA3221 driver",PASSED
+Sub-speedup8,Sub.log,PosHoldBounceBack,"Test for bounce back in POSHOLD mode",PASSED
+Sub-speedup8,Sub.log,SHT3X,"test for the SHT3X temperature/hygro driver",PASSED
+Sub-speedup8,Sub.log,SurfaceSensorless,"Test surface mode with sensorless thrust",PASSED
+Sub-speedup8,Sub.log,GPSForYaw,"Test consumption of heading from NMEA GPS and its propagation to ATTITUDE",PASSED
+Sub-speedup8,Sub.log,WaterDepth,"Check WATER_DEPTH MAVLink message support for ArduSub",PASSED
+Sub-speedup8,Sub.log,VisoForYaw," Test propagation of yaw from VisualOdom to EKF",PASSED
+Sub-speedup8,Sub.log,UTMGlobalPosition,"test UTM_GLOBAL_POSITION message sending",PASSED
+Sub-speedup8,Sub.log,UTMGlobalPositionWaypoint,"test UTM_GLOBAL_POSITION waypoint fields in AUTO",PASSED
+Sub-speedup8,Sub.log,UpsideDown,"Test roll authority and attitude control of vectored_6dof frame via SET_ATTITUDE_TARGET.",PASSED
+Sub-speedup8,Sub.log,GuidedWP,"Test Guided_WP mode",PASSED
+Sub-speedup8,Sub.log,AutoTerrainRecover,"Test Auto_TerrainRecover",PASSED
+Sub-speedup8,Sub.log,IgnoreGPSDrift," Test GPS-DVL integration. DVL (VISO) should be able to filter the GPS noise.",PASSED
+Sub-speedup8,Sub.log,GuidedPosVelAccel,"Test Guided_PosVelAccel mode via SET_POSITION_TARGET_LOCAL_NED",PASSED
+Sub-speedup8,Sub.log,GuidedAboveTerrain,"Test Guided_PosVelAccel mode and position offsets via Lua",PASSED
