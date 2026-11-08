@@ -1,0 +1,22 @@
+ati-normal                 Normal             doCommand ATI  SiK 1.9 on HM-TRP
+ (146 ms)
+ati5-multiline             Normal             doCommand ATI5 S0:FORMAT=26
+S1:SERIAL_SPEED=57
+S2:AIR_SPEED=64
+S3:NETID=25
+S4:TXP (1057 ms)
+ati7-rssi                  Normal             doCommand ATI7 L/R RSSI: 200/190  L/R noise: 50/48 pkts: 100  txe=0 rxe=0 stx=0 srx=0 (54 ms)
+unknown-command            Normal             doCommand ATX  ERROR
+ (59 ms)
+no-echo                    NoEcho             doCommand ATI   (121 ms)
+silent-radio               Silent             doCommand ATI   (4107 ms)
+garbage-reply              Garbage            doCommand ATI  ???
+ (55 ms)
+doConnect
+connect-normal             Normal             doConnect      True (3564 ms)
+doConnect
+connect-rfd-style-version  RfdStyleVersion    doConnect      False (3535 ms)
+doConnect
+connect-no-ok-after-+++    NoPlusPlusPlusOk   doConnect      False (13693 ms)
+doConnect
+connect-silent             Silent             doConnect      False (13694 ms)

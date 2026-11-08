@@ -1,0 +1,12 @@
+case,behaviour,call,result,elapsed_ms,commands_seen_by_radio
+ati-normal,Normal,doCommand ATI,"SiK 1.9 on HM-TRP\r\n",146,"ATI"
+ati5-multiline,Normal,doCommand ATI5,"S0:FORMAT=26\r\nS1:SERIAL_SPEED=57\r\nS2:AIR_SPEED=64\r\nS3:NETID=25\r\nS4:TXPOWER=20\r\n",1057,"ATI5"
+ati7-rssi,Normal,doCommand ATI7,"L/R RSSI: 200/190  L/R noise: 50/48 pkts: 100  txe=0 rxe=0 stx=0 srx=0 ecc=0/0 temp=30 dco=0\r\n",54,"ATI7"
+unknown-command,Normal,doCommand ATX,"ERROR\r\n",59,"ATX"
+no-echo,NoEcho,doCommand ATI,"",121,"ATI | ATI"
+silent-radio,Silent,doCommand ATI,"",4107,""
+garbage-reply,Garbage,doCommand ATI,"???\r\n",55,"ATI"
+connect-normal,Normal,doConnect,"True",3564,"ATO | +++ | AT&T | ATI"
+connect-rfd-style-version,RfdStyleVersion,doConnect,"False",3535,"ATO | +++ | AT&T | ATI"
+connect-no-ok-after-+++,NoPlusPlusPlusOk,doConnect,"False",13692,"ATO | +++ | +++ | +++ | +++"
+connect-silent,Silent,doConnect,"False",13694,""
