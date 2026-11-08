@@ -1,0 +1,5 @@
+step-dt0.1-20hz: alpha=0.926288 max|P - closed-form filtered step|=3.03E-008
+step-dt0.02-5hz: alpha=0.385870 max|P - closed-form filtered step|=5.96E-008
+filt_hz argument 0: alpha=6.244E-003 (a 20 Hz filter at dt 0.1 would be 0.9263)
+after a NaN input and reset_I, P term is NaN
+get_ff(8) with ff=0.25: 2

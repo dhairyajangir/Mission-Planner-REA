@@ -1,0 +1,13 @@
+culture,threshold,value,text
+invariant,5,12.345,"WARNING: Voltage is 12.35 (limit 5) 12.35"
+invariant,0.125,0.004,"WARNING: Voltage is 0 (limit 0.13) 0"
+invariant,1000000,-0.5,"WARNING: Voltage is -0.5 (limit 1000000) -0.5"
+invariant,3.14159,NaN,"WARNING: Voltage is NaN (limit 3.14) NaN"
+en-US,5,12.345,"WARNING: Voltage is 12.35 (limit 5) 12.35"
+en-US,0.125,0.004,"WARNING: Voltage is 0 (limit 0.13) 0"
+en-US,1000000,-0.5,"WARNING: Voltage is -0.5 (limit 1000000) -0.5"
+en-US,3.14159,NaN,"WARNING: Voltage is NaN (limit 3.14) NaN"
+de-DE,5,12.345,"WARNING: Voltage is 12,35 (limit 5) 12,35"
+de-DE,0.125,0.004,"WARNING: Voltage is 0 (limit 0,13) 0"
+de-DE,1000000,-0.5,"WARNING: Voltage is -0,5 (limit 1000000) -0,5"
+de-DE,3.14159,NaN,"WARNING: Voltage is NaN (limit 3,14) NaN"

@@ -1,0 +1,7 @@
+t_ms,result
+0,True
+300,False
+900,False
+1100,True
+1300,False
+2200,True

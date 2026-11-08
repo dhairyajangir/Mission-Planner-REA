@@ -1,0 +1,4 @@
+t_ms,value,sats,result
+0,10,3,False
+321,10,8,False
+2207,10,8,True
