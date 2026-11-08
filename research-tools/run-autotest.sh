@@ -6,7 +6,7 @@ VEH=$1; shift
 STEPS=${STEPS:-"build.$VEH test.$VEH"}
 SPEEDUP=${SPEEDUP:-10}
 NAME=$VEH${TAG:+-$TAG}
-cd ~/ap-snapshot || exit 1
+cd "${AP_TREE:-$HOME/ap-snapshot}" || exit 1   # AP_TREE=~/ardupilot-fork runs the suites against the fork instead of the pinned snapshot copy
 source ~/venv-ap/bin/activate
 mkdir -p ~/autotest-logs
 echo "start $(date) steps=$STEPS speedup=$SPEEDUP" > ~/autotest-logs/$NAME.progress

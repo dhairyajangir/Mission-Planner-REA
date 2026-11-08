@@ -1,0 +1,15 @@
+label,log,test,description,result
+Copter-fork-regression,Copter-fork-regression.log,CopterMission,"fly mission which tests a significant number of commands",PASSED
+Copter-fork-regression,Copter-fork-regression.log,MISSION_START,"test mavlink command MAV_CMD_MISSION_START",PASSED
+Copter-fork-regression,Copter-fork-regression.log,HorizontalFence,"Test horizontal fence",PASSED
+Copter-fork-regression,Copter-fork-regression.log,MaxAltFence,"Test Max Alt Fences",PASSED
+Copter-fork-regression,Copter-fork-regression.log,HomeCircleInclusionFence,"Home Circle fence using MAV_CMD_NAV_FENCE_HOME_CIRCLE_INCLUSION.",PASSED
+Copter-fork-regression,Copter-fork-regression.log,GuidedRejectOutsideFence,"ensure a GUIDED destination outside the fence is rejected",PASSED
+Copter-fork-regression,Copter-fork-regression.log,SetpointGlobalPos,"Test set position message in guided mode.",PASSED
+Copter-fork-regression,Copter-fork-regression.log,MAV_CMD_NAV_LOITER_UNLIM,"ensure MAV_CMD_NAV_LOITER_UNLIM via mavlink works",PASSED
+Copter-fork-regression,Copter-fork-regression.log,DO_CHANGE_SPEED,"Change speed during mission using waypoint items",PASSED
+Copter-fork-regression,Copter-fork-regression.log,Landing,"Test landing the aircraft.",PASSED
+Copter-fork-regression,Copter-fork-regression.log,RTLYaw,"test that vehicle yaws to original heading on RTL",PASSED
+Copter-fork-regression,Copter-fork-regression.log,SplineTerrain,"Test Splines and Terrain",PASSED
+Copter-fork-regression,Copter-fork-regression.log,AUTO_LAND_TO_BRAKE,"ensure terrain altitude is taken into account when braking",PASSED
+Copter-fork-regression,Copter-fork-regression.log,mission_NAV_LOITER_TURNS,"test that loiter turns basically works",PASSED

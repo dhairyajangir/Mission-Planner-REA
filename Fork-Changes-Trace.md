@@ -23,9 +23,13 @@ Files: `fork-patches/` (the three patches as `git format-patch` output, `COMMITS
 
 - The integer-limit defect: my explanation is that ArduPilot builds with `-fsingle-precision-constant`, so `90*1e7` is a float constant and the integer is compared as a float, where 900000001 rounds onto 900000000. The exact-integer fix makes the test pass, which is consistent with that, but I did not inspect the compiler flags or the generated code.
 - On real flight hardware the NaN comparison simply returns false (no trap), so the NaN fix mainly changes simulator behaviour and makes the intent explicit. The integer-limit fix changes behaviour on all builds, but only for values within about 32 units of the limit (roughly 3 mm).
-- Unit tests and one simulator replay only. The full ArduPilot test suites were not rerun on the fork.
+- Unit tests, one simulator replay and a 14-test Copter autotest subset only (see the regression section). The full ArduPilot test suites were not rerun on the fork.
 
 ## Failed attempts (kept on purpose)
 
 1. First version of the unit test did not link: it lacked `const AP_HAL::HAL& hal = AP_HAL::get_HAL();` which every HAL-based test defines. Fixed, and the test commit was recreated so the fork history has one clean test commit.
 2. My first test expected `check_lat(int32_t(900000001))` to be rejected on unpatched code and put it in the same test as other checks. It failed on unpatched code, which exposed the integer-limit defect; I then split it into its own test so each fix has its own red and green.
+
+## Regression check on the fork (Copter autotests)
+
+Fourteen of ArduPilot's own Copter autotests that use the changed range checks (mission upload and flight, fences, guided set-points, landing, RTL, spline and terrain) were run against Copter built from the fork at commit `bc3373d2` (`research-tools/run-autotest.sh` with `AP_TREE=~/ardupilot-fork`, speedup 8, disposable simulator, default debug build; the log shows `Firmware hash bc3373d2`): CopterMission, MISSION_START, HorizontalFence, MaxAltFence, HomeCircleInclusionFence, GuidedRejectOutsideFence, SetpointGlobalPos, MAV_CMD_NAV_LOITER_UNLIM, DO_CHANGE_SPEED, Landing, RTLYaw, SplineTerrain, AUTO_LAND_TO_BRAKE and mission_NAV_LOITER_TURNS. All 14 passed, as they did on the unchanged snapshot. Evidence: `sitl-evidence/fork-change1/regression/`. This is a selected subset chosen by me, not the full 424-test Copter suite or the other vehicles, so it shows no regression in those scenarios, not none anywhere.

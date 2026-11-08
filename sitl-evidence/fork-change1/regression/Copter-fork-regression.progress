@@ -1,0 +1,2 @@
+start Sun Nov  8 20:36:49 UTC 2026 steps=build.Copter test.Copter.CopterMission test.Copter.MISSION_START test.Copter.HorizontalFence test.Copter.MaxAltFence test.Copter.HomeCircleInclusionFence test.Copter.GuidedRejectOutsideFence test.Copter.SetpointGlobalPos test.Copter.MAV_CMD_NAV_LOITER_UNLIM test.Copter.DO_CHANGE_SPEED test.Copter.Landing test.Copter.RTLYaw test.Copter.SplineTerrain test.Copter.AUTO_LAND_TO_BRAKE test.Copter.mission_NAV_LOITER_TURNS speedup=8
+exit=0 Sun Nov  8 20:56:57 UTC 2026
