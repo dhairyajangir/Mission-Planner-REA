@@ -1,0 +1,209 @@
+[==========] Running 27 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 27 tests from Bitmask
+[ RUN      ] Bitmask.Tests31
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests31 (9 ms)
+[ RUN      ] Bitmask.Tests32
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests32 (5 ms)
+[ RUN      ] Bitmask.Tests33
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests33 (4 ms)
+[ RUN      ] Bitmask.Tests47
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests47 (4 ms)
+[ RUN      ] Bitmask.Tests48
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests48 (4 ms)
+[ RUN      ] Bitmask.Tests49
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests49 (5 ms)
+[ RUN      ] Bitmask.Tests63
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests63 (4 ms)
+[ RUN      ] Bitmask.Tests64
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests64 (4 ms)
+[ RUN      ] Bitmask.Tests65
+../../libraries/AP_Common/tests/test_bitmask.cpp:53: Failure
+Death test: x.clear(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:59: Failure
+Death test: x.set(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Common/tests/test_bitmask.cpp:70: Failure
+Death test: x2.get(N+1)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] Bitmask.Tests65 (4 ms)
+[ RUN      ] Bitmask.SetAll31
+[       OK ] Bitmask.SetAll31 (0 ms)
+[ RUN      ] Bitmask.SetAll32
+[       OK ] Bitmask.SetAll32 (0 ms)
+[ RUN      ] Bitmask.SetAll33
+[       OK ] Bitmask.SetAll33 (0 ms)
+[ RUN      ] Bitmask.SetAll47
+[       OK ] Bitmask.SetAll47 (0 ms)
+[ RUN      ] Bitmask.SetAll48
+[       OK ] Bitmask.SetAll48 (0 ms)
+[ RUN      ] Bitmask.SetAll49
+[       OK ] Bitmask.SetAll49 (0 ms)
+[ RUN      ] Bitmask.SetAll63
+[       OK ] Bitmask.SetAll63 (0 ms)
+[ RUN      ] Bitmask.SetAll64
+[       OK ] Bitmask.SetAll64 (0 ms)
+[ RUN      ] Bitmask.SetAll65
+[       OK ] Bitmask.SetAll65 (0 ms)
+[ RUN      ] Bitmask.Assignment31
+[       OK ] Bitmask.Assignment31 (0 ms)
+[ RUN      ] Bitmask.Assignment32
+[       OK ] Bitmask.Assignment32 (0 ms)
+[ RUN      ] Bitmask.Assignment33
+[       OK ] Bitmask.Assignment33 (0 ms)
+[ RUN      ] Bitmask.Assignment47
+[       OK ] Bitmask.Assignment47 (0 ms)
+[ RUN      ] Bitmask.Assignment48
+[       OK ] Bitmask.Assignment48 (0 ms)
+[ RUN      ] Bitmask.Assignment49
+[       OK ] Bitmask.Assignment49 (0 ms)
+[ RUN      ] Bitmask.Assignment63
+[       OK ] Bitmask.Assignment63 (0 ms)
+[ RUN      ] Bitmask.Assignment64
+[       OK ] Bitmask.Assignment64 (0 ms)
+[ RUN      ] Bitmask.Assignment65
+[       OK ] Bitmask.Assignment65 (0 ms)
+[----------] 27 tests from Bitmask (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test suite ran. (43 ms total)
+[  PASSED  ] 18 tests.
+[  FAILED  ] 9 tests, listed below:
+[  FAILED  ] Bitmask.Tests31
+[  FAILED  ] Bitmask.Tests32
+[  FAILED  ] Bitmask.Tests33
+[  FAILED  ] Bitmask.Tests47
+[  FAILED  ] Bitmask.Tests48
+[  FAILED  ] Bitmask.Tests49
+[  FAILED  ] Bitmask.Tests63
+[  FAILED  ] Bitmask.Tests64
+[  FAILED  ] Bitmask.Tests65
+
+ 9 FAILED TESTS

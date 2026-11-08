@@ -1,0 +1,21 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from RotationsTest
+[ RUN      ] RotationsTest.TestEulers
+[       OK ] RotationsTest.TestEulers (0 ms)
+[ RUN      ] RotationsTest.TestRotationInverse
+[       OK ] RotationsTest.TestRotationInverse (0 ms)
+[ RUN      ] RotationsTest.TestRotateMatrix
+[       OK ] RotationsTest.TestRotateMatrix (0 ms)
+[ RUN      ] RotationsTest.TestFailedGetLinux
+PANIC: AP_InternalError::error_t::bad_rotation
+PANIC: AP_InternalError::error_t::bad_rotation
+PANIC: AP_CustomRotations must be singleton
+[       OK ] RotationsTest.TestFailedGetLinux (75 ms)
+[ RUN      ] RotationsTest.TestEulerOrder
+[       OK ] RotationsTest.TestEulerOrder (0 ms)
+[----------] 5 tests from RotationsTest (75 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (75 ms total)
+[  PASSED  ] 5 tests.

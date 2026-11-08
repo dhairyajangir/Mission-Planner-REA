@@ -1,0 +1,5 @@
+Setting top to                           : /home/think/ap-snapshot 
+Checking for 'g++' (C++ compiler)        : /usr/bin/g++ 
+CXX Compiler                             : g++ 13.3.0 
+Debug build                                    : disabled 
+Coverage build                                 : disabled 

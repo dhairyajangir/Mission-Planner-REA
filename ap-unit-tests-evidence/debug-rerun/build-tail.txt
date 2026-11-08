@@ -1,0 +1,5 @@
+tests/test_bitmask       2570572     70352   160424               2640924  Not Applicable  Not Applicable         
+tests/test_math_double   2481252     68064   160296               2549316  Not Applicable  Not Applicable         
+tests/test_rotations     2449768     67335   160264               2517103  Not Applicable  Not Applicable         
+Build commands will be stored in build/sitl/compile_commands.json
+'build' finished successfully (12m13.039s)

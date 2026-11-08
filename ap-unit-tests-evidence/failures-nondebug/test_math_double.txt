@@ -1,0 +1,44 @@
+[==========] Running 12 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 8 tests from MathTest
+[ RUN      ] MathTest.IsZeroDouble
+[       OK ] MathTest.IsZeroDouble (0 ms)
+[ RUN      ] MathTest.MAXDouble
+[       OK ] MathTest.MAXDouble (0 ms)
+[ RUN      ] MathTest.IsEqualDouble
+[       OK ] MathTest.IsEqualDouble (0 ms)
+[ RUN      ] MathTest.ConstrainDouble
+../../libraries/AP_Math/tests/test_math_double.cpp:91: Failure
+Death test: constrain_value(nan("0x4152"), 1.0, 1.0)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+[  FAILED  ] MathTest.ConstrainDouble (1 ms)
+[ RUN      ] MathTest.ASinDouble
+[       OK ] MathTest.ASinDouble (0 ms)
+[ RUN      ] MathTest.SqrtDouble
+[       OK ] MathTest.SqrtDouble (0 ms)
+[ RUN      ] MathTest.SquareDouble
+[       OK ] MathTest.SquareDouble (0 ms)
+[ RUN      ] MathTest.NormDouble
+[       OK ] MathTest.NormDouble (0 ms)
+[----------] 8 tests from MathTest (1 ms total)
+
+[----------] 4 tests from MathWrapTest
+[ RUN      ] MathWrapTest.Angle180Double
+[       OK ] MathWrapTest.Angle180Double (0 ms)
+[ RUN      ] MathWrapTest.Angle360Double
+[       OK ] MathWrapTest.Angle360Double (0 ms)
+[ RUN      ] MathWrapTest.AnglePIDouble
+[       OK ] MathWrapTest.AnglePIDouble (0 ms)
+[ RUN      ] MathWrapTest.Angle2PIDouble
+[       OK ] MathWrapTest.Angle2PIDouble (0 ms)
+[----------] 4 tests from MathWrapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 11 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MathTest.ConstrainDouble
+
+ 1 FAILED TEST

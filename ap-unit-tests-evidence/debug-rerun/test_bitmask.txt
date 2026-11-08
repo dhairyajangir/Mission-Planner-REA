@@ -1,0 +1,89 @@
+[==========] Running 27 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 27 tests from Bitmask
+[ RUN      ] Bitmask.Tests31
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests31 (71 ms)
+[ RUN      ] Bitmask.Tests32
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests32 (56 ms)
+[ RUN      ] Bitmask.Tests33
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests33 (65 ms)
+[ RUN      ] Bitmask.Tests47
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests47 (62 ms)
+[ RUN      ] Bitmask.Tests48
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests48 (66 ms)
+[ RUN      ] Bitmask.Tests49
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests49 (71 ms)
+[ RUN      ] Bitmask.Tests63
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests63 (73 ms)
+[ RUN      ] Bitmask.Tests64
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests64 (76 ms)
+[ RUN      ] Bitmask.Tests65
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+PANIC: AP_InternalError::error_t::bitmask_range
+[       OK ] Bitmask.Tests65 (84 ms)
+[ RUN      ] Bitmask.SetAll31
+[       OK ] Bitmask.SetAll31 (0 ms)
+[ RUN      ] Bitmask.SetAll32
+[       OK ] Bitmask.SetAll32 (0 ms)
+[ RUN      ] Bitmask.SetAll33
+[       OK ] Bitmask.SetAll33 (1 ms)
+[ RUN      ] Bitmask.SetAll47
+[       OK ] Bitmask.SetAll47 (0 ms)
+[ RUN      ] Bitmask.SetAll48
+[       OK ] Bitmask.SetAll48 (0 ms)
+[ RUN      ] Bitmask.SetAll49
+[       OK ] Bitmask.SetAll49 (0 ms)
+[ RUN      ] Bitmask.SetAll63
+[       OK ] Bitmask.SetAll63 (0 ms)
+[ RUN      ] Bitmask.SetAll64
+[       OK ] Bitmask.SetAll64 (0 ms)
+[ RUN      ] Bitmask.SetAll65
+[       OK ] Bitmask.SetAll65 (0 ms)
+[ RUN      ] Bitmask.Assignment31
+[       OK ] Bitmask.Assignment31 (0 ms)
+[ RUN      ] Bitmask.Assignment32
+[       OK ] Bitmask.Assignment32 (0 ms)
+[ RUN      ] Bitmask.Assignment33
+[       OK ] Bitmask.Assignment33 (0 ms)
+[ RUN      ] Bitmask.Assignment47
+[       OK ] Bitmask.Assignment47 (0 ms)
+[ RUN      ] Bitmask.Assignment48
+[       OK ] Bitmask.Assignment48 (0 ms)
+[ RUN      ] Bitmask.Assignment49
+[       OK ] Bitmask.Assignment49 (0 ms)
+[ RUN      ] Bitmask.Assignment63
+[       OK ] Bitmask.Assignment63 (0 ms)
+[ RUN      ] Bitmask.Assignment64
+[       OK ] Bitmask.Assignment64 (0 ms)
+[ RUN      ] Bitmask.Assignment65
+[       OK ] Bitmask.Assignment65 (0 ms)
+[----------] 27 tests from Bitmask (625 ms total)
+
+[----------] Global test environment tear-down
+[==========] 27 tests from 1 test suite ran. (625 ms total)
+[  PASSED  ] 27 tests.

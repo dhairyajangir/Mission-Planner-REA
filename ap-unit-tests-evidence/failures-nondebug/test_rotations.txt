@@ -1,0 +1,33 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from RotationsTest
+[ RUN      ] RotationsTest.TestEulers
+[       OK ] RotationsTest.TestEulers (0 ms)
+[ RUN      ] RotationsTest.TestRotationInverse
+[       OK ] RotationsTest.TestRotationInverse (0 ms)
+[ RUN      ] RotationsTest.TestRotateMatrix
+[       OK ] RotationsTest.TestRotateMatrix (0 ms)
+[ RUN      ] RotationsTest.TestFailedGetLinux
+../../libraries/AP_Math/tests/test_rotations.cpp:175: Failure
+Death test: AP::custom_rotations().set(ROTATION_CUSTOM_OLD, 0, 0, 0)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+../../libraries/AP_Math/tests/test_rotations.cpp:176: Failure
+Death test: AP::custom_rotations().set(ROTATION_CUSTOM_END, 0, 0, 0)
+    Result: failed to die.
+ Error msg:
+[  DEATH   ] 
+PANIC: AP_CustomRotations must be singleton
+[  FAILED  ] RotationsTest.TestFailedGetLinux (41 ms)
+[ RUN      ] RotationsTest.TestEulerOrder
+[       OK ] RotationsTest.TestEulerOrder (0 ms)
+[----------] 5 tests from RotationsTest (41 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (41 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] RotationsTest.TestFailedGetLinux
+
+ 1 FAILED TEST
