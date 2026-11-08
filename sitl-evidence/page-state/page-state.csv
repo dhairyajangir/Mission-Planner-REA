@@ -1,0 +1,55 @@
+page,status,detail,enabled,visible,controls_total,controls_enabled,interactive_total,interactive_enabled,message_boxes
+Antenna.TrackerUI,ok,,True,True,40,40,17,17,0
+ConfigAC_Fence,ok,,True,True,26,23,11,9,0
+ConfigADSB,ok,,True,True,20,13,9,5,0
+ConfigAccelerometerCalibration,ok,,True,True,10,10,3,3,0
+ConfigAdvanced,ok,,True,True,29,29,13,13,0
+ConfigAntennaTracker,ok,,False,True,99,0,46,0,0
+ConfigArducopter,ok,,True,True,274,186,131,72,0
+ConfigArduplane,ok,,False,True,192,0,91,0,0
+ConfigArdurover,ok,,False,True,122,0,59,0,0
+ConfigAteryx,ok,,False,True,209,0,100,0,0
+ConfigAteryxSensors,ok,,False,True,4,0,2,0,0
+ConfigBatteryMonitoring,ok,,True,True,25,24,11,10,0
+ConfigBatteryMonitoring2,ok,,True,True,25,23,11,9,0
+ConfigCompassMot,ok,,True,True,9,9,2,2,0
+ConfigCubeID,ok,,True,True,12,11,6,5,0
+ConfigESCCalibration,ok,,True,True,34,34,12,12,0
+ConfigFFT,ok,,True,True,44,44,26,26,0
+ConfigFailSafe,ok,,True,True,57,49,18,11,1
+ConfigFirmwareDisabled,ok,,True,True,4,4,1,1,0
+ConfigFlightModes,ok,,True,True,38,36,19,17,0
+ConfigFrameClassType,ok,,True,True,32,31,15,14,0
+ConfigFrameType,ok,,False,True,27,0,9,0,0
+ConfigGPSOrder,exception,NullReferenceException: Object reference not set to an instance of an object.,False,False,0,0,0,0,0
+ConfigHWAirspeed,ok,,True,True,10,7,4,1,0
+ConfigHWBT,ok,,True,True,11,11,4,4,0
+ConfigHWCompass,ok,,True,True,54,49,24,19,0
+ConfigHWCompass2,ok,,True,True,34,30,12,10,0
+ConfigHWESP8266,ok,,False,True,23,0,10,0,0
+ConfigHWIDs,ok,,True,True,4,3,0,0,0
+ConfigHWOSD,ok,,True,True,6,6,1,1,0
+ConfigHWOptFlow,ok,,True,True,42,20,16,1,0
+ConfigHWPX4Flow,ok,,True,True,6,6,1,1,0
+ConfigHWParachute,ok,,True,True,21,11,9,2,0
+ConfigHWRangeFinder,ok,,True,True,9,8,1,0,0
+ConfigInitialParams,ok,,True,True,18,18,9,9,0
+ConfigMandatory,ok,,True,True,2,2,0,0,0
+ConfigMotorTest,ok,,True,True,29,29,13,13,0
+ConfigMount,ok,,False,True,135,0,59,0,0
+ConfigOSD,ok,,True,True,14,14,6,6,0
+ConfigOptional,ok,,True,True,2,2,0,0,0
+ConfigPlanner,exception,NullReferenceException: Object reference not set to an instance of an object.,False,False,0,0,0,0,0
+ConfigREPL,ok,,True,True,4,3,3,2,0
+ConfigRadioInput,ok,,True,True,31,27,12,8,0
+ConfigRadioOutput,ok,,True,True,218,218,128,128,0
+ConfigRawParams,timeout,did not finish in 20 s (thread abandoned),False,False,0,0,0,0,0
+ConfigSecureAP,ok,,True,True,10,10,7,7,0
+ConfigSerial,exception,NullReferenceException: Object reference not set to an instance of an object.,False,False,0,0,0,0,0
+ConfigSerialInjectGPS,exception,NullReferenceException: Object reference not set to an instance of an object.,False,False,0,0,0,0,0
+ConfigSimplePids,exception,FileNotFoundException: Could not find file 'C:\Users\think\AppData\Local\Temp\page-state-probe\acsimplepids.xml'.,False,False,0,0,0,0,0
+ConfigTradHeli4,ok,,True,True,272,157,143,64,0
+ConfigUserDefined,ok,,True,True,25,25,12,12,0
+Joystick.JoystickSetup,ok,,True,True,156,156,69,69,0
+MavFTPUI,ok,,True,True,8,7,0,0,0
+Sikradio,ok,,True,True,183,112,95,24,0
