@@ -26,6 +26,9 @@ def offset(lat, lon, bearing, dist):
 
 def main():
     binary, outdir = sys.argv[1], sys.argv[2]
+    # optional 3rd arg: ALT_SOURCE value to set (0 baro, 1 gps, 2 gps vehicle-only); optional 4th: "baro" also sends SCALED_PRESSURE
+    alt_source = int(sys.argv[3]) if len(sys.argv) > 3 else None
+    send_baro = len(sys.argv) > 4 and sys.argv[4] == 'baro'
     os.makedirs(outdir, exist_ok=True)
     log = open(os.path.join(outdir, 'sitl.log'), 'w')
     proc = subprocess.Popen([binary, '-w', '-M', 'tracker', '-I', '5', '-s', '1', '--home', '%f,%f,%f,0' % HOME], cwd=outdir, stdout=log, stderr=subprocess.STDOUT)
@@ -47,6 +50,19 @@ def main():
             if msg is not None and msg.lat != 0:
                 events.append(('tracker_position', msg.lat / 1e7, msg.lon / 1e7, msg.alt / 1000.0))
                 break
+        tracker_press = None
+        if alt_source is not None:
+            m.mav.param_set_send(m.target_system, m.target_component, b'ALT_SOURCE', float(alt_source), mavutil.mavlink.MAV_PARAM_TYPE_INT8)
+            t0 = time.time()
+            while time.time() - t0 < 10:
+                msg = m.recv_match(type='PARAM_VALUE', blocking=True, timeout=1)
+                if msg is not None and msg.param_id.rstrip('\x00') == 'ALT_SOURCE':
+                    events.append(('alt_source_readback', msg.param_value))
+                    break
+        if send_baro:
+            msg = m.recv_match(type='SCALED_PRESSURE', blocking=True, timeout=5)
+            tracker_press = msg.press_abs if msg is not None else None
+            events.append(('tracker_press_hpa', tracker_press))
         cases = [(90, 500, 100), (0, 500, 100), (180, 800, 50), (270, 300, 150), (45, 1000, 0)]
         for brg, dist, up in cases:
             vlat, vlon = offset(HOME[0], HOME[1], brg, dist)
@@ -57,6 +73,10 @@ def main():
                 # fake vehicle (system 2) position report, 5 Hz
                 m.mav.srcSystem = 2
                 m.mav.global_position_int_send(int(time.time() * 1000) & 0xFFFFFFFF, int(vlat * 1e7), int(vlon * 1e7), int((HOME[2] + up) * 1000), int(up * 1000), 0, 0, 0, 0)
+                if send_baro and tracker_press:
+                    # isothermal approximation of pressure at 'up' metres above the tracker
+                    vp = tracker_press * math.exp(-up / 8434.5)
+                    m.mav.scaled_pressure_send(int(time.time() * 1000) & 0xFFFFFFFF, vp, 0.0, 1500)
                 m.mav.srcSystem = 255
                 t1 = time.time() + 0.2
                 while time.time() < t1:

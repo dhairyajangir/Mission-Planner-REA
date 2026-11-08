@@ -1,0 +1,57 @@
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'AntennaTracker'
+Starting SITL input
+Using Irlock at port : 9055
+Using \clock topic for DDS timing: disabled
+bind port 5810 for SERIAL0
+SERIAL0 on TCP port 5810
+Waiting for connection ....
+Connection on serial port 5810
+bind port 5812 for SERIAL1
+SERIAL1 on TCP port 5812
+bind port 5813 for SERIAL2
+SERIAL2 on TCP port 5813
+validate_structures:546: Validating structures
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+roll=0.0 pitch=-10.0 yaw=90.0 rates=0.0/0.0/0.0 in=0.000,0.000
+roll=0.0 pitch=-9.7 yaw=90.8 rates=-0.0/1.0/9.0 in=0.800,0.286
+roll=0.2 pitch=-7.7 yaw=108.8 rates=-0.2/1.0/9.0 in=0.800,0.636
+roll=0.5 pitch=-5.8 yaw=126.8 rates=-0.5/1.0/9.0 in=0.800,0.740
+roll=0.3 pitch=-3.9 yaw=134.8 rates=-0.3/1.0/1.2 in=0.800,0.800
+roll=0.1 pitch=-1.9 yaw=135.8 rates=-0.1/1.0/0.2 in=0.800,0.800
+roll=0.0 pitch=0.1 yaw=136.0 rates=-0.0/1.0/0.0 in=0.800,0.800
+roll=0.0 pitch=2.1 yaw=136.0 rates=-0.0/1.0/0.0 in=0.800,0.798
+roll=0.0 pitch=4.1 yaw=136.0 rates=-0.0/1.0/0.0 in=0.800,0.778
+roll=-2.1 pitch=5.7 yaw=118.1 rates=2.1/1.0/-9.0 in=0.518,0.734
+roll=-2.6 pitch=6.9 yaw=99.3 rates=2.6/1.0/-9.0 in=0.404,0.670
+roll=-2.8 pitch=8.1 yaw=80.4 rates=2.8/1.0/-6.6 in=0.434,0.586
+roll=0.7 pitch=10.1 yaw=86.8 rates=-0.7/1.0/2.7 in=0.526,0.482
+roll=0.3 pitch=12.1 yaw=89.1 rates=-0.3/1.0/0.3 in=0.526,0.354
+roll=0.0 pitch=12.0 yaw=89.1 rates=-0.0/-1.0/-0.0 in=0.524,0.212
+roll=0.0 pitch=10.0 yaw=89.1 rates=-0.0/-1.0/-0.0 in=0.524,0.094
+roll=2.5 pitch=7.5 yaw=107.3 rates=-2.5/-1.0/9.0 in=0.800,0.000
+roll=2.5 pitch=4.6 yaw=125.9 rates=-2.5/-1.0/9.0 in=0.800,-0.048
+roll=1.0 pitch=2.3 yaw=134.7 rates=-1.0/-1.0/1.3 in=0.800,-0.102
+roll=0.2 pitch=0.3 yaw=135.8 rates=-0.2/-1.0/0.2 in=0.800,-0.170
+roll=0.0 pitch=-1.7 yaw=136.0 rates=-0.0/-1.0/0.0 in=0.800,-0.226
+roll=0.0 pitch=-3.7 yaw=136.0 rates=-0.0/-1.0/0.0 in=0.800,-0.260
+roll=0.0 pitch=-5.7 yaw=136.0 rates=-0.0/-1.0/0.0 in=0.800,-0.272
+roll=-0.5 pitch=-5.6 yaw=120.7 rates=0.5/1.0/-9.0 in=-0.800,0.006
+roll=-0.8 pitch=-3.8 yaw=102.6 rates=0.8/1.0/-9.0 in=-0.800,0.274
+roll=-1.1 pitch=-2.1 yaw=84.4 rates=1.1/1.0/-9.0 in=-0.800,0.524
+roll=-1.4 pitch=-0.5 yaw=66.1 rates=1.4/1.0/-9.0 in=-0.800,0.758
+roll=-1.6 pitch=1.0 yaw=47.8 rates=1.6/1.0/-9.0 in=-0.800,0.800
+roll=-1.9 pitch=2.5 yaw=29.4 rates=1.9/1.0/-9.0 in=-0.800,0.800
+roll=-2.1 pitch=3.9 yaw=10.8 rates=2.1/1.0/-9.0 in=-0.800,0.800
+roll=1.4 pitch=5.7 yaw=20.1 rates=-1.4/1.0/9.0 in=0.800,0.620
+roll=2.5 pitch=7.0 yaw=38.9 rates=-2.5/1.0/9.0 in=0.800,0.464
+roll=2.8 pitch=8.2 yaw=57.9 rates=-2.8/1.0/9.0 in=0.800,0.292
+roll=2.9 pitch=7.5 yaw=76.8 rates=-2.9/-1.0/9.0 in=0.800,0.108
+roll=2.6 pitch=4.6 yaw=95.4 rates=-2.6/-1.0/9.0 in=0.800,-0.054
+roll=2.1 pitch=1.9 yaw=113.8 rates=-2.1/-1.0/9.0 in=0.800,-0.200
+roll=1.5 pitch=-0.7 yaw=130.9 rates=-1.5/-1.0/5.1 in=0.800,-0.320
+Exitting

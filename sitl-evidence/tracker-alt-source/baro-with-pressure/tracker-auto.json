@@ -1,0 +1,75 @@
+{
+ "events": [
+  [
+   "tracker_position",
+   -35.363261,
+   149.1652299,
+   584.0
+  ],
+  [
+   "alt_source_readback",
+   0.0
+  ],
+  [
+   "tracker_press_hpa",
+   945.02490234375
+  ]
+ ],
+ "rows": [
+  {
+   "bearing_deg": 90,
+   "distance_m": 500,
+   "height_m": 100,
+   "expected_elevation_deg": 11.31,
+   "nav_bearing": 90,
+   "target_bearing": 90,
+   "pitch": 11.14698314666748,
+   "servo1": 1900,
+   "servo2": 1890
+  },
+  {
+   "bearing_deg": 0,
+   "distance_m": 500,
+   "height_m": 100,
+   "expected_elevation_deg": 11.31,
+   "nav_bearing": 0,
+   "target_bearing": 0,
+   "pitch": 11.155606269836426,
+   "servo1": 1762,
+   "servo2": 1550
+  },
+  {
+   "bearing_deg": 180,
+   "distance_m": 800,
+   "height_m": 50,
+   "expected_elevation_deg": 3.58,
+   "nav_bearing": 180,
+   "target_bearing": 180,
+   "pitch": 3.5195329189300537,
+   "servo1": 1900,
+   "servo2": 1364
+  },
+  {
+   "bearing_deg": 270,
+   "distance_m": 300,
+   "height_m": 150,
+   "expected_elevation_deg": 26.57,
+   "nav_bearing": 270,
+   "target_bearing": 270,
+   "pitch": 26.238737106323242,
+   "servo1": 1100,
+   "servo2": 1900
+  },
+  {
+   "bearing_deg": 45,
+   "distance_m": 1000,
+   "height_m": 0,
+   "expected_elevation_deg": 0.0,
+   "nav_bearing": 45,
+   "target_bearing": 45,
+   "pitch": 0.017186298966407776,
+   "servo1": 1900,
+   "servo2": 1333
+  }
+ ]
+}
