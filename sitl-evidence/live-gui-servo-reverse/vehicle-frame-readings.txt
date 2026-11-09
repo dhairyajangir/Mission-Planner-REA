@@ -1,0 +1,4 @@
+before any GUI action :: SERVO1_REVERSED: present, value 0.0 ; SERVO2_REVERSED: present, value 0.0 ; SERVO3_REVERSED: present, value 0.0 ; SERVO4_REVERSED: present, value 0.0
+before pressing the first Reverse box :: SERVO1_REVERSED: present, value 0.0 ; SERVO2_REVERSED: present, value 0.0 ; SERVO3_REVERSED: present, value 0.0 ; SERVO4_REVERSED: present, value 0.0
+after the first press :: SERVO1_REVERSED: present, value 1.0 ; SERVO2_REVERSED: present, value 0.0 ; SERVO3_REVERSED: present, value 0.0 ; SERVO4_REVERSED: present, value 0.0
+after the second press (restore) :: SERVO1_REVERSED: present, value 0.0 ; SERVO2_REVERSED: present, value 0.0 ; SERVO3_REVERSED: present, value 0.0 ; SERVO4_REVERSED: present, value 0.0

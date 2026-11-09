@@ -312,6 +312,18 @@ Failed attempt, kept: the first run (`sitl-evidence/live-gui-vehicles-run1-menu-
 
 So the choice alone changed nothing on the vehicle; Save Modes wrote exactly the two changed rows (Loiter is mode 5, Alt Hold is mode 2) and left the other four as they were. This is the same staged-commit behaviour the harness found for this page (`Setup-Page-Actions-Trace.md`), now seen in the live window. Dialogs: none. Screenshots `01` to `03` in the folder. One run, by a script, on the data-redirected research copy.
 
+## 15. A Servo Output check box in the live window (simulator)
+
+`research-tools/run-live-gui-servo-reverse.ps1` (built from the flight-modes script) opened SETUP > Mandatory Hardware > Servo Output in the real window of the research copy, found the page's 16 unlabelled check boxes (`checkbox-candidates.txt`), took the first by vertical position (the Reverse box of the SERVO1 row) and pressed it twice with `BM_CLICK`, reading `SERVO1_REVERSED` to `SERVO4_REVERSED` from the vehicle on SERIAL1 with an independent client at each point (`vehicle-frame-readings.txt`, file name inherited from the script it was built from; `sitl-evidence/live-gui-servo-reverse/`):
+
+| Point | SERVO1_REVERSED | SERVO2 to 4 |
+|---|---:|---|
+| Before | 0 | 0, 0, 0 |
+| After the first press | 1 | 0, 0, 0 |
+| After the second press | 0 | 0, 0, 0 |
+
+So this page writes a parameter immediately when the box is pressed (no save button), changes only the row's own parameter, and the second press restores it. Dialogs: none. I took the first box to be the SERVO1 row from its position; the readings confirm it (SERVO1_REVERSED changed, the others did not). One run, by a script, on the data-redirected research copy.
+
 ## Not covered
 
 - A person using the frame page or motor test page (section 10 is a script driving the real window of the research copy, for one frame), other frames in the live window, and the picture drawn for each frame.
