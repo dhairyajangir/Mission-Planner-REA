@@ -1,0 +1,46 @@
+frame,param1,meaning,outputs_predicted_by_servo_functions,outputs_that_moved,max_deviation_us,match
+rover,1,throttle,3,3,250,True
+rover,2,steering,1,1,250,True
+rover,3,throttle left,none,none,0,True
+rover,4,throttle right,none,none,0,True
+rover,5,main sail,none,none,0,True
+rover-skid,1,throttle,none,none,0,True
+rover-skid,2,steering,none,none,0,True
+rover-skid,3,throttle left,1,1,250,True
+rover-skid,4,throttle right,3,3,250,True
+rover-skid,5,main sail,none,none,0,True
+rover-omni3mecanum,1,throttle,1,1,250,True
+rover-omni3mecanum,2,steering,2,2,250,True
+rover-omni3mecanum,3,throttle left,3,3,250,True
+rover-omni3mecanum,4,throttle right,none,none,0,True
+rover-omni3mecanum,5,main sail,none,none,0,True
+rover-vectored,1,throttle,3,3,250,True
+rover-vectored,2,steering,1,1,250,True
+rover-vectored,3,throttle left,none,none,0,True
+rover-vectored,4,throttle right,none,none,0,True
+rover-vectored,5,main sail,none,none,0,True
+balancebot,1,throttle,none,none,0,True
+balancebot,2,steering,none,none,0,True
+balancebot,3,throttle left,1,1,250,True
+balancebot,4,throttle right,3,3,250,True
+balancebot,5,main sail,none,none,0,True
+motorboat,1,throttle,3,3,250,True
+motorboat,2,steering,1,1,250,True
+motorboat,3,throttle left,none,none,0,True
+motorboat,4,throttle right,none,none,0,True
+motorboat,5,main sail,none,none,0,True
+motorboat-skid,1,throttle,none,none,0,True
+motorboat-skid,2,steering,none,none,0,True
+motorboat-skid,3,throttle left,1,1,250,True
+motorboat-skid,4,throttle right,3,3,250,True
+motorboat-skid,5,main sail,none,none,0,True
+sailboat,1,throttle,3,3,250,True
+sailboat,2,steering,1,1,250,True
+sailboat,3,throttle left,none,none,0,True
+sailboat,4,throttle right,none,none,0,True
+sailboat,5,main sail,4 5,none,0,False
+sailboat-motor,1,throttle,3,3,250,True
+sailboat-motor,2,steering,1,1,250,True
+sailboat-motor,3,throttle left,none,none,0,True
+sailboat-motor,4,throttle right,none,none,0,True
+sailboat-motor,5,main sail,4,none,0,False

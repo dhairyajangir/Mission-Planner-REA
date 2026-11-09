@@ -1,0 +1,10 @@
+frame,status,all_tests_match_the_vehicles_own_servo_functions,servo_functions_1_to_16,status_text
+rover,ok,True,26 0 70 0 0 0 None None None None None None None None None None,Motor Test: invalid motor (5)
+rover-skid,ok,True,73 0 74 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+rover-omni3mecanum,ok,True,33 34 35 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+rover-vectored,ok,True,26 0 70 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+balancebot,ok,True,73 0 74 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+motorboat,ok,True,26 0 70 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+motorboat-skid,ok,True,73 0 74 0 0 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+sailboat,ok,False,26 0 70 89 137 0 0 None None None None None None None None None,Motor Test: invalid motor (5)
+sailboat-motor,ok,False,26 0 70 89 0 0 0 None None None None None None None None None,RC7: SailboatMotor LOW | Motor Test: invalid motor (5)

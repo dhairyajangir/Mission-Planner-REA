@@ -1,0 +1,27 @@
+frame rover
+[Errno 111] Connection refused sleeping
+{'frame': 'rover', 'servo_functions_1_to_16': '26 0 70 0 0 0 None None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame rover-skid
+[Errno 111] Connection refused sleeping
+{'frame': 'rover-skid', 'servo_functions_1_to_16': '73 0 74 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame rover-omni3mecanum
+[Errno 111] Connection refused sleeping
+{'frame': 'rover-omni3mecanum', 'servo_functions_1_to_16': '33 34 35 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame rover-vectored
+[Errno 111] Connection refused sleeping
+{'frame': 'rover-vectored', 'servo_functions_1_to_16': '26 0 70 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame balancebot
+[Errno 111] Connection refused sleeping
+{'frame': 'balancebot', 'servo_functions_1_to_16': '73 0 74 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame motorboat
+[Errno 111] Connection refused sleeping
+{'frame': 'motorboat', 'servo_functions_1_to_16': '26 0 70 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame motorboat-skid
+[Errno 111] Connection refused sleeping
+{'frame': 'motorboat-skid', 'servo_functions_1_to_16': '73 0 74 0 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': True, 'status_text': 'Motor Test: invalid motor (5)'}
+frame sailboat
+[Errno 111] Connection refused sleeping
+{'frame': 'sailboat', 'servo_functions_1_to_16': '26 0 70 89 137 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': False, 'status_text': 'Motor Test: invalid motor (5)'}
+frame sailboat-motor
+[Errno 111] Connection refused sleeping
+{'frame': 'sailboat-motor', 'servo_functions_1_to_16': '26 0 70 89 0 0 0 None None None None None None None None None', 'status': 'ok', 'all_tests_match_the_vehicles_own_servo_functions': False, 'status_text': 'RC7: SailboatMotor LOW | Motor Test: invalid motor (5)'}
