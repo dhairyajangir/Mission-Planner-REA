@@ -1,0 +1,5 @@
+action,servos_moved_20us_or_more,max_deviation_us_per_servo1_to_8
+gui-test-motor-A,none,0 0 0 0 0 0 0 0
+gui-test-motor-B,none,0 0 0 0 0 0 0 0
+gui-test-all-in-sequence,none,0 0 0 0 0 0 0 0
+gui-stop-all-motors,none,0 0 0 0 0 0 0 0

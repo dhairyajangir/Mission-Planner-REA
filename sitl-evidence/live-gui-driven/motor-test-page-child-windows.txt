@@ -1,0 +1,7 @@
+142116 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test motor A" | client (178,122) 75x23 | visible=True
+594634 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test motor B" | client (178,147) 75x23 | visible=True
+396274 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test motor C" | client (178,172) 75x23 | visible=True
+331344 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test motor D" | client (178,197) 75x23 | visible=True
+142110 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test all motors" | client (178,222) 75x37 | visible=True
+142108 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Stop all motors" | client (178,261) 75x37 | visible=True
+142106 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Test all in Sequence" | client (178,300) 75x37 | visible=True

@@ -12,7 +12,7 @@ import sys
 d, label, out = sys.argv[1:4]
 actions = []        # (name, start, end)
 cur = {}
-for line in open(os.path.join(d, label + '-log.txt'), encoding='utf-8'):
+for line in open(os.path.join(d, label + '-log.txt'), encoding='utf-8-sig'):
     m = re.match(r'(\S+) ACTION-(START|END) (\S+)', line)
     if m:
         t = datetime.datetime.strptime(m.group(1)[:26] + 'Z', '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=datetime.timezone.utc).timestamp()

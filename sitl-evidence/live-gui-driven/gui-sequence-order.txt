@@ -1,0 +1,1 @@
+servo outputs in order of first rise after the press (seconds after the press): [(3, 0.0), (1, 3.0), (4, 6.1), (2, 9.0)]

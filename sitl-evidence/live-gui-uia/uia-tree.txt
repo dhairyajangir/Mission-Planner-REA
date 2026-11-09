@@ -1,0 +1,47 @@
+﻿windows of process 26340: 1
+WINDOW Mission Planner 1.3.83 build 1.3.9384.38258 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1
+  Pane |  | id=4664152 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+    Pane |  | id=11666764 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+      Pane |  | id=8783520 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+        Pane |  | id=7407082 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+          Pane |  | id=2565620 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+            Pane |  | id=1975718 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+              Pane |  | id=2432300 | class=WindowsForms10.Window.2b.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+            Pane |  | id=16843792 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+              Pane |  | id=1 | class=WindowsForms10.SysTabControl32.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Quick | id=4598654 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                  Pane |  | id=2698136 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=1 | class=msctls_updown32 | enabled=True | offscreen=False | 
+        Pane |  | id=4467754 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+          Pane |  | id=3353644 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+            Pane |  | id=5516088 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+              Pane |  | id=3670700 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Zoom | id=6490190 | class=WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=7148360 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                  Pane |  | id=2561764 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                  Pane | 17.0 | id=2762636 | class=WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=5375546 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=2567094 | class=WindowsForms10.msctls_trackbar32.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=3812416 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | GPS Track (Black) | id=3025986 | class=WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Target Heading | id=2501702 | class=WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Direct to current WP | id=5319760 | class=WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Current Heading | id=5057456 | class=WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=5057618 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane |  | id=2436188 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | Map | id=5516390 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+            Pane |  | id=3157100 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+              Pane |  | id=7155038 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                Pane | GEO | id=8061618 | class=WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+                  Pane | GEO | id=1001 | class=Edit | enabled=True | offscreen=False | 
+              Pane | Auto Pan | id=7482184 | class=WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+              Pane | Tuning | id=4267748 | class=WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+  Pane |  | id=7144442 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+    Pane | menuStrip1 | id=3873506 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+      Pane |  | id=9570364 | class=WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+        Pane |  | id=5506110 | class=WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+          Pane |  | id=1001 | class=Edit | enabled=True | offscreen=False | 
+        Pane | AUTO | id=4655232 | class=WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+          Pane | AUTO | id=1001 | class=Edit | enabled=True | offscreen=False | 
+        Pane | 115200 | id=1839564 | class=WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | enabled=True | offscreen=False | 
+          Pane | 115200 | id=1001 | class=Edit | enabled=True | offscreen=False | 
