@@ -157,7 +157,7 @@ def run_motor_test(link, info: VehicleInfo, params: Mapping[str, float], throttl
     return results
 
 
-def inspect(port: int):
-    link, mav_type = connect(port)
+def inspect(port: int, host: str = '127.0.0.1'):
+    link, mav_type = connect(port, host)
     params = read_params(link)
     return link, params, detect(params, mav_type)

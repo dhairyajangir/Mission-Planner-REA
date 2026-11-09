@@ -1,0 +1,139 @@
+$ python -m customgcs info
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+exit=0
+
+$ python -m customgcs modes
+ 0 STABILIZE
+ 1 ACRO
+ 2 ALT_HOLD
+ 3 AUTO
+ 4 GUIDED
+ 5 LOITER
+ 6 RTL
+ 7 CIRCLE
+ 9 LAND
+11 DRIFT
+13 SPORT
+14 FLIP
+15 AUTOTUNE
+16 POSHOLD
+17 BRAKE
+18 THROW
+19 AVOID_ADSB
+20 GUIDED_NOGPS
+21 SMART_RTL
+22 FLOWHOLD
+23 FOLLOW
+24 ZIGZAG
+25 SYSTEMID
+26 AUTOROTATE
+28 TURTLE
+exit=0
+
+$ python -m customgcs params-save --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+saved 1431 parameters to base.param
+exit=0
+
+$ python -m customgcs params-diff --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+COMPASS_DEC                  vehicle=0.223357216    file=0
+1 differences (1431 in file, 1431 on vehicle)
+exit=1
+
+$ python -m customgcs params-diff --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+COMPASS_DEC                  vehicle=0.223357216    file=0
+RTL_ALT_M                    vehicle=15             file=25
+2 differences (1431 in file, 1431 on vehicle)
+exit=1
+
+$ python -m customgcs params-restore --file base.param --dry-run
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+would set COMPASS_DEC                  0.223357216 -> 0
+would set RTL_ALT_M                    15 -> 25
+2 planned, 2 still different afterwards
+exit=0
+
+$ python -m customgcs params-restore --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+set BARO1_GND_PRESS              101325.062 -> 94502.8281
+set BARO2_GND_PRESS              101324.945 -> 94502.4766
+set COMPASS_DEC                  0.223357216 -> 0
+set MIS_TOTAL                    1 -> 0
+set RTL_ALT_M                    15 -> 25
+FAILED BARO1_GND_PRESS            wanted 94502.8281 got 101325.0625 (vehicle kept a different value)
+FAILED BARO2_GND_PRESS            wanted 94502.4766 got 101324.9453125 (vehicle kept a different value)
+FAILED MIS_TOTAL                  wanted 0 got 1.0 (vehicle kept a different value)
+5 planned, 3 still different afterwards
+exit=1
+
+$ python -m customgcs params-diff --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+BARO1_GND_PRESS              vehicle=101325.062     file=94502.8281
+BARO2_GND_PRESS              vehicle=101324.945     file=94502.4766
+MIS_TOTAL                    vehicle=1              file=0
+3 differences (1431 in file, 1431 on vehicle)
+exit=1
+
+$ python -m customgcs mode --name LOITER
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+LOITER active
+exit=0
+
+$ python -m customgcs mode --name FLIP
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+FLIP refused: vehicle stays in LOITER (ack result 4)
+  vehicle says: Mode change to Flip failed: init failed
+exit=1
+
+$ python -m customgcs arm
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+armed (ack result 0)
+  vehicle says: Arm: Need Position Estimate
+  vehicle says: Arm: Need Position Estimate
+  vehicle says: EKF3 IMU0 is using GPS
+  vehicle says: EKF3 IMU1 is using GPS
+  vehicle says: Arming motors
+exit=0
+
+$ python -m customgcs params-restore --file base.param
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+error: refusing to write parameters while the vehicle is armed
+exit=4
+
+$ python -m customgcs disarm
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+disarmed (ack result 0)
+  vehicle says: Disarming motors
+exit=0
+
+$ python -m customgcs mission-upload --file plan.waypoints
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+uploaded 4 items, ack type 0 (accepted)
+exit=0
+
+$ python -m customgcs mission-verify --file plan.waypoints
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+mission matches the file
+exit=0
+
+$ python -m customgcs mission-download --file down.waypoints
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+downloaded 4 items to down.waypoints
+exit=0
+
+$ python -m customgcs mission-clear
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+mission clear ack type 0
+exit=0
+
+$ python -m customgcs mission-upload --file bad.waypoints
+vehicle: copter, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1431 parameters
+error: item 2: x is not a finite number
+exit=4
+
+$ python -m customgcs arm --host 10.1.2.3
+refusing arm on 10.1.2.3: only simulators on this machine have been tested; pass --allow-remote to override
+exit=3
+

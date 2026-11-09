@@ -1,0 +1,86 @@
+connected; vehicle type 2
+== arm and modes
+     early arm attempt (about 15 s after start): armed (ack result 0) | Arm: Accels inconsistent; Arming motors
+     the vehicle armed within 6 s (a refused first try, then accepted); disarming before the disarmed sweep: disarmed (ack result 0)
+OK   vehicle is disarmed before the disarmed sweep
+     start mode: STABILIZE
+     -- every mode requested one by one, disarmed
+     mode  0 STABILIZE     STABILIZE active  | EKF3 IMU0 origin set
+     mode  1 ACRO          ACRO active  | EKF3 IMU0 is using GPS; EKF3 IMU1 is using GPS
+     mode  2 ALT_HOLD      ALT_HOLD active
+     mode  3 AUTO          AUTO active
+     mode  4 GUIDED        GUIDED active
+     mode  5 LOITER        LOITER active
+     mode  6 RTL           RTL active
+     mode  7 CIRCLE        CIRCLE active
+     mode  9 LAND          LAND active
+     mode 11 DRIFT         DRIFT active
+     mode 13 SPORT         SPORT active
+     mode 14 FLIP          FLIP refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Flip failed: init failed
+     mode 15 AUTOTUNE      AUTOTUNE refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Autotune failed: init failed
+     mode 16 POSHOLD       POSHOLD active
+     mode 17 BRAKE         BRAKE active
+     mode 18 THROW         THROW active
+     mode 19 AVOID_ADSB    AVOID_ADSB active
+     mode 20 GUIDED_NOGPS  GUIDED_NOGPS active
+     mode 21 SMART_RTL     SMART_RTL active
+     mode 22 FLOWHOLD      FLOWHOLD refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Flow Hold failed: init failed
+     mode 23 FOLLOW        FOLLOW refused: vehicle stays in STABILIZE (ack result 4)  | Set FOLL_ENABLE = 1; Mode change to Follow failed: init failed
+     mode 24 ZIGZAG        ZIGZAG active
+     mode 25 SYSTEMID      SYSTEMID refused: vehicle stays in STABILIZE (ack result 4)  | No axis selected, SID_AXIS = 0; Mode change to SystemID failed: init failed
+     mode 26 AUTOROTATE    AUTOROTATE refused: vehicle stays in STABILIZE (ack result 4)  | No such mode 26
+     mode 28 TURTLE        TURTLE refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Turtle failed: init failed
+OK   STABILIZE is accepted
+OK   arm succeeds   [armed (ack result 0)]
+OK   heartbeat reports armed
+OK   parameter restore refuses while armed   [refusing to write parameters while the vehicle is armed]
+     -- every mode requested one by one, armed on the ground in the simulator
+     mode  0 STABILIZE     STABILIZE active
+     mode  1 ACRO          ACRO active
+     mode  2 ALT_HOLD      ALT_HOLD active
+     mode  3 AUTO          AUTO refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Auto failed: init failed
+     mode  4 GUIDED        GUIDED active
+     mode  5 LOITER        LOITER active
+     mode  6 RTL           RTL active
+     mode  7 CIRCLE        CIRCLE active
+     mode  9 LAND          LAND active
+     mode 11 DRIFT         DRIFT active
+     mode 13 SPORT         SPORT active
+     mode 14 FLIP          FLIP refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Flip failed: init failed
+     mode 15 AUTOTUNE      AUTOTUNE refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Autotune failed: init failed
+     mode 16 POSHOLD       POSHOLD active
+     mode 17 BRAKE         BRAKE active
+     mode 18 THROW         THROW active
+     mode 19 AVOID_ADSB    AVOID_ADSB active
+     mode 20 GUIDED_NOGPS  GUIDED_NOGPS active
+     mode 21 SMART_RTL     SMART_RTL active
+     mode 22 FLOWHOLD      FLOWHOLD refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Flow Hold failed: init failed
+     mode 23 FOLLOW        FOLLOW refused: vehicle stays in STABILIZE (ack result 4)  | Set FOLL_ENABLE = 1; Mode change to Follow failed: init failed
+     mode 24 ZIGZAG        ZIGZAG active
+     mode 25 SYSTEMID      SYSTEMID refused: vehicle stays in STABILIZE (ack result 4)  | No axis selected, SID_AXIS = 0; Mode change to SystemID failed: init failed
+     mode 26 AUTOROTATE    AUTOROTATE refused: vehicle stays in STABILIZE (ack result 4)  | No such mode 26
+     mode 28 TURTLE        TURTLE refused: vehicle stays in STABILIZE (ack result 4)  | Mode change to Turtle failed: init failed
+OK   disarm succeeds   [disarmed (ack result 0)]
+OK   unknown mode name rejected before sending
+== parameters
+OK   saved file reloads to the same 1431 parameters
+OK   three parameters written and echoed by the vehicle   [[('PILOT_SPD_UP', 3.0), ('RTL_ALT_M', 20.0), ('LAND_SPD_MS', 0.75)]]
+OK   diff against the saved file lists exactly those three   [['LAND_SPD_MS', 'PILOT_SPD_UP', 'RTL_ALT_M']]
+OK   dry run plans the three and writes nothing
+OK   restore wrote three, skipped the protected SERIAL0_BAUD, nothing else differs   [(('SERIAL0_BAUD',), 0)]
+OK   after restore the vehicle matches the saved file (protected names excluded)   [[]]
+OK   a parameter the vehicle does not have is reported, not silently accepted   [no echo]
+== missions
+OK   upload of 5 items accepted (ack type 0)   [0]
+OK   download returns the same items from 1 to 4 (home replaced by the vehicle's)   [[]]
+OK   downloaded mission survives a WPL file round trip
+OK   NaN latitude refused before anything is sent   [item 2: x is not a finite number]
+OK   vehicle mission unchanged by the refused upload
+     unknown command 9999 -> ack type 3
+OK   vehicle answered the unknown command with a MISSION_ACK (type recorded above)   [3]
+OK   re-upload of the good mission accepted   [0]
+OK   clear accepted (ack type 0)
+     items left after clear: 0
+OK   mission empty after clear except possibly home   [0]
+
+RESULT all checks passed
