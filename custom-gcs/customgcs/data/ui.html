@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>customgcs screen</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --panel: #ffffff; --ink: #1c2330; --muted: #5d6b82; --line: #d6dbe4;
+    --accent: #1f6feb; --accent-ink: #ffffff; --ok: #1a7f37; --warn: #9a6700; --bad: #c4261d; --sim: #7d4e00; --sim-bg: #fff3cd;
+    --canvas: #fbfcfe; --trail: #1f6feb; --wp: #c4261d; --home: #1a7f37;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f141b; --panel: #171e29; --ink: #e6ebf3; --muted: #93a1b8; --line: #2a3445;
+      --accent: #5aa2ff; --accent-ink: #08111f; --ok: #56d364; --warn: #e3b341; --bad: #ff7b72; --sim: #f0c36d; --sim-bg: #3a2c0b;
+      --canvas: #0c1118; --trail: #5aa2ff; --wp: #ff7b72; --home: #56d364;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f141b; --panel: #171e29; --ink: #e6ebf3; --muted: #93a1b8; --line: #2a3445;
+    --accent: #5aa2ff; --accent-ink: #08111f; --ok: #56d364; --warn: #e3b341; --bad: #ff7b72; --sim: #f0c36d; --sim-bg: #3a2c0b;
+    --canvas: #0c1118; --trail: #5aa2ff; --wp: #ff7b72; --home: #56d364;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  h1 { font-size: 18px; margin: 0; }
+  .sim { background: var(--sim-bg); color: var(--sim); border: 1px solid var(--sim); border-radius: 6px; padding: 3px 10px; font-weight: 600; font-size: 13px; }
+  main { display: grid; gap: 12px; padding: 12px 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 1400px; margin: 0 auto; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; min-width: 0; }
+  section.wide { grid-column: 1 / -1; }
+  h2 { font-size: 14px; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 6px 0; }
+  button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  button.danger { border-color: var(--bad); color: var(--bad); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  input, select, textarea { font: inherit; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  textarea { width: 100%; min-height: 150px; font: 13px/1.4 ui-monospace, Consolas, monospace; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; margin: 0; }
+  dt { color: var(--muted); } dd { margin: 0; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 1px 9px; border-radius: 99px; font-weight: 600; font-size: 13px; border: 1px solid var(--line); }
+  .pill.on { color: var(--bad); border-color: var(--bad); } .pill.off { color: var(--ok); border-color: var(--ok); } .pill.na { color: var(--muted); }
+  #map { width: 100%; height: 340px; background: var(--canvas); border: 1px solid var(--line); border-radius: 6px; display: block; }
+  #log { font: 13px/1.4 ui-monospace, Consolas, monospace; max-height: 190px; overflow: auto; margin: 0; white-space: pre-wrap; }
+  #result { min-height: 1.4em; margin-top: 6px; } .ok { color: var(--ok); } .bad { color: var(--bad); }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: left; padding: 3px 8px; border-bottom: 1px solid var(--line); } td.v { font-variant-numeric: tabular-nums; cursor: pointer; }
+  #paramwrap { max-height: 300px; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+  .muted { color: var(--muted); }
+  @media (max-width: 520px) { main { padding: 8px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>customgcs</h1>
+  <span class="sim">SIMULATOR ONLY &middot; this machine only</span>
+  <span class="row"><label for="port" class="muted">Simulator port</label><input id="port" type="number" value="5760" style="width:90px"><button class="primary" id="connect">Connect</button><button id="disconnect">Disconnect</button></span>
+</header>
+<main>
+  <section aria-labelledby="h-status">
+    <h2 id="h-status">Vehicle</h2>
+    <dl>
+      <dt>Connection</dt><dd id="s-conn">not connected</dd>
+      <dt>Vehicle</dt><dd id="s-vehicle">-</dd>
+      <dt>Mode</dt><dd id="s-mode">-</dd>
+      <dt>Armed</dt><dd id="s-armed"><span class="pill na">unknown</span></dd>
+      <dt>Position</dt><dd id="s-pos">-</dd>
+      <dt>Height / speed</dt><dd id="s-hs">-</dd>
+      <dt>Attitude</dt><dd id="s-att">-</dd>
+      <dt>GPS</dt><dd id="s-gps">-</dd>
+      <dt>Battery</dt><dd id="s-bat">-</dd>
+      <dt>Mission item</dt><dd id="s-item">-</dd>
+      <dt>Last message</dt><dd id="s-age">-</dd>
+    </dl>
+    <div id="busy" class="muted" role="status"></div>
+  </section>
+
+  <section aria-labelledby="h-control">
+    <h2 id="h-control">Controls</h2>
+    <div class="row"><label for="mode" class="muted">Mode</label><select id="mode"></select><button id="setmode">Set mode</button></div>
+    <div class="row"><button id="arm" class="primary">Arm</button><button id="disarm" class="danger">Disarm</button><button id="startmission">Start mission</button></div>
+    <div class="row"><button id="fly" class="primary">Fly the mission (arm, AUTO, start)</button></div>
+    <p class="muted" style="margin:6px 0 0">Arm asks the vehicle to arm and shows its reasons if it refuses. There is deliberately no "force arm" here. A vehicle left armed on the ground disarms itself after about 10 s, so "Fly the mission" does arm, AUTO and start in one go.</p>
+    <div id="result" role="status" aria-live="polite"></div>
+  </section>
+
+  <section class="wide" aria-labelledby="h-map">
+    <h2 id="h-map">Position trail and mission (north up, metres from home, no map tiles)</h2>
+    <canvas id="map" width="1200" height="340" role="img" aria-label="Position trail and mission waypoints"></canvas>
+  </section>
+
+  <section aria-labelledby="h-mission">
+    <h2 id="h-mission">Mission, fence, rally (QGC WPL text)</h2>
+    <div class="row"><label for="list" class="muted">List</label><select id="list"><option>mission</option><option>fence</option><option>rally</option></select>
+      <button id="m-upload" class="primary">Upload</button><button id="m-download">Download</button><button id="m-clear" class="danger">Clear</button></div>
+    <textarea id="wpl" spellcheck="false" aria-label="Mission in QGC WPL text" placeholder="QGC WPL 110&#10;0&#9;1&#9;0&#9;16&#9;0&#9;0&#9;0&#9;0&#9;-35.363261&#9;149.16523&#9;584&#9;1"></textarea>
+    <div class="row"><button id="m-example">Insert an example mission</button><span class="muted">(takeoff 15 m, two waypoints, return)</span></div>
+  </section>
+
+  <section aria-labelledby="h-log">
+    <h2 id="h-log">Vehicle messages</h2>
+    <pre id="log" aria-live="off"></pre>
+  </section>
+
+  <section class="wide" aria-labelledby="h-params">
+    <h2 id="h-params">Parameters</h2>
+    <div class="row"><button id="p-load">Load from vehicle</button><a id="p-save" href="/api/params.param" download="vehicle.param"><button type="button">Save .param file</button></a>
+      <label for="p-filter" class="muted">Filter</label><input id="p-filter" placeholder="e.g. RTL"><span id="p-count" class="muted"></span></div>
+    <div id="paramwrap"><table><thead><tr><th>Name</th><th>Value (click to change)</th></tr></thead><tbody id="p-body"></tbody></table></div>
+  </section>
+</main>
+<script>
+const TOKEN = "__TOKEN__";
+const $ = id => document.getElementById(id);
+let state = {}, params = {}, modesLoaded = false;
+
+async function post(path, body) {
+  const r = await fetch(path, {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Token': TOKEN}, body: JSON.stringify(body || {})});
+  return r.json();
+}
+function show(result) {
+  const el = $('result'); el.className = result.ok ? 'ok' : 'bad';
+  el.textContent = (result.ok ? 'OK: ' : 'Not done: ') + (result.detail || '') + ((result.texts && result.texts.length) ? '  | vehicle says: ' + result.texts.join('; ') : '');
+}
+async function act(path, body, button) {
+  if (button) button.disabled = true;
+  try { const result = await post(path, body); show(result); return result; }
+  catch (e) { show({ok: false, detail: String(e)}); }
+  finally { if (button) button.disabled = false; }
+}
+function fmt(n, d) { return (n === null || n === undefined) ? '-' : Number(n).toFixed(d); }
+
+function renderState(s) {
+  state = s;
+  $('s-conn').textContent = s.connected ? 'connected' : (s.error || 'not connected');
+  $('s-vehicle').textContent = s.vehicle || '-';
+  $('s-mode').textContent = s.mode || '-';
+  const armed = $('s-armed'); armed.innerHTML = '';
+  const pill = document.createElement('span');
+  pill.className = 'pill ' + (s.armed === null || s.armed === undefined ? 'na' : s.armed ? 'on' : 'off');
+  pill.textContent = s.armed === null || s.armed === undefined ? 'unknown' : s.armed ? 'ARMED' : 'disarmed';
+  armed.appendChild(pill);
+  $('s-pos').textContent = s.position ? fmt(s.position[0], 6) + ', ' + fmt(s.position[1], 6) : '-';
+  $('s-hs').textContent = s.position ? fmt(s.position[2], 1) + ' m  /  ' + fmt(s.speed, 1) + ' m/s' : '-';
+  $('s-att').textContent = s.attitude ? 'roll ' + fmt(s.attitude[0], 0) + '°  pitch ' + fmt(s.attitude[1], 0) + '°' + (s.heading !== null ? '  heading ' + fmt(s.heading, 0) + '°' : '') : '-';
+  $('s-gps').textContent = s.gps ? 'fix type ' + s.gps[0] + ', ' + s.gps[1] + ' satellites' : '-';
+  $('s-bat').textContent = s.battery_v !== null && s.battery_v !== undefined ? fmt(s.battery_v, 2) + ' V' : '-';
+  $('s-item').textContent = s.current_item !== null && s.current_item !== undefined ? s.current_item : '-';
+  $('s-age').textContent = s.message_age_s !== null && s.message_age_s !== undefined ? s.message_age_s + ' s ago' : '-';
+  fillModes(s.modes || []);
+  $('busy').textContent = s.busy ? 'Working: ' + s.busy + ' ...' : '';
+  $('log').textContent = (s.texts || []).join('\n');
+  const c = s.connected;
+  ['setmode', 'arm', 'disarm', 'startmission', 'fly', 'm-upload', 'm-download', 'm-clear', 'p-load'].forEach(id => $(id).disabled = !c);
+  drawMap(s);
+}
+
+function drawMap(s) {
+  const canvas = $('map'), g = canvas.getContext('2d'), css = getComputedStyle(document.documentElement);
+  const w = canvas.width = canvas.clientWidth * (window.devicePixelRatio || 1), h = canvas.height = canvas.clientHeight * (window.devicePixelRatio || 1);
+  g.clearRect(0, 0, w, h);
+  const home = s.home || (s.position ? [s.position[0], s.position[1]] : null);
+  if (!home) { g.fillStyle = css.getPropertyValue('--muted'); g.font = (14 * (window.devicePixelRatio || 1)) + 'px system-ui'; g.fillText('No position yet', 20, 30); return; }
+  const mLat = 111320, mLon = 111320 * Math.cos(home[0] * Math.PI / 180);
+  const xy = (lat, lon) => [(lon - home[1]) * mLon, (lat - home[0]) * mLat];
+  const pts = [[0, 0]].concat((s.track || []).map(p => xy(p[0], p[1])), (s.mission || []).map(m => xy(m.lat, m.lon)));
+  let minx = Math.min(...pts.map(p => p[0])), maxx = Math.max(...pts.map(p => p[0])), miny = Math.min(...pts.map(p => p[1])), maxy = Math.max(...pts.map(p => p[1]));
+  const span = Math.max(maxx - minx, maxy - miny, 100), pad = 30 * (window.devicePixelRatio || 1);
+  const scale = (Math.min(w, h) - 2 * pad) / span, cx = (minx + maxx) / 2, cy = (miny + maxy) / 2;
+  const toScreen = p => [w / 2 + (p[0] - cx) * scale, h / 2 - (p[1] - cy) * scale];
+  g.strokeStyle = css.getPropertyValue('--line'); g.lineWidth = 1;
+  const grid = span > 800 ? 200 : span > 300 ? 100 : span > 120 ? 50 : 20;
+  g.font = (11 * (window.devicePixelRatio || 1)) + 'px system-ui'; g.fillStyle = css.getPropertyValue('--muted');
+  for (let m = Math.ceil((minx - span) / grid) * grid; m < maxx + span; m += grid) { const a = toScreen([m, cy]); g.beginPath(); g.moveTo(a[0], 0); g.lineTo(a[0], h); g.stroke(); }
+  for (let m = Math.ceil((miny - span) / grid) * grid; m < maxy + span; m += grid) { const a = toScreen([cx, m]); g.beginPath(); g.moveTo(0, a[1]); g.lineTo(w, a[1]); g.stroke(); }
+  g.fillText('grid ' + grid + ' m', 8, h - 8);
+  // mission legs and points
+  const mp = (s.mission || []).map(m => ({p: toScreen(xy(m.lat, m.lon)), seq: m.seq}));
+  g.strokeStyle = css.getPropertyValue('--wp'); g.setLineDash([6, 5]); g.beginPath();
+  mp.forEach((m, i) => i ? g.lineTo(m.p[0], m.p[1]) : g.moveTo(m.p[0], m.p[1])); g.stroke(); g.setLineDash([]);
+  g.fillStyle = css.getPropertyValue('--wp');
+  mp.forEach(m => { g.beginPath(); g.arc(m.p[0], m.p[1], 5 * (window.devicePixelRatio || 1), 0, 7); g.fill(); g.fillText(String(m.seq), m.p[0] + 8, m.p[1] - 8); });
+  // trail
+  g.strokeStyle = css.getPropertyValue('--trail'); g.lineWidth = 2 * (window.devicePixelRatio || 1); g.beginPath();
+  (s.track || []).forEach((p, i) => { const a = toScreen(xy(p[0], p[1])); i ? g.lineTo(a[0], a[1]) : g.moveTo(a[0], a[1]); }); g.stroke();
+  // home and vehicle
+  const hs = toScreen([0, 0]); g.fillStyle = css.getPropertyValue('--home'); g.fillRect(hs[0] - 6, hs[1] - 6, 12, 12); g.fillText('home', hs[0] + 10, hs[1] + 4);
+  if (s.position) {
+    const a = toScreen(xy(s.position[0], s.position[1])), hd = ((s.heading || 0) * Math.PI) / 180, r = 9 * (window.devicePixelRatio || 1);
+    g.save(); g.translate(a[0], a[1]); g.rotate(hd); g.fillStyle = css.getPropertyValue('--trail');
+    g.beginPath(); g.moveTo(0, -r); g.lineTo(r * 0.7, r); g.lineTo(-r * 0.7, r); g.closePath(); g.fill(); g.restore();
+  }
+}
+
+let shownModes = '';
+function fillModes(modes) {
+  const key = JSON.stringify(modes);
+  if (key === shownModes) return;
+  shownModes = key;
+  const sel = $('mode'), keep = sel.value; sel.innerHTML = '';
+  modes.forEach(m => { const o = document.createElement('option'); o.value = m[0]; o.textContent = m[0] + ' (' + m[1] + ')'; sel.appendChild(o); });
+  if (keep) sel.value = keep;
+}
+
+async function poll() {
+  try { renderState(await (await fetch('/api/state')).json()); } catch (e) { $('s-conn').textContent = 'screen server not reachable'; }
+  setTimeout(poll, 500);
+}
+
+$('connect').onclick = async () => {
+  await act('/api/connect', {port: Number($('port').value)}, $('connect'));
+};
+$('disconnect').onclick = () => act('/api/disconnect', {}, $('disconnect'));
+$('setmode').onclick = () => act('/api/mode', {name: $('mode').value}, $('setmode'));
+$('arm').onclick = () => { if (confirm('Arm the vehicle? (simulator)')) act('/api/arm', {}, $('arm')); };
+$('disarm').onclick = () => { if (confirm('Disarm the vehicle?')) act('/api/disarm', {}, $('disarm')); };
+$('startmission').onclick = () => act('/api/mission/start', {}, $('startmission'));
+$('fly').onclick = () => { if (confirm('Arm and fly the uploaded mission in the simulator?')) act('/api/mission/fly', {}, $('fly')); };
+$('m-upload').onclick = () => act('/api/mission/upload', {wpl: $('wpl').value, list: $('list').value}, $('m-upload'));
+$('m-download').onclick = async () => { const r = await act('/api/mission/download', {list: $('list').value}, $('m-download')); if (r && r.ok) $('wpl').value = r.wpl; };
+$('m-clear').onclick = () => { if (confirm('Clear the ' + $('list').value + ' list on the vehicle?')) act('/api/mission/clear', {list: $('list').value}, $('m-clear')); };
+$('m-example').onclick = () => {
+  const h = state.home || [-35.363261, 149.16523], n = h[0] + 0.0004, e = h[1] + 0.0005;
+  const row = (i, c, f, lat, lon, alt, cur) => [i, cur || 0, f, c, 0, 0, 0, 0, lat.toFixed(8), lon.toFixed(8), alt, 1].join('\t');
+  $('list').value = 'mission';
+  $('wpl').value = ['QGC WPL 110', row(0, 16, 0, h[0], h[1], 584, 1), row(1, 22, 3, 0, 0, 15, 1), row(2, 16, 3, n, h[1], 15), row(3, 16, 3, n, e, 15), row(4, 20, 3, 0, 0, 0)].join('\n') + '\n';
+};
+$('p-load').onclick = async () => {
+  $('p-load').disabled = true;
+  try { const p = await (await fetch('/api/params')).json(); if (p.ok === false) { show(p); } else { params = p; renderParams(); } } finally { $('p-load').disabled = !state.connected; }
+};
+function renderParams() {
+  const f = $('p-filter').value.trim().toUpperCase(), body = $('p-body'); body.innerHTML = '';
+  const names = Object.keys(params).filter(n => !f || n.includes(f)).sort();
+  $('p-count').textContent = names.length + ' of ' + Object.keys(params).length;
+  names.slice(0, 400).forEach(n => {
+    const tr = document.createElement('tr'), a = document.createElement('td'), b = document.createElement('td');
+    a.textContent = n; b.textContent = params[n]; b.className = 'v'; b.title = 'click to change';
+    b.onclick = async () => {
+      const v = prompt('New value for ' + n + ' (now ' + params[n] + ')', params[n]);
+      if (v === null) return;
+      const r = await act('/api/param', {name: n, value: Number(v)});
+      if (r && r.ok) { params[n] = Number(v); renderParams(); }
+    };
+    tr.append(a, b); body.appendChild(tr);
+  });
+}
+$('p-filter').oninput = renderParams;
+poll();
+</script>
+</body>
+</html>

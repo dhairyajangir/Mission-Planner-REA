@@ -2,6 +2,7 @@
 
     python -m customgcs info|plan|motor-test               [--port 5760] [--pct 10] [--arm]
     python -m customgcs params-save|params-diff|params-restore  --file F [--dry-run] [--include-protected]
+    python -m customgcs ui [--ui-port 8765] [--connect --port 5760]      a local screen (127.0.0.1 only)
     python -m customgcs modes [--vehicle copter|rover|plane] | mode --name LOITER | arm [--force] | disarm [--force]
     python -m customgcs mission-upload|mission-download|mission-verify --file F | mission-clear | mission-start
 
@@ -117,7 +118,7 @@ def _mission_commands(args, conn) -> int:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog='customgcs')
     ap.add_argument('command', choices=['info', 'plan', 'motor-test', 'params-save', 'params-diff', 'params-restore', 'modes', 'mode', 'arm', 'disarm',
-                                        'mission-upload', 'mission-download', 'mission-verify', 'mission-clear', 'mission-start'])
+                                        'mission-upload', 'mission-download', 'mission-verify', 'mission-clear', 'mission-start', 'ui'])
     ap.add_argument('--host', default='127.0.0.1')
     ap.add_argument('--port', type=int, default=5760)
     ap.add_argument('--allow-remote', action='store_true', help='allow a state-changing command on a host that is not this machine (never tried; the prototype is simulator-only)')
@@ -125,12 +126,18 @@ def main(argv=None) -> int:
     ap.add_argument('--arm', action='store_true', help='force-arm a simulator when the motor test needs it (Sub)')
     ap.add_argument('--force', action='store_true', help='arm/disarm without the vehicle\'s checks')
     ap.add_argument('--vehicle', choices=['copter', 'rover', 'plane'], default='copter', help='for the modes listing, which vehicle modes to show')
+    ap.add_argument('--ui-port', type=int, default=8765, help='ui: the port the screen is served on (127.0.0.1 only)')
+    ap.add_argument('--connect', action='store_true', help='ui: connect to the simulator on --port at start')
     ap.add_argument('--file')
     ap.add_argument('--list', choices=['mission', 'fence', 'rally'], default='mission', help='which list the mission-* commands work on: the mission, the geofence or the rally points')
     ap.add_argument('--name')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--include-protected', action='store_true')
     args = ap.parse_args(argv)
+    if args.command == 'ui':
+        from . import webui
+        webui.serve(args.ui_port, args.port if args.connect else None)
+        return 0
     if args.command == 'modes':
         for name, number in sorted(flight.vehicle_modes(args.vehicle).items(), key=lambda kv: kv[1]):
             print('%2d %s' % (number, name))
