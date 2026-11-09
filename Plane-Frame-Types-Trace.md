@@ -29,7 +29,7 @@ The expected order comes from the `AP_MotorsMatrix.cpp` tables (or, for the tri 
 | quadplane-ice | 1 / 1 | only motors 1 and 2 have outputs (5, 6) | 5, none, 6, none | 2 of 4 (see below) |
 | plane-tailsitter | 10 / 1 | outputs are aileron, elevator, throttle (70), rudder | none | nothing to move (see below) |
 
-- `quadplane-ice`: the frame is a quad, but its default parameters assign motor functions to only two outputs, so the tests for motors 3 and 4 (sequence 2 and 4 in the X order) move nothing. This is what the default parameter files do; I did not look at why.
+- `quadplane-ice`: the frame is a quad, but its default parameters assign motor functions to only two outputs, so the tests for motors 3 and 4 (sequence 2 and 4 in the X order) move nothing. This is what the default parameter files do; I did not look at why. **Later check (not reproduced):** a fresh `quadplane-ice` simulator read by single-name requests and by the full list, 3 s and 20 s after start, has all four motors on outputs 5 to 8 (`sitl-evidence/custom-gcs-special-cases/quadplane-ice.txt`, 4 of 4 matched), so this paragraph may describe a state of that sweep run I cannot reconstruct; see `Custom-GCS-Prototype-Trace.md`.
 - `plane-tailsitter`: this model's servo functions are aileron (4), elevator (19), throttle (70) and rudder (21); none of the outputs the tailsitter test addresses (throttle left/right, tilt left/right) exist on it, so the motor test is accepted and moves nothing. Class 10 here is the single-motor tailsitter, and the test of `AP_MotorsTailsitter` is not written for it.
 - The plane and other non-VTOL frames have no VTOL motors and were not swept. `quadplane-can` and `quadplane-PPP` need a CAN or PPP peripheral and were not swept.
 

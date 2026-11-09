@@ -69,7 +69,7 @@ def test_quadplane_maps_motors_through_servo_functions():
 
 
 def test_unassigned_motor_expects_no_output():
-    p = {'Q_ENABLE': 1, 'Q_FRAME_CLASS': 1, 'Q_FRAME_TYPE': 1, 'SERVO5_FUNCTION': 33, 'SERVO6_FUNCTION': 34}      # the quadplane-ice shape
+    p = {'Q_ENABLE': 1, 'Q_FRAME_CLASS': 1, 'Q_FRAME_TYPE': 1, 'SERVO5_FUNCTION': 33, 'SERVO6_FUNCTION': 34}      # synthetic: two motors with outputs, two without (an earlier sweep seemed to show this on quadplane-ice, but a fresh run did not reproduce it; see Custom-GCS-Prototype-Trace.md)
     steps = motors.plan(vehicle.detect(p, mav_type=1), p)
     assert [s.expect_outputs for s in steps] == [(5,), (), (6,), ()]
 

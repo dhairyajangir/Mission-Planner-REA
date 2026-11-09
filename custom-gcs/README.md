@@ -10,7 +10,7 @@
   - Sub: board-order test with zero-based outputs, armed, repeated within 500 ms.
   - Rover: throttle, steering, throttle left, throttle right, on the outputs with the matching servo function.
   - Single and coax copters: six sequences (four flap servos, two motors).
-  - Scripted matrix classes (15, 17): discovery plan (up to 32 sequences, each must move one new output).
+  - Scripted matrix classes (15, 16, 17): discovery plan (up to 32 sequences, each must move one new output).
   - Helicopter: no plan; the firmware refuses the test ("Motor Test: Disabled on heli").
   - Anything else (plane, Blimp, tracker, 6DOF scripting) raises `Unsupported` rather than guessing.
 - `customgcs.link`: connects with pymavlink, downloads the whole parameter list, runs the plan and reports which servo outputs actually moved against what was expected.

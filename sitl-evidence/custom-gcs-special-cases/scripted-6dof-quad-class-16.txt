@@ -1,0 +1,10 @@
+== scripted-6dof-quad-class-16 (model +, set {'SCR_ENABLE': 1, 'FRAME_CLASS': 16}) 55 s
+vehicle: copter, FRAME_CLASS 16, FRAME_TYPE 0, 1445 parameters
+sequence 1: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(1,)                     OK 
+sequence 2: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(4,)                     OK 
+sequence 3: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(2,)                     OK 
+sequence 4: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(3,)                     OK 
+each step moved one new output, all assigned motors covered expected=(1, 2, 3, 4)             moved=(1, 2, 3, 4)             OK 4 motors found, order observed: 1 4 2 3
+RESULT 5 of 5 steps matched
+LUA CHECK testing orders read from the script file predict outputs 1 4 2 3
+LUA CHECK observed 1 4 2 3: SAME

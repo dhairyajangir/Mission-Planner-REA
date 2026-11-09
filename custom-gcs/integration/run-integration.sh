@@ -9,6 +9,7 @@ rm -rf ~/custom-gcs && cp -r "$REPO/custom-gcs" ~/custom-gcs
 cd ~/custom-gcs
 run() {   # label binary model [extra args]
   label=$1; bin=$2; model=$3; shift 3
+  [ -n "$CG_ONLY" ] && [ "$CG_ONLY" != "$label" ] && return   # CG_ONLY=<label> runs a single simulator
   pkill -f build/sitl/bin/ardu; sleep 1
   mkdir -p ~/cg-work/$label && cd ~/cg-work/$label && rm -rf ./*
   ~/ap-snapshot/build/sitl/bin/$bin -w --model $model -I 0 -s 1 --home -35.363261,149.165230,584,0 > sitl.log 2>&1 &
@@ -30,3 +31,4 @@ run quadplane-tri arduplane quadplane-tri
 run sub-vectored ardusub vectored --arm
 run rover-skid ardurover rover-skid
 run rover-sailboat ardurover sailboat
+run quadplane-ice arduplane quadplane-ice   # motors 3 and 4 have no output: the plan expects nothing to move for them

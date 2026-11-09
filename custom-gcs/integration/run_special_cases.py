@@ -20,7 +20,7 @@ from customgcs import link, motors  # noqa: E402
 TREE, OUT = sys.argv[1], sys.argv[2]
 WORK = os.path.expanduser('~/cg-special')
 HOME = '-35.363261,149.165230,584,0'
-LUA = {'dotriaconta_octaquad_x': 'MotorMatrix_dotriaconta_octaquad_x.lua', 'hexadeca-octa': 'MotorMatrix_hexadeca_octa.lua', 'hexadeca-octa-cwx': 'MotorMatrix_hexadeca_octa_cw_x.lua'}
+LUA = {'setup-plus-quad': 'MotorMatrix_setup.lua', 'fault-tolerant-hex': 'MotorMatrix_fault_tolerant_hex.lua', '6dof-quad': 'Copter_Motors_6DoF.lua', 'dotriaconta_octaquad_x': 'MotorMatrix_dotriaconta_octaquad_x.lua', 'hexadeca-octa': 'MotorMatrix_hexadeca_octa.lua', 'hexadeca-octa-cwx': 'MotorMatrix_hexadeca_octa_cw_x.lua'}
 CASES = [
     ('remap-swap-motors-1-and-2', '+', {'SERVO1_FUNCTION': 34, 'SERVO2_FUNCTION': 33}, None),
     ('remap-motor-1-on-output-9', '+', {'SERVO1_FUNCTION': 0, 'SERVO9_FUNCTION': 33}, None),
@@ -28,6 +28,9 @@ CASES = [
     ('scripted-dotriaconta_octaquad_x', 'dotriaconta_octaquad_x', {'SCR_ENABLE': 1}, 'dotriaconta_octaquad_x'),
     ('scripted-hexadeca-octa', 'hexadeca-octa', {'SCR_ENABLE': 1}, 'hexadeca-octa'),
     ('scripted-hexadeca-octa-cwx', 'hexadeca-octa-cwx', {'SCR_ENABLE': 1}, 'hexadeca-octa-cwx'),
+    ('scripted-setup-plus-quad', '+', {'SCR_ENABLE': 1, 'FRAME_CLASS': 15}, 'setup-plus-quad'),
+    ('scripted-fault-tolerant-hex', 'hexa', {'SCR_ENABLE': 1, 'FRAME_CLASS': 15}, 'fault-tolerant-hex'),
+    ('scripted-6dof-quad-class-16', '+', {'SCR_ENABLE': 1, 'FRAME_CLASS': 16}, '6dof-quad'),
 ]
 
 
@@ -63,6 +66,10 @@ def lua_orders(key):
         banks = int(re.search(r'local NUM_BANKS = (\d+)', text).group(1))
         return [4 * b + o for b in range(banks) for o in (1, 3, 4, 2)]
     found = {int(m.group(1)): int(m.group(4)) for m in re.finditer(r'add_motor\(AP_MOTORS_MOT_(\d+),\s*(-?[\d.]+),\s*AP_MOTORS_MATRIX_YAW_FACTOR_(CW|CCW),\s*(\d+)\s*\)', text)}
+    if not found:         # add_motor_raw(zero-based motor, roll, pitch, yaw, testing order) of MotorMatrix_setup.lua
+        found = {int(m.group(1)) + 1: int(m.group(2)) for m in re.finditer(r'MotorsMatrix:add_motor_raw\(\s*(\d+)\s*,[^,]+,[^,]+,[^,]+,\s*(\d+)\s*\)', text)}
+    if not found:         # Motors_6DoF:add_motor(zero-based motor, roll, pitch, yaw, throttle, forward, lateral, reversible, testing order)
+        found = {int(m.group(1)) + 1: int(m.group(2)) for m in re.finditer(r'Motors_6DoF:add_motor\(\s*(\d+)\s*,(?:[^,]+,){7}\s*(\d+)\s*\)', text)}
     return [found[n] for n in sorted(found)]
 
 

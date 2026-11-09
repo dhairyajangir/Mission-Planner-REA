@@ -82,9 +82,9 @@ def _layout(info: VehicleInfo) -> list:
 # MOTOR_FRAME_TYPE_NYT_PLUS (16) and NYT_X (17) exist only in ArduPlane (and unknown) builds of AP_MotorsMatrix (#if APM_BUILD_TYPE(APM_BUILD_ArduPlane) ...). A Copter
 # with class 1 and one of those types is not initialised and refuses the motor test with "Motor Test: Check frame class and type" (sitl-evidence/custom-gcs-all-layouts/).
 _PLANE_ONLY_TYPES = {(1, 16), (1, 17)}
-# Scripting matrix classes (15 and 17): the test order comes from add_motor(..., testing_order) calls in a Lua script on the vehicle. The ground station cannot read that script, so it
+# Scripting matrix classes (15, 16 = 6DoF scripting, 17): the test order comes from add_motor(..., testing_order) calls in a Lua script on the vehicle. The ground station cannot read that script, so it
 # plans up to 32 sequences, stops at the first that moves nothing, and checks that every step moved exactly one output, no output twice, and every output the vehicle lists as a motor was covered (link.check_discovery).
-_SCRIPTED_CLASSES = (15, 17)
+_SCRIPTED_CLASSES = (15, 16, 17)
 
 
 def plan(info: VehicleInfo, params: Mapping[str, float], throttle_percent: float = 10.0, seconds: float = 1.0) -> List[Step]:

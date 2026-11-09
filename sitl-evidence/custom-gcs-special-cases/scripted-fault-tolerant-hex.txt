@@ -1,0 +1,12 @@
+== scripted-fault-tolerant-hex (model hexa, set {'SCR_ENABLE': 1, 'FRAME_CLASS': 15}) 59 s
+vehicle: copter, FRAME_CLASS 15, FRAME_TYPE 0, 1445 parameters
+sequence 1: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(5,)                     OK 
+sequence 2: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(1,)                     OK 
+sequence 3: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(4,)                     OK 
+sequence 4: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(6,)                     OK 
+sequence 5: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(2,)                     OK 
+sequence 6: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32) moved=(3,)                     OK 
+each step moved one new output, all assigned motors covered expected=(1, 2, 3, 4, 5, 6)       moved=(1, 2, 3, 4, 5, 6)       OK 6 motors found, order observed: 5 1 4 6 2 3
+RESULT 7 of 7 steps matched
+LUA CHECK testing orders read from the script file predict outputs 5 1 4 6 2 3
+LUA CHECK observed 5 1 4 6 2 3: SAME
