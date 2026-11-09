@@ -1,0 +1,45 @@
+route: takeoff to 60 m, A 300 m north, B 300 m east of A, C 300 m south of B (40 m), LAND at home
+OK   mission uploaded
+OK   mission reads back equal (NAV_LAND param4 aside)   [[]]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+t=  0.0 s vehicle: Mission: 1 Takeoff
+t=  0.0 s vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t=  0.2 s vehicle: Triggered AUTO. GPS speed = 0.0
+t=  0.9 s heartbeat: ARMED, mode AUTO
+t=  1.4 s vehicle: Autoland direction= 0
+t=  1.4 s vehicle: Holding course 35999 at 5.4m/s (0.0)
+t=  2.5 s vehicle: EKF2 IMU0 is using GPS
+t=  2.5 s vehicle: EKF2 IMU1 is using GPS
+t=  7.6 s vehicle: Takeoff level-off starting at 20m
+t=  9.6 s item 1 reached at -35.361570, 149.165227, 59 m
+t=  9.7 s vehicle: Takeoff complete at 60.15m
+t=  9.7 s vehicle: Mission: 2 WP
+t= 11.6 s item 2 reached at -35.361064, 149.165225, 71 m
+OK   item 2 reached within 60 m horizontally and 15 m of the commanded 60 m   [55 m off, 71 m up]
+t= 11.7 s vehicle: Reached waypoint #2 dist 53m
+t= 11.7 s vehicle: Mission: 3 WP
+t= 15.0 s injected {'SIM_ARSPD_FAIL': 1.0}
+t= 22.4 s vehicle: Airspeed sensor 1 failure. Disabling
+t= 23.1 s item 3 reached at -35.360517, 149.167945, 52 m
+OK   item 3 reached within 60 m horizontally and 15 m of the commanded 60 m   [54 m off, 52 m up]
+t= 23.4 s vehicle: Reached waypoint #3 dist 51m
+t= 23.5 s vehicle: Mission: 4 WP
+t= 35.8 s item 4 reached at -35.362768, 149.168546, 46 m
+OK   item 4 reached within 60 m horizontally and 15 m of the commanded 40 m   [55 m off, 46 m up]
+t= 35.9 s vehicle: Reached waypoint #4 dist 52m
+t= 35.9 s vehicle: Mission: 5 Land
+t= 35.9 s vehicle: Landing approach start at 46.1m
+t= 42.8 s vehicle: Landing glide slope 8.9 degrees
+t= 47.7 s vehicle: Flare 9.1m sink=3.06 speed=18.9 dist=103.3
+t= 54.0 s vehicle: SIM Hit ground at 0.552619 m/s
+t= 65.1 s vehicle: Throttle disarmed
+t= 65.1 s vehicle: Auto disarmed
+t= 65.2 s vehicle: Distance from LAND point=6.68m
+t= 65.9 s heartbeat: DISARMED, mode AUTO
+OK   items 1 to 4 reached in order and the vehicle began item 5 (the landing; a Plane does not report that item as reached)   [[1, 2, 3, 4]]
+OK   peak altitude 45 m or more   [peak 72 m]
+OK   the vehicle disarmed by itself after landing
+OK   came to rest within 150 m of the home position   [7 m from home, -0 m up]
+OK   no failsafe mode change: the vehicle stayed in AUTO   [['AUTO', 'AUTO']]
+RESULT passed

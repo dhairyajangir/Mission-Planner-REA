@@ -1,0 +1,41 @@
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+        vehicle: Mission: 1 Takeoff
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Autoland direction= 0
+        vehicle: Holding course 35999 at 5.4m/s (0.0)
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 20m
+        vehicle: Takeoff complete at 60.15m
+        vehicle: Mission: 2 WP
+        vehicle: Reached waypoint #2 dist 53m
+        vehicle: Mission: 3 WP
+        vehicle: Reached waypoint #3 dist 51m
+        vehicle: Mission: 4 WP
+        vehicle: Reached waypoint #4 dist 52m
+        vehicle: Mission: 5 Land
+        vehicle: Landing approach start at 47.8m
+OK   the final approach was reached and the aircraft was below 30 m   [29 m]
+go-around requested at 29 m
+OK   MAV_CMD_DO_GO_AROUND acknowledged (result 0)   [(191, 0)]
+        vehicle: Unable to start find a landing abort sequence
+        vehicle: Landing aborted, climbing to 60m
+        vehicle: Restarted landing sequence at waypoint 4
+        vehicle: Mission: 4 WP
+        vehicle: Reached waypoint #4 dist 51m
+        vehicle: Mission: 5 Land
+        vehicle: Landing approach start at 50.3m
+texts after the command: ['Unable to start find a landing abort sequence', 'Landing aborted, climbing to 60m', 'Restarted landing sequence at waypoint 4', 'Mission: 4 WP', 'Reached waypoint #4 dist 51m', 'Mission: 5 Land', 'Landing approach start at 50.3m']
+OK   the aircraft climbed at least 15 m above its height at the command (29 m)   [peak 78 m in the next 30 s]
+        vehicle: Landing glide slope 8.9 degrees
+        vehicle: Flare 15.0m sink=5.04 speed=20.7 dist=150.0
+        vehicle: SIM Hit ground at 1.444144 m/s
+        vehicle: Throttle disarmed
+        vehicle: Auto disarmed
+        vehicle: Distance from LAND point=4.48m
+        vehicle: PreArm: In landing sequence
+what happened in the following 60 s: ['Landing glide slope 8.9 degrees', 'Flare 15.0m sink=5.04 speed=20.7 dist=150.0', 'SIM Hit ground at 1.444144 m/s', 'Throttle disarmed', 'Auto disarmed', 'Distance from LAND point=4.48m', 'PreArm: In landing sequence'] | height now 0 m
+RESULT passed

@@ -14,6 +14,8 @@ inflight after an AUTO takeoff (item 1 reached) the script requests FLY_BY_WIRE_
          recording whether it became active and the altitude and ground speed at the start and end of the hold. With no radio input in the simulator, the modes that need the pilot's
          throttle (FLY_BY_WIRE_A, STABILIZE) are expected to lose height; that is recorded, not judged. A mode passes when the vehicle reports it within 5 s and is still airborne
          (above 15 m) 10 s later.
+goaround  the landing is aborted: on the final approach, below 30 m, MAV_CMD_DO_GO_AROUND is sent (param1 0, the default abort climb). Checks: the command is acknowledged, the
+         vehicle says so, and it climbs at least 15 m above the height it had when the command was sent. What it does afterwards (re-approach, loiter, disarm) is recorded.
 inflight2 the modes that need pilot input or a pilot: MANUAL, ACRO, TRAINING, AUTOTUNE, AVOID_ADSB, requested in flight for 3 s each with RTL (which climbs) requested for 20 s
          between them to regain height. The first attempt held each mode 8 s with a CRUISE recovery of 10 s: MANUAL, ACRO and TRAINING with no pilot lost 60 m of height and the aircraft reached the ground in TRAINING before AUTOTUNE and AVOID_ADSB ran (plane-modes-in-flight-2-run1-*). With no radio input the aircraft is not controlled by a pilot; the heights and speeds are recorded and the check is only that each mode was
          accepted and the aircraft was not on the ground afterwards.
@@ -34,7 +36,7 @@ sys.path.insert(0, os.path.join(HERE, '..'))
 from customgcs import flight, link, mission, params  # noqa: E402
 
 TREE, OUT = sys.argv[1], sys.argv[2]
-PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes', 'inflight']       # also: inflight2, takeoffmode, rally
+PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes', 'inflight']       # also: inflight2, takeoffmode, rally, goaround
 HOME = (-35.363261, 149.165230, 584.0)
 TABLE = 'plane'
 INJECT_AFTER_S = 15.0
@@ -44,6 +46,7 @@ FAILSAFES = {
     'battery-low': dict(pre={'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, inject={'SIM_BATT_VOLTAGE': 10.5}, expect='RTL'),
     'circle-fence': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 2, 'FENCE_RADIUS': 200, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
     'wind-10ms': dict(pre={}, inject={'SIM_WIND_SPD': 10.0, 'SIM_WIND_DIR': 90.0}, expect='complete'),
+    'airspeed-sensor-failure': dict(pre={}, inject={'SIM_ARSPD_FAIL': 1.0}, expect='complete'),      # the pitot reads zero pressure from 15 s on; the mission and landing are expected to finish
     'gps-loss': dict(pre={}, inject={'SIM_GPS1_ENABLE': 0}, expect='observe'),          # no configured action exists for this: the reaction is recorded, the check is that the aircraft does not crash within 60 s
 }
 M_PER_DEG_LAT = 111320.0
@@ -480,6 +483,46 @@ def rally():
         run.finish(state['track'])
 
 
+def goaround():
+    run = Run('plane-go-around')
+    state = {'track': []}
+    try:
+        run.start()
+        started = start_flight(run, 'goaround')
+        if not started:
+            return
+        watch, state = started
+        approach = False
+        for _ in range(160):
+            watch(1.0)
+            if any('Landing approach start' in t for t in state['texts']):
+                approach = True
+            if approach and state['pos'] and state['pos'][2] < 30.0:
+                break
+        run.check('the final approach was reached and the aircraft was below 30 m', approach and bool(state['pos']) and state['pos'][2] < 30.0, ('%.0f m' % state['pos'][2]) if state['pos'] else '')
+        if not (approach and state['pos'] and state['pos'][2] < 30.0):
+            return
+        height_at_command = state['pos'][2]
+        run.say('go-around requested at %.0f m' % height_at_command)
+        run.conn.mav.command_long_send(run.conn.target_system, run.conn.target_component, 191, 0, 0, 0, 0, 0, 0, 0, 0)
+        ack = run.conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=5)
+        run.check('MAV_CMD_DO_GO_AROUND acknowledged (result 0)', ack is not None and ack.command == 191 and ack.result == 0, (ack.command, ack.result) if ack else None)
+        mark = len(state['texts'])
+        watch(30.0)
+        after = [t for t in state['texts'][mark:]]
+        peak = max((t[3] for t in state['track'] if t[0] > state['track'][-1][0] - 30.0), default=0.0)
+        run.say('texts after the command: %s' % after[:8])
+        run.check('the aircraft climbed at least 15 m above its height at the command (%.0f m)' % height_at_command, peak >= height_at_command + 15.0, 'peak %.0f m in the next 30 s' % peak)
+        mark = len(state['texts'])
+        watch(60.0)
+        run.say('what happened in the following 60 s: %s | height now %s' % (state['texts'][mark:][:8], ('%.0f m' % state['pos'][2]) if state['pos'] else '?'))
+    except Exception as e:
+        run.check('goaround finished without an exception', False, repr(e))
+    finally:
+        run.stop()
+        run.finish(state['track'])
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'basics' in PARTS:
@@ -499,6 +542,8 @@ def main():
         takeoffmode()
     if 'rally' in PARTS:
         rally()
+    if 'goaround' in PARTS:
+        goaround()
     return 0
 
 
