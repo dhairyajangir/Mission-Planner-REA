@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from GHST
+[ RUN      ] GHST.inactive_before_first_frame
+[       OK ] GHST.inactive_before_first_frame (0 ms)
+[ RUN      ] GHST.active_at_normal_time
+[       OK ] GHST.active_at_normal_time (0 ms)
+[ RUN      ] GHST.active_across_micros_wrap
+[       OK ] GHST.active_across_micros_wrap (0 ms)
+[----------] 3 tests from GHST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

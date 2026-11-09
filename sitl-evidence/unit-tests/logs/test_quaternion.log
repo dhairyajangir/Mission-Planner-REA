@@ -1,0 +1,32 @@
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from QuaternionTest
+[ RUN      ] QuaternionTest.QuaternionMultiplicationOfBases
+[       OK ] QuaternionTest.QuaternionMultiplicationOfBases (0 ms)
+[ RUN      ] QuaternionTest.QuaternionToRotationMatrix
+[       OK ] QuaternionTest.QuaternionToRotationMatrix (0 ms)
+[ RUN      ] QuaternionTest.QuaternionMultiplicationIsHomomorphism
+[       OK ] QuaternionTest.QuaternionMultiplicationIsHomomorphism (0 ms)
+[ RUN      ] QuaternionTest.QuatenionRotationByUnitQuaternion
+[       OK ] QuaternionTest.QuatenionRotationByUnitQuaternion (0 ms)
+[ RUN      ] QuaternionTest.QuatenionRotationByParallelQuaternion
+[       OK ] QuaternionTest.QuatenionRotationByParallelQuaternion (0 ms)
+[ RUN      ] QuaternionTest.QuatenionRotationLengthPreserving
+[       OK ] QuaternionTest.QuatenionRotationLengthPreserving (0 ms)
+[ RUN      ] QuaternionTest.QuatenionRotationFormulaEquivalence
+[       OK ] QuaternionTest.QuatenionRotationFormulaEquivalence (0 ms)
+[ RUN      ] QuaternionTest.QuatenionInverseRotationFormulaEquivalence
+[       OK ] QuaternionTest.QuatenionInverseRotationFormulaEquivalence (0 ms)
+[ RUN      ] QuaternionTest.Quaternion_zero
+[       OK ] QuaternionTest.Quaternion_zero (0 ms)
+[ RUN      ] QuaternionTest.Quaternion_is_zero
+[       OK ] QuaternionTest.Quaternion_is_zero (0 ms)
+[ RUN      ] QuaternionTest.Quaternion_is_unit_length
+[       OK ] QuaternionTest.Quaternion_is_unit_length (0 ms)
+[ RUN      ] QuaternionTest.Quaternion_length_squared
+[       OK ] QuaternionTest.Quaternion_length_squared (0 ms)
+[----------] 12 tests from QuaternionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 12 tests.

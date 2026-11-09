@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from AP_Common
+[ RUN      ] AP_Common.HexCharToNibble
+[       OK ] AP_Common.HexCharToNibble (0 ms)
+[ RUN      ] AP_Common.BoundedInt32
+[       OK ] AP_Common.BoundedInt32 (0 ms)
+[ RUN      ] AP_Common.BitSet
+[       OK ] AP_Common.BitSet (0 ms)
+[ RUN      ] AP_Common.StrcpyNoTerm
+[       OK ] AP_Common.StrcpyNoTerm (0 ms)
+[ RUN      ] AP_Common.HexTwocharsToUint8
+[       OK ] AP_Common.HexTwocharsToUint8 (0 ms)
+[ RUN      ] AP_Common.HexCharpairsToUint8s
+[       OK ] AP_Common.HexCharpairsToUint8s (0 ms)
+[ RUN      ] AP_Common.HexCharsToUint32
+[       OK ] AP_Common.HexCharsToUint32 (0 ms)
+[----------] 7 tests from AP_Common (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.

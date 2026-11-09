@@ -1,0 +1,21 @@
+[==========] Running 5 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from Control
+[ RUN      ] Control.test_control
+[       OK ] Control.test_control (0 ms)
+[ RUN      ] Control.test_limit_accel
+[       OK ] Control.test_limit_accel (0 ms)
+[ RUN      ] Control.test_limit_accel_reversal_no_lateral_spike
+[       OK ] Control.test_limit_accel_reversal_no_lateral_spike (0 ms)
+[----------] 3 tests from Control (0 ms total)
+
+[----------] 2 tests from KinematicLimit
+[ RUN      ] KinematicLimit.normal_values
+[       OK ] KinematicLimit.normal_values (0 ms)
+[ RUN      ] KinematicLimit.zero_max_limit
+[       OK ] KinematicLimit.zero_max_limit (0 ms)
+[----------] 2 tests from KinematicLimit (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 5 tests.

@@ -1,0 +1,42 @@
+[==========] Running 17 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 17 tests from GetOptLong
+[ RUN      ] GetOptLong.ShortOption
+[       OK ] GetOptLong.ShortOption (0 ms)
+[ RUN      ] GetOptLong.ShortOptionArgAttached
+[       OK ] GetOptLong.ShortOptionArgAttached (0 ms)
+[ RUN      ] GetOptLong.ShortOptionArgSeparate
+[       OK ] GetOptLong.ShortOptionArgSeparate (0 ms)
+[ RUN      ] GetOptLong.CombinedShortOptions
+[       OK ] GetOptLong.CombinedShortOptions (0 ms)
+[ RUN      ] GetOptLong.UnknownShortOption
+[       OK ] GetOptLong.UnknownShortOption (0 ms)
+[ RUN      ] GetOptLong.ShortOptionMissingArg
+[       OK ] GetOptLong.ShortOptionMissingArg (0 ms)
+[ RUN      ] GetOptLong.ShortOptionMissingArgColon
+[       OK ] GetOptLong.ShortOptionMissingArgColon (0 ms)
+[ RUN      ] GetOptLong.LongOption
+[       OK ] GetOptLong.LongOption (0 ms)
+[ RUN      ] GetOptLong.LongOptionArgEquals
+[       OK ] GetOptLong.LongOptionArgEquals (0 ms)
+[ RUN      ] GetOptLong.LongOptionArgSeparate
+[       OK ] GetOptLong.LongOptionArgSeparate (0 ms)
+[ RUN      ] GetOptLong.LongOptionFlag
+[       OK ] GetOptLong.LongOptionFlag (0 ms)
+[ RUN      ] GetOptLong.UnknownLongOption
+[       OK ] GetOptLong.UnknownLongOption (0 ms)
+[ RUN      ] GetOptLong.LongOptionMissingArg
+[       OK ] GetOptLong.LongOptionMissingArg (0 ms)
+[ RUN      ] GetOptLong.LongOptionMissingArgColon
+[       OK ] GetOptLong.LongOptionMissingArgColon (0 ms)
+[ RUN      ] GetOptLong.DoubleDashTerminates
+[       OK ] GetOptLong.DoubleDashTerminates (0 ms)
+[ RUN      ] GetOptLong.NonOptionStopsParsing
+[       OK ] GetOptLong.NonOptionStopsParsing (0 ms)
+[ RUN      ] GetOptLong.MixedOptions
+[       OK ] GetOptLong.MixedOptions (0 ms)
+[----------] 17 tests from GetOptLong (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 17 tests.

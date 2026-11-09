@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from LinuxThread
+[ RUN      ] LinuxThread.override_run
+[       OK ] LinuxThread.override_run (10 ms)
+[ RUN      ] LinuxThread.run_task
+[       OK ] LinuxThread.run_task (10 ms)
+[ RUN      ] LinuxThread.poller_thread
+[       OK ] LinuxThread.poller_thread (12 ms)
+[ RUN      ] LinuxThread.periodic_thread
+[       OK ] LinuxThread.periodic_thread (12 ms)
+[----------] 4 tests from LinuxThread (44 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (44 ms total)
+[  PASSED  ] 4 tests.

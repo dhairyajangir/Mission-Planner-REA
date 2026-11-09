@@ -1,0 +1,20 @@
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from AP_Common
+[ RUN      ] AP_Common.TEST_CPP
+[       OK ] AP_Common.TEST_CPP (0 ms)
+[ RUN      ] AP_Common.NewTrivialZeroInitialisation
+[       OK ] AP_Common.NewTrivialZeroInitialisation (0 ms)
+[ RUN      ] AP_Common.NewZeroInitialisation
+[       OK ] AP_Common.NewZeroInitialisation (0 ms)
+[ RUN      ] AP_Common.NewArrayZeroInitialisation
+[       OK ] AP_Common.NewArrayZeroInitialisation (0 ms)
+[ RUN      ] AP_Common.PlacementNewZeroInitialisation
+[       OK ] AP_Common.PlacementNewZeroInitialisation (0 ms)
+[ RUN      ] AP_Common.MallocZeroInitialisation
+[       OK ] AP_Common.MallocZeroInitialisation (0 ms)
+[----------] 6 tests from AP_Common (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.

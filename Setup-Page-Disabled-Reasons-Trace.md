@@ -10,7 +10,7 @@ Scope: `Setup-Page-State-Trace.md` recorded that, with the original Mission Plan
 | ConfigAteryx, ConfigAteryxSensors | firmware is Ateryx | not (Copter) |
 | ConfigFrameType | parameter `FRAME` exists | `FRAME` absent; the simulator has `FRAME_CLASS` and `FRAME_TYPE` (the page that uses them, `ConfigFrameClassType`, is enabled) |
 | ConfigMount | parameter `CAM_TRIGG_TYPE` exists | `CAM_TRIGG_TYPE` absent; this ArduPilot snapshot has `CAM1_TYPE` (and `MNT1_TYPE`, no `MNT_TYPE`), so the page's check is for a parameter name the firmware no longer has |
-| ConfigHWESP8266 | reads ESP8266 parameters (`WIFI_SSID1` and others) only if present | `WIFI_SSID1` absent: there is no ESP8266 bridge component on the simulator |
+| ConfigHWESP8266 | reads ESP8266 parameters (`WIFI_SSID1` and others) only if present | `WIFI_SSID1` absent on the simulator; the line of the page that sets `Enabled = false` was not located in its `Activate()`, so this one is the likely reason, not a shown one |
 
 So the disabled state is the page working as written, not a fault in the harness: five pages are meant for other firmware, and two (frame type and mount) are old pages that look for parameters renamed in newer ArduPilot. The mount page being disabled means Mission Planner 1.3.83 cannot configure the camera or gimbal setup of this firmware through that page; I did not check whether another page (for example the full parameter tree) covers it.
 

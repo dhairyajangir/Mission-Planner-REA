@@ -1,0 +1,18 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from Vector3Test
+[ RUN      ] Vector3Test.Operator
+[       OK ] Vector3Test.Operator (0 ms)
+[ RUN      ] Vector3Test.OperatorDouble
+[       OK ] Vector3Test.OperatorDouble (0 ms)
+[ RUN      ] Vector3Test.IsEqual
+[       OK ] Vector3Test.IsEqual (0 ms)
+[ RUN      ] Vector3Test.length
+[       OK ] Vector3Test.length (0 ms)
+[ RUN      ] Vector3Test.normalized
+[       OK ] Vector3Test.normalized (0 ms)
+[----------] 5 tests from Vector3Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.

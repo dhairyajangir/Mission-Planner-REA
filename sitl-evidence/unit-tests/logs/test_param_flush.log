@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ParamFlush
+[ RUN      ] ParamFlush.WaitsForInFlightSave
+[       OK ] ParamFlush.WaitsForInFlightSave (1 ms)
+[ RUN      ] ParamFlush.TimesOutWithInFlightSave
+[       OK ] ParamFlush.TimesOutWithInFlightSave (0 ms)
+[ RUN      ] ParamFlush.EmptyQueueReturnsImmediately
+[       OK ] ParamFlush.EmptyQueueReturnsImmediately (0 ms)
+[----------] 3 tests from ParamFlush (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 3 tests.

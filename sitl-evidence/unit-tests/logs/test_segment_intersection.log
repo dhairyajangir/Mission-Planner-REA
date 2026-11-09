@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from SegmentIntersectionTests
+[ RUN      ] SegmentIntersectionTests.Simple
+[       OK ] SegmentIntersectionTests.Simple (0 ms)
+[ RUN      ] SegmentIntersectionTests.Parallel
+[       OK ] SegmentIntersectionTests.Parallel (0 ms)
+[ RUN      ] SegmentIntersectionTests.NonIntersecting
+[       OK ] SegmentIntersectionTests.NonIntersecting (0 ms)
+[----------] 3 tests from SegmentIntersectionTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

@@ -1,0 +1,10 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SBUSEncodeDecode
+[ RUN      ] SBUSEncodeDecode.test_sbus_encode_decode
+[       OK ] SBUSEncodeDecode.test_sbus_encode_decode (0 ms)
+[----------] 1 test from SBUSEncodeDecode (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.

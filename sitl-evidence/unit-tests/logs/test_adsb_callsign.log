@@ -1,0 +1,12 @@
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from IsValidCallsign
+[ RUN      ] IsValidCallsign.Valid
+[       OK ] IsValidCallsign.Valid (0 ms)
+[ RUN      ] IsValidCallsign.Invalid
+[       OK ] IsValidCallsign.Invalid (0 ms)
+[----------] 2 tests from IsValidCallsign (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.

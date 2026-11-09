@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from DSMTest
+[ RUN      ] DSMTest.Decode11Bit
+[       OK ] DSMTest.Decode11Bit (0 ms)
+[ RUN      ] DSMTest.GuessingReturnsFalse
+[       OK ] DSMTest.GuessingReturnsFalse (0 ms)
+[ RUN      ] DSMTest.ChannelMapping
+[       OK ] DSMTest.ChannelMapping (0 ms)
+[ RUN      ] DSMTest.Decode10Bit
+[       OK ] DSMTest.Decode10Bit (0 ms)
+[ RUN      ] DSMTest.ChannelsBeyondMaxValuesIgnored
+[       OK ] DSMTest.ChannelsBeyondMaxValuesIgnored (0 ms)
+[ RUN      ] DSMTest.AllOnesChannelsSkipped
+[       OK ] DSMTest.AllOnesChannelsSkipped (0 ms)
+[ RUN      ] DSMTest.SignalLossResetsFormatGuess
+[       OK ] DSMTest.SignalLossResetsFormatGuess (0 ms)
+[----------] 7 tests from DSMTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.

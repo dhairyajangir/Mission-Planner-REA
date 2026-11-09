@@ -1,0 +1,28 @@
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from AP_RTC
+[ RUN      ] AP_RTC.unset_clock
+[       OK ] AP_RTC.unset_clock (0 ms)
+[ RUN      ] AP_RTC.date_field_conversions
+[       OK ] AP_RTC.date_field_conversions (1 ms)
+[ RUN      ] AP_RTC.date_fields_to_clock_s_sweep
+[       OK ] AP_RTC.date_fields_to_clock_s_sweep (4 ms)
+[ RUN      ] AP_RTC.february_length
+[       OK ] AP_RTC.february_length (0 ms)
+[ RUN      ] AP_RTC.pre_epoch_rejected
+[       OK ] AP_RTC.pre_epoch_rejected (0 ms)
+[ RUN      ] AP_RTC.get_time_utc
+[       OK ] AP_RTC.get_time_utc (15 ms)
+[ RUN      ] AP_RTC.get_utc_usec
+[       OK ] AP_RTC.get_utc_usec (0 ms)
+[ RUN      ] AP_RTC.get_local_time
+[       OK ] AP_RTC.get_local_time (0 ms)
+[ RUN      ] AP_RTC.set_utc_usec_priority
+[       OK ] AP_RTC.set_utc_usec_priority (0 ms)
+[ RUN      ] AP_RTC.get_date_and_time_utc
+[       OK ] AP_RTC.get_date_and_time_utc (0 ms)
+[----------] 10 tests from AP_RTC (21 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (21 ms total)
+[  PASSED  ] 10 tests.

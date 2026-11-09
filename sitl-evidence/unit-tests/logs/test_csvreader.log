@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from AP_CSVReader
+[ RUN      ] AP_CSVReader.basic
+[       OK ] AP_CSVReader.basic (0 ms)
+[ RUN      ] AP_CSVReader.commabasic
+[       OK ] AP_CSVReader.commabasic (0 ms)
+[ RUN      ] AP_CSVReader.missinglastcr
+[       OK ] AP_CSVReader.missinglastcr (0 ms)
+[ RUN      ] AP_CSVReader.saleae_value_invalid_hex
+[       OK ] AP_CSVReader.saleae_value_invalid_hex (0 ms)
+[ RUN      ] AP_CSVReader.saleae_value_valid_hex
+[       OK ] AP_CSVReader.saleae_value_valid_hex (0 ms)
+[ RUN      ] AP_CSVReader.term_overflow_returns_error
+[       OK ] AP_CSVReader.term_overflow_returns_error (0 ms)
+[ RUN      ] AP_CSVReader.malformed_quoted_term_returns_error
+[       OK ] AP_CSVReader.malformed_quoted_term_returns_error (0 ms)
+[----------] 7 tests from AP_CSVReader (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 7 tests.

@@ -1,0 +1,24 @@
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from BetterStream
+[ RUN      ] BetterStream.PrintfStrings
+[       OK ] BetterStream.PrintfStrings (0 ms)
+[ RUN      ] BetterStream.PrintfIntegers
+[       OK ] BetterStream.PrintfIntegers (0 ms)
+[ RUN      ] BetterStream.PrintfBases
+[       OK ] BetterStream.PrintfBases (0 ms)
+[ RUN      ] BetterStream.PrintfFloats
+[       OK ] BetterStream.PrintfFloats (0 ms)
+[ RUN      ] BetterStream.PrintfFloatExponent
+[       OK ] BetterStream.PrintfFloatExponent (0 ms)
+[ RUN      ] BetterStream.PrintfFloatSpecials
+[       OK ] BetterStream.PrintfFloatSpecials (0 ms)
+[ RUN      ] BetterStream.Write
+[       OK ] BetterStream.Write (0 ms)
+[ RUN      ] BetterStream.Read
+[       OK ] BetterStream.Read (0 ms)
+[----------] 8 tests from BetterStream (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 8 tests.

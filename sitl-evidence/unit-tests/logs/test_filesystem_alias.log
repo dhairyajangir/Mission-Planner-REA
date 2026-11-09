@@ -1,0 +1,43 @@
+[==========] Running 13 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 8 tests from MavLogAlias
+[ RUN      ] MavLogAlias.ResolvesToTheLogDirectory
+[       OK ] MavLogAlias.ResolvesToTheLogDirectory (0 ms)
+[ RUN      ] MavLogAlias.LeadingSlashIsAccepted
+[       OK ] MavLogAlias.LeadingSlashIsAccepted (0 ms)
+[ RUN      ] MavLogAlias.APrefixOfTheFirstComponentIsNotTheAlias
+[       OK ] MavLogAlias.APrefixOfTheFirstComponentIsNotTheAlias (1 ms)
+[ RUN      ] MavLogAlias.RenameWithinTheAlias
+[       OK ] MavLogAlias.RenameWithinTheAlias (0 ms)
+[ RUN      ] MavLogAlias.RenameBetweenTheAliasAndTheRealPath
+[       OK ] MavLogAlias.RenameBetweenTheAliasAndTheRealPath (0 ms)
+[ RUN      ] MavLogAlias.PrefixOnItsOwnIsTheDirectory
+[       OK ] MavLogAlias.PrefixOnItsOwnIsTheDirectory (0 ms)
+[ RUN      ] MavLogAlias.TheLongestListingPathResolves
+[       OK ] MavLogAlias.TheLongestListingPathResolves (1 ms)
+[ RUN      ] MavLogAlias.APathTooLongToRewriteReachesNothing
+[       OK ] MavLogAlias.APathTooLongToRewriteReachesNothing (3 ms)
+[----------] 8 tests from MavLogAlias (5 ms total)
+
+[----------] 2 tests from MavLogAliasBuffer
+[ RUN      ] MavLogAliasBuffer.AnotherThreadsAliasCallWaits
+[       OK ] MavLogAliasBuffer.AnotherThreadsAliasCallWaits (502 ms)
+[ RUN      ] MavLogAliasBuffer.ASecondAliasPathInOneThreadNeedsItsOwnBuffer
+[       OK ] MavLogAliasBuffer.ASecondAliasPathInOneThreadNeedsItsOwnBuffer (0 ms)
+[----------] 2 tests from MavLogAliasBuffer (502 ms total)
+
+[----------] 1 test from MavLogAliasSizing
+[ RUN      ] MavLogAliasSizing.BufferHoldsTheLongestListingPathUnderThisRoot
+[       OK ] MavLogAliasSizing.BufferHoldsTheLongestListingPathUnderThisRoot (0 ms)
+[----------] 1 test from MavLogAliasSizing (0 ms total)
+
+[----------] 2 tests from BackendPrefix
+[ RUN      ] BackendPrefix.RenameBetweenFilesystemsIsRefused
+[       OK ] BackendPrefix.RenameBetweenFilesystemsIsRefused (1 ms)
+[ RUN      ] BackendPrefix.APrefixOfTheFirstComponentIsNotTheBackend
+[       OK ] BackendPrefix.APrefixOfTheFirstComponentIsNotTheBackend (0 ms)
+[----------] 2 tests from BackendPrefix (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 4 test suites ran. (509 ms total)
+[  PASSED  ] 13 tests.

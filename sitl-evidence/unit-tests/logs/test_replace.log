@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from ReplaceMemrchr
+[ RUN      ] ReplaceMemrchr.LastOccurrence
+[       OK ] ReplaceMemrchr.LastOccurrence (0 ms)
+[ RUN      ] ReplaceMemrchr.SingleOccurrence
+[       OK ] ReplaceMemrchr.SingleOccurrence (0 ms)
+[ RUN      ] ReplaceMemrchr.FirstByte
+[       OK ] ReplaceMemrchr.FirstByte (0 ms)
+[ RUN      ] ReplaceMemrchr.NotFound
+[       OK ] ReplaceMemrchr.NotFound (0 ms)
+[ RUN      ] ReplaceMemrchr.ZeroLength
+[       OK ] ReplaceMemrchr.ZeroLength (0 ms)
+[ RUN      ] ReplaceMemrchr.RespectsLength
+[       OK ] ReplaceMemrchr.RespectsLength (0 ms)
+[ RUN      ] ReplaceMemrchr.CharConversion
+[       OK ] ReplaceMemrchr.CharConversion (0 ms)
+[----------] 7 tests from ReplaceMemrchr (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.

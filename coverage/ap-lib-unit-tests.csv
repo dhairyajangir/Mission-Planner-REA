@@ -1,0 +1,25 @@
+library,level_before,binaries,binaries_exit_0,gtest_cases,gtest_cases_passed,binaries_without_gtest_summary,binary_names
+AP_Math,3,18,18,698,698,,test_3d_lines test_closest_distance_between_radial_and_point test_control test_crc8 test_geodesic_grid test_math test_math_double test_matrix3 test_perpendicular test_polygon test_quaternion test_rc_in_to_roll_pitch test_rotations test_scurve test_segment_intersection test_sqrt_controller test_vector2 test_vector3
+AP_ADSB,3,1,1,2,2,,test_adsb_callsign
+AP_Common,3,13,13,82,82,,test_ap_common test_bitmask test_cpp test_expandingstring test_expandingstring_failure test_float16 test_fwversion test_location test_nmea_print test_nmea_vaprint test_sorting test_time test_tsindex
+Filter,3,3,3,13,13,,test_averagefilter test_modefilter test_notchfilter
+AP_Baro,3,1,1,6,6,,test_baro_atmosphere
+AP_RangeFinder,3,1,1,1,1,,test_blping
+AP_BattMonitor,3,1,1,2,2,,test_calculate_mah
+AP_CSVReader,3,1,1,7,7,,test_csvreader
+AP_Declination,3,2,2,3,3,,test_declination test_magfield
+AP_Filesystem,3,2,2,13,13,,test_filesystem_alias test_romfs_dirent
+AP_Param,3,3,3,11,11,,test_find_by_name test_param_conversion test_param_flush
+AP_RCProtocol,3,2,2,4,4,,test_ghst_timeout test_sbus
+AP_GPS,3,1,1,1,1,,test_gps
+AP_GSOF,3,1,1,5,4,,test_gsof
+AP_GyroFFT,3,1,1,1,1,,test_harmonic_fit
+AP_JSButton,3,1,1,1,1,,test_jsbutton
+AP_MSP,3,1,1,2,2,,test_msp_serial
+AP_MultiHeap,3,1,1,1,1,,test_multiheap
+AP_OLC,3,1,1,1,1,,test_olc
+AP_HAL,3,3,3,85,85,,test_prescaler test_timeouts test_vsnprintf
+AP_NavEKF,3,1,1,3,3,,test_ring_buffer
+AP_RTC,3,1,1,10,10,,test_rtc
+AP_ExternalAHRS,3,1,1,17,17,,test_sensaition_parser
+AP_HAL_Linux,1,1,1,4,4,,test_thread

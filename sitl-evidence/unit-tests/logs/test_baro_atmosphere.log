@@ -1,0 +1,20 @@
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from AP_Baro
+[ RUN      ] AP_Baro.get_air_density_for_alt_amsl
+[       OK ] AP_Baro.get_air_density_for_alt_amsl (0 ms)
+[ RUN      ] AP_Baro.get_altitude_from_pressure
+[       OK ] AP_Baro.get_altitude_from_pressure (0 ms)
+[ RUN      ] AP_Baro.get_temperature_from_altitude
+[       OK ] AP_Baro.get_temperature_from_altitude (0 ms)
+[ RUN      ] AP_Baro.geopotential_alt_to_geometric
+[       OK ] AP_Baro.geopotential_alt_to_geometric (0 ms)
+[ RUN      ] AP_Baro.geometric_alt_to_geopotential
+[       OK ] AP_Baro.geometric_alt_to_geopotential (0 ms)
+[ RUN      ] AP_Baro.get_pressure_temperature_for_alt_amsl
+[       OK ] AP_Baro.get_pressure_temperature_for_alt_amsl (0 ms)
+[----------] 6 tests from AP_Baro (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.

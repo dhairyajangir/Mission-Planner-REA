@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from Sorting
+[ RUN      ] Sorting.sort
+[       OK ] Sorting.sort (52 ms)
+[ RUN      ] Sorting.unique
+[       OK ] Sorting.unique (28 ms)
+[ RUN      ] Sorting.bisect
+[       OK ] Sorting.bisect (3 ms)
+[ RUN      ] Sorting.remove
+[       OK ] Sorting.remove (6 ms)
+[----------] 4 tests from Sorting (89 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (89 ms total)
+[  PASSED  ] 4 tests.

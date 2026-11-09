@@ -1,0 +1,42 @@
+[==========] Running 17 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 17 tests from SensAItionParser
+[ RUN      ] SensAItionParser.Legacy_IMU_HappyPath
+[       OK ] SensAItionParser.Legacy_IMU_HappyPath (0 ms)
+[ RUN      ] SensAItionParser.Legacy_RejectsInvalidChecksum
+[       OK ] SensAItionParser.Legacy_RejectsInvalidChecksum (0 ms)
+[ RUN      ] SensAItionParser.Legacy_RejectsTooSmallBuffer
+[       OK ] SensAItionParser.Legacy_RejectsTooSmallBuffer (0 ms)
+[ RUN      ] SensAItionParser.Legacy_ValidPacketsCount
+[       OK ] SensAItionParser.Legacy_ValidPacketsCount (0 ms)
+[ RUN      ] SensAItionParser.Legacy_FalseHeaderInPayload
+[       OK ] SensAItionParser.Legacy_FalseHeaderInPayload (0 ms)
+[ RUN      ] SensAItionParser.Legacy_FragmentedHeaderRecovery
+[       OK ] SensAItionParser.Legacy_FragmentedHeaderRecovery (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_IMU_HappyPath
+[       OK ] SensAItionParser.Interleaved_IMU_HappyPath (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_INS_HappyPath
+[       OK ] SensAItionParser.Interleaved_INS_HappyPath (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_InvalidID
+[       OK ] SensAItionParser.Interleaved_InvalidID (0 ms)
+[ RUN      ] SensAItionParser.Handle_Interleaved_Packets
+[       OK ] SensAItionParser.Handle_Interleaved_Packets (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_MixedStream_Transitions
+[       OK ] SensAItionParser.Interleaved_MixedStream_Transitions (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_INS_Fragmentation
+[       OK ] SensAItionParser.Interleaved_INS_Fragmentation (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_Data_StressTest
+[       OK ] SensAItionParser.Interleaved_Data_StressTest (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_NoiseRecovery
+[       OK ] SensAItionParser.Interleaved_NoiseRecovery (0 ms)
+[ RUN      ] SensAItionParser.Legacy_IMU_PartialStream
+[       OK ] SensAItionParser.Legacy_IMU_PartialStream (0 ms)
+[ RUN      ] SensAItionParser.Interleaved_INS_FullFieldVerification
+[       OK ] SensAItionParser.Interleaved_INS_FullFieldVerification (1 ms)
+[ RUN      ] SensAItionParser.GPS_Week_Calculation_EdgeCases
+[       OK ] SensAItionParser.GPS_Week_Calculation_EdgeCases (0 ms)
+[----------] 17 tests from SensAItionParser (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 17 tests.

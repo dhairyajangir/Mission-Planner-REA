@@ -1,0 +1,18 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from RotationsTest
+[ RUN      ] RotationsTest.TestEulers
+[       OK ] RotationsTest.TestEulers (0 ms)
+[ RUN      ] RotationsTest.TestRotationInverse
+[       OK ] RotationsTest.TestRotationInverse (0 ms)
+[ RUN      ] RotationsTest.TestRotateMatrix
+[       OK ] RotationsTest.TestRotateMatrix (0 ms)
+[ RUN      ] RotationsTest.TestFailedGetLinux
+[       OK ] RotationsTest.TestFailedGetLinux (0 ms)
+[ RUN      ] RotationsTest.TestEulerOrder
+[       OK ] RotationsTest.TestEulerOrder (0 ms)
+[----------] 5 tests from RotationsTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.

@@ -1,0 +1,77 @@
+[==========] Running 30 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from VectorTest
+[ RUN      ] VectorTest.Rotations
+[       OK ] VectorTest.Rotations (0 ms)
+[----------] 1 test from VectorTest (1 ms total)
+
+[----------] 24 tests from MathTest
+[ RUN      ] MathTest.IsZero
+[       OK ] MathTest.IsZero (0 ms)
+[ RUN      ] MathTest.IsPositive
+[       OK ] MathTest.IsPositive (0 ms)
+[ RUN      ] MathTest.IsNegative
+[       OK ] MathTest.IsNegative (0 ms)
+[ RUN      ] MathTest.MIN
+[       OK ] MathTest.MIN (0 ms)
+[ RUN      ] MathTest.MAX
+[       OK ] MathTest.MAX (0 ms)
+[ RUN      ] MathTest.Convert
+[       OK ] MathTest.Convert (0 ms)
+[ RUN      ] MathTest.IsEqual
+[       OK ] MathTest.IsEqual (0 ms)
+[ RUN      ] MathTest.Square
+[       OK ] MathTest.Square (0 ms)
+[ RUN      ] MathTest.Norm
+[       OK ] MathTest.Norm (0 ms)
+[ RUN      ] MathTest.Constrain
+[       OK ] MathTest.Constrain (0 ms)
+[ RUN      ] MathTest.ASin
+[       OK ] MathTest.ASin (0 ms)
+[ RUN      ] MathTest.Sqrt
+[       OK ] MathTest.Sqrt (0 ms)
+[ RUN      ] MathTest.Interpolation
+[       OK ] MathTest.Interpolation (0 ms)
+[ RUN      ] MathTest.ThrottleCurve
+[       OK ] MathTest.ThrottleCurve (0 ms)
+[ RUN      ] MathTest.RotationEqual
+[       OK ] MathTest.RotationEqual (0 ms)
+[ RUN      ] MathTest.FIXED2FLOAT
+[       OK ] MathTest.FIXED2FLOAT (0 ms)
+[ RUN      ] MathTest.FLOAT2FIXED
+[       OK ] MathTest.FLOAT2FIXED (0 ms)
+[ RUN      ] MathTest.RANDOM16
+[       OK ] MathTest.RANDOM16 (0 ms)
+[ RUN      ] MathTest.RAND_FLOAT
+[       OK ] MathTest.RAND_FLOAT (0 ms)
+[ RUN      ] MathTest.VELCORRECTION
+[       OK ] MathTest.VELCORRECTION (0 ms)
+[ RUN      ] MathTest.LOWPASSALPHA
+[       OK ] MathTest.LOWPASSALPHA (0 ms)
+[ RUN      ] MathTest.FIXEDWINGTURNRATE
+[       OK ] MathTest.FIXEDWINGTURNRATE (0 ms)
+[ RUN      ] MathTest.div1000
+[       OK ] MathTest.div1000 (160 ms)
+[ RUN      ] MathTest.div1000_structured
+[       OK ] MathTest.div1000_structured (17 ms)
+[----------] 24 tests from MathTest (177 ms total)
+
+[----------] 4 tests from MathWrapTest
+[ RUN      ] MathWrapTest.Angle180
+[       OK ] MathWrapTest.Angle180 (0 ms)
+[ RUN      ] MathWrapTest.Angle360
+[       OK ] MathWrapTest.Angle360 (0 ms)
+[ RUN      ] MathWrapTest.AnglePI
+[       OK ] MathWrapTest.AnglePI (0 ms)
+[ RUN      ] MathWrapTest.Angle2PI
+[       OK ] MathWrapTest.Angle2PI (0 ms)
+[----------] 4 tests from MathWrapTest (0 ms total)
+
+[----------] 1 test from CRCTest
+[ RUN      ] CRCTest.parity
+[       OK ] CRCTest.parity (0 ms)
+[----------] 1 test from CRCTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 30 tests from 4 test suites ran. (178 ms total)
+[  PASSED  ] 30 tests.

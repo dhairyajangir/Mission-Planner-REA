@@ -1,0 +1,12 @@
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from Lines3dTests
+[ RUN      ] Lines3dTests.ClosestDistBetweenLinePoint
+[       OK ] Lines3dTests.ClosestDistBetweenLinePoint (0 ms)
+[ RUN      ] Lines3dTests.SegmentToSegmentCloestPoint
+[       OK ] Lines3dTests.SegmentToSegmentCloestPoint (0 ms)
+[----------] 2 tests from Lines3dTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.

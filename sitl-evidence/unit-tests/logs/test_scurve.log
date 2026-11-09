@@ -1,0 +1,28 @@
+[==========] Running 7 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from SCurveCalcPath
+[ RUN      ] SCurveCalcPath.coverage_and_outputs
+[       OK ] SCurveCalcPath.coverage_and_outputs (0 ms)
+[ RUN      ] SCurveCalcPath.constraints
+[       OK ] SCurveCalcPath.constraints (0 ms)
+[----------] 2 tests from SCurveCalcPath (0 ms total)
+
+[----------] 3 tests from SCurveTrack
+[ RUN      ] SCurveTrack.straight_leg
+[       OK ] SCurveTrack.straight_leg (1 ms)
+[ RUN      ] SCurveTrack.climbing_arc_limit_from_arc_length
+[       OK ] SCurveTrack.climbing_arc_limit_from_arc_length (1 ms)
+[ RUN      ] SCurveTrack.arc_velocity_matches_position_derivative
+[       OK ] SCurveTrack.arc_velocity_matches_position_derivative (0 ms)
+[----------] 3 tests from SCurveTrack (2 ms total)
+
+[----------] 2 tests from SCurveCircle
+[ RUN      ] SCurveCircle.geometry
+[       OK ] SCurveCircle.geometry (8 ms)
+[ RUN      ] SCurveCircle.prev_leg_handoff
+[       OK ] SCurveCircle.prev_leg_handoff (0 ms)
+[----------] 2 tests from SCurveCircle (8 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 3 test suites ran. (10 ms total)
+[  PASSED  ] 7 tests.

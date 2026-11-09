@@ -1,0 +1,12 @@
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from control
+[ RUN      ] control.SqrtController2f
+[       OK ] control.SqrtController2f (0 ms)
+[ RUN      ] control.InvSqrtControllerIsActuallyInverse
+[       OK ] control.InvSqrtControllerIsActuallyInverse (0 ms)
+[----------] 2 tests from control (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.

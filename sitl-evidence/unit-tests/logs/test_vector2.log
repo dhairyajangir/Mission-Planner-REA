@@ -1,0 +1,37 @@
+[==========] Running 14 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 14 tests from Vector2Test
+[ RUN      ] Vector2Test.Operator
+[       OK ] Vector2Test.Operator (0 ms)
+[ RUN      ] Vector2Test.IsEqual
+[       OK ] Vector2Test.IsEqual (0 ms)
+[ RUN      ] Vector2Test.angle
+[       OK ] Vector2Test.angle (0 ms)
+[ RUN      ] Vector2Test.length
+[       OK ] Vector2Test.length (0 ms)
+[ RUN      ] Vector2Test.normalized
+[       OK ] Vector2Test.normalized (0 ms)
+[ RUN      ] Vector2Test.Project
+[       OK ] Vector2Test.Project (0 ms)
+[ RUN      ] Vector2Test.reflect
+[       OK ] Vector2Test.reflect (0 ms)
+[ RUN      ] Vector2Test.Offset_bearing
+[       OK ] Vector2Test.Offset_bearing (0 ms)
+[ RUN      ] Vector2Test.Perpendicular
+[       OK ] Vector2Test.Perpendicular (0 ms)
+[ RUN      ] Vector2Test.closest_point
+[       OK ] Vector2Test.closest_point (0 ms)
+[ RUN      ] Vector2Test.closest_distance
+[       OK ] Vector2Test.closest_distance (0 ms)
+[ RUN      ] Vector2Test.segment_intersectionx
+[       OK ] Vector2Test.segment_intersectionx (0 ms)
+[ RUN      ] Vector2Test.circle_segment_intersectionx
+[       OK ] Vector2Test.circle_segment_intersectionx (0 ms)
+[ RUN      ] Vector2Test.point_on_segmentx
+4
+[       OK ] Vector2Test.point_on_segmentx (0 ms)
+[----------] 14 tests from Vector2Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 14 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 14 tests.

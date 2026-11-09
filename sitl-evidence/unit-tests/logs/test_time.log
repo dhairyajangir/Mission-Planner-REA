@@ -1,0 +1,32 @@
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from ap_mktime
+[ RUN      ] ap_mktime.Epoch
+[       OK ] ap_mktime.Epoch (0 ms)
+[ RUN      ] ap_mktime.PreEpoch
+[       OK ] ap_mktime.PreEpoch (0 ms)
+[ RUN      ] ap_mktime.PreEpochBoundary
+[       OK ] ap_mktime.PreEpochBoundary (0 ms)
+[ RUN      ] ap_mktime.Y2K
+[       OK ] ap_mktime.Y2K (0 ms)
+[ RUN      ] ap_mktime.TimeOfDay
+[       OK ] ap_mktime.TimeOfDay (0 ms)
+[ RUN      ] ap_mktime.DayOfMonth
+[       OK ] ap_mktime.DayOfMonth (0 ms)
+[ RUN      ] ap_mktime.AllMonthsNonLeap
+[       OK ] ap_mktime.AllMonthsNonLeap (0 ms)
+[ RUN      ] ap_mktime.LeapYearRegular
+[       OK ] ap_mktime.LeapYearRegular (0 ms)
+[ RUN      ] ap_mktime.LeapYearDiv400
+[       OK ] ap_mktime.LeapYearDiv400 (0 ms)
+[ RUN      ] ap_mktime.CenturyNonLeap
+[       OK ] ap_mktime.CenturyNonLeap (0 ms)
+[ RUN      ] ap_mktime.MonthLoopRollover
+[       OK ] ap_mktime.MonthLoopRollover (0 ms)
+[ RUN      ] ap_mktime.NegativeMonth
+[       OK ] ap_mktime.NegativeMonth (0 ms)
+[----------] 12 tests from ap_mktime (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 12 tests.

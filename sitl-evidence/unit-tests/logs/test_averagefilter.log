@@ -1,0 +1,17 @@
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from AverageFilterTest
+[ RUN      ] AverageFilterTest.UInt16_Size5
+[       OK ] AverageFilterTest.UInt16_Size5 (0 ms)
+[ RUN      ] AverageFilterTest.Float_Size5
+[       OK ] AverageFilterTest.Float_Size5 (0 ms)
+[----------] 2 tests from AverageFilterTest (0 ms total)
+
+[----------] 1 test from AverageIntegralFilterTest
+[ RUN      ] AverageIntegralFilterTest.UInt16_Size5
+[       OK ] AverageIntegralFilterTest.UInt16_Size5 (0 ms)
+[----------] 1 test from AverageIntegralFilterTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 3 tests.

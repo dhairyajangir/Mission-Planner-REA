@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from vsnprintf_Test
+[ RUN      ] vsnprintf_Test.Basic
+[       OK ] vsnprintf_Test.Basic (0 ms)
+[ RUN      ] vsnprintf_Test.SubnormalFormat
+[       OK ] vsnprintf_Test.SubnormalFormat (0 ms)
+[ RUN      ] vsnprintf_Test.SpecialFormat
+[       OK ] vsnprintf_Test.SpecialFormat (0 ms)
+[----------] 3 tests from vsnprintf_Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

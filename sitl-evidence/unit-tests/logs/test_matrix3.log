@@ -1,0 +1,28 @@
+[==========] Running 7 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from Matrix3Test
+[ RUN      ] Matrix3Test.ToEuler312OutOfRange
+[       OK ] Matrix3Test.ToEuler312OutOfRange (0 ms)
+[----------] 1 test from Matrix3Test (0 ms total)
+
+[----------] 2 tests from InvertibleMatrices/Matrix3fTest
+[ RUN      ] InvertibleMatrices/Matrix3fTest.Determinants/0
+[       OK ] InvertibleMatrices/Matrix3fTest.Determinants/0 (0 ms)
+[ RUN      ] InvertibleMatrices/Matrix3fTest.Inverses/0
+[       OK ] InvertibleMatrices/Matrix3fTest.Inverses/0 (0 ms)
+[----------] 2 tests from InvertibleMatrices/Matrix3fTest (0 ms total)
+
+[----------] 4 tests from NonInvertibleMatrices/Matrix3fTest
+[ RUN      ] NonInvertibleMatrices/Matrix3fTest.Determinants/0
+[       OK ] NonInvertibleMatrices/Matrix3fTest.Determinants/0 (0 ms)
+[ RUN      ] NonInvertibleMatrices/Matrix3fTest.Determinants/1
+[       OK ] NonInvertibleMatrices/Matrix3fTest.Determinants/1 (0 ms)
+[ RUN      ] NonInvertibleMatrices/Matrix3fTest.Inverses/0
+[       OK ] NonInvertibleMatrices/Matrix3fTest.Inverses/0 (0 ms)
+[ RUN      ] NonInvertibleMatrices/Matrix3fTest.Inverses/1
+[       OK ] NonInvertibleMatrices/Matrix3fTest.Inverses/1 (0 ms)
+[----------] 4 tests from NonInvertibleMatrices/Matrix3fTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 3 test suites ran. (0 ms total)
+[  PASSED  ] 7 tests.

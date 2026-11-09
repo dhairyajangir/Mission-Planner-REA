@@ -1,0 +1,10 @@
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MultiHeap
+[ RUN      ] MultiHeap.Tests
+[       OK ] MultiHeap.Tests (1 ms)
+[----------] 1 test from MultiHeap (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.

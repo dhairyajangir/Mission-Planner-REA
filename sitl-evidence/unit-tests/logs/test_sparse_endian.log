@@ -1,0 +1,16 @@
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from EndianTest
+[ RUN      ] EndianTest.PutLe64BasicPattern
+[       OK ] EndianTest.PutLe64BasicPattern (0 ms)
+[ RUN      ] EndianTest.PutLe64RoundTrip
+[       OK ] EndianTest.PutLe64RoundTrip (0 ms)
+[ RUN      ] EndianTest.PutLe64Zero
+[       OK ] EndianTest.PutLe64Zero (0 ms)
+[ RUN      ] EndianTest.PutLe64AllBytesDifferent
+[       OK ] EndianTest.PutLe64AllBytesDifferent (0 ms)
+[----------] 4 tests from EndianTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.

@@ -1,0 +1,22 @@
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from AP_GSOF
+[ RUN      ] AP_GSOF.incomplete_packet
+[       OK ] AP_GSOF.incomplete_packet (0 ms)
+[ RUN      ] AP_GSOF.packet1
+../../libraries/AP_GSOF/tests/test_gsof.cpp:30: Skipped
+There is not yet a convention for loading in a data file in a cross-platform way in AP for unit tests
+[  SKIPPED ] AP_GSOF.packet1 (0 ms)
+[ RUN      ] AP_GSOF.position_time_fields
+[       OK ] AP_GSOF.position_time_fields (0 ms)
+[ RUN      ] AP_GSOF.vel_flags_parsed
+[       OK ] AP_GSOF.vel_flags_parsed (0 ms)
+[ RUN      ] AP_GSOF.vel_flags_not_valid
+[       OK ] AP_GSOF.vel_flags_not_valid (0 ms)
+[----------] 5 tests from AP_GSOF (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] AP_GSOF.packet1

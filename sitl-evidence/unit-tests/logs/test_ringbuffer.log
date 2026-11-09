@@ -1,0 +1,27 @@
+[==========] Running 8 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 5 tests from ByteBufferTest
+[ RUN      ] ByteBufferTest.Basic
+[       OK ] ByteBufferTest.Basic (0 ms)
+[ RUN      ] ByteBufferTest.SetSize
+[       OK ] ByteBufferTest.SetSize (0 ms)
+[ RUN      ] ByteBufferTest.ReadByte
+[       OK ] ByteBufferTest.ReadByte (0 ms)
+[ RUN      ] ByteBufferTest.Update
+[       OK ] ByteBufferTest.Update (0 ms)
+[ RUN      ] ByteBufferTest.SetSizeBest
+[       OK ] ByteBufferTest.SetSizeBest (0 ms)
+[----------] 5 tests from ByteBufferTest (0 ms total)
+
+[----------] 3 tests from ObjectBufferTest
+[ RUN      ] ObjectBufferTest.Basic
+[       OK ] ObjectBufferTest.Basic (0 ms)
+[ RUN      ] ObjectBufferTest.SetSize
+[       OK ] ObjectBufferTest.SetSize (0 ms)
+[ RUN      ] ObjectBufferTest.PeekTest
+[       OK ] ObjectBufferTest.PeekTest (0 ms)
+[----------] 3 tests from ObjectBufferTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 8 tests.

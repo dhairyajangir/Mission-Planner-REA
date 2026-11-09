@@ -1,0 +1,1166 @@
+[==========] Running 576 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 12 tests from IcosahedronVertices/GeodesicGridTest
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/0
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/0 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/1
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/1 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/2
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/2 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/3
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/3 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/4
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/4 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/5
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/5 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/6
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/6 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/7
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/7 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/8
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/8 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/9
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/9 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/10
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/10 (0 ms)
+[ RUN      ] IcosahedronVertices/GeodesicGridTest.Sections/11
+[       OK ] IcosahedronVertices/GeodesicGridTest.Sections/11 (0 ms)
+[----------] 12 tests from IcosahedronVertices/GeodesicGridTest (0 ms total)
+
+[----------] 560 tests from GeneralVectors/GeodesicGridTest
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/0
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/0 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/1
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/1 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/2
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/2 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/3
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/3 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/4
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/4 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/5
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/5 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/6
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/6 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/7
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/7 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/8
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/8 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/9
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/9 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/10
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/10 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/11
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/11 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/12
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/12 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/13
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/13 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/14
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/14 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/15
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/15 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/16
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/16 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/17
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/17 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/18
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/18 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/19
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/19 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/20
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/20 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/21
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/21 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/22
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/22 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/23
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/23 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/24
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/24 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/25
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/25 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/26
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/26 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/27
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/27 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/28
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/28 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/29
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/29 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/30
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/30 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/31
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/31 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/32
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/32 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/33
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/33 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/34
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/34 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/35
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/35 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/36
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/36 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/37
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/37 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/38
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/38 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/39
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/39 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/40
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/40 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/41
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/41 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/42
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/42 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/43
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/43 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/44
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/44 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/45
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/45 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/46
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/46 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/47
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/47 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/48
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/48 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/49
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/49 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/50
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/50 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/51
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/51 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/52
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/52 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/53
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/53 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/54
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/54 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/55
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/55 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/56
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/56 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/57
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/57 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/58
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/58 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/59
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/59 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/60
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/60 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/61
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/61 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/62
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/62 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/63
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/63 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/64
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/64 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/65
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/65 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/66
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/66 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/67
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/67 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/68
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/68 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/69
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/69 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/70
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/70 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/71
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/71 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/72
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/72 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/73
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/73 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/74
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/74 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/75
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/75 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/76
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/76 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/77
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/77 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/78
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/78 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/79
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/79 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/80
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/80 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/81
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/81 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/82
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/82 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/83
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/83 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/84
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/84 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/85
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/85 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/86
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/86 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/87
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/87 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/88
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/88 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/89
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/89 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/90
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/90 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/91
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/91 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/92
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/92 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/93
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/93 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/94
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/94 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/95
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/95 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/96
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/96 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/97
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/97 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/98
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/98 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/99
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/99 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/100
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/100 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/101
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/101 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/102
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/102 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/103
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/103 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/104
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/104 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/105
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/105 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/106
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/106 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/107
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/107 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/108
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/108 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/109
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/109 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/110
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/110 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/111
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/111 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/112
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/112 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/113
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/113 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/114
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/114 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/115
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/115 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/116
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/116 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/117
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/117 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/118
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/118 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/119
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/119 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/120
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/120 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/121
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/121 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/122
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/122 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/123
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/123 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/124
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/124 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/125
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/125 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/126
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/126 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/127
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/127 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/128
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/128 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/129
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/129 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/130
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/130 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/131
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/131 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/132
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/132 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/133
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/133 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/134
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/134 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/135
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/135 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/136
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/136 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/137
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/137 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/138
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/138 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/139
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/139 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/140
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/140 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/141
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/141 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/142
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/142 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/143
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/143 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/144
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/144 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/145
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/145 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/146
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/146 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/147
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/147 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/148
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/148 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/149
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/149 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/150
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/150 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/151
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/151 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/152
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/152 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/153
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/153 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/154
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/154 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/155
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/155 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/156
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/156 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/157
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/157 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/158
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/158 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/159
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/159 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/160
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/160 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/161
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/161 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/162
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/162 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/163
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/163 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/164
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/164 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/165
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/165 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/166
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/166 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/167
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/167 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/168
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/168 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/169
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/169 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/170
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/170 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/171
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/171 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/172
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/172 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/173
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/173 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/174
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/174 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/175
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/175 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/176
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/176 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/177
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/177 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/178
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/178 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/179
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/179 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/180
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/180 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/181
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/181 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/182
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/182 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/183
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/183 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/184
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/184 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/185
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/185 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/186
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/186 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/187
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/187 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/188
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/188 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/189
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/189 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/190
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/190 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/191
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/191 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/192
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/192 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/193
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/193 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/194
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/194 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/195
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/195 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/196
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/196 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/197
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/197 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/198
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/198 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/199
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/199 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/200
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/200 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/201
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/201 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/202
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/202 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/203
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/203 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/204
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/204 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/205
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/205 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/206
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/206 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/207
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/207 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/208
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/208 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/209
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/209 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/210
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/210 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/211
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/211 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/212
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/212 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/213
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/213 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/214
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/214 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/215
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/215 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/216
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/216 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/217
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/217 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/218
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/218 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/219
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/219 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/220
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/220 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/221
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/221 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/222
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/222 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/223
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/223 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/224
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/224 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/225
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/225 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/226
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/226 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/227
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/227 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/228
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/228 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/229
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/229 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/230
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/230 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/231
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/231 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/232
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/232 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/233
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/233 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/234
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/234 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/235
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/235 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/236
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/236 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/237
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/237 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/238
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/238 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/239
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/239 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/240
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/240 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/241
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/241 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/242
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/242 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/243
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/243 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/244
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/244 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/245
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/245 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/246
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/246 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/247
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/247 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/248
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/248 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/249
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/249 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/250
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/250 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/251
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/251 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/252
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/252 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/253
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/253 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/254
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/254 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/255
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/255 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/256
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/256 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/257
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/257 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/258
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/258 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/259
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/259 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/260
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/260 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/261
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/261 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/262
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/262 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/263
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/263 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/264
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/264 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/265
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/265 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/266
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/266 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/267
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/267 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/268
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/268 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/269
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/269 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/270
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/270 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/271
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/271 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/272
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/272 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/273
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/273 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/274
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/274 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/275
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/275 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/276
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/276 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/277
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/277 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/278
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/278 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/279
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/279 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/280
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/280 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/281
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/281 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/282
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/282 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/283
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/283 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/284
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/284 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/285
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/285 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/286
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/286 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/287
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/287 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/288
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/288 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/289
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/289 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/290
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/290 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/291
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/291 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/292
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/292 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/293
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/293 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/294
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/294 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/295
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/295 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/296
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/296 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/297
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/297 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/298
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/298 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/299
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/299 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/300
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/300 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/301
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/301 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/302
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/302 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/303
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/303 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/304
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/304 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/305
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/305 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/306
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/306 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/307
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/307 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/308
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/308 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/309
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/309 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/310
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/310 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/311
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/311 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/312
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/312 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/313
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/313 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/314
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/314 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/315
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/315 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/316
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/316 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/317
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/317 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/318
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/318 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/319
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/319 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/320
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/320 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/321
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/321 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/322
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/322 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/323
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/323 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/324
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/324 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/325
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/325 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/326
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/326 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/327
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/327 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/328
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/328 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/329
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/329 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/330
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/330 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/331
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/331 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/332
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/332 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/333
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/333 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/334
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/334 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/335
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/335 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/336
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/336 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/337
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/337 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/338
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/338 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/339
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/339 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/340
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/340 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/341
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/341 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/342
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/342 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/343
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/343 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/344
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/344 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/345
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/345 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/346
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/346 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/347
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/347 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/348
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/348 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/349
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/349 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/350
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/350 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/351
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/351 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/352
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/352 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/353
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/353 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/354
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/354 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/355
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/355 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/356
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/356 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/357
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/357 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/358
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/358 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/359
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/359 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/360
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/360 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/361
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/361 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/362
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/362 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/363
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/363 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/364
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/364 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/365
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/365 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/366
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/366 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/367
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/367 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/368
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/368 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/369
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/369 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/370
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/370 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/371
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/371 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/372
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/372 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/373
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/373 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/374
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/374 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/375
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/375 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/376
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/376 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/377
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/377 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/378
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/378 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/379
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/379 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/380
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/380 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/381
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/381 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/382
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/382 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/383
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/383 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/384
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/384 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/385
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/385 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/386
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/386 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/387
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/387 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/388
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/388 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/389
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/389 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/390
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/390 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/391
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/391 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/392
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/392 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/393
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/393 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/394
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/394 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/395
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/395 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/396
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/396 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/397
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/397 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/398
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/398 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/399
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/399 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/400
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/400 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/401
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/401 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/402
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/402 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/403
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/403 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/404
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/404 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/405
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/405 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/406
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/406 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/407
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/407 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/408
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/408 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/409
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/409 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/410
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/410 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/411
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/411 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/412
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/412 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/413
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/413 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/414
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/414 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/415
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/415 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/416
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/416 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/417
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/417 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/418
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/418 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/419
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/419 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/420
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/420 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/421
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/421 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/422
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/422 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/423
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/423 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/424
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/424 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/425
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/425 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/426
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/426 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/427
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/427 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/428
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/428 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/429
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/429 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/430
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/430 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/431
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/431 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/432
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/432 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/433
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/433 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/434
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/434 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/435
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/435 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/436
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/436 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/437
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/437 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/438
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/438 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/439
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/439 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/440
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/440 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/441
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/441 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/442
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/442 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/443
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/443 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/444
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/444 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/445
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/445 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/446
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/446 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/447
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/447 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/448
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/448 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/449
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/449 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/450
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/450 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/451
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/451 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/452
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/452 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/453
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/453 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/454
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/454 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/455
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/455 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/456
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/456 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/457
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/457 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/458
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/458 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/459
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/459 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/460
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/460 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/461
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/461 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/462
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/462 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/463
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/463 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/464
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/464 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/465
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/465 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/466
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/466 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/467
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/467 (1 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/468
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/468 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/469
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/469 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/470
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/470 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/471
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/471 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/472
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/472 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/473
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/473 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/474
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/474 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/475
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/475 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/476
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/476 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/477
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/477 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/478
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/478 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/479
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/479 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/480
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/480 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/481
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/481 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/482
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/482 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/483
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/483 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/484
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/484 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/485
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/485 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/486
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/486 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/487
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/487 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/488
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/488 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/489
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/489 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/490
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/490 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/491
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/491 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/492
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/492 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/493
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/493 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/494
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/494 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/495
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/495 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/496
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/496 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/497
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/497 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/498
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/498 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/499
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/499 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/500
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/500 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/501
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/501 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/502
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/502 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/503
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/503 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/504
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/504 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/505
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/505 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/506
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/506 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/507
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/507 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/508
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/508 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/509
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/509 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/510
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/510 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/511
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/511 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/512
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/512 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/513
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/513 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/514
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/514 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/515
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/515 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/516
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/516 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/517
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/517 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/518
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/518 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/519
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/519 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/520
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/520 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/521
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/521 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/522
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/522 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/523
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/523 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/524
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/524 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/525
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/525 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/526
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/526 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/527
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/527 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/528
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/528 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/529
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/529 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/530
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/530 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/531
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/531 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/532
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/532 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/533
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/533 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/534
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/534 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/535
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/535 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/536
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/536 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/537
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/537 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/538
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/538 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/539
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/539 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/540
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/540 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/541
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/541 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/542
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/542 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/543
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/543 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/544
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/544 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/545
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/545 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/546
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/546 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/547
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/547 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/548
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/548 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/549
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/549 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/550
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/550 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/551
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/551 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/552
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/552 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/553
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/553 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/554
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/554 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/555
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/555 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/556
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/556 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/557
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/557 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/558
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/558 (0 ms)
+[ RUN      ] GeneralVectors/GeodesicGridTest.Sections/559
+[       OK ] GeneralVectors/GeodesicGridTest.Sections/559 (0 ms)
+[----------] 560 tests from GeneralVectors/GeodesicGridTest (4 ms total)
+
+[----------] 4 tests from HardcodedVectors/GeodesicGridTest
+[ RUN      ] HardcodedVectors/GeodesicGridTest.Sections/0
+[       OK ] HardcodedVectors/GeodesicGridTest.Sections/0 (0 ms)
+[ RUN      ] HardcodedVectors/GeodesicGridTest.Sections/1
+[       OK ] HardcodedVectors/GeodesicGridTest.Sections/1 (0 ms)
+[ RUN      ] HardcodedVectors/GeodesicGridTest.Sections/2
+[       OK ] HardcodedVectors/GeodesicGridTest.Sections/2 (0 ms)
+[ RUN      ] HardcodedVectors/GeodesicGridTest.Sections/3
+[       OK ] HardcodedVectors/GeodesicGridTest.Sections/3 (0 ms)
+[----------] 4 tests from HardcodedVectors/GeodesicGridTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 576 tests from 3 test suites ran. (8 ms total)
+[  PASSED  ] 576 tests.

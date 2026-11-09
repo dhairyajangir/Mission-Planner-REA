@@ -1,0 +1,17 @@
+[==========] Running 3 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from EKF_Buffer
+[ RUN      ] EKF_Buffer.EKF_Buffer
+[       OK ] EKF_Buffer.EKF_Buffer (0 ms)
+[----------] 1 test from EKF_Buffer (0 ms total)
+
+[----------] 2 tests from ekf_imu_buffer
+[ RUN      ] ekf_imu_buffer.one_element_case
+[       OK ] ekf_imu_buffer.one_element_case (0 ms)
+[ RUN      ] ekf_imu_buffer.is_filled
+[       OK ] ekf_imu_buffer.is_filled (0 ms)
+[----------] 2 tests from ekf_imu_buffer (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 3 tests.

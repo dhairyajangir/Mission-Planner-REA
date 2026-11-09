@@ -1,0 +1,28 @@
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from Location
+[ RUN      ] Location.LatLngWrapping
+[       OK ] Location.LatLngWrapping (0 ms)
+[ RUN      ] Location.LocOffsetDouble
+[       OK ] Location.LocOffsetDouble (0 ms)
+[ RUN      ] Location.LocOffset3DDouble
+[       OK ] Location.LocOffset3DDouble (0 ms)
+[ RUN      ] Location.Tests
+[       OK ] Location.Tests (0 ms)
+[ RUN      ] Location.Distance
+[       OK ] Location.Distance (1 ms)
+[ RUN      ] Location.Sanitize
+[       OK ] Location.Sanitize (0 ms)
+[ RUN      ] Location.GetHeightAbove
+[       OK ] Location.GetHeightAbove (0 ms)
+[ RUN      ] Location.Line
+[       OK ] Location.Line (0 ms)
+[ RUN      ] Location.OffsetError
+[       OK ] Location.OffsetError (0 ms)
+[ RUN      ] Location.London_distance
+[       OK ] Location.London_distance (0 ms)
+[----------] 10 tests from Location (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 10 tests.

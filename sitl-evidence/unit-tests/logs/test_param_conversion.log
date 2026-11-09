@@ -1,0 +1,22 @@
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from ParamConversion
+[ RUN      ] ParamConversion.ScalarConversionDoesNotOverrunDestination
+[       OK ] ParamConversion.ScalarConversionDoesNotOverrunDestination (17 ms)
+[ RUN      ] ParamConversion.VectorConversionCopiesWholeValue
+[       OK ] ParamConversion.VectorConversionCopiesWholeValue (0 ms)
+[ RUN      ] ParamConversion.ClassConversionDoesNotOverrunDestination
+[       OK ] ParamConversion.ClassConversionDoesNotOverrunDestination (2041 ms)
+[ RUN      ] ParamConversion.WidthConversionDeclinesWhenNothingStored
+[       OK ] ParamConversion.WidthConversionDeclinesWhenNothingStored (0 ms)
+[ RUN      ] ParamConversion.WidthConversionDeclinesWhenAlreadyConfigured
+[       OK ] ParamConversion.WidthConversionDeclinesWhenAlreadyConfigured (0 ms)
+[ RUN      ] ParamConversion.NoKeyTableConversion
+[       OK ] ParamConversion.NoKeyTableConversion (2044 ms)
+[ RUN      ] ParamConversion.NoKeyTableConversionScaled
+[       OK ] ParamConversion.NoKeyTableConversionScaled (2032 ms)
+[----------] 7 tests from ParamConversion (6135 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (6135 ms total)
+[  PASSED  ] 7 tests.

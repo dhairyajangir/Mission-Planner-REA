@@ -1,0 +1,14 @@
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from RC2RPTest
+[ RUN      ] RC2RPTest.Corners
+[       OK ] RC2RPTest.Corners (0 ms)
+[ RUN      ] RC2RPTest.Axes
+[       OK ] RC2RPTest.Axes (0 ms)
+[ RUN      ] RC2RPTest.Circle
+[       OK ] RC2RPTest.Circle (0 ms)
+[----------] 3 tests from RC2RPTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.

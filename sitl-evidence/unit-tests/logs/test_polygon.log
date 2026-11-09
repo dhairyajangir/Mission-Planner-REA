@@ -1,0 +1,32 @@
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from Polygon
+[ RUN      ] Polygon.outside
+[       OK ] Polygon.outside (0 ms)
+[ RUN      ] Polygon.square_boundaries
+[       OK ] Polygon.square_boundaries (0 ms)
+[ RUN      ] Polygon.circle_outside_triangle
+[       OK ] Polygon.circle_outside_triangle (0 ms)
+[ RUN      ] Polygon.circle_inside_triangle
+[       OK ] Polygon.circle_inside_triangle (0 ms)
+[ RUN      ] Polygon.complex
+[       OK ] Polygon.complex (0 ms)
+[ RUN      ] Polygon.circle_outside_square
+[       OK ] Polygon.circle_outside_square (0 ms)
+[ RUN      ] Polygon.closest_distance_line_wraps_closing_edge
+[       OK ] Polygon.closest_distance_line_wraps_closing_edge (0 ms)
+[ RUN      ] Polygon.outside_long
+[       OK ] Polygon.outside_long (0 ms)
+[ RUN      ] Polygon.outside_long_closed_equal_to_unclosed
+[       OK ] Polygon.outside_long_closed_equal_to_unclosed (0 ms)
+[ RUN      ] Polygon.obc
+[       OK ] Polygon.obc (0 ms)
+[ RUN      ] Polygon.prox
+[       OK ] Polygon.prox (0 ms)
+[ RUN      ] Polygon.simple
+[       OK ] Polygon.simple (0 ms)
+[----------] 12 tests from Polygon (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 12 tests.

@@ -1,0 +1,30 @@
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from OwnPtrTest
+[ RUN      ] OwnPtrTest.SamePointer
+[       OK ] OwnPtrTest.SamePointer (0 ms)
+[ RUN      ] OwnPtrTest.MoveOwnership
+[       OK ] OwnPtrTest.MoveOwnership (0 ms)
+[ RUN      ] OwnPtrTest.DeleteOutOfScope
+[       OK ] OwnPtrTest.DeleteOutOfScope (0 ms)
+[ RUN      ] OwnPtrTest.DeleteOutOfScopeAfterMove
+[       OK ] OwnPtrTest.DeleteOutOfScopeAfterMove (0 ms)
+[ RUN      ] OwnPtrTest.CallMethod
+[       OK ] OwnPtrTest.CallMethod (0 ms)
+[ RUN      ] OwnPtrTest.MoveToConstructor
+[       OK ] OwnPtrTest.MoveToConstructor (0 ms)
+[ RUN      ] OwnPtrTest.ReturnType
+[       OK ] OwnPtrTest.ReturnType (0 ms)
+[ RUN      ] OwnPtrTest.ReplacePointer
+[       OK ] OwnPtrTest.ReplacePointer (0 ms)
+[ RUN      ] OwnPtrTest.ReplaceWithRawPointer
+[       OK ] OwnPtrTest.ReplaceWithRawPointer (0 ms)
+[ RUN      ] OwnPtrTest.Empty
+[       OK ] OwnPtrTest.Empty (0 ms)
+[ RUN      ] OwnPtrTest.Inheritance
+[       OK ] OwnPtrTest.Inheritance (0 ms)
+[----------] 11 tests from OwnPtrTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 11 tests.

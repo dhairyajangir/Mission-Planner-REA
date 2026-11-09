@@ -1,0 +1,30 @@
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from NotchFilterTest
+[ RUN      ] NotchFilterTest.ResetTest
+[       OK ] NotchFilterTest.ResetTest (0 ms)
+[ RUN      ] NotchFilterTest.SineTest
+ratio1=141.016434 expected_ratio=141.253784
+[       OK ] NotchFilterTest.SineTest (2 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchTest
+Wrote harmonicnotch_test.csv
+Lag at 1Hz 11.00 degrees
+Lag at 2Hz 22.03 degrees
+Lag at 5Hz 55.23 degrees
+Lag at 10Hz 112.23 degrees
+[       OK ] NotchFilterTest.HarmonicNotchTest (5490 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchTest2
+[       OK ] NotchFilterTest.HarmonicNotchTest2 (18925 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchTest3
+[       OK ] NotchFilterTest.HarmonicNotchTest3 (13645 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchTest4
+[       OK ] NotchFilterTest.HarmonicNotchTest4 (55623 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchTest5
+[       OK ] NotchFilterTest.HarmonicNotchTest5 (4150 ms)
+[ RUN      ] NotchFilterTest.HarmonicNotchMaxFilters
+[       OK ] NotchFilterTest.HarmonicNotchMaxFilters (0 ms)
+[----------] 8 tests from NotchFilterTest (97835 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (97835 ms total)
+[  PASSED  ] 8 tests.

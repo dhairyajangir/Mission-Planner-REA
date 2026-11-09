@@ -1,0 +1,35 @@
+[==========] Running 12 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 8 tests from MathTest
+[ RUN      ] MathTest.IsZeroDouble
+[       OK ] MathTest.IsZeroDouble (0 ms)
+[ RUN      ] MathTest.MAXDouble
+[       OK ] MathTest.MAXDouble (0 ms)
+[ RUN      ] MathTest.IsEqualDouble
+[       OK ] MathTest.IsEqualDouble (0 ms)
+[ RUN      ] MathTest.ConstrainDouble
+[       OK ] MathTest.ConstrainDouble (0 ms)
+[ RUN      ] MathTest.ASinDouble
+[       OK ] MathTest.ASinDouble (0 ms)
+[ RUN      ] MathTest.SqrtDouble
+[       OK ] MathTest.SqrtDouble (0 ms)
+[ RUN      ] MathTest.SquareDouble
+[       OK ] MathTest.SquareDouble (0 ms)
+[ RUN      ] MathTest.NormDouble
+[       OK ] MathTest.NormDouble (0 ms)
+[----------] 8 tests from MathTest (0 ms total)
+
+[----------] 4 tests from MathWrapTest
+[ RUN      ] MathWrapTest.Angle180Double
+[       OK ] MathWrapTest.Angle180Double (0 ms)
+[ RUN      ] MathWrapTest.Angle360Double
+[       OK ] MathWrapTest.Angle360Double (0 ms)
+[ RUN      ] MathWrapTest.AnglePIDouble
+[       OK ] MathWrapTest.AnglePIDouble (0 ms)
+[ RUN      ] MathWrapTest.Angle2PIDouble
+[       OK ] MathWrapTest.Angle2PIDouble (0 ms)
+[----------] 4 tests from MathWrapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 12 tests.

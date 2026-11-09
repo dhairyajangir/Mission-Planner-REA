@@ -1,0 +1,30 @@
+[==========] Running 5 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from timeout_wrap_Test
+[ RUN      ] timeout_wrap_Test.Basic
+[       OK ] timeout_wrap_Test.Basic (0 ms)
+[----------] 1 test from timeout_wrap_Test (0 ms total)
+
+[----------] 1 test from timeout_Test
+[ RUN      ] timeout_Test.Basic
+[       OK ] timeout_Test.Basic (0 ms)
+[----------] 1 test from timeout_Test (0 ms total)
+
+[----------] 1 test from timeout_remaining_wrap_Test
+[ RUN      ] timeout_remaining_wrap_Test.Basic
+[       OK ] timeout_remaining_wrap_Test.Basic (0 ms)
+[----------] 1 test from timeout_remaining_wrap_Test (1 ms total)
+
+[----------] 1 test from timeout_remaining_Test
+[ RUN      ] timeout_remaining_Test.Basic
+[       OK ] timeout_remaining_Test.Basic (0 ms)
+[----------] 1 test from timeout_remaining_Test (0 ms total)
+
+[----------] 1 test from timeout_remaining_wrap_Test_5us
+[ RUN      ] timeout_remaining_wrap_Test_5us.Basic
+[       OK ] timeout_remaining_wrap_Test_5us.Basic (0 ms)
+[----------] 1 test from timeout_remaining_wrap_Test_5us (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 5 test suites ran. (1 ms total)
+[  PASSED  ] 5 tests.

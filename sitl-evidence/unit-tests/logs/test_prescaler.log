@@ -1,0 +1,239 @@
+[==========] Running 77 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 77 tests from prescaler_Test/PrescalerParameterizedTestFixture
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/0
+Clock: 200MHz, Target: 1200KHz, Rate: 1197KHz, prescaler: 166, error: 0.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/1
+Clock: 216MHz, Target: 1200KHz, Rate: 1200KHz, prescaler: 179, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/2
+Clock: 108MHz, Target: 1200KHz, Rate: 1200KHz, prescaler: 89, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/3
+Clock: 84MHz, Target: 1200KHz, Rate: 1200KHz, prescaler: 69, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/4
+Clock: 168MHz, Target: 1200KHz, Rate: 1200KHz, prescaler: 139, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/5
+Clock: 50MHz, Target: 1200KHz, Rate: 1190KHz, prescaler: 41, error: 0.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/6
+Clock: 80MHz, Target: 1200KHz, Rate: 1194KHz, prescaler: 66, error: 0.5%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/0
+Clock: 200MHz, Target: 2400KHz, Rate: 2409KHz, prescaler: 82, error: 0.4%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/1
+Clock: 216MHz, Target: 2400KHz, Rate: 2400KHz, prescaler: 89, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/2
+Clock: 108MHz, Target: 2400KHz, Rate: 2400KHz, prescaler: 44, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/3
+Clock: 84MHz, Target: 2400KHz, Rate: 2400KHz, prescaler: 34, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/4
+Clock: 168MHz, Target: 2400KHz, Rate: 2400KHz, prescaler: 69, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/5
+Clock: 50MHz, Target: 2400KHz, Rate: 2380KHz, prescaler: 20, error: 0.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/6
+Clock: 80MHz, Target: 2400KHz, Rate: 2424KHz, prescaler: 32, error: 1.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/0
+Clock: 200MHz, Target: 4800KHz, Rate: 4761KHz, prescaler: 41, error: 0.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/1
+Clock: 216MHz, Target: 4800KHz, Rate: 4800KHz, prescaler: 44, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/2
+Clock: 108MHz, Target: 4800KHz, Rate: 4695KHz, prescaler: 22, error: 2.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/3
+Clock: 84MHz, Target: 4800KHz, Rate: 4666KHz, prescaler: 17, error: 2.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/4
+Clock: 168MHz, Target: 4800KHz, Rate: 4800KHz, prescaler: 34, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/5
+Clock: 50MHz, Target: 4800KHz, Rate: 5000KHz, prescaler: 9, error: 4.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/6
+Clock: 80MHz, Target: 4800KHz, Rate: 4705KHz, prescaler: 16, error: 2.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/0
+Clock: 200MHz, Target: 9600KHz, Rate: 9523KHz, prescaler: 20, error: 0.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/1
+Clock: 216MHz, Target: 9600KHz, Rate: 9391KHz, prescaler: 22, error: 2.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/2
+Clock: 108MHz, Target: 9600KHz, Rate: 9818KHz, prescaler: 10, error: 2.3%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/3
+Clock: 84MHz, Target: 9600KHz, Rate: 9333KHz, prescaler: 8, error: 2.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/4
+Clock: 168MHz, Target: 9600KHz, Rate: 9333KHz, prescaler: 17, error: 2.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/5
+Clock: 50MHz, Target: 9600KHz, Rate: 10000KHz, prescaler: 4, error: 4.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/6
+Clock: 80MHz, Target: 9600KHz, Rate: 10000KHz, prescaler: 7, error: 4.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/0
+Clock: 200MHz, Target: 192KHz, Rate: 191KHz, prescaler: 1041, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/1
+Clock: 216MHz, Target: 192KHz, Rate: 192KHz, prescaler: 1124, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/2
+Clock: 108MHz, Target: 192KHz, Rate: 191KHz, prescaler: 562, error: 0.1%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/3
+Clock: 84MHz, Target: 192KHz, Rate: 191KHz, prescaler: 437, error: 0.1%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/4
+Clock: 168MHz, Target: 192KHz, Rate: 192KHz, prescaler: 874, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/5
+Clock: 50MHz, Target: 192KHz, Rate: 192KHz, prescaler: 259, error: 0.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/6
+Clock: 80MHz, Target: 192KHz, Rate: 191KHz, prescaler: 416, error: 0.1%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.Passthrough/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/0
+NeoPixel Clock: 200MHz, Target: 6400KHz, Rate: 6451KHz, prescaler: 30
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/1
+NeoPixel Clock: 216MHz, Target: 6400KHz, Rate: 6352KHz, prescaler: 33
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/2
+NeoPixel Clock: 108MHz, Target: 6400KHz, Rate: 6352KHz, prescaler: 16
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/3
+NeoPixel Clock: 84MHz, Target: 6400KHz, Rate: 6461KHz, prescaler: 12
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/4
+NeoPixel Clock: 168MHz, Target: 6400KHz, Rate: 6461KHz, prescaler: 25
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/5
+NeoPixel Clock: 50MHz, Target: 6400KHz, Rate: 6250KHz, prescaler: 7
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/6
+NeoPixel Clock: 80MHz, Target: 6400KHz, Rate: 6153KHz, prescaler: 12
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.NeoPixel/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/0
+Clock: 200MHz, Target: 12000KHz, Rate: 11764KHz, prescaler: 16, error: 2.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/1
+Clock: 216MHz, Target: 12000KHz, Rate: 12000KHz, prescaler: 17, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/2
+Clock: 108MHz, Target: 12000KHz, Rate: 12000KHz, prescaler: 8, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/3
+Clock: 84MHz, Target: 12000KHz, Rate: 12000KHz, prescaler: 6, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/4
+Clock: 168MHz, Target: 12000KHz, Rate: 12000KHz, prescaler: 13, error: 0.0%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/5
+Clock: 50MHz, Target: 12000KHz, Rate: 12500KHz, prescaler: 3, error: 4.2%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/6
+Clock: 80MHz, Target: 12000KHz, Rate: 11428KHz, prescaler: 6, error: 4.8%, at-least: 0
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.ProfiLED/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/0
+Clock: 200MHz, Target: 1650KHz, Rate: 1652KHz, prescaler: 120, error: 0.2%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/1
+Clock: 216MHz, Target: 1650KHz, Rate: 1661KHz, prescaler: 129, error: 0.7%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/2
+Clock: 108MHz, Target: 1650KHz, Rate: 1661KHz, prescaler: 64, error: 0.7%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/3
+Clock: 84MHz, Target: 1650KHz, Rate: 1680KHz, prescaler: 49, error: 1.8%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/4
+Clock: 168MHz, Target: 1650KHz, Rate: 1663KHz, prescaler: 100, error: 0.8%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/5
+Clock: 50MHz, Target: 1650KHz, Rate: 1666KHz, prescaler: 29, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/6
+Clock: 80MHz, Target: 1650KHz, Rate: 1666KHz, prescaler: 47, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot150_S/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/0
+Clock: 200MHz, Target: 3300KHz, Rate: 3333KHz, prescaler: 59, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/1
+Clock: 216MHz, Target: 3300KHz, Rate: 3323KHz, prescaler: 64, error: 0.7%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/2
+Clock: 108MHz, Target: 3300KHz, Rate: 3375KHz, prescaler: 31, error: 2.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/3
+Clock: 84MHz, Target: 3300KHz, Rate: 3360KHz, prescaler: 24, error: 1.8%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/4
+Clock: 168MHz, Target: 3300KHz, Rate: 3360KHz, prescaler: 49, error: 1.8%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/5
+Clock: 50MHz, Target: 3300KHz, Rate: 3333KHz, prescaler: 14, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/6
+Clock: 80MHz, Target: 3300KHz, Rate: 3333KHz, prescaler: 23, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot300_S/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/0
+Clock: 200MHz, Target: 6600KHz, Rate: 6666KHz, prescaler: 29, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/1
+Clock: 216MHz, Target: 6600KHz, Rate: 6750KHz, prescaler: 31, error: 2.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/2
+Clock: 108MHz, Target: 6600KHz, Rate: 6750KHz, prescaler: 15, error: 2.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/3
+Clock: 84MHz, Target: 6600KHz, Rate: 7000KHz, prescaler: 11, error: 6.1%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/4
+Clock: 168MHz, Target: 6600KHz, Rate: 6720KHz, prescaler: 24, error: 1.8%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/5
+Clock: 50MHz, Target: 6600KHz, Rate: 7142KHz, prescaler: 6, error: 8.2%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/6
+Clock: 80MHz, Target: 6600KHz, Rate: 6666KHz, prescaler: 11, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot600_S/6 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/0
+Clock: 200MHz, Target: 13200KHz, Rate: 13333KHz, prescaler: 14, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/0 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/1
+Clock: 216MHz, Target: 13200KHz, Rate: 13500KHz, prescaler: 15, error: 2.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/1 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/2
+Clock: 108MHz, Target: 13200KHz, Rate: 13500KHz, prescaler: 7, error: 2.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/2 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/3
+Clock: 84MHz, Target: 13200KHz, Rate: 14000KHz, prescaler: 5, error: 6.1%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/3 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/4
+Clock: 168MHz, Target: 13200KHz, Rate: 14000KHz, prescaler: 11, error: 6.1%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/4 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/5
+Clock: 50MHz, Target: 13200KHz, Rate: 16666KHz, prescaler: 2, error: 26.3%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/5 (0 ms)
+[ RUN      ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/6
+Clock: 80MHz, Target: 13200KHz, Rate: 13333KHz, prescaler: 5, error: 1.0%, at-least: 1
+[       OK ] prescaler_Test/PrescalerParameterizedTestFixture.DShot1200_S/6 (0 ms)
+[----------] 77 tests from prescaler_Test/PrescalerParameterizedTestFixture (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 77 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 77 tests.
