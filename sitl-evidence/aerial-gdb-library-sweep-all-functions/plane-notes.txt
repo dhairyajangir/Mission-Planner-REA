@@ -1,0 +1,5 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+disarmed by itself after 67 s
+19 breakpoints set, 5 functions hit at least once

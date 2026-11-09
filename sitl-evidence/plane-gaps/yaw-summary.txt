@@ -1,0 +1,39 @@
+flight notes:
+  set {'YAW_RATE_ENABLE': 1.0, 'ACRO_YAW_RATE': 30.0} (rejected: []; YAW_RATE_ENABLE existed before the write: True)
+  after restart YAW_RATE_ENABLE=1.0 ACRO_YAW_RATE=30.0
+  upload ack 0
+  arm: armed (ack result 0)
+  AUTO: AUTO active
+  t=  0.0 vehicle: Mission: 1 Takeoff
+  t=  1.6 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+  t=  1.6 vehicle: Triggered AUTO. GPS speed = 0.0
+  t=  2.4 mode AUTO
+  t=  2.9 vehicle: Autoland direction= 0
+  t=  2.9 vehicle: Holding course 1 at 5.4m/s (0.0)
+  t=  9.1 vehicle: Takeoff level-off starting at 20m
+  t= 11.1 vehicle: Takeoff complete at 60.11m
+  t= 11.1 vehicle: Mission: 2 WP
+  t= 13.2 vehicle: Reached waypoint #2 dist 50m
+  t= 13.2 vehicle: Mission: 3 WP
+  t= 26.3 vehicle: Reached waypoint #3 dist 51m
+  t= 26.3 vehicle: Mission: 4 WP
+  t= 39.2 mode RTL
+  t= 39.2 vehicle: Reached waypoint #4 dist 52m
+  t= 39.2 vehicle: Mission complete, changing mode to RTL
+  t= 60.4 requested ACRO: ACRO active
+  t= 61.4 mode ACRO
+  t= 90.4 requested AUTO again: AUTO active
+  t= 90.4 vehicle: Mission: 1 Takeoff
+  t= 90.5 vehicle: Holding course 17664 at 8.9m/s (1.1)
+  t= 90.5 vehicle: Takeoff complete at 46.81m
+  t= 90.5 vehicle: Mission: 2 WP
+  t= 91.4 mode AUTO
+  t=110.7 vehicle: Reached waypoint #2 dist 47m
+  t=110.7 vehicle: Mission: 3 WP
+  t=124.1 vehicle: Reached waypoint #3 dist 53m
+  t=124.1 vehicle: Mission: 4 WP
+  t=137.1 mode RTL
+  t=137.1 vehicle: Reached waypoint #4 dist 52m
+  t=137.1 vehicle: Mission complete, changing mode to RTL
+functions hit (2): AP_YawController::get_rate_out, AP_YawController::get_servo_out
+functions never reached (0): 

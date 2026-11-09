@@ -1,0 +1,42 @@
+Temporary breakpoint 1 at 0x2b3386: file ../../libraries/APM_Control/AP_YawController.cpp, line 299.
+Temporary breakpoint 2 at 0x2b2c86: file ../../libraries/APM_Control/AP_YawController.cpp, line 189.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Smoothing reset at 0.001
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 37)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+HIT AP_YawController::get_servo_out
+#0  AP_YawController::get_servo_out (this=0x555555b78b18 <plane+41048>, scaler=2.14285707, disable_integrator=false) at ../../libraries/APM_Control/AP_YawController.cpp:189
+#1  0x00005555555cd73e in Plane::calc_nav_yaw_coordinated (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:548
+#2  0x00005555555ccfc2 in Plane::stabilize_yaw (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:397
+#3  0x00005555555eb562 in Mode::run (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode.cpp:275
+#4  0x00005555555ed3c9 in ModeAuto::run (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:205
+#5  0x00005555555cd315 in Plane::stabilize (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:470
+HIT AP_YawController::get_rate_out
+#0  AP_YawController::get_rate_out (this=0x555555b78b18 <plane+41048>, desired_rate=0, scaler=0.678548634, disable_integrator=false) at ../../libraries/APM_Control/AP_YawController.cpp:299
+#1  0x00005555555ec33e in ModeAcro::stabilize (this=0x555555b7a998 <plane+48856>) at ../../ArduPlane/mode_acro.cpp:114
+#2  0x00005555555ebf5c in ModeAcro::run (this=0x555555b7a998 <plane+48856>) at ../../ArduPlane/mode_acro.cpp:39
+#3  0x00005555555cd315 in Plane::stabilize (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:470
+#4  0x00005555555dcfeb in Functor<void>::method_wrapper<Plane, &Plane::stabilize> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#5  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39120 <Plane::scheduler_tasks+64>) at ../../libraries/AP_HAL/utility/functor.h:54
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdb20, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

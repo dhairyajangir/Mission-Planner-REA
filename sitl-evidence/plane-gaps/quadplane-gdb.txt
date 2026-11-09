@@ -1,0 +1,151 @@
+Temporary breakpoint 1 at 0xa9a9d: QuadPlane::update. (2 locations)
+Temporary breakpoint 2 at 0xaeefe: file ../../ArduPlane/quadplane.cpp, line 3345.
+Temporary breakpoint 3 at 0xaa54f: file ../../ArduPlane/quadplane.cpp, line 1949.
+Temporary breakpoint 4 at 0xab705: file ../../ArduPlane/quadplane.cpp, line 2347.
+Temporary breakpoint 5 at 0xa77c1: file ../../ArduPlane/quadplane.cpp, line 1033.
+Temporary breakpoint 6 at 0xaafb8: file ../../ArduPlane/quadplane.cpp, line 2190.
+Temporary breakpoint 7 at 0xae313: file ../../ArduPlane/quadplane.cpp, line 3111.
+Temporary breakpoint 8 at 0xab15f: file ../../ArduPlane/quadplane.cpp, line 2215.
+Temporary breakpoint 9 at 0xaad89: file ../../ArduPlane/quadplane.cpp, line 2159.
+Temporary breakpoint 10 at 0xafb66: file ../../ArduPlane/quadplane.cpp, line 3636.
+Temporary breakpoint 11 at 0xafa4c: file ../../ArduPlane/quadplane.cpp, line 3603.
+Temporary breakpoint 12 at 0xa8d11: file ../../ArduPlane/quadplane.cpp, line 1453.
+Temporary breakpoint 13 at 0xa99e6: file ../../ArduPlane/quadplane.cpp, line 1676.
+Temporary breakpoint 14 at 0xb2ec0: file ../../ArduPlane/quadplane.cpp, line 4764.
+Temporary breakpoint 15 at 0xc20da: file ../../ArduPlane/tiltrotor.cpp, line 383.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+HIT QuadPlane::update
+#0  SITL::QuadPlane::update (this=0x555555c13f90, input=...) at ../../libraries/SITL/SIM_QuadPlane.cpp:121
+#1  0x00005555558d8e10 in SITL::Aircraft::update_model (this=0x555555c13f90, input=...) at ../../libraries/SITL/SIM_Aircraft.cpp:714
+#2  0x000055555585dedd in HALSITL::SITL_State::_fdm_input_local (this=0x555555b8e140 <sitlState>) at ../../libraries/AP_HAL_SITL/SITL_State.cpp:262
+#3  0x000055555585d67c in HALSITL::SITL_State::_fdm_input_step (this=0x555555b8e140 <sitlState>) at ../../libraries/AP_HAL_SITL/SITL_State.cpp:101
+#4  0x000055555585d844 in HALSITL::SITL_State::wait_clock (this=0x555555b8e140 <sitlState>, wait_time_usec=1001) at ../../libraries/AP_HAL_SITL/SITL_State.cpp:143
+#5  0x0000555555863e72 in HALSITL::Scheduler::delay_microseconds (this=0x555555b8ea40 <sitlScheduler>, usec=1000) at ../../libraries/AP_HAL_SITL/Scheduler.cpp:142
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 170)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+HIT SLT_Transition::set_FW_roll_pitch
+#0  SLT_Transition::set_FW_roll_pitch (this=0x555555c134e0, nav_pitch_cd=@0x555555b7b910: 385, nav_roll_cd=@0x555555b7b90c: 65) at ../../ArduPlane/quadplane.cpp:4764
+#1  0x00005555555cd0d5 in Plane::stabilize (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:429
+#2  0x00005555555dcfeb in Functor<void>::method_wrapper<Plane, &Plane::stabilize> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39120 <Plane::scheduler_tasks+64>) at ../../libraries/AP_HAL/utility/functor.h:54
+#4  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+#5  0x00005555556fdbe0 in AP_Scheduler::loop (this=0x555555b6ec10 <plane+336>) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:399
+HIT Tiltrotor::update
+#0  Tiltrotor::update (this=0x555555b7cd08 <plane+57928>) at ../../ArduPlane/tiltrotor.cpp:383
+#1  0x00005555555fde5a in QuadPlane::update (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:1778
+#2  0x000055555560c52b in Plane::set_servos (this=0x555555b6eac0 <plane>) at ../../ArduPlane/servos.cpp:891
+#3  0x00005555555dd039 in Functor<void>::method_wrapper<Plane, &Plane::set_servos> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39160 <Plane::scheduler_tasks+128>) at ../../libraries/AP_HAL/utility/functor.h:54
+#5  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT SLT_Transition::update
+#0  SLT_Transition::update (this=0x555555c134e0) at ../../ArduPlane/quadplane.cpp:1453
+#1  0x00005555555fdd90 in QuadPlane::update (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:1757
+#2  0x000055555560c52b in Plane::set_servos (this=0x555555b6eac0 <plane>) at ../../ArduPlane/servos.cpp:891
+#3  0x00005555555dd039 in Functor<void>::method_wrapper<Plane, &Plane::set_servos> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39160 <Plane::scheduler_tasks+128>) at ../../libraries/AP_HAL/utility/functor.h:54
+#5  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT QuadPlane::control_auto
+#0  QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3345
+#1  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#2  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#3  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39100 <Plane::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+#5  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT QuadPlane::setup_target_position
+#0  QuadPlane::setup_target_position (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3111
+#1  0x0000555555602789 in QuadPlane::takeoff_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3191
+#2  0x0000555555603062 in QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3374
+#3  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#4  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#5  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT QuadPlane::run_xy_controller
+#0  QuadPlane::run_xy_controller (this=0x555555b7cad0 <plane+57360>, accel_limit_mss=0) at ../../ArduPlane/quadplane.cpp:2190
+#1  0x0000555555602934 in QuadPlane::takeoff_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3229
+#2  0x0000555555603062 in QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3374
+#3  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#4  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#5  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT QuadPlane::run_z_controller
+#0  QuadPlane::run_z_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:1033
+#1  0x0000555555602a9f in QuadPlane::takeoff_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3255
+#2  0x0000555555603062 in QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3374
+#3  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#4  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#5  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT QuadPlane::motors_output
+#0  QuadPlane::motors_output (this=0x555555b7cad0 <plane+57360>, run_rate_controller=true) at ../../ArduPlane/quadplane.cpp:1949
+#1  0x00005555555fddb9 in QuadPlane::update (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:1765
+#2  0x000055555560c52b in Plane::set_servos (this=0x555555b6eac0 <plane>) at ../../ArduPlane/servos.cpp:891
+#3  0x00005555555dd039 in Functor<void>::method_wrapper<Plane, &Plane::set_servos> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39160 <Plane::scheduler_tasks+128>) at ../../libraries/AP_HAL/utility/functor.h:54
+#5  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT SLT_Transition::VTOL_update
+#0  SLT_Transition::VTOL_update (this=0x555555c134e0) at ../../ArduPlane/quadplane.cpp:1676
+#1  0x00005555555fddde in QuadPlane::update (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:1767
+#2  0x000055555560c52b in Plane::set_servos (this=0x555555b6eac0 <plane>) at ../../ArduPlane/servos.cpp:891
+#3  0x00005555555dd039 in Functor<void>::method_wrapper<Plane, &Plane::set_servos> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39160 <Plane::scheduler_tasks+128>) at ../../libraries/AP_HAL/utility/functor.h:54
+#5  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=3333) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT QuadPlane::poscontrol_init_approach
+#0  QuadPlane::poscontrol_init_approach (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:2215
+#1  0x00005555556035e9 in QuadPlane::do_vtol_land (this=0x555555b7cad0 <plane+57360>, cmd=...) at ../../ArduPlane/quadplane.cpp:3495
+#2  0x00005555555e384b in Plane::start_command (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:122
+#3  0x00005555555e5ee7 in Plane::start_command_callback (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:1030
+#4  0x00005555555dd849 in Functor<bool, AP_Mission::Mission_Command const&>::method_wrapper<Plane, &Plane::start_command_callback> (obj=0x555555b6eac0 <plane>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:88
+#5  0x000055555569e51f in Functor<bool, AP_Mission::Mission_Command const&>::operator() (this=0x555555b7b940 <plane+52864>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT QuadPlane::vtol_position_controller
+#0  QuadPlane::vtol_position_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:2347
+#1  0x0000555555603086 in QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3381
+#2  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#3  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#4  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#5  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39100 <Plane::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT QuadPlane::check_land_complete
+#0  QuadPlane::check_land_complete (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3603
+#1  0x00005555556042e0 in QuadPlane::verify_vtol_land (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3753
+#2  0x00005555555e3e8f in Plane::verify_command (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:295
+#3  0x00005555555e5f31 in Plane::verify_command_callback (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:1040
+#4  0x00005555555dd8a9 in Functor<bool, AP_Mission::Mission_Command const&>::method_wrapper<Plane, &Plane::verify_command_callback> (obj=0x555555b6eac0 <plane>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:88
+#5  0x000055555569e51f in Functor<bool, AP_Mission::Mission_Command const&>::operator() (this=0x555555b7b950 <plane+52880>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT QuadPlane::update_land_positioning
+#0  QuadPlane::update_land_positioning (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:2159
+#1  0x0000555555601085 in QuadPlane::vtol_position_controller (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:2749
+#2  0x0000555555603086 in QuadPlane::control_auto (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3381
+#3  0x00005555555ecfe3 in ModeAuto::update (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:83
+#4  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#5  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT QuadPlane::check_land_final
+#0  QuadPlane::check_land_final (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3636
+#1  0x00005555556040bf in QuadPlane::verify_vtol_land (this=0x555555b7cad0 <plane+57360>) at ../../ArduPlane/quadplane.cpp:3724
+#2  0x00005555555e3e8f in Plane::verify_command (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:295
+#3  0x00005555555e5f31 in Plane::verify_command_callback (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:1040
+#4  0x00005555555dd8a9 in Functor<bool, AP_Mission::Mission_Command const&>::method_wrapper<Plane, &Plane::verify_command_callback> (obj=0x555555b6eac0 <plane>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:88
+#5  0x000055555569e51f in Functor<bool, AP_Mission::Mission_Command const&>::operator() (this=0x555555b7b950 <plane+52880>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:54
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdb10, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

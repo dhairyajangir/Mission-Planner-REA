@@ -37,6 +37,10 @@ CLASSES = {
     'AP_Radio': ['AP_Radio'], 'AP_CheckFirmware': ['AP_CheckFirmware'],
 }
 PATTERN = '(init|update|loop|read|run|setup)'
+# SWEEP_CLASSES="RCMapper,AP_JSON,..." replaces CLASSES (one library per class) and, with it, every function of those classes is instrumented instead of only init/update/loop/read/run/setup
+if os.environ.get('SWEEP_CLASSES'):
+    CLASSES = {c: [c] for c in os.environ['SWEEP_CLASSES'].split(',')}
+    PATTERN = r'\w+'
 
 
 def home_item():
@@ -54,7 +58,7 @@ def item(seq, command, point=(0.0, 0.0), alt=0.0, p1=0.0):
 def symbols_for(binary):
     """{'Class::function'} present in the binary for every class in CLASSES, from its own symbol table (nm -C), limited to init/update/loop/read/run/setup functions."""
     names = '|'.join(re.escape(c) for classes in CLASSES.values() for c in classes)
-    pattern = re.compile(r'^[0-9a-f]+ [Tt] ((?:%s)::(?:init|update|loop|read|run|setup)\w*)\(' % names)
+    pattern = re.compile(r'^[0-9a-f]+ [Tt] ((?:%s)::%s\w*)\(' % (names, '(?:init|update|loop|read|run|setup)' if PATTERN != r'\w+' else ''))
     found = set()
     out = subprocess.run(['nm', '-C', os.path.join(TREE, 'build/sitl/bin/' + binary)], capture_output=True, text=True).stdout
     for line in out.splitlines():

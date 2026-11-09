@@ -1,0 +1,111 @@
+Breakpoint 1 at 0x222af0
+Breakpoint 2 at 0x222a90
+Breakpoint 3 at 0x222ac0
+Breakpoint 4 at 0x15f400
+Breakpoint 5 at 0x15f430
+Breakpoint 6 at 0x36a364
+Breakpoint 7 at 0x36a26e
+Breakpoint 8 at 0x3589a0
+Breakpoint 9 at 0x358c80
+Breakpoint 10 at 0x358bc0
+Breakpoint 11 at 0x358ee0
+Breakpoint 12 at 0x1eead0
+Breakpoint 13 at 0x1eea70
+Breakpoint 14 at 0x1ee920
+Breakpoint 15 at 0x1ee980
+Breakpoint 16 at 0x1ee9e0
+Breakpoint 17 at 0x228d60
+Breakpoint 18 at 0x187270
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 36)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+
+Thread 1 "arducopter" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdc50, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000555555776af0 <AP_ExternalControl::AP_ExternalControl()>
+	breakpoint already hit 1 time
+        silent
+        continue
+2       breakpoint     keep y   0x0000555555776a90 <AP_ExternalControl::arm(AP_Arming::Method, bool)>
+        silent
+        continue
+3       breakpoint     keep y   0x0000555555776ac0 <AP_ExternalControl::disarm(AP_Arming::Method, bool)>
+        silent
+        continue
+4       breakpoint     keep y   0x00005555556b3400 <AP_InternalError::error(AP_InternalError::error_t, unsigned short)>
+        silent
+        continue
+5       breakpoint     keep y   0x00005555556b3430 <AP_InternalError::errors_as_string(unsigned char*, unsigned short) const>
+        silent
+        continue
+6       breakpoint     keep y   0x00005555558be364 <AP_JSON::load_json(char const*)>
+	breakpoint already hit 1 time
+        silent
+        continue
+7       breakpoint     keep y   0x00005555558be26e <AP_JSON::parse(AP_JSON::value&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+	breakpoint already hit 1 time
+        silent
+        continue
+8       breakpoint     keep y   0x00005555558ac9a0 <AP_RAMTRON::init()>
+        silent
+        continue
+9       breakpoint     keep y   0x00005555558acc80 <AP_RAMTRON::read(unsigned int, unsigned char*, unsigned int)>
+        silent
+        continue
+10      breakpoint     keep y   0x00005555558acbc0 <AP_RAMTRON::send_offset(unsigned char, unsigned int) const>
+        silent
+        continue
+11      breakpoint     keep y   0x00005555558acee0 <AP_RAMTRON::write(unsigned int, unsigned char const*, unsigned int)>
+        silent
+        continue
+12      breakpoint     keep y   0x0000555555742ad0 <AP_SerialLED::send(unsigned char)>
+        silent
+        continue
+13      breakpoint     keep y   0x0000555555742a70 <AP_SerialLED::set_RGB(unsigned char, signed char, unsigned char, unsigned char, unsigned char)>
+        silent
+        continue
+14      breakpoint     keep y   0x0000555555742920 <AP_SerialLED::set_num_neopixel(unsigned char, unsigned char)>
+        silent
+        continue
+15      breakpoint     keep y   0x0000555555742980 <AP_SerialLED::set_num_neopixel_rgb(unsigned char, unsigned char)>
+        silent
+        continue
+16      breakpoint     keep y   0x00005555557429e0 <AP_SerialLED::set_num_profiled(unsigned char, unsigned char)>
+        silent
+        continue
+17      breakpoint     keep y   0x000055555577cd60 <RCMapper::RCMapper()>
+	breakpoint already hit 1 time
+        silent
+        continue
+18      breakpoint     keep y   0x00005555556db270 <StorageManager::erase()>
+	breakpoint already hit 1 time
+        silent
+        continue

@@ -1,0 +1,108 @@
+Breakpoint 1 at 0x29c18e: file ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp, line 18.
+Breakpoint 2 at 0x29c12e: file ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp, line 10.
+Breakpoint 3 at 0x29c162: file ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp, line 15.
+Breakpoint 4 at 0x1b0723: file ../../libraries/AP_InternalError/AP_InternalError.cpp, line 17.
+Breakpoint 5 at 0x1b082f: file ../../libraries/AP_InternalError/AP_InternalError.cpp, line 80.
+Breakpoint 6 at 0x1b089c: file ../../libraries/AP_InternalError/AP_InternalError.cpp, line 86.
+Breakpoint 7 at 0x457e80: file ../../libraries/AP_JSON/AP_JSON.cpp, line 48.
+Breakpoint 8 at 0x458a1a: file ../../libraries/AP_JSON/AP_JSON.cpp, line 714.
+Breakpoint 9 at 0x446a7f: file ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp, line 50.
+Breakpoint 10 at 0x446f22: file ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp, line 134.
+Breakpoint 11 at 0x446e1a: file ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp, line 122.
+Breakpoint 12 at 0x447223: file ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp, line 191.
+Breakpoint 13 at 0x25655d: file ../../libraries/AP_SerialLED/AP_SerialLED.cpp, line 76.
+Breakpoint 14 at 0x2564e9: file ../../libraries/AP_SerialLED/AP_SerialLED.cpp, line 67.
+Breakpoint 15 at 0x256340: file ../../libraries/AP_SerialLED/AP_SerialLED.cpp, line 33.
+Breakpoint 16 at 0x2563ba: file ../../libraries/AP_SerialLED/AP_SerialLED.cpp, line 42.
+Breakpoint 17 at 0x256434: file ../../libraries/AP_SerialLED/AP_SerialLED.cpp, line 51.
+Breakpoint 18 at 0x2a51d6: file ../../libraries/AP_RCMapper/AP_RCMapper.cpp, line 70.
+Breakpoint 19 at 0x1e6930: file ../../libraries/StorageManager/StorageManager.cpp, line 111.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 54)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdaa0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00005555557f018e in AP_ExternalControl::AP_ExternalControl() at ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:18
+	breakpoint already hit 1 time
+        silent
+        continue
+2       breakpoint     keep y   0x00005555557f012e in AP_ExternalControl::arm(AP_Arming::Method, bool) at ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:10
+        silent
+        continue
+3       breakpoint     keep y   0x00005555557f0162 in AP_ExternalControl::disarm(AP_Arming::Method, bool) at ../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:15
+        silent
+        continue
+4       breakpoint     keep y   0x0000555555704723 in AP_InternalError::error(AP_InternalError::error_t, unsigned short) at ../../libraries/AP_InternalError/AP_InternalError.cpp:17
+        silent
+        continue
+5       breakpoint     keep y   0x000055555570482f in AP_InternalError::error_to_string(char*, unsigned short, AP_InternalError::error_t) const at ../../libraries/AP_InternalError/AP_InternalError.cpp:80
+        silent
+        continue
+6       breakpoint     keep y   0x000055555570489c in AP_InternalError::errors_as_string(unsigned char*, unsigned short) const at ../../libraries/AP_InternalError/AP_InternalError.cpp:86
+        silent
+        continue
+7       breakpoint     keep y   0x00005555559abe80 in AP_JSON::load_json(char const*) at ../../libraries/AP_JSON/AP_JSON.cpp:48
+	breakpoint already hit 1 time
+        silent
+        continue
+8       breakpoint     keep y   0x00005555559aca1a in AP_JSON::parse(AP_JSON::value&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) at ../../libraries/AP_JSON/AP_JSON.cpp:714
+	breakpoint already hit 1 time
+        silent
+        continue
+9       breakpoint     keep y   0x000055555599aa7f in AP_RAMTRON::init() at ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp:50
+        silent
+        continue
+10      breakpoint     keep y   0x000055555599af22 in AP_RAMTRON::read(unsigned int, unsigned char*, unsigned int) at ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp:134
+        silent
+        continue
+11      breakpoint     keep y   0x000055555599ae1a in AP_RAMTRON::send_offset(unsigned char, unsigned int) const at ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp:122
+        silent
+        continue
+12      breakpoint     keep y   0x000055555599b223 in AP_RAMTRON::write(unsigned int, unsigned char const*, unsigned int) at ../../libraries/AP_RAMTRON/AP_RAMTRON.cpp:191
+        silent
+        continue
+13      breakpoint     keep y   0x00005555557aa55d in AP_SerialLED::send(unsigned char) at ../../libraries/AP_SerialLED/AP_SerialLED.cpp:76
+        silent
+        continue
+14      breakpoint     keep y   0x00005555557aa4e9 in AP_SerialLED::set_RGB(unsigned char, signed char, unsigned char, unsigned char, unsigned char) at ../../libraries/AP_SerialLED/AP_SerialLED.cpp:67
+        silent
+        continue
+15      breakpoint     keep y   0x00005555557aa340 in AP_SerialLED::set_num_neopixel(unsigned char, unsigned char) at ../../libraries/AP_SerialLED/AP_SerialLED.cpp:33
+        silent
+        continue
+16      breakpoint     keep y   0x00005555557aa3ba in AP_SerialLED::set_num_neopixel_rgb(unsigned char, unsigned char) at ../../libraries/AP_SerialLED/AP_SerialLED.cpp:42
+        silent
+        continue
+17      breakpoint     keep y   0x00005555557aa434 in AP_SerialLED::set_num_profiled(unsigned char, unsigned char) at ../../libraries/AP_SerialLED/AP_SerialLED.cpp:51
+        silent
+        continue
+18      breakpoint     keep y   0x00005555557f91d6 in RCMapper::RCMapper() at ../../libraries/AP_RCMapper/AP_RCMapper.cpp:70
+	breakpoint already hit 1 time
+        silent
+        continue
+19      breakpoint     keep y   0x000055555573a930 in StorageManager::erase() at ../../libraries/StorageManager/StorageManager.cpp:111
+	breakpoint already hit 1 time
+        silent
+        continue
