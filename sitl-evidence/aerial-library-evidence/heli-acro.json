@@ -1,0 +1,14 @@
+{
+ "notes": [
+  "mode before: STABILIZE",
+  "ACRO disarmed: ACRO active | ",
+  "mode after: ACRO",
+  "arm: not armed after 60 s (last ack result 4) | Arm: Motor Interlock Enabled; PreArm: Motor Interlock Enabled",
+  "ACRO armed: ACRO active | ",
+  "mode after: ACRO",
+  "disarm: disarmed"
+ ],
+ "logs": [
+  "heli-acro-00000001.BIN.gz"
+ ]
+}

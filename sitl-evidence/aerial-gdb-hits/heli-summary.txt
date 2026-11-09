@@ -1,0 +1,6 @@
+flight notes:
+  STABILIZE: STABILIZE active
+  ACRO: ACRO active
+  STABILIZE: STABILIZE active
+functions hit (1): AC_InputManager_Heli::get_pilot_desired_collective
+functions never reached (0): 

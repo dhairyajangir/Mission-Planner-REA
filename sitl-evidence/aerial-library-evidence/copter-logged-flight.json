@@ -1,0 +1,38 @@
+{
+ "stat_before": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "disarmed_by_itself": true,
+ "stat_after": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 302.9848327636719,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 85.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 135.0
+ },
+ "log_bitmask": 4194303.0,
+ "log_replay": 1.0,
+ "logs": [
+  "copter-logged-flight-00000001.BIN.gz"
+ ],
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  5.4 vehicle: Mission: 2 WP",
+  "t= 18.5 vehicle: Reached command #2",
+  "t= 18.5 vehicle: Mission: 3 WP",
+  "t= 31.5 vehicle: Reached command #3",
+  "t= 31.5 vehicle: Mission: 4 RTL",
+  "t= 80.9 vehicle: SIM Hit ground at 0.498628 m/s",
+  "t= 83.0 vehicle: Disarming motors",
+  "t= 83.7 disarmed"
+ ]
+}

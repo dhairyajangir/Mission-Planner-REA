@@ -1,0 +1,16 @@
+{
+ "notes": [
+  "mode before: STABILIZE",
+  "custom mode 100 on the ground, disarmed: ack 4, mode number 0, texts ['Mode change to Flip 2 failed: init failed']",
+  "arm: armed (ack result 0)",
+  "custom mode 100 on the ground, armed: ack 4, mode number 0, texts ['Mode change to Flip 2 failed: init failed']",
+  "start: mission start accepted (ack result 0)",
+  "height check: mode AUTO",
+  "ALT_HOLD in flight: ALT_HOLD active",
+  "custom mode 100 in flight from ALT_HOLD: ack 0, mode number 2, texts []",
+  "mode after: ALT_HOLD"
+ ],
+ "logs": [
+  "custom-mode-00000001.BIN.gz"
+ ]
+}

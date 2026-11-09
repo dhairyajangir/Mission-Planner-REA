@@ -1,0 +1,37 @@
+Temporary breakpoint 1 at 0x22ad30
+Temporary breakpoint 2 at 0x1d9390
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 52)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+HIT AP_GroundEffect::update
+#0  0x000055555577ed30 in AP_GroundEffect::update(bool, bool, bool) ()
+#1  0x00005555555cc62d in void Functor<void>::method_wrapper<Copter, &Copter::throttle_loop>(void*) ()
+#2  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+#3  0x00005555556aec1b in AP_Scheduler::loop() ()
+#4  0x00005555556b1d99 in AP_Vehicle::loop() ()

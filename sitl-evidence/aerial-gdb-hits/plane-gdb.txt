@@ -1,0 +1,86 @@
+Temporary breakpoint 1 at 0x2b21c2: file ../../libraries/APM_Control/AP_RollController.cpp, line 229.
+Temporary breakpoint 2 at 0x2b1d0c: file ../../libraries/APM_Control/AP_PitchController.cpp, line 278.
+Temporary breakpoint 3 at 0x2b3386: file ../../libraries/APM_Control/AP_YawController.cpp, line 299.
+Temporary breakpoint 4 at 0x2b2347: file ../../libraries/APM_Control/AP_SteerController.cpp, line 125.
+Temporary breakpoint 5 at 0x2be230: file ../../libraries/AP_TECS/AP_TECS.cpp, line 1279.
+Temporary breakpoint 6 at 0x2b89ed: file ../../libraries/AP_L1_Control/AP_L1_Control.cpp, line 207.
+Temporary breakpoint 7 at 0x2dabdd: file ../../libraries/AP_Landing/AP_Landing.cpp, line 263.
+Temporary breakpoint 8 at 0x2bf514: file ../../libraries/AP_InertialNav/AP_InertialNav.cpp, line 15.
+Temporary breakpoint 9 at 0x2117eb: file ../../libraries/AP_ICEngine/AP_ICEngine.cpp, line 301.
+Temporary breakpoint 10 at 0x2ef6bc: file ../../libraries/AP_Quicktune/AP_Quicktune.cpp, line 135.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 35)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+HIT AP_InertialNav::update
+#0  AP_InertialNav::update (this=0x555555b7cae0 <plane+57376>, high_vibes=false) at ../../libraries/AP_InertialNav/AP_InertialNav.cpp:15
+#1  0x00005555555d8b72 in Plane::ahrs_update (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:206
+#2  0x00005555555dcf9d in Functor<void>::method_wrapper<Plane, &Plane::ahrs_update> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b390e0 <Plane::scheduler_tasks>) at ../../libraries/AP_HAL/utility/functor.h:54
+#4  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=20000) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT AP_Quicktune::update
+#0  AP_Quicktune::update (this=0x555555b7b070 <plane+50608>, mode_supports_quicktune=false) at ../../libraries/AP_Quicktune/AP_Quicktune.cpp:135
+#1  0x00005555555daef7 in Plane::update_quicktune (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:1103
+#2  0x00005555555dd6d1 in Functor<void>::method_wrapper<Plane, &Plane::update_quicktune> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b396c0 <Plane::scheduler_tasks+1504>) at ../../libraries/AP_HAL/utility/functor.h:54
+#4  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=20000) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT AP_ICEngine::update
+#0  AP_ICEngine::update (this=0x555555b76e20 <plane+33632>) at ../../libraries/AP_ICEngine/AP_ICEngine.cpp:301
+#1  0x00005555555dd350 in Functor<void>::method_wrapper<AP_ICEngine, &AP_ICEngine::update> (obj=0x555555b76e20 <plane+33632>) at ../../libraries/AP_HAL/utility/functor.h:88
+#2  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b393e0 <Plane::scheduler_tasks+768>) at ../../libraries/AP_HAL/utility/functor.h:54
+#3  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=20000) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+#4  0x00005555556fdbe0 in AP_Scheduler::loop (this=0x555555b6ec10 <plane+336>) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:399
+HIT AP_RollController::run_axis_rate_control
+#0  AP_RollController::run_axis_rate_control (this=0x555555b787b8 <plane+40184>, desired_rate_degs=-0.00628166553, scaler=2.14285707, disable_integrator=false, ground_mode=false) at ../../libraries/APM_Control/AP_RollController.cpp:229
+#1  0x0000555555804a19 in AP_FW_Controller::run_angle_control (this=0x555555b787b8 <plane+40184>, desired_angle_cd=0, scaler=2.14285707, disable_integrator=false, ground_mode=false) at ../../libraries/APM_Control/AP_FW_Controller.cpp:126
+#2  0x00005555555cc478 in Plane::stabilize_roll_get_roll_out (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:179
+#3  0x00005555555cc181 in Plane::stabilize_roll (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:135
+#4  0x00005555555eb544 in Mode::run (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode.cpp:273
+HIT AP_PitchController::run_axis_rate_control
+#0  AP_PitchController::run_axis_rate_control (this=0x555555b78968 <plane+40616>, desired_rate_degs=0.846195638, scaler=2.14285707, disable_integrator=false, ground_mode=false) at ../../libraries/APM_Control/AP_PitchController.cpp:278
+#1  0x0000555555804a19 in AP_FW_Controller::run_angle_control (this=0x555555b78968 <plane+40616>, desired_angle_cd=1500, scaler=2.14285707, disable_integrator=false, ground_mode=false) at ../../libraries/APM_Control/AP_FW_Controller.cpp:126
+#2  0x00005555555cc92a in Plane::stabilize_pitch_get_pitch_out (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:262
+#3  0x00005555555cc502 in Plane::stabilize_pitch (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:198
+#4  0x00005555555eb553 in Mode::run (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode.cpp:274
+HIT AP_TECS::update_pitch_throttle
+#0  AP_TECS::update_pitch_throttle (this=0x555555b78520 <plane+39520>, hgt_dem_cm=6000, EAS_dem_cm=2200, flight_stage=AP_FixedWing::FlightStage::TAKEOFF, distance_beyond_land_wp=0, ptchMinCO_cd=1500, throttle_nudge=0, hgt_afe=-0.0121717472, load_factor=1, pitch_trim_deg=0) at ../../libraries/AP_TECS/AP_TECS.cpp:1279
+#1  0x00005555555d9ec8 in Plane::update_alt (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:675
+#2  0x00005555555dd1f1 in Functor<void>::method_wrapper<Plane, &Plane::update_alt> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b392c0 <Plane::scheduler_tasks+480>) at ../../libraries/AP_HAL/utility/functor.h:54
+#4  0x00005555556fd72f in AP_Scheduler::run (this=0x555555b6ec10 <plane+336>, time_available=20000) at ../../libraries/AP_Scheduler/AP_Scheduler.cpp:270
+HIT AP_L1_Control::update_waypoint
+#0  AP_L1_Control::update_waypoint (this=0x555555b78740 <plane+40064>, prev_WP=..., next_WP=..., dist_min=0) at ../../libraries/AP_L1_Control/AP_L1_Control.cpp:207
+#1  0x00005555555e4ea7 in Plane::verify_nav_wp (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:664
+#2  0x00005555555e3c0a in Plane::verify_command (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:241
+#3  0x00005555555e5f31 in Plane::verify_command_callback (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:1040
+#4  0x00005555555dd8a9 in Functor<bool, AP_Mission::Mission_Command const&>::method_wrapper<Plane, &Plane::verify_command_callback> (obj=0x555555b6eac0 <plane>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT AP_Landing::verify_land
+#0  AP_Landing::verify_land (this=0x555555b7c480 <plane+55744>, prev_WP_loc=..., next_WP_loc=..., current_loc=..., height=47.6999512, sink_rate=1.3225162, wp_proportion=0.00184591708, last_flying_ms=84744, is_armed=true, is_flying=true, rangefinder_state_in_range=false) at ../../libraries/AP_Landing/AP_Landing.cpp:263
+#1  0x00005555555e3d82 in Plane::verify_command (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:261
+#2  0x00005555555e5f31 in Plane::verify_command_callback (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:1040
+#3  0x00005555555dd8a9 in Functor<bool, AP_Mission::Mission_Command const&>::method_wrapper<Plane, &Plane::verify_command_callback> (obj=0x555555b6eac0 <plane>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:88
+#4  0x000055555569e51f in Functor<bool, AP_Mission::Mission_Command const&>::operator() (this=0x555555b7b950 <plane+52880>, args#0=...) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT AP_SteerController::get_steering_out_rate
+#0  AP_SteerController::get_steering_out_rate (this=0x555555b78cc0 <plane+41472>, desired_rate=-6.31999969) at ../../libraries/APM_Control/AP_SteerController.cpp:125
+#1  0x00005555558069df in AP_SteerController::get_steering_out_angle_error (this=0x555555b78cc0 <plane+41472>, angle_err=-474) at ../../libraries/APM_Control/AP_SteerController.cpp:244
+#2  0x00005555555cd81a in Plane::calc_nav_yaw_course (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:573
+#3  0x00005555555ccf86 in Plane::stabilize_yaw (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Attitude.cpp:389
+#4  0x00005555555eb562 in Mode::run (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode.cpp:275
