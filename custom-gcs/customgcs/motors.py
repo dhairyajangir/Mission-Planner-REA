@@ -28,6 +28,7 @@ class Step:
     needs_armed: bool = False
     needs_disarmed: bool = False
     repeat_every_s: Optional[float] = None
+    discover: bool = False                   # scripted matrix: the order is defined by a Lua script the ground station cannot see; expect_outputs is then the set of motor outputs and each step must move exactly one of them
 
 
 def layouts() -> Mapping[str, list]:
@@ -81,11 +82,20 @@ def _layout(info: VehicleInfo) -> list:
 # MOTOR_FRAME_TYPE_NYT_PLUS (16) and NYT_X (17) exist only in ArduPlane (and unknown) builds of AP_MotorsMatrix (#if APM_BUILD_TYPE(APM_BUILD_ArduPlane) ...). A Copter
 # with class 1 and one of those types is not initialised and refuses the motor test with "Motor Test: Check frame class and type" (sitl-evidence/custom-gcs-all-layouts/).
 _PLANE_ONLY_TYPES = {(1, 16), (1, 17)}
+# Scripting matrix classes (15 and 17): the test order comes from add_motor(..., testing_order) calls in a Lua script on the vehicle. The ground station cannot read that script, so it
+# plans up to 32 sequences, stops at the first that moves nothing, and checks that every step moved exactly one output, no output twice, and every output the vehicle lists as a motor was covered (link.check_discovery).
+_SCRIPTED_CLASSES = (15, 17)
 
 
 def plan(info: VehicleInfo, params: Mapping[str, float], throttle_percent: float = 10.0, seconds: float = 1.0) -> List[Step]:
     if info.kind == 'copter' and (info.frame_class, info.frame_type) in _PLANE_ONLY_TYPES:
         raise Unsupported('frame class %s type %s (NYT) is compiled only into ArduPlane builds; a Copter refuses the motor test ("Check frame class and type")' % (info.frame_class, info.frame_type))
+    if info.kind == 'copter' and info.frame_class in _SCRIPTED_CLASSES:
+        if not servo_of_motor(params):
+            raise Unsupported('scripted matrix frame without any motor output assigned (is the Lua script running?)')
+        # SERVOn_FUNCTION parameters exist only for outputs 1..16 here, so the true motor count cannot be read: plan 32 sequences; the runner stops at the first one that moves nothing.
+        return [Step('sequence %d: whichever motor the script assigns' % n, (float(n), 0.0, throttle_percent, seconds, 1.0, 1.0, 0.0), tuple(range(1, 33)), needs_disarmed=True, discover=True)
+                for n in range(1, 33)]
     if info.kind in ('copter', 'quadplane'):
         outputs = servo_of_motor(params)
         steps = []

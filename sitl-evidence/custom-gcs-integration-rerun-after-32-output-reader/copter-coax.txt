@@ -1,0 +1,10 @@
+== copter-coax (arducopter --model coaxcopter)
+vehicle: copter, frame class 9 (FRAME_CLASS), type 1 (FRAME_TYPE), 1410 parameters
+sequence 1: motor 1 (flap servo)         expected=(1,)     moved=(1,)     OK 
+sequence 2: motor 2 (flap servo)         expected=(2,)     moved=(2,)     OK 
+sequence 3: motor 3 (flap servo)         expected=(3,)     moved=(3,)     OK 
+sequence 4: motor 4 (flap servo)         expected=(4,)     moved=(4,)     OK 
+sequence 5: motor 5 (motor)              expected=(5,)     moved=(5,)     OK 
+sequence 6: motor 6 (motor)              expected=(6,)     moved=(6,)     OK 
+6 of 6 steps matched
+exit=0

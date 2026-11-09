@@ -2,7 +2,7 @@
 # Run the prototype's motor test (python -m customgcs motor-test) against disposable simulators in Ubuntu-E and record each outcome in evidence/.
 # usage: bash run-integration.sh   (copies custom-gcs to ~/custom-gcs, starts each simulator on tcp 5760, runs, stops). Simulator only, never a real vehicle.
 REPO='/mnt/e/DroneProject/The Drone Project/mission-planner-rea-upload'
-OUT="$REPO/sitl-evidence/custom-gcs-integration"
+OUT="${CG_OUT:-$REPO/sitl-evidence/custom-gcs-integration}"
 mkdir -p "$OUT"
 source ~/venv-ap/bin/activate
 rm -rf ~/custom-gcs && cp -r "$REPO/custom-gcs" ~/custom-gcs

@@ -6,9 +6,10 @@ import time
 from dataclasses import dataclass
 from typing import Dict, List, Mapping, Tuple
 
-from .motors import Step, plan, motor_number, servo_functions
+from .motors import Step, plan, motor_number, servo_functions, servo_of_motor
 from .vehicle import VehicleInfo, detect
 
+_STATE = [0] * 32       # latest value of outputs 1..32, shared between reads so a port 0 message does not erase port 1 values
 MOVED_US = 20            # an output counts as moved when it leaves its value at the start of the step by this much or more
 
 
@@ -50,8 +51,16 @@ def read_params(link, quiet_seconds: float = 8.0) -> Dict[str, float]:
     return params
 
 
-def _outputs(msg) -> List[int]:
-    return [getattr(msg, 'servo%d_raw' % i, 0) for i in range(1, 17)]
+OUTPUT_COUNT = 32
+
+
+def _outputs(msg, state: List[int]) -> List[int]:
+    """SERVO_OUTPUT_RAW carries 16 outputs per message; `port` 0 is outputs 1..16 and port 1 is 17..32. Keep the latest value of all 32 and return a copy."""
+    base = 16 * getattr(msg, 'port', 0)
+    for i in range(16):
+        if base + i < OUTPUT_COUNT:
+            state[base + i] = getattr(msg, 'servo%d_raw' % (i + 1), 0)
+    return list(state)
 
 
 def _drain(link, seconds: float, send=None, every: float = 0.25, events=None) -> List[List[int]]:
@@ -59,6 +68,7 @@ def _drain(link, seconds: float, send=None, every: float = 0.25, events=None) ->
     command acknowledgements and ('text', message) for STATUSTEXT."""
     from pymavlink import mavutil
     rows, end, last = [], time.time() + seconds, 0.0
+    state = _STATE
     while time.time() < end:
         if send and time.time() - last >= every:
             send()
@@ -68,7 +78,7 @@ def _drain(link, seconds: float, send=None, every: float = 0.25, events=None) ->
             continue
         kind = msg.get_type()
         if kind == 'SERVO_OUTPUT_RAW':
-            rows.append(_outputs(msg))
+            rows.append(_outputs(msg, state))
         elif events is not None and kind == 'COMMAND_ACK' and msg.command == mavutil.mavlink.MAV_CMD_DO_MOTOR_TEST:
             events.append(('ack', msg.result))
         elif events is not None and kind == 'STATUSTEXT':
@@ -106,27 +116,42 @@ def run_step(link, step: Step, baseline: List[int], watch: Tuple[int, ...] = (),
     note = rejection or ('accepted after %d tries' % tries if tries > 1 else '')
     if not rows:
         return StepResult(step.label, step.expect_outputs, (), False, 'no SERVO_OUTPUT_RAW received'), baseline
-    moved = tuple(i + 1 for i in range(16) if (not watch or (i + 1) in watch) and max(abs(r[i] - baseline[i]) for r in rows) >= MOVED_US)
-    ok = moved == tuple(sorted(step.expect_outputs)) and not rejection
+    moved = tuple(i + 1 for i in range(OUTPUT_COUNT) if (not watch or (i + 1) in watch) and max(abs(r[i] - baseline[i]) for r in rows) >= MOVED_US)
+    ok = ((len(moved) == 1 and moved[0] in step.expect_outputs) if step.discover else moved == tuple(sorted(step.expect_outputs))) and not rejection
     return StepResult(step.label, step.expect_outputs, moved, ok, note), rows[-1]
+
+
+def check_discovery(steps: List[Step], results: List[StepResult], assigned: Tuple[int, ...] = ()) -> List[StepResult]:
+    """For a scripted matrix: every step moved exactly one output, no output moved twice, and every output the vehicle lists as a motor (`assigned`) was covered.
+    Returns [] for any other plan."""
+    if not steps or not steps[0].discover:
+        return []
+    seen = [r.moved[0] for r in results if len(r.moved) == 1]
+    ok = bool(results) and len(seen) == len(results) and len(set(seen)) == len(seen) and set(assigned) <= set(seen)
+    return [StepResult('each step moved one new output, all assigned motors covered', tuple(sorted(assigned)), tuple(sorted(set(seen))), ok,
+                       '%d motors found, order observed: %s' % (len(seen), ' '.join(map(str, seen))))]
 
 
 def run_motor_test(link, info: VehicleInfo, params: Mapping[str, float], throttle_percent: float = 10.0, arm: bool = False) -> List[StepResult]:
     """Run the planned steps. A Sub needs to be armed; pass arm=True to force-arm it (simulator only) and disarm afterwards."""
     from pymavlink import mavutil
     link.mav.command_long_send(link.target_system, link.target_component, mavutil.mavlink.MAV_CMD_SET_MESSAGE_INTERVAL, 0, 36, 50000, 0, 0, 0, 0, 0)
+    _STATE[:] = [0] * OUTPUT_COUNT
     steps = plan(info, params, throttle_percent)
     needs_armed = any(s.needs_armed for s in steps)
     if needs_armed and not arm:
         raise RuntimeError('this vehicle must be armed for a motor test; pass arm=True to force-arm a simulator')
     if needs_armed:
         link.mav.command_long_send(link.target_system, link.target_component, mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM, 0, 1, 21196, 0, 0, 0, 0, 0)
-    baseline = (_drain(link, 3.0) or [[0] * 16])[-1]
-    watch = monitored_outputs(params)
+    baseline = (_drain(link, 3.0) or [[0] * OUTPUT_COUNT])[-1]
+    watch = () if steps and steps[0].discover else monitored_outputs(params)
     results = []
     for step in steps:
         result, baseline = run_step(link, step, baseline, watch)
+        if step.discover and results and not result.moved and not result.note.startswith('rejected'):
+            break                                            # past the last motor of the scripted matrix
         results.append(result)
+    results.extend(check_discovery(steps, results, tuple(sorted(servo_of_motor(params).values()))))
     if needs_armed:
         link.mav.command_long_send(link.target_system, link.target_component, mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM, 0, 0, 21196, 0, 0, 0, 0, 0)
     return results

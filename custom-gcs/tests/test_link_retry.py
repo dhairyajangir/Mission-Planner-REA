@@ -42,12 +42,12 @@ STEP = motors.Step('throttle left', (0, 0, 40.0, 0.1, 0, 0, 0), (1,), False, Tru
 
 def test_rejected_motor_test_is_retried_until_accepted(monkeypatch):
     monkeypatch.setattr(link.time, 'sleep', lambda s: None)
-    result, _ = link.run_step(FakeLink(reject=2), STEP, [1500] * 16, ready_timeout=30)
+    result, _ = link.run_step(FakeLink(reject=2), STEP, [1500] * 16 + [0] * 16, ready_timeout=30)
     assert result.ok and result.moved == (1,)
     assert 'accepted after' in result.note
 
 
 def test_never_accepted_is_reported_as_mismatch(monkeypatch):
     monkeypatch.setattr(link.time, 'sleep', lambda s: None)
-    result, _ = link.run_step(FakeLink(reject=10 ** 6), STEP, [1500] * 16, ready_timeout=0.5)
+    result, _ = link.run_step(FakeLink(reject=10 ** 6), STEP, [1500] * 16 + [0] * 16, ready_timeout=0.5)
     assert not result.ok and result.note.startswith('rejected (ack result 4')

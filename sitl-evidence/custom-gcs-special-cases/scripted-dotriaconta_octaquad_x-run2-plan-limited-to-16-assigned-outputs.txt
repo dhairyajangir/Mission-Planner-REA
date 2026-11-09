@@ -1,0 +1,21 @@
+== scripted-dotriaconta_octaquad_x (model dotriaconta_octaquad_x, set {'SCR_ENABLE': 1}) 75 s
+vehicle: copter, FRAME_CLASS 15, FRAME_TYPE 0, 1445 parameters
+sequence 1: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(1,)                     OK 
+sequence 2: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(4,)                     OK 
+sequence 3: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(2,)                     OK 
+sequence 4: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(3,)                     OK 
+sequence 5: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(5,)                     OK 
+sequence 6: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(8,)                     OK 
+sequence 7: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(6,)                     OK 
+sequence 8: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(7,)                     OK 
+sequence 9: whichever motor the script assigns   expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(9,)                     OK 
+sequence 10: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(12,)                    OK 
+sequence 11: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(10,)                    OK 
+sequence 12: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(11,)                    OK 
+sequence 13: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(13,)                    OK 
+sequence 14: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(16,)                    OK 
+sequence 15: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(14,)                    OK 
+sequence 16: whichever motor the script assigns  expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(15,)                    OK 
+every motor output moved exactly once            expected=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) moved=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) OK order observed: 1 4 2 3 5 8 6 7 9 12 10 11 13 16 14 15
+RESULT 17 of 17 steps matched
+LUA CHECK EXCEPTION KeyError(17)

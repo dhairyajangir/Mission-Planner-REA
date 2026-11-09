@@ -103,10 +103,32 @@ def test_rover_skid_uses_left_and_right_outputs_and_has_no_main_sail():
     assert [s.expect_outputs for s in steps] == [(), (), (1,), (3,)]
 
 
-def test_scripted_matrix_class_is_unsupported_without_its_script():
-    p = copter_params(15, 0)
+def test_scripted_matrix_without_motor_outputs_is_unsupported():
+    p = {'FRAME_CLASS': 15, 'FRAME_TYPE': 0}
     with pytest.raises(motors.Unsupported):
         motors.plan(vehicle.detect(p, mav_type=2), p)
+
+
+def test_scripted_matrix_plans_up_to_32_discovery_steps():
+    p = copter_params(15, 0)
+    steps = motors.plan(vehicle.detect(p, mav_type=2), p)
+    assert len(steps) == 32 and all(s.discover and s.expect_outputs == tuple(range(1, 33)) for s in steps)
+    assert [s.params[0] for s in steps][:3] == [1.0, 2.0, 3.0]
+
+
+def test_discovery_check_demands_new_output_per_step_and_assigned_coverage():
+    from customgcs import link
+    p = copter_params(15, 0)
+    steps = motors.plan(vehicle.detect(p, mav_type=2), p)
+    assigned = tuple(range(1, 9))
+    done = [link.StepResult(s.label, s.expect_outputs, (o,), True) for s, o in zip(steps, (3, 1, 2, 4, 5, 6, 7, 8, 9, 10))]      # 10 motors found, 8 listed
+    assert link.check_discovery(steps, done, assigned)[0].ok
+    twice = done[:7] + [link.StepResult('x', (), (3,), True)]
+    assert not link.check_discovery(steps, twice, assigned)[0].ok
+    missing = [link.StepResult(s.label, s.expect_outputs, (o,), True) for s, o in zip(steps, (3, 1, 2, 4))]
+    assert not link.check_discovery(steps, missing, assigned)[0].ok
+    quad = copter_params(1, 0)
+    assert link.check_discovery(motors.plan(vehicle.detect(quad, mav_type=2), quad), []) == []
 
 
 def test_plane_and_blimp_are_unsupported():
