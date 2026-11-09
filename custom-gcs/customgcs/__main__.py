@@ -84,8 +84,9 @@ def _flight_commands(args, conn) -> int:
 
 
 def _mission_commands(args, conn) -> int:
+    kind = {'mission': mission.MISSION, 'fence': mission.FENCE, 'rally': mission.RALLY}[args.list]
     if args.command == 'mission-clear':
-        print('mission clear ack type', mission.clear(conn))
+        print('mission clear ack type', mission.clear(conn, mission_type=kind))
         return 0
     if args.command == 'mission-start':
         result = flight.start_mission(conn)
@@ -95,7 +96,7 @@ def _mission_commands(args, conn) -> int:
         print('--file is required')
         return 2
     if args.command == 'mission-download':
-        items = mission.download(conn)
+        items = mission.download(conn, mission_type=kind)
         with open(args.file, 'w', encoding='utf-8') as f:
             f.write(mission.dumps_wpl(items))
         print('downloaded %d items to %s' % (len(items), args.file))
@@ -103,10 +104,10 @@ def _mission_commands(args, conn) -> int:
     with open(args.file, encoding='utf-8') as f:
         items = mission.loads_wpl(f.read())
     if args.command == 'mission-upload':
-        ack = mission.upload(conn, items)
+        ack = mission.upload(conn, items, mission_type=kind)
         print('uploaded %d items, ack type %d (%s)' % (len(items), ack, 'accepted' if ack == 0 else 'refused'))
         return 0 if ack == 0 else 1
-    problems = mission.verify(items, mission.download(conn))
+    problems = mission.verify(items, mission.download(conn, mission_type=kind), skip_home=(kind == mission.MISSION))
     for p in problems:
         print(p)
     print('mission matches the file' if not problems else '%d differences' % len(problems))
@@ -124,6 +125,7 @@ def main(argv=None) -> int:
     ap.add_argument('--arm', action='store_true', help='force-arm a simulator when the motor test needs it (Sub)')
     ap.add_argument('--force', action='store_true', help='arm/disarm without the vehicle\'s checks')
     ap.add_argument('--file')
+    ap.add_argument('--list', choices=['mission', 'fence', 'rally'], default='mission', help='which list the mission-* commands work on: the mission, the geofence or the rally points')
     ap.add_argument('--name')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--include-protected', action='store_true')

@@ -52,7 +52,7 @@ This records what `custom-gcs/` is, what was run, what failed on the way, and wh
 
 ## Functions slice: parameters, arm and modes, missions (attempt 7)
 
-Added after the owner answered "all of these" to which Copter functions to build next. Modules `custom-gcs/customgcs/params.py`, `flight.py`, `mission.py`, command line in `__main__.py`; mode table generated from `ArduCopter/mode.h` by `tools/gen_copter_modes.py` (25 requestable modes; AUTO_RTL is not a true mode). 52 unit tests pass in total (50 without pymavlink) (`tests/test_functions.py` is the new file). Evidence: `sitl-evidence/custom-gcs-functions/` (library-level run, `integration/run_functions.py`) and `sitl-evidence/custom-gcs-cli-smoke/` (the command line itself, `integration/cli-smoke.sh`), both against one disposable Copter simulator.
+Added after the owner answered "all of these" to which Copter functions to build next. Modules `custom-gcs/customgcs/params.py`, `flight.py`, `mission.py`, command line in `__main__.py`; mode table generated from `ArduCopter/mode.h` by `tools/gen_copter_modes.py` (25 requestable modes; AUTO_RTL is not a true mode). 55 unit tests pass in total (53 without pymavlink) (`tests/test_functions.py` is the new file). Evidence: `sitl-evidence/custom-gcs-functions/` (library-level run, `integration/run_functions.py`) and `sitl-evidence/custom-gcs-cli-smoke/` (the command line itself, `integration/cli-smoke.sh`), both against one disposable Copter simulator.
 
 **What each part does**
 - Parameters: save and load a `NAME,VALUE` file, diff it against the vehicle, restore the differences with a read-back and a final re-download. It writes only differing parameters, refuses an armed vehicle, supports a dry run, and does not touch protected names: serial settings, `SYSID_THISMAV`, counters, and values the vehicle maintains itself (`COMPASS_DEC`, `MIS_TOTAL`, `BARO*_GND_PRESS/TEMP`). The whole list is downloaded each time because single-name reads were unreliable earlier.
@@ -88,6 +88,18 @@ Added after the owner answered "all of these" to which Copter functions to build
 3. `run3` and `run4`: AUTO was accepted and the mission announced "Mission: 1 Takeoff", but the vehicle never lifted and disarmed itself after about 9 s. Cause (established by the next run, not by reading the source): a Copter armed in AUTO on the ground does not take off until the mission is started or the pilot raises the throttle. Run 3 also waited 900 s for nothing because the end-of-flight test could not trigger; the loop now stops when the vehicle is disarmed and nothing was reached after 30 s.
 
 **Not shown:** anything on a real vehicle; wind, GPS or battery failure; other mission commands (loiter, jump, speed changes, conditional or DO commands); a mission longer than three legs; flying with the vehicle's failsafes triggered; the same mission at other speedups (speedup 1 only after the attempts above). The pass criteria are the ones in `run_flight.py` and were written before the passing run but after four failed ones.
+
+## Geofence and rally points, and a flight into a fence breach (attempt 9)
+
+`mission.py` now takes a mission type (0 mission, 1 geofence, 2 rally points) in upload, download and clear, filters replies of the other types, and has `fence_polygon` and `rally_points` helpers; `verify(..., skip_home=False)` compares item 0 for lists without a home. Command line: `--list mission|fence|rally` on the `mission-*` commands. `integration/run_fence_rally.py`; evidence `sitl-evidence/custom-gcs-fence-rally/` (`fence-rally-run.txt`, `fence-flight-track.csv`). 55 unit tests pass in WSL (3 new, with a fake link that also answers a request for the wrong list first).
+
+**Result: all checks passed.**
+- Lists: a four-vertex polygon fence (a square of 60 m each way around home) and two rally points uploaded (ack 0) and downloaded back equal; the vehicle then reported `RALLY_TOTAL` 2 and `FENCE_TOTAL` 6; clearing the rally list gave ack 0 and an empty list; the ordinary mission list was untouched by the other two lists.
+- Flight: with the fence enabled (`FENCE_ENABLE` 1, `FENCE_ACTION` 1) and a mission whose first waypoint is 78 m north of home (outside the polygon), the vehicle took off, reached item 1, and 10 s later reported "Polygon fence breached"; the heartbeat mode went from AUTO to RTL in the same second ("Manual recovery started"), the breach cleared 10 s later, and the vehicle descended to the ground and disarmed. Waypoint 2 was never reported reached. It ended 0.0 m from rally point 1, 52 m from home, inside the fence: the return went to the nearer rally point, not to home.
+
+**One expectation of mine was wrong and the first run is kept** (`custom-gcs-fence-rally-run1-fence-total-expectation-was-4`): I expected `FENCE_TOTAL` to equal the 4 vertices. `AC_PolyFence_loader.cpp:1278` stores the vertex count plus 2 (a return point and a closing point), so the vehicle's 6 is right.
+
+**Not shown:** the fence action values other than 1 (report only, always land, SmartRTL or RTL or land, brake or land); circle and exclusion fences, altitude fences; several polygons; fence breaches in modes other than AUTO; the rally point choice when home is nearer; anything on a real vehicle; one run (the run and its first attempt differ only in the check).
 
 ## What this does and does not show
 

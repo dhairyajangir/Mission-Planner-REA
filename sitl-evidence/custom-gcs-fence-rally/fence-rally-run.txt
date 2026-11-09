@@ -1,0 +1,33 @@
+== lists
+OK   fence polygon uploaded (ack 0)
+OK   fence downloads back equal (4 vertices)   [[]]
+OK   rally points uploaded (ack 0)
+OK   rally points download back equal (2 points)   [[]]
+OK   vehicle reports FENCE_TOTAL 6 (4 vertices + return and closing point) and RALLY_TOTAL 2   [(6.0, 2.0)]
+OK   mission list untouched by the other two lists
+OK   rally clear accepted and list empty
+OK   rally points re-uploaded
+== fence breach in flight
+OK   fence enabled with action 1 (RTL or land)
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+     mission start: mission start accepted (ack result 0)
+     t=  0.7 s heartbeat: ARMED, mode AUTO
+     t=  5.4 s item 1 reached
+     t=  5.4 s vehicle: Mission: 2 WP
+     t= 15.6 s heartbeat: ARMED, mode RTL
+     t= 15.6 s vehicle: Polygon fence breached
+     t= 15.6 s vehicle: Manual recovery started
+     t= 25.4 s vehicle: Fence breach cleared
+     t= 64.4 s vehicle: SIM Hit ground at 0.499669 m/s
+     t= 66.5 s vehicle: Disarming motors
+     t= 66.7 s heartbeat: DISARMED, mode RTL
+OK   the vehicle reported the fence breach   [['Polygon fence breached', 'Fence breach cleared']]
+OK   the mode left AUTO after the breach   [['AUTO', 'RTL', 'RTL']]
+OK   waypoint 2 (outside the fence) was not reported reached   [[1]]
+OK   the vehicle disarmed by itself
+     last position 52.2 m from home, 0.0 m from rally point 1, 95.1 m from rally point 2
+OK   the vehicle ended inside the fence   [-35.362861, 149.165530]
+
+RESULT all checks passed

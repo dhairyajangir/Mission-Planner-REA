@@ -176,3 +176,75 @@ def test_start_mission_sends_command_300_and_reads_the_ack():
                                  recv_match=lambda type=None, blocking=True, timeout=0.3: queue.pop(0) if queue else None)
     result = flight.start_mission(link, timeout=0.5)
     assert sent[0][2] == 300 and result.ok
+
+
+# ---- fence and rally lists
+
+class ListLink:
+    """Stores what is uploaded per mission type and serves it back; counts the mission_type values it was given."""
+    target_system = target_component = 1
+
+    def __init__(self):
+        self.store, self.queue, self.pending, self.seen = {}, [], {}, []
+        m = types.SimpleNamespace
+        self.mav = m(mission_count_send=self.count, mission_item_int_send=self.item, mission_request_list_send=self.request_list,
+                     mission_request_int_send=self.request_item, mission_ack_send=lambda *a: self.seen.append(('ack', a[-1])), mission_clear_all_send=self.clear)
+
+    def count(self, ts, tc, n, kind):
+        self.seen.append(('count', kind))
+        self.pending[kind] = {'n': n, 'items': []}
+        self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_REQUEST_INT', seq=0, mission_type=kind + 1))       # a request for another list first: must be ignored
+        self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_REQUEST_INT', seq=0, mission_type=kind))
+
+    def item(self, ts, tc, seq, frame, command, cur, auto, p1, p2, p3, p4, x, y, z, kind):
+        self.seen.append(('item', kind))
+        self.pending[kind]['items'].append((seq, frame, command, cur, auto, p1, p2, p3, p4, x, y, z))
+        if seq + 1 < self.pending[kind]['n']:
+            self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_REQUEST_INT', seq=seq + 1, mission_type=kind))
+        else:
+            self.store[kind] = self.pending[kind]['items']
+            self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_ACK', type=0, mission_type=kind))
+
+    def request_list(self, ts, tc, kind):
+        self.seen.append(('list', kind))
+        self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_COUNT', count=len(self.store.get(kind, [])), mission_type=kind))
+
+    def request_item(self, ts, tc, seq, kind):
+        seq_item = self.store[kind][seq]
+        self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_ITEM_INT', seq=seq, frame=seq_item[1], command=seq_item[2], current=seq_item[3], autocontinue=seq_item[4], param1=seq_item[5],
+                                                param2=seq_item[6], param3=seq_item[7], param4=seq_item[8], x=seq_item[9], y=seq_item[10], z=seq_item[11], mission_type=kind))
+
+    def clear(self, ts, tc, kind):
+        self.store[kind] = []
+        self.queue.append(types.SimpleNamespace(get_type=lambda: 'MISSION_ACK', type=0, mission_type=kind))
+
+    def recv_match(self, type=None, blocking=True, timeout=1):
+        return self.queue.pop(0) if self.queue else None
+
+
+def test_fence_polygon_and_rally_helpers():
+    square = mission.fence_polygon([(-35.3630, 149.1650), (-35.3630, 149.1660), (-35.3640, 149.1660), (-35.3640, 149.1650)])
+    assert [i.command for i in square] == [5001] * 4 and all(i.param1 == 4.0 and i.frame == 0 for i in square) and [i.seq for i in square] == [0, 1, 2, 3]
+    with pytest.raises(ValueError, match='three'):
+        mission.fence_polygon([(0.0, 0.0), (1.0, 1.0)])
+    rally = mission.rally_points([(-35.3625, 149.1660, 30.0)])
+    assert rally[0].command == 5100 and rally[0].z == 30.0
+
+
+def test_fence_and_rally_lists_keep_their_own_mission_type_and_round_trip():
+    link = ListLink()
+    square = mission.fence_polygon([(-35.3630, 149.1650), (-35.3630, 149.1660), (-35.3640, 149.1660), (-35.3640, 149.1650)])
+    rally = mission.rally_points([(-35.3625, 149.1660, 30.0), (-35.3635, 149.1655, 20.0)])
+    assert mission.upload(link, square, mission_type=mission.FENCE) == 0
+    assert mission.upload(link, rally, mission_type=mission.RALLY) == 0
+    assert {k for k, v in link.seen if k == 'item'} == {'item'} and {v for k, v in link.seen if k == 'item'} == {1, 2}
+    assert mission.verify(square, mission.download(link, mission_type=mission.FENCE), skip_home=False) == []
+    assert mission.verify(rally, mission.download(link, mission_type=mission.RALLY), skip_home=False) == []
+    assert mission.clear(link, mission_type=mission.FENCE) == 0 and mission.download(link, mission_type=mission.FENCE) == []
+    assert len(mission.download(link, mission_type=mission.RALLY)) == 2
+
+
+def test_verify_can_compare_item_zero_for_lists_without_a_home():
+    a = [item(0, x=-35.36), item(1)]
+    b = [item(0, x=-35.37), item(1)]
+    assert mission.verify(a, b) == [] and 'item 0 x' in mission.verify(a, b, skip_home=False)[0]
