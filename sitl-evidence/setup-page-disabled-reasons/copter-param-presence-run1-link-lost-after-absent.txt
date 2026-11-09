@@ -1,0 +1,9 @@
+CAM_TRIGG_TYPE: absent
+CAM1_TYPE: present, value 0.0
+CAM_TYPE: absent
+FRAME: absent
+FRAME_CLASS: absent
+FRAME_TYPE: absent
+MNT_TYPE: absent
+MNT1_TYPE: present, value 0.0
+WIFI_SSID1: absent

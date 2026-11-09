@@ -1,0 +1,10 @@
+FRAME_CLASS: present, value 1.0
+CAM1_TYPE: present, value 0.0
+FRAME_TYPE: present, value 0.0
+MNT1_TYPE: present, value 0.0
+CAM_TRIGG_TYPE: absent
+FRAME: absent
+CAM_TYPE: absent
+MNT_TYPE: absent
+WIFI_SSID1: absent
+FRAME_CLASS: present, value 1.0
