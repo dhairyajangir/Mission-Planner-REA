@@ -8,7 +8,12 @@ For every multirotor frame in the list below this script:
   5. compares that with the testing_order tables parsed from libraries/AP_Motors/AP_MotorsMatrix.cpp of the same source tree
      (matrix frames only: quad, hexa, octa, octa-quad, y6, deca, dodeca-hexa; tri/single/coax use other motor classes and are observed only).
 
-    python sitl-frame-motor-sweep.py <ardupilot tree> <out dir> [frame names ...]
+    python sitl-frame-motor-sweep.py <ardupilot tree> <out dir> [frame spec ...]
+
+A frame spec is a simulator model name, optionally followed by :PARAM=VALUE[,PARAM=VALUE...] (set on a first start, then the simulator is restarted
+without wiping its parameters, e.g. quad:FRAME_TYPE=19 for the Y4 type). Frames with a frame_example_script in vehicleinfo.json (the scripted motor matrices,
+frame class 15 to 17) get SCR_ENABLE=1 on the first start and the example Lua script copied into <work>/scripts before the second start; their expected
+servo order comes from the add_motor(...) lines of that script. SERVO_OUTPUT_RAW port 0 and port 1 are both read, so up to 32 outputs can be observed.
 """
 import csv
 import os
@@ -29,6 +34,7 @@ PCT, SECS, GAP = 10, 1.0, 0.8
 # Non-matrix classes, transcribed BY HAND from _output_test_seq in AP_MotorsTri.cpp (pitch not reversed: motor1, motor4, tail servo = CH7, motor2),
 # AP_MotorsSingle.cpp (servo1..servo6) and AP_MotorsCoax.cpp (servo1..servo6): sequence number -> servo output
 HAND_SEQ = {7: [1, 4, 7, 2], 8: [1, 2, 3, 4, 5, 6], 9: [1, 2, 3, 4, 5, 6]}
+LUA_FRAMES = {'dotriaconta_octaquad_x': 'MotorMatrix_dotriaconta_octaquad_x.lua', 'hexadeca-octa': 'MotorMatrix_hexadeca_octa.lua', 'hexadeca-octa-cwx': 'MotorMatrix_hexadeca_octa_cw_x.lua'}
 MATRIX_CLASS = {'quad': 1, 'hexa': 2, 'octa': 3, 'octaquad': 4, 'y6': 5, 'dodecahexa': 12, 'deca': 14}
 
 
@@ -65,20 +71,67 @@ def parse_orders():
 ORDERS = parse_orders()
 
 
+def lua_orders(name):
+    """[testing_order per motor number] from the add_motor(AP_MOTORS_MOT_n, angle, yaw, order) lines of a frame example script."""
+    text = open(os.path.join(TREE, 'libraries/AP_Scripting/examples', LUA_FRAMES[name])).read()
+    if name == 'dotriaconta_octaquad_x':
+        # this script adds its motors in a loop, so the lines cannot be matched one by one: read NUM_BANKS and apply the loop body by hand
+        # (motors 4*b+0..3 of bank b have testing orders 4*b+1, 4*b+3, 4*b+4, 4*b+2, from the add_motor lines inside the for loop)
+        banks = int(re.search(r'local NUM_BANKS = (\d+)', text).group(1))
+        return [4 * b + o for b in range(banks) for o in (1, 3, 4, 2)]
+    found = {int(m.group(1)): int(m.group(4)) for m in re.finditer(r'add_motor\(AP_MOTORS_MOT_(\d+),\s*(-?[\d.]+),\s*AP_MOTORS_MATRIX_YAW_FACTOR_(CW|CCW),\s*(\d+)\s*\)', text)}
+    return [found[n] for n in sorted(found)]
+
+
 def expected_orders(cls, typ):
     return ORDERS.get((cls, typ)) or ORDERS.get((cls, None))
 
 
-def start_sitl(frame, work):
+def start_sitl(frame, work, wipe=None):
     os.makedirs(work, exist_ok=True)
     subprocess.call(['pkill', '-f', 'build/sitl/bin/ardu'])
     time.sleep(1)
-    log = open(os.path.join(work, 'sitl.log'), 'w')
+    log = open(os.path.join(work, 'sitl.log'), 'a')
     binary = os.path.join(TREE, 'build/sitl/bin/arducopter')
-    wipe = [] if os.environ.get('SWEEP_NOWIPE') else ['-w']      # SWEEP_NOWIPE=1 keeps the stored parameters in <work>/eeprom.bin
-    proc = subprocess.Popen([binary] + wipe + ['--model', MODEL_FOR.get(frame, frame), '-I', '0', '-s', '1',
+    if wipe is None:
+        wipe = not os.environ.get('SWEEP_NOWIPE')       # SWEEP_NOWIPE=1 keeps the stored parameters in <work>/eeprom.bin
+    proc = subprocess.Popen([binary] + (['-w'] if wipe else []) + ['--model', MODEL_FOR.get(frame, frame), '-I', '0', '-s', '1',
                              '--home', '-35.363261,149.165230,584,0'], cwd=work, stdout=log, stderr=subprocess.STDOUT)
     return proc
+
+
+def prepare(frame, work, params):
+    """First start: set params (and SCR_ENABLE for scripted frames), stop; the caller then restarts without wiping. Returns True if a restart is needed."""
+    if not params and frame not in LUA_FRAMES:
+        return False
+    subprocess.call(['rm', '-rf', work])
+    proc = start_sitl(frame, work, wipe=True)
+    try:
+        m = connect()
+        if m is None:
+            raise RuntimeError('no connection during preparation')
+        want = dict(params)
+        if frame in LUA_FRAMES:
+            want['SCR_ENABLE'] = 1
+        for name, value in want.items():
+            for _ in range(5):
+                m.mav.param_set_send(m.target_system, m.target_component, name.encode(), float(value), mavutil.mavlink.MAV_PARAM_TYPE_REAL32)
+                time.sleep(0.5)
+                if get_param(m, name) == int(value):
+                    break
+            else:
+                raise RuntimeError('could not set %s' % name)
+        time.sleep(2)
+    finally:
+        proc.terminate()
+        try:
+            proc.wait(10)
+        except Exception:
+            proc.kill()
+    if frame in LUA_FRAMES:
+        os.makedirs(os.path.join(work, 'scripts'), exist_ok=True)
+        subprocess.call(['cp', os.path.join(TREE, 'libraries/AP_Scripting/examples', LUA_FRAMES[frame]), os.path.join(work, 'scripts')])
+    return True
 
 
 def connect():
@@ -102,6 +155,9 @@ def get_param(m, name):
     return None
 
 
+STATE = [0] * 32
+
+
 def drain(m, secs, rows, texts):
     end = time.time() + secs
     while time.time() < end:
@@ -109,14 +165,20 @@ def drain(m, secs, rows, texts):
         if msg is None:
             continue
         if msg.get_type() == 'SERVO_OUTPUT_RAW':
-            rows.append([time.time()] + [getattr(msg, 'servo%d_raw' % i, 0) for i in range(1, 17)])
+            base = 16 * getattr(msg, 'port', 0)
+            for i in range(1, 17):
+                STATE[base + i - 1] = getattr(msg, 'servo%d_raw' % i, 0)
+            rows.append([time.time()] + list(STATE))
         else:
             texts.append((time.time(), msg.text))
 
 
-def sweep_frame(frame, work):
-    proc = start_sitl(frame, work)
-    summary, seqrows = {'frame': frame}, []
+def sweep_frame(spec, work):
+    frame, _, ptext = spec.partition(':')
+    params = dict((kv.split('=')[0], float(kv.split('=')[1])) for kv in ptext.split(',')) if ptext else {}
+    restart = prepare(frame, work, params)
+    proc = start_sitl(frame, work, wipe=not restart and not os.environ.get('SWEEP_NOWIPE'))
+    summary, seqrows = {'frame': spec}, []
     try:
         m = connect()
         if m is None:
@@ -125,21 +187,23 @@ def sweep_frame(frame, work):
         cls, typ = get_param(m, 'FRAME_CLASS'), get_param(m, 'FRAME_TYPE')
         summary.update(frame_class=cls, frame_type=typ)
         exp = expected_orders(cls, typ) if cls in MATRIX_CLASS.values() else None
+        if frame in LUA_FRAMES:
+            exp = lua_orders(frame)                # scripted matrix: the order comes from the example script that was installed
+            time.sleep(8)                           # let the script create the matrix
         hand = HAND_SEQ.get(cls)
         n = len(exp) if exp else (len(hand) if hand else 6)
         m.mav.command_long_send(m.target_system, m.target_component, mavutil.mavlink.MAV_CMD_SET_MESSAGE_INTERVAL, 0, 36, 50000, 0, 0, 0, 0, 0)
         rows, texts = [], []
         drain(m, 4, rows, texts)
-        idle = [sorted(r[i] for r in rows)[len(rows) // 2] for i in range(1, 17)] if rows else [0] * 16
+        idle = [sorted(r[i] for r in rows)[len(rows) // 2] for i in range(1, 33)] if rows else [0] * 32
         for seq in range(1, n + 1):
-            t_start = time.time()
             m.mav.command_long_send(m.target_system, m.target_component, mavutil.mavlink.MAV_CMD_DO_MOTOR_TEST, 0,
                                     seq, 0, PCT, SECS, 1, 1, 0)   # motor seq, throttle type percent, percent, seconds, count 1, order SEQUENCE
             window = []
             drain(m, SECS + GAP, window, texts)
             # a servo output counts as moved when it leaves its idle value by 20 us or more in either direction (flap servos idle at 1500 and the 10 percent test drives them down to 1100)
-            dev = [max((abs(r[i + 1] - idle[i]) for r in window), default=0) for i in range(16)]
-            moved = [i + 1 for i in range(16) if dev[i] >= 20]
+            dev = [max((abs(r[i + 1] - idle[i]) for r in window), default=0) for i in range(32)]
+            moved = [i + 1 for i in range(32) if dev[i] >= 20]
             peak = max(dev, default=0)
             want = None
             if exp:
@@ -147,7 +211,7 @@ def sweep_frame(frame, work):
                 want = [i + 1 for i, o in enumerate(exp) if o == seq]
             elif hand:
                 want = [hand[seq - 1]]
-            seqrows.append([frame, cls, typ, seq, ' '.join(map(str, want)) if want is not None else 'n/a (no source table for this class)',
+            seqrows.append([spec, cls, typ, seq, ' '.join(map(str, want)) if want is not None else 'n/a (no source table for this class)',
                             ' '.join(map(str, moved)) or 'none', peak])
         ok = [r for r in seqrows if r[4] == r[5]]
         summary.update(status='ok', motors_tested=n, expected_known=bool(exp or hand), sequences_matching_source=len(ok) if (exp or hand) else 'n/a',
@@ -167,13 +231,14 @@ def main():
     for f in FRAMES:
         print('frame', f, flush=True)
         try:
-            s, r = sweep_frame(f, os.environ.get('SWEEP_WORKDIR') or os.path.expanduser('~/frame-sweep/' + f))
+            s, r = sweep_frame(f, os.environ.get('SWEEP_WORKDIR') or os.path.expanduser('~/frame-sweep/' + f.replace(':', '_').replace('=', '-').replace(',', '_')))
         except Exception as e:                      # keep failed attempts in the record
             s, r = {'frame': f, 'status': 'exception: %r' % e}, []
         print(s, flush=True)
         summaries.append(s)
         allrows += r
-        os.system('cp %s %s 2>/dev/null' % (os.path.expanduser('~/frame-sweep/%s/sitl.log' % f), os.path.join(OUT, 'sitl-%s.log' % f)))
+        tag = f.replace(':', '_').replace('=', '-').replace(',', '_')
+        os.system('cp %s %s 2>/dev/null' % (os.path.expanduser('~/frame-sweep/%s/sitl.log' % tag), os.path.join(OUT, 'sitl-%s.log' % tag)))
     with open(os.path.join(OUT, 'frame-sweep-sequences.csv'), 'w', newline='') as fh:
         w = csv.writer(fh, lineterminator='\n')
         w.writerow(['frame', 'frame_class', 'frame_type', 'sequence', 'expected_servo_from_source', 'observed_servos_moved_20us_or_more', 'peak_deviation_us'])

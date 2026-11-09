@@ -1,0 +1,8 @@
+frame hexadeca-octa-cwx
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame': 'hexadeca-octa-cwx', 'frame_class': 15, 'frame_type': 0, 'status': 'ok', 'motors_tested': 16, 'expected_known': True, 'sequences_matching_source': 16, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame dotriaconta_octaquad_x
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame': 'dotriaconta_octaquad_x', 'frame_class': 15, 'frame_type': 0, 'status': 'ok', 'motors_tested': 6, 'expected_known': False, 'sequences_matching_source': 'n/a', 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | Setting up motor bank 3 at 8'}

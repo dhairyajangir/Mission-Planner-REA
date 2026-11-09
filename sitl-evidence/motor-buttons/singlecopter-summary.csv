@@ -1,0 +1,7 @@
+action,servos_moved_20us_or_more,max_deviation_us_per_servo1_to_8
+motor:5,servo5,0 0 0 0 100 0 0 0
+motor:6,servo6,0 0 0 0 0 100 0 0
+motor:7,none,0 0 0 0 0 0 0 0
+motor:8,none,0 0 0 0 0 0 0 0
+all,servo1 servo2 servo3 servo4 servo5 servo6,400 400 400 400 100 100 0 0
+stop,none,0 0 0 0 0 0 0 0

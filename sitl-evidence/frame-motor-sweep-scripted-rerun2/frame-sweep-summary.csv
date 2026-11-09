@@ -1,0 +1,2 @@
+frame,status,frame_class,frame_type,motors_tested,expected_known,sequences_matching_source,idle_pwm,status_text
+dotriaconta_octaquad_x,ok,15,0,32,True,32,1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | Setting up motor bank 3 at 8

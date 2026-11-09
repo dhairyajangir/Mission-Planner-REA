@@ -1,0 +1,5 @@
+frame,status,frame_class,frame_type,motors_tested,expected_known,sequences_matching_source,idle_pwm,status_text
+quad:FRAME_TYPE=19,ok,1,19,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexadeca-octa,ok,15,0,16,True,16,1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexadeca-octa-cwx,ok,15,0,6,False,n/a,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+dotriaconta_octaquad_x,ok,15,0,6,False,n/a,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | Setting up motor bank 3 at 8

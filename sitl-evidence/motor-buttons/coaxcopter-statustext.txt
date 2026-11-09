@@ -1,0 +1,43 @@
+1794200397.038 EKF3 IMU0 initialised
+1794200397.038 EKF3 IMU1 initialised
+1794200397.044 AHRS: EKF3 active
+1794200398.389 EKF3 IMU0 tilt alignment complete
+1794200398.389 EKF3 IMU1 tilt alignment complete
+1794200398.483 EKF3 IMU0 MAG0 initial yaw alignment complete
+1794200398.483 EKF3 IMU1 MAG0 initial yaw alignment complete
+1794200398.675 Mission Planner 0.0
+1794200398.675 Mission Planner 0.0
+1794200398.675 Mission Planner 0.0
+1794200402.397 GPS 1: probing for u-blox at 230400 baud
+1794200402.415 GPS 1: detected u-blox
+1794200408.324 starting motor test
+1794200410.326 finished motor test
+1794200412.613 EKF3 IMU0 origin set
+1794200412.637 Field Elevation Set: 584m
+1794200412.805 EKF3 IMU1 origin set
+1794200412.863 starting motor test
+1794200414.861 finished motor test
+1794200417.377 starting motor test
+1794200419.375 finished motor test
+1794200421.933 starting motor test
+1794200423.932 finished motor test
+1794200426.471 starting motor test
+1794200428.616 finished motor test
+1794200431.151 starting motor test
+1794200431.151 finished motor test
+1794200431.163 starting motor test
+1794200431.163 finished motor test
+1794200431.193 starting motor test
+1794200431.193 finished motor test
+1794200431.205 starting motor test
+1794200431.205 finished motor test
+1794200431.218 starting motor test
+1794200431.224 finished motor test
+1794200431.236 starting motor test
+1794200431.236 finished motor test
+1794200431.243 starting motor test
+1794200431.243 finished motor test
+1794200431.261 starting motor test
+1794200431.261 finished motor test
+1794200434.013 EKF3 IMU0 is using GPS
+1794200434.213 EKF3 IMU1 is using GPS

@@ -44,8 +44,8 @@ Result (`sitl-evidence/frame-motor-sweep/`): 154 of 154 sequences on 23 frames f
 Reading the table:
 
 - Tri sequence 3 moved servo 7, the tail servo (`AP_MOTORS_CH_TRI_YAW`), and sequence 4 moved servo 2, so the tri "motor sequence" is front right, back motor, tail servo, front left, as the source comment says. Single and coax sequences 1 to 4 are the four flap servos (idle 1500, driven down to 1100 by the 10 percent test) and 5 and 6 the two motors.
-- The two hexadeca-octa frames are frame class 15, `MOTOR_FRAME_SCRIPTING_MATRIX`. The motor matrix is created by a Lua script that was not loaded, the idle outputs read 0 and nothing moved. That says nothing about the scripted frame itself.
-- The 32-motor `dotriaconta_octaquad_x` frame was not run: one `SERVO_OUTPUT_RAW` message holds 16 outputs.
+- The two hexadeca-octa frames are frame class 15, `MOTOR_FRAME_SCRIPTING_MATRIX`. The motor matrix is created by a Lua script that was not loaded, the idle outputs read 0 and nothing moved. That says nothing about the scripted frame itself; section 9 repeats them with the script installed.
+- The 32-motor `dotriaconta_octaquad_x` frame was not run in this first sweep (one `SERVO_OUTPUT_RAW` message holds 16 outputs); section 9 covers it by reading both message instances.
 - Frames that are not plain multirotors in the SITL frame list (Gazebo, AirSim, ROS, Scrimmage, CAN, PPP, freestyle and the Callisto model) were not run.
 
 ### First run, kept
@@ -144,8 +144,8 @@ So for every frame in the page's layout file, button k tests the motor the label
 
 Findings that differ from what a user would expect:
 
-- Single and coax copters get eight buttons although the vehicle has six test sequences (four flap servos and two motors, section 1), and no labels. The seventh and eighth buttons send sequence numbers 7 and 8; from the source (`_output_test_seq` has no case for them) they should do nothing. I did not press them.
-- The "Test all motors" button on those frames sends eight single-motor commands, and "Test all in sequence" sends a motor count of eight. Not observed against the vehicle.
+- Single and coax copters get eight buttons although the vehicle has six test sequences (four flap servos and two motors, section 1), and no labels. The seventh and eighth buttons send sequence numbers 7 and 8; from the source (`_output_test_seq` has no case for them) they should do nothing; section 8 presses them and confirms it.
+- The "Test all motors" button on those frames sends eight single-motor commands, and "Test all in sequence" sends a motor count of eight. Section 8 observed it: six of the eight act.
 - A deca vehicle shows "Class: unknown" and "Type: unknown": the page's parameter metadata has no names for class 14. The buttons and labels are right because `APMotorLayout.json` has deca entries.
 - A helicopter gets no motor buttons at all, from `motormax = 0`.
 - This confirms the source reading in section 4 that the page's behaviour for Y4 and the co-rotating octa-quad types would rely on its vehicle-type guess; those frames are not in the simulator frame list and were not probed.
@@ -161,10 +161,40 @@ So every internal Copter and helicopter frame has been flown at least once in th
 
 What this test would not catch (read from the source, not a defect I measured): the roll and pitch hook compares `m.pitch` and `m.roll` against +2 degrees without taking an absolute value, so a negative excursion of any size passes; the test does not look at motor saturation, tracking error or attitude oscillation; one takeoff per frame, no wind, no failures.
 
+## 8. Pressing the extra motor buttons on single and coax (original page, simulator)
+
+Section 6 found that the page draws eight "Test motor" buttons for the single and coax copter frames although the vehicle has six test sequences. `research-tools/PageMotorButtonsProbe.cs` (run by `research-tools/run-motor-buttons-probe.ps1`) built the original page against each frame, set 10 percent for 2 s, and invoked the page's own button handler for buttons E, F, G and H (motor tags 5 to 8), then "Test all motors" and "Stop all motors", while `sitl-servo-observer.py` recorded `SERVO_OUTPUT_RAW` on a second MAVLink port (`research-tools/analyze-motor-buttons.py` lines up the times). A harness pressed the buttons, not a person. Evidence: `sitl-evidence/motor-buttons/`.
+
+| Page action | Single copter | Coax copter |
+|---|---|---|
+| Test motor E (tag 5) | servo 5 rose 100 us | servo 5 rose 100 us |
+| Test motor F (tag 6) | servo 6 rose 100 us | servo 6 rose 100 us |
+| Test motor G (tag 7) | nothing moved | nothing moved |
+| Test motor H (tag 8) | nothing moved | nothing moved |
+| Test all motors | servos 1 to 4 moved 400 us (down from 1500 to 1100), servos 5 and 6 rose 100 us | same |
+| Stop all motors | nothing moved | nothing moved |
+
+No message box appeared for any action, so the page does not tell the user that buttons G and H do nothing: the vehicle accepts the command for sequence 7 and 8 and does not move any output, as the source (`_output_test_seq` has no case for them) predicted. "Test all motors" sends eight single-motor commands, of which six act. On these frames the first four sequences are flap servos, so a 10 percent "motor" test drives them 400 us from their centre position; the page labels all of them "Test motor <letter>".
+
+## 9. Scripted motor matrices (frame class 15) and the Y4 type
+
+Section 1 could not test the scripted-matrix frames because the matrix is created by a Lua script that was not loaded. `research-tools/sitl-frame-motor-sweep.py` now handles them: on a first start it sets `SCR_ENABLE=1` (a frame spec such as `quad:FRAME_TYPE=19` also sets the listed parameters), stops the simulator, copies the frame's example script (`libraries/AP_Scripting/examples/MotorMatrix_*.lua`, as named by `frame_example_script` in `vehicleinfo.json`) into `<work>/scripts`, restarts without wiping the parameters, and then sends the motor test as before. The expected order comes from the `add_motor(...)` lines of the script (for the 32-motor script, whose motors are added in a loop, by applying the loop body by hand: bank b has testing orders 4b+1, 4b+3, 4b+4, 4b+2). It reads both `SERVO_OUTPUT_RAW` instances, so outputs 17 to 32 are observed.
+
+| Frame | Outputs tested | Sequences matching the script | Evidence folder |
+|---|---|---|---|
+| quad with `FRAME_TYPE=19` (Y4) | 4 | 4 of 4 (matrix table, not a script) | `frame-motor-sweep-scripted-and-y4/` |
+| hexadeca-octa (class 15) | 16 | 16 of 16 | `frame-motor-sweep-scripted-and-y4/` |
+| hexadeca-octa-cwx (class 15) | 16 | 16 of 16 | `frame-motor-sweep-scripted-rerun/` |
+| dotriaconta-octaquad-x (class 15, 32 motors) | 32 | 32 of 32 | `frame-motor-sweep-scripted-rerun2/` |
+
+Run history, kept: in the first run the cwx and 32-motor frames were not compared (my Lua parser rejected angles such as 22.5 and the loop in the 32-motor script, so the folders for the first run show "expected_known False" for them); the parser was fixed and each of the two was rerun in its own folder. The hexadeca-octa and Y4 results come from the first run unchanged.
+
+With this, the output mapping has been checked directly for 27 frames: the 23 of section 1, the three scripted frames and Y4. The scripted tests prove that the example scripts create a matrix whose motor test sequence matches the script's own testing orders; they do not check the script's mixing factors.
+
 ## Not covered
 
 - A person using the frame page or motor test page, and the picture drawn for each frame.
-- The motor test page's per-motor buttons on non-quad frames (the page probe for motor test used only the plus quad frame; the sweep above bypasses the page).
+- The motor test page's per-motor buttons on frames other than the plus quad, single and coax (section 8 pressed buttons only on single and coax; the sweep in section 1 bypasses the page).
 - Flying any of these frames. The motor test checks the output mapping, not mixing, yaw direction, motor direction (`SERVO_BLH_RVMASK` and similar) or flight behaviour. I did not check which autotests set a frame other than quad plus.
 - Scripting matrix frames (class 15 to 17) and the 32-motor frame.
 - Helicopter frames in the motor test page and in the frame-class page's pictures (the page probe only read the helicopter state); `RotorRunup` is explained in section 5 (timing margin of the test).

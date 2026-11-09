@@ -1,0 +1,4 @@
+frame dotriaconta_octaquad_x
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame': 'dotriaconta_octaquad_x', 'frame_class': 15, 'frame_type': 0, 'status': 'ok', 'motors_tested': 32, 'expected_known': True, 'sequences_matching_source': 32, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | Setting up motor bank 3 at 8'}
