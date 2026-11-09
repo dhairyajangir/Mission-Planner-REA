@@ -73,7 +73,7 @@ What the page shows after `Activate()`, per simulator frame:
 
 Findings:
 
-- The page has class buttons for undefined, quad, hexa, octa, octa-quad, Y6, heli and tri only. Deca, dodeca-hexa, single, coax, tailsitter, the dual and quad helicopters and the scripting matrices have no button. For a deca or single copter vehicle the probe saw no class radio checked and the type group disabled; I did not look at the pictures the page draws. The type buttons are plus, X, V, H, Y6B and V-tail only; the Betaflight, DJI and clockwise X orderings (types 12, 13, 14), `I`, the co-rotating X8 types and the others have no button. I did not run the page against a frame with one of those types; for quad `bfx`, `djix` and `cwx` I expect no type button to be checked, from the source, but that is not observed.
+- The page has class buttons for undefined, quad, hexa, octa, octa-quad, Y6, heli and tri only. Deca, dodeca-hexa, single, coax, tailsitter, the dual and quad helicopters and the scripting matrices have no button. For a deca or single copter vehicle the probe saw no class radio checked and the type group disabled; I did not look at the pictures the page draws. The type buttons are plus, X, V, H, Y6B and V-tail only; the Betaflight, DJI and clockwise X orderings (types 12, 13, 14), `I`, the co-rotating X8 types and the others have no button. Observed with `research-tools/run-frame-page-probe-extra.ps1` (`sitl-evidence/frame-page/state-quad-bfx.txt` and the others): for quad Betaflight X (12), DJI X (13) and clockwise X (14), hexa DJI X and octa clockwise X, the page checks the right class button, checks no type button, leaves the usual type buttons enabled for the class, and the vehicle's `FRAME_TYPE` is unchanged after `Activate()`. A user is shown a frame class with no type selected, with no hint that the type is one the page cannot display.
 - For hexa the page enables Plus and X, and for Y6 it enables X and Y6B (the "Y" radio). The Y6 "plus" type (0) is the vehicle's, but no Plus button is enabled, so the checked Plus button for Y6 shows the vehicle's type on a disabled control.
 - Changing the class through the page: with a quad plus vehicle, checking the Hexa radio changed the vehicle's `FRAME_CLASS` 1 to 2 immediately (type left at 0), and then checking the X radio changed `FRAME_TYPE` 0 to 1. Both read back from the vehicle. No message box appeared.
 - The simulator was then restarted without wiping its stored parameters and motor-tested (`sitl-evidence/frame-page/restart-sweep/`): it came up as class 2, type 1 (hexa X) and all six sequences matched the hexa X table (servo order 5, 1, 4, 6, 2, 3), the same order the `hexax` frame gave in the sweep. So a class and type chosen on the page do take effect after the restart. The restart was a process restart of the simulator with its `eeprom.bin` kept, not a `MAV_CMD_PREFLIGHT_REBOOT`.
@@ -91,7 +91,7 @@ The original `ConfigMotorTest` page (`GCSViews/ConfigurationView/ConfigMotorTest
 
 - 56 of 56 combinations present in both agree on the motor count, on which motor number has which test order, and on CW/CCW. These are the quad, hexa, octa, octa-quad, Y6, dodeca-hexa and deca entries in the file.
 - 19 entries in the JSON (all of class 7, tri) have no matrix table because `AP_MotorsTri` is a separate class. All 19 match the test sequence I transcribed by hand from `AP_MotorsTri::_output_test_seq` (outputs 1, 4, 7, 2; or 4, 7, 1, 2 for type 6 "pitch reversed"). The simulator's tri run in section 1 gave 1, 4, 7, 2.
-- 3 combinations exist in the source but not in the JSON: quad type 19 (Y4) and octa-quad types 20 and 21 (co-rotating X8). For these the page would use the vehicle-type guess: 4 buttons for Y4 and 8 for the octa-quad ones, matching the real motor counts, but with no "Motor Number" labels. This is read from the source, not observed.
+- 3 combinations exist in the source but not in the JSON: quad type 19 (Y4) and octa-quad types 20 and 21 (co-rotating X8). For these the page would use the vehicle-type guess: 4 buttons for Y4 and 8 for the octa-quad ones, matching the real motor counts, but with no "Motor Number" labels. Observed in section 6.
 - The JSON has no entries for deca types other than 0, 1 and 14, no helicopter, single, coax or scripting classes. From the source, a coax or single copter would get the default eight buttons although the vehicle has six test sequences, and a helicopter gets none. Not observed in the page.
 
 So the labels the page shows for the layouts it knows are consistent with the firmware's tables. Static comparison only: the page itself was not run against these frames.
@@ -149,6 +149,18 @@ Findings that differ from what a user would expect:
 - A deca vehicle shows "Class: unknown" and "Type: unknown": the page's parameter metadata has no names for class 14. The buttons and labels are right because `APMotorLayout.json` has deca entries.
 - A helicopter gets no motor buttons at all, from `motormax = 0`.
 - This confirms the source reading in section 4 that the page's behaviour for Y4 and the co-rotating octa-quad types would rely on its vehicle-type guess; those frames are not in the simulator frame list and were not probed.
+
+### Frame types that are missing from the layout file, observed
+
+Section 4 predicted from the source that quad Y4 (type 19) and octa-quad X_COR and CW_X_COR (types 20 and 21) would get the page's vehicle-type guess. `research-tools/run-motor-layout-extra.ps1` set each by parameter on a simulator (`research-tools/prepare-frame-type.sh`, a restart that keeps the stored parameters), and the original page was built against it (`sitl-evidence/motor-layout-page/extra-*.txt`, nothing pressed):
+
+| Vehicle | Page text | Buttons drawn | "Motor Number" labels |
+|---|---|---|---|
+| quad, `FRAME_TYPE=19` (Y4) | Quad / Y4 | 4 | none |
+| octa-quad, `FRAME_TYPE=20` (X_COR) | OctaQuad / "unknown" | 8 | none |
+| octa-quad, `FRAME_TYPE=21` (CW_X_COR) | OctaQuad / "unknown" | 8 | none |
+
+So the prediction held: the button counts are right (4 and 8, matching the motors in section 1), but there are no labels telling the user which motor number each button drives, and the two octa-quad types are shown as "unknown".
 
 ## 7. Flight of every internal Copter frame (ArduPilot's own `FlyEachFrame`, earlier Copter run)
 

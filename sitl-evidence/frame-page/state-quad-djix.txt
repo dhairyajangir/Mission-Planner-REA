@@ -1,0 +1,4 @@
+2026-11-09T05:16:45.5299710Z CONNECTED parameters=1431
+2026-11-09T05:16:46.4051225Z BEFORE-ACTIVATE vehicle FRAME_CLASS=1 FRAME_TYPE=13
+2026-11-09T05:16:48.2022058Z STATE after-activate class_checked=[radioButtonQuad] type_checked=[] type_enabled=[radioButton_Plus,radioButton_X,radioButton_V,radioButton_H,radioButton_VTail] type_group_enabled=True page_enabled=True vehicle FRAME_CLASS=1 FRAME_TYPE=13
+2026-11-09T05:16:48.2536671Z STATUS ok
