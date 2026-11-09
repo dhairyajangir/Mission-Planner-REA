@@ -269,6 +269,18 @@ What this shows:
 
 Not covered: the Advanced group, Install Firmware, pressing any control on these pages other than the motor test buttons in section 10, other frames or vehicles in the live window, and a person using any of them.
 
+## 12. Changing the frame in the live window (simulator)
+
+`research-tools/run-live-gui-frame-change.ps1` repeated the section 10 setup, opened SETUP > Mandatory Hardware > Frame Type in the real window of the research copy, pressed the Hexa class picture and then the "X, Y6A" type radio button (both with `BM_CLICK` on the child window under the picture or radio), and after each step read `FRAME_CLASS` and `FRAME_TYPE` from the vehicle on SERIAL1 with an independent pymavlink client (`sitl-evidence/live-gui-frame-change/vehicle-frame-readings.txt`):
+
+| Step | FRAME_CLASS | FRAME_TYPE |
+|---|---:|---:|
+| Before any GUI action (plus quad) | 1 | 0 |
+| After pressing the Hexa class picture | 2 | 0 |
+| After pressing the "X" type radio | 2 | 1 |
+
+The screenshot after the last step (`03-after-x.png`) shows the Hexa picture highlighted, the X radio selected and the X pictures bright. No dialog appeared at any step. This is the same result as the harness-driven change in section 2 (quad plus to hexa to X), now through the live window; it was run once, by a script, on the data-redirected research copy. As in section 2, the new frame takes effect in the vehicle only after a restart; I did not restart this simulator after the change.
+
 ## Not covered
 
 - A person using the frame page or motor test page (section 10 is a script driving the real window of the research copy, for one frame), other frames in the live window, and the picture drawn for each frame.

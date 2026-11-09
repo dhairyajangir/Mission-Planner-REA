@@ -125,6 +125,13 @@ switch ($Command) {
         [void][W32]::SendMessage($c, 0x00F5, [IntPtr]::Zero, [IntPtr]::Zero)
         'BM_CLICK sent to {0} class {1} text "{2}"' -f $c, [W32]::Class($c), [W32]::Title($c)
     }
+    'bmclickat' {
+        # find the deepest child window at client point (x, y) of the main window and send it BM_CLICK
+        $h = Pick $A3
+        $c = [W32]::Deepest($h, [int]$A1, [int]$A2)
+        [void][W32]::SendMessage($c, 0x00F5, [IntPtr]::Zero, [IntPtr]::Zero)
+        'BM_CLICK sent to child {0} class {1} at client ({2},{3})' -f $c, [W32]::Class($c), $A1, $A2
+    }
     'hwndcombo' {
         $combo = [IntPtr][int64]$A1
         $idx = [W32]::SendMessage($combo, 0x014D, [IntPtr](-1), $A2)
