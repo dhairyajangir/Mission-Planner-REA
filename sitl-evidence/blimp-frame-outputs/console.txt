@@ -1,0 +1,6 @@
+frame blimp
+[Errno 111] Connection refused sleeping
+{'frame': 'blimp', 'FRAME_CLASS': 1.0, 'SERVO1_FUNCTION': 33.0, 'SERVO2_FUNCTION': 34.0, 'SERVO3_FUNCTION': 35.0, 'SERVO4_FUNCTION': None, 'SERVO1_MIN': None, 'SERVO1_MAX': None, 'SERVO1_TRIM': None, 'armed_text': 'Arming motors', 'status': 'ok'}
+frame blimp-motor
+[Errno 111] Connection refused sleeping
+{'frame': 'blimp-motor', 'FRAME_CLASS': 2.0, 'SERVO1_FUNCTION': 33.0, 'SERVO2_FUNCTION': 34.0, 'SERVO3_FUNCTION': 35.0, 'SERVO4_FUNCTION': 36.0, 'SERVO1_MIN': 1000.0, 'SERVO1_MAX': 2000.0, 'SERVO1_TRIM': None, 'armed_text': 'Arming motors', 'status': 'ok'}

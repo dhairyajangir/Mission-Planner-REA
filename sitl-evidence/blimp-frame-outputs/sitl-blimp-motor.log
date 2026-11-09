@@ -1,0 +1,27 @@
+Setting SIM_SPEEDUP=1.000000
+Starting Blimp model
+Running motorblimp frame.
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'Blimp'
+Starting SITL input
+Using Irlock at port : 9015
+Using \clock topic for DDS timing: disabled
+bind port 5770 for SERIAL0
+SERIAL0 on TCP port 5770
+Waiting for connection ....
+Connection on serial port 5770
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+bind port 5772 for SERIAL1
+SERIAL1 on TCP port 5772
+bind port 5773 for SERIAL2
+SERIAL2 on TCP port 5773
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+validate_structures:546: Validating structures
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Loaded defaults from @ROMFS/default_params/blimp.parm,@ROMFS/default_params/blimp-motor.parm
+Exitting
