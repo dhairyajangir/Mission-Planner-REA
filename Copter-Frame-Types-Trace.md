@@ -98,10 +98,32 @@ So the labels the page shows for the layouts it knows are consistent with the fi
 
 Parser notes (kept because they changed results): my first version of the comparison reported 4 differences (quad V, V-tail, A-tail, octa-quad V) that were parser mistakes: V frames use numeric yaw factors, and V-tail/A-tail are written with `add_motor(...)` calls rather than a table, so a stale label list gave them the PLUSREV table. After fixing the parser there are no differences. `sitl-frame-motor-sweep.py` has the same stale-label weakness for V-tail and A-tail, but none of the frames I swept use those types, so the swept results are not affected.
 
+## 5. Helicopter frames: ArduPilot's own `Helicopter` autotest suite
+
+The `Helicopter` suite (build target `arducopter-heli`, 37 tests: 12 common and 25 helicopter-specific) was run against the pinned snapshot copy in WSL with `research-tools/run-autotest.sh`, speedup 10, on disposable simulators. Evidence: `sitl-evidence/autotest-helicopter/` (gzipped logs and `autotest-results.csv`).
+
+Result of the complete run (`Helicopter-rerun2.log.gz`): 36 passed, 1 failed (`RotorRunup`).
+
+- Passed, among others: `AVCMission`, `PosHoldTakeOff`, `StabilizeTakeOff`, `SplineWaypoint`, `AutorotationPreArm`, `Autorotation`, `ManAutorotation`, `governortest`, `GovernorNotEngagedManualThrottle`, `TurbineStart`, `TurbineCoolDown`, `NastyMission`, `PIDNotches`, `AutoTune`, `DDFPTail`, `DDVPTail`, `HeliQuad`, `HeliQuadFlip`, `HeliQuadInvertedFlight`, `HeliSingleInvertedFlight`, `MountFailsafeAction`, `StickArmingRequiresZeroThrottle`.
+- `FlyEachFrame` passed: for each of the seven internal helicopter frames (heli, heli-blade360, heli-ddfptail, heli-ddvptail, heli-dual, heli-gas, heli-quad) it restarts the simulator with that model, takes off to 10 m and does an RTL. That is flight of every internal helicopter frame in the simulator, by the vehicle's own test, not a test of mixing quality.
+- The autorotation tests pass. They fly in POSHOLD and other modes with the helicopter parameters; I did not establish that any of them enters flight mode 26 (AUTOROTATE) itself, so the earlier "mode 26 not entered" observation in the mode ledger stays open.
+- Not covered by this suite: the motor test page and `DO_MOTOR_TEST` for helicopters (the page reports 0 motors for a helicopter, from its source).
+
+### `RotorRunup` failure (not explained)
+
+- It fails every time: in the full suite, alone at speedup 10 (6.7 s) and alone at speedup 1 (41 s). The logs and the progress files are in the evidence folder.
+- The exception is raised by the second `assert_receive_message("SERVO_OUTPUT_RAW", condition=servo1_raw > armed value + 50)` in `helicopter.py` (`RotorRunup`), which uses the harness default timeout of 1 s of wall-clock time. The first `SERVO_OUTPUT_RAW` wait, right after arming, succeeds. The test sets `H_RSC_RUNUP_TIME` to 10 s, then raises RC8 and RC3 and expects the collective servo to pass the threshold, and afterwards checks that this took at least 10 s.
+- Ruled out: the message stream. A helicopter simulator and a quad simulator both deliver `SERVO_OUTPUT_RAW` at about 10 Hz, disarmed and armed, with the stream request or with a message interval (`sitl-evidence/heli-servo-rate/heli.json`, `quad.json`).
+- Attempted and unsuccessful: repeating the test's actions with pymavlink outside the harness. In STABILIZE with a forced arm the collective followed the stick in 0.16 s (a different path from the test's LOITER, `rotor-runup-timing-run1-stabilize.json`); in LOITER with a normal arm the vehicle did not arm within 150 s (`rotor-runup-timing-run2-loiter-did-not-arm.json`). So the timing hypothesis (a 1 s wall-clock wait against a 10 s configured runup) is consistent with the source and the log but is **not confirmed**, and I have not decided whether this is a harness or timing issue in this environment or a real difference in behaviour.
+
+### Run history, kept
+
+The first helicopter run (`Helicopter-killed-partial.log.gz`, 15 passed, 1 failed `RotorRunup`) ended when the SSD was unplugged and the tool call that held it hit its time limit. A second start overwrote the log of the first rerun by mistake (`Helicopter-rerun1-clobbered.log.gz`, unusable), and both were killed. The complete run is `Helicopter-rerun2` above, started detached from the tool call.
+
 ## Not covered
 
 - A person using the frame page or motor test page, and the picture drawn for each frame.
 - The motor test page's per-motor buttons on non-quad frames (the page probe for motor test used only the plus quad frame; the sweep above bypasses the page).
 - Flying any of these frames. The motor test checks the output mapping, not mixing, yaw direction, motor direction (`SERVO_BLH_RVMASK` and similar) or flight behaviour. I did not check which autotests set a frame other than quad plus.
 - Scripting matrix frames (class 15 to 17) and the 32-motor frame.
-- The helicopter classes: see the helicopter section below if it has been added.
+- Helicopter frames in the motor test page and in the frame-class page's pictures (the page probe only read the helicopter state); `RotorRunup` is unexplained.

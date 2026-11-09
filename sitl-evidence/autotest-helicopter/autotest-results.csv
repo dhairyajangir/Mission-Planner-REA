@@ -1,0 +1,54 @@
+label,log,test,description,result
+killed-partial,Helicopter-killed-partial.log,PIDTuning,"Test PID Tuning",PASSED
+killed-partial,Helicopter-killed-partial.log,ArmFeatures,"Arm features",PASSED
+killed-partial,Helicopter-killed-partial.log,SetHome,"Setting and fetching of home",PASSED
+killed-partial,Helicopter-killed-partial.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+killed-partial,Helicopter-killed-partial.log,CPUFailsafe,"Ensure we do something appropriate when the main loop stops",PASSED
+killed-partial,Helicopter-killed-partial.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+killed-partial,Helicopter-killed-partial.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+killed-partial,Helicopter-killed-partial.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+killed-partial,Helicopter-killed-partial.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+killed-partial,Helicopter-killed-partial.log,Logging,"Test Onboard Logging",PASSED
+killed-partial,Helicopter-killed-partial.log,GetCapabilities,"Get Capabilities",PASSED
+killed-partial,Helicopter-killed-partial.log,InitialMode,"Test initial mode switching",PASSED
+killed-partial,Helicopter-killed-partial.log,AVCMission,"fly AVC mission",PASSED
+killed-partial,Helicopter-killed-partial.log,RotorRunup,"Test rotor runup)"": NotAchievedException('Did not get SERVO_OUTPUT_RAW after 1.0357387065887451 seconds') (see /home/think/buildlogs/HeliCopter-RotorRunup.txt)",FAILED
+killed-partial,Helicopter-killed-partial.log,PosHoldTakeOff,"ensure vehicle stays put until it is ready to fly",PASSED
+killed-partial,Helicopter-killed-partial.log,StabilizeTakeOff,"Fly stabilize takeoff",PASSED
+rerun2,Helicopter-rerun2.log,PIDTuning,"Test PID Tuning",PASSED
+rerun2,Helicopter-rerun2.log,ArmFeatures,"Arm features",PASSED
+rerun2,Helicopter-rerun2.log,SetHome,"Setting and fetching of home",PASSED
+rerun2,Helicopter-rerun2.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+rerun2,Helicopter-rerun2.log,CPUFailsafe,"Ensure we do something appropriate when the main loop stops",PASSED
+rerun2,Helicopter-rerun2.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+rerun2,Helicopter-rerun2.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+rerun2,Helicopter-rerun2.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+rerun2,Helicopter-rerun2.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+rerun2,Helicopter-rerun2.log,Logging,"Test Onboard Logging",PASSED
+rerun2,Helicopter-rerun2.log,GetCapabilities,"Get Capabilities",PASSED
+rerun2,Helicopter-rerun2.log,InitialMode,"Test initial mode switching",PASSED
+rerun2,Helicopter-rerun2.log,AVCMission,"fly AVC mission",PASSED
+rerun2,Helicopter-rerun2.log,RotorRunup,"Test rotor runup)"": NotAchievedException('Did not get SERVO_OUTPUT_RAW after 1.0049760341644287 seconds') (see /home/think/buildlogs/HeliCopter-RotorRunup.txt)",FAILED
+rerun2,Helicopter-rerun2.log,PosHoldTakeOff,"ensure vehicle stays put until it is ready to fly",PASSED
+rerun2,Helicopter-rerun2.log,StabilizeTakeOff,"Fly stabilize takeoff",PASSED
+rerun2,Helicopter-rerun2.log,SplineWaypoint,"ensure basic spline functionality works",PASSED
+rerun2,Helicopter-rerun2.log,AutorotationPreArm,"Check autorotation pre-arms are working",PASSED
+rerun2,Helicopter-rerun2.log,Autorotation,"Check engine-out behaviour",PASSED
+rerun2,Helicopter-rerun2.log,ManAutorotation,"Check autorotation power recovery behaviour",PASSED
+rerun2,Helicopter-rerun2.log,governortest,"Test Heli Internal Throttle Curve and Governor",PASSED
+rerun2,Helicopter-rerun2.log,GovernorNotEngagedManualThrottle,"check runup complete and land-complete clear in manual throttle modes when governor never engages",PASSED
+rerun2,Helicopter-rerun2.log,FlyEachFrame,"Fly each supported internal frame",PASSED
+rerun2,Helicopter-rerun2.log,AirspeedDrivers,"Test AirSpeed drivers",PASSED
+rerun2,Helicopter-rerun2.log,TurbineStart,"Check Turbine Start Feature",PASSED
+rerun2,Helicopter-rerun2.log,TurbineCoolDown,"Check Turbine Cool Down Feature",PASSED
+rerun2,Helicopter-rerun2.log,NastyMission,"constructs and runs missions designed to test scurves",PASSED
+rerun2,Helicopter-rerun2.log,PIDNotches,"Use dynamic harmonic notch to control motor noise.",PASSED
+rerun2,Helicopter-rerun2.log,AutoTune,"Test autotune mode",PASSED
+rerun2,Helicopter-rerun2.log,DDFPTail,"Test DDFP Tail Rotor",PASSED
+rerun2,Helicopter-rerun2.log,DDVPTail,"Test DDVP Tail Rotor",PASSED
+rerun2,Helicopter-rerun2.log,HeliQuad,"fly collective-pitch quad frame",PASSED
+rerun2,Helicopter-rerun2.log,HeliQuadFlip,"fly Flip mode on collective-pitch quad frame",PASSED
+rerun2,Helicopter-rerun2.log,HeliQuadInvertedFlight,"fly inverted on collective-pitch quad frame",PASSED
+rerun2,Helicopter-rerun2.log,HeliSingleInvertedFlight,"attempt inverted flight on heli single frame and check the set that",PASSED
+rerun2,Helicopter-rerun2.log,MountFailsafeAction,"Fly Mount Failsafe action",PASSED
+rerun2,Helicopter-rerun2.log,StickArmingRequiresZeroThrottle,"check that stick (rudder) arming requires the collective at zero",PASSED

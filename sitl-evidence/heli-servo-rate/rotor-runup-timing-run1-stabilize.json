@@ -1,0 +1,6 @@
+{
+ "servo1_armed_us": 1459,
+ "seconds_until_servo1_above_armed_plus_50": 0.16,
+ "last_servo1_us": 1654,
+ "autotest_wait_limit_s": 1
+}

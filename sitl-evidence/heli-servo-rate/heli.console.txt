@@ -1,0 +1,4 @@
+[Errno 111] Connection refused sleeping
+A_stream_request_disarmed {'messages_in_5s': 49, 'longest_gap_s': 0.1, 'first_after_s': 0.2}
+B_stream_request_armed {'messages_in_5s': 70, 'longest_gap_s': 0.1, 'first_after_s': 0.0}
+C_message_interval_armed {'messages_in_5s': 51, 'longest_gap_s': 0.1, 'first_after_s': 0.1}
