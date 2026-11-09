@@ -19,6 +19,18 @@ FENCE_POLYGON_INCLUSION = 5001           # MAV_CMD_NAV_FENCE_POLYGON_VERTEX_INCL
 FENCE_CIRCLE_INCLUSION = 5003            # param1 is the radius in metres
 RALLY_POINT = 5100
 ACK_ACCEPTED = 0
+# Fields a vehicle was seen to rewrite when the item came back (sitl-evidence/custom-gcs-copter-missions, custom-gcs-plane): pass as verify(..., ignore=VEHICLE_REWRITES).
+VEHICLE_REWRITES = ((21, 'param4'), (19, 'param3'))      # NAV_LAND param4 (Copter and Plane) and NAV_LOITER_TIME param3 (Copter) come back as 1.0 when sent as 0.0
+
+
+def reached_command(text: str):
+    """The command number in a vehicle's 'Reached command #N' status text, or None. MISSION_ITEM_REACHED proved unreliable for an item followed by a DO command (a Copter reported the
+    index of the DO command that followed), while this text named the item that was completed."""
+    marker = 'Reached command #'
+    if not text.startswith(marker):
+        return None
+    digits = text[len(marker):].split()[0] if text[len(marker):].split() else ''
+    return int(digits) if digits.isdigit() else None
 
 
 @dataclass(frozen=True)

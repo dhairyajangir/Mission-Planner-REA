@@ -1,0 +1,28 @@
+OK   mission of 8 items uploaded (ack 0)
+FAIL mission reads back equal (home aside)   [['item 4 param3: sent 0.0, returned 1.0', 'item 7 param4: sent 0.0, returned 1.0']]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  7.3 s item 2 reached at -35.363261, 149.165230, 20 m, 0.0 m/s
+t=  7.4 s vehicle: Mission: 2 ChangeSpeed
+t=  7.4 s vehicle: Mission: 3 WP
+t= 39.4 s item 3 reached at -35.362725, 149.165234, 20 m, 1.4 m/s
+t= 39.4 s vehicle: Reached command #3
+t= 39.4 s vehicle: Mission: 4 LoitTime
+t= 80.9 s item 5 reached at -35.362722, 149.165891, 20 m, 0.0 m/s
+t= 80.9 s vehicle: Reached command #4
+t= 80.9 s vehicle: Mission: 5 ChangeSpeed
+t= 80.9 s vehicle: Mission: 6 WP
+t= 92.8 s item 6 reached at -35.363254, 149.165877, 15 m, 2.9 m/s
+t= 92.8 s vehicle: Reached command #6
+t= 92.8 s vehicle: Mission: 7 Land
+t=126.0 s vehicle: SIM Hit ground at 0.499743 m/s
+t=128.1 s vehicle: Disarming motors
+t=128.2 s vehicle: Mission: 1 Takeoff
+t=128.6 s heartbeat: DISARMED
+items reached in order: [2, 3, 5, 6]
+OK   the vehicle disarmed by itself
+FAIL navigation items 1, 3, 4, 6 reached in order   [[2, 3, 5, 6]]
+OK   the LAND ended within 5 m of its coordinates (30 m east of home, not at home)   [0.0 m from the LAND point, 30.0 m from home]
+OK   a hold of about 10 s occurred at the loiter point (speed under 0.5 m/s for 8 s or more at 20 m)   [12.2 s]
+RESULT 2 checks failed: mission reads back equal (home aside); navigation items 1, 3, 4, 6 reached in order

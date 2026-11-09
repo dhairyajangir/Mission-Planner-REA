@@ -1,0 +1,35 @@
+OK   mission of 6 items uploaded (ack 0)
+OK   mission reads back equal (home aside)   [[]]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  5.2 s item 1 reached at -35.363261, 149.165230, 15 m, 0.0 m/s
+t=  5.3 s vehicle: Mission: 2 WP
+t= 15.8 s item 2 reached at -35.362820, 149.165242, 15 m, 2.9 m/s
+t= 15.9 s vehicle: Reached command #2
+t= 15.9 s vehicle: Mission: 3 WP
+t= 24.0 s item 3 reached at -35.362812, 149.165768, 15 m, 0.4 m/s
+t= 24.1 s vehicle: Reached command #3
+t= 24.1 s vehicle: Mission: 4 Jump 1/2
+t= 24.1 s vehicle: Mission: 2 WP
+t= 33.1 s item 2 reached at -35.362811, 149.165243, 15 m, 0.2 m/s
+t= 33.1 s vehicle: Reached command #2
+t= 33.1 s vehicle: Mission: 3 WP
+t= 42.1 s item 3 reached at -35.362812, 149.165768, 15 m, 0.4 m/s
+t= 42.2 s vehicle: Reached command #3
+t= 42.2 s vehicle: Mission: 4 Jump 2/2
+t= 42.2 s vehicle: Mission: 2 WP
+t= 51.2 s item 2 reached at -35.362812, 149.165243, 15 m, 0.3 m/s
+t= 51.2 s vehicle: Reached command #2
+t= 51.2 s vehicle: Mission: 3 WP
+t= 62.2 s item 3 reached at -35.362812, 149.165787, 15 m, 0.2 m/s
+t= 62.2 s vehicle: Reached command #3
+t= 62.2 s vehicle: Mission: 5 RTL
+t=107.2 s vehicle: SIM Hit ground at 0.500485 m/s
+t=109.3 s item 5 reached at -35.363261, 149.165230, 0 m, 0.0 m/s
+t=109.4 s vehicle: Disarming motors
+t=109.6 s heartbeat: DISARMED
+items reached in order: [1, 2, 3, 2, 3, 2, 3, 5]
+OK   the vehicle disarmed by itself
+OK   the loop ran three times (items 2 and 3, jumped back twice) and then the RTL: [1, 2, 3, 2, 3, 2, 3, 5]   [[1, 2, 3, 2, 3, 2, 3, 5]]
+RESULT passed

@@ -1,0 +1,32 @@
+OK   mission of 8 items uploaded (ack 0)
+OK   mission reads back equal (home aside)   [[]]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  7.3 s item 2 reached at -35.363261, 149.165230, 20 m, 0.0 m/s
+t=  7.3 s vehicle: Mission: 2 ChangeSpeed
+t=  7.3 s vehicle: Mission: 3 WP
+t= 39.4 s item 3 reached at -35.362726, 149.165234, 20 m, 1.4 m/s
+t= 39.4 s vehicle: Reached command #3
+t= 39.4 s vehicle: Mission: 4 LoitTime
+t= 80.9 s item 5 reached at -35.362722, 149.165891, 20 m, 0.0 m/s
+t= 81.0 s vehicle: Reached command #4
+t= 81.0 s vehicle: Mission: 5 ChangeSpeed
+t= 81.0 s vehicle: Mission: 6 WP
+t= 92.8 s item 6 reached at -35.363254, 149.165878, 15 m, 2.9 m/s
+t= 92.9 s vehicle: Reached command #6
+t= 92.9 s vehicle: Mission: 7 Land
+t=126.0 s vehicle: SIM Hit ground at 0.499969 m/s
+t=128.1 s vehicle: Disarming motors
+t=128.2 s vehicle: Mission: 1 Takeoff
+t=128.6 s heartbeat: DISARMED
+MISSION_ITEM_REACHED sequence: [2, 3, 5, 6]; vehicle text "Reached command #": [3, 4, 6]
+OK   the vehicle disarmed by itself
+OK   the vehicle reported commands 3, 4 and 6 reached, in order (takeoff and the DO commands are not announced this way)   [[3, 4, 6]]
+OK   MISSION_ITEM_REACHED numbered them 2, 3, 5, 6: the index of the item that followed each takeoff / loiter (recorded, see the trace)   [[2, 3, 5, 6]]
+item 3 reached 39.4 s; item 4 reached 81.0 s; item 6 reached 92.9 s
+OK   items 3 to 4 (60 m at 2 m/s plus a 10 s loiter) took 35 s or more   [41.5 s]
+OK   items 4 to 6 (60 m after the speed was set to 8 m/s) took under 20 s   [11.9 s]
+OK   the LAND ended within 5 m of its coordinates (30 m east of home, not at home)   [0.0 m from the LAND point, 30.0 m from home]
+OK   a hold of about 10 s occurred at the loiter point (speed under 0.5 m/s for 8 s or more at 20 m)   [12.2 s]
+RESULT passed

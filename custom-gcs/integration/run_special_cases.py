@@ -20,7 +20,7 @@ from customgcs import link, motors  # noqa: E402
 TREE, OUT = sys.argv[1], sys.argv[2]
 WORK = os.path.expanduser('~/cg-special')
 HOME = '-35.363261,149.165230,584,0'
-LUA = {'setup-plus-quad': 'MotorMatrix_setup.lua', 'fault-tolerant-hex': 'MotorMatrix_fault_tolerant_hex.lua', '6dof-quad': 'Copter_Motors_6DoF.lua', 'dotriaconta_octaquad_x': 'MotorMatrix_dotriaconta_octaquad_x.lua', 'hexadeca-octa': 'MotorMatrix_hexadeca_octa.lua', 'hexadeca-octa-cwx': 'MotorMatrix_hexadeca_octa_cw_x.lua'}
+LUA = {'6dof-hex': 'Motors_6DoF.lua', 'setup-plus-quad': 'MotorMatrix_setup.lua', 'fault-tolerant-hex': 'MotorMatrix_fault_tolerant_hex.lua', '6dof-quad': 'Copter_Motors_6DoF.lua', 'dotriaconta_octaquad_x': 'MotorMatrix_dotriaconta_octaquad_x.lua', 'hexadeca-octa': 'MotorMatrix_hexadeca_octa.lua', 'hexadeca-octa-cwx': 'MotorMatrix_hexadeca_octa_cw_x.lua'}
 CASES = [
     ('remap-swap-motors-1-and-2', '+', {'SERVO1_FUNCTION': 34, 'SERVO2_FUNCTION': 33}, None),
     ('remap-motor-1-on-output-9', '+', {'SERVO1_FUNCTION': 0, 'SERVO9_FUNCTION': 33}, None),
@@ -31,6 +31,7 @@ CASES = [
     ('scripted-setup-plus-quad', '+', {'SCR_ENABLE': 1, 'FRAME_CLASS': 15}, 'setup-plus-quad'),
     ('scripted-fault-tolerant-hex', 'hexa', {'SCR_ENABLE': 1, 'FRAME_CLASS': 15}, 'fault-tolerant-hex'),
     ('scripted-6dof-quad-class-16', '+', {'SCR_ENABLE': 1, 'FRAME_CLASS': 16}, '6dof-quad'),
+    ('scripted-6dof-reversible-hex-class-16', 'hexa', {'SCR_ENABLE': 1, 'FRAME_CLASS': 16}, '6dof-hex'),
 ]
 
 

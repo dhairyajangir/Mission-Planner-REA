@@ -1,0 +1,19 @@
+OK   preset parameters ['FS_GCS_ENABLE', 'FS_GCS_TIMEOUT'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  3.1 s stopped sending ground-station heartbeats
+t=  5.2 s item 1 reached
+t=  5.3 s vehicle: Mission: 2 WP
+t=  7.8 s heartbeat: ARMED, mode RTL
+t=  7.9 s vehicle: GCS Failsafe
+t= 45.5 s vehicle: SIM Hit ground at 0.500496 m/s
+t= 47.6 s vehicle: Disarming motors
+t= 48.6 s heartbeat: DISARMED, mode RTL
+OK   after the fault the mode changed to RTL   [['AUTO', 'RTL', 'RTL']]
+OK   the vehicle disarmed by itself
+final position 0.0 m from home, -0.0 m up
+items reached: [1]
+RESULT passed

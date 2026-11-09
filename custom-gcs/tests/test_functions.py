@@ -178,6 +178,12 @@ def test_start_mission_sends_command_300_and_reads_the_ack():
     assert sent[0][2] == 300 and result.ok
 
 
+def test_reached_command_text_is_parsed_and_other_text_ignored():
+    assert mission.reached_command('Reached command #4') == 4 and mission.reached_command('Reached command #12') == 12
+    assert mission.reached_command('Mission: 4 LoitTime') is None and mission.reached_command('Reached command #') is None and mission.reached_command('Reached command #x') is None
+    assert (21, 'param4') in mission.VEHICLE_REWRITES and (19, 'param3') in mission.VEHICLE_REWRITES
+
+
 # ---- fence and rally lists
 
 class ListLink:

@@ -39,6 +39,10 @@ SCENARIOS = {
     'wind-8ms': dict(pre={}, inject={'SIM_WIND_SPD': 8.0, 'SIM_WIND_DIR': 90.0}, expect='complete'),
     'circle-fence-rtl': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 2, 'FENCE_RADIUS': 60, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
     'altitude-fence-rtl': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 1, 'FENCE_ALT_MAX': 10, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
+    # different phases of the flight (attempt 14): the same faults earlier and later than the usual 12 s
+    'battery-critical-during-climb': dict(pre={'BATT_FS_CRT_ACT': 1, 'BATT_CRT_VOLT': 10.0, 'BATT_LOW_TIMER': 1}, inject={'SIM_BATT_VOLTAGE': 9.0}, inject_after=3.0, expect='LAND'),
+    'battery-critical-during-rtl-descent': dict(pre={'BATT_FS_CRT_ACT': 1, 'BATT_CRT_VOLT': 10.0, 'BATT_LOW_TIMER': 1}, inject={'SIM_BATT_VOLTAGE': 9.0}, inject_after=60.0, expect='LAND'),
+    'gcs-link-loss-during-climb': dict(pre={'FS_GCS_ENABLE': 1, 'FS_GCS_TIMEOUT': 5}, inject=None, stop_heartbeats=True, inject_after=3.0, expect='RTL'),
     'battery-critical-and-link-loss': dict(pre={'BATT_FS_CRT_ACT': 1, 'BATT_CRT_VOLT': 10.0, 'BATT_LOW_TIMER': 1, 'FS_GCS_ENABLE': 1, 'FS_GCS_TIMEOUT': 5}, inject={'SIM_BATT_VOLTAGE': 9.0},
                                            stop_heartbeats=True, expect='final LAND'),
 }
@@ -119,7 +123,7 @@ def run(name, spec):
         start, injected, last_hb, pos, modes, reached = time.time(), False, None, None, [], []
         while time.time() - start < 300.0:
             now = time.time() - start
-            if not injected and now >= INJECT_AFTER_S:
+            if not injected and now >= spec.get('inject_after', INJECT_AFTER_S):
                 injected = True
                 if spec.get('inject'):
                     bad = set_params(conn, spec['inject'])

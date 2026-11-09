@@ -1,0 +1,28 @@
+OK   mission of 6 items uploaded (ack 0)
+OK   mission reads back equal (home aside)   [[]]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  5.2 s item 1 reached at -35.363261, 149.165230, 15 m, 0.0 m/s
+t=  5.3 s vehicle: Mission: 2 SplineWP
+t= 15.5 s item 2 reached at -35.362902, 149.165223, 15 m, 6.7 m/s
+OK   spline item 2 reached within 6 m   [0.7 m]
+t= 15.5 s vehicle: Reached command #2
+t= 15.5 s vehicle: Mission: 3 SplineWP
+t= 22.3 s item 3 reached at -35.362721, 149.165671, 15 m, 7.1 m/s
+OK   spline item 3 reached within 6 m   [0.1 m]
+t= 22.3 s vehicle: Reached command #3
+t= 22.3 s vehicle: Mission: 4 SplineWP
+t= 31.7 s item 4 reached at -35.362996, 149.166002, 15 m, 0.1 m/s
+OK   spline item 4 reached within 6 m   [0.5 m]
+t= 31.8 s vehicle: Reached command #4
+t= 31.8 s vehicle: Mission: 5 RTL
+t= 78.1 s vehicle: SIM Hit ground at 0.498161 m/s
+t= 80.2 s item 5 reached at -35.363261, 149.165230, -0 m, 0.0 m/s
+t= 80.3 s vehicle: Disarming motors
+t= 80.6 s heartbeat: DISARMED
+items reached in order: [1, 2, 3, 4, 5]
+OK   the vehicle disarmed by itself
+OK   items 1 to 4 reached in order   [[1, 2, 3, 4, 5]]
+OK   came back to within 5 m of home   [0.0 m]
+RESULT passed

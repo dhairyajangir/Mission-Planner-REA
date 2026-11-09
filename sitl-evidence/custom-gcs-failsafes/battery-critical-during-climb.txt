@@ -1,0 +1,18 @@
+OK   preset parameters ['BATT_CRT_VOLT', 'BATT_FS_CRT_ACT', 'BATT_LOW_TIMER'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  3.1 s injected {'SIM_BATT_VOLTAGE': 9.0}
+t=  4.9 s heartbeat: ARMED, mode LAND
+t=  4.9 s vehicle: Battery 1 is critical 8.61V used 76 mAh
+t=  4.9 s vehicle: Battery Failsafe
+t= 34.0 s vehicle: SIM Hit ground at 0.500176 m/s
+t= 36.4 s vehicle: Disarming motors
+t= 36.5 s heartbeat: DISARMED, mode LAND
+OK   after the fault the mode changed to LAND   [['AUTO', 'LAND', 'LAND']]
+OK   the vehicle disarmed by itself
+final position 0.0 m from home, -0.0 m up
+items reached: []
+RESULT passed
