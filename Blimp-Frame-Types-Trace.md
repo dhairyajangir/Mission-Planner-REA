@@ -1,6 +1,6 @@
-# ArduBlimp frame types trace (observation)
+# ArduBlimp frame types trace
 
-Scope: the two ArduBlimp simulator frames in the supplied snapshot (commit `72b238201f5ea3b556e3809b2ec704fcf701474a`): `blimp` (FRAME_CLASS 1, fins; `default_params/blimp.parm`) and `blimp-motor` (FRAME_CLASS 2, motors; `default_params/blimp.parm` plus `blimp-motor.parm`). ArduBlimp has no `MAV_CMD_DO_MOTOR_TEST` handler (searching the Blimp source tree finds none) and I did not find a table to predict the output mapping from, so this is an observation, not a check against a prediction. Disposable simulators in the `Ubuntu-E` WSL distribution, simulator instance 1 (tcp 5770) beside a Plane autotest. No real vehicle.
+Scope: the two ArduBlimp simulator frames in the supplied snapshot (commit `72b238201f5ea3b556e3809b2ec704fcf701474a`): `blimp` (FRAME_CLASS 1, fins; `default_params/blimp.parm`) and `blimp-motor` (FRAME_CLASS 2, motors; `default_params/blimp.parm` plus `blimp-motor.parm`). ArduBlimp has no `MAV_CMD_DO_MOTOR_TEST` handler (searching the Blimp source tree finds none). I first ran the stick test below as a plain observation; I then found the mixer in `Blimp/Fins.cpp` and compared the observations with it (section "Check against the mixer"), so the comparison was made after the fact, not as a blind prediction. Disposable simulators in the `Ubuntu-E` WSL distribution, simulator instance 1 (tcp 5770) beside a Plane autotest. No real vehicle.
 
 ## What was done
 
@@ -15,9 +15,16 @@ Scope: the two ArduBlimp simulator frames in the supplied snapshot (commit `72b2
 
 With no stick input nothing moved on either frame. The fin frame moves its outputs by roughly 500 to 650 us (its servo range is 500 to 2200 from `blimp.parm`); the motor frame by 200 us (range 1000 to 2000, `FINS_THR_MAX 0.4` in `blimp-motor.parm`). The outputs a given RC channel moves differ between the two frames, as expected from two different mixers.
 
-What this does not say: which RC channel is roll, pitch, yaw or throttle for the blimp, what the mixing factors are, and whether the directions are right. The `SERVO4_FUNCTION`, `SERVO1_MIN`, `SERVO1_MAX` and `SERVO1_TRIM` reads of the fin frame returned nothing (the five request attempts timed out), so those values come from the default parameter file, not from the vehicle. The ArduBlimp autotest suite (7 of 7 passed, in the main ledger) is the stronger evidence for Blimp behaviour.
+## Check against the mixer (`Blimp/Fins.cpp`, `Blimp/radio.cpp`, `Blimp/mode_manual.cpp`)
+
+- RC channels: RC1 (roll channel) is "right", RC2 (pitch channel) is "front", RC3 (throttle channel) is "up" and the pilot's down axis is its negative (`pilot.z = -channel_up`), RC4 (yaw channel) is yaw. MANUAL passes them to the mixer scaled by `g.max_man_thr`.
+- Motor frame (FRAME_CLASS 2, `setup_motors`): output 1 = front +1, yaw +1; output 2 = front +1, yaw -1; output 3 = down -1; output 4 = right +1. Observed: RC1 moved output 4 only; RC2 moved outputs 1 and 2 together; RC3 moved output 3 only; RC4 moved output 1 up and output 2 down. All four match.
+- Fin frame (FRAME_CLASS 1, `setup_fins`, amplitude factors then offset factors per fin: back, front, right, left): fin 1 (back) has front amplitude +1 and down amplitude and offset 0.5; fin 2 (front) has front amplitude -1 and down amplitude and offset 0.5; fin 3 (right) has right amplitude -1 and yaw amplitude and offset 0.5; fin 4 (left) has right amplitude +1 and yaw amplitude 0.5 and offset -0.5. Observed: RC1 (positive right) moved output 4 (the left fin, the one with positive right amplitude); RC2 moved output 1 (the back fin, positive front amplitude); RC3 moved outputs 1 and 2 (both fins with a down term); RC4 moved output 3 up and output 4 down (opposite yaw offsets). All four match in which outputs move and in the sign pattern.
+- Not compared: the size of the movements (the fin outputs are a sine wave around an offset, sampled once at the end of each step, so the numbers above are one sample), thruster or fin geometry, and any in-air behaviour.
+
+The `SERVO4_FUNCTION`, `SERVO1_MIN`, `SERVO1_MAX` and `SERVO1_TRIM` reads of the fin frame returned nothing (the five request attempts timed out), so those values come from the default parameter file, not from the vehicle. The ArduBlimp autotest suite (7 of 7 passed, in the main ledger) is the stronger evidence for Blimp behaviour.
 
 ## Not covered
 
-- Mixer factors and fin/motor geometry from `libraries/` and `Blimp/` source; any physical or aerodynamic behaviour.
-- The Mission Planner pages for Blimp (the original motor test page is not expected to offer a motor test for it; not run).
+- Fin and motor geometry, the sizes of the movements, and any physical or aerodynamic behaviour.
+- The Mission Planner pages for Blimp other than the motor test page, which is disabled for the Blimp simulator (`Vehicle-Motor-Test-Page-Trace.md`).
