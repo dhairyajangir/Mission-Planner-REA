@@ -1,9 +1,9 @@
 """Motor test across the ArduSub frame configurations on disposable ArduSub SITLs (WSL, pymavlink). Simulator only.
 
 ArduSub's MAV_CMD_DO_MOTOR_TEST handler differs from ArduCopter's: it only accepts the "board order" test type (param6 = 2), the vehicle must be armed, the
-command has to be repeated at least twice a second or the test times out and disarms, and motor number n means output n (not a sequence). For each FRAME_CONFIG
-value this script starts the simulator (the first start sets FRAME_CONFIG, the simulator is restarted without wiping parameters), force-arms, then for n = 1..12
-sends the test for output n at 10 percent every 0.25 s for 1.2 s while recording SERVO_OUTPUT_RAW on the same link, and reports which outputs left their idle
+command has to be repeated at least twice a second or the test times out and disarms, and motor number param1 is a zero-based output number (not a sequence). For each FRAME_CONFIG
+value this script starts the simulator (the first start sets FRAME_CONFIG, the simulator is restarted without wiping parameters), force-arms, then for param1 = 0..11
+sends the test for output n at 10 percent every 0.25 s for 1.4 s, back to back with the next output while recording SERVO_OUTPUT_RAW on the same link, and reports which outputs left their idle
 value by 20 us or more. The expected set of motors for each configuration comes from the add_motor_raw_6dof(...) lines of AP_Motors6DOF.cpp in the same source tree
 (SUB_FRAME_CUSTOM falls through to SIMPLEROV_3 there, as the C++ switch does).
 
@@ -19,6 +19,10 @@ import time
 from pymavlink import mavutil
 
 TREE, OUT = sys.argv[1], sys.argv[2]
+INSTANCE = int(os.environ.get('SWEEP_INSTANCE', '0'))       # simulator instance: serial 0 listens on tcp 5760 + 10 * instance, so a second sweep can run beside another autotest
+PORT = 5760 + 10 * INSTANCE
+ONLY = [int(x) for x in os.environ.get('SWEEP_CONFIGS', '').split(',') if x]             # e.g. SWEEP_CONFIGS=2,3
+EXTRA = dict((kv.split('=')[0], float(kv.split('=')[1])) for kv in os.environ.get('SWEEP_EXTRA_PARAMS', '').split(',') if kv)   # e.g. SERVO8_FUNCTION=40
 CONFIGS = [(0, 'BLUEROV1'), (1, 'VECTORED'), (2, 'VECTORED_6DOF'), (3, 'VECTORED_6DOF_90DEG'), (4, 'SIMPLEROV_3'), (5, 'SIMPLEROV_4'), (6, 'SIMPLEROV_5'), (7, 'CUSTOM')]
 
 
@@ -59,9 +63,10 @@ def parse_expected():
 
 def start(work, wipe):
     os.makedirs(work, exist_ok=True)
-    subprocess.call(['pkill', '-f', 'build/sitl/bin/ardu'])
+    subprocess.call(['pkill', '-f', 'build/sitl/bin/ardusub'])      # only this vehicle: another autotest may be running
+
     time.sleep(1)
-    return subprocess.Popen([os.path.join(TREE, 'build/sitl/bin/ardusub')] + (['-w'] if wipe else []) + ['--model', 'vectored', '-I', '0', '-s', '1',
+    return subprocess.Popen([os.path.join(TREE, 'build/sitl/bin/ardusub')] + (['-w'] if wipe else []) + ['--model', 'vectored', '-I', str(INSTANCE), '-s', '1',
                              '--home', '-35.363261,149.165230,-0.5,0'], cwd=work, stdout=open(os.path.join(work, 'sitl.log'), 'a'), stderr=subprocess.STDOUT)
 
 
@@ -69,7 +74,7 @@ def connect():
     t0 = time.time()
     while time.time() - t0 < 60:
         try:
-            m = mavutil.mavlink_connection('tcp:127.0.0.1:5760', autoreconnect=False)
+            m = mavutil.mavlink_connection('tcp:127.0.0.1:%d' % PORT, autoreconnect=False)
             m.wait_heartbeat(timeout=30)
             return m
         except Exception:
@@ -117,11 +122,12 @@ def one_config(value, name, expected, work):
         m = connect()
         if m is None:
             return {'frame_config': value, 'name': name, 'status': 'no connection (first start)'}, []
-        for _ in range(5):
-            m.mav.param_set_send(m.target_system, m.target_component, b'FRAME_CONFIG', float(value), mavutil.mavlink.MAV_PARAM_TYPE_REAL32)
-            time.sleep(0.5)
-            if get_param(m, 'FRAME_CONFIG') == value:
-                break
+        for pname, pvalue in [('FRAME_CONFIG', float(value))] + list(EXTRA.items()):
+            for _ in range(5):
+                m.mav.param_set_send(m.target_system, m.target_component, pname.encode(), pvalue, mavutil.mavlink.MAV_PARAM_TYPE_REAL32)
+                time.sleep(0.5)
+                if get_param(m, pname) == int(pvalue):
+                    break
         time.sleep(2)
     finally:
         stop(proc)
@@ -139,19 +145,23 @@ def one_config(value, name, expected, work):
         drain(m, 3, rows, texts)
         idle = [sorted(r[i] for r in rows)[len(rows) // 2] for i in range(1, 17)] if rows else [0] * 16
         per = []
-        for n in range(1, 13):
+        last = list(idle)
+        for n in range(0, 12):                                         # param1 is the zero-based output: AP_MotorsMatrix::output_test_num(output_channel) calls rc_write(output_channel)
             def send(n=n):
                 m.mav.command_long_send(m.target_system, m.target_component, mavutil.mavlink.MAV_CMD_DO_MOTOR_TEST, 0, n, 0, 10, 1, 1, 2, 0)
+            # the vehicle ends the test (and disarms) if no motor test command arrives for 500 ms, so the commands for the next output follow at once;
+            # an output that was tested earlier stays at its test value, so "moved" means: left its value at the start of this window by 20 us or more
             window = []
-            drain(m, 1.2, window, texts, send)
-            dev = [max((abs(r[i + 1] - idle[i]) for r in window), default=0) for i in range(16)]
+            drain(m, 1.4, window, texts, send)
+            dev = [max((abs(r[i + 1] - last[i]) for r in window), default=0) for i in range(16)]
             moved = [i + 1 for i in range(16) if dev[i] >= 20]
             per.append([value, name, n, ' '.join(map(str, moved)) or 'none', max(dev, default=0)])
-            drain(m, 0.5, [], texts)
+            if window:
+                last = list(window[-1][1:])
         m.mav.command_long_send(m.target_system, m.target_component, mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM, 0, 0, 21196, 0, 0, 0, 0, 0)
-        want = set(expected.get(value, []))
-        moved_by_test = {r[2] for r in per if r[3] == str(r[2])}
-        extra = [r for r in per if r[3] not in ('none', str(r[2]))]
+        want = set(expected.get(value, []))                           # motor numbers, one-based: motor k is servo output k
+        moved_by_test = {r[2] + 1 for r in per if r[3] == str(r[2] + 1)}
+        extra = [r for r in per if r[3] not in ('none', str(r[2] + 1))]
         ok = moved_by_test == want and not extra
         return {'frame_config': value, 'name': name, 'status': 'ok', 'frame_config_read_back': got, 'expected_motors': ' '.join(map(str, sorted(want))),
                 'outputs_that_moved_for_their_own_number': ' '.join(map(str, sorted(moved_by_test))), 'tests_that_moved_other_outputs': len(extra),
@@ -165,6 +175,8 @@ def main():
     expected, _ = parse_expected()
     summaries, allrows = [], []
     for value, name in CONFIGS:
+        if ONLY and value not in ONLY:
+            continue
         print('FRAME_CONFIG', value, name, flush=True)
         try:
             s, rows = one_config(value, name, expected, os.path.expanduser('~/sub-sweep/%d' % value))
@@ -175,7 +187,7 @@ def main():
         allrows += rows
     with open(os.path.join(OUT, 'sub-sweep-per-output.csv'), 'w', newline='') as f:
         w = csv.writer(f, lineterminator='\n')
-        w.writerow(['frame_config', 'name', 'output_tested', 'outputs_that_moved', 'max_deviation_us'])
+        w.writerow(['frame_config', 'name', 'param1_zero_based_output', 'servo_outputs_that_moved', 'max_deviation_us'])
         w.writerows(allrows)
     keys = ['frame_config', 'name', 'status', 'frame_config_read_back', 'expected_motors', 'outputs_that_moved_for_their_own_number', 'tests_that_moved_other_outputs', 'matches_source', 'status_text']
     with open(os.path.join(OUT, 'sub-sweep-summary.csv'), 'w', newline='') as f:

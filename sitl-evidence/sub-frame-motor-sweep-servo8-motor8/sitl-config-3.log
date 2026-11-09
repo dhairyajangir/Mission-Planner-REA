@@ -1,0 +1,36 @@
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=-0.500000m hdg=0.000000
+Starting sketch 'ArduSub'
+Starting SITL input
+Using Irlock at port : 9015
+Using \clock topic for DDS timing: disabled
+bind port 5770 for SERIAL0
+SERIAL0 on TCP port 5770
+Waiting for connection ....
+Connection on serial port 5770
+Loaded defaults from @ROMFS/default_params/sub.parm
+bind port 5772 for SERIAL1
+SERIAL1 on TCP port 5772
+bind port 5773 for SERIAL2
+SERIAL2 on TCP port 5773
+validate_structures:546: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Exitting
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=-0.500000m hdg=0.000000
+Starting sketch 'ArduSub'
+Starting SITL input
+Using Irlock at port : 9015
+Using \clock topic for DDS timing: disabled
+bind port 5770 for SERIAL0
+SERIAL0 on TCP port 5770
+Waiting for connection ....
+Connection on serial port 5770
+Loaded defaults from @ROMFS/default_params/sub.parm
+bind port 5772 for SERIAL1
+SERIAL1 on TCP port 5772
+bind port 5773 for SERIAL2
+SERIAL2 on TCP port 5773
+validate_structures:546: Validating structures
+Waiting for internal clock bits to be set (current=0x00)
+Exitting

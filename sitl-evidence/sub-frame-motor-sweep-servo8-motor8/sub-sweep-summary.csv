@@ -1,0 +1,3 @@
+frame_config,name,status,frame_config_read_back,expected_motors,outputs_that_moved_for_their_own_number,tests_that_moved_other_outputs,matches_source,status_text
+2,VECTORED_6DOF,ok,2,1 2 3 4 5 6 7 8,1 2 3 4 5 6 7 8,0,True,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t
+3,VECTORED_6DOF_90DEG,ok,3,1 2 3 4 5 6 7 8,1 2 3 4 5 6 7 8,0,True,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t

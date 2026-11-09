@@ -1,0 +1,32 @@
+FRAME_CONFIG 0 BLUEROV1
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 0, 'name': 'BLUEROV1', 'status': 'ok', 'frame_config_read_back': 0, 'expected_motors': '1 2 3 4 5 6', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5 6', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 1 VECTORED
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 1, 'name': 'VECTORED', 'status': 'ok', 'frame_config_read_back': 1, 'expected_motors': '1 2 3 4 5 6', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5 6', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 2 VECTORED_6DOF
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 2, 'name': 'VECTORED_6DOF', 'status': 'ok', 'frame_config_read_back': 2, 'expected_motors': '1 2 3 4 5 6 7 8', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5 6 7', 'tests_that_moved_other_outputs': 0, 'matches_source': False, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 3 VECTORED_6DOF_90DEG
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 3, 'name': 'VECTORED_6DOF_90DEG', 'status': 'ok', 'frame_config_read_back': 3, 'expected_motors': '1 2 3 4 5 6 7 8', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5 6 7', 'tests_that_moved_other_outputs': 0, 'matches_source': False, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 4 SIMPLEROV_3
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 4, 'name': 'SIMPLEROV_3', 'status': 'ok', 'frame_config_read_back': 4, 'expected_motors': '1 2 3', 'outputs_that_moved_for_their_own_number': '1 2 3', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 5 SIMPLEROV_4
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 5, 'name': 'SIMPLEROV_4', 'status': 'ok', 'frame_config_read_back': 5, 'expected_motors': '1 2 3 4 5', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 6 SIMPLEROV_5
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 6, 'name': 'SIMPLEROV_5', 'status': 'ok', 'frame_config_read_back': 6, 'expected_motors': '1 2 3 4 5', 'outputs_that_moved_for_their_own_number': '1 2 3 4 5', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
+FRAME_CONFIG 7 CUSTOM
+[Errno 111] Connection refused sleeping
+[Errno 111] Connection refused sleeping
+{'frame_config': 7, 'name': 'CUSTOM', 'status': 'ok', 'frame_config_read_back': 7, 'expected_motors': '1 2 3', 'outputs_that_moved_for_their_own_number': '1 2 3', 'tests_that_moved_other_outputs': 0, 'matches_source': True, 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RCInput: decoding UDP (Pulses) | EKF3 IMU0 initialised | EKF3 IMU1 initialised | AHRS: EKF3 active | EKF3 IMU0 t'}
