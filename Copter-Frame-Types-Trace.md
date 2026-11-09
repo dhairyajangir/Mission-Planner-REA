@@ -203,9 +203,13 @@ Run history, kept: in the first run the cwx and 32-motor frames were not compare
 
 With this, the output mapping has been checked directly for 27 frames: the 23 of section 1, the three scripted frames and Y4. The scripted tests prove that the example scripts create a matrix whose motor test sequence matches the script's own testing orders; they do not check the script's mixing factors.
 
+## 10. Live GUI attempt (not completed)
+
+I launched the research copy of the real Mission Planner 1.3.83 next to a disposable Copter simulator and asked for control of its window with the computer-use tools. The tool could not grant it: it resolves application names against the Start menu, and the research copy is not there (a temporary shortcut I added, and removed afterwards, was not picked up either). No click or key press reached the window; the full account is in `sitl-evidence/live-gui-attempt/NOTES.md`. So every page observation in this trace is still harness-driven, not a person using the GUI.
+
 ## Not covered
 
-- A person using the frame page or motor test page, and the picture drawn for each frame.
+- A person (or the computer-use tools, which could not be granted the research copy, section 10) using the frame page or motor test page, and the picture drawn for each frame.
 - The motor test page's per-motor buttons on frames other than the plus quad, single and coax (section 8 pressed buttons only on single and coax; the sweep in section 1 bypasses the page).
 - Flying any of these frames. The motor test checks the output mapping, not mixing, yaw direction, motor direction (`SERVO_BLH_RVMASK` and similar) or flight behaviour. I did not check which autotests set a frame other than quad plus.
 - Scripting matrix frames (class 15 to 17) and the 32-motor frame.
