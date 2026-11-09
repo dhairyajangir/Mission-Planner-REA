@@ -1,0 +1,11 @@
+== class 3 type 1 (model octa) 41 s
+vehicle: copter, FRAME_CLASS 3, FRAME_TYPE 1
+sequence 1: motor 1 (CW)                 expected=(1,)           moved=(1,)           OK 
+sequence 2: motor 3 (CCW)                expected=(3,)           moved=(3,)           OK 
+sequence 3: motor 8 (CW)                 expected=(8,)           moved=(8,)           OK 
+sequence 4: motor 4 (CCW)                expected=(4,)           moved=(4,)           OK 
+sequence 5: motor 2 (CW)                 expected=(2,)           moved=(2,)           OK 
+sequence 6: motor 6 (CCW)                expected=(6,)           moved=(6,)           OK 
+sequence 7: motor 7 (CW)                 expected=(7,)           moved=(7,)           OK 
+sequence 8: motor 5 (CCW)                expected=(5,)           moved=(5,)           OK 
+RESULT 8 of 8 steps matched

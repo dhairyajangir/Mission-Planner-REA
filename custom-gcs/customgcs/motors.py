@@ -78,7 +78,14 @@ def _layout(info: VehicleInfo) -> list:
     raise Unsupported('no motor layout for frame class %s type %s (scripted matrices need their Lua script)' % (info.frame_class, info.frame_type))
 
 
+# MOTOR_FRAME_TYPE_NYT_PLUS (16) and NYT_X (17) exist only in ArduPlane (and unknown) builds of AP_MotorsMatrix (#if APM_BUILD_TYPE(APM_BUILD_ArduPlane) ...). A Copter
+# with class 1 and one of those types is not initialised and refuses the motor test with "Motor Test: Check frame class and type" (sitl-evidence/custom-gcs-all-layouts/).
+_PLANE_ONLY_TYPES = {(1, 16), (1, 17)}
+
+
 def plan(info: VehicleInfo, params: Mapping[str, float], throttle_percent: float = 10.0, seconds: float = 1.0) -> List[Step]:
+    if info.kind == 'copter' and (info.frame_class, info.frame_type) in _PLANE_ONLY_TYPES:
+        raise Unsupported('frame class %s type %s (NYT) is compiled only into ArduPlane builds; a Copter refuses the motor test ("Check frame class and type")' % (info.frame_class, info.frame_type))
     if info.kind in ('copter', 'quadplane'):
         outputs = servo_of_motor(params)
         steps = []

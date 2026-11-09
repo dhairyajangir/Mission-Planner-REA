@@ -1,0 +1,15 @@
+== class 12 type 0 (model dodeca-hexa) 48 s
+vehicle: copter, FRAME_CLASS 12, FRAME_TYPE 0
+sequence 1: motor 1 (CCW)                expected=(1,)           moved=(1,)           OK 
+sequence 2: motor 2 (CW)                 expected=(2,)           moved=(2,)           OK 
+sequence 3: motor 3 (CW)                 expected=(3,)           moved=(3,)           OK 
+sequence 4: motor 4 (CCW)                expected=(4,)           moved=(4,)           OK 
+sequence 5: motor 5 (CCW)                expected=(5,)           moved=(5,)           OK 
+sequence 6: motor 6 (CW)                 expected=(6,)           moved=(6,)           OK 
+sequence 7: motor 7 (CW)                 expected=(7,)           moved=(7,)           OK 
+sequence 8: motor 8 (CCW)                expected=(8,)           moved=(8,)           OK 
+sequence 9: motor 9 (CCW)                expected=(9,)           moved=(9,)           OK 
+sequence 10: motor 10 (CW)               expected=(10,)          moved=(10,)          OK 
+sequence 11: motor 11 (CW)               expected=(11,)          moved=(11,)          OK 
+sequence 12: motor 12 (CCW)              expected=(12,)          moved=(12,)          OK 
+RESULT 12 of 12 steps matched

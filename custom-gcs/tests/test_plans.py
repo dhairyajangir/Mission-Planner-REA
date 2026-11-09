@@ -128,3 +128,12 @@ def test_helicopter_refusal_is_explained():
     p = {'FRAME_CLASS': 6, 'FRAME_TYPE': 1}
     with pytest.raises(motors.Unsupported, match='Disabled on heli'):
         motors.plan(vehicle.detect(p, mav_type=4), p)
+
+
+def test_nyt_types_are_plane_only():
+    p = copter_params(1, 16)
+    with pytest.raises(motors.Unsupported, match='ArduPlane'):
+        motors.plan(vehicle.detect(p, mav_type=2), p)
+    q = {'Q_ENABLE': 1, 'Q_FRAME_CLASS': 1, 'Q_FRAME_TYPE': 16}
+    q.update({'SERVO%d_FUNCTION' % n: 28 + n for n in range(5, 9)})
+    assert len(motors.plan(vehicle.detect(q, mav_type=1), q)) == 4

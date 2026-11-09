@@ -1,0 +1,9 @@
+== class 2 type 0 (model hexa) 37 s
+vehicle: copter, FRAME_CLASS 2, FRAME_TYPE 0
+sequence 1: motor 1 (CW)                 expected=(1,)           moved=(1,)           OK 
+sequence 2: motor 4 (CCW)                expected=(4,)           moved=(4,)           OK 
+sequence 3: motor 6 (CW)                 expected=(6,)           moved=(6,)           OK 
+sequence 4: motor 2 (CCW)                expected=(2,)           moved=(2,)           OK 
+sequence 5: motor 3 (CW)                 expected=(3,)           moved=(3,)           OK 
+sequence 6: motor 5 (CCW)                expected=(5,)           moved=(5,)           OK 
+RESULT 6 of 6 steps matched

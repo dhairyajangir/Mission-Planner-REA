@@ -1,0 +1,7 @@
+== class 1 type 17 (model +) 271 s
+vehicle: copter, FRAME_CLASS 1, FRAME_TYPE 17
+sequence 1: motor 1 (?)                  expected=()             moved=()             MISMATCH rejected (ack result 4, Motor Test: Check frame class and type) after 22 tries
+sequence 2: motor 4 (?)                  expected=()             moved=()             MISMATCH rejected (ack result 4, Motor Test: Check frame class and type) after 22 tries
+sequence 3: motor 2 (?)                  expected=()             moved=()             MISMATCH rejected (ack result 4, Motor Test: Check frame class and type) after 22 tries
+sequence 4: motor 3 (?)                  expected=()             moved=()             MISMATCH rejected (ack result 4, Motor Test: Check frame class and type) after 22 tries
+RESULT 0 of 4 steps matched
