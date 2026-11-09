@@ -1,0 +1,2 @@
+frame,status,frame_class,frame_type,servo_of_motor,motors_tested,expected_known,sequences_matching_source,idle_pwm,servo_functions_1_to_16,motor_messages,status_text
+plane-tailsitter,ok,10,1,,4,True,0,1500 1500 1000 1500,4 19 70 21 0 0 0 0 0 0 0 0 0 0 0 0,,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised

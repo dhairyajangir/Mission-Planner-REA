@@ -1,0 +1,3 @@
+frame plane-tailsitter
+[Errno 111] Connection refused sleeping
+{'frame': 'plane-tailsitter', 'frame_class': 10, 'frame_type': 1, 'servo_of_motor': '', 'status': 'ok', 'motors_tested': 6, 'expected_known': False, 'sequences_matching_source': 'n/a', 'idle_pwm': '1500 1500 1000 1500 0 0', 'status_text': 'Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised'}

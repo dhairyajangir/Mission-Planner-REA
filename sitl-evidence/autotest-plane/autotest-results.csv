@@ -1,0 +1,252 @@
+label,log,test,description,result
+run1,Plane-run1.log,PIDTuning,"Test PID Tuning",PASSED
+run1,Plane-run1.log,ArmFeatures,"Arm features",PASSED
+run1,Plane-run1.log,SetHome,"Setting and fetching of home",PASSED
+run1,Plane-run1.log,ConfigErrorLoop,"test the sensor config error loop works and that parameter sets are persistent",PASSED
+run1,Plane-run1.log,CPUFailsafe,"In lockup Plane should copy RC inputs to RC outputs",PASSED
+run1,Plane-run1.log,ParameterDocumentation,"ensure parameter documentation is valid",PASSED
+run1,Plane-run1.log,ParametersMIS_TOTAL,"check the GCS cannot set the internal-use-only MIS_TOTAL parameter",PASSED
+run1,Plane-run1.log,ParametersDownload,"check parameter download gives a consistent result",PASSED
+run1,Plane-run1.log,LoggerDocumentation,"Test Onboard Logging Generation",PASSED
+run1,Plane-run1.log,Logging,"Test Onboard Logging",PASSED
+run1,Plane-run1.log,GetCapabilities,"Get Capabilities",PASSED
+run1,Plane-run1.log,InitialMode,"Test initial mode switching",PASSED
+run1,Plane-run1.log,ThrottleFailsafeFence,"Fly fence survives throttle failsafe",PASSED
+run1,Plane-run1.log,DO_CHANGE_SPEED,"Test DO_CHANGE_SPEED command/item",PASSED
+run1,Plane-run1.log,GuidedRequest,"Test handling of MISSION_ITEM in guided mode",PASSED
+run1,Plane-run1.log,MainFlight,"Lots of things in one flight",PASSED
+run1,Plane-run1.log,TestGripperMission,"Test Gripper mission items",PASSED
+run1,Plane-run1.log,AIRSPEED_AUTOCAL,"Test AIRSPEED_AUTOCAL",PASSED
+run1,Plane-run1.log,RangeFinder,"Test RangeFinder Basic Functionality",PASSED
+run1,Plane-run1.log,FenceRTLRally,"Test Fence RTL Rally",PASSED
+run1,Plane-run1.log,FenceMinAltEnableAutoland,"Tests autolanding when alt min fence is enabled",PASSED
+run1,Plane-run1.log,FenceAutoEnableDisableSwitch,"Tests autoenablement of regular fences and manual disablement",PASSED
+run1,Plane-run1.log,FenceCircleExclusionAutoEnable,"Tests autolanding when alt min fence is enabled",PASSED
+run1,Plane-run1.log,ADSBFailActionRTL,"test ADSB avoidance action of RTL",PASSED
+run1,Plane-run1.log,FRSkyPassThroughSensorIDs,"test FRSKy protocol's telem-passthrough functionality (sensor IDs)",PASSED
+run1,Plane-run1.log,FRSkyD,"Test FrSkyD serial output",PASSED
+run1,Plane-run1.log,DEVO,"Test DEVO serial output",PASSED
+run1,Plane-run1.log,loiter_inside_circle," Test a edge case when loiter is started inside the circle ",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_LOITER_TURNS,"test MAV_CMD_NAV_LOITER_TURNS mission item",PASSED
+run1,Plane-run1.log,WatchdogHome,"Ensure home is restored after watchdog reset",PASSED
+run1,Plane-run1.log,Soaring,"Test Soaring feature",PASSED
+run1,Plane-run1.log,Terrain,"test AP_Terrain",PASSED
+run1,Plane-run1.log,ScriptingTerrainCorrected,"check terrain:height_amsl() applies the arming reference offset when asked to",PASSED
+run1,Plane-run1.log,UniversalAutoLandScript,"Test UniversalAutoLandScript",PASSED
+run1,Plane-run1.log,TerrainLoiter,"Test terrain following in loiter",PASSED
+run1,Plane-run1.log,KebniSensAItionExternalINS,"Test Kebni SensAItion External INS mode. Or in Ardupilot terminology, ExternalAHRS mode.",PASSED
+run1,Plane-run1.log,AeronEAHRS,"Test AeronPlx3 EAHRS support",PASSED
+run1,Plane-run1.log,EKFlaneswitch,"Test EKF3 Affinity and Lane Switching",PASSED
+run1,Plane-run1.log,ClimbBeforeTurn,"Test climb-before-turn",PASSED
+run1,Plane-run1.log,AltOffsetReset,"Test automatic ALT_OFFSET reset",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_AUX_FUNCTION,"Test triggering Auxiliary Functions via mavlink",PASSED
+run1,Plane-run1.log,AHRS_ORIENTATION,"test AHRS_ORIENTATION parameter works",PASSED
+run1,Plane-run1.log,AHRS2Logging,"check the secondary AHRS estimate is logged to the AHR2 message",PASSED
+run1,Plane-run1.log,TakeoffAuto2,"Test the behaviour of an AUTO takeoff, pt2.",PASSED
+run1,Plane-run1.log,TakeoffAuto3,"Test the behaviour of an AUTO takeoff, pt3.",PASSED
+run1,Plane-run1.log,TakeoffTakeoff2,"Test the behaviour of a takeoff in TAKEOFF mode, pt2.",PASSED
+run1,Plane-run1.log,TakeoffTakeoff3,"Test the behaviour of a takeoff in TAKEOFF mode, pt3.",PASSED
+run1,Plane-run1.log,TakeoffIdleThrottle,"Apply idle throttle before takeoff.",PASSED
+run1,Plane-run1.log,TakeoffBadLevelOff,"Ensure that the takeoff can be completed under 0 pitch demand.",PASSED
+run1,Plane-run1.log,ForcedDCM,"Switch to DCM mid-flight",PASSED
+run1,Plane-run1.log,DCMFallback,"Really annoy the EKF and force fallback",PASSED
+run1,Plane-run1.log,MAVFTPBurstEOFOffset,"test that FTP burst read EOF NAK has correct offset",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryRoot,"test listing the root, whose path already ends in a separator",PASSED
+run1,Plane-run1.log,MAVFTPShortReplyPadding,"test a short FTP reply carries no stale bytes past its size",PASSED
+run1,Plane-run1.log,MAVFTPReadFile,"test the FTP read path which does not use bursts",PASSED
+run1,Plane-run1.log,MAVFTPRename,"test renaming a file over FTP",PASSED
+run1,Plane-run1.log,MAVFTPGapReadMAVProxy,"test a download over a lossy link fills its gaps with reads",PASSED
+run1,Plane-run1.log,AutotuneFiltering,"Test AutoTune mode with filter updates disabled",PASSED
+run1,Plane-run1.log,MidAirDisarmDisallowed,"Ensure mid-air disarm is not possible",PASSED
+run1,Plane-run1.log,AerobaticsScripting,"Fixed Wing Aerobatics",PASSED
+run1,Plane-run1.log,MANUAL_CONTROL,"test MANUAL_CONTROL mavlink message",PASSED
+run1,Plane-run1.log,SDCardWPTest,"test BRD_SD_MISSION support",PASSED
+run1,Plane-run1.log,SagetechMXS,"test Sagetech MXS ADSB device driver",PASSED
+run1,Plane-run1.log,MAV_CMD_GUIDED_CHANGE_ALTITUDE,"test handling of MAV_CMD_GUIDED_CHANGE_ALTITUDE",PASSED
+run1,Plane-run1.log,MAV_CMD_PREFLIGHT_CALIBRATION,"test MAV_CMD_PREFLIGHT_CALIBRATION mavlink handling",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_INVERTED_FLIGHT,"fly upside-down mission item",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_GO_AROUND,"test MAV_CMD_DO_GO_AROUND as a mavlink command",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_FLIGHTTERMINATION,"test MAV_CMD_DO_FLIGHTTERMINATION works on Plane",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_FLIGHTTERMINATION_unterminate,"unterminate a terminated vehicle",PASSED
+run1,Plane-run1.log,CompassLearnInFlight,"check we can learn compass offsets in flight",PASSED
+run1,Plane-run1.log,GPSPreArms,"ensure GPS prearm checks work",PASSED
+run1,Plane-run1.log,BadRollChannelDefined,"ensure we don't die with a  bad Roll channel defined",PASSED
+run1,Plane-run1.log,mavlink_AIRSPEED,"check receiving of two airspeed sensors",PASSED
+run1,Plane-run1.log,AirspeedEAS2TAS,"check the SITL pitot applies EAS2TAS correctly",PASSED
+run1,Plane-run1.log,LoggedNamedValueInt,"ensure that sent named value ints are logged",PASSED
+run1,Plane-run1.log,AdvancedFailsafeBadBaro,"ensure GPS can be used as a fallback in case of baro dying",PASSED
+run1,Plane-run1.log,TerrainLoiterToCircle,"loiter terrain-relative.  Switch to Circle, maintain alt",PASSED
+run1,Plane-run1.log,EK3HeightDatumResetFlushesBuffers,"Verify resetHeightDatum flushes baro and output observer buffers",PASSED
+run1,Plane-run1.log,DeadreckoningNoAirSpeed,"Test deadreckoning support with no airspeed sensor",PASSED
+run1,Plane-run1.log,TestRCRelay,"Test Relay RC Channel Option",PASSED
+run1,Plane-run1.log,ThrottleFailsafe,"Fly throttle failsafe",PASSED
+run1,Plane-run1.log,NeedEKFToArm,"Ensure the EKF must be healthy for the vehicle to arm.",PASSED
+run1,Plane-run1.log,TestAutoSpeedFlaps,"Test auto flap deployment based on airspeed thresholds.",PASSED
+run1,Plane-run1.log,DO_REPOSITION,"Test mavlink DO_REPOSITION command",PASSED
+run1,Plane-run1.log,Parachute,"Test Parachute",PASSED
+run1,Plane-run1.log,ParachuteSinkRate,"Test Parachute (SinkRate triggering)",PASSED
+run1,Plane-run1.log,FenceStatic,"Test Basic Fence Functionality",PASSED
+run1,Plane-run1.log,FenceRTL,"Test Fence RTL",PASSED
+run1,Plane-run1.log,FenceRetRally," Tests the FENCE_RET_RALLY flag, either returning to fence return point,",PASSED
+run1,Plane-run1.log,FenceAltCeilFloor,"Tests the fence ceiling and floor",PASSED
+run1,Plane-run1.log,FenceMinAltAutoEnable,"Tests autoenablement of the alt min fence and fences on arming",PASSED
+run1,Plane-run1.log,FenceMinAltAutoEnableAbort,"Tests autoenablement of the alt min fence and fences on arming",PASSED
+run1,Plane-run1.log,GuidedRejectOutsideFence,"ensure a GUIDED destination outside the fence is rejected",PASSED
+run1,Plane-run1.log,FenceBreachedChangeMode,"Tests manual mode change after fence breach, as set with FENCE_OPTIONS",PASSED
+run1,Plane-run1.log,FenceNoFenceReturnPoint,"Tests calculated return point during fence breach when no fence return point present",PASSED
+run1,Plane-run1.log,FenceDisableUnderAction,"Tests Disabling fence while undergoing action caused by breach",PASSED
+run1,Plane-run1.log,ADSBResumeActionResumeLoiter,"ensure we resume auto mission or enter loiter",PASSED
+run1,Plane-run1.log,SimADSB,"Tests to ensure simulated ADSB sensor continues to function",PASSED
+run1,Plane-run1.log,Button,"Test Buttons",PASSED
+run1,Plane-run1.log,FRSkySPort,"Test FrSky SPort mode",PASSED
+run1,Plane-run1.log,FRSkyPassThroughStatustext,"test FRSKy protocol's telem-passthrough functionality",PASSED
+run1,Plane-run1.log,LOITER,"Test Loiter mode",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_LOITER_TO_ALT,"test loiter to alt mission item",PASSED
+run1,Plane-run1.log,TerrainMission,"Test terrain following in mission",PASSED
+run1,Plane-run1.log,TerrainMissionInterrupt,"Test terrain following when resuming a mission",PASSED
+run1,Plane-run1.log,InertialLabsEAHRS,"Test InertialLabs EAHRS support",PASSED
+run1,Plane-run1.log,KebniSensAItionExternalIMU,"Test Kebni SensAItion External IMU-only mode",PASSED
+run1,Plane-run1.log,GpsSensorPreArmEAHRS,"Test pre-arm checks related to EAHRS_SENSORS using the MicroStrain7 driver",PASSED
+run1,Plane-run1.log,Deadreckoning,"Test deadreckoning support",PASSED
+run1,Plane-run1.log,EKF3AirspeedAffinity,"Test EKF3 airspeed affinity: each core fuses its own airspeed",PASSED
+run1,Plane-run1.log,EKF3AirspeedAffinityDCM,"EKF3AirspeedAffinity with DCM forced as the active AHRS after",PASSED
+run1,Plane-run1.log,AHRSActiveAirspeedIndex,"every AHRS backend reports which airspeed sensor it is taking",PASSED
+run1,Plane-run1.log,SyntheticAirspeedNoSensor,"with no usable airspeed sensor and EKF3 active, the airspeed",PASSED
+run1,Plane-run1.log,DCMFallbackAirspeedSensor,"when the AHRS falls back to DCM, DCM takes its airspeed from a",PASSED
+run1,Plane-run1.log,RTL_CLIMB_MIN,"Test RTL_CLIMB_MIN",PASSED
+run1,Plane-run1.log,SmartBattery,"Test smart battery logging etc",PASSED
+run1,Plane-run1.log,FlyEachFrame,"Fly each supported internal frame)"": ValueError('Expected MAV_RESULT_ACCEPTED got MAV_RESULT_FAILED') (see /home/think/buildlogs/ArduPlane-FlyEachFrame.txt)",FAILED
+run1,Plane-run1.log,FlyEachFrameRCInput,"Confirm each internal frame can be controlled with RC in the",PASSED
+run1,Plane-run1.log,RCDisableAirspeedUse,"Test RC DisableAirspeedUse option",PASSED
+run1,Plane-run1.log,AHRS2NoSecondaryEstimate,"check AHRS2 mavlink reporting when the secondary estimator has no",PASSED
+run1,Plane-run1.log,TakeoffAuto4,"Test the behaviour of an AUTO takeoff, pt4.",PASSED
+run1,Plane-run1.log,TakeoffTakeoff1,"Test the behaviour of a takeoff in TAKEOFF mode, pt1.",PASSED
+run1,Plane-run1.log,TakeoffGround,"Test a rolling TAKEOFF.",PASSED
+run1,Plane-run1.log,MAVFTP,"ensure MAVProxy can do MAVFTP to ardupilot",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryFullPacket,"test an entry which exactly fills a listing packet is still sent",PASSED
+run1,Plane-run1.log,MAVFTPMavLogDirectory,"test the @MAV_LOG virtual directory required by the FTP spec",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryWithTime,"test FTP directory listing with and without modification times",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryWithTimeTabInName,"test a timed FTP listing sends a name containing a tab as a skip entry",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryWithTimeMAVProxy,"test MAVProxy shows FTP modification times, and can be told not to",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryWithTimeMAVProxyTabInName,"test MAVProxy passes over the skip entry a timed listing gives a name containing a tab",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryUnknownTimeMAVProxy,"test MAVProxy shows a file whose time the autopilot does not know",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryFallbackMAVProxy,"test MAVProxy drops back to a plain listing when no times come back",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryLossyRetry,"test a directory listing completes over a link which drops replies",PASSED
+run1,Plane-run1.log,MAVFTPDuplicateRequest,"test a repeated FTP request is answered from the last reply",PASSED
+run1,Plane-run1.log,MAVFTPUnknownOpcodeNack,"test an unimplemented FTP opcode is NAKed as an unknown command",PASSED
+run1,Plane-run1.log,MAVFTPFileCommandsMAVProxy,"test MAVProxy's FTP file management commands",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryInterleavedPut,"test an upload started during a directory listing is not corrupted",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryInterleavedGet,"test a download started during a directory listing is not corrupted",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryTabInNameMAVProxy,"test MAVProxy parses a listing entry whose filename contains a tab",PASSED
+run1,Plane-run1.log,MegaSquirt,"test MegaSquirt driver",PASSED
+run1,Plane-run1.log,SpeedToFly,"Test soaring speed-to-fly",PASSED
+run1,Plane-run1.log,RunMissionScript,"Test run_mission.py script",PASSED
+run1,Plane-run1.log,WindEstimatesTrim,"DCM wind estimate must be unchanged by a board mounting offset that",PASSED
+run1,Plane-run1.log,AirspeedCal,"test Airspeed calibration",PASSED
+run1,Plane-run1.log,AirspeedScripting,"test airspeed data supplied by a lua script",PASSED
+run1,Plane-run1.log,MissionJumpTags,"test MAV_CMD_JUMP_TAG",PASSED
+run1,Plane-run1.log,GCSFailsafe,"Ensure Long-Failsafe works on GCS loss",PASSED
+run1,Plane-run1.log,RudderArmedTakeoffRequiresNeutralThrottle,"auto-takeoff should not occur while rudder continues to be held over",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_AUTOTUNE_ENABLE,"test enabling autotune via mavlink",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_ALTITUDE_WAIT,"test MAV_CMD_NAV_ALTITUDE_WAIT mission item, wiggling only",PASSED
+run1,Plane-run1.log,MAV_CMD_MISSION_START,"test MAV_CMD_MISSION_START starts AUTO",PASSED
+run1,Plane-run1.log,TerrainRally," Tests terrain follow with a rally point ",PASSED
+run1,Plane-run1.log,SetHomeAltChange,"check modes retain altitude when home alt changed",PASSED
+run1,Plane-run1.log,SetHomeAltChange3,"same as SetHomeAltChange, but the home alt change occurs during TECS operation",PASSED
+run1,Plane-run1.log,ForceArm,"check force-arming functionality",PASSED
+run1,Plane-run1.log,VolzMission,"test Volz serially-connected servos in a mission",PASSED
+run1,Plane-run1.log,Volz,"test Volz serially-connected",PASSED
+run1,Plane-run1.log,LoggedNamedValueFloat,"ensure that sent named value floats are logged",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_LOITER_TURNS_zero_turn,"Ensure air vehicle achieves loiter target before exiting",PASSED
+run1,Plane-run1.log,RudderArmingWithArmingChecksSkipped,"check we can't arm with rudder even if all checks are skipped",PASSED
+run1,Plane-run1.log,FenceDoubleBreach,"test breaching the fence twice",PASSED
+run1,Plane-run1.log,ScriptedArmingChecksApplet," Applet for Arming Checks will prevent a vehicle from arming based on scripted checks",PASSED
+run1,Plane-run1.log,ScriptedArmingChecksAppletEStop," Applet for Arming Checks will prevent a vehicle from arming based on scripted checks",PASSED
+run1,Plane-run1.log,ScriptedArmingChecksAppletRally," Applet for Arming Checks will prevent a vehicle from arming based on scripted checks",PASSED
+run1,Plane-run1.log,AVAILABLE_MODES,"check AVAILABLE_MODES lists Plane's modes",PASSED
+run1,Plane-run1.log,MAVLinkCommandRejections,"check Plane refuses commands it cannot act on",PASSED
+run1,Plane-run1.log,MAV_CMD_GUIDED_CHANGE_HEADING,"test flying headings with MAV_CMD_GUIDED_CHANGE_HEADING",PASSED
+run1,Plane-run1.log,SET_POSITION_TARGET_LOCAL_NED,"test changing altitude in GUIDED with SET_POSITION_TARGET_LOCAL_NED",PASSED
+run1,Plane-run1.log,GuidedOnlyOffboardControl,"check offboard altitude targets are ignored outside GUIDED, and attitude targets in AVOID_ADSB",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_RETURN_PATH_START,"test MAV_CMD_DO_RETURN_PATH_START as a mavlink command",PASSED
+run1,Plane-run1.log,MAV_CMD_SET_HAGL,"test height above ground from MAV_CMD_SET_HAGL is used for the landing flare",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_PARACHUTE_actions,"test enabling, disabling and repeated release of the parachute via mavlink",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_SET_MISSION_CURRENT,"test changing the mission item being flown with MAV_CMD_DO_SET_MISSION_CURRENT",PASSED
+run1,Plane-run1.log,DO_REPOSITION_loiter_radius_and_direction,"test the loiter radius and direction parameters of MAV_CMD_DO_REPOSITION",PASSED
+run1,Plane-run1.log,DO_SET_HOME_in_RTL,"check RTL follows a home position which is changed while in RTL",PASSED
+run1,Plane-run1.log,HEARTBEAT_system_status,"check HEARTBEAT system_status tracks the vehicle state",PASSED
+run1,Plane-run1.log,EXTENDED_SYS_STATE,"check EXTENDED_SYS_STATE through a fixed-wing flight",PASSED
+run1,Plane-run1.log,PID_TUNING_axes,"check PID_TUNING is sent for the axes selected by GCS_PID_MASK",PASSED
+run1,Plane-run1.log,CustomController,"Test Custom Controller API",PASSED
+run1,Plane-run1.log,AuxModeSwitch,"Set modes via auxswitches",PASSED
+run1,Plane-run1.log,TestRCCamera,"Test RC Option - Camera Trigger",PASSED
+run1,Plane-run1.log,NoShortFailsafe,"No short failsafe in auto mode",PASSED
+run1,Plane-run1.log,TestFlaps,"Test flaps functionality.",PASSED
+run1,Plane-run1.log,GuidedThrottleNudge,"ensure THROTTLE_NUDGE nudges target airspeed in GUIDED mode",PASSED
+run1,Plane-run1.log,DO_PARACHUTE,"test triggering parachute via mavlink",PASSED
+run1,Plane-run1.log,PitotBlockage,"Test detection and isolation of a blocked pitot tube",PASSED
+run1,Plane-run1.log,TemperatureSensorRangefinder,"Test that AP_TemperatureSensor can push temperature into a rangefinder",PASSED
+run1,Plane-run1.log,FenceEnableDisableSwitch,"Tests enablement and disablement of fences on a switch",PASSED
+run1,Plane-run1.log,FenceEnableDisableAux,"Tests enablement and disablement of fences via aux command",PASSED
+run1,Plane-run1.log,FenceNoFenceReturnPointInclusion,"Tests using home as fence return point when none is present, and no inclusion fence is uploaded",PASSED
+run1,Plane-run1.log,FRSkyMAVlite,"Test FrSky MAVlite serial output",PASSED
+run1,Plane-run1.log,LTM,"Test LTM serial output",PASSED
+run1,Plane-run1.log,AdvancedFailsafe,"Test Advanced Failsafe",PASSED
+run1,Plane-run1.log,DeepStall,"Test DeepStall Landing",PASSED
+run1,Plane-run1.log,LargeMissions,"Test Manipulation of Large missions",PASSED
+run1,Plane-run1.log,SIMCompare,"compare logged EKF2 and EKF3 estimates against simulator truth",PASSED
+run1,Plane-run1.log,Replay,"test replay correctness",PASSED
+run1,Plane-run1.log,VectorNavEAHRS,"Test VectorNav EAHRS support",PASSED
+run1,Plane-run1.log,MicroStrainEAHRS5,"Test MicroStrain EAHRS series 5 support",PASSED
+run1,Plane-run1.log,MicroStrainEAHRS7,"Test MicroStrain EAHRS series 7 support",PASSED
+run1,Plane-run1.log,EKF_STATUS_REPORT,"check EKF_STATUS_REPORT is assembled correctly for each AHRS_EKF_TYPE",PASSED
+run1,Plane-run1.log,AirspeedDrivers,"Test AirSpeed drivers",PASSED
+run1,Plane-run1.log,IMUTempCal,"Test IMU temperature calibration",PASSED
+run1,Plane-run1.log,AutoLandMode,"Test AUTOLAND mode",PASSED
+run1,Plane-run1.log,AHRSTrim,"AHRS trim testing",PASSED
+run1,Plane-run1.log,TakeoffAuto1,"Test the behaviour of an AUTO takeoff, pt1.",PASSED
+run1,Plane-run1.log,TakeoffTakeoff4,"Test the behaviour of a takeoff in TAKEOFF mode, pt4.",PASSED
+run1,Plane-run1.log,TakeoffTakeoff5,"Test the behaviour of a takeoff with no compass",PASSED
+run1,Plane-run1.log,TakeoffLevelOffWind,"Ensure the level-off functionality works.",PASSED
+run1,Plane-run1.log,MAVFTPBurstMissionDat,"test FTP burst read of mission.dat with exact-multiple file sizes",PASSED
+run1,Plane-run1.log,MAVFTPParamPck,"download param.pck via FTP and verify burst mechanics and param count",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryEdgeCases,"test how FTP directory listing rejects and terminates",PASSED
+run1,Plane-run1.log,MAVFTPListDirectoryLongNames,"test a listing is not truncated by an entry too long to fit a packet",PASSED
+run1,Plane-run1.log,MAVFTPCalcFileCRC32,"test the FTP file checksum",PASSED
+run1,Plane-run1.log,MAVFTPCrcCompareMAVProxy,"test MAVProxy comparing local files against the vehicle by checksum",PASSED
+run1,Plane-run1.log,MAVFTPVirtualWriteBounds,"reject invalid virtual-file writes while preserving upload growth",PASSED
+run1,Plane-run1.log,MAVFTPParamUploadBounds,"reject truncated parameter records and unsupported upload types",PASSED
+run1,Plane-run1.log,MAVFTPListROMFS,"test FTP lists every file the build embeds in @ROMFS, and reads one",PASSED
+run1,Plane-run1.log,MAVFTPListROMFSLongNames,"test listing ROMFS entries whose names are longer than a directory entry holds",PASSED
+run1,Plane-run1.log,MAVFTPListROMFSMissingDirectory,"test listing ROMFS directories which are not there leaves @ROMFS listable",PASSED
+run1,Plane-run1.log,MAVFTPListROMFSFile,"test listing a ROMFS file as though it were a directory is refused",PASSED
+run1,Plane-run1.log,AUTOTUNE,"Test AutoTune mode",PASSED
+run1,Plane-run1.log,Hirth,"Test Hirth EFI",PASSED
+run1,Plane-run1.log,MSP_DJI,"Test MSP DJI serial output",PASSED
+run1,Plane-run1.log,AltitudeSlopeMaxHeight,"Test rebuild altitude slope if above and climbing",PASSED
+run1,Plane-run1.log,HIGH_LATENCY2,"test sending of HIGH_LATENCY2",PASSED
+run1,Plane-run1.log,WindEstimates,"fly non-external AHRS, ensure wind estimate correct",PASSED
+run1,Plane-run1.log,WindMessageSpeed,"Test that WIND.speed is horizontal (ground-plane) speed only",PASSED
+run1,Plane-run1.log,AltResetBadGPS,"Tests the handling of poor GPS lock pre-arm alt resets",PASSED
+run1,Plane-run1.log,NoArmWithoutMissionItems,"ensure we can't arm in auto mode without mission items present",PASSED
+run1,Plane-run1.log,MODE_SWITCH_RESET,"test the MODE_SWITCH_RESET auxiliary function",PASSED
+run1,Plane-run1.log,ExternalPositionEstimate,"Test mavlink EXTERNAL_POSITION_ESTIMATE command",PASSED
+run1,Plane-run1.log,MAV_CMD_DO_LAND_START,"test MAV_CMD_DO_LAND_START as mavlink command",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_LOITER_UNLIM,"test receiving MAV_CMD_NAV_LOITER_UNLIM from GCS",PASSED
+run1,Plane-run1.log,MAV_CMD_NAV_RETURN_TO_LAUNCH,"test receiving MAV_CMD_NAV_RETURN_TO_LAUNCH from GCS",PASSED
+run1,Plane-run1.log,MinThrottle,"Make sure min throttle does not apply in manual mode and does in FBWA",PASSED
+run1,Plane-run1.log,GuidedAttitudeNoGPS,"test that guided-attitude still works with no GPS",PASSED
+run1,Plane-run1.log,ScriptStats,"test script stats logging",PASSED
+run1,Plane-run1.log,SetHomeAltChange2,"ensure TECS operates predictably as home altitude changes continuously",PASSED
+run1,Plane-run1.log,MAV_CMD_EXTERNAL_WIND_ESTIMATE,"test MAV_CMD_EXTERNAL_WIND_ESTIMATE as a mavlink command",PASSED
+run1,Plane-run1.log,GliderPullup,"test pullup of glider after ALTITUDE_WAIT",PASSED
+run1,Plane-run1.log,LoggedNamedValueString,"ensure that sent named value strings are logged",PASSED
+run1,Plane-run1.log,DO_CHANGE_ALTITUDE,"test DO_CHANGE_ALTITUDE mavlink command",PASSED
+run1,Plane-run1.log,SET_POSITION_TARGET_GLOBAL_INT_for_altitude,"test changing altitude using SET_POSITION_TARGET_GLOBAL_INT_for_altitude in guided mode",PASSED
+run1,Plane-run1.log,PlaneFollowAppletSanity,"PLane Follow Sanity Check, not a detailed test",PASSED
+run1,Plane-run1.log,PreflightRebootComponent,"Ensure that PREFLIGHT_REBOOT commands sent to components don't reboot Autopilot",PASSED
+run1,Plane-run1.log,UTMGlobalPosition,"test UTM_GLOBAL_POSITION message sending",PASSED
+run1,Plane-run1.log,UTMGlobalPositionWaypoint,"test UTM_GLOBAL_POSITION waypoint fields in AUTO and GUIDED",PASSED
+run1,Plane-run1.log,PPPPeriph,"verify PPP-over-TCP link to an AP_Periph (sitl_periph_PPP) companion",PASSED
+run1,Plane-run1.log,steplessAHRSSwitch,"Ensure AHRS source switches have input shaping applied correctly",PASSED
+run1,Plane-run1.log,DO_REPOSITION_mode_change_refused,"DO_REPOSITION must not redirect the vehicle if it cannot change into GUIDED",PASSED

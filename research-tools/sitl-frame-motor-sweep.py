@@ -31,6 +31,10 @@ DEFAULT_FRAMES = ['quad', 'X', 'bfx', 'djix', 'cwx', 'hexa', 'hexax', 'hexa-cwx'
 FRAMES = sys.argv[3:] or DEFAULT_FRAMES
 MODEL_FOR = {'quad': '+'}          # sim_vehicle maps the "quad" frame to the "+" model
 PCT, SECS, GAP = 10, 1.0, 0.8
+BINARY = os.environ.get('SWEEP_BINARY', 'arducopter')                  # SWEEP_BINARY=arduplane sweeps QuadPlane frames (motor test of the VTOL motors)
+PREFIX = os.environ.get('SWEEP_PARAM_PREFIX', '')                       # 'Q_' for QuadPlane: Q_FRAME_CLASS and Q_FRAME_TYPE
+INSTANCE = int(os.environ.get('SWEEP_INSTANCE', '0'))                   # tcp port 5760 + 10 * instance
+PORT = 5760 + 10 * INSTANCE
 # Non-matrix classes, transcribed BY HAND from _output_test_seq in AP_MotorsTri.cpp (pitch not reversed: motor1, motor4, tail servo = CH7, motor2),
 # AP_MotorsSingle.cpp (servo1..servo6) and AP_MotorsCoax.cpp (servo1..servo6): sequence number -> servo output
 HAND_SEQ = {7: [1, 4, 7, 2], 8: [1, 2, 3, 4, 5, 6], 9: [1, 2, 3, 4, 5, 6]}
@@ -89,13 +93,13 @@ def expected_orders(cls, typ):
 
 def start_sitl(frame, work, wipe=None):
     os.makedirs(work, exist_ok=True)
-    subprocess.call(['pkill', '-f', 'build/sitl/bin/ardu'])
+    subprocess.call(['pkill', '-f', 'build/sitl/bin/' + BINARY])
     time.sleep(1)
     log = open(os.path.join(work, 'sitl.log'), 'a')
-    binary = os.path.join(TREE, 'build/sitl/bin/arducopter')
+    binary = os.path.join(TREE, 'build/sitl/bin/' + BINARY)
     if wipe is None:
         wipe = not os.environ.get('SWEEP_NOWIPE')       # SWEEP_NOWIPE=1 keeps the stored parameters in <work>/eeprom.bin
-    proc = subprocess.Popen([binary] + (['-w'] if wipe else []) + ['--model', MODEL_FOR.get(frame, frame), '-I', '0', '-s', '1',
+    proc = subprocess.Popen([binary] + (['-w'] if wipe else []) + ['--model', MODEL_FOR.get(frame, frame), '-I', str(INSTANCE), '-s', '1',
                              '--home', '-35.363261,149.165230,584,0'], cwd=work, stdout=log, stderr=subprocess.STDOUT)
     return proc
 
@@ -138,7 +142,7 @@ def connect():
     t0 = time.time()
     while time.time() - t0 < 60:
         try:
-            m = mavutil.mavlink_connection('tcp:127.0.0.1:5760', autoreconnect=False)
+            m = mavutil.mavlink_connection('tcp:127.0.0.1:%d' % PORT, autoreconnect=False)
             m.wait_heartbeat(timeout=30)
             return m
         except Exception:
@@ -184,14 +188,22 @@ def sweep_frame(spec, work):
         if m is None:
             summary['status'] = 'no connection'
             return summary, seqrows
-        cls, typ = get_param(m, 'FRAME_CLASS'), get_param(m, 'FRAME_TYPE')
+        cls, typ = get_param(m, PREFIX + 'FRAME_CLASS'), get_param(m, PREFIX + 'FRAME_TYPE')
         summary.update(frame_class=cls, frame_type=typ)
         exp = expected_orders(cls, typ) if cls in MATRIX_CLASS.values() else None
         if frame in LUA_FRAMES:
             exp = lua_orders(frame)                # scripted matrix: the order comes from the example script that was installed
             time.sleep(8)                           # let the script create the matrix
-        hand = HAND_SEQ.get(cls)
-        n = len(exp) if exp else (len(hand) if hand else 6)
+        hand = HAND_SEQ.get(cls)                                   # motor numbers; for a QuadPlane they are mapped to outputs through the vehicle's own SERVOn_FUNCTION values
+        n = len(exp) if exp else (len(hand) if hand else (4 if (PREFIX and cls == 10) else 6))
+        servo_of_motor = None
+        if PREFIX:
+            funcs = [get_param(m, 'SERVO%d_FUNCTION' % i) for i in range(1, 17)]
+            servo_of_motor = {f - 32: i + 1 for i, f in enumerate(funcs) if f is not None and 33 <= f <= 40}
+            thrust_outputs = {i + 1 for i, f in enumerate(funcs) if f in (70, 73, 74, 75, 76)}      # throttle, throttle left/right and tilt left/right: tailsitter outputs are on these, not on Motor1..8
+            func_servo = {f: i + 1 for i, f in reversed(list(enumerate(funcs))) if f is not None}
+            summary['servo_functions_1_to_16'] = ' '.join(str(f) for f in funcs)
+            summary['servo_of_motor'] = ' '.join('%d:%d' % kv for kv in sorted(servo_of_motor.items()))
         m.mav.command_long_send(m.target_system, m.target_component, mavutil.mavlink.MAV_CMD_SET_MESSAGE_INTERVAL, 0, 36, 50000, 0, 0, 0, 0, 0)
         rows, texts = [], []
         drain(m, 4, rows, texts)
@@ -204,18 +216,27 @@ def sweep_frame(spec, work):
             # a servo output counts as moved when it leaves its idle value by 20 us or more in either direction (flap servos idle at 1500 and the 10 percent test drives them down to 1100)
             dev = [max((abs(r[i + 1] - idle[i]) for r in window), default=0) for i in range(32)]
             moved = [i + 1 for i in range(32) if dev[i] >= 20]
+            if servo_of_motor is not None:
+                # on a QuadPlane the control-surface outputs move by themselves while the vehicle sits there, so only the outputs assigned to a motor function are looked at
+                moved = [i for i in moved if i in set(servo_of_motor.values()) | thrust_outputs]
             peak = max(dev, default=0)
             want = None
             if exp:
-                # sequence number seq runs the motor whose testing_order == seq; servo output = motor index + 1
+                # sequence number seq runs the motor whose testing_order == seq; servo output = motor index + 1 for ArduCopter, and for a QuadPlane (SWEEP_PARAM_PREFIX=Q_)
+                # the output whose SERVOn_FUNCTION is Motor<k> (function 32 + k), read from the vehicle itself
                 want = [i + 1 for i, o in enumerate(exp) if o == seq]
+                if servo_of_motor is not None:
+                    want = [servo_of_motor.get(k) for k in want]
             elif hand:
-                want = [hand[seq - 1]]
+                want = [hand[seq - 1]] if servo_of_motor is None else [servo_of_motor.get(hand[seq - 1])]
+            if PREFIX and cls == 10 and seq <= 4:
+                # AP_MotorsTailsitter::_output_test_seq: 1 right throttle (74), 2 right tilt servo (76), 3 left throttle (73), 4 left tilt servo (75)
+                want = [func_servo.get((74, 76, 73, 75)[seq - 1])]
             seqrows.append([spec, cls, typ, seq, ' '.join(map(str, want)) if want is not None else 'n/a (no source table for this class)',
                             ' '.join(map(str, moved)) or 'none', peak])
         ok = [r for r in seqrows if r[4] == r[5]]
-        summary.update(status='ok', motors_tested=n, expected_known=bool(exp or hand), sequences_matching_source=len(ok) if (exp or hand) else 'n/a',
-                       idle_pwm=' '.join(map(str, idle[:n])), status_text=' | '.join(t for _, t in texts[:4]))
+        summary.update(status='ok', motors_tested=n, expected_known=bool(exp or hand or (PREFIX and cls == 10)), sequences_matching_source=len(ok) if (exp or hand or (PREFIX and cls == 10)) else 'n/a',
+                       idle_pwm=' '.join(map(str, idle[:n])), status_text=' | '.join(t for _, t in texts[:4]), motor_messages=' | '.join(dict.fromkeys(t for _, t in texts if 'otor' in t))[:300])
         return summary, seqrows
     finally:
         proc.terminate()
@@ -243,7 +264,7 @@ def main():
         w = csv.writer(fh, lineterminator='\n')
         w.writerow(['frame', 'frame_class', 'frame_type', 'sequence', 'expected_servo_from_source', 'observed_servos_moved_20us_or_more', 'peak_deviation_us'])
         w.writerows(allrows)
-    keys = ['frame', 'status', 'frame_class', 'frame_type', 'motors_tested', 'expected_known', 'sequences_matching_source', 'idle_pwm', 'status_text']
+    keys = ['frame', 'status', 'frame_class', 'frame_type', 'servo_of_motor', 'motors_tested', 'expected_known', 'sequences_matching_source', 'idle_pwm', 'servo_functions_1_to_16', 'motor_messages', 'status_text']
     with open(os.path.join(OUT, 'frame-sweep-summary.csv'), 'w', newline='') as fh:
         w = csv.DictWriter(fh, fieldnames=keys, lineterminator='\n', extrasaction='ignore')
         w.writeheader()

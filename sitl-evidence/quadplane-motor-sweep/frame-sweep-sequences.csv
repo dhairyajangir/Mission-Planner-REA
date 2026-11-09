@@ -1,0 +1,49 @@
+frame,frame_class,frame_type,sequence,expected_servo_from_source,observed_servos_moved_20us_or_more,peak_deviation_us
+quadplane,1,1,1,5,5,311
+quadplane,1,1,2,8,8,170
+quadplane,1,1,3,6,6,121
+quadplane,1,1,4,7,7,121
+quadplane-tri,7,1,1,5,5,311
+quadplane-tri,7,1,2,8,8,170
+quadplane-tri,7,1,3,11,11,400
+quadplane-tri,7,1,4,6,6,121
+quadplane-tilt,1,1,1,5,5,566
+quadplane-tilt,1,1,2,8,8,252
+quadplane-tilt,1,1,3,6,6,129
+quadplane-tilt,1,1,4,7,7,130
+quadplane-tilttri,7,1,1,5,5,566
+quadplane-tilttri,7,1,2,8,8,252
+quadplane-tilttri,7,1,3,11,11,400
+quadplane-tilttri,7,1,4,6,6,130
+quadplane-tilttrivec,7,1,1,5,5,757
+quadplane-tilttrivec,7,1,2,8,8,364
+quadplane-tilttrivec,7,1,3,11,11,400
+quadplane-tilttrivec,7,1,4,6,6,182
+quadplane-tilthvec,1,3,1,5,5,100
+quadplane-tilthvec,1,3,2,8,8,100
+quadplane-tilthvec,1,3,3,6,6,100
+quadplane-tilthvec,1,3,4,7,7,100
+quadplane-cl84,7,1,1,5,5,566
+quadplane-cl84,7,1,2,8,8,252
+quadplane-cl84,7,1,3,11,11,400
+quadplane-cl84,7,1,4,6,6,130
+quadplane-copter_tailsitter,1,0,1,7,7,800
+quadplane-copter_tailsitter,1,0,2,5,5,800
+quadplane-copter_tailsitter,1,0,3,8,8,800
+quadplane-copter_tailsitter,1,0,4,6,6,558
+plane-tailsitter,10,1,1,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,2,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,3,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,4,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,5,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,6,n/a (no source table for this class),none,0
+firefly,5,11,1,4,4,327
+firefly,5,11,2,7,7,262
+firefly,5,11,3,3,3,262
+firefly,5,11,4,6,6,262
+firefly,5,11,5,5,5,262
+firefly,5,11,6,8,8,262
+quadplane-ice,1,1,1,5,5,153
+quadplane-ice,1,1,2,None,none,123
+quadplane-ice,1,1,3,6,6,130
+quadplane-ice,1,1,4,None,none,130

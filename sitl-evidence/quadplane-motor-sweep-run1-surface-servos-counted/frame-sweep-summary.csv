@@ -1,0 +1,12 @@
+frame,status,frame_class,frame_type,servo_of_motor,motors_tested,expected_known,sequences_matching_source,idle_pwm,status_text
+quadplane,ok,1,1,1:5 2:6 3:7 4:8,4,True,0,1501 1260 1000 1500,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-tri,ok,7,1,1:5 2:6 4:8 7:11,6,False,n/a,1501 1260 1000 1500 1000 1000,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-tilt,ok,1,1,1:5 2:6 3:7 4:8,4,True,0,1501 1252 0 1500,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-tilttri,ok,7,1,1:5 2:6 4:8 7:11,6,False,n/a,1501 1243 0 1500 1000 1000,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-tilttrivec,ok,7,1,1:5 2:6 4:8 7:11,6,False,n/a,1505 1143 0 1502 1000 1000,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-tilthvec,ok,1,3,1:5 2:6 3:7 4:8,4,True,4,1500 1500 1000 1500,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF2 IMU0 MAG0 initial yaw alignment complete
+quadplane-cl84,ok,7,1,1:5 2:6 4:8 7:11,6,False,n/a,1501 1252 1000 1500 1000 1000,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-copter_tailsitter,ok,1,0,1:5 2:6 3:7 4:8,4,True,0,1531 1900 1000 1515,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+plane-tailsitter,ok,10,1,,6,False,n/a,1500 1500 1000 1500 0 0,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+firefly,ok,5,11,1:3 2:4 3:5 4:6 5:7 6:8 7:11,6,True,0,1620 1666 1000 1000 1000 1000,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised
+quadplane-ice,ok,1,1,1:5 2:6,4,True,0,1502 1253 2000 1500,Airspeed 1 calibrated | GPS 1: probing for u-blox at 230400 baud | GPS 1: detected u-blox | EKF3 IMU0 initialised

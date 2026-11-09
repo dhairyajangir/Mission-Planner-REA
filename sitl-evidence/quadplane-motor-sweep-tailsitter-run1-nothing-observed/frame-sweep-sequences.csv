@@ -1,0 +1,7 @@
+frame,frame_class,frame_type,sequence,expected_servo_from_source,observed_servos_moved_20us_or_more,peak_deviation_us
+plane-tailsitter,10,1,1,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,2,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,3,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,4,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,5,n/a (no source table for this class),none,0
+plane-tailsitter,10,1,6,n/a (no source table for this class),none,0
