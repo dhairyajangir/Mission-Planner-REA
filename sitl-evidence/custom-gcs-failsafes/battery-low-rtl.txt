@@ -1,0 +1,20 @@
+OK   preset parameters ['BATT_FS_LOW_ACT', 'BATT_LOW_TIMER', 'BATT_LOW_VOLT'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  5.2 s item 1 reached
+t=  5.3 s vehicle: Mission: 2 WP
+t= 12.0 s injected {'SIM_BATT_VOLTAGE': 10.5}
+t= 13.9 s heartbeat: ARMED, mode RTL
+t= 13.9 s vehicle: Battery 1 is low 10.12V used 150 mAh
+t= 13.9 s vehicle: Battery Failsafe
+t= 61.1 s vehicle: SIM Hit ground at 0.500835 m/s
+t= 63.4 s vehicle: Disarming motors
+t= 63.6 s heartbeat: DISARMED, mode RTL
+OK   after the fault the mode changed to RTL   [['AUTO', 'RTL', 'RTL']]
+OK   the vehicle disarmed by itself
+final position 0.0 m from home, -0.0 m up
+items reached: [1]
+RESULT passed

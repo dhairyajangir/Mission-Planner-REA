@@ -1,0 +1,26 @@
+OK   preset parameters ['FS_EKF_ACTION'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  5.2 s item 1 reached
+t=  5.3 s vehicle: Mission: 2 WP
+t= 12.1 s injected {'SIM_GPS1_ENABLE': 0}
+t= 18.3 s item 2 reached
+t= 18.3 s vehicle: Reached command #2
+t= 18.4 s vehicle: Mission: 3 WP
+t= 20.9 s heartbeat: ARMED, mode LAND
+t= 20.9 s vehicle: EKF variance: position lost
+t= 20.9 s vehicle: EKF Failsafe: changed to Land Mode
+t= 27.9 s vehicle: EKF3 IMU1 stopped aiding
+t= 28.0 s vehicle: EKF3 IMU0 stopped aiding
+t= 35.1 s vehicle: SmartRTL deactivated: bad position
+t= 49.9 s vehicle: SIM Hit ground at 0.504843 m/s
+t= 52.0 s vehicle: Disarming motors
+t= 52.6 s heartbeat: DISARMED, mode LAND
+OK   after the fault the mode changed to LAND   [['AUTO', 'LAND', 'LAND']]
+OK   the vehicle disarmed by itself
+final position 84.5 m from home, 0.0 m up
+items reached: [1, 2]
+RESULT passed

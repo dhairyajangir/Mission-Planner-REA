@@ -101,6 +101,24 @@ Added after the owner answered "all of these" to which Copter functions to build
 
 **Not shown:** the fence action values other than 1 (report only, always land, SmartRTL or RTL or land, brake or land); circle and exclusion fences, altitude fences; several polygons; fence breaches in modes other than AUTO; the rally point choice when home is nearer; anything on a real vehicle; one run (the run and its first attempt differ only in the check).
 
+## Failsafes and a second fence action (attempt 10)
+
+`custom-gcs/integration/run_failsafes.py`: five scenarios, each a fresh disposable Copter simulator flown in AUTO through the same three-leg mission, with the parameters set through the prototype's parameter writer and a fault injected 12 s after the mission start (also through the writer, or by stopping the script's ground-station heartbeats). The vehicle's reaction is read from heartbeats and STATUSTEXT. Evidence: `sitl-evidence/custom-gcs-failsafes/` (one text and one track CSV per scenario).
+
+| Scenario | Configured action, fault | What the vehicle did | Ended |
+|---|---|---|---|
+| battery low | `BATT_FS_LOW_ACT` 2 (RTL), `BATT_LOW_VOLT` 11, voltage set to 10.5 | 1.9 s later "Battery 1 is low 10.12V", "Battery Failsafe", AUTO to RTL | landed at home (0.0 m), disarmed |
+| battery critical | `BATT_FS_CRT_ACT` 1 (Land), `BATT_CRT_VOLT` 10, voltage set to 9 | 1.9 s later "Battery 1 is critical 8.53V", AUTO to LAND | landed in place, 69.5 m from home, disarmed |
+| GPS loss | `FS_EKF_ACTION` 1 (Land), GPS disabled in the simulator | item 2 was reached, then 8.8 s after the fault "EKF variance: position lost", "EKF Failsafe: changed to Land Mode", AUTO to LAND | landed 84.5 m from home, disarmed |
+| ground-station link loss | `FS_GCS_ENABLE` 1 (RTL), `FS_GCS_TIMEOUT` 5, heartbeats stopped | 4.7 s after the last heartbeat "GCS Failsafe", AUTO to RTL | landed at home (0.0 m), disarmed |
+| fence, action 2 | polygon fence of 60 m each way, `FENCE_ENABLE` 1, `FENCE_ACTION` 2 (always land), first waypoint outside | 15.4 s after the start "Polygon fence breached", AUTO to LAND | landed 76.5 m from home, disarmed |
+
+All five ended in the mode the configured action asks for, with the vehicle disarming by itself. Each test is a **single run**; the reaction times are those of this simulator at real-time speed.
+
+**One attempt failed and is kept:** `gcs-link-loss-run1-*`: the vehicle never armed (ack 4 for 150 s). My script sent one ground-station heartbeat at the start and then none until the flight, so the vehicle's own GCS failsafe (armed by that first heartbeat) tripped before arming. The script now keeps a heartbeat thread running until the scenario stops it. The same first-heartbeat behaviour means a ground station that connects, sets `FS_GCS_ENABLE` and then stops talking will be unable to arm; the vehicle's refusal text for that case was not captured in the failed run.
+
+**Not shown:** wind, other battery and GPS failure modes (partial loss, glitches, `FS_EKF_ACTION` values other than 1, `BATT_FS_*` actions other than RTL and Land), RC loss and throttle failsafe, crash and vibration checks, failsafe priority when two happen together, fence actions 0, 3 and 4, circle, exclusion and altitude fences, any other flight mode than AUTO, and anything on a real vehicle.
+
 ## What this does and does not show
 
 - Shown: for those twelve simulated frames (and the helicopter's refusal), the plan the prototype derives from the vehicle's own parameters moves exactly the predicted outputs, in the predicted order, with the prototype's own ACK handling.

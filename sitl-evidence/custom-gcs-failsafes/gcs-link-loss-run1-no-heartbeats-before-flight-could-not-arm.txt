@@ -1,0 +1,4 @@
+OK   preset parameters ['FS_GCS_ENABLE', 'FS_GCS_TIMEOUT'] accepted   [[]]
+OK   mission uploaded
+FAIL armed   [not armed after 150 s (last ack result 4)]
+RESULT 1 checks failed: armed
