@@ -1,0 +1,287 @@
+Breakpoint 1 at 0x1bd900
+Breakpoint 2 at 0x1bdea0
+Breakpoint 3 at 0x1bd380
+Breakpoint 4 at 0x1bd690
+Breakpoint 5 at 0x1be180
+Breakpoint 6 at 0xb02a0
+Breakpoint 7 at 0xb0360
+Breakpoint 8 at 0x22b510
+Breakpoint 9 at 0x21fb20
+Breakpoint 10 at 0x1eeb50
+Breakpoint 11 at 0x1ef160
+Breakpoint 12 at 0x1aaf30
+Breakpoint 13 at 0x1f1ad0
+Breakpoint 14 at 0x1f2820
+Breakpoint 15 at 0x22d7a0
+Breakpoint 16 at 0x22d890
+Breakpoint 17 at 0x251250
+Breakpoint 18 at 0x1d8fd0
+Breakpoint 19 at 0x1d9390
+Breakpoint 20 at 0x137180
+Breakpoint 21 at 0x1371a0
+Breakpoint 22 at 0x1da690
+Breakpoint 23 at 0x1dacd0
+Breakpoint 24 at 0x1da8b0
+Breakpoint 25 at 0x1da9d0
+Breakpoint 26 at 0x220210
+Breakpoint 27 at 0x2215f0
+Breakpoint 28 at 0x22dcc0
+Breakpoint 29 at 0x22e990
+Breakpoint 30 at 0x22e120
+Breakpoint 31 at 0x2022a0
+Breakpoint 32 at 0x2028a0
+Breakpoint 33 at 0x189280
+Breakpoint 34 at 0x1895e0
+Breakpoint 35 at 0x1892b0
+Breakpoint 36 at 0x189610
+Breakpoint 37 at 0x1d9a30
+Breakpoint 38 at 0x1d9c20
+Breakpoint 39 at 0x1b1dd0
+Breakpoint 40 at 0x1b1f00
+Breakpoint 41 at 0x15b6c0
+Breakpoint 42 at 0x15ad90
+Breakpoint 43 at 0x1f46c0
+Breakpoint 44 at 0x1f4320
+Breakpoint 45 at 0x1b70b0
+Breakpoint 46 at 0x21f520
+Breakpoint 47 at 0x21f870
+Breakpoint 48 at 0x21bf80
+Breakpoint 49 at 0x21d160
+Breakpoint 50 at 0x21c6e0
+Breakpoint 51 at 0x21d7a0
+Breakpoint 52 at 0x21d740
+Breakpoint 53 at 0x21d330
+Breakpoint 54 at 0x21d380
+Breakpoint 55 at 0x21c570
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 36)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+
+Thread 2 "log_io" received signal SIGTERM, Terminated.
+[Switching to Thread 0x7ffff77ff6c0 (LWP 36)]
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7ffff77fecf0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000555555711900 <AP_BLHeli::init(unsigned int, AP_HAL::RCOutput::output_mode)>
+	breakpoint already hit 1 time
+        silent
+        continue
+2       breakpoint     keep y   0x0000555555711ea0 <AP_BLHeli::read_telemetry_packet()>
+        silent
+        continue
+3       breakpoint     keep y   0x0000555555711380 <AP_BLHeli::run_connection_test(unsigned char)>
+        silent
+        continue
+4       breakpoint     keep y   0x0000555555711690 <AP_BLHeli::update()>
+	breakpoint already hit 193 times
+        silent
+        continue
+5       breakpoint     keep y   0x0000555555712180 <AP_BLHeli::update_telemetry()>
+	breakpoint already hit 77023 times
+        silent
+        continue
+6       breakpoint     keep y   0x00005555556042a0 <AP_BoardConfig::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+7       breakpoint     keep y   0x0000555555604360 <AP_BoardConfig::init_safety()>
+	breakpoint already hit 1 time
+        silent
+        continue
+8       breakpoint     keep y   0x000055555577f510 <AP_CANManager::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+9       breakpoint     keep y   0x0000555555773b20 <AP_CustomRotations::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+10      breakpoint     keep y   0x0000555555742b50 <AP_EFI::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+11      breakpoint     keep y   0x0000555555743160 <AP_EFI::update()>
+	breakpoint already hit 9627 times
+        silent
+        continue
+12      breakpoint     keep y   0x00005555556fef30 <AP_Frsky_Telem::init(bool)>
+	breakpoint already hit 1 time
+        silent
+        continue
+13      breakpoint     keep y   0x0000555555745ad0 <AP_Hott_Telem::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+14      breakpoint     keep y   0x0000555555746820 <AP_Hott_Telem::loop()>
+        silent
+        continue
+15      breakpoint     keep y   0x00005555557817a0 <AP_KDECAN::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+16      breakpoint     keep y   0x0000555555781890 <AP_KDECAN::update()>
+	breakpoint already hit 77022 times
+        silent
+        continue
+17      breakpoint     keep y   0x00005555557a5250 <AP_LTM_Telem::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+18      breakpoint     keep y   0x000055555572cfd0 <AP_LandingGear::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+19      breakpoint     keep y   0x000055555572d390 <AP_LandingGear::update(float)>
+        silent
+        continue
+20      breakpoint     keep y   0x000055555568b180 <AP_Notify::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+21      breakpoint     keep y   0x000055555568b1a0 <AP_Notify::update()>
+	breakpoint already hit 9745 times
+        silent
+        continue
+22      breakpoint     keep y   0x000055555572e690 <AP_OSD::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+23      breakpoint     keep y   0x000055555572ecd0 <AP_OSD::update_current_screen()>
+        silent
+        continue
+24      breakpoint     keep y   0x000055555572e8b0 <AP_OSD::update_osd()>
+        silent
+        continue
+25      breakpoint     keep y   0x000055555572e9d0 <AP_OSD::update_stats()>
+        silent
+        continue
+26      breakpoint     keep y   0x0000555555774210 <AP_OpenDroneID::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+27      breakpoint     keep y   0x00005555557755f0 <AP_OpenDroneID::update()>
+	breakpoint already hit 1925 times
+        silent
+        continue
+28      breakpoint     keep y   0x0000555555781cc0 <AP_PiccoloCAN::init(unsigned char)>
+        silent
+        continue
+29      breakpoint     keep y   0x0000555555782990 <AP_PiccoloCAN::loop()>
+        silent
+        continue
+30      breakpoint     keep y   0x0000555555782120 <AP_PiccoloCAN::update()>
+        silent
+        continue
+31      breakpoint     keep y   0x00005555557562a0 <AP_RCTelemetry::init()>
+        silent
+        continue
+32      breakpoint     keep y   0x00005555557568a0 <AP_RCTelemetry::run_wfq_scheduler(bool)>
+        silent
+        continue
+33      breakpoint     keep y   0x00005555556dd280 <AP_RSSI::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+34      breakpoint     keep y   0x00005555556dd5e0 <AP_RSSI::read_receiver_link_quality()>
+        silent
+        continue
+35      breakpoint     keep y   0x00005555556dd2b0 <AP_RSSI::read_receiver_rssi()>
+        silent
+        continue
+36      breakpoint     keep y   0x00005555556dd610 <AP_RSSI::read_receiver_rssi_uint8()>
+        silent
+        continue
+37      breakpoint     keep y   0x000055555572da30 <AP_RobotisServo::read_bytes()>
+        silent
+        continue
+38      breakpoint     keep y   0x000055555572dc20 <AP_RobotisServo::update()>
+	breakpoint already hit 77023 times
+        silent
+        continue
+39      breakpoint     keep y   0x0000555555705dd0 <AP_SBusOut::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+40      breakpoint     keep y   0x0000555555705f00 <AP_SBusOut::update()>
+	breakpoint already hit 77023 times
+        silent
+        continue
+41      breakpoint     keep y   0x00005555556af6c0 <AP_SerialManager::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+42      breakpoint     keep y   0x00005555556aed90 <AP_SerialManager::init_console()>
+	breakpoint already hit 1 time
+        silent
+        continue
+43      breakpoint     keep y   0x00005555557486c0 <AP_Servo_Telem::update()>
+	breakpoint already hit 9627 times
+        silent
+        continue
+44      breakpoint     keep y   0x0000555555748320 <AP_Servo_Telem::update_telem_data(unsigned char, AP_Servo_Telem::TelemetryData const&)>
+        silent
+        continue
+45      breakpoint     keep y   0x000055555570b0b0 <AP_TempCalibration::update()>
+	breakpoint already hit 1925 times
+        silent
+        continue
+46      breakpoint     keep y   0x0000555555773520 <AP_TemperatureSensor::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+47      breakpoint     keep y   0x0000555555773870 <AP_TemperatureSensor::update()>
+	breakpoint already hit 962 times
+        silent
+        continue
+48      breakpoint     keep y   0x000055555576ff80 <AP_VideoTX::init()>
+	breakpoint already hit 1 time
+        silent
+        continue
+49      breakpoint     keep y   0x0000555555771160 <AP_VideoTX::update()>
+	breakpoint already hit 385 times
+        silent
+        continue
+50      breakpoint     keep y   0x00005555557706e0 <AP_VideoTX::update_all_power_dbm(unsigned char, unsigned char const*)>
+        silent
+        continue
+51      breakpoint     keep y   0x00005555557717a0 <AP_VideoTX::update_configured_channel_and_band()>
+        silent
+        continue
+52      breakpoint     keep y   0x0000555555771740 <AP_VideoTX::update_configured_frequency()>
+        silent
+        continue
+53      breakpoint     keep y   0x0000555555771330 <AP_VideoTX::update_options() const>
+        silent
+        continue
+54      breakpoint     keep y   0x0000555555771380 <AP_VideoTX::update_power() const>
+        silent
+        continue
+55      breakpoint     keep y   0x0000555555770570 <AP_VideoTX::update_power_dbm(unsigned char, AP_VideoTX::PowerActive)>
+        silent
+        continue

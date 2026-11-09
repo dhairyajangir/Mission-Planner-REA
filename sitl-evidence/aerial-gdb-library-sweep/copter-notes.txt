@@ -1,0 +1,5 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+start: mission start accepted (ack result 0)
+55 breakpoints set, 32 functions hit at least once

@@ -1,0 +1,105 @@
+Breakpoint 1 at 0x2227b9: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1404.
+Breakpoint 2 at 0x222d03: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1524.
+Breakpoint 3 at 0x22200b: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1302.
+Breakpoint 4 at 0x2223bd: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1351.
+Breakpoint 5 at 0x223124: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1633.
+Breakpoint 6 at 0xd0a3f: file ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp, line 499.
+Breakpoint 7 at 0xd0b38: file ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp, line 541.
+Breakpoint 8 at 0x2b4549: file ../../libraries/AP_CANManager/AP_CANManager.cpp, line 116.
+Breakpoint 9 at 0x2a36d8: file ../../libraries/AP_CustomRotations/AP_CustomRotations.cpp, line 59.
+Breakpoint 10 at 0x262403: file ../../libraries/AP_EFI/AP_EFI.cpp, line 93.
+Breakpoint 11 at 0x2626b8: file ../../libraries/AP_EFI/AP_EFI.cpp, line 154.
+Breakpoint 12 at 0x20c79e: file ../../libraries/AP_Frsky_Telem/AP_Frsky_Telem.cpp, line 63.
+Breakpoint 13 at 0x266e55: file ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp, line 68.
+Breakpoint 14 at 0x267fb4: file ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp, line 411.
+Breakpoint 15 at 0x2b7665: file ../../libraries/AP_KDECAN/AP_KDECAN.cpp, line 59.
+Breakpoint 16 at 0x2b76e5: file ../../libraries/AP_KDECAN/AP_KDECAN.cpp, line 74.
+Breakpoint 17 at 0x2e7b87: file ../../libraries/AP_LTM_Telem/AP_LTM_Telem.cpp, line 34.
+Breakpoint 18 at 0x2438d7: file ../../libraries/AP_LandingGear/AP_LandingGear.cpp, line 106.
+Breakpoint 19 at 0x243e44: file ../../libraries/AP_LandingGear/AP_LandingGear.cpp, line 239.
+Breakpoint 20 at 0x17916e: file ../../libraries/AP_Notify/AP_Notify.cpp, line 414.
+Breakpoint 21 at 0x17918e: file ../../libraries/AP_Notify/AP_Notify.cpp, line 420.
+Breakpoint 22 at 0x246223: file ../../libraries/AP_OSD/AP_OSD.cpp, line 306.
+Breakpoint 23 at 0x24634f: file ../../libraries/AP_OSD/AP_OSD.cpp, line 324.
+Breakpoint 24 at 0x246d2d: file ../../libraries/AP_OSD/AP_OSD.cpp, line 539.
+Breakpoint 25 at 0x2466ce: file ../../libraries/AP_OSD/AP_OSD.cpp, line 433.
+Breakpoint 26 at 0x246849: file ../../libraries/AP_OSD/AP_OSD.cpp, line 450.
+Breakpoint 27 at 0x2a42f5: file ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp, line 105.
+Breakpoint 28 at 0x2a489b: file ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp, line 213.
+Breakpoint 29 at 0x2b8526: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 144.
+Breakpoint 30 at 0x2b860d: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 161.
+Breakpoint 31 at 0x2b8ade: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 285.
+Breakpoint 32 at 0x2b8bd4: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 307.
+Breakpoint 33 at 0x27b92d: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 42.
+Breakpoint 34 at 0x27bb0f: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 91.
+Breakpoint 35 at 0x27ba18: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 62.
+Breakpoint 36 at 0x1e2e24: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 132.
+Breakpoint 37 at 0x1e30b9: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 195.
+Breakpoint 38 at 0x1e2fc1: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 184.
+Breakpoint 39 at 0x1e3197: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 208.
+Breakpoint 40 at 0x1e2f4e: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 165.
+Breakpoint 41 at 0x1e2e6a: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 139.
+Breakpoint 42 at 0x1e2f90: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 175.
+Breakpoint 43 at 0x1e32ba: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 234.
+Breakpoint 44 at 0x244384: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 139.
+Breakpoint 45 at 0x2449e6: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 285.
+Breakpoint 46 at 0x244d6b: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 358.
+Breakpoint 47 at 0x213be2: file ../../libraries/AP_SBusOut/AP_SBusOut.cpp, line 173.
+Breakpoint 48 at 0x213a8e: file ../../libraries/AP_SBusOut/AP_SBusOut.cpp, line 126.
+Breakpoint 49 at 0x1a45ef: file ../../libraries/AP_SerialManager/AP_SerialManager.cpp, line 428.
+Breakpoint 50 at 0x1a4592: file ../../libraries/AP_SerialManager/AP_SerialManager.cpp, line 417.
+Breakpoint 51 at 0x26a15c: file ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp, line 94.
+Breakpoint 52 at 0x269f47: file ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp, line 49.
+Breakpoint 53 at 0x21a796: file ../../libraries/AP_TempCalibration/AP_TempCalibration.cpp, line 100.
+Breakpoint 54 at 0x21af12: file ../../libraries/AP_TempCalibration/AP_TempCalibration.cpp, line 231.
+Breakpoint 55 at 0x2a2ae3: file ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp, line 287.
+Breakpoint 56 at 0x2a30ea: file ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp, line 379.
+Breakpoint 57 at 0x29f2ef: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 148.
+Breakpoint 58 at 0x29ff41: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 420.
+Breakpoint 59 at 0x29fa2d: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 266.
+Breakpoint 60 at 0x2a0490: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 509.
+Breakpoint 61 at 0x2a0405: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 503.
+Breakpoint 62 at 0x2a0160: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 447.
+Breakpoint 63 at 0x2a0221: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 473.
+Breakpoint 64 at 0x29f916: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 244.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 72)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm

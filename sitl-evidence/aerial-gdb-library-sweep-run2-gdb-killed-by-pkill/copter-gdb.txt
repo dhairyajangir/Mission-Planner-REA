@@ -1,0 +1,84 @@
+Breakpoint 1 at 0x1bd900
+Breakpoint 2 at 0x1bdea0
+Breakpoint 3 at 0x1bd380
+Breakpoint 4 at 0x1bd690
+Breakpoint 5 at 0x1be180
+Breakpoint 6 at 0xb02a0
+Breakpoint 7 at 0xb0360
+Breakpoint 8 at 0x22b510
+Breakpoint 9 at 0x21fb20
+Breakpoint 10 at 0x1eeb50
+Breakpoint 11 at 0x1ef160
+Breakpoint 12 at 0x1aaf30
+Breakpoint 13 at 0x1f1ad0
+Breakpoint 14 at 0x1f2820
+Breakpoint 15 at 0x22d7a0
+Breakpoint 16 at 0x22d890
+Breakpoint 17 at 0x251250
+Breakpoint 18 at 0x1d8fd0
+Breakpoint 19 at 0x1d9390
+Breakpoint 20 at 0x137180
+Breakpoint 21 at 0x1371a0
+Breakpoint 22 at 0x1da690
+Breakpoint 23 at 0x1dacd0
+Breakpoint 24 at 0x1da8b0
+Breakpoint 25 at 0x1da9d0
+Breakpoint 26 at 0x220210
+Breakpoint 27 at 0x2215f0
+Breakpoint 28 at 0x22dcc0
+Breakpoint 29 at 0x22e990
+Breakpoint 30 at 0x22e120
+Breakpoint 31 at 0x2022a0
+Breakpoint 32 at 0x2028a0
+Breakpoint 33 at 0x189280
+Breakpoint 34 at 0x1895e0
+Breakpoint 35 at 0x1892b0
+Breakpoint 36 at 0x189610
+Breakpoint 37 at 0x1d9a30
+Breakpoint 38 at 0x1d9c20
+Breakpoint 39 at 0x1b1dd0
+Breakpoint 40 at 0x1b1f00
+Breakpoint 41 at 0x15b6c0
+Breakpoint 42 at 0x15ad90
+Breakpoint 43 at 0x1f46c0
+Breakpoint 44 at 0x1f4320
+Breakpoint 45 at 0x1b70b0
+Breakpoint 46 at 0x21f520
+Breakpoint 47 at 0x21f870
+Breakpoint 48 at 0x21bf80
+Breakpoint 49 at 0x21d160
+Breakpoint 50 at 0x21c6e0
+Breakpoint 51 at 0x21d7a0
+Breakpoint 52 at 0x21d740
+Breakpoint 53 at 0x21d330
+Breakpoint 54 at 0x21d380
+Breakpoint 55 at 0x21c570
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 36)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm

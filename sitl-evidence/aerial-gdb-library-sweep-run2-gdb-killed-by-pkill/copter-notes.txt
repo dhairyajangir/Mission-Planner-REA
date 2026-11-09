@@ -1,0 +1,6 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+start: mission start accepted (ack result 0)
+disarmed by itself after 132 s
+0 breakpoints set, 0 functions hit at least once

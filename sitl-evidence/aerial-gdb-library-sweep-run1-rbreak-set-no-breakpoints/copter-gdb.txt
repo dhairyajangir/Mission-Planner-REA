@@ -1,0 +1,3 @@
+Convenience variable must have integer value.
+/home/think/cg-gdbsweep/gdb-commands.txt:47: Error in sourced command file:
+inverted range

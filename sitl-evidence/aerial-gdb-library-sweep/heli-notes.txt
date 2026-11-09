@@ -1,0 +1,4 @@
+STABILIZE: STABILIZE active
+ACRO: ACRO active
+STABILIZE: STABILIZE active
+64 breakpoints set, 34 functions hit at least once

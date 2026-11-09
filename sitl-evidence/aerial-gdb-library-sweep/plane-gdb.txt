@@ -1,0 +1,319 @@
+Breakpoint 1 at 0x22b61d: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1404.
+Breakpoint 2 at 0x22bb67: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1524.
+Breakpoint 3 at 0x22ae6f: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1302.
+Breakpoint 4 at 0x22b221: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1351.
+Breakpoint 5 at 0x22bf88: file ../../libraries/AP_BLHeli/AP_BLHeli.cpp, line 1633.
+Breakpoint 6 at 0xde95d: file ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp, line 499.
+Breakpoint 7 at 0xdea56: file ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp, line 541.
+Breakpoint 8 at 0x2a7da5: file ../../libraries/AP_CANManager/AP_CANManager.cpp, line 116.
+Breakpoint 9 at 0x2b6863: file ../../libraries/AP_CustomControl/AP_CustomControl.cpp, line 53.
+Breakpoint 10 at 0x2b6c26: file ../../libraries/AP_CustomControl/AP_CustomControl.cpp, line 136.
+Breakpoint 11 at 0x297cec: file ../../libraries/AP_CustomRotations/AP_CustomRotations.cpp, line 59.
+Breakpoint 12 at 0x2568a1: file ../../libraries/AP_EFI/AP_EFI.cpp, line 93.
+Breakpoint 13 at 0x256b56: file ../../libraries/AP_EFI/AP_EFI.cpp, line 154.
+Breakpoint 14 at 0x215f7a: file ../../libraries/AP_Frsky_Telem/AP_Frsky_Telem.cpp, line 63.
+Breakpoint 15 at 0x25b2f3: file ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp, line 68.
+Breakpoint 16 at 0x25c452: file ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp, line 411.
+Breakpoint 17 at 0x2aaec1: file ../../libraries/AP_KDECAN/AP_KDECAN.cpp, line 59.
+Breakpoint 18 at 0x2aaf41: file ../../libraries/AP_KDECAN/AP_KDECAN.cpp, line 74.
+Breakpoint 19 at 0x2e2dd1: file ../../libraries/AP_LTM_Telem/AP_LTM_Telem.cpp, line 34.
+Breakpoint 20 at 0x238443: file ../../libraries/AP_LandingGear/AP_LandingGear.cpp, line 106.
+Breakpoint 21 at 0x2389b0: file ../../libraries/AP_LandingGear/AP_LandingGear.cpp, line 239.
+Breakpoint 22 at 0x17f08e: file ../../libraries/AP_Notify/AP_Notify.cpp, line 414.
+Breakpoint 23 at 0x17f0ae: file ../../libraries/AP_Notify/AP_Notify.cpp, line 420.
+Breakpoint 24 at 0x23add1: file ../../libraries/AP_OSD/AP_OSD.cpp, line 306.
+Breakpoint 25 at 0x23aefd: file ../../libraries/AP_OSD/AP_OSD.cpp, line 324.
+Breakpoint 26 at 0x23b8db: file ../../libraries/AP_OSD/AP_OSD.cpp, line 539.
+Breakpoint 27 at 0x23b27c: file ../../libraries/AP_OSD/AP_OSD.cpp, line 433.
+Breakpoint 28 at 0x23b3f7: file ../../libraries/AP_OSD/AP_OSD.cpp, line 450.
+Breakpoint 29 at 0x2988ed: file ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp, line 105.
+Breakpoint 30 at 0x298e93: file ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp, line 213.
+Breakpoint 31 at 0x2abd82: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 144.
+Breakpoint 32 at 0x2abe69: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 161.
+Breakpoint 33 at 0x2ac33a: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 285.
+Breakpoint 34 at 0x2ac430: file ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp, line 307.
+Breakpoint 35 at 0x26ffa9: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 42.
+Breakpoint 36 at 0x27018b: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 91.
+Breakpoint 37 at 0x270094: file ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp, line 62.
+Breakpoint 38 at 0x1eacf2: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 132.
+Breakpoint 39 at 0x1eaf87: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 195.
+Breakpoint 40 at 0x1eae8f: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 184.
+Breakpoint 41 at 0x1eb065: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 208.
+Breakpoint 42 at 0x1eae1c: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 165.
+Breakpoint 43 at 0x1ead38: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 139.
+Breakpoint 44 at 0x1eae5e: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 175.
+Breakpoint 45 at 0x1eb188: file ../../libraries/AP_RSSI/AP_RSSI.cpp, line 234.
+Breakpoint 46 at 0x238f32: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 139.
+Breakpoint 47 at 0x239594: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 285.
+Breakpoint 48 at 0x239919: file ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp, line 358.
+Breakpoint 49 at 0x21d3b4: file ../../libraries/AP_SBusOut/AP_SBusOut.cpp, line 173.
+Breakpoint 50 at 0x21d260: file ../../libraries/AP_SBusOut/AP_SBusOut.cpp, line 126.
+Breakpoint 51 at 0x1aa51f: file ../../libraries/AP_SerialManager/AP_SerialManager.cpp, line 428.
+Breakpoint 52 at 0x1aa4c2: file ../../libraries/AP_SerialManager/AP_SerialManager.cpp, line 417.
+Breakpoint 53 at 0x25e7d8: file ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp, line 94.
+Breakpoint 54 at 0x25e5c3: file ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp, line 49.
+Breakpoint 55 at 0x2970f7: file ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp, line 287.
+Breakpoint 56 at 0x2976fe: file ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp, line 379.
+Breakpoint 57 at 0x293903: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 148.
+Breakpoint 58 at 0x294555: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 420.
+Breakpoint 59 at 0x294041: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 266.
+Breakpoint 60 at 0x294aa4: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 509.
+Breakpoint 61 at 0x294a19: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 503.
+Breakpoint 62 at 0x294774: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 447.
+Breakpoint 63 at 0x294835: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 473.
+Breakpoint 64 at 0x293f2a: file ../../libraries/AP_VideoTX/AP_VideoTX.cpp, line 244.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 54)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdb20, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x000055555577f61d in AP_BLHeli::init(unsigned int, AP_HAL::RCOutput::output_mode) at ../../libraries/AP_BLHeli/AP_BLHeli.cpp:1404
+	breakpoint already hit 1 time
+        silent
+        continue
+2       breakpoint     keep y   0x000055555577fb67 in AP_BLHeli::read_telemetry_packet() at ../../libraries/AP_BLHeli/AP_BLHeli.cpp:1524
+        silent
+        continue
+3       breakpoint     keep y   0x000055555577ee6f in AP_BLHeli::run_connection_test(unsigned char) at ../../libraries/AP_BLHeli/AP_BLHeli.cpp:1302
+        silent
+        continue
+4       breakpoint     keep y   0x000055555577f221 in AP_BLHeli::update() at ../../libraries/AP_BLHeli/AP_BLHeli.cpp:1351
+	breakpoint already hit 114 times
+        silent
+        continue
+5       breakpoint     keep y   0x000055555577ff88 in AP_BLHeli::update_telemetry() at ../../libraries/AP_BLHeli/AP_BLHeli.cpp:1633
+	breakpoint already hit 5741 times
+        silent
+        continue
+6       breakpoint     keep y   0x000055555563295d in AP_BoardConfig::init() at ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp:499
+	breakpoint already hit 1 time
+        silent
+        continue
+7       breakpoint     keep y   0x0000555555632a56 in AP_BoardConfig::init_safety() at ../../libraries/AP_BoardConfig/AP_BoardConfig.cpp:541
+	breakpoint already hit 1 time
+        silent
+        continue
+8       breakpoint     keep y   0x00005555557fbda5 in AP_CANManager::init() at ../../libraries/AP_CANManager/AP_CANManager.cpp:116
+	breakpoint already hit 1 time
+        silent
+        continue
+9       breakpoint     keep y   0x000055555580a863 in AP_CustomControl::init() at ../../libraries/AP_CustomControl/AP_CustomControl.cpp:53
+	breakpoint already hit 1 time
+        silent
+        continue
+10      breakpoint     keep y   0x000055555580ac26 in AP_CustomControl::update() at ../../libraries/AP_CustomControl/AP_CustomControl.cpp:136
+	breakpoint already hit 5665 times
+        silent
+        continue
+11      breakpoint     keep y   0x00005555557ebcec in AP_CustomRotations::init() at ../../libraries/AP_CustomRotations/AP_CustomRotations.cpp:59
+	breakpoint already hit 1 time
+        silent
+        continue
+12      breakpoint     keep y   0x00005555557aa8a1 in AP_EFI::init() at ../../libraries/AP_EFI/AP_EFI.cpp:93
+	breakpoint already hit 1 time
+        silent
+        continue
+13      breakpoint     keep y   0x00005555557aab56 in AP_EFI::update() at ../../libraries/AP_EFI/AP_EFI.cpp:154
+	breakpoint already hit 5664 times
+        silent
+        continue
+14      breakpoint     keep y   0x0000555555769f7a in AP_Frsky_Telem::init(bool) at ../../libraries/AP_Frsky_Telem/AP_Frsky_Telem.cpp:63
+	breakpoint already hit 1 time
+        silent
+        continue
+15      breakpoint     keep y   0x00005555557af2f3 in AP_Hott_Telem::init() at ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp:68
+	breakpoint already hit 1 time
+        silent
+        continue
+16      breakpoint     keep y   0x00005555557b0452 in AP_Hott_Telem::loop() at ../../libraries/AP_Hott_Telem/AP_Hott_Telem.cpp:411
+        silent
+        continue
+17      breakpoint     keep y   0x00005555557feec1 in AP_KDECAN::init() at ../../libraries/AP_KDECAN/AP_KDECAN.cpp:59
+	breakpoint already hit 1 time
+        silent
+        continue
+18      breakpoint     keep y   0x00005555557fef41 in AP_KDECAN::update() at ../../libraries/AP_KDECAN/AP_KDECAN.cpp:74
+	breakpoint already hit 5741 times
+        silent
+        continue
+19      breakpoint     keep y   0x0000555555836dd1 in AP_LTM_Telem::init() at ../../libraries/AP_LTM_Telem/AP_LTM_Telem.cpp:34
+	breakpoint already hit 1 time
+        silent
+        continue
+20      breakpoint     keep y   0x000055555578c443 in AP_LandingGear::init() at ../../libraries/AP_LandingGear/AP_LandingGear.cpp:106
+	breakpoint already hit 1 time
+        silent
+        continue
+21      breakpoint     keep y   0x000055555578c9b0 in AP_LandingGear::update(float) at ../../libraries/AP_LandingGear/AP_LandingGear.cpp:239
+	breakpoint already hit 566 times
+        silent
+        continue
+22      breakpoint     keep y   0x00005555556d308e in AP_Notify::init() at ../../libraries/AP_Notify/AP_Notify.cpp:414
+	breakpoint already hit 1 time
+        silent
+        continue
+23      breakpoint     keep y   0x00005555556d30ae in AP_Notify::update() at ../../libraries/AP_Notify/AP_Notify.cpp:420
+	breakpoint already hit 5742 times
+        silent
+        continue
+24      breakpoint     keep y   0x000055555578edd1 in AP_OSD::init() at ../../libraries/AP_OSD/AP_OSD.cpp:306
+	breakpoint already hit 1 time
+        silent
+        continue
+25      breakpoint     keep y   0x000055555578eefd in AP_OSD::init_backend(AP_OSD::osd_types, unsigned char) at ../../libraries/AP_OSD/AP_OSD.cpp:324
+	breakpoint already hit 2 times
+        silent
+        continue
+26      breakpoint     keep y   0x000055555578f8db in AP_OSD::update_current_screen() at ../../libraries/AP_OSD/AP_OSD.cpp:539
+        silent
+        continue
+27      breakpoint     keep y   0x000055555578f27c in AP_OSD::update_osd() at ../../libraries/AP_OSD/AP_OSD.cpp:433
+        silent
+        continue
+28      breakpoint     keep y   0x000055555578f3f7 in AP_OSD::update_stats() at ../../libraries/AP_OSD/AP_OSD.cpp:450
+        silent
+        continue
+29      breakpoint     keep y   0x00005555557ec8ed in AP_OpenDroneID::init() at ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp:105
+	breakpoint already hit 1 time
+        silent
+        continue
+30      breakpoint     keep y   0x00005555557ece93 in AP_OpenDroneID::update() at ../../libraries/AP_OpenDroneID/AP_OpenDroneID.cpp:213
+	breakpoint already hit 1133 times
+        silent
+        continue
+31      breakpoint     keep y   0x00005555557ffd82 in AP_PiccoloCAN::init(unsigned char) at ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp:144
+        silent
+        continue
+32      breakpoint     keep y   0x00005555557ffe69 in AP_PiccoloCAN::loop() at ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp:161
+        silent
+        continue
+33      breakpoint     keep y   0x000055555580033a in AP_PiccoloCAN::read_frame(AP_HAL::CANFrame&, unsigned int) at ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp:285
+        silent
+        continue
+34      breakpoint     keep y   0x0000555555800430 in AP_PiccoloCAN::update() at ../../libraries/AP_PiccoloCAN/AP_PiccoloCAN.cpp:307
+        silent
+        continue
+35      breakpoint     keep y   0x00005555557c3fa9 in AP_RCTelemetry::init() at ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp:42
+        silent
+        continue
+36      breakpoint     keep y   0x00005555557c418b in AP_RCTelemetry::run_wfq_scheduler(bool) at ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp:91
+        silent
+        continue
+37      breakpoint     keep y   0x00005555557c4094 in AP_RCTelemetry::update_avg_packet_rate() at ../../libraries/AP_RCTelemetry/AP_RCTelemetry.cpp:62
+        silent
+        continue
+38      breakpoint     keep y   0x000055555573ecf2 in AP_RSSI::init() at ../../libraries/AP_RSSI/AP_RSSI.cpp:132
+	breakpoint already hit 1 time
+        silent
+        continue
+39      breakpoint     keep y   0x000055555573ef87 in AP_RSSI::read_channel_rssi() at ../../libraries/AP_RSSI/AP_RSSI.cpp:195
+        silent
+        continue
+40      breakpoint     keep y   0x000055555573ee8f in AP_RSSI::read_pin_rssi() at ../../libraries/AP_RSSI/AP_RSSI.cpp:184
+        silent
+        continue
+41      breakpoint     keep y   0x000055555573f065 in AP_RSSI::read_pwm_pin_rssi() at ../../libraries/AP_RSSI/AP_RSSI.cpp:208
+        silent
+        continue
+42      breakpoint     keep y   0x000055555573ee1c in AP_RSSI::read_receiver_link_quality() at ../../libraries/AP_RSSI/AP_RSSI.cpp:165
+        silent
+        continue
+43      breakpoint     keep y   0x000055555573ed38 in AP_RSSI::read_receiver_rssi() at ../../libraries/AP_RSSI/AP_RSSI.cpp:139
+        silent
+        continue
+44      breakpoint     keep y   0x000055555573ee5e in AP_RSSI::read_receiver_rssi_uint8() at ../../libraries/AP_RSSI/AP_RSSI.cpp:175
+        silent
+        continue
+45      breakpoint     keep y   0x000055555573f188 in AP_RSSI::read_telemetry_radio_rssi() at ../../libraries/AP_RSSI/AP_RSSI.cpp:234
+        silent
+        continue
+46      breakpoint     keep y   0x000055555578cf32 in AP_RobotisServo::init() at ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp:139
+	breakpoint already hit 1 time
+        silent
+        continue
+47      breakpoint     keep y   0x000055555578d594 in AP_RobotisServo::read_bytes() at ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp:285
+        silent
+        continue
+48      breakpoint     keep y   0x000055555578d919 in AP_RobotisServo::update() at ../../libraries/AP_RobotisServo/AP_RobotisServo.cpp:358
+	breakpoint already hit 5741 times
+        silent
+        continue
+49      breakpoint     keep y   0x00005555557713b4 in AP_SBusOut::init() at ../../libraries/AP_SBusOut/AP_SBusOut.cpp:173
+	breakpoint already hit 1 time
+        silent
+        continue
+50      breakpoint     keep y   0x0000555555771260 in AP_SBusOut::update() at ../../libraries/AP_SBusOut/AP_SBusOut.cpp:126
+	breakpoint already hit 5741 times
+        silent
+        continue
+51      breakpoint     keep y   0x00005555556fe51f in AP_SerialManager::init() at ../../libraries/AP_SerialManager/AP_SerialManager.cpp:428
+	breakpoint already hit 1 time
+        silent
+        continue
+52      breakpoint     keep y   0x00005555556fe4c2 in AP_SerialManager::init_console() at ../../libraries/AP_SerialManager/AP_SerialManager.cpp:417
+	breakpoint already hit 2 times
+        silent
+        continue
+53      breakpoint     keep y   0x00005555557b27d8 in AP_Servo_Telem::update() at ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp:94
+	breakpoint already hit 5664 times
+        silent
+        continue
+54      breakpoint     keep y   0x00005555557b25c3 in AP_Servo_Telem::update_telem_data(unsigned char, AP_Servo_Telem::TelemetryData const&) at ../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp:49
+        silent
+        continue
+55      breakpoint     keep y   0x00005555557eb0f7 in AP_TemperatureSensor::init() at ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp:287
+	breakpoint already hit 1 time
+        silent
+        continue
+56      breakpoint     keep y   0x00005555557eb6fe in AP_TemperatureSensor::update() at ../../libraries/AP_TemperatureSensor/AP_TemperatureSensor.cpp:379
+	breakpoint already hit 566 times
+        silent
+        continue
+57      breakpoint     keep y   0x00005555557e7903 in AP_VideoTX::init() at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:148
+	breakpoint already hit 1 time
+        silent
+        continue
+58      breakpoint     keep y   0x00005555557e8555 in AP_VideoTX::update() at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:420
+	breakpoint already hit 226 times
+        silent
+        continue
+59      breakpoint     keep y   0x00005555557e8041 in AP_VideoTX::update_all_power_dbm(unsigned char, unsigned char const*) at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:266
+        silent
+        continue
+60      breakpoint     keep y   0x00005555557e8aa4 in AP_VideoTX::update_configured_channel_and_band() at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:509
+        silent
+        continue
+61      breakpoint     keep y   0x00005555557e8a19 in AP_VideoTX::update_configured_frequency() at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:503
+        silent
+        continue
+62      breakpoint     keep y   0x00005555557e8774 in AP_VideoTX::update_options() const at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:447
+        silent
+        continue
+63      breakpoint     keep y   0x00005555557e8835 in AP_VideoTX::update_power() const at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:473
+        silent
+        continue
+64      breakpoint     keep y   0x00005555557e7f2a in AP_VideoTX::update_power_dbm(unsigned char, AP_VideoTX::PowerActive) at ../../libraries/AP_VideoTX/AP_VideoTX.cpp:244
+        silent
+        continue
