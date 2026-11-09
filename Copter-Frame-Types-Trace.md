@@ -83,6 +83,21 @@ Findings:
 
 `ConfigFrameType` (the older page) stays disabled when `FRAME` is absent, as recorded in `Setup-Page-State-Trace.md`; this run did not exercise it.
 
+## 4. What the motor test page labels, from `APMotorLayout.json` (static comparison)
+
+The original `ConfigMotorTest` page (`GCSViews/ConfigurationView/ConfigMotorTest.cs`) builds one "Test motor A, B, C..." button per motor. It gets the motor count and the label "Motor Number: n, CW/CCW" next to button k from `APMotorLayout.json` (header "AP_Motors library test ver 1.2", shipped next to `MissionPlanner.exe`), looking up the vehicle's `FRAME_CLASS` and `FRAME_TYPE`; the motor shown next to button k is the one whose `TestOrder` is k, and every button sends `MAV_CMD_DO_MOTOR_TEST` with that sequence number k. If the pair is not in the file the page falls back to a guess from the MAVLink vehicle type (tri 4, quad 4, hexa 6, octa 8, dodeca 12, helicopter 0, anything else 8).
+
+`research-tools/compare-mp-motor-layout.py` compares the JSON with the tables in the supplied `AP_MotorsMatrix.cpp` (`sitl-evidence/motor-layout-compare/`):
+
+- 56 of 56 combinations present in both agree on the motor count, on which motor number has which test order, and on CW/CCW. These are the quad, hexa, octa, octa-quad, Y6, dodeca-hexa and deca entries in the file.
+- 19 entries in the JSON (all of class 7, tri) have no matrix table because `AP_MotorsTri` is a separate class. All 19 match the test sequence I transcribed by hand from `AP_MotorsTri::_output_test_seq` (outputs 1, 4, 7, 2; or 4, 7, 1, 2 for type 6 "pitch reversed"). The simulator's tri run in section 1 gave 1, 4, 7, 2.
+- 3 combinations exist in the source but not in the JSON: quad type 19 (Y4) and octa-quad types 20 and 21 (co-rotating X8). For these the page would use the vehicle-type guess: 4 buttons for Y4 and 8 for the octa-quad ones, matching the real motor counts, but with no "Motor Number" labels. This is read from the source, not observed.
+- The JSON has no entries for deca types other than 0, 1 and 14, no helicopter, single, coax or scripting classes. From the source, a coax or single copter would get the default eight buttons although the vehicle has six test sequences, and a helicopter gets none. Not observed in the page.
+
+So the labels the page shows for the layouts it knows are consistent with the firmware's tables. Static comparison only: the page itself was not run against these frames.
+
+Parser notes (kept because they changed results): my first version of the comparison reported 4 differences (quad V, V-tail, A-tail, octa-quad V) that were parser mistakes: V frames use numeric yaw factors, and V-tail/A-tail are written with `add_motor(...)` calls rather than a table, so a stale label list gave them the PLUSREV table. After fixing the parser there are no differences. `sitl-frame-motor-sweep.py` has the same stale-label weakness for V-tail and A-tail, but none of the frames I swept use those types, so the swept results are not affected.
+
 ## Not covered
 
 - A person using the frame page or motor test page, and the picture drawn for each frame.
