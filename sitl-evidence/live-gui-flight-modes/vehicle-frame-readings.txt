@@ -1,0 +1,3 @@
+before any GUI action :: FLTMODE1: present, value 7.0 ; FLTMODE2: present, value 9.0 ; FLTMODE3: present, value 6.0 ; FLTMODE4: present, value 3.0 ; FLTMODE5: present, value 5.0 ; FLTMODE6: present, value 0.0
+after choosing in the combo boxes, before Save Modes :: FLTMODE1: present, value 7.0 ; FLTMODE2: present, value 9.0 ; FLTMODE3: present, value 6.0 ; FLTMODE4: present, value 3.0 ; FLTMODE5: present, value 5.0 ; FLTMODE6: present, value 0.0
+after pressing Save Modes :: FLTMODE1: present, value 5.0 ; FLTMODE2: present, value 2.0 ; FLTMODE3: present, value 6.0 ; FLTMODE4: present, value 3.0 ; FLTMODE5: present, value 5.0 ; FLTMODE6: present, value 0.0

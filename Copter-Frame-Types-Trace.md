@@ -300,6 +300,18 @@ What this shows: in the real window the four Copter frames' pages carry the same
 
 Failed attempt, kept: the first run (`sitl-evidence/live-gui-vehicles-run1-menu-text-not-matched/`) connected to all eight but found no Motor Test entry because my script matched the menu text exactly and the entries carry leading spaces ("      Motor Test"); the control lists and screenshots in that folder show the entry present.
 
+## 14. Changing flight modes in the live window (simulator)
+
+`research-tools/run-live-gui-flight-modes.ps1` (built from the frame-change script) connected the real window of the research copy to a disposable Copter simulator as in section 10, opened SETUP > Mandatory Hardware > Flight Modes, chose Loiter in the first combo box and Alt Hold in the second (`CB_SELECTSTRING` on the combo boxes at the page's six rows), pressed Save Modes with `BM_CLICK`, and read `FLTMODE1` to `FLTMODE6` from the vehicle on SERIAL1 with an independent client at three points (`sitl-evidence/live-gui-flight-modes/vehicle-frame-readings.txt`, the file name is inherited from the script it was built from):
+
+| Point | FLTMODE1 to 6 |
+|---|---|
+| Before any GUI action | 7, 9, 6, 3, 5, 0 |
+| After choosing Loiter and Alt Hold in the combo boxes, before Save Modes | 7, 9, 6, 3, 5, 0 |
+| After pressing Save Modes | 5, 2, 6, 3, 5, 0 |
+
+So the choice alone changed nothing on the vehicle; Save Modes wrote exactly the two changed rows (Loiter is mode 5, Alt Hold is mode 2) and left the other four as they were. This is the same staged-commit behaviour the harness found for this page (`Setup-Page-Actions-Trace.md`), now seen in the live window. Dialogs: none. Screenshots `01` to `03` in the folder. One run, by a script, on the data-redirected research copy.
+
 ## Not covered
 
 - A person using the frame page or motor test page (section 10 is a script driving the real window of the research copy, for one frame), other frames in the live window, and the picture drawn for each frame.
