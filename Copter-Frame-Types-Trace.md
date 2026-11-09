@@ -281,6 +281,25 @@ Not covered: the Advanced group, Install Firmware, pressing any control on these
 
 The screenshot after the last step (`03-after-x.png`) shows the Hexa picture highlighted, the X radio selected and the X pictures bright. No dialog appeared at any step. This is the same result as the harness-driven change in section 2 (quad plus to hexa to X), now through the live window; it was run once, by a script, on the data-redirected research copy. As in section 2, the new frame takes effect in the vehicle only after a restart; I did not restart this simulator after the change.
 
+## 13. The live window against eight simulators (Copter frames, Sub, Rover, QuadPlane)
+
+`research-tools/run-live-gui-vehicles.ps1` did the section 10 connection for eight disposable simulators one after another (a fresh simulator and a fresh Mission Planner process each time), opened SETUP, expanded Optional Hardware, opened Motor Test and recorded the page; on the four multi-motor Copter frames it also pressed "Test all in Sequence" with `BM_CLICK` while an independent observer recorded `SERVO_OUTPUT_RAW` and compared the order of first movement with the sweep (`research-tools/analyze-gui-sequence-generic.py`). Evidence: `sitl-evidence/live-gui-vehicles/` (`vehicles-summary.csv`, screenshots and control lists per simulator). A script drove the real window of the research copy; not a person.
+
+| Simulator | Window title shows | Motor Test page | Buttons | Sequence press: servo order in the live window | Sweep order | Same |
+|---|---|---|---:|---|---|---|
+| Copter hexa | ArduCopter V4.8.0-dev | Class Hexa, Type Plus; labels 1 CW, 4 CCW, 6 CW, 2 CCW, 3 CW, 5 CCW | 6 | 1 4 6 2 3 5 | 1 4 6 2 3 5 | yes |
+| Copter octa | ArduCopter | Class Octa, Type Plus; 8 labels | 8 | 1 3 8 4 2 6 7 5 | 1 3 8 4 2 6 7 5 | yes |
+| Copter Y6 | ArduCopter | Class Y6, Type Plus; 6 labels | 6 | 5 1 6 4 2 3 | 5 1 6 4 2 3 | yes |
+| Copter tri | ArduCopter | Class Tri, Type Plus; labels 1, 4, 7, 2 (no CW/CCW) | 4 | 1 4 7 2 | 1 4 7 2 | yes |
+| Copter single | ArduCopter | Class SingleCopter, Type X; no motor labels | 8 | not pressed | | |
+| Sub vectored | no vehicle name after "on" | Class and Type "unknown"; no labels; **all 8 buttons disabled** | 8 | not pressed | | |
+| Rover | ArduRover | Class and Type "unknown"; no labels | 4 | not pressed | | |
+| QuadPlane | ArduPlane | Class Quad, Type X; labels 1 CCW, 4 CW, 2 CCW, 3 CW | 4 | not pressed | | |
+
+What this shows: in the real window the four Copter frames' pages carry the same labels as the harness and the firmware tables, and the live sequence press moved the outputs in the same order as the sweep on all four. The Sub page is present in the menu but all eight of its buttons are disabled, as the harness found; the live window's title bar does not name the ArduSub vehicle (only "on" follows the version), which I did not investigate. Rover and the QuadPlane show what the harness showed. No dialog appeared on any page. One run per simulator, script-driven, data-redirected copy; the single copter, Sub, Rover and QuadPlane buttons were not pressed here.
+
+Failed attempt, kept: the first run (`sitl-evidence/live-gui-vehicles-run1-menu-text-not-matched/`) connected to all eight but found no Motor Test entry because my script matched the menu text exactly and the entries carry leading spaces ("      Motor Test"); the control lists and screenshots in that folder show the entry present.
+
 ## Not covered
 
 - A person using the frame page or motor test page (section 10 is a script driving the real window of the research copy, for one frame), other frames in the live window, and the picture drawn for each frame.
