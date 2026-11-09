@@ -1,0 +1,26 @@
+frame,status,frame_class,frame_type,motors_tested,expected_known,sequences_matching_source,idle_pwm,status_text
+quad,ok,1,0,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+X,ok,1,1,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+bfx,ok,1,12,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+djix,ok,1,13,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+cwx,ok,1,14,4,True,4,1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexa,ok,2,0,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexax,ok,2,1,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexa-cwx,ok,2,14,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexa-dji,ok,2,13,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa,ok,3,0,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-cwx,ok,3,14,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-dji,ok,3,13,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-quad,ok,4,0,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-quad-cwx,ok,4,14,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-quad-cor,ok,4,20,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+octa-quad-cw-cor,ok,4,21,8,True,8,1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+deca,ok,14,0,10,True,10,1000 1000 1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+deca-cwx,ok,14,14,10,True,10,1000 1000 1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+y6,ok,5,0,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+dodeca-hexa,ok,12,0,12,True,12,1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexadeca-octa,ok,15,0,6,False,n/a,0 0 0 0 0 0,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+hexadeca-octa-cwx,ok,15,0,6,False,n/a,0 0 0 0 0 0,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+tri,ok,7,0,4,True,4,1000 1000 0 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW
+singlecopter,ok,8,1,6,True,6,1500 1500 1500 1500 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | EKF3 IMU0 initialised
+coaxcopter,ok,9,1,6,True,6,1500 1500 1500 1500 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | EKF3 IMU0 initialised

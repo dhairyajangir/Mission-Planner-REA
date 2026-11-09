@@ -1,0 +1,7 @@
+frame,frame_class,frame_type,sequence,expected_servo_from_source,observed_servos_moved_20us_or_more,peak_deviation_us
+quad,2,1,1,5,5,100
+quad,2,1,2,1,1,100
+quad,2,1,3,4,4,100
+quad,2,1,4,6,6,100
+quad,2,1,5,2,2,100
+quad,2,1,6,3,3,100

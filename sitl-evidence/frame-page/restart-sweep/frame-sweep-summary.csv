@@ -1,0 +1,2 @@
+frame,status,frame_class,frame_type,motors_tested,expected_known,sequences_matching_source,idle_pwm,status_text
+quad,ok,2,1,6,True,6,1000 1000 1000 1000 1000 1000,Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW

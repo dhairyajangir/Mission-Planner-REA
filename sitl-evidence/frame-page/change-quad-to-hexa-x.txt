@@ -1,0 +1,8 @@
+2026-11-09T03:43:14.1289899Z CONNECTED parameters=1431
+2026-11-09T03:43:14.5132499Z BEFORE-ACTIVATE vehicle FRAME_CLASS=1 FRAME_TYPE=0
+2026-11-09T03:43:16.2117972Z STATE after-activate class_checked=[radioButtonQuad] type_checked=[radioButton_Plus] type_enabled=[radioButton_Plus,radioButton_X,radioButton_V,radioButton_H,radioButton_VTail] type_group_enabled=True page_enabled=True vehicle FRAME_CLASS=1 FRAME_TYPE=0
+2026-11-09T03:43:16.2117972Z ACTION radioButtonHexa (set Checked=true)
+2026-11-09T03:43:17.9168036Z STATE after-radioButtonHexa class_checked=[radioButtonHexa] type_checked=[radioButton_Plus] type_enabled=[radioButton_Plus,radioButton_X] type_group_enabled=True page_enabled=True vehicle FRAME_CLASS=2 FRAME_TYPE=0
+2026-11-09T03:43:17.9168036Z ACTION radioButton_X (set Checked=true)
+2026-11-09T03:43:19.6193185Z STATE after-radioButton_X class_checked=[radioButtonHexa] type_checked=[radioButton_X] type_enabled=[radioButton_Plus,radioButton_X] type_group_enabled=True page_enabled=True vehicle FRAME_CLASS=2 FRAME_TYPE=1
+2026-11-09T03:43:19.6449768Z STATUS ok

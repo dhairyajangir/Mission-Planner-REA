@@ -1,0 +1,75 @@
+frame quad
+[Errno 111] Connection refused sleeping
+{'frame': 'quad', 'frame_class': 1, 'frame_type': 0, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame X
+[Errno 111] Connection refused sleeping
+{'frame': 'X', 'frame_class': 1, 'frame_type': 1, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame bfx
+[Errno 111] Connection refused sleeping
+{'frame': 'bfx', 'frame_class': 1, 'frame_type': 12, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame djix
+[Errno 111] Connection refused sleeping
+{'frame': 'djix', 'frame_class': 1, 'frame_type': 13, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'cwx', 'frame_class': 1, 'frame_type': 14, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexa
+[Errno 111] Connection refused sleeping
+{'frame': 'hexa', 'frame_class': 2, 'frame_type': 0, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexax
+[Errno 111] Connection refused sleeping
+{'frame': 'hexax', 'frame_class': 2, 'frame_type': 1, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexa-cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'hexa-cwx', 'frame_class': 2, 'frame_type': 14, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexa-dji
+[Errno 111] Connection refused sleeping
+{'frame': 'hexa-dji', 'frame_class': 2, 'frame_type': 13, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa
+[Errno 111] Connection refused sleeping
+{'frame': 'octa', 'frame_class': 3, 'frame_type': 0, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-cwx', 'frame_class': 3, 'frame_type': 14, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-dji
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-dji', 'frame_class': 3, 'frame_type': 13, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-quad
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-quad', 'frame_class': 4, 'frame_type': 0, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-quad-cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-quad-cwx', 'frame_class': 4, 'frame_type': 14, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-quad-cor
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-quad-cor', 'frame_class': 4, 'frame_type': 20, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame octa-quad-cw-cor
+[Errno 111] Connection refused sleeping
+{'frame': 'octa-quad-cw-cor', 'frame_class': 4, 'frame_type': 21, 'status': 'ok', 'motors_tested': 8, 'expected_known': True, 'sequences_matching_source': 8, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame deca
+[Errno 111] Connection refused sleeping
+{'frame': 'deca', 'frame_class': 14, 'frame_type': 0, 'status': 'ok', 'motors_tested': 10, 'expected_known': True, 'sequences_matching_source': 10, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame deca-cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'deca-cwx', 'frame_class': 14, 'frame_type': 14, 'status': 'ok', 'motors_tested': 10, 'expected_known': True, 'sequences_matching_source': 10, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame y6
+[Errno 111] Connection refused sleeping
+{'frame': 'y6', 'frame_class': 5, 'frame_type': 0, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame dodeca-hexa
+[Errno 111] Connection refused sleeping
+{'frame': 'dodeca-hexa', 'frame_class': 12, 'frame_type': 0, 'status': 'ok', 'motors_tested': 12, 'expected_known': True, 'sequences_matching_source': 12, 'idle_pwm': '1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexadeca-octa
+[Errno 111] Connection refused sleeping
+{'frame': 'hexadeca-octa', 'frame_class': 15, 'frame_type': 0, 'status': 'ok', 'motors_tested': 6, 'expected_known': False, 'sequences_matching_source': 'n/a', 'idle_pwm': '0 0 0 0 0 0', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame hexadeca-octa-cwx
+[Errno 111] Connection refused sleeping
+{'frame': 'hexadeca-octa-cwx', 'frame_class': 15, 'frame_type': 0, 'status': 'ok', 'motors_tested': 6, 'expected_known': False, 'sequences_matching_source': 'n/a', 'idle_pwm': '0 0 0 0 0 0', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame tri
+[Errno 111] Connection refused sleeping
+{'frame': 'tri', 'frame_class': 7, 'frame_type': 0, 'status': 'ok', 'motors_tested': 4, 'expected_known': True, 'sequences_matching_source': 4, 'idle_pwm': '1000 1000 0 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | RC7: SaveWaypoint LOW'}
+frame singlecopter
+[Errno 111] Connection refused sleeping
+{'frame': 'singlecopter', 'frame_class': 8, 'frame_type': 1, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1500 1500 1500 1500 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | EKF3 IMU0 initialised'}
+frame coaxcopter
+[Errno 111] Connection refused sleeping
+{'frame': 'coaxcopter', 'frame_class': 9, 'frame_type': 1, 'status': 'ok', 'motors_tested': 6, 'expected_known': True, 'sequences_matching_source': 6, 'idle_pwm': '1500 1500 1500 1500 1000 1000', 'status_text': 'Barometer 1 calibration complete | Barometer 2 calibration complete | ArduPilot Ready | EKF3 IMU0 initialised'}
