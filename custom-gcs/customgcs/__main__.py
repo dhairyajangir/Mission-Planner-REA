@@ -2,7 +2,7 @@
 
     python -m customgcs info|plan|motor-test               [--port 5760] [--pct 10] [--arm]
     python -m customgcs params-save|params-diff|params-restore  --file F [--dry-run] [--include-protected]
-    python -m customgcs modes | mode --name LOITER | arm [--force] | disarm [--force]
+    python -m customgcs modes [--vehicle copter|rover|plane] | mode --name LOITER | arm [--force] | disarm [--force]
     python -m customgcs mission-upload|mission-download|mission-verify --file F | mission-clear | mission-start
 
 Commands that change the vehicle (everything except info, plan, modes, params-save, params-diff, mission-download, mission-verify) refuse a host other than the local machine
@@ -67,7 +67,7 @@ def _params_commands(args, conn, parameters) -> int:
     return 0 if args.dry_run or not report.remaining else 1
 
 
-def _flight_commands(args, conn) -> int:
+def _flight_commands(args, conn, info) -> int:
     if args.command == 'arm':
         result = flight.arm(conn, force=args.force)
     elif args.command == 'disarm':
@@ -76,7 +76,7 @@ def _flight_commands(args, conn) -> int:
         if not args.name:
             print('--name is required')
             return 2
-        result = flight.set_mode(conn, args.name)
+        result = flight.set_mode(conn, args.name, table=flight.table_for(info.kind))
     print(result.detail)
     for t in result.texts:
         print('  vehicle says:', t)
@@ -124,6 +124,7 @@ def main(argv=None) -> int:
     ap.add_argument('--pct', type=float, default=10.0)
     ap.add_argument('--arm', action='store_true', help='force-arm a simulator when the motor test needs it (Sub)')
     ap.add_argument('--force', action='store_true', help='arm/disarm without the vehicle\'s checks')
+    ap.add_argument('--vehicle', choices=['copter', 'rover', 'plane'], default='copter', help='for the modes listing, which vehicle modes to show')
     ap.add_argument('--file')
     ap.add_argument('--list', choices=['mission', 'fence', 'rally'], default='mission', help='which list the mission-* commands work on: the mission, the geofence or the rally points')
     ap.add_argument('--name')
@@ -131,7 +132,7 @@ def main(argv=None) -> int:
     ap.add_argument('--include-protected', action='store_true')
     args = ap.parse_args(argv)
     if args.command == 'modes':
-        for name, number in sorted(flight.copter_modes().items(), key=lambda kv: kv[1]):
+        for name, number in sorted(flight.vehicle_modes(args.vehicle).items(), key=lambda kv: kv[1]):
             print('%2d %s' % (number, name))
         return 0
     if args.command not in READ_ONLY and args.host not in LOOPBACK and not args.allow_remote:
@@ -155,7 +156,7 @@ def _run(args) -> int:
         return _params_commands(args, conn, parameters)
     if args.command.startswith('mission-'):
         return _mission_commands(args, conn)
-    return _flight_commands(args, conn)
+    return _flight_commands(args, conn, info)
 
 
 if __name__ == '__main__':

@@ -248,3 +248,42 @@ def test_verify_can_compare_item_zero_for_lists_without_a_home():
     a = [item(0, x=-35.36), item(1)]
     b = [item(0, x=-35.37), item(1)]
     assert mission.verify(a, b) == [] and 'item 0 x' in mission.verify(a, b, skip_home=False)[0]
+
+
+# ---- vehicle-aware flight modes
+
+def test_rover_mode_table_comes_from_the_source():
+    modes = flight.vehicle_modes('rover')
+    assert modes['MANUAL'] == 0 and modes['HOLD'] == 4 and modes['AUTO'] == 10 and modes['RTL'] == 11 and modes['GUIDED'] == 15
+    assert 'INITIALISING' not in modes and flight.mode_name(16, 'rover') == 'INITIALISING' and flight.mode_name(2, 'rover').startswith('UNKNOWN')
+
+
+def test_table_follows_the_vehicle_kind_and_refuses_the_others():
+    assert flight.table_for('copter') == 'copter' and flight.table_for('heli') == 'copter' and flight.table_for('rover') == 'rover'
+    assert flight.table_for('plane') == 'plane' and flight.table_for('quadplane') == 'plane'
+    for kind in ('sub', 'blimp', 'tracker'):
+        with pytest.raises(KeyError, match='only implemented'):
+            flight.table_for(kind)
+    with pytest.raises(KeyError):
+        flight.set_mode(types.SimpleNamespace(), 'MANUAL', table='sub')
+
+
+def test_same_number_means_different_modes_per_vehicle():
+    assert flight.mode_name(4, 'copter') == 'GUIDED' and flight.mode_name(4, 'rover') == 'HOLD'
+
+
+def test_plane_mode_table_comes_from_the_source():
+    modes = flight.vehicle_modes('plane')
+    assert modes['MANUAL'] == 0 and modes['AUTO'] == 10 and modes['RTL'] == 11 and modes['TAKEOFF'] == 13 and modes['GUIDED'] == 15 and modes['QHOVER'] == 18 and modes['THERMAL'] == 24
+    assert 'INITIALISING' not in modes and flight.mode_name(4, 'plane') == 'ACRO'
+    assert flight.mode_name(4, 'copter') == 'GUIDED' and flight.mode_name(4, 'rover') == 'HOLD'
+
+
+def test_verify_ignores_only_the_named_command_field_pairs():
+    land = mission.Item(1, 3, 21, 0, 1, 0.0, 0.0, 0.0, 0.0, -35.36, 149.16, 0.0)
+    back = mission.Item(1, 3, 21, 0, 1, 0.0, 0.0, 0.0, 1.0, -35.36, 149.16, 0.0)
+    assert 'param4' in mission.verify([item(0), land], [item(0), back])[0]
+    assert mission.verify([item(0), land], [item(0), back], ignore=((21, 'param4'),)) == []
+    other = mission.Item(1, 3, 16, 0, 1, 0.0, 0.0, 0.0, 0.0, -35.36, 149.16, 20.0)
+    other_back = mission.Item(1, 3, 16, 0, 1, 0.0, 0.0, 0.0, 1.0, -35.36, 149.16, 20.0)
+    assert mission.verify([item(0), other], [item(0), other_back], ignore=((21, 'param4'),))

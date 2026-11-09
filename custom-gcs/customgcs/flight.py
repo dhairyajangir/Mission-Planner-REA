@@ -22,17 +22,36 @@ class Result:
     texts: tuple = ()
 
 
+MODE_FILES = {'copter': 'copter_modes.json', 'rover': 'rover_modes.json', 'plane': 'plane_modes.json'}
+TABLE_FOR_KIND = {'copter': 'copter', 'heli': 'copter', 'rover': 'rover', 'plane': 'plane', 'quadplane': 'plane'}          # a Copter helicopter build uses the Copter mode table (it adds AUTOROTATE, which is already in it)
+
+
+def _table(table: str) -> dict:
+    if table not in MODE_FILES:
+        raise KeyError('no flight mode table for %r (have: %s)' % (table, ', '.join(sorted(MODE_FILES))))
+    with open(os.path.join(os.path.dirname(__file__), 'data', MODE_FILES[table]), encoding='utf-8') as f:
+        return json.load(f)['modes']
+
+
+def table_for(kind: str) -> str:
+    if kind not in TABLE_FOR_KIND:
+        raise KeyError('flight modes are only implemented for %s, not for a %s' % (', '.join(sorted(TABLE_FOR_KIND)), kind))
+    return TABLE_FOR_KIND[kind]
+
+
+def vehicle_modes(table: str = 'copter') -> Dict[str, int]:
+    """{name: number} for the modes that can be requested (entries flagged not settable, such as Copter AUTO_RTL and Rover INITIALISING, are left out)."""
+    return {k: v['number'] for k, v in _table(table).items() if v['settable']}
+
+
 def copter_modes() -> Dict[str, int]:
-    """{name: number} for the modes that can be requested (AUTO_RTL is not a true mode and is left out)."""
-    with open(os.path.join(os.path.dirname(__file__), 'data', 'copter_modes.json'), encoding='utf-8') as f:
-        return {k: v['number'] for k, v in json.load(f)['modes'].items() if v['settable']}
+    return vehicle_modes('copter')
 
 
-def mode_name(number: int) -> str:
-    with open(os.path.join(os.path.dirname(__file__), 'data', 'copter_modes.json'), encoding='utf-8') as f:
-        for k, v in json.load(f)['modes'].items():
-            if v['number'] == number:
-                return k
+def mode_name(number: int, table: str = 'copter') -> str:
+    for k, v in _table(table).items():
+        if v['number'] == number:
+            return k
     return 'UNKNOWN(%d)' % number
 
 
@@ -71,9 +90,9 @@ def current_heartbeat(link, timeout: float = 5.0):
     return hb
 
 
-def current_mode(link) -> Optional[str]:
+def current_mode(link, table: str = 'copter') -> Optional[str]:
     hb = current_heartbeat(link)
-    return None if hb is None else mode_name(hb.custom_mode)
+    return None if hb is None else mode_name(hb.custom_mode, table)
 
 
 def _arm_command(link, arm: bool, force: bool) -> None:
@@ -104,13 +123,13 @@ def disarm(link, force: bool = False, timeout: float = 15.0) -> Result:
     return Result(ok, ('disarmed' if ok else 'still armed') + (' (ack result %s)' % acks[-1] if acks else ''), tuple(texts))
 
 
-def set_mode(link, name: str, timeout: float = 5.0) -> Result:
-    """Request a flight mode by name and wait for a heartbeat that reports it. Unknown names raise KeyError before anything is sent."""
-    number = copter_modes()[name.upper()]
+def set_mode(link, name: str, timeout: float = 5.0, table: str = 'copter') -> Result:
+    """Request a flight mode by name and wait for a heartbeat that reports it. Unknown names raise KeyError before anything is sent. `table` picks the vehicle's mode table ('copter', 'rover' or 'plane'; see table_for). Mode numbers mean different things per vehicle (4 is GUIDED on a Copter, HOLD on a Rover, ACRO on a Plane)."""
+    number = vehicle_modes(table)[name.upper()]
     link.mav.command_long_send(link.target_system, link.target_component, MAV_CMD_DO_SET_MODE, 0, 1, number, 0, 0, 0, 0, 0)
     hb, acks, texts = _wait(link, timeout, until=lambda h: h.custom_mode == number)
     ok = hb is not None and hb.custom_mode == number
-    reported = mode_name(hb.custom_mode) if hb is not None else 'no heartbeat'
+    reported = mode_name(hb.custom_mode, table) if hb is not None else 'no heartbeat'
     return Result(ok, ('%s active' % name.upper()) if ok else ('%s refused: vehicle stays in %s (ack result %s)' % (name.upper(), reported, acks[-1] if acks else 'none')), tuple(texts))
 
 

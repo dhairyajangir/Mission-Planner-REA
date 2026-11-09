@@ -155,7 +155,7 @@ def clear(link, timeout: float = 10.0, mission_type: int = MISSION) -> int:
     return msg.type
 
 
-def verify(sent: Sequence[Item], received: Sequence[Item], angle_tolerance: float = 1.5e-7, other_tolerance: float = 1e-3, skip_home: bool = True) -> List[str]:
+def verify(sent: Sequence[Item], received: Sequence[Item], angle_tolerance: float = 1.5e-7, other_tolerance: float = 1e-3, skip_home: bool = True, ignore: Sequence[tuple] = ()) -> List[str]:
     """Differences between what was uploaded and what the vehicle returns, from item 1 (item 0 is the vehicle's own home). Empty list = same."""
     problems = []
     if len(sent) != len(received):
@@ -165,6 +165,8 @@ def verify(sent: Sequence[Item], received: Sequence[Item], angle_tolerance: floa
         no_location = a.x == 0 and a.y == 0 and a.z == 0       # the simulator returns frame 0 for such an item (RTL sent with frame 3), so the frame says nothing there
         for name, tol in (('frame', 0 if not no_location else 99), ('command', 0), ('autocontinue', 0), ('param1', other_tolerance), ('param2', other_tolerance), ('param3', other_tolerance), ('param4', other_tolerance),
                           ('x', angle_tolerance), ('y', angle_tolerance), ('z', other_tolerance)):
+            if (a.command, name) in ignore:          # a field the vehicle is known to rewrite for that command (named by the caller, with evidence)
+                continue
             if abs(getattr(a, name) - getattr(b, name)) > tol:
                 problems.append('item %d %s: sent %r, returned %r' % (a.seq, name, getattr(a, name), getattr(b, name)))
     return problems

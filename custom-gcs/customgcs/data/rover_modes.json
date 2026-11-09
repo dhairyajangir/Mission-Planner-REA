@@ -1,0 +1,89 @@
+{
+ "modes": {
+  "ACRO": {
+   "comment": "",
+   "conditional": null,
+   "number": 1,
+   "settable": true
+  },
+  "AUTO": {
+   "comment": "",
+   "conditional": null,
+   "number": 10,
+   "settable": true
+  },
+  "CIRCLE": {
+   "comment": "",
+   "conditional": null,
+   "number": 9,
+   "settable": true
+  },
+  "DOCK": {
+   "comment": "",
+   "conditional": "MODE_DOCK_ENABLED",
+   "number": 8,
+   "settable": true
+  },
+  "FOLLOW": {
+   "comment": "",
+   "conditional": null,
+   "number": 6,
+   "settable": true
+  },
+  "GUIDED": {
+   "comment": "",
+   "conditional": null,
+   "number": 15,
+   "settable": true
+  },
+  "HOLD": {
+   "comment": "",
+   "conditional": null,
+   "number": 4,
+   "settable": true
+  },
+  "INITIALISING": {
+   "comment": "",
+   "conditional": null,
+   "number": 16,
+   "settable": false
+  },
+  "LOITER": {
+   "comment": "",
+   "conditional": null,
+   "number": 5,
+   "settable": true
+  },
+  "MANUAL": {
+   "comment": "",
+   "conditional": null,
+   "number": 0,
+   "settable": true
+  },
+  "RTL": {
+   "comment": "",
+   "conditional": null,
+   "number": 11,
+   "settable": true
+  },
+  "SIMPLE": {
+   "comment": "",
+   "conditional": null,
+   "number": 7,
+   "settable": true
+  },
+  "SMART_RTL": {
+   "comment": "",
+   "conditional": null,
+   "number": 12,
+   "settable": true
+  },
+  "STEERING": {
+   "comment": "",
+   "conditional": null,
+   "number": 3,
+   "settable": true
+  }
+ },
+ "source": "Rover/mode.h enum class Number"
+}

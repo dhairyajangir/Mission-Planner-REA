@@ -1,0 +1,161 @@
+{
+ "modes": {
+  "ACRO": {
+   "comment": "",
+   "conditional": null,
+   "number": 4,
+   "settable": true
+  },
+  "AUTO": {
+   "comment": "",
+   "conditional": null,
+   "number": 10,
+   "settable": true
+  },
+  "AUTOLAND": {
+   "comment": "",
+   "conditional": "MODE_AUTOLAND_ENABLED",
+   "number": 26,
+   "settable": true
+  },
+  "AUTOTUNE": {
+   "comment": "",
+   "conditional": null,
+   "number": 8,
+   "settable": true
+  },
+  "AVOID_ADSB": {
+   "comment": "",
+   "conditional": null,
+   "number": 14,
+   "settable": true
+  },
+  "CIRCLE": {
+   "comment": "",
+   "conditional": null,
+   "number": 1,
+   "settable": true
+  },
+  "CRUISE": {
+   "comment": "",
+   "conditional": null,
+   "number": 7,
+   "settable": true
+  },
+  "FLY_BY_WIRE_A": {
+   "comment": "",
+   "conditional": null,
+   "number": 5,
+   "settable": true
+  },
+  "FLY_BY_WIRE_B": {
+   "comment": "",
+   "conditional": null,
+   "number": 6,
+   "settable": true
+  },
+  "GUIDED": {
+   "comment": "",
+   "conditional": null,
+   "number": 15,
+   "settable": true
+  },
+  "INITIALISING": {
+   "comment": "",
+   "conditional": null,
+   "number": 16,
+   "settable": false
+  },
+  "LOITER": {
+   "comment": "",
+   "conditional": null,
+   "number": 12,
+   "settable": true
+  },
+  "LOITER_ALT_QLAND": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 25,
+   "settable": true
+  },
+  "MANUAL": {
+   "comment": "",
+   "conditional": null,
+   "number": 0,
+   "settable": true
+  },
+  "QACRO": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 23,
+   "settable": true
+  },
+  "QAUTOTUNE": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED && QAUTOTUNE_ENABLED",
+   "number": 22,
+   "settable": true
+  },
+  "QHOVER": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 18,
+   "settable": true
+  },
+  "QLAND": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 20,
+   "settable": true
+  },
+  "QLOITER": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 19,
+   "settable": true
+  },
+  "QRTL": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 21,
+   "settable": true
+  },
+  "QSTABILIZE": {
+   "comment": "",
+   "conditional": "HAL_QUADPLANE_ENABLED",
+   "number": 17,
+   "settable": true
+  },
+  "RTL": {
+   "comment": "",
+   "conditional": null,
+   "number": 11,
+   "settable": true
+  },
+  "STABILIZE": {
+   "comment": "",
+   "conditional": null,
+   "number": 2,
+   "settable": true
+  },
+  "TAKEOFF": {
+   "comment": "",
+   "conditional": null,
+   "number": 13,
+   "settable": true
+  },
+  "THERMAL": {
+   "comment": "",
+   "conditional": null,
+   "number": 24,
+   "settable": true
+  },
+  "TRAINING": {
+   "comment": "",
+   "conditional": null,
+   "number": 3,
+   "settable": true
+  }
+ },
+ "source": "ArduPlane/mode.h enum class Number"
+}

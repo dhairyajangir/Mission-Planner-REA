@@ -1,0 +1,24 @@
+OK   preset parameters ['FENCE_ACTION', 'FENCE_ENABLE', 'FENCE_RADIUS', 'FENCE_TYPE'] accepted   [[]]
+route: takeoff to 60 m, A 300 m north, B 300 m east of A, C 300 m south of B (40 m), LAND at home
+OK   mission uploaded
+OK   mission reads back equal (NAV_LAND param4 aside)   [[]]
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+t=  0.0 s vehicle: Mission: 1 Takeoff
+t=  0.0 s vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t=  0.2 s vehicle: Triggered AUTO. GPS speed = 0.0
+t=  0.9 s heartbeat: ARMED, mode AUTO
+t=  1.4 s vehicle: Autoland direction= 0
+t=  1.4 s vehicle: Holding course 35998 at 5.4m/s (0.0)
+t=  1.5 s vehicle: EKF2 IMU0 is using GPS
+t=  1.5 s vehicle: EKF2 IMU1 is using GPS
+t=  7.6 s vehicle: Takeoff level-off starting at 20m
+t=  9.6 s item 1 reached at -35.361571, 149.165228, 59 m
+t=  9.7 s vehicle: Takeoff complete at 60.19m
+t=  9.7 s vehicle: Mission: 2 WP
+t= 10.4 s heartbeat: ARMED, mode RTL
+t= 10.5 s vehicle: Circle fence breached
+t= 10.5 s vehicle: Manual recovery started
+OK   after the fault the mode changed to RTL   [['AUTO', 'RTL']]
+position at the end: 98 m from home, 100 m up
+RESULT passed

@@ -132,6 +132,28 @@ One more observation, not a check: after the RC-loss RTL landed, the vehicle pri
 
 **Not shown:** other wind speeds and directions or gusts, other battery and GPS failure modes (partial loss, glitches, `FS_EKF_ACTION` values other than 1, `BATT_FS_*` actions other than RTL and Land), `FS_THR_ENABLE` values other than 1 and 3, crash and vibration checks, failsafe pairs other than battery with link loss, fence actions 0, 3 and 4, exclusion fences and several polygons, any other flight mode than AUTO, and anything on a real vehicle.
 
+## Fixed-wing plane: modes, arming, parameters, a flown mission and failsafes (attempt 12)
+
+Added after the owner said planes matter alongside copters and confirmed "Yes, planes". The mode table for ArduPlane is generated from `ArduPlane/mode.h` (`tools/gen_copter_modes.py ArduPlane`, `data/plane_modes.json`: 26 entries; the QuadPlane modes are flagged conditional on `HAL_QUADPLANE_ENABLED`); the library's mode functions now take a vehicle table (`copter`, `rover`, `plane`), so the same number means different modes per vehicle (4 is GUIDED on a Copter, HOLD on a Rover, ACRO on a Plane). Command line: `modes --vehicle plane`, and `mode --name` picks the table from the detected vehicle kind (a QuadPlane uses the plane table). `mission.verify` gained an `ignore` list of (command, field) pairs a vehicle is known to rewrite. 60 unit tests pass in WSL (58 without pymavlink). Harness: `custom-gcs/integration/run_plane.py`; evidence `sitl-evidence/custom-gcs-plane/` (one text per part, a track CSV per flight).
+
+**Basics (disarmed sweep, arming, parameters): passed.** Of the 25 requestable modes, 15 were accepted disarmed; refused: QSTABILIZE, QHOVER, QLOITER, QLAND, QRTL, QAUTOTUNE, QACRO and AUTOLAND with "Q_ENABLE 0" (this is not a QuadPlane), THERMAL with "Flight mode change failed", and AUTO, which answered ack 0 but the vehicle stayed in RTL (no mission was loaded). LOITER_ALT_QLAND was reported active although `Q_ENABLE` is 0; I did not look into why. An armed sweep was deliberately not run (an armed plane would take off in TAKEOFF or AUTO); only MANUAL and FLY_BY_WIRE_A were requested while armed on the ground, and both were accepted. Arm and disarm worked; a parameter restore refused while armed; three parameters (`AIRSPEED_CRUISE`, `WP_RADIUS`, `RTL_ALTITUDE`) were written, diffed and restored with the protected names left alone. The vehicle's first reported mode, 40 s after start, was INITIALISING.
+
+**Mission flown in the simulator: passed** (`plane-mission.txt`, `plane-mission-track.csv`). The mission: takeoff to 60 m (pitch 15 degrees), a waypoint 300 m north, one 300 m east of that, one 300 m south of that at 40 m, and a LAND at the home position. Arm in MANUAL, AUTO, and the vehicle took off by itself ("Takeoff complete at 60.15 m" 9.7 s after AUTO), reached items 2, 3 and 4 at 53 to 56 m from their coordinates (its own radius is 50 m; my tolerance was 60 m) and at 71, 59 and 48 m height (commanded 60, 60, 40), began the landing ("Mission: 5 Land", approach, glide slope 8.9 degrees, flare), hit the ground at 1.7 m/s by the simulator report and disarmed itself 2 m from the home position, 68 s after AUTO. A Plane does not report the landing item as reached, so the check is "items 1 to 4 reached and item 5 began". The first attempt (`plane-mission-run1-readback-and-land-item-expectations*`) flew the same flight and failed two of my checks: the vehicle returns `param4` 1.0 for the NAV_LAND item I sent with 0.0 (now an explicit, named `ignore` in `verify`), and my expectation that item 5 would be reported reached was wrong.
+
+**Faults injected 15 s after AUTO starts (after takeoff), one run each, all passed**
+
+| Scenario | Configured, fault | What the vehicle did |
+|---|---|---|
+| ground-station link loss | `FS_GCS_ENABL` 1, `FS_LONG_ACTN` 1, `FS_LONG_TIMEOUT` 5, heartbeats stopped | 5.0 s later "GCS Failsafe On: switched to RTL" |
+| RC loss | `FS_LONG_ACTN` 1, `SIM_RC_FAIL` 1 | 2.0 s later "Throttle failsafe on" and "RC Short Failsafe On" (no mode change), 6 s later "RC Long Failsafe On: switched to RTL" |
+| battery low | `BATT_FS_LOW_ACT` 1, `BATT_LOW_VOLT` 11, voltage set to 10.5 | 2.0 s later mode RTL |
+| circle fence | `FENCE_TYPE` 2, `FENCE_RADIUS` 200, action 1, route reaches 300 m north | 10.4 s after AUTO "Circle fence breached", mode RTL |
+| wind 10 m/s | `SIM_WIND_SPD` 10, direction 90 | no failsafe; stayed in AUTO; items 1 to 4 reached, landing completed and auto-disarmed, but 71 m from the home point (2 m without wind), so the wind did push the landing |
+
+The RTL cases ended with the plane in RTL (100 m from home and 100 m up, the RTL altitude default) when the harness stopped watching 25 s later; they were not flown to a landing.
+
+**Not shown:** anything on a real aircraft; a real airframe's tuning (the simulator's default plane flew a stable mission, which says nothing about another plane); manual and assisted modes in flight (FLY_BY_WIRE, CRUISE, STABILIZE, ACRO, LOITER, GUIDED, TAKEOFF as flown modes); rally points and fence shapes other than a circle; the RC short failsafe actions other than the default; battery critical and other actions; GPS loss; stall and airspeed-sensor failures; a landing aborted by the vehicle (go-around); landing approaches from other directions or in crosswind that the plane cannot manage; other wind speeds or gusts; QuadPlane transitions and the Q-modes in flight; one run per scenario.
+
 ## What this does and does not show
 
 - Shown: for those twelve simulated frames (and the helicopter's refusal), the plan the prototype derives from the vehicle's own parameters moves exactly the predicted outputs, in the predicted order, with the prototype's own ACK handling.

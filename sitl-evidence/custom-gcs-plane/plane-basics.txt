@@ -1,0 +1,41 @@
+== modes and arming
+OK   vehicle is disarmed and reports a Plane mode   [INITIALISING]
+-- every mode requested one by one, disarmed
+mode  0 MANUAL            MANUAL active
+mode  1 CIRCLE            CIRCLE active  | EKF3 IMU1 is using GPS; AHRS: EKF3 active
+mode  2 STABILIZE         STABILIZE active
+mode  3 TRAINING          TRAINING active
+mode  4 ACRO              ACRO active
+mode  5 FLY_BY_WIRE_A     FLY_BY_WIRE_A active
+mode  6 FLY_BY_WIRE_B     FLY_BY_WIRE_B active
+mode  7 CRUISE            CRUISE active
+mode  8 AUTOTUNE          AUTOTUNE active
+mode 10 AUTO              AUTO refused: vehicle stays in RTL (ack result 0)  | EKF2 IMU0 is using GPS; EKF2 IMU1 is using GPS
+mode 11 RTL               RTL active
+mode 12 LOITER            LOITER active
+mode 13 TAKEOFF           TAKEOFF active
+mode 14 AVOID_ADSB        AVOID_ADSB active
+mode 15 GUIDED            GUIDED active
+mode 17 QSTABILIZE        QSTABILIZE refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 18 QHOVER            QHOVER refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 19 QLOITER           QLOITER refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 20 QLAND             QLAND refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 21 QRTL              QRTL refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 22 QAUTOTUNE         QAUTOTUNE refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 23 QACRO             QACRO refused: vehicle stays in GUIDED (ack result 4)  | Q_ENABLE 0
+mode 24 THERMAL           THERMAL refused: vehicle stays in GUIDED (ack result 4)  | Flight mode change failed
+mode 25 LOITER_ALT_QLAND  LOITER_ALT_QLAND active
+mode 26 AUTOLAND          AUTOLAND refused: vehicle stays in LOITER_ALT_QLAND (ack result 4)  | Q_ENABLE 0; Q_ENABLE 0
+OK   MANUAL is accepted
+OK   arm succeeds   [armed (ack result 0) | Throttle armed]
+OK   heartbeat reports armed
+OK   parameter restore refuses while armed   [refusing to write parameters while the vehicle is armed]
+OK   FLY_BY_WIRE_A accepted while armed on the ground   [FLY_BY_WIRE_A active]
+OK   MANUAL accepted while armed on the ground   [MANUAL active]
+OK   disarm succeeds   [disarmed (ack result 0)]
+== parameters
+OK   saved file reloads to the same 1462 parameters
+OK   three parameters written and echoed   [[('AIRSPEED_CRUISE', 20.0), ('WP_RADIUS', 60.0), ('RTL_ALTITUDE', 80.0)]]
+OK   diff lists exactly those three   [['AIRSPEED_CRUISE', 'RTL_ALTITUDE', 'WP_RADIUS']]
+OK   restore wrote three, left the protected names alone, vehicle matches the file again   [(('SERIAL0_BAUD',), [])]
+RESULT passed
