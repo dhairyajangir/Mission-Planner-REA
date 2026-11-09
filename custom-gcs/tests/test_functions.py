@@ -167,3 +167,12 @@ def test_modes_listing_needs_no_vehicle(capsys):
     from customgcs import __main__ as cli
     assert cli.main(['modes']) == 0
     assert ' 5 LOITER' in capsys.readouterr().out
+
+
+def test_start_mission_sends_command_300_and_reads_the_ack():
+    sent = []
+    queue = [types.SimpleNamespace(get_type=lambda: 'COMMAND_ACK', result=0)]
+    link = types.SimpleNamespace(mav=types.SimpleNamespace(command_long_send=lambda *a: sent.append(a)), target_system=1, target_component=1,
+                                 recv_match=lambda type=None, blocking=True, timeout=0.3: queue.pop(0) if queue else None)
+    result = flight.start_mission(link, timeout=0.5)
+    assert sent[0][2] == 300 and result.ok

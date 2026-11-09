@@ -52,7 +52,7 @@ This records what `custom-gcs/` is, what was run, what failed on the way, and wh
 
 ## Functions slice: parameters, arm and modes, missions (attempt 7)
 
-Added after the owner answered "all of these" to which Copter functions to build next. Modules `custom-gcs/customgcs/params.py`, `flight.py`, `mission.py`, command line in `__main__.py`; mode table generated from `ArduCopter/mode.h` by `tools/gen_copter_modes.py` (25 requestable modes; AUTO_RTL is not a true mode). 51 unit tests pass in total (49 without pymavlink) (`tests/test_functions.py` is the new file). Evidence: `sitl-evidence/custom-gcs-functions/` (library-level run, `integration/run_functions.py`) and `sitl-evidence/custom-gcs-cli-smoke/` (the command line itself, `integration/cli-smoke.sh`), both against one disposable Copter simulator.
+Added after the owner answered "all of these" to which Copter functions to build next. Modules `custom-gcs/customgcs/params.py`, `flight.py`, `mission.py`, command line in `__main__.py`; mode table generated from `ArduCopter/mode.h` by `tools/gen_copter_modes.py` (25 requestable modes; AUTO_RTL is not a true mode). 52 unit tests pass in total (50 without pymavlink) (`tests/test_functions.py` is the new file). Evidence: `sitl-evidence/custom-gcs-functions/` (library-level run, `integration/run_functions.py`) and `sitl-evidence/custom-gcs-cli-smoke/` (the command line itself, `integration/cli-smoke.sh`), both against one disposable Copter simulator.
 
 **What each part does**
 - Parameters: save and load a `NAME,VALUE` file, diff it against the vehicle, restore the differences with a read-back and a final re-download. It writes only differing parameters, refuses an armed vehicle, supports a dry run, and does not touch protected names: serial settings, `SYSID_THISMAV`, counters, and values the vehicle maintains itself (`COMPASS_DEC`, `MIS_TOTAL`, `BARO*_GND_PRESS/TEMP`). The whole list is downloaded each time because single-name reads were unreliable earlier.
@@ -75,6 +75,19 @@ Added after the owner answered "all of these" to which Copter functions to build
 3. A restore while armed raised a traceback in the command line; errors from refusals and bad files are now printed as `error: ...` with exit 4.
 
 **Not shown:** anything on real hardware; behaviour of any mode after it is entered; flying a mission (AUTO with a mission, takeoff, waypoints); geofence, rally points and other mission types; parameters on any vehicle but the Copter simulator (the code is vehicle-agnostic for parameters and missions, but only this one was run); writing parameters that need a reboot to take effect; one run per attempt. The mode sweep depends on this snapshot's `mode.h` (a firmware with other modes needs the table regenerated).
+
+## Flying an uploaded mission in the simulator (attempt 8)
+
+`custom-gcs/integration/run_flight.py` uploads a five-item mission (home, TAKEOFF to 15 m, a waypoint 78 m north of home, a waypoint 82 m east of that, RETURN_TO_LAUNCH), arms in STABILIZE, switches to AUTO, sends `MAV_CMD_MISSION_START` (new `flight.start_mission`, command `mission-start`), and follows `MISSION_ITEM_REACHED`, `GLOBAL_POSITION_INT` and the heartbeat on a disposable Copter simulator at real-time speed. Evidence: `sitl-evidence/custom-gcs-flight/` (`flight-run.txt`, `flight-track.csv`) and one repeat, `custom-gcs-flight-repeat/`.
+
+**Result, both runs: all checks passed.** Items 1 to 4 were reached in order; the two waypoints were reached 1.3 m and 0.7 m from their uploaded coordinates (the vehicle's acceptance radius is `WP_RADIUS_M`, 2 m), at 15.0 m relative altitude; item 1 (takeoff) completed 5 s after the mission start, item 2 at 18.5 s, item 3 at 31.5 s, the RTL descent ended with the vehicle's own "SIM Hit ground at 0.5 m/s" and an automatic disarm 83 s after the start, at the home position. The two runs agree to a few decimetres and a fraction of a second, which fits a deterministic simulator; this is not independent evidence of repeatability on a vehicle.
+
+**Four earlier attempts, all kept, each a fault of mine:**
+1. `run1`: I asked the vehicle to stream `MISSION_ITEM_REACHED`; it then repeated sequence 65535 (which is not an item) and my loop counted those, and at speedup 3 the vehicle's 10 s auto-disarm (`DISARM_DELAY`) ran out within about 3 s of wall-clock time.
+2. `run2`: AUTO was refused (ack 4) because I armed before the vehicle had a position estimate; the driver now waits and retries AUTO for up to 90 s.
+3. `run3` and `run4`: AUTO was accepted and the mission announced "Mission: 1 Takeoff", but the vehicle never lifted and disarmed itself after about 9 s. Cause (established by the next run, not by reading the source): a Copter armed in AUTO on the ground does not take off until the mission is started or the pilot raises the throttle. Run 3 also waited 900 s for nothing because the end-of-flight test could not trigger; the loop now stops when the vehicle is disarmed and nothing was reached after 30 s.
+
+**Not shown:** anything on a real vehicle; wind, GPS or battery failure; other mission commands (loiter, jump, speed changes, conditional or DO commands); a mission longer than three legs; flying with the vehicle's failsafes triggered; the same mission at other speedups (speedup 1 only after the attempts above). The pass criteria are the ones in `run_flight.py` and were written before the passing run but after four failed ones.
 
 ## What this does and does not show
 

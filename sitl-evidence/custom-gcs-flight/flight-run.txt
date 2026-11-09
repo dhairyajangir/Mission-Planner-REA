@@ -1,0 +1,28 @@
+connected; speedup 1
+OK   mission uploaded (ack 0)
+OK   mission reads back equal
+     leg lengths: home to WP2 78 m, WP2 to WP3 82 m
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted with the mission loaded   [AUTO active | ]
+     mission start: mission start accepted (ack result 0)
+     t=  5.4 s item 1 reached at -35.363261, 149.165230, 15.0 m
+     t=  5.4 s vehicle: Mission: 2 WP
+     t= 18.5 s item 2 reached at -35.362566, 149.165243, 15.0 m
+OK   item 2 reached within 6 m of its coordinates   [1.3 m off, 15.0 m up]
+     t= 18.5 s vehicle: Reached command #2
+     t= 18.5 s vehicle: Mission: 3 WP
+     t= 31.4 s item 3 reached at -35.362561, 149.166137, 15.0 m
+OK   item 3 reached within 6 m of its coordinates   [0.7 m off, 15.0 m up]
+     t= 31.5 s vehicle: Reached command #3
+     t= 31.5 s vehicle: Mission: 4 RTL
+     t= 80.9 s vehicle: SIM Hit ground at 0.500316 m/s
+     t= 83.0 s item 4 reached at -35.363261, 149.165230, -0.0 m
+     t= 83.0 s vehicle: Disarming motors
+     t= 83.7 s heartbeat: DISARMED, mode AUTO
+OK   items reached in order   [[1, 2, 3, 4]]
+OK   altitude reached 14 m or more during the flight   [peak 15.0 m]
+OK   vehicle disarmed by itself after the return
+OK   last position within 5 m of home   [0.0 m, -0.0 m up]
+     flight took 84 s of wall-clock time at speedup 1
+
+RESULT all checks passed

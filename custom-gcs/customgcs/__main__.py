@@ -3,7 +3,7 @@
     python -m customgcs info|plan|motor-test               [--port 5760] [--pct 10] [--arm]
     python -m customgcs params-save|params-diff|params-restore  --file F [--dry-run] [--include-protected]
     python -m customgcs modes | mode --name LOITER | arm [--force] | disarm [--force]
-    python -m customgcs mission-upload|mission-download|mission-verify --file F | mission-clear
+    python -m customgcs mission-upload|mission-download|mission-verify --file F | mission-clear | mission-start
 
 Commands that change the vehicle (everything except info, plan, modes, params-save, params-diff, mission-download, mission-verify) refuse a host other than the local machine
 unless --allow-remote is given: the prototype has only ever been run against simulators.
@@ -87,6 +87,10 @@ def _mission_commands(args, conn) -> int:
     if args.command == 'mission-clear':
         print('mission clear ack type', mission.clear(conn))
         return 0
+    if args.command == 'mission-start':
+        result = flight.start_mission(conn)
+        print(result.detail)
+        return 0 if result.ok else 1
     if not args.file:
         print('--file is required')
         return 2
@@ -112,7 +116,7 @@ def _mission_commands(args, conn) -> int:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog='customgcs')
     ap.add_argument('command', choices=['info', 'plan', 'motor-test', 'params-save', 'params-diff', 'params-restore', 'modes', 'mode', 'arm', 'disarm',
-                                        'mission-upload', 'mission-download', 'mission-verify', 'mission-clear'])
+                                        'mission-upload', 'mission-download', 'mission-verify', 'mission-clear', 'mission-start'])
     ap.add_argument('--host', default='127.0.0.1')
     ap.add_argument('--port', type=int, default=5760)
     ap.add_argument('--allow-remote', action='store_true', help='allow a state-changing command on a host that is not this machine (never tried; the prototype is simulator-only)')

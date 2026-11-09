@@ -1,0 +1,14 @@
+connected; speedup 1
+OK   mission uploaded (ack 0)
+OK   mission reads back equal
+     leg lengths: home to WP2 78 m, WP2 to WP3 82 m
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted with the mission loaded   [AUTO active | ]
+     vehicle messages: Mission: 1 Takeoff | Disarming motors | Mission: 1 Takeoff
+FAIL items reached in order   [[]]
+FAIL altitude reached 14 m or more during the flight   [peak 0.0 m]
+OK   vehicle disarmed by itself after the return
+OK   last position within 5 m of home   [0.0 m, 0.0 m up]
+     flight took 900 s of wall-clock time at speedup 1
+
+RESULT 2 checks failed: items reached in order; altitude reached 14 m or more during the flight

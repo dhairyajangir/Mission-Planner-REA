@@ -1,0 +1,8 @@
+connected; speedup 1
+OK   mission uploaded (ack 0)
+OK   mission reads back equal
+     leg lengths: home to WP2 78 m, WP2 to WP3 82 m
+OK   armed   [armed (ack result 0)]
+FAIL AUTO accepted with the mission loaded   [AUTO refused: vehicle stays in STABILIZE (ack result 4) | EKF3 IMU0 origin set; EKF3 IMU1 origin set]
+
+RESULT 1 checks failed: AUTO accepted with the mission loaded

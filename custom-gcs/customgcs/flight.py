@@ -11,6 +11,7 @@ from typing import Dict, List, Optional
 
 MAV_CMD_DO_SET_MODE = 176
 MAV_CMD_COMPONENT_ARM_DISARM = 400
+MAV_CMD_MISSION_START = 300
 FORCE_MAGIC = 21196          # param2 of MAV_CMD_COMPONENT_ARM_DISARM: skip the arming checks. Never sent unless force=True.
 
 
@@ -111,3 +112,12 @@ def set_mode(link, name: str, timeout: float = 5.0) -> Result:
     ok = hb is not None and hb.custom_mode == number
     reported = mode_name(hb.custom_mode) if hb is not None else 'no heartbeat'
     return Result(ok, ('%s active' % name.upper()) if ok else ('%s refused: vehicle stays in %s (ack result %s)' % (name.upper(), reported, acks[-1] if acks else 'none')), tuple(texts))
+
+
+def start_mission(link, timeout: float = 5.0) -> Result:
+    """Send MAV_CMD_MISSION_START. A Copter that is armed in AUTO on the ground does not take off until the mission is started (or the pilot raises the throttle) and disarms itself
+    after DISARM_DELAY (10 s) if neither happens (sitl-evidence/custom-gcs-flight-run3-* and -run4-*)."""
+    link.mav.command_long_send(link.target_system, link.target_component, MAV_CMD_MISSION_START, 0, 0, 0, 0, 0, 0, 0, 0)
+    _, acks, texts = _wait(link, timeout, until=None)
+    ok = bool(acks) and acks[-1] == 0
+    return Result(ok, 'mission start %s (ack result %s)' % ('accepted' if ok else 'not accepted', acks[-1] if acks else 'none'), tuple(texts))
