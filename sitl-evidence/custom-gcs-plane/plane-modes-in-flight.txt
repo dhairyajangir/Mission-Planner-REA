@@ -1,0 +1,29 @@
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+        vehicle: Mission: 1 Takeoff
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Autoland direction= 0
+        vehicle: Holding course 35999 at 5.4m/s (0.0)
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 20m
+OK   airborne above 50 m after the AUTO takeoff   [59 m]
+FLY_BY_WIRE_A  FLY_BY_WIRE_A active | start 59 m, 27.5 m/s | after 10 s 55 m, 9.2 m/s
+OK   FLY_BY_WIRE_A became active and the aircraft was still above 15 m 10 s later   [('FLY_BY_WIRE_A active', '55 m')]
+FLY_BY_WIRE_B  FLY_BY_WIRE_B active | start 55 m, 9.2 m/s | after 10 s 55 m, 11.9 m/s
+OK   FLY_BY_WIRE_B became active and the aircraft was still above 15 m 10 s later   [('FLY_BY_WIRE_B active', '55 m')]
+CRUISE         CRUISE active | start 55 m, 11.9 m/s | after 10 s 54 m, 10.8 m/s
+OK   CRUISE became active and the aircraft was still above 15 m 10 s later   [('CRUISE active', '54 m')]
+STABILIZE      STABILIZE active | start 54 m, 10.8 m/s | after 10 s 45 m, 8.0 m/s
+OK   STABILIZE became active and the aircraft was still above 15 m 10 s later   [('STABILIZE active', '45 m')]
+LOITER         LOITER active | start 45 m, 8.0 m/s | after 10 s 46 m, 20.9 m/s
+OK   LOITER became active and the aircraft was still above 15 m 10 s later   [('LOITER active', '46 m')]
+CIRCLE         CIRCLE active | start 46 m, 20.9 m/s | after 10 s 45 m, 23.1 m/s
+OK   CIRCLE became active and the aircraft was still above 15 m 10 s later   [('CIRCLE active', '45 m')]
+GUIDED         GUIDED active | start 45 m, 23.1 m/s | after 10 s 45 m, 21.7 m/s
+OK   GUIDED became active and the aircraft was still above 15 m 10 s later   [('GUIDED active', '45 m')]
+RTL            RTL active | start 45 m, 21.7 m/s | after 10 s 79 m, 21.9 m/s
+OK   RTL became active and the aircraft was still above 15 m 10 s later   [('RTL active', '79 m')]
+RESULT passed

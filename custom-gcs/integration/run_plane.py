@@ -8,7 +8,12 @@ mission  a mission flown in AUTO: TAKEOFF to 60 m, a waypoint 300 m north, one 3
          Checks: items reached in order, positions at the waypoints within 60 m (the vehicle's own WP_RADIUS is 50 m), altitude near the commanded 60 m, the landing completes
          and the vehicle disarms itself. A flight track (CSV) is kept.
 failsafes the same flight with a fault injected 15 s after AUTO starts (after takeoff): gcs-link-loss (FS_GCS_ENABL 1, FS_LONG_ACTN 1) -> RTL; rc-loss (SIM_RC_FAIL 1,
-         FS_LONG_ACTN 1) -> RTL; battery-low (BATT_FS_LOW_ACT 1) -> RTL; circle-fence (FENCE_TYPE 2, radius 200 m, action 1) -> RTL; wind-10ms (no failsafe: the mission must finish).
+         FS_LONG_ACTN 1) -> RTL; battery-low (BATT_FS_LOW_ACT 1) -> RTL; circle-fence (FENCE_TYPE 2, radius 200 m, action 1) -> RTL; wind-10ms (no failsafe: the mission must finish);
+         gps-loss (GPS disabled in the simulator: reaction recorded; the check is that the aircraft is still flying above 20 m, or has landed and disarmed, 60 s later).
+inflight after an AUTO takeoff (item 1 reached) the script requests FLY_BY_WIRE_A, FLY_BY_WIRE_B, CRUISE, STABILIZE, LOITER, CIRCLE, GUIDED and RTL in turn and holds each for 10 s,
+         recording whether it became active and the altitude and ground speed at the start and end of the hold. With no radio input in the simulator, the modes that need the pilot's
+         throttle (FLY_BY_WIRE_A, STABILIZE) are expected to lose height; that is recorded, not judged. A mode passes when the vehicle reports it within 5 s and is still airborne
+         (above 15 m) 10 s later.
 """
 import csv
 import math
@@ -23,7 +28,7 @@ sys.path.insert(0, os.path.join(HERE, '..'))
 from customgcs import flight, link, mission, params  # noqa: E402
 
 TREE, OUT = sys.argv[1], sys.argv[2]
-PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes']
+PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes', 'inflight']
 HOME = (-35.363261, 149.165230, 584.0)
 TABLE = 'plane'
 INJECT_AFTER_S = 15.0
@@ -33,6 +38,7 @@ FAILSAFES = {
     'battery-low': dict(pre={'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, inject={'SIM_BATT_VOLTAGE': 10.5}, expect='RTL'),
     'circle-fence': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 2, 'FENCE_RADIUS': 200, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
     'wind-10ms': dict(pre={}, inject={'SIM_WIND_SPD': 10.0, 'SIM_WIND_DIR': 90.0}, expect='complete'),
+    'gps-loss': dict(pre={}, inject={'SIM_GPS1_ENABLE': 0}, expect='observe'),          # no configured action exists for this: the reaction is recorded, the check is that the aircraft does not crash within 60 s
 }
 M_PER_DEG_LAT = 111320.0
 LEG_DEG = 300.0 / M_PER_DEG_LAT
@@ -209,6 +215,8 @@ def fly(name='plane-mission', spec=None):
                     run.say('t=%5.1f s stopped sending ground-station heartbeats' % now)
             if expect_seen_at is not None and now - expect_seen_at > 25.0:
                 break                                          # the Plane loiters at the RTL point; nothing more to learn
+            if spec.get('expect') == 'observe' and injected and now > INJECT_AFTER_S + 60.0:
+                break
             msg = conn.recv_match(type=['MISSION_ITEM_REACHED', 'GLOBAL_POSITION_INT', 'HEARTBEAT', 'STATUSTEXT'], blocking=True, timeout=1)
             if msg is None:
                 continue
@@ -246,6 +254,10 @@ def fly(name='plane-mission', spec=None):
                 run.check('came to rest within 150 m of the home position', metres(pos[0], pos[1], HOME[0], HOME[1]) <= 150.0, '%.0f m from home, %.0f m up' % (metres(pos[0], pos[1], HOME[0], HOME[1]), pos[2]))
             if wanted == 'complete':
                 run.check('no failsafe mode change: the vehicle stayed in AUTO', set(modes) <= {'AUTO', 'MANUAL'}, modes)
+        elif wanted == 'observe':
+            flying = pos is not None and (pos[2] > 20.0 or (last_hb is not None and not flight.is_armed(last_hb)))
+            run.say('modes seen: %s; items reached: %s' % (modes, reached))
+            run.check('60 s after the fault the aircraft is flying above 20 m or has landed and disarmed (no crash)', flying, ('%.0f m up' % pos[2]) if pos else '')
         else:
             after_auto = [m for m in modes if m not in ('AUTO', 'MANUAL')]
             run.check('after the fault the mode changed to %s' % wanted, bool(after_auto) and after_auto[0] == wanted, modes)
@@ -258,15 +270,77 @@ def fly(name='plane-mission', spec=None):
         run.finish(track)
 
 
+def inflight():
+    run = Run('plane-modes-in-flight')
+    track = []
+    try:
+        run.start()
+        conn = run.conn
+        items, _ = route()
+        run.check('mission uploaded', mission.upload(conn, items) == 0)
+        flight.set_mode(conn, 'MANUAL', table=TABLE)
+        armed = flight.arm(conn, timeout=120.0)
+        run.check('armed', armed.ok, armed.detail)
+        auto = flight.set_mode(conn, 'AUTO', table=TABLE)
+        retry = time.time() + 60.0
+        while not auto.ok and time.time() < retry:
+            time.sleep(3)
+            auto = flight.set_mode(conn, 'AUTO', table=TABLE)
+        run.check('AUTO accepted', auto.ok, auto.detail)
+        if not (armed.ok and auto.ok):
+            return
+        state = {'pos': None}
+
+        def watch(seconds):
+            end = time.time() + seconds
+            while time.time() < end:
+                msg = conn.recv_match(type=['GLOBAL_POSITION_INT', 'STATUSTEXT'], blocking=True, timeout=0.5)
+                if msg is None:
+                    continue
+                if msg.get_type() == 'GLOBAL_POSITION_INT':
+                    state['pos'] = (msg.lat / 1e7, msg.lon / 1e7, msg.relative_alt / 1000.0, math.hypot(msg.vx, msg.vy) / 100.0)
+                    track.append([round(time.time() - t0, 1), state['pos'][0], state['pos'][1], round(state['pos'][2], 1), round(state['pos'][3], 1), current[0]])
+                else:
+                    run.say('        vehicle: %s' % msg.text)
+        t0 = time.time()
+        current = ['AUTO']
+        deadline = time.time() + 90.0
+        watch(1.0)
+        while time.time() < deadline:                                   # wait for the takeoff to finish (item 1 reached shows as 55 m or more)
+            watch(1.0)
+            if state['pos'] and state['pos'][2] >= 55.0:
+                break
+        run.check('airborne above 50 m after the AUTO takeoff', bool(state['pos']) and state['pos'][2] >= 50.0, ('%.0f m' % state['pos'][2]) if state['pos'] else '')
+        for name in ('FLY_BY_WIRE_A', 'FLY_BY_WIRE_B', 'CRUISE', 'STABILIZE', 'LOITER', 'CIRCLE', 'GUIDED', 'RTL'):
+            before = state['pos']
+            result = flight.set_mode(conn, name, timeout=5.0, table=TABLE)
+            current[0] = name if result.ok else current[0]
+            watch(10.0)
+            after = state['pos']
+            run.say('%-14s %s | start %s | after 10 s %s' % (name, result.detail, ('%.0f m, %.1f m/s' % (before[2], before[3])) if before else '?', ('%.0f m, %.1f m/s' % (after[2], after[3])) if after else '?'))
+            run.check('%s became active and the aircraft was still above 15 m 10 s later' % name, result.ok and after is not None and after[2] > 15.0, (result.detail, ('%.0f m' % after[2]) if after else ''))
+            if after is not None and after[2] <= 15.0:
+                break
+    except Exception as e:
+        run.check('inflight finished without an exception', False, repr(e))
+    finally:
+        run.stop()
+        run.finish(track)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'basics' in PARTS:
         basics()
     if 'mission' in PARTS:
         fly()
-    if 'failsafes' in PARTS:
+    chosen = [x.split(':', 1)[1] for x in PARTS if x.startswith('failsafe:')]          # failsafe:gps-loss runs one scenario
+    if 'failsafes' in PARTS or chosen:
         for name, spec in FAILSAFES.items():
-            fly('plane-' + name, spec)
+            if 'failsafes' in PARTS or name in chosen:
+                fly('plane-' + name, spec)
+    if 'inflight' in PARTS:
+        inflight()
     return 0
 
 
