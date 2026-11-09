@@ -1,0 +1,92 @@
+9898122 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (0,47) 1805x1133 | visible=True | enabled=True
+528106 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (0,47) 1805x1133 | visible=True | enabled=True
+3999598 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (0,47) 1805x1133 | visible=True | enabled=True
+6227256 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (172,47) 1633x1133 | visible=True | enabled=True
+598866 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (172,47) 1633x1133 | visible=True | enabled=True
+594374 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "maximum speed of motors while in flight (almost all escs have a deadzone at the top)" | client (353,344) 430x17 | visible=True | enabled=True
+398926 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "minimum speed of motors while in flight (slightly higher than "Spin when Armed")" | client (353,318) 407x17 | visible=True | enabled=True
+2819862 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "speed when motors are armed but throttle is at zero (idle)" | client (353,292) 291x17 | visible=True | enabled=True
+4589702 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Leave as 0 to use RX input range" | client (353,266) 171x17 | visible=True | enabled=True
+402542 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Leave as 0 to use RX input range" | client (353,240) 171x17 | visible=True | enabled=True
+398924 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Spin Maximum" | client (183,344) 79x17 | visible=True | enabled=True
+397012 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Spin minimum" | client (183,318) 76x17 | visible=True | enabled=True
+401732 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Spin when Armed" | client (183,292) 93x17 | visible=True | enabled=True
+1252100 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Output PWM Max" | client (183,266) 93x17 | visible=True | enabled=True
+6554864 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Output PWM Min" | client (183,240) 90x17 | visible=True | enabled=True
+335350 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (285,337) 62x20 | visible=True | enabled=True
+461700 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (330,338) 16x18 | visible=True | enabled=True
+398922 | WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | "0" | client (287,339) 42x16 | visible=True | enabled=True
+594360 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (285,311) 62x20 | visible=True | enabled=True
+594326 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (330,312) 16x18 | visible=True | enabled=True
+663220 | WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | "0" | client (287,313) 42x16 | visible=True | enabled=True
+461690 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (285,285) 62x20 | visible=True | enabled=True
+335348 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (330,286) 16x18 | visible=True | enabled=True
+6489368 | WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | "0" | client (287,287) 42x16 | visible=True | enabled=True
+726472 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (285,259) 62x20 | visible=True | enabled=True
+532984 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (330,260) 16x18 | visible=True | enabled=True
+3278932 | WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | "0" | client (287,261) 42x16 | visible=True | enabled=True
+335352 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (285,233) 62x20 | visible=True | enabled=True
+14157116 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (330,234) 16x18 | visible=True | enabled=True
+397004 | WindowsForms10.EDIT.app.0.37a0697_r6_ad1 | "0" | client (287,235) 42x16 | visible=True | enabled=True
+402538 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "ESC Type:" | client (183,212) 59x17 | visible=True | enabled=True
+397000 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (175,363) 1627x5 | visible=True | enabled=True
+461696 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (172,194) 1627x5 | visible=True | enabled=True
+461698 | WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | "" | client (285,205) 120x21 | visible=True | enabled=True
+397008 | WindowsForms10.BUTTON.app.0.37a0697_r6_ad1 | "Calibrate ESCs" | client (183,89) 93x25 | visible=True | enabled=True
+6226014 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Remove Props!
+After pushing this button:
+-Disconnect USB and battery
+-Plug in battery
+-when LEDs flash, push Saftey Switch (if present)
+-ESCs should beep as they are calibrated
+- restart flight controller normally" | client (282,89) 258x92 | visible=True | enabled=True
+335354 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (175,70) 1627x5 | visible=True | enabled=True
+592582 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "ESC Calibration (AC3.3+)" | client (179,52) 194x24 | visible=True | enabled=True
+4458320 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (0,47) 172x1133 | visible=True | enabled=True
+398938 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "Install Firmware" | client (0,47) 172x30 | visible=True | enabled=True
+5376056 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | ">> Mandatory Hardware" | client (0,77) 172x30 | visible=True | enabled=True
+398928 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Frame Type" | client (0,107) 172x30 | visible=True | enabled=True
+402556 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Accel Calibration" | client (0,137) 172x30 | visible=True | enabled=True
+463430 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Compass" | client (0,167) 172x30 | visible=True | enabled=True
+663228 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Radio Calibration" | client (0,197) 172x30 | visible=True | enabled=True
+726474 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Servo Output" | client (0,227) 172x30 | visible=True | enabled=True
+335356 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Serial Ports" | client (0,257) 172x30 | visible=True | enabled=True
+398930 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      ESC Calibration" | client (0,287) 172x30 | visible=True | enabled=True
+335336 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Flight Modes" | client (0,317) 172x30 | visible=True | enabled=True
+335338 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      FailSafe" | client (0,347) 172x30 | visible=True | enabled=True
+528254 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Initial Tune Parameter" | client (0,377) 172x30 | visible=True | enabled=True
+594350 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      HW ID" | client (0,407) 172x30 | visible=True | enabled=True
+724386 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      ADSB" | client (0,437) 172x30 | visible=True | enabled=True
+463428 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | ">> Optional Hardware" | client (0,467) 172x30 | visible=True | enabled=True
+397020 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      RTK/GPS Inject" | client (0,497) 172x30 | visible=True | enabled=True
+528256 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      CubeID Update" | client (0,527) 172x30 | visible=True | enabled=True
+594348 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Sik Radio" | client (0,557) 172x30 | visible=True | enabled=True
+461692 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      CAN GPS Order" | client (0,587) 172x30 | visible=True | enabled=True
+401738 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Battery Monitor" | client (0,617) 172x30 | visible=True | enabled=True
+397016 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Battery Monitor 2" | client (0,647) 172x30 | visible=True | enabled=True
+335344 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      DroneCAN/UAVCAN" | client (0,677) 172x30 | visible=True | enabled=True
+335342 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Joystick" | client (0,707) 172x30 | visible=True | enabled=True
+594352 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Compass/Motor Calib" | client (0,737) 172x30 | visible=True | enabled=True
+663226 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Range Finder" | client (0,767) 172x30 | visible=True | enabled=True
+4065058 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Airspeed" | client (0,797) 172x30 | visible=True | enabled=True
+401740 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      PX4Flow" | client (0,827) 172x30 | visible=True | enabled=True
+463434 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Optical Flow" | client (0,857) 172x30 | visible=True | enabled=True
+4196496 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      OSD" | client (0,887) 172x30 | visible=True | enabled=True
+726468 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Camera Gimbal" | client (0,917) 172x30 | visible=True | enabled=True
+660172 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Motor Test" | client (0,947) 172x30 | visible=True | enabled=True
+724394 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Bluetooth Setup" | client (0,977) 172x30 | visible=True | enabled=True
+461702 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Parachute" | client (0,1007) 172x30 | visible=True | enabled=True
+397006 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      ESP8266 Setup" | client (0,1037) 172x30 | visible=True | enabled=True
+397018 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      Antenna Tracker" | client (0,1067) 172x30 | visible=True | enabled=True
+463426 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "      FFT Setup" | client (0,1097) 172x30 | visible=True | enabled=True
+532982 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | ">> Advanced" | client (0,1127) 172x30 | visible=True | enabled=True
+2361560 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (0,0) 1805x47 | visible=True | enabled=True
+2558178 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "menuStrip1" | client (0,0) 1805x47 | visible=True | enabled=True
+1837320 | WindowsForms10.Window.8.app.0.37a0697_r6_ad1 | "" | client (1483,0) 241x47 | visible=True | enabled=True
+723648 | WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | "" | client (1585,27) 136x21 | visible=True | enabled=True
+592734 | Edit | "" | client (1588,30) 113x15 | visible=True | enabled=True
+9045664 | WindowsForms10.STATIC.app.0.37a0697_r6_ad1 | "Stats..." | client (1486,32) 39x17 | visible=True | enabled=True
+527274 | WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | "" | client (1483,0) 121x21 | visible=True | enabled=False
+461756 | Edit | "" | client (1486,3) 98x15 | visible=True | enabled=False
+8392076 | WindowsForms10.COMBOBOX.app.0.37a0697_r6_ad1 | "" | client (1610,0) 111x21 | visible=True | enabled=False
+3932914 | Edit | "" | client (1613,3) 88x15 | visible=True | enabled=False

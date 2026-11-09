@@ -219,6 +219,56 @@ What this adds and what it does not: the live window of the research copy, conne
 
 Failed attempts, kept: UI Automation exposes only plain panes for this window (`sitl-evidence/live-gui-uia/uia-tree.txt`); a first run clicked window coordinates that resolved to a container (`live-gui-driven-run1-clicks-missed/`); a second run clicked the buttons by handle with posted mouse messages, which the buttons did not act on (`live-gui-driven-run2-mouse-messages-no-effect/`; the same method did work for the dialog buttons and the toolbar); the third, with `BM_CLICK`, worked.
 
+## 11. All 33 Mandatory and Optional Hardware pages in the live window (simulator)
+
+`research-tools/run-live-gui-pages.ps1` repeated the section 10 setup (research copy, TCP to a disposable Copter simulator, window messages), opened every entry of the SETUP menu's Mandatory Hardware (12) and Optional Hardware (21) groups one after another, waited 3 s on each, dismissed any dialog the page opened (OK, else No, else Cancel; the dialog title and texts were recorded first), and saved a screenshot, the list of visible child windows with their text and enabled state, and counts (`sitl-evidence/live-gui-pages/`: `pages-summary.csv`, `NNN-<page>.jpg`, `NNN-<page>-controls.txt`). Not opened: Install Firmware (it flashes firmware) and the Advanced group. A script did this, not a person; the counts are of Windows child windows, so a page's own drawn content (pictures, graphs) is not in them, and every page includes about 50 child windows for the left menu itself, with about 4 of them reported disabled on every page.
+
+| Page | Dialog the page opened | Visible child windows | Buttons | Edits | Combos | Disabled |
+|---|---|---:|---:|---:|---:|---:|
+| Frame Type | none | 84 | 15 | 3 | 3 | 5 |
+| Accel Calibration | none | 62 | 3 | 3 | 3 | 4 |
+| Compass | none | 84 | 10 | 4 | 4 | 6 |
+| Radio Calibration | none | 74 | 4 | 3 | 3 | 4 |
+| Servo Output | none | 270 | 16 | 51 | 19 | 4 |
+| Serial Ports | none | 94 | 7 | 3 | 17 | 4 |
+| ESC Calibration | none | 86 | 2 | 8 | 4 | 4 |
+| Flight Modes | none | 90 | 13 | 3 | 9 | 6 |
+| FailSafe | [FailSafe] Ensure your props are not on the Plane/Quad | 125 | 1 | 7 | 5 | 4 |
+| Initial Tune Parameters | none | 71 | 3 | 9 | 4 | 4 |
+| HW ID | none | 54 | 0 | 3 | 3 | 4 |
+| ADSB | none | 74 | 5 | 7 | 5 | 11 |
+| RTK-GPS Inject | none | 83 | 4 | 3 | 5 | 4 |
+| CubeID Update | none | 64 | 4 | 4 | 4 | 5 |
+| Sik Radio | none | 202 | 32 | 15 | 37 | 67 |
+| CAN GPS Order | none | 57 | 0 | 3 | 3 | 4 |
+| Battery Monitor | none | 79 | 1 | 12 | 6 | 5 |
+| Battery Monitor 2 | none | 77 | 1 | 10 | 6 | 6 |
+| DroneCAN-UAVCAN | none | 83 | 6 | 15 | 4 | 4 |
+| Joystick | none | 193 | 36 | 36 | 20 | 4 |
+| Compass-Motor Calibration | none | 57 | 1 | 4 | 3 | 4 |
+| Range Finder | none | 61 | 0 | 3 | 4 | 5 |
+| Airspeed | none | 61 | 1 | 3 | 5 | 6 |
+| PX4Flow | none | 58 | 1 | 3 | 3 | 4 |
+| Optical Flow | none | 88 | 0 | 9 | 4 | 22 |
+| OSD | none | 58 | 1 | 3 | 3 | 4 |
+| Camera Gimbal | none | 187 | 5 | 26 | 11 | 139 |
+| Motor Test | none | 81 | 9 | 5 | 3 | 4 |
+| Bluetooth Setup | none | 64 | 1 | 6 | 4 | 4 |
+| Parachute | none | 73 | 1 | 6 | 5 | 14 |
+| ESP8266 Setup | none | 77 | 3 | 10 | 5 | 29 |
+| Antenna Tracker | none | 92 | 3 | 14 | 6 | 4 |
+| FFT Setup | none | 96 | 24 | 4 | 3 | 4 |
+
+What this shows:
+
+- All 33 entries opened in the live window without crashing the application or leaving the connection; the only dialog any page raised was the one on the FailSafe page ("Ensure your props are not on the Plane/Quad"), which the sweep dismissed with OK.
+- Pages that show only the menu plus a title or a line of text (about 54 to 58 child windows in total, no buttons): HW ID, CAN GPS Order (shows "UAVCAN GPS Order / Set the GPS order if required" and nothing else), Compass-Motor Calibration, PX4Flow, OSD, Range Finder. For CAN GPS Order this is the page that raised a null reference in the harness (`Setup-Page-Disabled-Reasons-Trace.md`); in the live window no dialog appeared and the page shows only its header, which fits an `Activate()` that stopped part way with the error not shown, but I did not show that.
+- Camera Gimbal shows a full page (187 child windows) of which 139 are disabled, which fits `ConfigMount` being disabled because `CAM_TRIGG_TYPE` does not exist on this firmware (`Setup-Page-Disabled-Reasons-Trace.md`); ESP8266 Setup (29 disabled of 77), Parachute (14 of 73), Optical Flow (22 of 88) and Sik Radio (67 of 202) also have many disabled controls without a cause shown here.
+- The menu lists CAN GPS Order, Camera Gimbal, ESP8266 Setup and Antenna Tracker as normal entries even though the page behind some of them is disabled or empty for this vehicle: the menu does not reflect the firmware.
+- The Frame Type and Motor Test pages here are the ones section 10 covers in more detail; Frame Type shows 15 buttons, 3 edit boxes and 3 combo boxes as windows next to the picture controls.
+
+Not covered: the Advanced group, Install Firmware, pressing any control on these pages other than the motor test buttons in section 10, other frames or vehicles in the live window, and a person using any of them.
+
 ## Not covered
 
 - A person using the frame page or motor test page (section 10 is a script driving the real window of the research copy, for one frame), other frames in the live window, and the picture drawn for each frame.

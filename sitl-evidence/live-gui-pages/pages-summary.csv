@@ -1,0 +1,47 @@
+page,dialogs_opened,visible_child_windows,visible_buttons,visible_edits,visible_combos,visible_static_texts,disabled_visible_controls,first_texts
+Frame Type,"",84,15,3,3,9,5,"Frame Class / OctaQuad / Tri / Heli / Y6 / Octa"
+Accel Calibration,"",62,3,3,3,6,4,"Level your Autopilot to set default accelerometer scale factors for level flight (1 axis).
+This requires you to place your autopilot flat and level. / Level your Autopilot to set default accelerometer offsets (1 axis/AHRS trims).
+This requires you to place your autopilot flat and level. / Calibrate Level / Calibrate Accel / Level your Autopilot to set default accelerometer Min/Max (3 axis).
+This will ask you to place your autopilot on each edge. / Accelerometer Calibration"
+Compass,"",84,10,4,4,11,6,"Remove Missing / A reboot is required to adjust the ordering.
+ / Reboot / Use Compass 3 / Use Compass 2 / Automatically learn offsets"
+Radio Calibration,"",74,4,3,3,1,4,"Spektrum Bind / Bind DSM2 / Bind DSM8 / Bind DSMX / Calibrate Radio / Install Firmware"
+Servo Output,"",270,16,51,19,24,4,"# / Max / Trim / Min / Function / Reverse"
+Serial Ports,"",94,7,3,17,16,4,"SERIAL PORT 1
+TX= / Set Bitmask / SERIAL PORT 2
+TX= / Set Bitmask / SERIAL PORT 3
+TX= / Set Bitmask"
+ESC Calibration,"",86,2,8,4,14,4,"maximum speed of motors while in flight (almost all escs have a deadzone at the top) / speed when motors are armed but throttle is at zero (idle) / Leave as 0 to use RX input range / Leave as 0 to use RX input range / Spin Maximum / Spin minimum"
+Flight Modes,"",90,13,3,9,18,6,"Flight Mode 1 / Super Simple Mode / Super Simple Mode / PWM 1750 + / Super Simple Mode / PWM 1621 - 1749"
+FailSafe,"[FailSafe] Ensure your props are not on the Plane/Quad",125,1,7,5,33,4,"Battery / Low Timer / 13 / Low Battery / 13.1 / Reserved MAH"
+Initial Tune Parameters,"",71,3,9,4,9,4,"PLEASE READ IT ! / You can find a detailed description of initial parameter settings and tuning here. / https://ardupilot.org/copter/docs/tuning-process-instructions.html / Add suggested settings for 4.0 and up (Battery failsafe and Fence) ? / Battery Chemistry / Calculate Initial Parameters"
+HW ID,"",54,0,3,3,1,4,"Install Firmware / >> Mandatory Hardware /       Frame Type /       Accel Calibration /       Compass /       Radio Calibration"
+ADSB,"",74,5,7,5,7,11,"Flight Identification: / Save / Save / Aircraft Registration / Find / Refresh Params"
+RTK-GPS Inject,"",83,4,3,5,19,4,"Send NTRIP protocol v1.0 ? / Send NTRIP GGA? (VRS/Smart) / Map / Link Status / Input data rate /          0 bps"
+CubeID Update,"",64,4,4,4,5,5,"Upload Custom Firmware / Force 57600 baud / SERIAL_PASSTIMO / SERIAL_PASS2  / 0 / To use this feature
+Please enable serial passthough to the port the CubeID is connected to.
+Set param SERIAL_PASSTIMO to 0
+Set param SERIAL_PASS2 to the telem port
+"
+Sik Radio,"",202,32,15,37,69,67,"Upload Firmware (custom) / Reset to Defaults / Status Leds / Remote / Load from File... / Save to File..."
+CAN GPS Order,"",57,0,3,3,3,4,"UAVCAN GPS Order / Set the GPS order if required
+ / Install Firmware / >> Mandatory Hardware /       Frame Type /       Accel Calibration"
+Battery Monitor,"",79,1,12,6,12,5,"MP Alert on Low Battery / mAh / HW Ver / Calibration / 5. Current (Calced) / 4. Measured current:"
+Battery Monitor 2,"",77,1,10,6,12,6,"MP Alert on Low Battery / mAh / Current Pin / Calibration / 5. Current (Calced) / 4. Measured current:"
+DroneCAN-UAVCAN,"",83,6,15,4,8,4,"Connect / Stats / Filter / Exit SLCAN on leave? / Log / Node ID / Name"
+Joystick,"",193,36,36,20,23,4,"Joystick / Manual Control / Loaded Config for ArduCopter2 / Elevons / Reverse / Controller Axis"
+Compass-Motor Calibration,"",57,1,4,3,2,4,"Compass Motor Calibration / Start / Install Firmware / >> Mandatory Hardware /       Frame Type /       Accel Calibration"
+Range Finder,"",61,0,3,4,6,5,"0 / 0 / Voltage:  / Distance:  / RangeFinder / Install Firmware"
+Airspeed,"",61,1,3,5,4,6,"Type / Pin / Enable / Airspeed / Install Firmware / >> Mandatory Hardware"
+PX4Flow,"",58,1,3,3,2,4,"Focus Mode / PX4 Flow / Install Firmware / >> Mandatory Hardware /       Frame Type /       Accel Calibration"
+Optical Flow,"",88,0,9,4,15,22,"Scaling Factors / Position of Sensor; relative to IMU / metres down / metres right / metres foward / 0"
+OSD,"",58,1,3,3,3,4,"You only need to use this if you are having issue with your OSD not updating / Enable Telemetry / OSD / Install Firmware / >> Mandatory Hardware /       Frame Type"
+Camera Gimbal,"",187,5,26,11,43,139,"NOTE: the gimbal type takes effect on the next reboot of the fight controller / Type / Please set the Ch7 Option to Camera Trigger / Duration (1/10th sec) / 20 / Shutter"
+Motor Test,"",81,9,5,3,13,4,"Motor Test / Type: Plus / Class: Quad / Set the min % that will be output when flying / Set Motor Spin Min / Set the min % that will be output when armed; but still on the ground"
+Bluetooth Setup,"",64,1,6,4,5,4,"Pin / Baud / Name / 1234 / Ardupilot / Save Settings"
+Parachute,"",73,1,6,5,7,14,"0 / 0 / 0 / Min Alt (m) / Deploy PWM / Resting PWM"
+ESP8266 Setup,"",77,3,10,5,10,29,"SSID / Password / STA Mode / Gateway / 1234 / Subnet"
+Antenna Tracker,"",92,3,14,6,21,4,"Acceleration / Speed / 100 / 5 / Acceleration / Speed"
+FFT Setup,"",96,24,4,3,5,4,"Please ensure IMU_RAW and IMU_FAST are turned off to use FFT / Bitmap of what on-board log types to enable. This value is made up of the sum of each of the log types you want to be saved. It is usually best just to enable all basiclog types by setting this to 65535. Note that if you want to reduce log sizes you shoul / Fast Attitude / Medium Attitude / GPS / System Performance"
+

@@ -21,6 +21,7 @@ public static class W32 {
     [DllImport("user32.dll")] public static extern uint GetWindowThreadProcessId(IntPtr h, out uint pid);
     [DllImport("user32.dll", CharSet = CharSet.Unicode)] public static extern int GetWindowText(IntPtr h, StringBuilder s, int n);
     [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr h);
+    [DllImport("user32.dll")] public static extern bool IsWindowEnabled(IntPtr h);
     [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr h, out RECT r);
     [DllImport("user32.dll")] public static extern bool GetClientRect(IntPtr h, out RECT r);
     [DllImport("user32.dll")] public static extern bool EnumChildWindows(IntPtr h, EnumProc p, IntPtr l);
@@ -63,7 +64,7 @@ $wins = [W32]::Windows([uint32]$proc.Id)
 function Pick([string]$contains) {
     if ($contains) { return $wins | Where-Object { [W32]::Title($_).Contains($contains) } | Select-Object -First 1 }
     # the main window is the one whose title starts with the product name; otherwise the last created
-    $m = $wins | Where-Object { [W32]::Title($_).StartsWith('Mission Planner') } | Select-Object -First 1
+    $m = $wins | Where-Object { [W32]::Title($_).StartsWith('Mission Planner 1.3') } | Select-Object -First 1
     if ($m) { return $m }
     return $wins | Select-Object -Last 1
 }
@@ -77,7 +78,7 @@ switch ($Command) {
         $bmp = New-Object System.Drawing.Bitmap(($r.Right - $r.Left), ($r.Bottom - $r.Top))
         $g = [System.Drawing.Graphics]::FromImage($bmp); $hdc = $g.GetHdc()
         [void][W32]::PrintWindow($h, $hdc, 2); $g.ReleaseHdc($hdc); $g.Dispose()
-        $bmp.Save($A1, [System.Drawing.Imaging.ImageFormat]::Png); $bmp.Dispose()
+        if ($A1.ToLower().EndsWith('.jpg')) { $bmp.Save($A1, [System.Drawing.Imaging.ImageFormat]::Jpeg) } else { $bmp.Save($A1, [System.Drawing.Imaging.ImageFormat]::Png) }; $bmp.Dispose()
         'saved {0} ({1}x{2}) of window "{3}"' -f $A1, ($r.Right - $r.Left), ($r.Bottom - $r.Top), [W32]::Title($h)
     }
     'click' {
@@ -102,7 +103,7 @@ switch ($Command) {
         foreach ($d in [W32]::Descendants($h)) {
             $r = New-Object W32+RECT; [void][W32]::GetWindowRect($d, [ref]$r)
             $tl = New-Object W32+POINT; $tl.X = $r.Left; $tl.Y = $r.Top; [void][W32]::ScreenToClient($h, [ref]$tl)
-            '{0} | {1} | "{2}" | client ({3},{4}) {5}x{6} | visible={7}' -f $d, [W32]::Class($d), [W32]::Title($d), $tl.X, $tl.Y, ($r.Right - $r.Left), ($r.Bottom - $r.Top), [W32]::IsWindowVisible($d)
+            '{0} | {1} | "{2}" | client ({3},{4}) {5}x{6} | visible={7} | enabled={8}' -f $d, [W32]::Class($d), [W32]::Title($d), $tl.X, $tl.Y, ($r.Right - $r.Left), ($r.Bottom - $r.Top), [W32]::IsWindowVisible($d), [W32]::IsWindowEnabled($d)
         }
     }
     'activate' {
