@@ -1,0 +1,18 @@
+﻿bps 0 loss 0 left 64 mem 1.08203125 mav2 False sign False mav1 0 mav2 0 signed 0      
+bps 85 loss 1 left 64 mem 10.703125 mav2 True sign False mav1 0 mav2 3 signed 0      
+bps 119 loss 0 left 769 mem 10.828125 mav2 True sign False mav1 0 mav2 4 signed 0      
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+MISSION_FLOAT, PARAM_FLOAT, MISSION_INT, COMMAND_INT, FTP, SET_ATTITUDE_TARGET, SET_POSITION_TARGET_LOCAL_NED, SET_POSITION_TARGET_GLOBAL_INT, TERRAIN, FLIGHT_TERMINATION, COMPASS_CALIBRATION, MAVLINK2, MISSION_FENCE, MISSION_RALLY
+bps 35320 loss 0 left 6845 mem 12.8271484375 mav2 True sign False mav1 0 mav2 949 signed 0      
+connected; parameters: 1431
+ConfigGPSOrder                     exception enabled=False interactive 0/0 enabled, boxes=0 NullReferenceException: Object reference not set to an instance of an object. AT at MissionPlanner.GCSViews.ConfigurationView.ConfigGPSOrder.Activate()
+ConfigPlanner                      exception enabled=False interactive 0/0 enabled, boxes=0 NullReferenceException: Object reference not set to an instance of an object. AT at MissionPlanner.GCSViews.ConfigurationView.ConfigPlanner.Activate()
+bps 18558 loss 0 left 42 mem 13.5361328125 mav2 True sign False mav1 0 mav2 502 signed 0      
+ConfigSerial                       exception enabled=False interactive 0/0 enabled, boxes=0 NullReferenceException: Object reference not set to an instance of an object. AT at MissionPlanner.GCSViews.ConfigurationView.ConfigSerial.Activate()
+Bad Toggle 1060
+Open MissionPlanner.GCSViews.ConfigurationView.ConfigSerialInjectGPS 
+ConfigSerialInjectGPS              exception enabled=False interactive 0/0 enabled, boxes=0 NullReferenceException: Object reference not set to an instance of an object. AT at MissionPlanner.GCSViews.ConfigurationView.ConfigSerialInjectGPS.Activate()
+ConfigSimplePids                   exception enabled=False interactive 0/0 enabled, boxes=0 FileNotFoundException: Could not find file 'C:\Users\think\AppData\Local\Temp\page-state-probe\acsimplepids.xml'. AT at System.IO.__Error.WinIOError(Int32 errorCode; String maybeFullPath) <- at System.IO.FileStream.Init(String path; FileMode mode; FileAccess access; Int32 rights; Boolean useRights; FileShare share; Int32 bufferSize; FileOptions options; SECURITY_ATTRIBUTES secAttrs; String msgPath; Boolean bFromProxy; Boolean useLongPath; Boolean checkHost) <- at System.IO.FileStream..ctor(String path; FileMode mode; FileAccess access; FileShare share; Int32 bufferSize) <- at System.Xml.XmlDownloadManager.GetStream(Uri uri; ICredentials credentials; IWebProxy proxy; RequestCachePolicy cachePolicy)
+ConfigRawParams                    timeout   enabled=False interactive 0/0 enabled, boxes=0 did not finish in 20 s (thread abandoned)

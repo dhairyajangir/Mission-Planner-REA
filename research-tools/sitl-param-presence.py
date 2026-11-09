@@ -1,8 +1,11 @@
-"""Which of the given parameter names does a running disposable SITL answer for? Used to explain why a Mission Planner setup page that checks for a parameter in
-Activate() disables itself. Prints one line per name: present with its value, or absent (no PARAM_VALUE after 5 requests).
+"""Which of the given parameter names does a running disposable SITL have? Used to explain why a Mission Planner setup page that checks for a parameter in
+Activate() disables itself or throws. The whole parameter list is downloaded once (PARAM_REQUEST_LIST) and the names are looked up in it, because asking for
+single names one at a time proved unreliable after an unanswered request (see sitl-evidence/setup-page-disabled-reasons/).
+Writes the full list next to the answers when a third argument path is given through the environment variable PARAM_DUMP.
 
     python sitl-param-presence.py <tcp port> <name> [name ...]
 """
+import os
 import sys
 import time
 
@@ -20,12 +23,22 @@ while m is None and time.time() - t0 < 60:
         time.sleep(1)
 if m is None:
     sys.exit('no connection')
+m.mav.param_request_list_send(m.target_system, m.target_component)
+params = {}
+count = None
+last = time.time()
+while time.time() - last < 8 and (count is None or len(params) < count):
+    r = m.recv_match(type='PARAM_VALUE', blocking=True, timeout=1)
+    if r is None:
+        continue
+    last = time.time()
+    count = r.param_count
+    params[r.param_id.rstrip('\x00')] = r.param_value
+print('downloaded %d of %s parameters' % (len(params), count))
 for name in names:
-    value = None
-    for _ in range(5):
-        m.mav.param_request_read_send(m.target_system, m.target_component, name.encode(), -1)
-        r = m.recv_match(type='PARAM_VALUE', blocking=True, timeout=2)
-        if r is not None and r.param_id.rstrip('\x00') == name:
-            value = r.param_value
-            break
-    print('%s: %s' % (name, 'present, value %s' % value if value is not None else 'absent'))
+    print('%s: %s' % (name, 'present, value %s' % params[name] if name in params else 'absent'))
+dump = os.environ.get('PARAM_DUMP')
+if dump:
+    with open(dump, 'w') as f:
+        for k in sorted(params):
+            f.write('%s,%s\n' % (k, params[k]))

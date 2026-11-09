@@ -1,0 +1,16 @@
+downloaded 1431 of 1431 parameters
+FRAME_CLASS: present, value 1.0
+FRAME_TYPE: present, value 0.0
+FRAME: absent
+CAM_TRIGG_TYPE: absent
+CAM1_TYPE: present, value 0.0
+MNT1_TYPE: present, value 0.0
+MNT_TYPE: absent
+WIFI_SSID1: absent
+GPS1_CAN_OVRIDE: present, value 0.0
+GPS2_CAN_OVRIDE: absent
+GPS_CAN_NODEID1: absent
+GPS_CAN_NODEID2: absent
+SERIAL1_PROTOCOL: present, value 2.0
+SERIAL1_BAUD: present, value 57.0
+SERIAL1_OPTIONS: present, value 0.0

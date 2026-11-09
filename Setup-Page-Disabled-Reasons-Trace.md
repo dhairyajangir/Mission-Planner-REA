@@ -16,8 +16,23 @@ So the disabled state is the page working as written, not a fault in the harness
 
 ## Run history, kept
 
-The first parameter presence check (`copter-param-presence-run1-link-lost-after-absent.txt`, order `CAM_TRIGG_TYPE`, `CAM1_TYPE`, `CAM_TYPE`, `FRAME`, `FRAME_CLASS`, `FRAME_TYPE`, ...) reported `FRAME_CLASS` and `FRAME_TYPE` absent after earlier absent answers; that contradicts the vehicle (`FRAME_CLASS` is 1, read in the second run and in earlier sweeps), so that output is not used. The second, reordered check (`copter-param-presence.txt`) read the present parameters first and gives consistent answers; I did not find the cause of the first run's inconsistency (the machine was busy building unit tests at the time).
+The first one-name-at-a-time parameter presence check (`copter-param-presence-run1-link-lost-after-absent.txt`, order `CAM_TRIGG_TYPE`, `CAM1_TYPE`, `CAM_TYPE`, `FRAME`, `FRAME_CLASS`, `FRAME_TYPE`, ...) reported `FRAME_CLASS` and `FRAME_TYPE` absent after earlier absent answers; that contradicts the vehicle (`FRAME_CLASS` is 1, read in the second run and in earlier sweeps), so that output is not used. The second, reordered one-name-at-a-time check (`copter-param-presence.txt`) read the present parameters first and gave consistent answers, and the full-list check (`copter-param-presence-full-list.txt`) confirms every answer in it; I did not find the cause of the first run's inconsistency (the machine was busy building unit tests at the time).
+
+## The pages that raised an exception or timed out
+
+`research-tools/run-page-state-exceptions.ps1` reran the six pages against a simulator with the top of the stack trace added to the probe's detail column (`sitl-evidence/page-state-exceptions/`). All four null references are thrown directly inside the page's own `Activate()`. The parameter checks below use the full parameter list of the simulator (1431 of 1431 parameters downloaded, `copter-param-presence-full-list.txt`, `copter-all-parameters.csv`), which replaced the one-name-at-a-time reads that proved unreliable.
+
+| Page | Failure | Cause |
+|---|---|---|
+| ConfigGPSOrder | NullReferenceException in `Activate()` | **Shown.** `Activate()` checks that `GPS1_CAN_OVRIDE` exists (it does), then reads `GPS_CAN_NODEID1`, `GPS_CAN_NODEID2` and `GPS2_CAN_OVRIDE` without checking; none of the three exists on the simulator, so the lookup returns null. The page assumes a vehicle with a DroneCAN GPS configuration. |
+| ConfigPlanner | NullReferenceException in `Activate()` | **Inferred from the source, not shown.** The first thing `Activate()` does is read `MainV2.DisplayConfiguration.displayName`; that object is created by the full application, which the harness does not run. |
+| ConfigSerialInjectGPS | NullReferenceException in `Activate()` | **Inferred from the source, not shown.** `Activate()` reads `GCSViews.FlightData.mymap.MapProvider`; the flight data view and its map are not created by the harness. |
+| ConfigSerial | NullReferenceException in `Activate()` | **Not explained.** The top frame is `Activate()`; the part that I read (option rules file, baud options, then a MAVFtp download of `@SYS/uarts.txt`) does not show which object is null. The page's serial parameters (`SERIAL1_PROTOCOL`, `SERIAL1_BAUD`, `SERIAL1_OPTIONS`) all exist on the simulator. |
+| ConfigSimplePids | FileNotFoundException for `acsimplepids.xml` | **Harness artifact.** `LoadXML(Settings.GetRunningDirectory() + "acsimplepids.xml")`: the file exists next to the executable in the research copy but the probe's redirected running directory (a temp folder) does not contain it. |
+| ConfigRawParams | did not finish in 20 s | **Not explained.** The probe abandons the thread; I did not look at what the page was doing. |
+
+So of the six, one failure is a real mismatch between the page and the firmware's parameters (GPS order), two are consistent with the harness not building the whole application, one is a file-path artifact of the harness, and two are unexplained.
 
 ## Not covered
 
-The pages that raised exceptions in the state probe (`ConfigGPSOrder`, `ConfigPlanner`, `ConfigSerial`, `ConfigSerialInjectGPS`: a null reference; `ConfigSimplePids`: a missing file `acsim...` under the probe's temp folder) and the one that timed out (`ConfigRawParams`) are not explained here; the probe's detail strings do not carry a stack trace. They probably touch state that the full application creates, but that is a guess.
+The unexplained `ConfigSerial` null and the `ConfigRawParams` timeout; any of these pages in the full application with a person using it.

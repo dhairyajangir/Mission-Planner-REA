@@ -1,0 +1,7 @@
+FRAME_CLASS: present, value 1.0
+GPS1_CAN_OVRIDE: present, value 0.0
+GPS_CAN_NODEID1: absent
+GPS_CAN_NODEID2: absent
+GPS2_CAN_OVRIDE: absent
+SERIAL1_PROTOCOL: absent
+SERIAL1_OPTIONS: absent

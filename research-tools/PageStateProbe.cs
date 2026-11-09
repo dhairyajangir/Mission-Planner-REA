@@ -122,6 +122,11 @@ public static class PageStateProbe
                     while (i.InnerException != null) i = i.InnerException;
                     status = "exception";
                     detail = (i.GetType().Name + ": " + i.Message).Replace(",", ";").Replace("\n", " ").Replace("\r", " ");
+                    if (Environment.GetEnvironmentVariable("PAGESTATE_STACK") == "1")      // add the top of the stack trace so that the failing line can be found
+                    {
+                        var frames = (i.StackTrace ?? "").Split('\n').Select(x => x.Trim()).Where(x => x.Length > 0).Take(4);
+                        detail += " AT " + string.Join(" <- ", frames).Replace(",", ";").Replace("\r", " ");
+                    }
                 }
             });
             th.SetApartmentState(ApartmentState.STA);
