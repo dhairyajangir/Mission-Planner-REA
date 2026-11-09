@@ -1,0 +1,12 @@
+--- /home/think/helicopter.py.orig	2026-11-09 04:54:17.300811682 +0000
++++ /home/think/ap-snapshot/Tools/autotest/helicopter.py	2026-11-09 04:54:17.716811338 +0000
+@@ -98,7 +98,8 @@
+         self.progress("Wait that collective PWM pass threshold value")
+         servo = self.assert_receive_message(
+             "SERVO_OUTPUT_RAW",
+-            condition=f'SERVO_OUTPUT_RAW.servo1_raw>{coll}'
++            condition=f'SERVO_OUTPUT_RAW.servo1_raw>{coll}',
++            timeout=60,
+         )
+         runup_time = self.get_sim_time() - tstart
+         self.progress("Collective is now at PWM %u" % servo.servo1_raw)
