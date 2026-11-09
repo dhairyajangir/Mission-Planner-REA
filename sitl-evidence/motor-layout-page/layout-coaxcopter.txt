@@ -1,0 +1,29 @@
+2026-11-09T04:39:05.7548116Z CONNECTED parameters=1410
+2026-11-09T04:39:06.5213663Z BEFORE-ACTIVATE vehicle FRAME_CLASS=9 FRAME_TYPE=1
+2026-11-09T04:39:08.7803476Z PAGE enabled=True motormax=8
+2026-11-09T04:39:08.7803476Z TEXT FrameClass = Class: CoaxCopter
+2026-11-09T04:39:08.7817298Z TEXT FrameType = Type: X
+2026-11-09T04:39:08.7840318Z BUTTON y=11 x=282 text=Set Motor Spin Arm
+2026-11-09T04:39:08.7840318Z LABEL y=11 x=363 text=Set the min % that will be output when armed, but still on the ground
+2026-11-09T04:39:08.7840318Z NUMERICUPDOWN y=14 x=66 text=5
+2026-11-09T04:39:08.7840318Z NUMERICUPDOWN y=14 x=201 text=2
+2026-11-09T04:39:08.7840318Z LABEL y=16 x=6 text=Throttle %
+2026-11-09T04:39:08.7840318Z LABEL y=16 x=129 text=Duration (s)
+2026-11-09T04:39:08.7840318Z LABEL y=45 x=6 text=Class: CoaxCopter
+2026-11-09T04:39:08.7840318Z LABEL y=45 x=129 text=Type: X
+2026-11-09T04:39:08.7840318Z BUTTON y=58 x=282 text=Set Motor Spin Min
+2026-11-09T04:39:08.7840318Z LABEL y=58 x=363 text=Set the min % that will be output when flying
+2026-11-09T04:39:08.7840318Z BUTTON y=75 x=6 text=Test motor A tag=1
+2026-11-09T04:39:08.7840318Z BUTTON y=100 x=6 text=Test motor B tag=2
+2026-11-09T04:39:08.7840318Z LABEL y=102 x=279 text=NOTE: PLEASE HOLD DOWN YOUR UAV This will test your motors are working. Motors are tested in a clockwise rotation  starting at the front right.
+2026-11-09T04:39:08.7840318Z BUTTON y=125 x=6 text=Test motor C tag=3
+2026-11-09T04:39:08.7840318Z BUTTON y=150 x=6 text=Test motor D tag=4
+2026-11-09T04:39:08.7840318Z LABEL y=157 x=279 text=Please click here to see your motor numbers, scroll to the bottom of the page
+2026-11-09T04:39:08.7840318Z BUTTON y=175 x=6 text=Test motor E tag=5
+2026-11-09T04:39:08.7840318Z BUTTON y=200 x=6 text=Test motor F tag=6
+2026-11-09T04:39:08.7840318Z BUTTON y=225 x=6 text=Test motor G tag=7
+2026-11-09T04:39:08.7840318Z BUTTON y=250 x=6 text=Test motor H tag=8
+2026-11-09T04:39:08.7840318Z BUTTON y=275 x=6 text=Test all motors
+2026-11-09T04:39:08.7840318Z BUTTON y=314 x=6 text=Stop all motors
+2026-11-09T04:39:08.7840318Z BUTTON y=353 x=6 text=Test all in Sequence
+2026-11-09T04:39:08.8474217Z STATUS ok

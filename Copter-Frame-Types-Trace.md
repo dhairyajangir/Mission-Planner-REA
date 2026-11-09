@@ -120,6 +120,34 @@ Result of the complete run (`Helicopter-rerun2.log.gz`): 36 passed, 1 failed (`R
 
 The first helicopter run (`Helicopter-killed-partial.log.gz`, 15 passed, 1 failed `RotorRunup`) ended when the SSD was unplugged and the tool call that held it hit its time limit. A second start overwrote the log of the first rerun by mistake (`Helicopter-rerun1-clobbered.log.gz`, unusable), and both were killed. The complete run is `Helicopter-rerun2` above, started detached from the tool call.
 
+## 6. The motor test page against frames (original page, simulator)
+
+`research-tools/PageMotorLayoutProbe.cs` (run by `research-tools/run-motor-layout-probe.ps1`) builds the original `ConfigMotorTest` page against 14 simulator frames, calls `Activate()` and lists every button and label the page drew, without pressing any button. `research-tools/compare-page-labels-with-sweep.py` lines the "Motor Number" labels up with the servo outputs that moved for the same sequence number in the section 1 sweep. Evidence: `sitl-evidence/motor-layout-page/` (`layout-<frame>.txt`, `page-vs-sweep.csv`). A harness drove the page; no person used it.
+
+| Frame | Page text | Buttons drawn | Result |
+|---|---|---|---|
+| quad plus, X, Betaflight X | Quad / Plus, X, BetaFlightX | 4 | motor numbers in button order equal the servos that moved (3 1 4 2; 1 4 2 3; 2 1 3 4) |
+| hexa plus, hexa X | Hexa / Plus, X | 6 | equal (1 4 6 2 3 5; 5 1 4 6 2 3) |
+| octa | Octa / Plus | 8 | equal (1 3 8 4 2 6 7 5) |
+| octa-quad | OctaQuad / Plus | 8 | equal (1 6 4 7 3 8 2 5) |
+| Y6 | Y6 / Plus | 6 | equal (5 1 6 4 2 3) |
+| tri | Tri / Plus | 4 | equal (1 4 7 2); the labels carry no CW/CCW text |
+| deca | "Class: unknown", "Type: unknown" | 10 | equal (1 to 10), but the class and type text could not be resolved |
+| dodeca-hexa | DodecaHexa / Plus | 12 | equal (1 to 12) |
+| single copter | SingleCopter / X | 8 | no "Motor Number" labels; the vehicle has six test sequences |
+| coax copter | CoaxCopter / X | 8 | no labels; the vehicle has six test sequences |
+| helicopter | Heli / X | 0 | no motor buttons (motor count 0) |
+
+So for every frame in the page's layout file, button k tests the motor the label next to it names, and that is the servo output that moved when the simulator was told to test sequence k. That was seen on all eleven matrix and tri frames above, with the CW/CCW text coming from the file (section 4 compares it with the source).
+
+Findings that differ from what a user would expect:
+
+- Single and coax copters get eight buttons although the vehicle has six test sequences (four flap servos and two motors, section 1), and no labels. The seventh and eighth buttons send sequence numbers 7 and 8; from the source (`_output_test_seq` has no case for them) they should do nothing. I did not press them.
+- The "Test all motors" button on those frames sends eight single-motor commands, and "Test all in sequence" sends a motor count of eight. Not observed against the vehicle.
+- A deca vehicle shows "Class: unknown" and "Type: unknown": the page's parameter metadata has no names for class 14. The buttons and labels are right because `APMotorLayout.json` has deca entries.
+- A helicopter gets no motor buttons at all, from `motormax = 0`.
+- This confirms the source reading in section 4 that the page's behaviour for Y4 and the co-rotating octa-quad types would rely on its vehicle-type guess; those frames are not in the simulator frame list and were not probed.
+
 ## Not covered
 
 - A person using the frame page or motor test page, and the picture drawn for each frame.

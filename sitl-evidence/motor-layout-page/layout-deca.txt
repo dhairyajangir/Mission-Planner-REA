@@ -1,0 +1,41 @@
+2026-11-09T04:37:54.4027465Z CONNECTED parameters=1431
+2026-11-09T04:37:55.0899946Z BEFORE-ACTIVATE vehicle FRAME_CLASS=14 FRAME_TYPE=0
+2026-11-09T04:37:57.7153530Z PAGE enabled=True motormax=10
+2026-11-09T04:37:57.7167443Z TEXT FrameClass = Class: unknown
+2026-11-09T04:37:57.7167443Z TEXT FrameType = Type: unknown
+2026-11-09T04:37:57.7193808Z BUTTON y=11 x=282 text=Set Motor Spin Arm
+2026-11-09T04:37:57.7193808Z LABEL y=11 x=363 text=Set the min % that will be output when armed, but still on the ground
+2026-11-09T04:37:57.7193808Z NUMERICUPDOWN y=14 x=66 text=5
+2026-11-09T04:37:57.7193808Z NUMERICUPDOWN y=14 x=201 text=2
+2026-11-09T04:37:57.7193808Z LABEL y=16 x=6 text=Throttle %
+2026-11-09T04:37:57.7193808Z LABEL y=16 x=129 text=Duration (s)
+2026-11-09T04:37:57.7193808Z LABEL y=45 x=6 text=Class: unknown
+2026-11-09T04:37:57.7193808Z LABEL y=45 x=129 text=Type: unknown
+2026-11-09T04:37:57.7193808Z BUTTON y=58 x=282 text=Set Motor Spin Min
+2026-11-09T04:37:57.7193808Z LABEL y=58 x=363 text=Set the min % that will be output when flying
+2026-11-09T04:37:57.7193808Z BUTTON y=75 x=6 text=Test motor A tag=1
+2026-11-09T04:37:57.7193808Z LABEL y=80 x=91 text=Motor Number: 1, CCW
+2026-11-09T04:37:57.7193808Z BUTTON y=100 x=6 text=Test motor B tag=2
+2026-11-09T04:37:57.7193808Z LABEL y=102 x=279 text=NOTE: PLEASE HOLD DOWN YOUR UAV This will test your motors are working. Motors are tested in a clockwise rotation  starting at the front right.
+2026-11-09T04:37:57.7193808Z LABEL y=105 x=91 text=Motor Number: 2, CW
+2026-11-09T04:37:57.7193808Z BUTTON y=125 x=6 text=Test motor C tag=3
+2026-11-09T04:37:57.7193808Z LABEL y=130 x=91 text=Motor Number: 3, CCW
+2026-11-09T04:37:57.7193808Z BUTTON y=150 x=6 text=Test motor D tag=4
+2026-11-09T04:37:57.7193808Z LABEL y=155 x=91 text=Motor Number: 4, CW
+2026-11-09T04:37:57.7193808Z LABEL y=157 x=279 text=Please click here to see your motor numbers, scroll to the bottom of the page
+2026-11-09T04:37:57.7193808Z BUTTON y=175 x=6 text=Test motor E tag=5
+2026-11-09T04:37:57.7193808Z LABEL y=180 x=91 text=Motor Number: 5, CCW
+2026-11-09T04:37:57.7193808Z BUTTON y=200 x=6 text=Test motor F tag=6
+2026-11-09T04:37:57.7193808Z LABEL y=205 x=91 text=Motor Number: 6, CW
+2026-11-09T04:37:57.7193808Z BUTTON y=225 x=6 text=Test motor G tag=7
+2026-11-09T04:37:57.7193808Z LABEL y=230 x=91 text=Motor Number: 7, CCW
+2026-11-09T04:37:57.7193808Z BUTTON y=250 x=6 text=Test motor H tag=8
+2026-11-09T04:37:57.7193808Z LABEL y=255 x=91 text=Motor Number: 8, CW
+2026-11-09T04:37:57.7193808Z BUTTON y=275 x=6 text=Test motor I tag=9
+2026-11-09T04:37:57.7193808Z LABEL y=280 x=91 text=Motor Number: 9, CCW
+2026-11-09T04:37:57.7193808Z BUTTON y=300 x=6 text=Test motor J tag=10
+2026-11-09T04:37:57.7193808Z LABEL y=305 x=91 text=Motor Number: 10, CW
+2026-11-09T04:37:57.7193808Z BUTTON y=325 x=6 text=Test all motors
+2026-11-09T04:37:57.7193808Z BUTTON y=364 x=6 text=Stop all motors
+2026-11-09T04:37:57.7193808Z BUTTON y=403 x=6 text=Test all in Sequence
+2026-11-09T04:37:57.8131879Z STATUS ok
