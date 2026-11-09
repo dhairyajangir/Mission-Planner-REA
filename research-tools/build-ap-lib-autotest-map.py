@@ -18,10 +18,19 @@ FINAL = os.path.join(ROOT, 'sitl-evidence', 'autotest', 'autotest-final.csv')
 MATRIX = os.path.join(ROOT, 'coverage', 'matrix.csv')
 OUT = os.path.join(ROOT, 'coverage', 'ap-lib-autotest-map.csv')
 CLAIMS = os.path.join(ROOT, 'coverage', 'claims.csv')
+# vehicles whose results are kept in their own folders: vehicle -> (results csv written by collect-autotest.sh, label of the run to use)
+EXTRA = {
+    'Helicopter': (os.path.join(ROOT, 'sitl-evidence', 'autotest-helicopter', 'autotest-results.csv'), 'rerun2'),
+    'Plane': (os.path.join(ROOT, 'sitl-evidence', 'autotest-plane', 'autotest-results.csv'), 'run1'),
+}
 
 RULES = {
     'AC_AttitudeControl': r'ThrottleGainBoost|AirMode',
     'AC_AutoTune': r'AutoTune',
+    'AC_Autorotation': r'Autorotation',
+    'AP_Parachute': r'^Parachute$',
+    'AP_LightWareSerial': r'LightwareSerial',
+    'AP_Airspeed': r'AirspeedDrivers',
     'AC_Avoidance': r'^(?!AP_Avoidance).*Avoid',
     'AC_PrecLand': r'PrecisionLanding|PrecisionLoiter',
     'AC_Sprayer': r'Sprayer',
@@ -91,6 +100,12 @@ def main():
     with open(FINAL, newline='', encoding='utf-8') as f:
         for r in csv.DictReader(f):
             final.append((r['vehicle'], r['test'], r['final_result']))
+    for vehicle, (path, label) in EXTRA.items():
+        if os.path.exists(path):
+            with open(path, newline='', encoding='utf-8') as f:
+                for r in csv.DictReader(f):
+                    if r['label'] == label:
+                        final.append((vehicle, r['test'], r['result']))
     with open(MATRIX, newline='', encoding='utf-8') as f:
         need = {r['row_id'].split(':', 1)[1]: r['level'] for r in csv.DictReader(f) if r['area'] == 'ap-lib'}
     rows = []
@@ -128,12 +143,16 @@ def apply_claims(matched, need):
         key = 'ap-lib:' + r['library']
         if key in existing or need[r['library']] == '3':
             continue
-        note = ("ArduPilot's own autotests (Blimp, Sub, AntennaTracker, Rover, Copter, disposable simulators, default debug build) include %d test(s) whose names refer to this library, %d passed%s. "
+        note = ("ArduPilot's own autotests (%s, disposable simulators, default debug build) include %d test(s) whose names refer to this library, %d passed%s. "
                 "Matched by test name only (test bodies not read), so this shows the library is exercised by at least those scenarios, not how much of it; see coverage/ap-lib-autotest-map.csv."
-                % (r['tests'], r['passed'], (', did not pass: ' + annotate(r['failed_tests'])) if r['failed'] else ''))
+                % (r['vehicles'].replace(' ', ', '), r['tests'], r['passed'], (', did not pass: ' + annotate(r['failed_tests'])) if r['failed'] else ''))
+        evidence = ['coverage/ap-lib-autotest-map.csv', 'sitl-evidence/autotest/autotest-final.csv', 'sitl-evidence/autotest/autotest-results.csv']
+        if 'Helicopter' in r['vehicles']:
+            evidence.append('sitl-evidence/autotest-helicopter/autotest-results.csv')
+        if 'Plane' in r['vehicles']:
+            evidence.append('sitl-evidence/autotest-plane/autotest-results.csv')
         buf = io.StringIO()
-        csv.writer(buf, lineterminator='').writerow([key, '3', '', 'none', '', 'partial',
-                                                     'coverage/ap-lib-autotest-map.csv;sitl-evidence/autotest/autotest-final.csv;sitl-evidence/autotest/autotest-results.csv', note])
+        csv.writer(buf, lineterminator='').writerow([key, '3', '', 'none', '', 'partial', ';'.join(evidence), note])
         text += buf.getvalue() + '\n'
         added += 1
     open(CLAIMS, 'wb').write(text.encode('utf-8'))
