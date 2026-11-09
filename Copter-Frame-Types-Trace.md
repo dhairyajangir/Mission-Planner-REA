@@ -148,6 +148,17 @@ Findings that differ from what a user would expect:
 - A helicopter gets no motor buttons at all, from `motormax = 0`.
 - This confirms the source reading in section 4 that the page's behaviour for Y4 and the co-rotating octa-quad types would rely on its vehicle-type guess; those frames are not in the simulator frame list and were not probed.
 
+## 7. Flight of every internal Copter frame (ArduPilot's own `FlyEachFrame`, earlier Copter run)
+
+The Copter suite passed `FlyEachFrame` in the complete Copter autotest run recorded earlier (`sitl-evidence/autotest/Copter.log.gz`, `autotest-final.csv`: PASSED). For each frame in the simulator's frame list that is not external or marked broken, the test restarts the simulator with that model (installing the frame's example Lua script and enabling scripting for the scripted ones), takes off to 10 m with a hook that fails the test if the yaw rate exceeds 20 degrees per second, hovers, switches to ALT_HOLD, and five times applies 0.5 s of yaw stick and waits 5 s with a hook on roll and pitch, then does an RTL. `research-tools/build-fly-each-frame-table.py` extracts the per-frame outcome from the log into `coverage/copter-fly-each-frame.csv`: 44 frames listed, 31 flown, 13 skipped by the test itself.
+
+- Flown (31): quad, plus ("+"), X, Betaflight X, DJI X, clockwise X, the hexa variants (hexa, hexa-cwx, hexa-dji, hexax), the octa variants (octa, octa-cwx, octa-dji), the octa-quad variants (octa-quad, -cwx, -cor, -cw-cor), deca and deca-cwx, Y6, dodeca-hexa, tri, single copter, coax copter, the Callisto and freestyle models, the PPP and periph-compass variants, and the scripted-matrix frames dotriaconta-octaquad-x, hexadeca-octa and hexadeca-octa-cwx (these use their example Lua scripts, so they are flown in the simulator even though the motor sweep in section 1 could not test them without a script).
+- Skipped by the test (13): IrisRos, airsim-copter, calibration, gazebo-iris and scrimmage-copter (external simulators); the seven helicopter frames (the Copter suite says they need a different binary; the Helicopter suite in section 5 flew them); quad-can (needs a CAN peripheral).
+
+So every internal Copter and helicopter frame has been flown at least once in the simulator by the vehicle's own tests, and the motor output mapping of 23 of them has been checked directly (section 1).
+
+What this test would not catch (read from the source, not a defect I measured): the roll and pitch hook compares `m.pitch` and `m.roll` against +2 degrees without taking an absolute value, so a negative excursion of any size passes; the test does not look at motor saturation, tracking error or attitude oscillation; one takeoff per frame, no wind, no failures.
+
 ## Not covered
 
 - A person using the frame page or motor test page, and the picture drawn for each frame.

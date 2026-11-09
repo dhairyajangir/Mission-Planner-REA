@@ -1,0 +1,45 @@
+frame,outcome,reason_printed_when_skipped
++,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+Callisto,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+IrisRos,skipped,it is an external simulation
+X,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+airsim-copter,skipped,it is an external simulation
+bfx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+calibration,skipped,it is an external simulation
+coaxcopter,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+copter-PPP,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+copter-periph-compass,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+deca,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+deca-cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+djix,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+dodeca-hexa,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+dotriaconta_octaquad_x,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+freestyle,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+gazebo-iris,skipped,it is an external simulation
+heli,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-blade360,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-ddfptail,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-ddvptail,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-dual,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-gas,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+heli-quad,skipped,"it is known-broken (wrong binary, different takeoff regime)"
+hexa,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+hexa-cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+hexa-dji,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+hexadeca-octa,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+hexadeca-octa-cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+hexax,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-dji,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-quad,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-quad-cor,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-quad-cw-cor,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+octa-quad-cwx,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+quad,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+quad-can,skipped,it is known-broken (needs CAN periph)
+scrimmage-copter,skipped,it is an external simulation
+singlecopter,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+tri,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
+y6,"flown (take off to 10 m, hover, ALT_HOLD with yaw pulses, RTL)",
