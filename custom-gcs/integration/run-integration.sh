@@ -22,6 +22,9 @@ run copter-hexa-x arducopter hexax
 run copter-octa arducopter octa
 run copter-y6 arducopter y6
 run copter-tri arducopter tri
+run copter-single arducopter singlecopter
+run copter-coax arducopter coaxcopter
+run copter-heli arducopter-heli heli   # expected: no plan, exit=2 (the firmware refuses a helicopter motor test)
 run quadplane arduplane quadplane
 run quadplane-tri arduplane quadplane-tri
 run sub-vectored ardusub vectored --arm

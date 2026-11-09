@@ -1,0 +1,4 @@
+== copter-heli (arducopter-heli --model heli)
+vehicle: heli, frame class 6 (FRAME_CLASS), type 1 (FRAME_TYPE), 1449 parameters
+no motor test plan: helicopters have no motor test: the firmware answers MAV_CMD_DO_MOTOR_TEST with "Motor Test: Disabled on heli" (sitl-evidence/heli-motor-test-probe/)
+exit=2

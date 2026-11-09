@@ -62,8 +62,16 @@ def servo_of_motor(params: Mapping[str, float]) -> Dict[int, int]:
     return result
 
 
+# Single (8) and coax (9) copters have no generated table. Transcribed by hand from _output_test_seq in AP_MotorsSingle.cpp and AP_MotorsCoax.cpp: sequences 1 to 4 are the
+# four flap servos (Motor1..4 functions, idle 1500, driven down by a test), 5 and 6 the two motors; confirmed 6 of 6 in the simulator (Copter-Frame-Types-Trace.md).
+_HAND = {'8': [{'order': n, 'number': n, 'rotation': 'flap servo' if n <= 4 else 'motor'} for n in range(1, 7)],
+         '9': [{'order': n, 'number': n, 'rotation': 'flap servo' if n <= 4 else 'motor'} for n in range(1, 7)]}
+
+
 def _layout(info: VehicleInfo) -> list:
     table = layouts()
+    if str(info.frame_class) in _HAND:
+        return _HAND[str(info.frame_class)]
     for key in ('%s:%s' % (info.frame_class, info.frame_type), '%s:default' % info.frame_class):
         if key in table:
             return table[key]
@@ -87,4 +95,6 @@ def plan(info: VehicleInfo, params: Mapping[str, float], throttle_percent: float
         wanted = {1: (70, 33), 2: (26, 34), 3: (73, 35), 4: (74, 36)}
         names = {1: 'throttle', 2: 'steering', 3: 'throttle left', 4: 'throttle right'}
         return [Step(names[k], (float(k), 0.0, 50.0, 2.0, 0.0, 0.0, 0.0), tuple(s for s, f in sorted(functions.items()) if f in wanted[k])) for k in sorted(wanted)]
+    if info.kind == 'heli':
+        raise Unsupported('helicopters have no motor test: the firmware answers MAV_CMD_DO_MOTOR_TEST with "Motor Test: Disabled on heli" (sitl-evidence/heli-motor-test-probe/)')
     raise Unsupported('no motor test plan for a %s' % info.kind)

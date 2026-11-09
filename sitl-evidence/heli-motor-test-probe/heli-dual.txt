@@ -1,0 +1,6 @@
+[Errno 111] Connection refused sleeping
+model heli-dual: heartbeat type 4
+sequence 1: accepted=False events=['ack result=4', 'text: Motor Test: Disabled on heli'] outputs that changed by 20 us or more: none
+sequence 2: accepted=False events=['ack result=4', 'text: Motor Test: Disabled on heli'] outputs that changed by 20 us or more: none
+sequence 3: accepted=False events=['ack result=4', 'text: Motor Test: Disabled on heli'] outputs that changed by 20 us or more: none
+sequence 4: accepted=False events=['ack result=4', 'text: Motor Test: Disabled on heli'] outputs that changed by 20 us or more: none

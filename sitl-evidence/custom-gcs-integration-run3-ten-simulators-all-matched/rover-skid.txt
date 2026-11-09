@@ -1,0 +1,8 @@
+== rover-skid (ardurover --model rover-skid)
+vehicle: rover, frame class 1 (FRAME_CLASS), type 0 (FRAME_TYPE), 1276 parameters
+throttle                                 expected=()       moved=()       OK accepted after 4 tries
+steering                                 expected=()       moved=()       OK 
+throttle left                            expected=(1,)     moved=(1,)     OK 
+throttle right                           expected=(3,)     moved=(3,)     OK 
+4 of 4 steps matched
+exit=0

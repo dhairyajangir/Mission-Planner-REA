@@ -113,3 +113,18 @@ def test_plane_and_blimp_are_unsupported():
     for params, mt in (({}, 1), ({'FRAME_CLASS': 1}, 7)):
         with pytest.raises(motors.Unsupported):
             motors.plan(vehicle.detect(params, mav_type=mt), params)
+
+
+def test_single_and_coax_have_six_sequences_the_first_four_on_flap_servos():
+    for cls, mt in ((8, 2), (9, 2)):
+        p = {'FRAME_CLASS': cls, 'FRAME_TYPE': 1}
+        p.update({'SERVO%d_FUNCTION' % n: 32 + n for n in range(1, 7)})
+        steps = motors.plan(vehicle.detect(p, mav_type=mt), p)
+        assert [s.expect_outputs for s in steps] == [(n,) for n in range(1, 7)]      # the order the simulator produced (Copter-Frame-Types-Trace.md)
+        assert [s.params[0] for s in steps] == [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+
+
+def test_helicopter_refusal_is_explained():
+    p = {'FRAME_CLASS': 6, 'FRAME_TYPE': 1}
+    with pytest.raises(motors.Unsupported, match='Disabled on heli'):
+        motors.plan(vehicle.detect(p, mav_type=4), p)

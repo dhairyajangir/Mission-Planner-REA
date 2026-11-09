@@ -9,14 +9,16 @@
   - Copter and QuadPlane: test sequence 1..N from the firmware's own testing-order tables (`customgcs/data/matrix_layouts.json`, 45 layouts generated from `AP_MotorsMatrix.cpp`, including types Mission Planner's own `APMotorLayout.json` lacks such as Y4), and the servo output each motor is on, read from the vehicle's `SERVOn_FUNCTION` values.
   - Sub: board-order test with zero-based outputs, armed, repeated within 500 ms.
   - Rover: throttle, steering, throttle left, throttle right, on the outputs with the matching servo function.
-  - Anything else (helicopter, plane, Blimp, tracker, scripted matrices that need their Lua script) raises `Unsupported` rather than guessing.
+  - Single and coax copters: six sequences (four flap servos, two motors).
+  - Helicopter: no plan; the firmware refuses the test ("Motor Test: Disabled on heli").
+  - Anything else (plane, Blimp, tracker, scripted matrices that need their Lua script) raises `Unsupported` rather than guessing.
 - `customgcs.link`: connects with pymavlink, downloads the whole parameter list, runs the plan and reports which servo outputs actually moved against what was expected.
 - `python -m customgcs info|plan|motor-test --port 5760 [--pct 10] [--arm]`.
 
 ## Evidence
 
-- `tests/test_plans.py`: unit tests, each expected order taken from an order the simulator actually produced (see `Copter-Frame-Types-Trace.md`, `Plane-Frame-Types-Trace.md`, `Sub-Frame-Types-Trace.md`, `Rover-Frame-Types-Trace.md`). Run `python -m pytest` in this folder (19 tests; the two retry tests need pymavlink).
-- `integration/run-integration.sh` runs `motor-test` against ten disposable simulators in the `Ubuntu-E` WSL distribution; the third attempt, in `../sitl-evidence/custom-gcs-integration/`, matched all ten. The first two attempts had faults in the verification and are kept in `../sitl-evidence/custom-gcs-integration-run1-surfaces-counted-and-not-ready/` and `../sitl-evidence/custom-gcs-integration-run2-rover-rejected-while-initialising/`. See `../Custom-GCS-Prototype-Trace.md`.
+- `tests/test_plans.py`: unit tests, each expected order taken from an order the simulator actually produced (see `Copter-Frame-Types-Trace.md`, `Plane-Frame-Types-Trace.md`, `Sub-Frame-Types-Trace.md`, `Rover-Frame-Types-Trace.md`). Run `python -m pytest` in this folder (21 tests; the two retry tests need pymavlink).
+- `integration/run-integration.sh` runs `motor-test` against ten disposable simulators in the `Ubuntu-E` WSL distribution; the third attempt (`../sitl-evidence/custom-gcs-integration-run3-ten-simulators-all-matched/`) matched all ten and the fourth (`../sitl-evidence/custom-gcs-integration/`, adds Copter single and coax and the helicopter) matched every plannable frame. The first two attempts had faults in the verification and are kept in `../sitl-evidence/custom-gcs-integration-run1-surfaces-counted-and-not-ready/` and `../sitl-evidence/custom-gcs-integration-run2-rover-rejected-while-initialising/`. See `../Custom-GCS-Prototype-Trace.md`.
 - `tools/gen_matrix_layouts.py` regenerates `matrix_layouts.json` from a supplied ArduPilot tree.
 
 ## What it does not do
