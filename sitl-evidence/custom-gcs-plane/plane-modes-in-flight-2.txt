@@ -1,0 +1,26 @@
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+        vehicle: Mission: 1 Takeoff
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Autoland direction= 0
+        vehicle: Holding course 35999 at 5.4m/s (0.0)
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 20m
+OK   airborne above 50 m after the AUTO takeoff   [58 m]
+MANUAL      MANUAL active | start 58 m, 27.3 m/s | after 3 s 72 m, 10.2 m/s
+OK   MANUAL accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('MANUAL active', '72 m')]
+ACRO        ACRO active | start 99 m, 23.7 m/s | after 3 s 99 m, 12.5 m/s
+OK   ACRO accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('ACRO active', '99 m')]
+TRAINING    TRAINING active | start 100 m, 22.9 m/s | after 3 s 92 m, 15.1 m/s
+OK   TRAINING accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('TRAINING active', '92 m')]
+        vehicle: Started autotune
+        vehicle: Autotuning roll pitch yaw
+AUTOTUNE    AUTOTUNE active | start 100 m, 23.0 m/s | after 3 s 98 m, 13.1 m/s
+OK   AUTOTUNE accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('AUTOTUNE active', '98 m')]
+        vehicle: Stopped autotune
+AVOID_ADSB  AVOID_ADSB active | start 100 m, 22.8 m/s | after 3 s 100 m, 23.0 m/s
+OK   AVOID_ADSB accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('AVOID_ADSB active', '100 m')]
+RESULT passed

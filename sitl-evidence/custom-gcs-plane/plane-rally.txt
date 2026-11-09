@@ -1,0 +1,21 @@
+OK   rally point uploaded (ack 0)
+OK   rally point reads back equal   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+        vehicle: Mission: 1 Takeoff
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Autoland direction= 0
+        vehicle: Holding course 35999 at 5.4m/s (0.0)
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 20m
+        vehicle: Takeoff complete at 60.15m
+        vehicle: Mission: 2 WP
+        vehicle: Reached waypoint #2 dist 53m
+OK   the aircraft reached the first waypoint area (within 80 m of 300 m north)   [71 m up]
+OK   RTL accepted   [RTL active]
+40 s after RTL: 96 m from the rally point, 215 m from home, 60 m up
+OK   the aircraft is loitering around the rally point (within 120 m of it), not around home   [96 m from the rally point, 215 m from home]
+RESULT passed

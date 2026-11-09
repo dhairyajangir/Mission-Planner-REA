@@ -1,0 +1,13 @@
+TKOFF_ALT 50.0 m, TKOFF_LVL_ALT 10.0 m
+OK   armed   [armed (ack result 0)]
+OK   TAKEOFF accepted while armed on the ground   [TAKEOFF active]
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Takeoff to 50m for 200.0m heading 0.1 deg
+        vehicle: Autoland direction= 359
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 19m
+OK   the aircraft climbed to 45 m or more on its own within 80 s   [peak 46 m]
+mode 10 s after: TAKEOFF
+RESULT passed

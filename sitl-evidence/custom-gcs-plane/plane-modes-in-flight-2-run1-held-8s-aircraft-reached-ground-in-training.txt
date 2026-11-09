@@ -1,0 +1,22 @@
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+        vehicle: Mission: 1 Takeoff
+        vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+        vehicle: Triggered AUTO. GPS speed = 0.0
+        vehicle: Autoland direction= 0
+        vehicle: Holding course 35999 at 5.4m/s (0.0)
+        vehicle: EKF2 IMU0 is using GPS
+        vehicle: EKF2 IMU1 is using GPS
+        vehicle: Takeoff level-off starting at 20m
+        vehicle: Takeoff complete at 60.15m
+OK   airborne above 50 m after the AUTO takeoff   [60 m]
+MANUAL      MANUAL active | start 60 m, 27.5 m/s | after 8 s 21 m, 17.1 m/s
+OK   MANUAL accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('MANUAL active', '21 m')]
+ACRO        ACRO active | start 16 m, 16.0 m/s | after 8 s 9 m, 8.6 m/s
+OK   ACRO accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('ACRO active', '9 m')]
+        vehicle: SIM Hit ground at 5.808748 m/s
+TRAINING    TRAINING active | start 11 m, 10.2 m/s | after 8 s 0 m, 1.8 m/s
+FAIL TRAINING accepted and the aircraft was not on the ground afterwards (height above 5 m)   [('TRAINING active', '0 m')]
+the aircraft reached the ground; stopping
+RESULT 1 checks failed: TRAINING accepted and the aircraft was not on the ground afterwards (height above 5 m)

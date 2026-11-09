@@ -14,6 +14,12 @@ inflight after an AUTO takeoff (item 1 reached) the script requests FLY_BY_WIRE_
          recording whether it became active and the altitude and ground speed at the start and end of the hold. With no radio input in the simulator, the modes that need the pilot's
          throttle (FLY_BY_WIRE_A, STABILIZE) are expected to lose height; that is recorded, not judged. A mode passes when the vehicle reports it within 5 s and is still airborne
          (above 15 m) 10 s later.
+inflight2 the modes that need pilot input or a pilot: MANUAL, ACRO, TRAINING, AUTOTUNE, AVOID_ADSB, requested in flight for 3 s each with RTL (which climbs) requested for 20 s
+         between them to regain height. The first attempt held each mode 8 s with a CRUISE recovery of 10 s: MANUAL, ACRO and TRAINING with no pilot lost 60 m of height and the aircraft reached the ground in TRAINING before AUTOTUNE and AVOID_ADSB ran (plane-modes-in-flight-2-run1-*). With no radio input the aircraft is not controlled by a pilot; the heights and speeds are recorded and the check is only that each mode was
+         accepted and the aircraft was not on the ground afterwards.
+takeoffmode TAKEOFF mode from the ground: arm, request TAKEOFF, watch 80 s: expected to climb to TKOFF_ALT (50 m) by itself; the mode and height are recorded.
+rally    one rally point 250 m north of home at 60 m (mission type 2) uploaded and read back; the aircraft takes off in AUTO, is sent to the first waypoint (300 m north) and then
+         RTL is requested: with the rally point nearer than home it should loiter around the rally point (within 120 m of it, the loiter radius is 80 m) rather than around home.
 """
 import csv
 import math
@@ -28,7 +34,7 @@ sys.path.insert(0, os.path.join(HERE, '..'))
 from customgcs import flight, link, mission, params  # noqa: E402
 
 TREE, OUT = sys.argv[1], sys.argv[2]
-PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes', 'inflight']
+PARTS = sys.argv[3:] or ['basics', 'mission', 'failsafes', 'inflight']       # also: inflight2, takeoffmode, rally
 HOME = (-35.363261, 149.165230, 584.0)
 TABLE = 'plane'
 INJECT_AFTER_S = 15.0
@@ -328,6 +334,152 @@ def inflight():
         run.finish(track)
 
 
+def start_flight(run, label):
+    """Common start: upload the route, arm, AUTO, wait for the takeoff. Returns (conn, watch(seconds), state) or None."""
+    conn = run.conn
+    items, _ = route()
+    run.check('mission uploaded', mission.upload(conn, items) == 0)
+    flight.set_mode(conn, 'MANUAL', table=TABLE)
+    armed = flight.arm(conn, timeout=120.0)
+    run.check('armed', armed.ok, armed.detail)
+    auto = flight.set_mode(conn, 'AUTO', table=TABLE)
+    retry = time.time() + 60.0
+    while not auto.ok and time.time() < retry:
+        time.sleep(3)
+        auto = flight.set_mode(conn, 'AUTO', table=TABLE)
+    run.check('AUTO accepted', auto.ok, auto.detail)
+    if not (armed.ok and auto.ok):
+        return None
+    return make_watch(run)
+
+
+def make_watch(run):
+    state = {'pos': None, 't0': time.time(), 'track': [], 'mode': 'AUTO', 'texts': []}
+
+    def watch(seconds):
+        end = time.time() + seconds
+        while time.time() < end:
+            msg = run.conn.recv_match(type=['GLOBAL_POSITION_INT', 'STATUSTEXT'], blocking=True, timeout=0.5)
+            if msg is None:
+                continue
+            if msg.get_type() == 'GLOBAL_POSITION_INT':
+                state['pos'] = (msg.lat / 1e7, msg.lon / 1e7, msg.relative_alt / 1000.0, math.hypot(msg.vx, msg.vy) / 100.0)
+                state['track'].append([round(time.time() - state['t0'], 1), state['pos'][0], state['pos'][1], round(state['pos'][2], 1), round(state['pos'][3], 1), state['mode']])
+            else:
+                state['texts'].append(msg.text)
+                run.say('        vehicle: %s' % msg.text)
+    return watch, state
+
+
+def wait_for_height(watch, state, height, seconds):
+    end = time.time() + seconds
+    while time.time() < end:
+        watch(1.0)
+        if state['pos'] and state['pos'][2] >= height:
+            return True
+    return False
+
+
+def inflight2():
+    run = Run('plane-modes-in-flight-2')
+    state = {'track': []}
+    try:
+        run.start()
+        started = start_flight(run, 'inflight2')
+        if not started:
+            return
+        watch, state = started
+        run.check('airborne above 50 m after the AUTO takeoff', wait_for_height(watch, state, 55.0, 90.0), ('%.0f m' % state['pos'][2]) if state['pos'] else '')
+        for name in ('MANUAL', 'ACRO', 'TRAINING', 'AUTOTUNE', 'AVOID_ADSB'):
+            before = state['pos']
+            result = flight.set_mode(run.conn, name, timeout=5.0, table=TABLE)
+            state['mode'] = name if result.ok else state['mode']
+            watch(3.0)
+            after = state['pos']
+            run.say('%-11s %s | start %s | after 3 s %s' % (name, result.detail, ('%.0f m, %.1f m/s' % (before[2], before[3])) if before else '?', ('%.0f m, %.1f m/s' % (after[2], after[3])) if after else '?'))
+            run.check('%s accepted and the aircraft was not on the ground afterwards (height above 5 m)' % name, result.ok and after is not None and after[2] > 5.0, (result.detail, ('%.0f m' % after[2]) if after else ''))
+            flight.set_mode(run.conn, 'RTL', timeout=5.0, table=TABLE)
+            state['mode'] = 'RTL'
+            watch(20.0)
+            if state['pos'] and state['pos'][2] <= 5.0:
+                run.say('the aircraft reached the ground; stopping')
+                break
+    except Exception as e:
+        run.check('inflight2 finished without an exception', False, repr(e))
+    finally:
+        run.stop()
+        run.finish(state['track'])
+
+
+def takeoffmode():
+    run = Run('plane-takeoff-mode')
+    state = {'track': []}
+    try:
+        run.start()
+        conn = run.conn
+        base = link.read_params(conn)
+        run.say('TKOFF_ALT %s m, TKOFF_LVL_ALT %s m' % (base.get('TKOFF_ALT'), base.get('TKOFF_LVL_ALT')))
+        armed = flight.arm(conn, timeout=120.0)
+        run.check('armed', armed.ok, armed.detail)
+        if not armed.ok:
+            return
+        result = flight.set_mode(conn, 'TAKEOFF', table=TABLE)
+        run.check('TAKEOFF accepted while armed on the ground', result.ok, result.detail + (' | ' + '; '.join(result.texts[-2:]) if result.texts else ''))
+        if not result.ok:
+            return
+        watch, state = make_watch(run)
+        state['mode'] = 'TAKEOFF'
+        reached = wait_for_height(watch, state, 45.0, 80.0)
+        peak = max((t[3] for t in state['track']), default=0.0)
+        run.check('the aircraft climbed to 45 m or more on its own within 80 s', reached, 'peak %.0f m' % peak)
+        hb = flight.current_heartbeat(conn)
+        run.say('mode 10 s after: %s' % (flight.mode_name(hb.custom_mode, TABLE) if hb else '?'))
+    except Exception as e:
+        run.check('takeoffmode finished without an exception', False, repr(e))
+    finally:
+        run.stop()
+        run.finish(state['track'])
+
+
+def rally():
+    run = Run('plane-rally')
+    state = {'track': []}
+    try:
+        run.start()
+        conn = run.conn
+        rally_point = (HOME[0] + 250.0 / M_PER_DEG_LAT, HOME[1], 60.0)
+        points = mission.rally_points([rally_point])
+        run.check('rally point uploaded (ack 0)', mission.upload(conn, points, mission_type=mission.RALLY) == 0)
+        back = mission.download(conn, mission_type=mission.RALLY)
+        run.check('rally point reads back equal', mission.verify(points, back, skip_home=False) == [], mission.verify(points, back, skip_home=False)[:3])
+        started = start_flight(run, 'rally')
+        if not started:
+            return
+        watch, state = started
+        reached_a = False
+        for _ in range(90):
+            watch(1.0)
+            if state['pos'] and metres(state['pos'][0], state['pos'][1], HOME[0] + LEG_DEG, HOME[1]) < 80.0:
+                reached_a = True
+                break
+        run.check('the aircraft reached the first waypoint area (within 80 m of 300 m north)', reached_a, ('%.0f m up' % state['pos'][2]) if state['pos'] else '')
+        result = flight.set_mode(conn, 'RTL', table=TABLE)
+        state['mode'] = 'RTL'
+        run.check('RTL accepted', result.ok, result.detail)
+        watch(40.0)
+        pos = state['pos']
+        if pos:
+            to_rally = metres(pos[0], pos[1], rally_point[0], rally_point[1])
+            to_home = metres(pos[0], pos[1], HOME[0], HOME[1])
+            run.say('40 s after RTL: %.0f m from the rally point, %.0f m from home, %.0f m up' % (to_rally, to_home, pos[2]))
+            run.check('the aircraft is loitering around the rally point (within 120 m of it), not around home', to_rally <= 120.0 and to_home > 120.0, '%.0f m from the rally point, %.0f m from home' % (to_rally, to_home))
+    except Exception as e:
+        run.check('rally finished without an exception', False, repr(e))
+    finally:
+        run.stop()
+        run.finish(state['track'])
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'basics' in PARTS:
@@ -341,6 +493,12 @@ def main():
                 fly('plane-' + name, spec)
     if 'inflight' in PARTS:
         inflight()
+    if 'inflight2' in PARTS:
+        inflight2()
+    if 'takeoffmode' in PARTS:
+        takeoffmode()
+    if 'rally' in PARTS:
+        rally()
     return 0
 
 
