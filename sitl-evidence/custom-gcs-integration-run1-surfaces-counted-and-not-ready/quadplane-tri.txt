@@ -1,0 +1,8 @@
+== quadplane-tri (arduplane --model quadplane-tri)
+vehicle: quadplane, frame class 7 (Q_FRAME_CLASS), type 1 (Q_FRAME_TYPE), 1612 parameters
+sequence 1: motor 1 (?)                  expected=(5,)     moved=(2, 5)   MISMATCH 
+sequence 2: motor 4 (?)                  expected=(8,)     moved=(2, 8)   MISMATCH 
+sequence 3: motor 7 (?)                  expected=(11,)    moved=(2, 11)  MISMATCH 
+sequence 4: motor 2 (?)                  expected=(6,)     moved=(6,)     OK 
+1 of 4 steps matched
+exit=1

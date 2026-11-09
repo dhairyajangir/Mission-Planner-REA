@@ -1,0 +1,8 @@
+== rover-sailboat (ardurover --model sailboat)
+vehicle: rover, frame class 2 (FRAME_CLASS), type 0 (FRAME_TYPE), 1306 parameters
+throttle                                 expected=(3,)     moved=(3,)     OK accepted after 4 tries
+steering                                 expected=(1,)     moved=(1,)     OK 
+throttle left                            expected=()       moved=()       OK 
+throttle right                           expected=()       moved=()       OK 
+4 of 4 steps matched
+exit=0

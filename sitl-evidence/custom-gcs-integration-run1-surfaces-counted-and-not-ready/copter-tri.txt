@@ -1,0 +1,8 @@
+== copter-tri (arducopter --model tri)
+vehicle: copter, frame class 7 (FRAME_CLASS), type 0 (FRAME_TYPE), 1432 parameters
+sequence 1: motor 1 (?)                  expected=(1,)     moved=(1,)     OK 
+sequence 2: motor 4 (?)                  expected=(4,)     moved=(4,)     OK 
+sequence 3: motor 7 (?)                  expected=(7,)     moved=(7,)     OK 
+sequence 4: motor 2 (?)                  expected=(2,)     moved=(2,)     OK 
+4 of 4 steps matched
+exit=0

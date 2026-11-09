@@ -1,0 +1,89 @@
+[Errno 111] Connection refused sleeping
+t=  0.0  sent motor test 3 (system_status=None)
+t=  0.0  text: Motor Test: Board initialising
+t=  0.0  ack result=4
+t=  0.6  text: Barometer 1 calibration complete
+t=  0.7  text: Barometer 2 calibration complete
+t=  0.7  text: Beginning INS calibration. Do not move vehicle
+t=  1.4  text: INS: alloc 6144 bytes for ISB (free=524288)
+t=  1.4  text: ArduPilot Ready
+t=  1.4  text: RCInput: decoding UDP (Pulses)
+t=  2.5  servo1..4 spread over the window: [0, 0, 0, 0]
+t=  3.4  text: EKF3 IMU0 initialised
+t=  3.4  text: EKF3 IMU1 initialised
+t=  5.0  text: EKF3 IMU0 tilt alignment complete
+t=  5.0  text: EKF3 IMU1 tilt alignment complete
+t=  5.0  sent motor test 3 (system_status=4)
+t=  5.0  ack result=4
+t=  5.0  text: Arm: Accels inconsistent
+t=  5.0  text: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=  5.1  text: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=  5.1  text: AHRS: EKF3 active
+t=  7.5  servo1..4 spread over the window: [0, 0, 0, 0]
+t=  8.6  text: GPS 1: probing for u-blox at 230400 baud
+t=  8.7  text: GPS 1: detected u-blox
+t=  8.9  text: Set HOME to -35.36326 149.1652 at 584.00m
+t= 10.0  sent motor test 3 (system_status=4)
+t= 10.0  ack result=4
+t= 10.0  text: Arm: Accels inconsistent
+t= 12.5  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 15.0  sent motor test 3 (system_status=4)
+t= 15.0  ack result=0
+t= 15.0  text: Throttle armed
+t= 16.0  text: Throttle disarmed
+t= 17.5  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 18.9  text: EKF3 IMU0 origin set
+t= 18.9  text: EKF3 IMU1 origin set
+t= 18.9  text: Field Elevation Set: 584m
+t= 20.0  sent motor test 3 (system_status=4)
+t= 20.0  ack result=0
+t= 20.1  text: Throttle armed
+t= 21.0  text: Throttle disarmed
+t= 22.6  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 25.1  sent motor test 3 (system_status=4)
+t= 25.1  ack result=0
+t= 25.1  text: Throttle armed
+t= 26.1  text: Throttle disarmed
+t= 27.6  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 30.1  sent motor test 3 (system_status=4)
+t= 30.1  ack result=0
+t= 30.2  text: Throttle armed
+t= 31.1  text: Throttle disarmed
+t= 32.6  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 35.2  sent motor test 3 (system_status=4)
+t= 35.2  ack result=0
+t= 35.2  text: Throttle armed
+t= 36.2  text: Throttle disarmed
+t= 37.7  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 40.2  sent motor test 3 (system_status=4)
+t= 40.2  ack result=0
+t= 40.3  text: Throttle armed
+t= 41.1  text: EKF3 IMU0 is using GPS
+t= 41.1  text: EKF3 IMU1 is using GPS
+t= 41.2  text: Throttle disarmed
+t= 42.7  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 45.2  sent motor test 3 (system_status=4)
+t= 45.2  ack result=0
+t= 45.3  text: Throttle armed
+t= 46.3  text: Throttle disarmed
+t= 47.7  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 50.3  sent motor test 3 (system_status=4)
+t= 50.3  ack result=0
+t= 50.3  text: Throttle armed
+t= 51.3  text: Throttle disarmed
+t= 52.8  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 55.3  sent motor test 3 (system_status=4)
+t= 55.3  ack result=0
+t= 55.3  text: Throttle armed
+t= 56.3  text: Throttle disarmed
+t= 57.8  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 60.3  sent motor test 3 (system_status=4)
+t= 60.3  ack result=0
+t= 60.3  text: Throttle armed
+t= 61.3  text: Throttle disarmed
+t= 62.8  servo1..4 spread over the window: [0, 0, 0, 0]
+t= 65.3  sent motor test 3 (system_status=4)
+t= 65.3  ack result=0
+t= 65.4  text: Throttle armed
+t= 66.3  text: Throttle disarmed
+t= 67.8  servo1..4 spread over the window: [0, 0, 0, 0]

@@ -1,0 +1,10 @@
+== copter-hexa-x (arducopter --model hexax)
+vehicle: copter, frame class 2 (FRAME_CLASS), type 1 (FRAME_TYPE), 1431 parameters
+sequence 1: motor 5 (CCW)                expected=(5,)     moved=(5,)     OK 
+sequence 2: motor 1 (CW)                 expected=(1,)     moved=(1,)     OK 
+sequence 3: motor 4 (CCW)                expected=(4,)     moved=(4,)     OK 
+sequence 4: motor 6 (CW)                 expected=(6,)     moved=(6,)     OK 
+sequence 5: motor 2 (CCW)                expected=(2,)     moved=(2,)     OK 
+sequence 6: motor 3 (CW)                 expected=(3,)     moved=(3,)     OK 
+6 of 6 steps matched
+exit=0

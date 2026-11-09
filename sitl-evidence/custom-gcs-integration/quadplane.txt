@@ -1,0 +1,8 @@
+== quadplane (arduplane --model quadplane)
+vehicle: quadplane, frame class 1 (Q_FRAME_CLASS), type 1 (Q_FRAME_TYPE), 1611 parameters
+sequence 1: motor 1 (CCW)                expected=(5,)     moved=(5,)     OK 
+sequence 2: motor 4 (CW)                 expected=(8,)     moved=(8,)     OK 
+sequence 3: motor 2 (CCW)                expected=(6,)     moved=(6,)     OK 
+sequence 4: motor 3 (CW)                 expected=(7,)     moved=(7,)     OK 
+4 of 4 steps matched
+exit=0

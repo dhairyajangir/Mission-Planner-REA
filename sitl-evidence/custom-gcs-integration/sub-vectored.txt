@@ -1,0 +1,10 @@
+== sub-vectored (ardusub --model vectored)
+vehicle: sub, frame class 1 (FRAME_CONFIG), type None (None), 1433 parameters
+output 1 (zero-based 0)                  expected=(1,)     moved=(1,)     OK 
+output 2 (zero-based 1)                  expected=(2,)     moved=(2,)     OK 
+output 3 (zero-based 2)                  expected=(3,)     moved=(3,)     OK 
+output 4 (zero-based 3)                  expected=(4,)     moved=(4,)     OK 
+output 5 (zero-based 4)                  expected=(5,)     moved=(5,)     OK 
+output 6 (zero-based 5)                  expected=(6,)     moved=(6,)     OK 
+6 of 6 steps matched
+exit=0
