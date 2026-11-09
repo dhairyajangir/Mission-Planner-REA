@@ -33,6 +33,14 @@ SCENARIOS = {
     'gps-loss': dict(pre={'FS_EKF_ACTION': 1}, inject={'SIM_GPS1_ENABLE': 0}, expect='LAND'),
     'gcs-link-loss': dict(pre={'FS_GCS_ENABLE': 1, 'FS_GCS_TIMEOUT': 5}, inject=None, stop_heartbeats=True, expect='RTL'),
     'fence-always-land': dict(pre={'FENCE_ENABLE': 1, 'FENCE_ACTION': 2}, inject=None, fence=True, expect='LAND'),
+    # added later (attempt 11)
+    'rc-loss-rtl': dict(pre={'FS_THR_ENABLE': 1}, inject={'SIM_RC_FAIL': 1}, expect='RTL'),
+    'rc-loss-land': dict(pre={'FS_THR_ENABLE': 3}, inject={'SIM_RC_FAIL': 1}, expect='LAND'),
+    'wind-8ms': dict(pre={}, inject={'SIM_WIND_SPD': 8.0, 'SIM_WIND_DIR': 90.0}, expect='complete'),
+    'circle-fence-rtl': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 2, 'FENCE_RADIUS': 60, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
+    'altitude-fence-rtl': dict(pre={'FENCE_ENABLE': 1, 'FENCE_TYPE': 1, 'FENCE_ALT_MAX': 10, 'FENCE_ACTION': 1}, inject=None, expect='RTL'),
+    'battery-critical-and-link-loss': dict(pre={'BATT_FS_CRT_ACT': 1, 'BATT_CRT_VOLT': 10.0, 'BATT_LOW_TIMER': 1, 'FS_GCS_ENABLE': 1, 'FS_GCS_TIMEOUT': 5}, inject={'SIM_BATT_VOLTAGE': 9.0},
+                                           stop_heartbeats=True, expect='final LAND'),
 }
 
 
@@ -139,7 +147,13 @@ def run(name, spec):
                 if not flight.is_armed(msg) and now > 20:
                     break
         after_auto = [m for m in modes if m not in ('AUTO', 'STABILIZE')]
-        check('after the fault the mode changed to %s' % spec['expect'], bool(after_auto) and after_auto[0] == spec['expect'], modes)
+        if spec['expect'] == 'complete':          # no failsafe expected: the mission has to finish in spite of the fault
+            check('the mission completed in spite of the fault: items 1, 2, 3, 4 reached in order', [r for r in reached if r in (1, 2, 3, 4)] == [1, 2, 3, 4], reached)
+            check('no failsafe mode change: the vehicle stayed in AUTO', set(modes) <= {'AUTO', 'STABILIZE'}, modes)
+        elif spec['expect'].startswith('final '):  # two faults together: the mode the vehicle ends in
+            check('the vehicle ended in %s' % spec['expect'][6:], bool(modes) and modes[-1] == spec['expect'][6:], modes)
+        else:
+            check('after the fault the mode changed to %s' % spec['expect'], bool(after_auto) and after_auto[0] == spec['expect'], modes)
         check('the vehicle disarmed by itself', last_hb is not None and not flight.is_armed(last_hb))
         if pos:
             say('final position %.1f m from home, %.1f m up' % (metres(pos[0], pos[1], HOME[0], HOME[1]), pos[2]))

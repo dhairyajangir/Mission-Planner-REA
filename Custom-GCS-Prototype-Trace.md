@@ -115,9 +115,22 @@ Added after the owner answered "all of these" to which Copter functions to build
 
 All five ended in the mode the configured action asks for, with the vehicle disarming by itself. Each test is a **single run**; the reaction times are those of this simulator at real-time speed.
 
+### More Copter faults (attempt 11), same harness, six more scenarios, all passed
+
+| Scenario | Configured, fault | What the vehicle did | Ended |
+|---|---|---|---|
+| RC loss, action RTL | `FS_THR_ENABLE` 1, `SIM_RC_FAIL` 1 | 1.8 s later "Radio Failsafe", AUTO to RTL | landed at home (0.0 m) |
+| RC loss, action Land | `FS_THR_ENABLE` 3 | 1.8 s later "Radio Failsafe", AUTO to LAND | landed in place, 67.7 m from home |
+| wind 8 m/s | `SIM_WIND_SPD` 8, direction 90, set 12 s into the flight | no failsafe, stayed in AUTO; items 1 to 4 reached in order; the east leg took 17 s against 13 s without wind (a headwind), so the wind did act | landed 0.1 m from home |
+| circle fence | `FENCE_TYPE` 2, `FENCE_RADIUS` 60, action RTL | "Circle fence breached" 15.4 s after the start, AUTO to RTL | landed at home |
+| altitude fence | `FENCE_TYPE` 1, `FENCE_ALT_MAX` 10, action RTL, takeoff to 15 m | "Max Alt fence breached" 2.2 s after the start, AUTO to RTL, item 1 never reached | landed at home |
+| battery critical and link loss together | battery action Land plus `FS_GCS_ENABLE` 1, both injected at 12 s | battery first (mode LAND at 13.9 s); 3.9 s later "GCS + Battery Failsafe - Continuing Landing": the link-loss failsafe did not replace the landing with an RTL | landed in place, 68.9 m from home |
+
+One more observation, not a check: after the RC-loss RTL landed, the vehicle printed "PreArm: Radio failsafe on" (it would not re-arm while the radio is still lost). The "two at once" row is one pairing only. Each is one run; wind is one speed and one direction.
+
 **One attempt failed and is kept:** `gcs-link-loss-run1-*`: the vehicle never armed (ack 4 for 150 s). My script sent one ground-station heartbeat at the start and then none until the flight, so the vehicle's own GCS failsafe (armed by that first heartbeat) tripped before arming. The script now keeps a heartbeat thread running until the scenario stops it. The same first-heartbeat behaviour means a ground station that connects, sets `FS_GCS_ENABLE` and then stops talking will be unable to arm; the vehicle's refusal text for that case was not captured in the failed run.
 
-**Not shown:** wind, other battery and GPS failure modes (partial loss, glitches, `FS_EKF_ACTION` values other than 1, `BATT_FS_*` actions other than RTL and Land), RC loss and throttle failsafe, crash and vibration checks, failsafe priority when two happen together, fence actions 0, 3 and 4, circle, exclusion and altitude fences, any other flight mode than AUTO, and anything on a real vehicle.
+**Not shown:** other wind speeds and directions or gusts, other battery and GPS failure modes (partial loss, glitches, `FS_EKF_ACTION` values other than 1, `BATT_FS_*` actions other than RTL and Land), `FS_THR_ENABLE` values other than 1 and 3, crash and vibration checks, failsafe pairs other than battery with link loss, fence actions 0, 3 and 4, exclusion fences and several polygons, any other flight mode than AUTO, and anything on a real vehicle.
 
 ## What this does and does not show
 

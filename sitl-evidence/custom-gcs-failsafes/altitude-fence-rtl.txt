@@ -1,0 +1,19 @@
+OK   preset parameters ['FENCE_ACTION', 'FENCE_ALT_MAX', 'FENCE_ENABLE', 'FENCE_TYPE'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  2.2 s heartbeat: ARMED, mode RTL
+t=  2.2 s vehicle: Max Alt fence breached
+t=  2.2 s vehicle: Manual recovery started
+t=  6.9 s vehicle: Fence breach cleared
+t= 14.0 s vehicle: Fence breach cleared
+t= 34.0 s vehicle: SIM Hit ground at 0.501045 m/s
+t= 36.1 s vehicle: Disarming motors
+t= 36.6 s heartbeat: DISARMED, mode RTL
+OK   after the fault the mode changed to RTL   [['AUTO', 'RTL', 'RTL']]
+OK   the vehicle disarmed by itself
+final position 0.0 m from home, -0.0 m up
+items reached: []
+RESULT passed

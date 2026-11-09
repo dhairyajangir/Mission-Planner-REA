@@ -1,0 +1,25 @@
+OK   preset parameters [] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  5.2 s item 1 reached
+t=  5.3 s vehicle: Mission: 2 WP
+t= 12.0 s injected {'SIM_WIND_SPD': 8.0, 'SIM_WIND_DIR': 90.0}
+t= 18.3 s item 2 reached
+t= 18.4 s vehicle: Reached command #2
+t= 18.4 s vehicle: Mission: 3 WP
+t= 35.3 s item 3 reached
+t= 35.3 s vehicle: Reached command #3
+t= 35.3 s vehicle: Mission: 4 RTL
+t= 84.3 s vehicle: SIM Hit ground at 0.500318 m/s
+t= 86.4 s item 4 reached
+t= 86.4 s vehicle: Disarming motors
+t= 86.6 s heartbeat: DISARMED, mode AUTO
+OK   the mission completed in spite of the fault: items 1, 2, 3, 4 reached in order   [[1, 2, 3, 4]]
+OK   no failsafe mode change: the vehicle stayed in AUTO   [['AUTO', 'AUTO']]
+OK   the vehicle disarmed by itself
+final position 0.1 m from home, -0.0 m up
+items reached: [1, 2, 3, 4]
+RESULT passed

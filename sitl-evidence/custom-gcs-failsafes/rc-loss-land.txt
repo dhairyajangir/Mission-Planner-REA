@@ -1,0 +1,19 @@
+OK   preset parameters ['FS_THR_ENABLE'] accepted   [[]]
+OK   mission uploaded
+OK   armed   [armed (ack result 0)]
+OK   AUTO accepted   [AUTO active]
+mission start: mission start accepted (ack result 0)
+t=  0.6 s heartbeat: ARMED, mode AUTO
+t=  5.2 s item 1 reached
+t=  5.3 s vehicle: Mission: 2 WP
+t= 12.0 s injected {'SIM_RC_FAIL': 1}
+t= 13.8 s heartbeat: ARMED, mode LAND
+t= 13.8 s vehicle: Radio Failsafe
+t= 42.9 s vehicle: SIM Hit ground at 0.499833 m/s
+t= 45.0 s vehicle: Disarming motors
+t= 45.6 s heartbeat: DISARMED, mode LAND
+OK   after the fault the mode changed to LAND   [['AUTO', 'LAND', 'LAND']]
+OK   the vehicle disarmed by itself
+final position 67.7 m from home, -0.0 m up
+items reached: [1]
+RESULT passed
