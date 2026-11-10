@@ -12,6 +12,7 @@ Continue reverse engineering Mission Planner using REA, including the main execu
 - The `*-Trace.md` files describe source paths, bounded experiments and limitations.
 - `research-tools/` contains analysis, probe and evidence-verification scripts; `sitl-evidence/` and `mission-planner-binary-evidence/` contain retained captures.
 - `UPLOAD-MANIFEST.json` records the archive's source directories and any packaging omissions.
+- Aerial vehicles (Copter, Plane, QuadPlane, helicopter, simulator only): `ArduPilot-Aerial-Library-Execution-Trace.md` (what ran, how it was observed, the failed attempts) and `Aerial-Mode-and-Arming-Requirements.md` (what each arming path and mode needed). Rover, Sub and Blimp work is paused; no real hardware has been tested.
 
 ## Evidence and safety rules
 
