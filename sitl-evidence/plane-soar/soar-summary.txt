@@ -1,0 +1,24 @@
+flight notes:
+  set {'SOAR_ENABLE': 1.0, 'RC7_OPTION': 88.0} (rejected []); before {'SOAR_ENABLE': 0.0, 'RC7_OPTION': 0.0}
+  upload ack 0
+  arm: armed (ack result 0)
+  AUTO: AUTO active
+  t=  0.0 vehicle: Mission: 1 Takeoff
+  t=  0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+  t=  0.2 vehicle: Triggered AUTO. GPS speed = 0.0
+  t=  0.9 mode AUTO
+  t=  1.4 vehicle: Autoland direction= 0
+  t=  1.4 vehicle: Holding course 35999 at 5.4m/s (0.0)
+  t=  7.7 vehicle: Takeoff level-off starting at 20m
+  t=  9.7 vehicle: Takeoff complete at 60.58m
+  t=  9.7 vehicle: Mission: 2 LoitTime
+  t= 50.0 channel 7 to middle
+  t= 50.3 vehicle: Soaring: Enabled, manual mode changes.
+  t= 60.0 THERMAL: THERMAL active
+  t= 61.0 mode THERMAL
+  t= 63.1 mode AUTO
+  t= 63.1 vehicle: Mission: 2 LoitTime
+  t= 63.1 vehicle: Soaring: Reached SOAR_ALT_MIN, restoring Auto
+  t= 85.0 AUTO: AUTO active
+functions hit (11): ModeThermal::_enter, ModeThermal::update, ModeThermal::navigate, ModeThermal::update_soaring, SoaringController::update_active_state, SoaringController::init_cruising, SoaringController::update_cruising, SoaringController::init_thermalling, SoaringController::update_thermalling, SoaringController::update_vario, SoaringController::check_thermal_criteria
+functions never reached (0): 

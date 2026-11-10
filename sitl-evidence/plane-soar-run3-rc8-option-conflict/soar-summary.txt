@@ -1,0 +1,8 @@
+flight notes:
+  set {'SOAR_ENABLE': 1.0, 'RC8_OPTION': 88.0} (rejected []); before {'SOAR_ENABLE': 0.0, 'RC8_OPTION': 0.0}
+  upload ack 0
+  arm: not armed after 150 s (last ack result 4)
+  vehicle: Arm: Mode channel and RC8_OPTION conflict
+  AUTO: AUTO active
+functions hit (2): SoaringController::update_active_state, SoaringController::init_cruising
+functions never reached (9): ModeThermal::_enter, ModeThermal::update, ModeThermal::navigate, ModeThermal::update_soaring, SoaringController::update_cruising, SoaringController::init_thermalling, SoaringController::update_thermalling, SoaringController::update_vario, SoaringController::check_thermal_criteria

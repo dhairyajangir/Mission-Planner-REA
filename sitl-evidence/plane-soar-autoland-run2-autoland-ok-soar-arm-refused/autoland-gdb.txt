@@ -1,0 +1,62 @@
+Temporary breakpoint 1 at 0x99585: file ../../ArduPlane/mode_autoland.cpp, line 69.
+Temporary breakpoint 2 at 0x99b34: file ../../ArduPlane/mode_autoland.cpp, line 201.
+Temporary breakpoint 3 at 0x99c32: file ../../ArduPlane/mode_autoland.cpp, line 220.
+Temporary breakpoint 4 at 0x99e10: file ../../ArduPlane/mode_autoland.cpp, line 265.
+Temporary breakpoint 5 at 0x99f7e: file ../../ArduPlane/mode_autoland.cpp, line 297.
+Temporary breakpoint 6 at 0x99f1f: file ../../ArduPlane/mode_autoland.cpp, line 285.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 55)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+HIT ModeAutoLand::check_takeoff_direction
+#0  ModeAutoLand::check_takeoff_direction (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:265
+#1  0x00005555555d9829 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:530
+#2  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39100 <Plane::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeAutoLand::set_autoland_direction
+#0  ModeAutoLand::set_autoland_direction (this=0x555555b7af78 <plane+50360>, heading=0.00897999946) at ../../ArduPlane/mode_autoland.cpp:285
+#1  0x00005555555edf01 in ModeAutoLand::check_takeoff_direction (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:278
+#2  0x00005555555d9829 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:530
+#3  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT ModeAutoLand::_enter
+#0  ModeAutoLand::_enter (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:69
+#1  0x00005555555eae65 in Mode::enter (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode.cpp:114
+#2  0x000055555560dd2b in Plane::set_mode (this=0x555555b6eac0 <plane>, new_mode=..., reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:322
+#3  0x000055555560df10 in Plane::set_mode_by_number (this=0x555555b6eac0 <plane>, new_mode_number=Mode::AUTOLAND, reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:370
+HIT ModeAutoLand::update
+#0  ModeAutoLand::update (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:201
+#1  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#2  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39100 <Plane::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeAutoLand::navigate
+#0  ModeAutoLand::navigate (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:220
+#1  0x00005555555f5ecb in Plane::navigate (this=0x555555b6eac0 <plane>) at ../../ArduPlane/navigation.cpp:111
+#2  0x00005555555dd17c in Functor<void>::method_wrapper<Plane, &Plane::navigate> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39260 <Plane::scheduler_tasks+384>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeAutoLand::landing_lined_up
+#0  ModeAutoLand::landing_lined_up (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:297
+#1  0x00005555555e697f in Plane::verify_loiter_heading (this=0x555555b6eac0 <plane>, init=true) at ../../ArduPlane/commands_logic.cpp:1186
+#2  0x00005555555e54bd in Plane::verify_loiter_to_alt (this=0x555555b6eac0 <plane>, cmd=...) at ../../ArduPlane/commands_logic.cpp:797
+#3  0x00005555555edd57 in ModeAutoLand::navigate (this=0x555555b7af78 <plane+50360>) at ../../ArduPlane/mode_autoland.cpp:238
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff784553b in __GI_kill () at ../sysdeps/unix/syscall-template.S:120
+warning: 120	../sysdeps/unix/syscall-template.S: No such file or directory

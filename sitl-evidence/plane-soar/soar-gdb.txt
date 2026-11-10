@@ -1,0 +1,92 @@
+Temporary breakpoint 1 at 0xa077c: file ../../ArduPlane/mode_thermal.cpp, line 8.
+Temporary breakpoint 2 at 0xa07f6: file ../../ArduPlane/mode_thermal.cpp, line 23.
+Temporary breakpoint 3 at 0xa0cc2: file ../../ArduPlane/mode_thermal.cpp, line 118.
+Temporary breakpoint 4 at 0xa083d: file ../../ArduPlane/mode_thermal.cpp, line 29.
+Temporary breakpoint 5 at 0x2e0f5d: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 463.
+Temporary breakpoint 6 at 0x2e0642: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 310.
+Temporary breakpoint 7 at 0x2e0bf3: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 396.
+Temporary breakpoint 8 at 0x2e01ef: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 258.
+Temporary breakpoint 9 at 0x2e068a: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 318.
+Temporary breakpoint 10 at 0x2e0e8f: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 442.
+Temporary breakpoint 11 at 0x2dfe3d: file ../../libraries/AP_Soaring/AP_Soaring.cpp, line 216.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/models/plane.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Smoothing reset at 0.001
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 37)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/models/plane.parm
+HIT SoaringController::update_active_state
+#0  SoaringController::update_active_state (this=0x555555b77e00 <plane+37696>, override_disable=false) at ../../libraries/AP_Soaring/AP_Soaring.cpp:463
+#1  0x000055555560d15d in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:16
+#2  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39560 <Plane::scheduler_tasks+1152>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT SoaringController::init_cruising
+#0  SoaringController::init_cruising (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:310
+#1  0x00005555555ece74 in ModeAuto::_enter (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode_auto.cpp:45
+#2  0x00005555555eae65 in Mode::enter (this=0x555555b7ab08 <plane+49224>) at ../../ArduPlane/mode.cpp:114
+#3  0x000055555560dd2b in Plane::set_mode (this=0x555555b6eac0 <plane>, new_mode=..., reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:322
+HIT SoaringController::update_vario
+#0  SoaringController::update_vario (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:442
+#1  0x000055555560d18c in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:22
+#2  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39560 <Plane::scheduler_tasks+1152>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT SoaringController::update_cruising
+#0  SoaringController::update_cruising (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:396
+#1  0x000055555560d22d in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:46
+#2  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39560 <Plane::scheduler_tasks+1152>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT SoaringController::check_thermal_criteria
+#0  SoaringController::check_thermal_criteria (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:216
+#1  0x000055555560d23f in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:49
+#2  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39560 <Plane::scheduler_tasks+1152>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeThermal::_enter
+#0  ModeThermal::_enter (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:8
+#1  0x00005555555eae65 in Mode::enter (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode.cpp:114
+#2  0x000055555560dd2b in Plane::set_mode (this=0x555555b6eac0 <plane>, new_mode=..., reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:322
+#3  0x000055555560df10 in Plane::set_mode_by_number (this=0x555555b6eac0 <plane>, new_mode_number=Mode::THERMAL, reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:370
+HIT SoaringController::init_thermalling
+#0  SoaringController::init_thermalling (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:258
+#1  0x00005555555f47c6 in ModeThermal::_enter (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:15
+#2  0x00005555555eae65 in Mode::enter (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode.cpp:114
+#3  0x000055555560dd2b in Plane::set_mode (this=0x555555b6eac0 <plane>, new_mode=..., reason=ModeReason::GCS_COMMAND) at ../../ArduPlane/system.cpp:322
+HIT ModeThermal::update_soaring
+#0  ModeThermal::update_soaring (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:29
+#1  0x000055555560d1cf in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:32
+#2  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39560 <Plane::scheduler_tasks+1152>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT SoaringController::update_thermalling
+#0  SoaringController::update_thermalling (this=0x555555b77e00 <plane+37696>) at ../../libraries/AP_Soaring/AP_Soaring.cpp:318
+#1  0x00005555555f485b in ModeThermal::update_soaring (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:35
+#2  0x000055555560d1cf in Plane::update_soaring (this=0x555555b6eac0 <plane>) at ../../ArduPlane/soaring.cpp:32
+#3  0x00005555555dd524 in Functor<void>::method_wrapper<Plane, &Plane::update_soaring> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+HIT ModeThermal::update
+#0  ModeThermal::update (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:23
+#1  0x00005555555d9817 in Plane::update_control_mode (this=0x555555b6eac0 <plane>) at ../../ArduPlane/Plane.cpp:527
+#2  0x00005555555dcfc4 in Functor<void>::method_wrapper<Plane, &Plane::update_control_mode> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39100 <Plane::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeThermal::navigate
+#0  ModeThermal::navigate (this=0x555555b7b030 <plane+50544>) at ../../ArduPlane/mode_thermal.cpp:118
+#1  0x00005555555f5ecb in Plane::navigate (this=0x555555b6eac0 <plane>) at ../../ArduPlane/navigation.cpp:111
+#2  0x00005555555dd17c in Functor<void>::method_wrapper<Plane, &Plane::navigate> (obj=0x555555b6eac0 <plane>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569e5aa in Functor<void>::operator() (this=0x555555b39260 <Plane::scheduler_tasks+384>) at ../../libraries/AP_HAL/utility/functor.h:54
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdb20, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

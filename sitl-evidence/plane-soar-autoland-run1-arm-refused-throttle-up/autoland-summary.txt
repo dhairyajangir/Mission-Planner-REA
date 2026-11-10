@@ -1,0 +1,6 @@
+flight notes:
+  upload ack 0
+  arm: not armed after 150 s (last ack result 4)
+  AUTO: AUTO active
+functions hit (1): ModeAutoLand::check_takeoff_direction
+functions never reached (5): ModeAutoLand::_enter, ModeAutoLand::update, ModeAutoLand::navigate, ModeAutoLand::landing_lined_up, ModeAutoLand::set_autoland_direction
