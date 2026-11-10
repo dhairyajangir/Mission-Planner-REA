@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+freestyle-logged-flight,AHRS roll (ATT),whole log,angle,818,0.1277,0.1395,0.2532,0.3169
+freestyle-logged-flight,AHRS roll (ATT),airborne,angle,680,0.1354,0.1475,0.2673,0.3169
+freestyle-logged-flight,AHRS pitch (ATT),whole log,angle,818,0.1039,0.1836,0.441,1.0751
+freestyle-logged-flight,AHRS pitch (ATT),airborne,angle,680,0.1139,0.1998,0.5328,1.0751
+freestyle-logged-flight,AHRS yaw (ATT),whole log,angle,818,0.656,0.8043,1.9631,2.1188
+freestyle-logged-flight,AHRS yaw (ATT),airborne,angle,680,0.606,0.7216,1.1034,1.9831
+freestyle-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2045,0.1235,0.1354,0.25,0.31
+freestyle-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1700,0.1313,0.1435,0.27,0.31
+freestyle-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2045,0.0706,0.0948,0.19,0.38
+freestyle-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1700,0.0749,0.1015,0.2,0.38
+freestyle-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2045,0.6514,0.7998,1.1,2.11
+freestyle-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1700,0.6029,0.7192,1.1,1.99
+freestyle-logged-flight,AHRS position horizontal (POS),whole log,metres,2045,0.0388,0.0791,0.1692,0.39
+freestyle-logged-flight,AHRS position horizontal (POS),airborne,metres,1700,0.0436,0.0864,0.1912,0.39
+freestyle-logged-flight,AHRS altitude (POS),whole log,metres,2045,0.0282,0.0456,0.12,0.16
+freestyle-logged-flight,AHRS altitude (POS),airborne,metres,1700,0.0308,0.0494,0.12,0.16
+freestyle-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,818,0.0093,0.018,0.0352,0.1047
+freestyle-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,680,0.0102,0.0195,0.047,0.1047
+freestyle-logged-flight,GPS position horizontal (GPS),whole log,metres,409,0.0836,0.2385,0.7124,0.9908
+freestyle-logged-flight,GPS position horizontal (GPS),airborne,metres,340,0.1006,0.2616,0.7125,0.9908
+freestyle-logged-flight,GPS altitude (GPS),whole log,metres,409,0.0404,0.1048,0.35,0.41
+freestyle-logged-flight,GPS altitude (GPS),airborne,metres,340,0.0463,0.1141,0.38,0.41

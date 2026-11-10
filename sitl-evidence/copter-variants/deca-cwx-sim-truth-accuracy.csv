@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+deca-cwx-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1161,0.1227,0.2014,0.2235
+deca-cwx-logged-flight,AHRS roll (ATT),airborne,angle,943,0.1206,0.1273,0.2031,0.2235
+deca-cwx-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.0935,0.1068,0.2095,0.3312
+deca-cwx-logged-flight,AHRS pitch (ATT),airborne,angle,943,0.0975,0.1117,0.219,0.3312
+deca-cwx-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5835,0.7052,1.9107,2.118
+deca-cwx-logged-flight,AHRS yaw (ATT),airborne,angle,943,0.5112,0.5763,0.8219,1.9341
+deca-cwx-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1119,0.1188,0.2,0.22
+deca-cwx-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2358,0.1163,0.1235,0.2,0.22
+deca-cwx-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0863,0.0983,0.2,0.25
+deca-cwx-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2358,0.0898,0.1026,0.21,0.25
+deca-cwx-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5791,0.7009,1.9,2.11
+deca-cwx-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2358,0.5081,0.5742,0.82,1.93
+deca-cwx-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0322,0.0549,0.1569,0.2006
+deca-cwx-logged-flight,AHRS position horizontal (POS),airborne,metres,2358,0.0358,0.059,0.16,0.2006
+deca-cwx-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0259,0.0373,0.1,0.13
+deca-cwx-logged-flight,AHRS altitude (POS),airborne,metres,2358,0.0274,0.0396,0.1,0.13
+deca-cwx-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0077,0.0111,0.0231,0.0563
+deca-cwx-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,943,0.0082,0.0117,0.0242,0.0563
+deca-cwx-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0637,0.1681,0.5233,0.59
+deca-cwx-logged-flight,GPS position horizontal (GPS),airborne,metres,472,0.0741,0.1812,0.5455,0.59
+deca-cwx-logged-flight,GPS altitude (GPS),whole log,metres,549,0.0312,0.0645,0.2,0.22
+deca-cwx-logged-flight,GPS altitude (GPS),airborne,metres,472,0.0347,0.0689,0.21,0.22

@@ -1,0 +1,57 @@
+{
+ "frame": "octa-cwx",
+ "model": "octa-cwx",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm",
+  "Tools/autotest/default_params/copter-octa.parm",
+  "Tools/autotest/default_params/copter-octa-cwx.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 14,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 3.0,
+  "FRAME_TYPE": 14.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.38999998569488525,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.13500000536441803,
+  "ATC_RAT_PIT_P": 0.13500000536441803,
+  "ATC_RAT_YAW_P": 0.30000001192092896
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 119.94752502441406,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 99.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 149.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  7.4 vehicle: Mission: 2 LoitTime",
+  "t= 49.2 vehicle: Reached command #2",
+  "t= 49.2 vehicle: Mission: 3 RTL",
+  "t= 95.0 vehicle: SIM Hit ground at 0.497320 m/s",
+  "t= 97.1 vehicle: Disarming motors",
+  "t= 97.7 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "octa-cwx-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 48775168,
+   "gz_bytes": 24101621,
+   "gz_sha256": "f30237b1e9b3cb5b2d4f80cc6ec6f6a4db36c1c964e0c499c03e5c56dee7375b"
+  }
+ ]
+}

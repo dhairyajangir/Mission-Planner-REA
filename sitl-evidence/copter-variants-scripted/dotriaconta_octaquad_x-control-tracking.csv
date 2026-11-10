@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+dotriaconta_octaquad_x-logged-flight,roll: desired - actual (ANG),deg,37761,0.0084,0.01,0.0168,0.0388
+dotriaconta_octaquad_x-logged-flight,pitch: desired - actual (ANG),deg,37761,0.0136,0.0198,0.0461,0.0935
+dotriaconta_octaquad_x-logged-flight,yaw: desired - actual (ANG),deg,37761,0.016,0.0359,0.0451,0.4563
+dotriaconta_octaquad_x-logged-flight,roll rate: desired - actual (RATE),deg/s,37761,0.0573,0.0754,0.1483,0.5061
+dotriaconta_octaquad_x-logged-flight,pitch rate: desired - actual (RATE),deg/s,37761,0.1021,0.1642,0.3584,0.9886
+dotriaconta_octaquad_x-logged-flight,yaw rate: desired - actual (RATE),deg/s,37761,0.0257,0.1707,0.0811,7.6137
+dotriaconta_octaquad_x-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,945,0.0086,0.015,0.0405,0.0542
+dotriaconta_octaquad_x-logged-flight,position north: target - actual (PSCN),m,945,0.0821,0.1641,0.4757,0.6225
+dotriaconta_octaquad_x-logged-flight,position east: target - actual (PSCE),m,945,0.0143,0.0166,0.0303,0.0548
+dotriaconta_octaquad_x-logged-flight,velocity north: target - actual (PSCN),m/s,945,0.1125,0.2324,0.6379,0.7318
+dotriaconta_octaquad_x-logged-flight,velocity east: target - actual (PSCE),m/s,945,0.0035,0.0058,0.0145,0.0258
+dotriaconta_octaquad_x-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.197,12.6,25.96 / 40.73,100 -> 76

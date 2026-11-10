@@ -1,0 +1,57 @@
+{
+ "frame": "octa-quad-cor",
+ "model": "octa-quad-cor",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm",
+  "Tools/autotest/default_params/copter-octaquad-cor.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 14,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 4.0,
+  "FRAME_TYPE": 20.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.4826759099960327,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.10485100001096725,
+  "ATC_RAT_PIT_P": 0.10485100001096725,
+  "ATC_RAT_YAW_P": 0.7603430151939392
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 118.90046691894531,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 99.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 150.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  0.0 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete",
+  "t=  8.0 vehicle: Mission: 2 LoitTime",
+  "t= 49.8 vehicle: Reached command #2",
+  "t= 49.8 vehicle: Mission: 3 RTL",
+  "t= 95.6 vehicle: SIM Hit ground at 0.497899 m/s",
+  "t= 98.0 vehicle: Disarming motors",
+  "t= 99.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "octa-quad-cor-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 49180672,
+   "gz_bytes": 24284067,
+   "gz_sha256": "6e0173e52e18a42e884b5e05d2fd4312c148c9de511dc5518006780f37d35257"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+singlecopter-logged-flight,roll: desired - actual (ANG),deg,37361,0.0294,0.0667,0.1175,0.4488
+singlecopter-logged-flight,pitch: desired - actual (ANG),deg,37361,0.0442,0.0919,0.2096,0.7248
+singlecopter-logged-flight,yaw: desired - actual (ANG),deg,37361,0.4514,0.6766,1.5046,6.2088
+singlecopter-logged-flight,roll rate: desired - actual (RATE),deg/s,37361,0.8858,1.0,1.4154,5.0657
+singlecopter-logged-flight,pitch rate: desired - actual (RATE),deg/s,37361,0.9336,1.0924,1.7375,5.2254
+singlecopter-logged-flight,yaw rate: desired - actual (RATE),deg/s,37361,1.9318,3.3489,6.1476,47.7285
+singlecopter-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,935,0.0199,0.039,0.1088,0.2026
+singlecopter-logged-flight,position north: target - actual (PSCN),m,935,0.0442,0.0748,0.2083,0.2499
+singlecopter-logged-flight,position east: target - actual (PSCE),m,935,0.0187,0.0291,0.0479,0.1807
+singlecopter-logged-flight,velocity north: target - actual (PSCN),m/s,935,0.0572,0.1111,0.257,0.3561
+singlecopter-logged-flight,velocity east: target - actual (PSCE),m/s,935,0.0065,0.0191,0.0187,0.1398
+singlecopter-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1128,12.6,12.6,0.00 / 0.00,100 -> 100

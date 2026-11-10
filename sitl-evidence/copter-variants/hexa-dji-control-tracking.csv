@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+hexa-dji-logged-flight,roll: desired - actual (ANG),deg,37761,0.0087,0.0104,0.0183,0.0435
+hexa-dji-logged-flight,pitch: desired - actual (ANG),deg,37761,0.0152,0.0235,0.0526,0.1157
+hexa-dji-logged-flight,yaw: desired - actual (ANG),deg,37761,0.0172,0.0366,0.0489,0.3747
+hexa-dji-logged-flight,roll rate: desired - actual (RATE),deg/s,37761,0.0543,0.0708,0.1379,0.4743
+hexa-dji-logged-flight,pitch rate: desired - actual (RATE),deg/s,37761,0.1162,0.1866,0.4121,1.1508
+hexa-dji-logged-flight,yaw rate: desired - actual (RATE),deg/s,37761,0.0259,0.1267,0.0824,5.455
+hexa-dji-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,945,0.0085,0.0163,0.0455,0.0655
+hexa-dji-logged-flight,position north: target - actual (PSCN),m,945,0.0799,0.161,0.4743,0.6237
+hexa-dji-logged-flight,position east: target - actual (PSCE),m,945,0.0145,0.0165,0.0318,0.0497
+hexa-dji-logged-flight,velocity north: target - actual (PSCN),m/s,945,0.112,0.2314,0.6364,0.7053
+hexa-dji-logged-flight,velocity east: target - actual (PSCE),m/s,945,0.0033,0.0055,0.0125,0.0244
+hexa-dji-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.196,12.6,25.97 / 40.75,100 -> 75

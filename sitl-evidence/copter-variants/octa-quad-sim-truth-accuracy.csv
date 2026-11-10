@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+octa-quad-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1163,0.1231,0.1995,0.236
+octa-quad-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1209,0.1278,0.2027,0.236
+octa-quad-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.0941,0.1076,0.2116,0.3351
+octa-quad-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.098,0.1124,0.219,0.3351
+octa-quad-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5857,0.7106,1.9049,2.118
+octa-quad-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5107,0.576,0.8216,1.9231
+octa-quad-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1118,0.119,0.2,0.23
+octa-quad-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2364,0.1166,0.1238,0.2,0.23
+octa-quad-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0868,0.0991,0.2,0.25
+octa-quad-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2364,0.0901,0.1033,0.21,0.25
+octa-quad-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5812,0.706,1.9,2.11
+octa-quad-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2364,0.5071,0.5728,0.82,1.92
+octa-quad-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0324,0.0553,0.1569,0.2006
+octa-quad-logged-flight,AHRS position horizontal (POS),airborne,metres,2364,0.036,0.0594,0.1672,0.2006
+octa-quad-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0257,0.0377,0.1,0.13
+octa-quad-logged-flight,AHRS altitude (POS),airborne,metres,2364,0.0264,0.0394,0.1,0.13
+octa-quad-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0077,0.0111,0.0223,0.0567
+octa-quad-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.0081,0.0118,0.0249,0.0567
+octa-quad-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0637,0.1685,0.5233,0.5789
+octa-quad-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.074,0.1815,0.5455,0.5789
+octa-quad-logged-flight,GPS altitude (GPS),whole log,metres,549,0.031,0.0642,0.21,0.22
+octa-quad-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0343,0.0684,0.21,0.22

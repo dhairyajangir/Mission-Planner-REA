@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+hexa-cwx-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1156,0.1223,0.2016,0.2323
+hexa-cwx-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1199,0.1269,0.2025,0.2323
+hexa-cwx-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.0938,0.1069,0.2109,0.3273
+hexa-cwx-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.0977,0.1118,0.2206,0.3273
+hexa-cwx-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5834,0.7053,1.9046,2.118
+hexa-cwx-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5111,0.5761,0.8188,1.9342
+hexa-cwx-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1111,0.1182,0.2,0.23
+hexa-cwx-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2364,0.1156,0.1228,0.2,0.23
+hexa-cwx-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0865,0.0984,0.2,0.25
+hexa-cwx-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2364,0.0899,0.1026,0.2,0.25
+hexa-cwx-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.579,0.7009,1.9,2.11
+hexa-cwx-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2364,0.508,0.574,0.81,1.93
+hexa-cwx-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0325,0.0551,0.1569,0.2006
+hexa-cwx-logged-flight,AHRS position horizontal (POS),airborne,metres,2364,0.036,0.0592,0.1582,0.2006
+hexa-cwx-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0258,0.0372,0.1,0.13
+hexa-cwx-logged-flight,AHRS altitude (POS),airborne,metres,2364,0.0273,0.0393,0.1,0.13
+hexa-cwx-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0075,0.0109,0.0244,0.0563
+hexa-cwx-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.0079,0.0115,0.025,0.0563
+hexa-cwx-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0638,0.1681,0.5232,0.59
+hexa-cwx-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.074,0.1811,0.5344,0.59
+hexa-cwx-logged-flight,GPS altitude (GPS),whole log,metres,549,0.0306,0.064,0.2,0.22
+hexa-cwx-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0338,0.0682,0.21,0.22

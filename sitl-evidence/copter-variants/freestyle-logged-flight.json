@@ -1,0 +1,57 @@
+{
+ "frame": "freestyle",
+ "model": "X:@ROMFS/models/freestyle.json",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm",
+  "Tools/autotest/default_params/copter-X.parm",
+  "Tools/autotest/models/freestyle.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 2,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 1.0,
+  "FRAME_TYPE": 1.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.125,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.04800000041723251,
+  "ATC_RAT_PIT_P": 0.03999999910593033,
+  "ATC_RAT_YAW_P": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 119.92386627197266,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 72.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 121.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  3.5 vehicle: Mission: 2 LoitTime",
+  "t= 40.1 vehicle: Reached command #2",
+  "t= 40.1 vehicle: Mission: 3 RTL",
+  "t= 67.2 vehicle: SIM Hit ground at 0.500273 m/s",
+  "t= 68.8 vehicle: Disarming motors",
+  "t= 69.7 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "freestyle-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 38408192,
+   "gz_bytes": 18080327,
+   "gz_sha256": "7655f3a14f4fcd49ef85b4c782de6d01a43802b3c2219a4d9dd21f746d157ad0"
+  }
+ ]
+}

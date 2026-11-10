@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+octa-quad-cw-cor-logged-flight,AHRS roll (ATT),whole log,angle,1108,0.1158,0.1227,0.1997,0.2334
+octa-quad-cw-cor-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1208,0.1277,0.2031,0.2334
+octa-quad-cw-cor-logged-flight,AHRS pitch (ATT),whole log,angle,1108,0.0937,0.1071,0.2114,0.3298
+octa-quad-cw-cor-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.098,0.1123,0.2206,0.3298
+octa-quad-cw-cor-logged-flight,AHRS yaw (ATT),whole log,angle,1108,0.5899,0.7145,1.8979,2.118
+octa-quad-cw-cor-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5146,0.5815,0.8261,1.9211
+octa-quad-cw-cor-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2770,0.1114,0.1186,0.2,0.23
+octa-quad-cw-cor-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2363,0.1164,0.1237,0.2,0.23
+octa-quad-cw-cor-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2770,0.0864,0.0987,0.2,0.25
+octa-quad-cw-cor-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2363,0.0902,0.1033,0.21,0.25
+octa-quad-cw-cor-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2770,0.5854,0.71,1.9,2.11
+octa-quad-cw-cor-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2363,0.5104,0.5775,0.82,1.91
+octa-quad-cw-cor-logged-flight,AHRS position horizontal (POS),whole log,metres,2770,0.0322,0.055,0.1569,0.2006
+octa-quad-cw-cor-logged-flight,AHRS position horizontal (POS),airborne,metres,2363,0.0359,0.0593,0.1672,0.2006
+octa-quad-cw-cor-logged-flight,AHRS altitude (POS),whole log,metres,2770,0.0247,0.0368,0.09,0.13
+octa-quad-cw-cor-logged-flight,AHRS altitude (POS),airborne,metres,2363,0.0258,0.0389,0.1,0.13
+octa-quad-cw-cor-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1108,0.0076,0.0109,0.0189,0.0586
+octa-quad-cw-cor-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.008,0.0115,0.0229,0.0586
+octa-quad-cw-cor-logged-flight,GPS position horizontal (GPS),whole log,metres,554,0.0631,0.1674,0.5232,0.59
+octa-quad-cw-cor-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.0739,0.1812,0.5344,0.59
+octa-quad-cw-cor-logged-flight,GPS altitude (GPS),whole log,metres,554,0.0309,0.064,0.2,0.22
+octa-quad-cw-cor-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0343,0.0685,0.21,0.22

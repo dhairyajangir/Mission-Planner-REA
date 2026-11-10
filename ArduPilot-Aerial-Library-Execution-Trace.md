@@ -363,3 +363,40 @@ ArduPilot's `FlyEachFrame` (ArduPlane autotest) lists only `plane-tailsitter` as
 - **plane-tailsitter** (`Q_FRAME_CLASS` 10, `Q_FRAME_TYPE` 1): still failed with the reboot, as ArduPilot's list says it should: VTOL takeoff, "Transition FW done" at 15.8 s, then simulator ground contacts (146 of them) until the 300 s limit.
 
 So the copter-tailsitter failure in the airframe sweep came from my sweep missing a start-up step that ArduPilot's own test performs, not from the frame; why the rotated AHRS view needs a reboot was not investigated here. The plane-tailsitter remains unexplained beyond ArduPilot's note. One flight each, simulator only.
+
+## All multicopter frames
+
+`research-tools/sitl-copter-variants.py` started `arducopter` for each of the 28 internal frames of `Tools/autotest/pysim/vehicleinfo.json` that need neither an external simulator nor a CAN peripheral (model name and default-parameter files from there, plus a file setting `LOG_BITMASK` 4194303) and flew one mission, armed in STABILIZE, then AUTO with `MAV_CMD_MISSION_START` (takeoff to 20 m, a waypoint 40 m north with a 30 s loiter, return to launch). All 28 armed, flew and disarmed on their own. The first sweep could not arm the three `FRAME_CLASS` 15 (dynamic matrix) frames, `dotriaconta_octaquad_x`, `hexadeca-octa` and `hexadeca-octa-cwx`: the vehicle said "Motors: Check frame class and type". They need the Lua motor-matrix example script of the frame (`MotorMatrix_*.lua`, named by `frame_example_script` in `vehicleinfo.json`), `SCR_ENABLE` 1 and a restart, which ArduPilot's own `FlyEachFrame` does; with `SCRIPTED_FRAMES=1` they flew (`sitl-evidence/copter-variants-scripted/`). Airborne rms; angles in degrees:
+
+| Frame | Class | Type | Flight time | AHRS roll | AHRS pitch | AHRS yaw | AHRS pos (m) | roll trk | pitch trk | yaw trk | alt trk (m) | pos N trk (m) | pos E trk (m) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| + | 1 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| X | 1 | 1 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| bfx | 1 | 12 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| djix | 1 | 13 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| cwx | 1 | 14 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| hexa | 2 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| hexax | 2 | 1 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| hexa-cwx | 2 | 14 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| hexa-dji | 2 | 13 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.02 | 0.04 | 0.02 | 0.16 | 0.02 |
+| octa | 3 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| octa-dji | 3 | 13 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| octa-cwx | 3 | 14 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| octa-quad | 4 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.02 | 0.01 | 0.08 | 0.01 | 0.16 | 0.02 |
+| octa-quad-cwx | 4 | 14 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.02 | 0.01 | 0.08 | 0.01 | 0.16 | 0.02 |
+| octa-quad-cor | 4 | 20 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.01 | 0.03 | 0.02 | 0.16 | 0.02 |
+| octa-quad-cw-cor | 4 | 21 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.01 | 0.03 | 0.02 | 0.16 | 0.02 |
+| deca | 14 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.02 | 0.03 | 0.10 | 0.02 | 0.16 | 0.02 |
+| deca-cwx | 14 | 14 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.02 | 0.03 | 0.10 | 0.02 | 0.16 | 0.02 |
+| tri | 7 | 0 | 99 s | 0.12 | 0.10 | 0.57 | 0.06 | 0.04 | 0.02 | 0.35 | 0.02 | 0.16 | 0.02 |
+| y6 | 5 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.01 | 0.03 | 0.04 | 0.02 | 0.16 | 0.02 |
+| dodeca-hexa | 12 | 0 | 99 s | 0.13 | 0.11 | 0.58 | 0.06 | 0.03 | 0.03 | 0.10 | 0.02 | 0.16 | 0.02 |
+| dotriaconta_octaquad_x | 15 | 0 | 99 s | 0.14 | 0.12 | 0.61 | 0.05 | 0.01 | 0.02 | 0.04 | 0.01 | 0.16 | 0.02 |
+| hexadeca-octa | 15 | 0 | 99 s | 0.14 | 0.12 | 0.60 | 0.06 | 0.02 | 0.03 | 0.10 | 0.01 | 0.16 | 0.02 |
+| hexadeca-octa-cwx | 15 | 0 | 99 s | 0.14 | 0.12 | 0.60 | 0.06 | 0.03 | 0.02 | 0.10 | 0.01 | 0.16 | 0.02 |
+| singlecopter | 8 | 1 | 102 s | 0.13 | 0.13 | 2.93 | 0.06 | 0.07 | 0.09 | 0.68 | 0.04 | 0.07 | 0.03 |
+| coaxcopter | 9 | 1 | 102 s | 0.13 | 0.13 | 2.96 | 0.06 | 0.04 | 0.13 | 0.33 | 0.04 | 0.08 | 0.03 |
+| Callisto | 4 | 14 | 102 s | 0.12 | 0.12 | 0.73 | 0.05 | 0.17 | 0.26 | 2.25 | 0.06 | 0.06 | 0.02 |
+| freestyle | 1 | 1 | 72 s | 0.15 | 0.20 | 0.72 | 0.09 | 0.01 | 0.03 | 0.03 | 0.03 | 0.23 | 0.02 |
+
+Reading these: for the 24 regular layouts (quad, hexa, octa, octa-quad, deca, tri, y6, dodeca-hexa and the three scripted 16- and 32-motor frames) the estimates against the truth are identical to the digit shown (roll 0.13, pitch 0.11, yaw 0.58 degrees, AHRS position 0.06 m; 0.12 to 0.14 for the scripted frames), and so are the altitude and position tracking (0.02 m altitude, 0.16 m north and 0.02 m east). The simulator evidently drives all of them with one common multicopter dynamics model, so the sweep shows that the firmware arms, mixes and flies every layout well enough to complete the mission, not that the aircraft differ. What does differ is the attitude tracking the firmware logs for itself, mostly in yaw: 0.04 degrees for most frames, 0.08 to 0.10 for octa-quad, deca, dodeca-hexa and the 16-motor frames, and 0.35 for the tri-copter, whose yaw is made with a tail servo. The odd models are singlecopter and coaxcopter (classes 8 and 9), where the yaw estimate is worse (2.9 degrees rms against 0.58) and yaw tracking is 0.68 and 0.33 degrees; Callisto, with a yaw tracking error of 2.25 degrees and roll and pitch 0.17 and 0.26; and freestyle, which flew the mission in 69.7 s with a 0.23 m north position error. The motor mixing differs per frame and shows in the logged motor outputs (`RCOU`), which were not compared here. One flight each, simulator only, with the simulator's sensor models and the firmware's own targets. The raw logs (28, about 25 MB gzipped each) are not committed; their checksums are in `raw-log-manifest.txt`.

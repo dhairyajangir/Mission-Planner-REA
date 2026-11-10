@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+coaxcopter-logged-flight,roll: desired - actual (ANG),deg,37441,0.0208,0.0443,0.0391,0.7218
+coaxcopter-logged-flight,pitch: desired - actual (ANG),deg,37441,0.0738,0.1304,0.3175,0.4975
+coaxcopter-logged-flight,yaw: desired - actual (ANG),deg,37441,0.0494,0.3346,0.0549,5.1512
+coaxcopter-logged-flight,roll rate: desired - actual (RATE),deg/s,37441,1.384,1.5395,2.1964,3.2934
+coaxcopter-logged-flight,pitch rate: desired - actual (RATE),deg/s,37441,1.4465,1.665,2.8522,5.0983
+coaxcopter-logged-flight,yaw rate: desired - actual (RATE),deg/s,37441,0.2728,2.3621,0.2726,52.1956
+coaxcopter-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,937,0.0199,0.0388,0.1076,0.1995
+coaxcopter-logged-flight,position north: target - actual (PSCN),m,937,0.0459,0.0757,0.2038,0.2538
+coaxcopter-logged-flight,position east: target - actual (PSCE),m,937,0.0189,0.0298,0.0492,0.1838
+coaxcopter-logged-flight,velocity north: target - actual (PSCN),m/s,937,0.056,0.1089,0.2575,0.3522
+coaxcopter-logged-flight,velocity east: target - actual (PSCE),m/s,937,0.0068,0.0194,0.0188,0.1331
+coaxcopter-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1128,12.6,12.6,0.00 / 0.00,100 -> 100

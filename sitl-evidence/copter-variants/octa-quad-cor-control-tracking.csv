@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+octa-quad-cor-logged-flight,roll: desired - actual (ANG),deg,37761,0.0058,0.008,0.0154,0.0439
+octa-quad-cor-logged-flight,pitch: desired - actual (ANG),deg,37761,0.009,0.0133,0.0294,0.0671
+octa-quad-cor-logged-flight,yaw: desired - actual (ANG),deg,37761,0.0123,0.0283,0.0309,0.3439
+octa-quad-cor-logged-flight,roll rate: desired - actual (RATE),deg/s,37761,0.0785,0.1031,0.2142,0.4695
+octa-quad-cor-logged-flight,pitch rate: desired - actual (RATE),deg/s,37761,0.1307,0.2072,0.4658,1.2487
+octa-quad-cor-logged-flight,yaw rate: desired - actual (RATE),deg/s,37761,0.0787,0.2485,0.2192,5.9048
+octa-quad-cor-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,945,0.0087,0.0154,0.0407,0.06
+octa-quad-cor-logged-flight,position north: target - actual (PSCN),m,945,0.0801,0.1611,0.4677,0.6264
+octa-quad-cor-logged-flight,position east: target - actual (PSCE),m,945,0.0146,0.0165,0.0313,0.05
+octa-quad-cor-logged-flight,velocity north: target - actual (PSCN),m/s,945,0.1121,0.232,0.6402,0.7058
+octa-quad-cor-logged-flight,velocity east: target - actual (PSCE),m/s,945,0.0031,0.0053,0.0131,0.023
+octa-quad-cor-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1108,12.186,12.6,25.77 / 40.84,100 -> 75

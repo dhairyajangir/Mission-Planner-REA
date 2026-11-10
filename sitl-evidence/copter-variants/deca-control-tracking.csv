@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+deca-logged-flight,roll: desired - actual (ANG),deg,37761,0.0129,0.0231,0.0429,0.1265
+deca-logged-flight,pitch: desired - actual (ANG),deg,37761,0.0172,0.0278,0.0618,0.146
+deca-logged-flight,yaw: desired - actual (ANG),deg,37761,0.0447,0.1028,0.1885,0.7372
+deca-logged-flight,roll rate: desired - actual (RATE),deg/s,37761,0.053,0.0673,0.1328,0.2457
+deca-logged-flight,pitch rate: desired - actual (RATE),deg/s,37761,0.1163,0.2061,0.4567,1.4136
+deca-logged-flight,yaw rate: desired - actual (RATE),deg/s,37761,0.1571,0.3877,0.7325,5.6895
+deca-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,945,0.0085,0.0163,0.0454,0.0656
+deca-logged-flight,position north: target - actual (PSCN),m,945,0.0798,0.1607,0.468,0.6205
+deca-logged-flight,position east: target - actual (PSCE),m,945,0.0147,0.0166,0.0314,0.0505
+deca-logged-flight,velocity north: target - actual (PSCN),m/s,945,0.112,0.2313,0.635,0.7071
+deca-logged-flight,velocity east: target - actual (PSCE),m/s,945,0.0033,0.0055,0.0134,0.0249
+deca-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.196,12.6,25.96 / 40.73,100 -> 76

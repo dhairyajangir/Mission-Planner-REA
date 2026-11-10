@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+Callisto-logged-flight,AHRS roll (ATT),whole log,angle,1118,0.103,0.1178,0.21,0.4221
+Callisto-logged-flight,AHRS roll (ATT),airborne,angle,952,0.1098,0.1247,0.217,0.4221
+Callisto-logged-flight,AHRS pitch (ATT),whole log,angle,1118,0.1065,0.1191,0.2112,0.4292
+Callisto-logged-flight,AHRS pitch (ATT),airborne,angle,952,0.111,0.1245,0.2184,0.4292
+Callisto-logged-flight,AHRS yaw (ATT),whole log,angle,1118,0.7165,0.8172,1.9296,2.1207
+Callisto-logged-flight,AHRS yaw (ATT),airborne,angle,952,0.6635,0.7306,0.9203,2.0364
+Callisto-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2795,0.0962,0.1098,0.2,0.25
+Callisto-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2380,0.1025,0.1161,0.2,0.25
+Callisto-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2795,0.0965,0.107,0.2,0.24
+Callisto-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2380,0.0999,0.1114,0.21,0.24
+Callisto-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2795,0.7015,0.7894,0.92,2.12
+Callisto-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2380,0.6467,0.6951,0.92,1.93
+Callisto-logged-flight,AHRS position horizontal (POS),whole log,metres,2795,0.0264,0.0456,0.1228,0.1783
+Callisto-logged-flight,AHRS position horizontal (POS),airborne,metres,2380,0.0292,0.0492,0.1336,0.1783
+Callisto-logged-flight,AHRS altitude (POS),whole log,metres,2795,0.0286,0.0407,0.1,0.14
+Callisto-logged-flight,AHRS altitude (POS),airborne,metres,2380,0.0297,0.0428,0.11,0.14
+Callisto-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1118,0.0074,0.011,0.0233,0.0569
+Callisto-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,952,0.0078,0.0117,0.0251,0.0569
+Callisto-logged-flight,GPS position horizontal (GPS),whole log,metres,559,0.0613,0.1663,0.5232,0.59
+Callisto-logged-flight,GPS position horizontal (GPS),airborne,metres,476,0.072,0.1802,0.5566,0.59
+Callisto-logged-flight,GPS altitude (GPS),whole log,metres,559,0.0307,0.0642,0.2,0.23
+Callisto-logged-flight,GPS altitude (GPS),airborne,metres,476,0.0342,0.0686,0.21,0.23

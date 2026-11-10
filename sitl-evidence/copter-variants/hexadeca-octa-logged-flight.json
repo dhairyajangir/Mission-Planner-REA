@@ -1,0 +1,50 @@
+{
+ "frame": "hexadeca-octa",
+ "model": "hexadeca-octa",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm",
+  "Tools/autotest/default_params/copter-hexadeca_octa.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 2,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 15.0,
+  "FRAME_TYPE": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.38999998569488525,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.13500000536441803,
+  "ATC_RAT_PIT_P": 0.13500000536441803,
+  "ATC_RAT_YAW_P": 0.03999999910593033
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 154.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: not armed after 120 s (last ack result 4)",
+  "vehicle: Arm: Motors: Check frame class and type",
+  "vehicle: PreArm: Motors: Check frame class and type"
+ ],
+ "logs": [
+  {
+   "file": "hexadeca-octa-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 57671680,
+   "gz_bytes": 21653918,
+   "gz_sha256": "c2e10e4d05f8e3a823d6ea988974c953062869f02c3ef56e4f292bba75dbca36"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+hexa-dji-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1156,0.1224,0.2013,0.2295
+hexa-dji-logged-flight,AHRS roll (ATT),airborne,angle,946,0.1201,0.1271,0.2031,0.2295
+hexa-dji-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.0936,0.1068,0.2106,0.326
+hexa-dji-logged-flight,AHRS pitch (ATT),airborne,angle,946,0.0975,0.1116,0.2204,0.326
+hexa-dji-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5836,0.7055,1.9047,2.118
+hexa-dji-logged-flight,AHRS yaw (ATT),airborne,angle,946,0.5117,0.5766,0.8209,1.9342
+hexa-dji-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1112,0.1184,0.2,0.23
+hexa-dji-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2365,0.1159,0.1232,0.2,0.23
+hexa-dji-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.086,0.098,0.2,0.25
+hexa-dji-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2365,0.0895,0.1023,0.2,0.25
+hexa-dji-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5791,0.7011,1.9,2.11
+hexa-dji-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2365,0.5083,0.5744,0.82,1.93
+hexa-dji-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0325,0.0553,0.1569,0.2006
+hexa-dji-logged-flight,AHRS position horizontal (POS),airborne,metres,2365,0.036,0.0594,0.1672,0.2006
+hexa-dji-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0262,0.0375,0.1,0.13
+hexa-dji-logged-flight,AHRS altitude (POS),airborne,metres,2365,0.0273,0.0394,0.1,0.13
+hexa-dji-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0077,0.0111,0.0226,0.0563
+hexa-dji-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,946,0.0081,0.0116,0.0237,0.0563
+hexa-dji-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0637,0.1684,0.5232,0.59
+hexa-dji-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.0739,0.1814,0.5344,0.59
+hexa-dji-logged-flight,GPS altitude (GPS),whole log,metres,549,0.0311,0.0643,0.2,0.22
+hexa-dji-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0343,0.0684,0.21,0.22

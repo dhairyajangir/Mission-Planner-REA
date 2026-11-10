@@ -1,0 +1,2 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+hexadeca-octa-cwx-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1281,12.6,12.6,0.00 / 0.00,100 -> 100

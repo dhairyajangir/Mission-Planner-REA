@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+dodeca-hexa-logged-flight,roll: desired - actual (ANG),deg,37761,0.0161,0.0276,0.0605,0.1473
+dodeca-hexa-logged-flight,pitch: desired - actual (ANG),deg,37761,0.017,0.0261,0.0591,0.1221
+dodeca-hexa-logged-flight,yaw: desired - actual (ANG),deg,37761,0.0462,0.1026,0.1708,0.7364
+dodeca-hexa-logged-flight,roll rate: desired - actual (RATE),deg/s,37761,0.104,0.1277,0.2285,0.5278
+dodeca-hexa-logged-flight,pitch rate: desired - actual (RATE),deg/s,37761,0.1497,0.2156,0.4471,1.2564
+dodeca-hexa-logged-flight,yaw rate: desired - actual (RATE),deg/s,37761,0.1623,0.3862,0.6671,5.1333
+dodeca-hexa-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,945,0.0086,0.0163,0.0457,0.0656
+dodeca-hexa-logged-flight,position north: target - actual (PSCN),m,945,0.0801,0.1612,0.4659,0.6199
+dodeca-hexa-logged-flight,position east: target - actual (PSCE),m,945,0.0149,0.017,0.0323,0.0527
+dodeca-hexa-logged-flight,velocity north: target - actual (PSCN),m/s,945,0.1122,0.2314,0.6343,0.7042
+dodeca-hexa-logged-flight,velocity east: target - actual (PSCE),m/s,945,0.0037,0.006,0.0149,0.0205
+dodeca-hexa-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.196,12.6,25.96 / 40.75,100 -> 76

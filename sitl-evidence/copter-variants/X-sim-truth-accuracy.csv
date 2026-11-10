@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+X-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1151,0.1219,0.2,0.2322
+X-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1196,0.1266,0.2035,0.2322
+X-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.0932,0.1066,0.2108,0.3205
+X-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.0971,0.1114,0.2202,0.3205
+X-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5859,0.7067,1.9032,2.118
+X-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5132,0.5773,0.8183,1.9367
+X-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1105,0.1177,0.2,0.22
+X-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2363,0.1152,0.1225,0.2,0.22
+X-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0857,0.0978,0.2,0.25
+X-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2363,0.0893,0.1021,0.2,0.25
+X-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5812,0.7024,1.9,2.11
+X-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2363,0.5098,0.5751,0.81,1.93
+X-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0321,0.0549,0.1569,0.2006
+X-logged-flight,AHRS position horizontal (POS),airborne,metres,2363,0.0355,0.059,0.1582,0.2006
+X-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0258,0.0372,0.1,0.13
+X-logged-flight,AHRS altitude (POS),airborne,metres,2363,0.0273,0.0394,0.1,0.13
+X-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0075,0.011,0.0236,0.0576
+X-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.008,0.0116,0.0244,0.0576
+X-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0634,0.1674,0.5232,0.5901
+X-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.0735,0.1804,0.5344,0.5901
+X-logged-flight,GPS altitude (GPS),whole log,metres,549,0.0306,0.0639,0.2,0.22
+X-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0339,0.0681,0.21,0.22

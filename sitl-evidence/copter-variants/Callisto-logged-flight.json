@@ -1,0 +1,57 @@
+{
+ "frame": "Callisto",
+ "model": "octa-quad-cwx:@ROMFS/models/Callisto.json",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm",
+  "Tools/autotest/default_params/copter-octaquad.parm",
+  "Tools/autotest/models/Callisto.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 14,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 4.0,
+  "FRAME_TYPE": 14.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.5199999809265137,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.30000001192092896,
+  "ATC_RAT_PIT_P": 0.30000001192092896,
+  "ATC_RAT_YAW_P": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 119.89814758300781,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 102.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 152.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  7.2 vehicle: Mission: 2 LoitTime",
+  "t= 48.9 vehicle: Reached command #2",
+  "t= 48.9 vehicle: Mission: 3 RTL",
+  "t= 95.5 vehicle: SIM Hit ground at 0.501951 m/s",
+  "t= 99.5 vehicle: Disarming motors",
+  "t= 99.7 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "Callisto-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 49766400,
+   "gz_bytes": 24795698,
+   "gz_sha256": "feeba746cec4d95437a101e8f658a115118f8668c33efb680a4c82d8308a96c5"
+  }
+ ]
+}

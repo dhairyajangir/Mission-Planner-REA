@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+djix-logged-flight,roll: desired - actual (ANG),deg,37721,0.0085,0.0102,0.018,0.0428
+djix-logged-flight,pitch: desired - actual (ANG),deg,37721,0.014,0.0199,0.0439,0.0845
+djix-logged-flight,yaw: desired - actual (ANG),deg,37721,0.0176,0.0365,0.0485,0.3713
+djix-logged-flight,roll rate: desired - actual (RATE),deg/s,37721,0.0605,0.0765,0.1525,0.2688
+djix-logged-flight,pitch rate: desired - actual (RATE),deg/s,37721,0.1056,0.1685,0.3801,1.0188
+djix-logged-flight,yaw rate: desired - actual (RATE),deg/s,37721,0.0311,0.1275,0.0838,5.4528
+djix-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,944,0.0085,0.0163,0.0452,0.0654
+djix-logged-flight,position north: target - actual (PSCN),m,944,0.0804,0.1615,0.4703,0.6229
+djix-logged-flight,position east: target - actual (PSCE),m,944,0.0147,0.0166,0.0315,0.0497
+djix-logged-flight,velocity north: target - actual (PSCN),m/s,944,0.1124,0.2316,0.6356,0.7041
+djix-logged-flight,velocity east: target - actual (PSCE),m/s,944,0.0032,0.0054,0.013,0.0245
+djix-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.197,12.6,25.95 / 40.70,100 -> 76

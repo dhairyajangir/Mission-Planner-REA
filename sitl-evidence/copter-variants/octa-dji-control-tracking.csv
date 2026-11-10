@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+octa-dji-logged-flight,roll: desired - actual (ANG),deg,37721,0.0084,0.0096,0.0156,0.0408
+octa-dji-logged-flight,pitch: desired - actual (ANG),deg,37721,0.0161,0.0253,0.0579,0.1347
+octa-dji-logged-flight,yaw: desired - actual (ANG),deg,37721,0.0174,0.0365,0.0489,0.3797
+octa-dji-logged-flight,roll rate: desired - actual (RATE),deg/s,37721,0.0543,0.0677,0.1324,0.2524
+octa-dji-logged-flight,pitch rate: desired - actual (RATE),deg/s,37721,0.1138,0.1958,0.437,1.2094
+octa-dji-logged-flight,yaw rate: desired - actual (RATE),deg/s,37721,0.0274,0.1289,0.0836,5.551
+octa-dji-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,944,0.0084,0.0158,0.0448,0.0605
+octa-dji-logged-flight,position north: target - actual (PSCN),m,944,0.0805,0.1611,0.4643,0.6198
+octa-dji-logged-flight,position east: target - actual (PSCE),m,944,0.0146,0.0166,0.032,0.0501
+octa-dji-logged-flight,velocity north: target - actual (PSCN),m/s,944,0.112,0.2314,0.6369,0.7087
+octa-dji-logged-flight,velocity east: target - actual (PSCE),m/s,944,0.0032,0.0055,0.0132,0.0247
+octa-dji-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1099,12.197,12.6,25.92 / 40.72,100 -> 76

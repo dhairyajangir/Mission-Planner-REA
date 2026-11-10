@@ -1,0 +1,57 @@
+{
+ "frame": "coaxcopter",
+ "model": "coaxcopter",
+ "defaults": [
+  "Tools/autotest/default_params/copter-single.parm",
+  "Tools/autotest/default_params/copter-coax.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 3,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 9.0,
+  "FRAME_TYPE": 1.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.3499999940395355,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 2.0,
+  "ATC_RAT_PIT_P": 2.0,
+  "ATC_RAT_YAW_P": 1.3970849514007568
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 115.55640411376953,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 102.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 153.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  0.0 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete",
+  "t=  7.8 vehicle: Mission: 2 LoitTime",
+  "t= 49.6 vehicle: Reached command #2",
+  "t= 49.6 vehicle: Mission: 3 RTL",
+  "t= 95.2 vehicle: SIM Hit ground at 0.487914 m/s",
+  "t=100.8 vehicle: Disarming motors",
+  "t=101.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "coaxcopter-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 44748800,
+   "gz_bytes": 24215079,
+   "gz_sha256": "5ca089d3566dab0d69c7f6701d64516fb0efbb35c15fa2e2e4c70f2d28b02373"
+  }
+ ]
+}

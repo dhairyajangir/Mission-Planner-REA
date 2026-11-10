@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+coaxcopter-logged-flight,AHRS roll (ATT),whole log,angle,1128,0.1193,0.1278,0.2142,0.2984
+coaxcopter-logged-flight,AHRS roll (ATT),airborne,angle,939,0.1248,0.1337,0.2224,0.2984
+coaxcopter-logged-flight,AHRS pitch (ATT),whole log,angle,1128,0.1084,0.1226,0.2396,0.3899
+coaxcopter-logged-flight,AHRS pitch (ATT),airborne,angle,939,0.1143,0.1293,0.2533,0.3899
+coaxcopter-logged-flight,AHRS yaw (ATT),whole log,angle,1128,1.9146,3.5426,10.2601,10.4804
+coaxcopter-logged-flight,AHRS yaw (ATT),airborne,angle,939,1.5842,2.9605,8.5455,10.2702
+coaxcopter-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2820,0.1154,0.1227,0.21,0.25
+coaxcopter-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2347,0.1205,0.1281,0.21,0.25
+coaxcopter-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2820,0.1031,0.1134,0.21,0.29
+coaxcopter-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2347,0.1081,0.1191,0.22,0.29
+coaxcopter-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2820,1.9071,3.5355,10.26,10.48
+coaxcopter-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2347,1.5759,2.9519,8.53,10.27
+coaxcopter-logged-flight,AHRS position horizontal (POS),whole log,metres,2820,0.0314,0.0529,0.1473,0.2006
+coaxcopter-logged-flight,AHRS position horizontal (POS),airborne,metres,2347,0.0346,0.0575,0.1561,0.2006
+coaxcopter-logged-flight,AHRS altitude (POS),whole log,metres,2820,0.3204,0.511,1.42,2.1201
+coaxcopter-logged-flight,AHRS altitude (POS),airborne,metres,2347,0.1931,0.1991,0.27,0.42
+coaxcopter-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1128,0.1842,0.2168,0.3644,0.39
+coaxcopter-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,939,0.1829,0.2162,0.3661,0.39
+coaxcopter-logged-flight,GPS position horizontal (GPS),whole log,metres,564,0.0593,0.161,0.501,0.5789
+coaxcopter-logged-flight,GPS position horizontal (GPS),airborne,metres,469,0.0712,0.1765,0.5343,0.5789
+coaxcopter-logged-flight,GPS altitude (GPS),whole log,metres,564,0.0294,0.0632,0.2,0.24
+coaxcopter-logged-flight,GPS altitude (GPS),airborne,metres,469,0.0338,0.0684,0.21,0.24

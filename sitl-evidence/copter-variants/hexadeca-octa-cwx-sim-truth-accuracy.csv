@@ -1,0 +1,12 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+hexadeca-octa-cwx-logged-flight,AHRS roll (ATT),whole log,angle,1281,0.0702,0.0702,0.0721,0.0728
+hexadeca-octa-cwx-logged-flight,AHRS pitch (ATT),whole log,angle,1281,0.0587,0.0587,0.0611,0.0616
+hexadeca-octa-cwx-logged-flight,AHRS yaw (ATT),whole log,angle,1281,1.3531,1.3717,1.886,2.0949
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3205,0.0677,0.0679,0.07,0.07
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3205,0.0523,0.0525,0.06,0.06
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3205,1.3486,1.3673,1.88,2.09
+hexadeca-octa-cwx-logged-flight,AHRS position horizontal (POS),whole log,metres,3205,0.0142,0.0142,0.0144,0.0144
+hexadeca-octa-cwx-logged-flight,AHRS altitude (POS),whole log,metres,3205,0.01,0.01,0.01,0.01
+hexadeca-octa-cwx-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1281,0.0037,0.0037,0.0037,0.0037
+hexadeca-octa-cwx-logged-flight,GPS position horizontal (GPS),whole log,metres,641,0.0,0.0,0.0,0.0
+hexadeca-octa-cwx-logged-flight,GPS altitude (GPS),whole log,metres,641,0.0,0.0,0.0,0.0

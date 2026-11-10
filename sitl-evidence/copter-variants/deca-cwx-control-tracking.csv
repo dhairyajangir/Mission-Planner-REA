@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+deca-cwx-logged-flight,roll: desired - actual (ANG),deg,37641,0.0152,0.0239,0.0501,0.1205
+deca-cwx-logged-flight,pitch: desired - actual (ANG),deg,37641,0.0161,0.0251,0.0572,0.1286
+deca-cwx-logged-flight,yaw: desired - actual (ANG),deg,37641,0.0455,0.1031,0.1855,0.7379
+deca-cwx-logged-flight,roll rate: desired - actual (RATE),deg/s,37641,0.0826,0.1011,0.1862,0.3767
+deca-cwx-logged-flight,pitch rate: desired - actual (RATE),deg/s,37641,0.1271,0.1955,0.4189,1.1644
+deca-cwx-logged-flight,yaw rate: desired - actual (RATE),deg/s,37641,0.159,0.3888,0.7195,5.7803
+deca-cwx-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,942,0.0086,0.0163,0.0449,0.0656
+deca-cwx-logged-flight,position north: target - actual (PSCN),m,942,0.0794,0.1606,0.4689,0.6209
+deca-cwx-logged-flight,position east: target - actual (PSCE),m,942,0.0146,0.0165,0.0316,0.0489
+deca-cwx-logged-flight,velocity north: target - actual (PSCN),m/s,942,0.1122,0.2318,0.6362,0.7092
+deca-cwx-logged-flight,velocity east: target - actual (PSCE),m/s,942,0.0032,0.0053,0.0122,0.0274
+deca-cwx-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.196,12.6,25.90 / 40.74,100 -> 76

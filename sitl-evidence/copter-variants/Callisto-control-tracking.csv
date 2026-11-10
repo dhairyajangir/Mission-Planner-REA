@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+Callisto-logged-flight,roll: desired - actual (ANG),deg,38041,0.045,0.1728,0.1899,1.3158
+Callisto-logged-flight,pitch: desired - actual (ANG),deg,38041,0.0489,0.2603,0.052,2.329
+Callisto-logged-flight,yaw: desired - actual (ANG),deg,38041,0.7592,2.2486,6.593,11.4944
+Callisto-logged-flight,roll rate: desired - actual (RATE),deg/s,38041,0.0442,0.0773,0.1272,0.8658
+Callisto-logged-flight,pitch rate: desired - actual (RATE),deg/s,38041,0.0773,0.1593,0.3506,1.1077
+Callisto-logged-flight,yaw rate: desired - actual (RATE),deg/s,38041,2.4416,6.2173,19.8176,27.4715
+Callisto-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,952,0.0304,0.0618,0.1676,0.2442
+Callisto-logged-flight,position north: target - actual (PSCN),m,952,0.0425,0.0636,0.1616,0.2002
+Callisto-logged-flight,position east: target - actual (PSCE),m,952,0.0146,0.0173,0.0357,0.0529
+Callisto-logged-flight,velocity north: target - actual (PSCN),m/s,952,0.0288,0.0606,0.1687,0.2323
+Callisto-logged-flight,velocity east: target - actual (PSCE),m/s,952,0.0039,0.007,0.0159,0.0437
+Callisto-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1118,47.908,50.0,57.18 / 83.87,100 -> 95

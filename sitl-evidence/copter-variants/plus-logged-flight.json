@@ -1,0 +1,55 @@
+{
+ "frame": "+",
+ "model": "+",
+ "defaults": [
+  "Tools/autotest/default_params/copter.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 2,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 1.0,
+  "FRAME_TYPE": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "MOT_THST_HOVER": 0.38999998569488525,
+  "MOT_PWM_TYPE": 0.0,
+  "ATC_RAT_RLL_P": 0.13500000536441803,
+  "ATC_RAT_PIT_P": 0.13500000536441803,
+  "ATC_RAT_YAW_P": 0.30000001192092896
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 120.40410614013672,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 99.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 149.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  7.4 vehicle: Mission: 2 LoitTime",
+  "t= 49.2 vehicle: Reached command #2",
+  "t= 49.2 vehicle: Mission: 3 RTL",
+  "t= 94.9 vehicle: SIM Hit ground at 0.497826 m/s",
+  "t= 97.0 vehicle: Disarming motors",
+  "t= 97.7 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "plus-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 46149632,
+   "gz_bytes": 23846096,
+   "gz_sha256": "aa2c351f42059566c9499644417005a7cc73a62a0e5ed4f6d30042e265e15803"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+singlecopter-logged-flight,AHRS roll (ATT),whole log,angle,1128,0.1183,0.126,0.2125,0.2844
+singlecopter-logged-flight,AHRS roll (ATT),airborne,angle,937,0.1245,0.1322,0.2166,0.2844
+singlecopter-logged-flight,AHRS pitch (ATT),whole log,angle,1128,0.1102,0.1231,0.2387,0.373
+singlecopter-logged-flight,AHRS pitch (ATT),airborne,angle,937,0.1159,0.1297,0.2466,0.373
+singlecopter-logged-flight,AHRS yaw (ATT),whole log,angle,1128,1.894,3.5151,10.2439,10.4804
+singlecopter-logged-flight,AHRS yaw (ATT),airborne,angle,937,1.5613,2.9257,8.4565,10.2448
+singlecopter-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2820,0.1145,0.1218,0.21,0.25
+singlecopter-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2341,0.1206,0.128,0.21,0.25
+singlecopter-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2820,0.1052,0.1146,0.21,0.28
+singlecopter-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2341,0.1101,0.1201,0.22,0.28
+singlecopter-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2820,1.8875,3.5091,10.24,10.48
+singlecopter-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2341,1.5533,2.9174,8.44,10.24
+singlecopter-logged-flight,AHRS position horizontal (POS),whole log,metres,2820,0.0315,0.0528,0.1473,0.2006
+singlecopter-logged-flight,AHRS position horizontal (POS),airborne,metres,2341,0.0347,0.0573,0.1561,0.2006
+singlecopter-logged-flight,AHRS altitude (POS),whole log,metres,2820,0.3229,0.5153,1.41,2.1301
+singlecopter-logged-flight,AHRS altitude (POS),airborne,metres,2341,0.1931,0.1991,0.27,0.43
+singlecopter-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1128,0.1841,0.2166,0.3635,0.3878
+singlecopter-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,937,0.1827,0.2161,0.3649,0.3876
+singlecopter-logged-flight,GPS position horizontal (GPS),whole log,metres,564,0.0593,0.1615,0.5009,0.5901
+singlecopter-logged-flight,GPS position horizontal (GPS),airborne,metres,468,0.0713,0.1772,0.5343,0.5901
+singlecopter-logged-flight,GPS altitude (GPS),whole log,metres,564,0.0295,0.0636,0.2,0.24
+singlecopter-logged-flight,GPS altitude (GPS),airborne,metres,468,0.0339,0.0688,0.21,0.24

@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+dotriaconta_octaquad_x-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1265,0.1327,0.2131,0.2291
+dotriaconta_octaquad_x-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1318,0.1378,0.214,0.2291
+dotriaconta_octaquad_x-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.1016,0.1137,0.2171,0.3329
+dotriaconta_octaquad_x-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.1059,0.1186,0.2231,0.3329
+dotriaconta_octaquad_x-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5875,0.6837,1.5649,1.69
+dotriaconta_octaquad_x-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5347,0.6071,0.9101,1.5859
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.122,0.1285,0.21,0.23
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2364,0.1273,0.1337,0.21,0.23
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0945,0.1051,0.2,0.24
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2364,0.0985,0.1096,0.21,0.24
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5827,0.679,1.56,1.68
+dotriaconta_octaquad_x-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2364,0.5309,0.6037,0.91,1.58
+dotriaconta_octaquad_x-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.0303,0.0499,0.1384,0.2006
+dotriaconta_octaquad_x-logged-flight,AHRS position horizontal (POS),airborne,metres,2364,0.0329,0.0534,0.145,0.2006
+dotriaconta_octaquad_x-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.021,0.0368,0.1,0.14
+dotriaconta_octaquad_x-logged-flight,AHRS altitude (POS),airborne,metres,2364,0.0231,0.0393,0.11,0.14
+dotriaconta_octaquad_x-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0077,0.0116,0.0237,0.059
+dotriaconta_octaquad_x-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.0081,0.0122,0.0244,0.059
+dotriaconta_octaquad_x-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0617,0.163,0.5121,0.5789
+dotriaconta_octaquad_x-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.0715,0.1756,0.5233,0.5789
+dotriaconta_octaquad_x-logged-flight,GPS altitude (GPS),whole log,metres,549,0.0299,0.0622,0.2,0.22
+dotriaconta_octaquad_x-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0331,0.0663,0.2,0.22

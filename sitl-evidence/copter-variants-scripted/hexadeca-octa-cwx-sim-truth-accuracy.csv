@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+hexadeca-octa-cwx-logged-flight,AHRS roll (ATT),whole log,angle,1098,0.1274,0.1333,0.2125,0.2253
+hexadeca-octa-cwx-logged-flight,AHRS roll (ATT),airborne,angle,945,0.1326,0.1384,0.2133,0.2253
+hexadeca-octa-cwx-logged-flight,AHRS pitch (ATT),whole log,angle,1098,0.101,0.1139,0.22,0.3385
+hexadeca-octa-cwx-logged-flight,AHRS pitch (ATT),airborne,angle,945,0.1053,0.1189,0.2249,0.3385
+hexadeca-octa-cwx-logged-flight,AHRS yaw (ATT),whole log,angle,1098,0.5846,0.6801,1.5709,1.6898
+hexadeca-octa-cwx-logged-flight,AHRS yaw (ATT),airborne,angle,945,0.5306,0.6018,0.9047,1.5804
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2745,0.1229,0.1292,0.21,0.22
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2363,0.1282,0.1344,0.21,0.22
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2745,0.0938,0.1052,0.21,0.25
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2363,0.0977,0.1098,0.21,0.25
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2745,0.5805,0.6759,1.56,1.68
+hexadeca-octa-cwx-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2363,0.5275,0.5991,0.9,1.58
+hexadeca-octa-cwx-logged-flight,AHRS position horizontal (POS),whole log,metres,2745,0.032,0.0546,0.1561,0.2117
+hexadeca-octa-cwx-logged-flight,AHRS position horizontal (POS),airborne,metres,2363,0.0352,0.0586,0.167,0.2117
+hexadeca-octa-cwx-logged-flight,AHRS altitude (POS),whole log,metres,2745,0.0195,0.0342,0.09,0.13
+hexadeca-octa-cwx-logged-flight,AHRS altitude (POS),airborne,metres,2363,0.0216,0.0366,0.1,0.13
+hexadeca-octa-cwx-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1098,0.0077,0.0108,0.0189,0.0481
+hexadeca-octa-cwx-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,945,0.0081,0.0113,0.0221,0.0481
+hexadeca-octa-cwx-logged-flight,GPS position horizontal (GPS),whole log,metres,549,0.0634,0.1675,0.5232,0.59
+hexadeca-octa-cwx-logged-flight,GPS position horizontal (GPS),airborne,metres,473,0.0736,0.1804,0.5343,0.59
+hexadeca-octa-cwx-logged-flight,GPS altitude (GPS),whole log,metres,549,0.031,0.0642,0.21,0.22
+hexadeca-octa-cwx-logged-flight,GPS altitude (GPS),airborne,metres,473,0.0343,0.0685,0.21,0.22

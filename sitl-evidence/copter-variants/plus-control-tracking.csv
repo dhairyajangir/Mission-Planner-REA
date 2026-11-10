@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+plus-logged-flight,roll: desired - actual (ANG),deg,37721,0.0098,0.0121,0.0233,0.0565
+plus-logged-flight,pitch: desired - actual (ANG),deg,37721,0.0183,0.0286,0.0636,0.137
+plus-logged-flight,yaw: desired - actual (ANG),deg,37721,0.0176,0.0367,0.051,0.3693
+plus-logged-flight,roll rate: desired - actual (RATE),deg/s,37721,0.0704,0.0872,0.1609,0.3489
+plus-logged-flight,pitch rate: desired - actual (RATE),deg/s,37721,0.1298,0.2144,0.4648,1.4929
+plus-logged-flight,yaw rate: desired - actual (RATE),deg/s,37721,0.0327,0.129,0.1027,5.5147
+plus-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,944,0.0086,0.0163,0.0456,0.0655
+plus-logged-flight,position north: target - actual (PSCN),m,944,0.0802,0.1612,0.4677,0.6218
+plus-logged-flight,position east: target - actual (PSCE),m,944,0.0147,0.0166,0.0317,0.0499
+plus-logged-flight,velocity north: target - actual (PSCN),m/s,944,0.1123,0.2313,0.6358,0.7047
+plus-logged-flight,velocity east: target - actual (PSCE),m/s,944,0.0033,0.0055,0.013,0.0252
+plus-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1098,12.196,12.6,25.94 / 40.76,100 -> 76
