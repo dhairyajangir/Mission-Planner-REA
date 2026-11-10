@@ -29,8 +29,18 @@ M_LAT = 111320.0
 M_LON = M_LAT * math.cos(math.radians(HOME[0]))
 WORK = os.path.expanduser('~/cg-terrain')
 VEH = {'plane': ('arduplane', 'plane', 'plane'), 'copter': ('arducopter', '+', 'copter')}
-# the two terrain-relative points from ArduPlane_Tests/TerrainMission/ap-terrain.txt, where the ground is known to change
+# the two terrain-relative points from ArduPlane_Tests/TerrainMission/ap-terrain.txt, where the ground is known to change (Plane, plane-scale distance, 3-5 km)
 WP2, WP3 = (-35.361821, 149.112238), (-35.367368, 149.156778)
+
+
+def along(a, b, fraction):
+    """A point `fraction` of the way from `a` to `b` (plain linear interpolation of lat/lon, fine at this scale)."""
+    return (a[0] + fraction * (b[0] - a[0]), a[1] + fraction * (b[1] - a[1]))
+
+
+# Copter-scale points on the same two bearings (towards WP2 and WP3), much closer in so the flight finishes in a bounded time at Copter cruise speed, but still on the same
+# real elevation profile already confirmed to change for the Plane route above (not a new, unverified direction).
+CWP2, CWP3 = along(HOME, WP2, 0.12), along(HOME, WP3, 0.10)   # roughly 580 m and 400 m from home
 
 
 def terrain_item(seq, lat, lon, alt_agl):
@@ -41,10 +51,12 @@ def route(table):
     items = [mission.Item(0, 0, 16, 0, 1, 0, 0, 0, 0, HOME[0], HOME[1], HOME[2])]
     if table == 'plane':
         items.append(mission.Item(1, 3, 22, 1, 1, 15.0, 0, 0, 0, 0.0, 0.0, 80.0))
+        items.append(terrain_item(2, WP2[0], WP2[1], 100.0))
+        items.append(terrain_item(3, WP3[0], WP3[1], 100.0))
     else:
-        items.append(mission.Item(1, 3, 22, 1, 1, 0, 0, 0, 0, 0.0, 0.0, 80.0))
-    items.append(terrain_item(2, WP2[0], WP2[1], 100.0))
-    items.append(terrain_item(3, WP3[0], WP3[1], 100.0))
+        items.append(mission.Item(1, 3, 22, 1, 1, 0, 0, 0, 0, 0.0, 0.0, 30.0))
+        items.append(terrain_item(2, CWP2[0], CWP2[1], 40.0))
+        items.append(terrain_item(3, CWP3[0], CWP3[1], 40.0))
     items.append(mission.Item(4, 3, (21 if table == 'plane' else 20), 0, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0))
     return items
 
@@ -67,6 +79,8 @@ def fly(name):
     notes, rows, proc = [], [], start(binary, model, True)
     try:
         conn, _ = link.connect(5760, timeout=120.0)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 511, 0, 33, 200000, 0, 0, 0, 0, 0)    # GLOBAL_POSITION_INT at 5 Hz (Copter does not stream it unasked)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 511, 0, 136, 500000, 0, 0, 0, 0, 0)   # TERRAIN_REPORT at 2 Hz (Copter does not stream this either)
         time.sleep(45)
         base = link.read_params(conn)
         bad = [r.name for r in params.write(conn, [params.Change('TERRAIN_ENABLE', base.get('TERRAIN_ENABLE'), 1.0)]) if not r.ok]
@@ -79,6 +93,11 @@ def fly(name):
             proc.kill()
         proc = start(binary, model, False)
         conn, _ = link.connect(5760, timeout=120.0)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 511, 0, 33, 200000, 0, 0, 0, 0, 0)    # stream requests do not survive the reboot above; resend them
+        ack_a = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 511, 0, 136, 500000, 0, 0, 0, 0, 0)
+        ack_b = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('stream requests after reboot: GLOBAL_POSITION_INT ack %s, TERRAIN_REPORT ack %s' % (None if ack_a is None else ack_a.result, None if ack_b is None else ack_b.result))
         time.sleep(45)
         after = link.read_params(conn)
         notes.append('after restart TERRAIN_ENABLE=%s' % after.get('TERRAIN_ENABLE'))

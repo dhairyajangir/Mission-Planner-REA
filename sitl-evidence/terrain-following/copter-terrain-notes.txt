@@ -1,0 +1,15 @@
+TERRAIN_ENABLE was 1.0, set to 1 (rejected []); restarting
+stream requests after reboot: GLOBAL_POSITION_INT ack 0, TERRAIN_REPORT ack 0
+after restart TERRAIN_ENABLE=1.0
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+start: mission start accepted (ack result 0)
+t=  11.4 vehicle: Mission: 2 WP
+t=  74.7 vehicle: Reached command #2
+t=  74.7 vehicle: Mission: 3 WP
+t= 131.0 vehicle: Reached command #3
+t= 131.0 vehicle: Mission: 4 RTL
+t= 194.4 vehicle: SIM Hit ground at 0.500975 m/s
+t= 196.5 vehicle: Disarming motors
+t= 196.7 disarmed
