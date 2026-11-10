@@ -1,0 +1,5 @@
+[Errno 111] Connection refused sleeping
+{'ack_result': 4, 'custom_mode': 0, 'statustext': 'Mode change to Turtle failed: init failed', 'step': '1 defaults, no RC input'}
+{'ack_result': 4, 'custom_mode': 0, 'statustext': 'Mode change to Turtle failed: init failed', 'step': '2 centred RC override only (no DShot type)'}
+{'ack_result': 4, 'custom_mode': 0, 'statustext': 'Mode change to Turtle failed: init failed', 'step': '3 SERVO_DSHOT_ESC=1, RC override stopped'}
+{'ack_result': 0, 'custom_mode': 28, 'statustext': 'Turtle: raise throttle to arm | Turtle: raise throttle to arm | Turtle: raise throttle to arm', 'step': '4 SERVO_DSHOT_ESC=1, centred RC override'}

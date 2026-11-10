@@ -113,8 +113,11 @@ def main():
     subprocess.call(['rm', '-rf', WORK])
     os.makedirs(WORK)
     log = open(os.path.join(OUT, 'modes-gdb.txt'), 'w')
-    proc = subprocess.Popen(['gdb', '-q', '-batch', '-x', gdb_script(), '--args', BIN, '-w', '--model', '+', '-I', '0', '-s', '1', '--home', '%s,%s,%s,0' % HOME], cwd=WORK,
-                            stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
+    sim_args = [BIN, '-w', '--model', '+', '-I', '0', '-s', '1', '--home', '%s,%s,%s,0' % HOME]
+    if os.environ.get('NO_GDB'):                                      # NO_GDB=1: the same harness without the debugger (does gdb change TURTLE's answer?)
+        proc = subprocess.Popen(sim_args, cwd=WORK, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
+    else:
+        proc = subprocess.Popen(['gdb', '-q', '-batch', '-x', gdb_script(), '--args'] + sim_args, cwd=WORK, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL)
     notes, results, sticks = [], [], None
     try:
         conn, _ = link.connect(5760, timeout=300.0)

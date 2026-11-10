@@ -1,0 +1,5 @@
+step,ack_result,custom_mode,statustext
+"1 defaults, no RC input",4,0,Mode change to Turtle failed: init failed
+2 centred RC override only (no DShot type),4,0,Mode change to Turtle failed: init failed
+"3 SERVO_DSHOT_ESC=1, RC override stopped",4,0,Mode change to Turtle failed: init failed
+"4 SERVO_DSHOT_ESC=1, centred RC override",0,28,Turtle: raise throttle to arm

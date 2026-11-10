@@ -9,7 +9,7 @@ steps and records the reported mode and the vehicle's own STATUSTEXT messages af
   4. SERVO_DSHOT_ESC = 1 with centred RC override
 It does not test flipping a vehicle over: arming in Turtle mode uses a separate path and a crashed airframe, which is not simulated.
 
-    python sitl-copter-turtle-entry.py <arducopter binary> <outdir>
+    python sitl-copter-turtle-entry.py <arducopter binary> <outdir>      (TURTLE_SPEEDUP=1 runs the simulator in real time instead of at speedup 5)
 """
 import csv
 import json
@@ -61,7 +61,7 @@ def main():
     binary, outdir = sys.argv[1], sys.argv[2]
     os.makedirs(outdir, exist_ok=True)
     log = open(os.path.join(outdir, 'sitl.log'), 'w')
-    proc = subprocess.Popen([binary, '-w', '-M', '+', '-I', '7', '-s', '5', '--home', '-35.363261,149.165230,584,0'], cwd=outdir, stdout=log, stderr=subprocess.STDOUT)
+    proc = subprocess.Popen([binary, '-w', '-M', '+', '-I', '7', '-s', os.environ.get('TURTLE_SPEEDUP', '5'), '--home', '-35.363261,149.165230,584,0'], cwd=outdir, stdout=log, stderr=subprocess.STDOUT)
     rows = []
     try:
         m = None
