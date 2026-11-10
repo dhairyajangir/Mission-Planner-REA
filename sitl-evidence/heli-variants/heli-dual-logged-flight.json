@@ -1,0 +1,58 @@
+{
+ "variant": "heli-dual",
+ "model": "heli-dual",
+ "defaults": [
+  "Tools/autotest/default_params/copter-heli.parm",
+  "Tools/autotest/default_params/copter-heli-dual.parm"
+ ],
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 11.0,
+  "FRAME_TYPE": 1.0,
+  "H_TAIL_TYPE": null,
+  "H_RSC_MODE": 2.0,
+  "H_RSC_RUNUP_TIME": 10.0,
+  "RC8_OPTION": 32.0,
+  "LOG_BITMASK": 4194303.0,
+  "H_COL_MIN": 1460.0,
+  "H_COL_MAX": 1740.0,
+  "H_COL2_MIN": 1460.0,
+  "H_COL2_MAX": 1740.0
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 116.3064193725586,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 103.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 194.0
+ },
+ "notes": [
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  6.1 vehicle: Mission: 2 LoitTime",
+  "t= 49.0 vehicle: Reached command #2",
+  "t= 49.0 vehicle: Mission: 3 RTL",
+  "t= 97.4 vehicle: SIM Hit ground at 0.500688 m/s",
+  "t=109.4 vehicle: Disarming motors",
+  "t=109.7 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "heli-dual-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 62349312,
+   "gz_bytes": 32622672,
+   "gz_sha256": "9c22c52151a1325c323135c413adbdcd4ea509df902d5cee963ce3a6d038e9cc"
+  }
+ ]
+}

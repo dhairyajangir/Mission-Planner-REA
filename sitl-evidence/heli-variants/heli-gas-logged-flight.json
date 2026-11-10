@@ -1,0 +1,58 @@
+{
+ "variant": "heli-gas",
+ "model": "heli-gas",
+ "defaults": [
+  "Tools/autotest/default_params/copter-heli.parm",
+  "Tools/autotest/default_params/copter-heli-gas.parm"
+ ],
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "FRAME_CLASS": 6.0,
+  "FRAME_TYPE": 1.0,
+  "H_TAIL_TYPE": 0.0,
+  "H_RSC_MODE": 3.0,
+  "H_RSC_RUNUP_TIME": 15.0,
+  "RC8_OPTION": 32.0,
+  "LOG_BITMASK": 4194303.0,
+  "H_COL_MIN": 1460.0,
+  "H_COL_MAX": 1740.0,
+  "H_COL2_MIN": null,
+  "H_COL2_MAX": null
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 114.85674285888672,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 101.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 192.0
+ },
+ "notes": [
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  6.5 vehicle: Mission: 2 LoitTime",
+  "t= 48.8 vehicle: Reached command #2",
+  "t= 48.8 vehicle: Mission: 3 RTL",
+  "t= 95.5 vehicle: SIM Hit ground at 0.501858 m/s",
+  "t=112.4 vehicle: Disarming motors",
+  "t=113.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "heli-gas-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 63643648,
+   "gz_bytes": 33392083,
+   "gz_sha256": "a5542ec66a8897baa4b14a446507a64f0e6271e8fa203ea57a943e3d59aabdeb"
+  }
+ ]
+}

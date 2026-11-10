@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+heli-dual-logged-flight,roll: desired - actual (ANG),deg,39161,0.2484,0.8053,1.2664,5.5816
+heli-dual-logged-flight,pitch: desired - actual (ANG),deg,39161,0.2299,1.016,1.0497,9.1854
+heli-dual-logged-flight,yaw: desired - actual (ANG),deg,39161,3.944,9.8987,30.7845,43.7372
+heli-dual-logged-flight,roll rate: desired - actual (RATE),deg/s,39161,0.1912,0.2865,0.5993,1.4642
+heli-dual-logged-flight,pitch rate: desired - actual (RATE),deg/s,39161,0.1493,0.2347,0.5147,1.6672
+heli-dual-logged-flight,yaw rate: desired - actual (RATE),deg/s,39161,12.8838,29.5657,86.869,126.0494
+heli-dual-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,980,0.0266,0.044,0.1074,0.1736
+heli-dual-logged-flight,position north: target - actual (PSCN),m,980,0.1065,0.1819,0.4874,0.619
+heli-dual-logged-flight,position east: target - actual (PSCE),m,980,0.0485,0.104,0.2385,0.5304
+heli-dual-logged-flight,velocity north: target - actual (PSCN),m/s,980,0.1193,0.2165,0.5615,0.732
+heli-dual-logged-flight,velocity east: target - actual (PSCE),m/s,980,0.0591,0.1458,0.3229,0.7903
+heli-dual-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1584,50.201,50.4,16.04 / 19.92,99 -> 78

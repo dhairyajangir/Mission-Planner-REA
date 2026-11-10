@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+heli-dual-logged-flight,AHRS roll (ATT),whole log,angle,1584,0.0886,0.1003,0.1728,0.482
+heli-dual-logged-flight,AHRS roll (ATT),airborne,angle,982,0.0878,0.1008,0.1676,0.482
+heli-dual-logged-flight,AHRS pitch (ATT),whole log,angle,1584,0.0995,0.1122,0.1879,0.6377
+heli-dual-logged-flight,AHRS pitch (ATT),airborne,angle,982,0.1027,0.1192,0.2186,0.6377
+heli-dual-logged-flight,AHRS yaw (ATT),whole log,angle,1584,3.6336,5.4866,10.078,10.2841
+heli-dual-logged-flight,AHRS yaw (ATT),airborne,angle,982,1.6653,2.9573,8.4468,9.5572
+heli-dual-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3960,0.0814,0.0908,0.17,0.2
+heli-dual-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2455,0.0799,0.0884,0.16,0.2
+heli-dual-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3960,0.0889,0.0975,0.16,0.24
+heli-dual-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2455,0.0887,0.0991,0.18,0.24
+heli-dual-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3960,3.6156,5.4795,10.08,10.28
+heli-dual-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2455,1.6433,2.9493,8.45,9.54
+heli-dual-logged-flight,AHRS position horizontal (POS),whole log,metres,3960,0.0305,0.0539,0.1561,0.2456
+heli-dual-logged-flight,AHRS position horizontal (POS),airborne,metres,2455,0.0407,0.0677,0.1802,0.2456
+heli-dual-logged-flight,AHRS altitude (POS),whole log,metres,3960,0.0569,0.0625,0.1,0.15
+heli-dual-logged-flight,AHRS altitude (POS),airborne,metres,2455,0.0559,0.0639,0.11,0.15
+heli-dual-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1584,0.1026,0.1206,0.2166,0.2586
+heli-dual-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,982,0.1024,0.1209,0.2161,0.2586
+heli-dual-logged-flight,GPS position horizontal (GPS),whole log,metres,791,0.0622,0.1886,0.6022,0.7818
+heli-dual-logged-flight,GPS position horizontal (GPS),airborne,metres,491,0.1002,0.2393,0.7356,0.7818
+heli-dual-logged-flight,GPS altitude (GPS),whole log,metres,791,0.03,0.0738,0.18,0.32
+heli-dual-logged-flight,GPS altitude (GPS),airborne,metres,491,0.046,0.0927,0.29,0.32

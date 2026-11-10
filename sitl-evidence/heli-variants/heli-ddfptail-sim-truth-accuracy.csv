@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+heli-ddfptail-logged-flight,AHRS roll (ATT),whole log,angle,1564,0.0791,0.0937,0.1606,1.2198
+heli-ddfptail-logged-flight,AHRS roll (ATT),airborne,angle,964,0.0716,0.0807,0.1496,0.2935
+heli-ddfptail-logged-flight,AHRS pitch (ATT),whole log,angle,1564,0.0929,0.103,0.1697,0.3101
+heli-ddfptail-logged-flight,AHRS pitch (ATT),airborne,angle,964,0.0889,0.1021,0.1813,0.3101
+heli-ddfptail-logged-flight,AHRS yaw (ATT),whole log,angle,1564,3.3866,5.286,10.1446,10.3241
+heli-ddfptail-logged-flight,AHRS yaw (ATT),airborne,angle,964,1.2107,2.0527,5.783,9.5772
+heli-ddfptail-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3910,0.0736,0.099,0.15,2.67
+heli-ddfptail-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2410,0.0648,0.072,0.14,0.16
+heli-ddfptail-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3910,0.0838,0.0928,0.16,0.23
+heli-ddfptail-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2410,0.0771,0.088,0.15,0.23
+heli-ddfptail-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3910,3.3869,5.286,10.14,10.32
+heli-ddfptail-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2410,1.2146,2.057,5.85,9.57
+heli-ddfptail-logged-flight,AHRS position horizontal (POS),whole log,metres,3910,0.0301,0.0552,0.1672,0.2456
+heli-ddfptail-logged-flight,AHRS position horizontal (POS),airborne,metres,2410,0.0408,0.0695,0.2004,0.2456
+heli-ddfptail-logged-flight,AHRS altitude (POS),whole log,metres,3910,0.0583,0.0615,0.09,0.1201
+heli-ddfptail-logged-flight,AHRS altitude (POS),airborne,metres,2410,0.0573,0.0616,0.09,0.1201
+heli-ddfptail-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1564,0.1044,0.1223,0.2166,0.2558
+heli-ddfptail-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,964,0.1055,0.1226,0.2138,0.2558
+heli-ddfptail-logged-flight,GPS position horizontal (GPS),whole log,metres,781,0.0634,0.1906,0.6234,0.8017
+heli-ddfptail-logged-flight,GPS position horizontal (GPS),airborne,metres,482,0.1025,0.2426,0.7349,0.8017
+heli-ddfptail-logged-flight,GPS altitude (GPS),whole log,metres,781,0.0304,0.0742,0.18,0.31
+heli-ddfptail-logged-flight,GPS altitude (GPS),airborne,metres,482,0.0469,0.0933,0.29,0.31

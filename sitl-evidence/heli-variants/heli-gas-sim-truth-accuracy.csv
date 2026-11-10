@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+heli-gas-logged-flight,AHRS roll (ATT),whole log,angle,1614,0.0884,0.1041,0.1711,1.4936
+heli-gas-logged-flight,AHRS roll (ATT),airborne,angle,959,0.0868,0.0959,0.1685,0.3062
+heli-gas-logged-flight,AHRS pitch (ATT),whole log,angle,1614,0.0964,0.1055,0.1717,0.3171
+heli-gas-logged-flight,AHRS pitch (ATT),airborne,angle,959,0.0954,0.1073,0.1877,0.3171
+heli-gas-logged-flight,AHRS yaw (ATT),whole log,angle,1614,3.3817,5.2637,10.0757,10.2841
+heli-gas-logged-flight,AHRS yaw (ATT),airborne,angle,959,1.3881,2.4626,7.4146,9.4461
+heli-gas-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,4035,0.0832,0.1061,0.16,2.68
+heli-gas-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2398,0.0804,0.0879,0.15,0.18
+heli-gas-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,4035,0.0879,0.0959,0.16,0.21
+heli-gas-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2398,0.0843,0.0941,0.16,0.21
+heli-gas-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,4035,3.3813,5.2627,10.07,10.28
+heli-gas-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2398,1.3925,2.4682,7.41,9.44
+heli-gas-logged-flight,AHRS position horizontal (POS),whole log,metres,4035,0.03,0.0552,0.1672,0.2456
+heli-gas-logged-flight,AHRS position horizontal (POS),airborne,metres,2398,0.0417,0.0708,0.2006,0.2456
+heli-gas-logged-flight,AHRS altitude (POS),whole log,metres,4035,0.0566,0.0619,0.1,0.1301
+heli-gas-logged-flight,AHRS altitude (POS),airborne,metres,2398,0.0545,0.0621,0.11,0.1301
+heli-gas-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1614,0.1027,0.1206,0.2166,0.2529
+heli-gas-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,959,0.1025,0.1209,0.2169,0.2529
+heli-gas-logged-flight,GPS position horizontal (GPS),whole log,metres,806,0.0612,0.1872,0.6011,0.8015
+heli-gas-logged-flight,GPS position horizontal (GPS),airborne,metres,480,0.1027,0.2426,0.7348,0.8015
+heli-gas-logged-flight,GPS altitude (GPS),whole log,metres,806,0.0294,0.0731,0.18,0.32
+heli-gas-logged-flight,GPS altitude (GPS),airborne,metres,480,0.0471,0.0937,0.3,0.32

@@ -1,0 +1,13 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+heli-ddvptail-logged-flight,roll: desired - actual (ANG),deg,38361,0.1019,0.1919,0.5024,0.9092
+heli-ddvptail-logged-flight,pitch: desired - actual (ANG),deg,38361,0.131,0.2911,0.6257,1.5025
+heli-ddvptail-logged-flight,yaw: desired - actual (ANG),deg,38361,1.3767,3.4339,9.4731,17.0943
+heli-ddvptail-logged-flight,roll rate: desired - actual (RATE),deg/s,38361,0.5087,0.8466,1.986,4.2458
+heli-ddvptail-logged-flight,pitch rate: desired - actual (RATE),deg/s,38361,0.4492,0.7609,1.8071,4.4114
+heli-ddvptail-logged-flight,yaw rate: desired - actual (RATE),deg/s,38361,6.7022,14.9702,44.2644,81.6515
+heli-ddvptail-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,960,0.0262,0.0434,0.1072,0.1704
+heli-ddvptail-logged-flight,position north: target - actual (PSCN),m,960,0.0701,0.1178,0.2864,0.4562
+heli-ddvptail-logged-flight,position east: target - actual (PSCE),m,960,0.1005,0.185,0.4902,0.6932
+heli-ddvptail-logged-flight,velocity north: target - actual (PSCN),m/s,960,0.0761,0.1285,0.3061,0.4394
+heli-ddvptail-logged-flight,velocity east: target - actual (PSCE),m/s,960,0.1098,0.2127,0.5538,0.8506
+heli-ddvptail-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1564,50.201,50.4,15.99 / 19.92,99 -> 78

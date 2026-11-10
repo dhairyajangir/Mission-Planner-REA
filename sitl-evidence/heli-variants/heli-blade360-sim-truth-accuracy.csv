@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+heli-blade360-logged-flight,AHRS roll (ATT),whole log,angle,1564,0.088,0.1038,0.1793,1.2796
+heli-blade360-logged-flight,AHRS roll (ATT),airborne,angle,956,0.0813,0.0927,0.1645,0.3379
+heli-blade360-logged-flight,AHRS pitch (ATT),whole log,angle,1564,0.092,0.1025,0.1647,0.4335
+heli-blade360-logged-flight,AHRS pitch (ATT),airborne,angle,956,0.0909,0.1051,0.1875,0.4335
+heli-blade360-logged-flight,AHRS yaw (ATT),whole log,angle,1564,3.4896,5.3991,10.087,10.2924
+heli-blade360-logged-flight,AHRS yaw (ATT),airborne,angle,956,1.4145,2.5872,7.8753,9.6259
+heli-blade360-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3910,0.0822,0.1081,0.17,2.8
+heli-blade360-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2388,0.0741,0.0823,0.15,0.21
+heli-blade360-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3910,0.0833,0.0917,0.16,0.24
+heli-blade360-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2388,0.0794,0.09,0.16,0.24
+heli-blade360-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3910,3.4728,5.393,10.08,10.29
+heli-blade360-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2388,1.3876,2.5688,7.89,9.62
+heli-blade360-logged-flight,AHRS position horizontal (POS),whole log,metres,3910,0.0321,0.0568,0.1709,0.2567
+heli-blade360-logged-flight,AHRS position horizontal (POS),airborne,metres,2388,0.0428,0.0716,0.2006,0.2567
+heli-blade360-logged-flight,AHRS altitude (POS),whole log,metres,3910,0.0574,0.0629,0.1,0.1201
+heli-blade360-logged-flight,AHRS altitude (POS),airborne,metres,2388,0.0546,0.0623,0.11,0.1201
+heli-blade360-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1564,0.1023,0.1203,0.2164,0.2574
+heli-blade360-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,956,0.1027,0.1211,0.2164,0.2574
+heli-blade360-logged-flight,GPS position horizontal (GPS),whole log,metres,781,0.066,0.192,0.6079,0.8066
+heli-blade360-logged-flight,GPS position horizontal (GPS),airborne,metres,477,0.1079,0.2456,0.7361,0.8066
+heli-blade360-logged-flight,GPS altitude (GPS),whole log,metres,781,0.0298,0.0739,0.18,0.32
+heli-blade360-logged-flight,GPS altitude (GPS),airborne,metres,477,0.0462,0.0932,0.28,0.32

@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+heli-quad-logged-flight,AHRS roll (ATT),whole log,angle,1584,0.0862,0.0946,0.1612,0.296
+heli-quad-logged-flight,AHRS roll (ATT),airborne,angle,978,0.0825,0.0906,0.1511,0.296
+heli-quad-logged-flight,AHRS pitch (ATT),whole log,angle,1584,0.0973,0.1063,0.1705,0.2931
+heli-quad-logged-flight,AHRS pitch (ATT),airborne,angle,978,0.0979,0.1091,0.198,0.2931
+heli-quad-logged-flight,AHRS yaw (ATT),whole log,angle,1584,3.5588,5.4855,10.078,10.2841
+heli-quad-logged-flight,AHRS yaw (ATT),airborne,angle,978,1.5407,2.9306,8.4849,9.5509
+heli-quad-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3960,0.0804,0.0884,0.15,0.18
+heli-quad-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2446,0.0764,0.0832,0.14,0.16
+heli-quad-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3960,0.091,0.0994,0.16,0.24
+heli-quad-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2446,0.0905,0.1007,0.17,0.24
+heli-quad-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3960,3.5593,5.4835,10.08,10.28
+heli-quad-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2446,1.5481,2.9372,8.47,9.55
+heli-quad-logged-flight,AHRS position horizontal (POS),whole log,metres,3960,0.0305,0.0546,0.167,0.2451
+heli-quad-logged-flight,AHRS position horizontal (POS),airborne,metres,2446,0.0414,0.0688,0.1892,0.2451
+heli-quad-logged-flight,AHRS altitude (POS),whole log,metres,3960,0.0571,0.0629,0.1,0.15
+heli-quad-logged-flight,AHRS altitude (POS),airborne,metres,2446,0.0554,0.0636,0.11,0.15
+heli-quad-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1584,0.1025,0.1204,0.2166,0.2606
+heli-quad-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,978,0.1024,0.1208,0.2164,0.2606
+heli-quad-logged-flight,GPS position horizontal (GPS),whole log,metres,791,0.0627,0.1872,0.6123,0.757
+heli-quad-logged-flight,GPS position horizontal (GPS),airborne,metres,489,0.1015,0.2381,0.7013,0.757
+heli-quad-logged-flight,GPS altitude (GPS),whole log,metres,791,0.0292,0.0729,0.18,0.31
+heli-quad-logged-flight,GPS altitude (GPS),airborne,metres,489,0.045,0.0917,0.29,0.31

@@ -3,3 +3,9 @@ custom-mode-00000001.BIN.gz  11339533 bytes  sha256 ca8d9f712b44d93a40de82062abf
 heli-acro-00000001.BIN.gz  11645912 bytes  sha256 355b289dfa78c42da164fc30ba27d87f65c9bd18c813b78b611e054dc7304cf0
 plane-logged-flight-00000001.BIN.gz  6981266 bytes  sha256 81cc1c7edf68b3d82314168fcea82e72d846e1cb435926e916870f9c48f18b84
 heli-logged-flight-00000001.BIN.gz  32329141 bytes  sha256 086c93ba1a192cd4ddfacd246a2d0c33958708fc4edf0210a4c0976c59b1fd3d
+heli-gas-logged-flight-00000001.BIN.gz  33392083 bytes  sha256 a5542ec66a8897baa4b14a446507a64f0e6271e8fa203ea57a943e3d59aabdeb
+heli-ddvptail-logged-flight-00000001.BIN.gz  32322385 bytes  sha256 bce9dd3e94434e020eee51529a1c5acd053b3fefee6fe7956545e848ac7007d3
+heli-ddfptail-logged-flight-00000001.BIN.gz  32213338 bytes  sha256 ae36471c7817d212f6e21fc19f8af0114f6e4a7dbf919d5e086b7bdd54e66329
+heli-dual-logged-flight-00000001.BIN.gz  32622672 bytes  sha256 9c22c52151a1325c323135c413adbdcd4ea509df902d5cee963ce3a6d038e9cc
+heli-blade360-logged-flight-00000001.BIN.gz  32316420 bytes  sha256 52ce5d10d21b3cbb6f1999f4c6663d631cfd266d60c4d586d6f09fa703590f87
+heli-quad-logged-flight-00000001.BIN.gz  32853125 bytes  sha256 3b0974b19587c3310650bb0534d4abce0b3292b949e1aab908aa56d0c0cefe6f
