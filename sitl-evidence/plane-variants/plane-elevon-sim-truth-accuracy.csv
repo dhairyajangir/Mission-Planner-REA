@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-elevon-logged-flight,AHRS roll (ATT),whole log,angle,3738,0.1748,0.2512,0.4771,1.3693
+plane-elevon-logged-flight,AHRS roll (ATT),airborne,angle,2588,0.2107,0.2928,0.5431,1.3693
+plane-elevon-logged-flight,AHRS pitch (ATT),whole log,angle,3738,0.213,0.4202,0.4311,12.1833
+plane-elevon-logged-flight,AHRS pitch (ATT),airborne,angle,2588,0.2095,0.2475,0.4623,0.8194
+plane-elevon-logged-flight,AHRS yaw (ATT),whole log,angle,3738,0.5257,0.5977,0.8532,1.4212
+plane-elevon-logged-flight,AHRS yaw (ATT),airborne,angle,2588,0.4801,0.5418,0.8362,1.4212
+plane-elevon-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,1869,0.1283,0.1471,0.25,0.28
+plane-elevon-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1294,0.1456,0.1619,0.26,0.28
+plane-elevon-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,1869,0.2089,0.4381,0.4,12.18
+plane-elevon-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1294,0.2061,0.2293,0.41,0.5
+plane-elevon-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,1869,0.4895,0.5559,0.84,0.88
+plane-elevon-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1294,0.429,0.476,0.65,0.66
+plane-elevon-logged-flight,AHRS position horizontal (POS),whole log,metres,1869,0.4498,0.5222,0.7683,0.8683
+plane-elevon-logged-flight,AHRS position horizontal (POS),airborne,metres,1294,0.598,0.6129,0.7904,0.8683
+plane-elevon-logged-flight,AHRS altitude (POS),whole log,metres,1869,0.1918,0.2203,0.41,0.55
+plane-elevon-logged-flight,AHRS altitude (POS),airborne,metres,1294,0.2179,0.247,0.48,0.55
+plane-elevon-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,748,0.1499,0.1818,0.3196,0.4031
+plane-elevon-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,517,0.1525,0.184,0.3289,0.4031
+plane-elevon-logged-flight,GPS position horizontal (GPS),whole log,metres,374,1.6924,2.0053,3.028,3.3173
+plane-elevon-logged-flight,GPS position horizontal (GPS),airborne,metres,259,2.2913,2.3698,3.0726,3.3173
+plane-elevon-logged-flight,GPS altitude (GPS),whole log,metres,374,0.2178,0.3901,1.0,1.36
+plane-elevon-logged-flight,GPS altitude (GPS),airborne,metres,259,0.3101,0.4679,1.28,1.36

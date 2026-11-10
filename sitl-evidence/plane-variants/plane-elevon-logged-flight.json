@@ -1,0 +1,75 @@
+{
+ "variant": "plane-elevon",
+ "kind": "plane",
+ "defaults": [
+  "Tools/autotest/models/plane.parm",
+  "Tools/autotest/default_params/plane-elevons.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 1,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 0.0,
+  "Q_FRAME_CLASS": null,
+  "Q_FRAME_TYPE": null,
+  "Q_TILT_ENABLE": null,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": null,
+  "Q_OPTIONS": null,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 1217.044921875,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 63.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 117.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 Takeoff",
+  "t=  0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec",
+  "t=  0.2 vehicle: Triggered AUTO. GPS speed = 0.0",
+  "t=  1.4 vehicle: Holding course 35999 at 5.4m/s (0.0)",
+  "t=  1.4 vehicle: Autoland direction= 0",
+  "t=  7.6 vehicle: Takeoff level-off starting at 22m",
+  "t=  9.6 vehicle: Takeoff complete at 60.01m",
+  "t=  9.6 vehicle: Mission: 2 WP",
+  "t= 12.0 vehicle: Reached waypoint #2 dist 51m",
+  "t= 12.0 vehicle: Mission: 3 WP",
+  "t= 25.1 vehicle: Reached waypoint #3 dist 52m",
+  "t= 25.1 vehicle: Mission: 4 WP",
+  "t= 38.2 vehicle: Reached waypoint #4 dist 52m",
+  "t= 38.2 vehicle: Mission: 5 Land",
+  "t= 38.2 vehicle: Landing approach start at 47.8m",
+  "t= 44.8 vehicle: Landing glide slope 8.9 degrees",
+  "t= 47.6 vehicle: Flare 15.9m sink=5.33 speed=19.6 dist=147.9",
+  "t= 56.3 vehicle: SIM Hit ground at 2.411300 m/s",
+  "t= 67.5 vehicle: Throttle disarmed",
+  "t= 67.5 vehicle: Auto disarmed",
+  "t= 67.6 vehicle: Distance from LAND point=4.62m",
+  "t= 68.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "plane-elevon-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 14213120,
+   "gz_bytes": 6724430,
+   "gz_sha256": "7033ec7ba98dd9881ee7f4e0a52a8b8fa22305d3ebe2417030bae8a28a0d13a5"
+  }
+ ]
+}

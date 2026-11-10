@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+quadplane-tri-logged-flight,AHRS roll (ATT),whole log,angle,36008,0.1319,0.2218,0.2689,3.6106
+quadplane-tri-logged-flight,AHRS roll (ATT),airborne,angle,30960,0.1388,0.2364,0.2909,3.6106
+quadplane-tri-logged-flight,AHRS pitch (ATT),whole log,angle,36008,0.1411,0.1543,0.2615,0.7319
+quadplane-tri-logged-flight,AHRS pitch (ATT),airborne,angle,30960,0.1433,0.1578,0.2712,0.7319
+quadplane-tri-logged-flight,AHRS yaw (ATT),whole log,angle,36008,0.5777,0.9524,2.7859,3.9518
+quadplane-tri-logged-flight,AHRS yaw (ATT),airborne,angle,30960,0.5615,0.9228,2.7531,3.0641
+quadplane-tri-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3001,0.1065,0.1215,0.23,0.46
+quadplane-tri-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2580,0.1098,0.126,0.24,0.29
+quadplane-tri-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3001,0.1282,0.1357,0.18,0.3
+quadplane-tri-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2580,0.1289,0.1371,0.19,0.3
+quadplane-tri-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3001,0.5586,0.9423,2.79,2.98
+quadplane-tri-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2580,0.5407,0.9134,2.75,2.98
+quadplane-tri-logged-flight,AHRS position horizontal (POS),whole log,metres,3001,0.1331,0.2124,0.4676,0.5463
+quadplane-tri-logged-flight,AHRS position horizontal (POS),airborne,metres,2580,0.1514,0.2289,0.4795,0.5463
+quadplane-tri-logged-flight,AHRS altitude (POS),whole log,metres,3001,0.06,0.0721,0.14,0.16
+quadplane-tri-logged-flight,AHRS altitude (POS),airborne,metres,2580,0.0666,0.077,0.14,0.16
+quadplane-tri-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1200,0.1026,0.1187,0.2,0.2882
+quadplane-tri-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,1032,0.1028,0.1185,0.1976,0.2882
+quadplane-tri-logged-flight,GPS position horizontal (GPS),whole log,metres,600,0.7746,1.3985,3.0643,3.1295
+quadplane-tri-logged-flight,GPS position horizontal (GPS),airborne,metres,516,0.9006,1.508,3.0733,3.1295
+quadplane-tri-logged-flight,GPS altitude (GPS),whole log,metres,600,0.1225,0.1621,0.32,0.51
+quadplane-tri-logged-flight,GPS altitude (GPS),airborne,metres,516,0.1405,0.1743,0.32,0.51

@@ -1,0 +1,75 @@
+{
+ "variant": "plane-3d",
+ "kind": "plane",
+ "defaults": [
+  "Tools/autotest/models/plane.parm",
+  "Tools/autotest/models/plane-3d.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 1,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 0.0,
+  "Q_FRAME_CLASS": null,
+  "Q_FRAME_TYPE": null,
+  "Q_TILT_ENABLE": null,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": null,
+  "Q_OPTIONS": null,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 1239.4342041015625,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 60.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 114.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 Takeoff",
+  "t=  0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec",
+  "t=  0.2 vehicle: Triggered AUTO. GPS speed = 0.0",
+  "t=  1.2 vehicle: Holding course 35988 at 5.2m/s (0.0)",
+  "t=  1.2 vehicle: Autoland direction= 359",
+  "t=  5.1 vehicle: Takeoff level-off starting at 24m",
+  "t=  7.2 vehicle: Takeoff complete at 60.08m",
+  "t=  7.2 vehicle: Mission: 2 WP",
+  "t=  9.3 vehicle: Reached waypoint #2 dist 50m",
+  "t=  9.3 vehicle: Mission: 3 WP",
+  "t= 21.5 vehicle: Reached waypoint #3 dist 39m",
+  "t= 21.5 vehicle: Mission: 4 WP",
+  "t= 33.8 vehicle: Reached waypoint #4 dist 40m",
+  "t= 33.8 vehicle: Mission: 5 Land",
+  "t= 33.8 vehicle: Landing approach start at 48.5m",
+  "t= 38.0 vehicle: Landing glide slope 8.9 degrees",
+  "t= 44.9 vehicle: Flare 9.2m sink=3.08 speed=20.0 dist=95.9",
+  "t= 54.7 vehicle: SIM Hit ground at 0.680051 m/s",
+  "t= 64.5 vehicle: Throttle disarmed",
+  "t= 64.5 vehicle: Auto disarmed",
+  "t= 64.6 vehicle: Distance from LAND point=29.05m",
+  "t= 65.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "plane-3d-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 13844480,
+   "gz_bytes": 6305331,
+   "gz_sha256": "d5de1ad18e8316976fc9ea08b3ea325875ee72601a33787348deb77c2591bf3f"
+  }
+ ]
+}

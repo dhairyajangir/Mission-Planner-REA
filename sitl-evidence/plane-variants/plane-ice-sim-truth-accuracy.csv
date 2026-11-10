@@ -1,0 +1,12 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-ice-logged-flight,AHRS roll (ATT),whole log,angle,15338,0.0663,0.0694,0.1063,0.1584
+plane-ice-logged-flight,AHRS pitch (ATT),whole log,angle,15338,0.0565,0.06,0.0936,0.1438
+plane-ice-logged-flight,AHRS yaw (ATT),whole log,angle,15338,0.5833,0.6535,0.844,0.8451
+plane-ice-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,7669,0.062,0.0653,0.1,0.15
+plane-ice-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,7669,0.0502,0.0544,0.09,0.14
+plane-ice-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,7669,0.5794,0.6492,0.84,0.84
+plane-ice-logged-flight,AHRS position horizontal (POS),whole log,metres,7669,0.0138,0.0141,0.0144,0.0213
+plane-ice-logged-flight,AHRS altitude (POS),whole log,metres,7669,0.1459,0.1466,0.16,0.1801
+plane-ice-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,3068,0.1455,0.1772,0.3108,0.3313
+plane-ice-logged-flight,GPS position horizontal (GPS),whole log,metres,1533,0.0,0.0,0.0,0.0
+plane-ice-logged-flight,GPS altitude (GPS),whole log,metres,1533,0.0,0.0,0.0,0.0

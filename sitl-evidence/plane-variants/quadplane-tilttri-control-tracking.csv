@@ -1,0 +1,8 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+quadplane-tilttri-logged-flight,roll: navigation demand - actual (CTUN),deg,1430,3.9253,9.7481,15.28,64.01
+quadplane-tilttri-logged-flight,pitch: navigation demand - actual (CTUN),deg,1430,1.8793,2.8582,6.91,10.24
+quadplane-tilttri-logged-flight,height: demand - actual (TECS hdem - h),m,573,2.8478,3.7026,7.8264,13.4802
+quadplane-tilttri-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,573,8.2524,11.5066,22.7437,22.7523
+quadplane-tilttri-logged-flight,altitude error (NTUN AltE),m,1430,7.1003,10.1214,23.24,30.46
+quadplane-tilttri-logged-flight,cross-track error (NTUN XT),m,1430,7.8438,17.2836,40.9943,86.4947
+quadplane-tilttri-logged-flight,airspeed error (NTUN AsE),m/s,1430,8.5861,12.1379,24.3704,24.9254

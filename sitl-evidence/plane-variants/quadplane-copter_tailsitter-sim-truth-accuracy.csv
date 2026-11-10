@@ -1,0 +1,12 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+quadplane-copter_tailsitter-logged-flight,AHRS roll (ATT),whole log,angle,91815,119.3501,123.4105,133.524,145.8017
+quadplane-copter_tailsitter-logged-flight,AHRS pitch (ATT),whole log,angle,91815,0.1094,0.1159,0.1908,0.2727
+quadplane-copter_tailsitter-logged-flight,AHRS yaw (ATT),whole log,angle,91815,112.0362,113.6103,135.519,148.5591
+quadplane-copter_tailsitter-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,7652,119.3428,123.4039,133.52,145.8
+quadplane-copter_tailsitter-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,7652,0.1152,0.1216,0.2,0.28
+quadplane-copter_tailsitter-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,7652,112.0323,113.6062,135.52,148.55
+quadplane-copter_tailsitter-logged-flight,AHRS position horizontal (POS),whole log,metres,7652,0.0273,0.0285,0.0352,0.0352
+quadplane-copter_tailsitter-logged-flight,AHRS altitude (POS),whole log,metres,7652,0.0505,0.0528,0.08,0.09
+quadplane-copter_tailsitter-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,3061,0.1085,0.1312,0.2424,0.2659
+quadplane-copter_tailsitter-logged-flight,GPS position horizontal (GPS),whole log,metres,1530,0.0,0.0,0.0,0.0
+quadplane-copter_tailsitter-logged-flight,GPS altitude (GPS),whole log,metres,1530,0.0,0.0,0.0,0.0

@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-dspoilers-logged-flight,AHRS roll (ATT),whole log,angle,3687,0.1719,0.2463,0.4462,1.3811
+plane-dspoilers-logged-flight,AHRS roll (ATT),airborne,angle,2486,0.2033,0.2865,0.4872,1.3811
+plane-dspoilers-logged-flight,AHRS pitch (ATT),whole log,angle,3687,0.1945,0.2337,0.4036,2.2513
+plane-dspoilers-logged-flight,AHRS pitch (ATT),airborne,angle,2486,0.2068,0.2416,0.4399,0.6972
+plane-dspoilers-logged-flight,AHRS yaw (ATT),whole log,angle,3687,0.5086,0.5734,0.7863,1.2913
+plane-dspoilers-logged-flight,AHRS yaw (ATT),airborne,angle,2486,0.4771,0.5367,0.8049,1.2913
+plane-dspoilers-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,1844,0.1264,0.1451,0.24,0.28
+plane-dspoilers-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1243,0.1379,0.1542,0.24,0.28
+plane-dspoilers-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,1844,0.1915,0.2222,0.36,2.25
+plane-dspoilers-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1243,0.2067,0.229,0.39,0.49
+plane-dspoilers-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,1844,0.4723,0.533,0.77,0.79
+plane-dspoilers-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1243,0.4243,0.4733,0.65,0.68
+plane-dspoilers-logged-flight,AHRS position horizontal (POS),whole log,metres,1844,0.4593,0.5296,0.7682,0.8683
+plane-dspoilers-logged-flight,AHRS position horizontal (POS),airborne,metres,1243,0.6204,0.6285,0.7793,0.8683
+plane-dspoilers-logged-flight,AHRS altitude (POS),whole log,metres,1844,0.2005,0.2278,0.43,0.55
+plane-dspoilers-logged-flight,AHRS altitude (POS),airborne,metres,1243,0.2287,0.2577,0.4999,0.55
+plane-dspoilers-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,737,0.1496,0.181,0.3198,0.3992
+plane-dspoilers-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,497,0.1552,0.1867,0.3289,0.3992
+plane-dspoilers-logged-flight,GPS position horizontal (GPS),whole log,metres,368,1.7296,2.0349,3.0532,3.3285
+plane-dspoilers-logged-flight,GPS position horizontal (GPS),airborne,metres,249,2.3685,2.4263,3.0836,3.3285
+plane-dspoilers-logged-flight,GPS altitude (GPS),whole log,metres,368,0.218,0.3913,1.04,1.37
+plane-dspoilers-logged-flight,GPS altitude (GPS),airborne,metres,249,0.3187,0.4754,1.29,1.37

@@ -1,0 +1,8 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+firefly-logged-flight,roll: navigation demand - actual (CTUN),deg,1353,5.3253,12.2112,23.14,68.48
+firefly-logged-flight,pitch: navigation demand - actual (CTUN),deg,1353,2.473,3.847,8.88,13.95
+firefly-logged-flight,height: demand - actual (TECS hdem - h),m,542,3.5363,4.3111,8.0181,13.4896
+firefly-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,542,8.0034,11.6614,22.7437,22.7523
+firefly-logged-flight,altitude error (NTUN AltE),m,1353,7.3455,9.7681,22.35,27.98
+firefly-logged-flight,cross-track error (NTUN XT),m,1353,8.369,17.8927,43.0402,88.1645
+firefly-logged-flight,airspeed error (NTUN AsE),m/s,1353,8.3131,12.2713,24.3808,24.9216

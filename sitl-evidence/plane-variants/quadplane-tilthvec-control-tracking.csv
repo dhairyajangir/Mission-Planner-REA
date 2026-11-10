@@ -1,0 +1,9 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+quadplane-tilthvec-logged-flight,roll: navigation demand - actual (CTUN),deg,3298,1.4108,7.015,5.23,73.34
+quadplane-tilthvec-logged-flight,pitch: navigation demand - actual (CTUN),deg,3298,1.0247,2.6673,6.79,20.18
+quadplane-tilthvec-logged-flight,height: demand - actual (TECS hdem - h),m,1320,13.817,15.279,18.9786,26.9276
+quadplane-tilthvec-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,1320,11.6159,12.1505,19.6506,24.6777
+quadplane-tilthvec-logged-flight,altitude error (NTUN AltE),m,3298,14.579,16.3376,26.12,30.97
+quadplane-tilthvec-logged-flight,cross-track error (NTUN XT),m,3298,1.7079,6.8078,15.7599,46.6315
+quadplane-tilthvec-logged-flight,airspeed error (NTUN AsE),m/s,3298,11.5146,12.1531,21.1844,23.9584
+quadplane-tilthvec-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",1881,11.921,12.6,36.29 / 87.58,99 -> 42

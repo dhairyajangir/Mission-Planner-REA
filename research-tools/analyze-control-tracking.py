@@ -76,7 +76,7 @@ def analyse(name, d):
         if s:
             rows.append([name, label, unit, s[0], round(s[1], 4), round(s[2], 4), round(s[3], 4), round(s[4], 4)])
 
-    copter = bool(d['PSCN']) or bool(d['ANG'])
+    copter = bool(d['CTUN']) and 'Alt' in d['CTUN'][0]                  # Copter-style CTUN has Alt; Plane CTUN has NavRoll (a VTOL plane also has PSCN/ANG, so those do not decide)
     if copter:
         wins = windows(d['CTUN'], lambda r: r['Alt'] > 1.0)
         add('roll: desired - actual (ANG)', 'deg', [wrap(r['DesRoll'] - r['Roll']) for r in d['ANG'] if inside(r['TimeUS'], wins)])

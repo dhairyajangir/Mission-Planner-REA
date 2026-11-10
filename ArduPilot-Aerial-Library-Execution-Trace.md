@@ -297,3 +297,51 @@ The helicopter's roll, pitch, position and altitude are as close as the Copter's
 | heli-quad | 13 |  | 102 s | 0.09 | 0.11 | 2.93 | 0.07 | 0.12 | 0.24 | 0.34 | 0.46 | 2.79 | 13.57 | 0.01 | 0.34 | 0.04 |
 
 Reading these: the estimates against the truth are almost the same in all six (roll and pitch about 0.1 degree, yaw 2.0 to 3.0 degrees, AHRS position 0.07 m, barometer 0.12 m, GPS 0.24 m), because the simulated sensors and the estimator do not depend on the frame. The controller tracking is where they differ: the dual rotor has the largest roll and pitch tracking error (0.8 and 1.0 degrees rms against 0.2 to 0.3 for the single rotor) and the largest yaw-rate error (30 degrees per second); the fixed-pitch direct-drive tail has the loosest yaw (7.3 degrees rms, 21 degrees per second against 3.3 and 15 for the gas frame); blade360 shows a 2.5 degree rms roll error and 10 degrees per second roll-rate error with the biggest east position error (0.38 m); heli-quad has the smallest altitude error (0.01 m) and the largest north position error (0.34 m). One flight each, so these are observations of this mission, not a ranking, and the cause of any difference (frame tuning in the default parameters, the simulator model, or the mission geometry) was not investigated. The raw logs (six, about 30 MB gzipped each) are not committed; their checksums are in `raw-log-manifest.txt`.
+
+## Plane and QuadPlane airframe variants
+
+`research-tools/sitl-plane-variants.py` started `arduplane` for each frame of `Tools/autotest/pysim/vehicleinfo.json` that the simulator can fly itself (the model name and default-parameter files listed there, plus a file setting `LOG_BITMASK` 4194303) and flew one mission: plain planes an automatic takeoff to 60 m, three waypoints and an automatic landing; VTOL types a VTOL takeoff to 30 m, two waypoints at 60 m and a VTOL landing. Each was armed in MANUAL, set to AUTO and followed to disarm or 300 s. The frame parameters read back confirm the configuration (`Q_FRAME_CLASS` 7 for the tri, tilt-tri, tilt-tri-vectored and CL-84 frames, 1 for tilt, tilt-vectored, ICE and the copter tailsitter, 5 for the firefly, 10 for the plane tailsitter).
+
+| Variant | Kind | Q_FRAME_CLASS | Result | Flight time | Note |
+|---|---|---|---|---|---|
+| plane | plane |  | completed, disarmed | 64 s |  |
+| plane-elevon | plane |  | completed, disarmed | 63 s |  |
+| plane-vtail | plane |  | completed, disarmed | 63 s |  |
+| plane-jet | plane |  | completed, disarmed | 70 s |  |
+| plane-dspoilers | plane |  | completed, disarmed | 62 s |  |
+| plane-ice | plane |  | did not complete | 0 s | armed and AUTO accepted ("Triggered AUTO"), then no takeoff for 300 s (flight time 0); no vehicle text said why; the engine-start requirement was not investigated |
+| plane-3d | plane |  | completed, disarmed | 60 s |  |
+| quadplane-tri | vtol | 7 | completed, disarmed | 110 s |  |
+| quadplane-tilt | vtol | 1 | completed, disarmed | 114 s |  |
+| quadplane-tilttri | vtol | 7 | completed, disarmed | 112 s |  |
+| quadplane-tilttrivec | vtol | 7 | completed, disarmed | 112 s |  |
+| quadplane-tilthvec | vtol | 1 | completed, disarmed | 178 s |  |
+| quadplane-cl84 | vtol | 7 | completed, disarmed | 110 s |  |
+| quadplane-ice | vtol | 1 | did not complete | 287 s | VTOL takeoff and transition started, but forward flight was very slow: waypoint 2 reached at 200 s, the VTOL landing approach began at 233 s, not landed at the 300 s limit |
+| quadplane-copter_tailsitter | vtol | 1 | did not complete | 282 s | VTOL takeoff printed "Transition VTOL done"; no further mission progress for 282 s of flight time |
+| plane-tailsitter | vtol | 10 | did not complete | 286 s | VTOL takeoff, "Transition FW done, roll error", then repeated simulator ground contacts (4 to 12 m/s) until the 300 s limit |
+| firefly | vtol | 5 | completed, disarmed | 110 s |  |
+
+Airborne rms against the simulator truth (AHRS columns) and against the firmware's own targets (demand columns); angles in degrees:
+
+| Variant | AHRS roll | AHRS pitch | AHRS yaw | AHRS pos (m) | GPS pos (m) | roll demand (deg) | pitch demand (deg) | height (m) | speed (m/s) | cross-track (m) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| plane | 0.30 | 0.23 | 0.53 | 0.61 | 2.36 | 11.18 | 2.98 | 3.62 | 2.50 | 19.00 |
+| plane-elevon | 0.29 | 0.25 | 0.54 | 0.61 | 2.37 | 12.58 | 5.09 | 3.98 | 2.37 | 17.88 |
+| plane-vtail | 0.31 | 0.24 | 0.55 | 0.61 | 2.37 | 11.04 | 4.68 | 3.98 | 2.33 | 18.34 |
+| plane-jet | 2.28 | 0.46 | 0.73 | 1.30 | 5.05 | 19.59 | 6.13 | 19.87 | 13.44 | 209.95 |
+| plane-dspoilers | 0.29 | 0.24 | 0.54 | 0.63 | 2.43 | 12.20 | 4.29 | 4.00 | 2.30 | 17.72 |
+| plane-ice (incomplete) | - | - | - | - | - | - | - | - | - | - |
+| plane-3d | 0.33 | 0.13 | 0.24 | 0.00 | 2.63 | 13.56 | 4.42 | 5.20 | 5.25 | 9.96 |
+| quadplane-tri | 0.24 | 0.16 | 0.92 | 0.23 | 1.51 | 9.77 | 2.76 | 3.32 | 11.24 | 16.34 |
+| quadplane-tilt | 0.24 | 0.17 | 0.79 | 0.22 | 1.46 | 9.76 | 2.52 | 3.45 | 11.68 | 18.27 |
+| quadplane-tilttri | 0.23 | 0.16 | 0.75 | 0.22 | 1.48 | 9.75 | 2.86 | 3.70 | 11.51 | 17.28 |
+| quadplane-tilttrivec | 0.27 | 0.15 | 0.78 | 0.23 | 1.51 | 7.65 | 2.12 | 3.68 | 11.41 | 16.83 |
+| quadplane-tilthvec | 0.26 | 0.17 | 0.44 | 0.19 | 1.25 | 7.01 | 2.67 | 15.28 | 12.15 | 6.81 |
+| quadplane-cl84 | 0.28 | 0.19 | 0.42 | 0.23 | 1.57 | 9.88 | 4.65 | 5.04 | 11.77 | 17.01 |
+| quadplane-ice (incomplete) | 0.09 | 0.09 | 1.73 | 0.09 | 0.32 | 1.59 | 0.34 | 14.58 | 20.91 | 3.10 |
+| quadplane-copter_tailsitter (incomplete) | - | - | - | - | - | - | - | - | - | - |
+| plane-tailsitter (incomplete) | 39.44 | 19.23 | 38.20 | 0.66 | 0.81 | 105.69 | 41.46 | 41.97 | 8.48 | 47.45 |
+| firefly | 0.23 | 0.16 | 0.77 | 0.23 | 1.53 | 12.21 | 3.85 | 4.31 | 11.66 | 17.89 |
+
+Reading these: the AHRS columns are almost the same for every airframe that flew, as for the helicopter frames: the estimator does not depend on the frame. The tracking columns differ. The standard, elevon, V-tail and spoiler frames track alike (height 4.0 m, speed 2.3 m/s, cross-track 18 m rms). The jet has the largest errors (height 20 m, speed 13 m/s, cross-track 210 m with a maximum of 545 m): at jet speed the waypoints 250 to 300 m apart are passed in a few seconds and the turns are wide. The 3D frame cross-track is tighter (10 m), but its AHRS position error comes out as 0.00 m rms, equal to the truth at the log's resolution, which is suspicious and was not investigated (the 3D model may drive the simulator differently); the jet's AHRS roll error is also larger than the others (2.3 degrees rms); the tilt-vectored QuadPlane has a 15 m rms height error against 3 to 5 m for the other VTOL frames. The VTOL frames include the vertical phases in the airborne window, so their height and speed errors are not comparable with the plain planes. The four incomplete flights are in the table for completeness and their figures should not be compared; their causes (an ICE engine that was probably not started, a very slow forward flight, a tailsitter transition that crashed, a tailsitter that did not leave its hover) were not investigated and the mission, airframe tuning or parameters used here may simply not suit them. One flight each. The raw logs (seventeen, 7 to 30 MB gzipped) are not committed; their checksums are in `raw-log-manifest.txt`.

@@ -1,0 +1,74 @@
+{
+ "variant": "plane",
+ "kind": "plane",
+ "defaults": [
+  "Tools/autotest/models/plane.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 1,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 0.0,
+  "Q_FRAME_CLASS": null,
+  "Q_FRAME_TYPE": null,
+  "Q_TILT_ENABLE": null,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": null,
+  "Q_OPTIONS": null,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 1217.0009765625,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 64.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 118.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 Takeoff",
+  "t=  0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec",
+  "t=  0.2 vehicle: Triggered AUTO. GPS speed = 0.0",
+  "t=  1.4 vehicle: Holding course 35999 at 5.4m/s (0.0)",
+  "t=  1.4 vehicle: Autoland direction= 0",
+  "t=  7.7 vehicle: Takeoff level-off starting at 20m",
+  "t=  9.8 vehicle: Takeoff complete at 60.79m",
+  "t=  9.8 vehicle: Mission: 2 WP",
+  "t= 11.8 vehicle: Reached waypoint #2 dist 50m",
+  "t= 11.8 vehicle: Mission: 3 WP",
+  "t= 24.9 vehicle: Reached waypoint #3 dist 52m",
+  "t= 24.9 vehicle: Mission: 4 WP",
+  "t= 37.8 vehicle: Reached waypoint #4 dist 52m",
+  "t= 37.8 vehicle: Mission: 5 Land",
+  "t= 37.8 vehicle: Landing approach start at 47.9m",
+  "t= 44.5 vehicle: Landing glide slope 8.9 degrees",
+  "t= 46.9 vehicle: Flare 16.0m sink=5.35 speed=20.4 dist=148.9",
+  "t= 57.6 vehicle: SIM Hit ground at 1.783600 m/s",
+  "t= 68.1 vehicle: Throttle disarmed",
+  "t= 68.1 vehicle: Auto disarmed",
+  "t= 68.2 vehicle: Distance from LAND point=3.92m",
+  "t= 69.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "plane-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 14393344,
+   "gz_bytes": 6805260,
+   "gz_sha256": "a32b6d70c8e61da3536a2991a6f33b950500d44f65b178cc991ddcf503cde3fc"
+  }
+ ]
+}

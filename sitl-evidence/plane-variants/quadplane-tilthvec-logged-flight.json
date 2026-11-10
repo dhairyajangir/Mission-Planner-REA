@@ -1,0 +1,73 @@
+{
+ "variant": "quadplane-tilthvec",
+ "kind": "vtol",
+ "defaults": [
+  "Tools/autotest/models/plane.parm",
+  "Tools/autotest/default_params/quadplane-tilthvec.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 21,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 1.0,
+  "Q_FRAME_TYPE": 3.0,
+  "Q_TILT_ENABLE": 1.0,
+  "Q_TILT_TYPE": 2.0,
+  "Q_TAILSIT_ENABLE": 0.0,
+  "Q_OPTIONS": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 1226.2606201171875,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 178.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 231.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 VTOLTakeoff",
+  "t= 13.6 vehicle: Mission: 2 WP",
+  "t= 13.6 vehicle: Transition started airspeed 0.9",
+  "t= 15.1 vehicle: Transition airspeed reached 10.1",
+  "t= 16.3 vehicle: Transition FW done",
+  "t= 20.6 vehicle: Reached waypoint #2 dist 49m",
+  "t= 20.6 vehicle: Mission: 3 WP",
+  "t= 29.6 vehicle: Reached waypoint #3 dist 52m",
+  "t= 29.6 vehicle: Mission: 4 VTOLLand",
+  "t= 29.6 vehicle: VTOL approach d=321.3",
+  "t= 29.9 vehicle: VTOL airbrake v=32.3 d=324 sd=325 h=33.5",
+  "t= 30.9 vehicle: VTOL position1 v=30.5 d=343.5 h=36.9 dc=16.5",
+  "t= 30.9 vehicle: VTOL Overshoot d=343.5 cs=-16.7 yerr=128.9",
+  "t=132.3 vehicle: VTOL position2 started v=3.3 d=9.8 h=41.7",
+  "t=135.7 vehicle: Land descend started",
+  "t=162.4 vehicle: Land final started",
+  "t=174.7 vehicle: SIM Hit ground at 0.507121 m/s",
+  "t=180.9 vehicle: Land complete",
+  "t=180.9 vehicle: Throttle disarmed",
+  "t=181.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "quadplane-tilthvec-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 82460672,
+   "gz_bytes": 40766214,
+   "gz_sha256": "f4f61cd28d29853e995e27585165fb5b7ac41ab7115aa6c01dd399e4941a2e57"
+  }
+ ]
+}

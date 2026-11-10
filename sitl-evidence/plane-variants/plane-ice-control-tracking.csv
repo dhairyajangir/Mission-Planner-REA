@@ -1,0 +1,2 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+plane-ice-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",3068,11.875,11.875,50.00 / 50.00,78 -> 0

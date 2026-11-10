@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+quadplane-tilthvec-logged-flight,AHRS roll (ATT),whole log,angle,56395,0.1785,0.2505,0.2761,3.4903
+quadplane-tilthvec-logged-flight,AHRS roll (ATT),airborne,angle,51132,0.182,0.2587,0.2814,3.4903
+quadplane-tilthvec-logged-flight,AHRS pitch (ATT),whole log,angle,56395,0.1532,0.1693,0.2462,1.1691
+quadplane-tilthvec-logged-flight,AHRS pitch (ATT),airborne,angle,51132,0.1546,0.1709,0.256,1.1691
+quadplane-tilthvec-logged-flight,AHRS yaw (ATT),whole log,angle,56395,0.3429,0.4347,0.7006,3.1145
+quadplane-tilthvec-logged-flight,AHRS yaw (ATT),airborne,angle,51132,0.3468,0.4438,0.7879,3.1145
+quadplane-tilthvec-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,4700,0.1537,0.1615,0.26,0.39
+quadplane-tilthvec-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,4261,0.1551,0.1632,0.26,0.39
+quadplane-tilthvec-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,4700,0.1397,0.1446,0.18,0.23
+quadplane-tilthvec-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,4261,0.1409,0.1458,0.18,0.23
+quadplane-tilthvec-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,4700,0.3103,0.3665,0.53,1.52
+quadplane-tilthvec-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,4261,0.311,0.37,0.54,1.52
+quadplane-tilthvec-logged-flight,AHRS position horizontal (POS),whole log,metres,4700,0.1126,0.1786,0.5128,0.782
+quadplane-tilthvec-logged-flight,AHRS position horizontal (POS),airborne,metres,4261,0.122,0.1874,0.5185,0.782
+quadplane-tilthvec-logged-flight,AHRS altitude (POS),whole log,metres,4700,0.1856,0.1955,0.26,0.34
+quadplane-tilthvec-logged-flight,AHRS altitude (POS),airborne,metres,4261,0.1887,0.1982,0.26,0.34
+quadplane-tilthvec-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1880,0.1646,0.1979,0.3417,0.4523
+quadplane-tilthvec-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,1704,0.1648,0.1979,0.3398,0.4523
+quadplane-tilthvec-logged-flight,GPS position horizontal (GPS),whole log,metres,939,0.6751,1.1914,3.4448,5.1096
+quadplane-tilthvec-logged-flight,GPS position horizontal (GPS),airborne,metres,852,0.7437,1.2507,3.4692,5.1096
+quadplane-tilthvec-logged-flight,GPS altitude (GPS),whole log,metres,939,0.0878,0.2019,0.3,1.69
+quadplane-tilthvec-logged-flight,GPS altitude (GPS),airborne,metres,852,0.0956,0.2118,0.36,1.69

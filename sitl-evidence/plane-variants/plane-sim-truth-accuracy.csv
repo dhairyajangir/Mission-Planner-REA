@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-logged-flight,AHRS roll (ATT),whole log,angle,3788,0.1569,0.2547,0.3768,1.9942
+plane-logged-flight,AHRS roll (ATT),airborne,angle,2662,0.1898,0.298,0.4009,1.9942
+plane-logged-flight,AHRS pitch (ATT),whole log,angle,3788,0.187,0.2863,0.3825,6.6522
+plane-logged-flight,AHRS pitch (ATT),airborne,angle,2662,0.1958,0.2264,0.3988,1.1377
+plane-logged-flight,AHRS yaw (ATT),whole log,angle,3788,0.5102,0.5734,0.8071,1.4219
+plane-logged-flight,AHRS yaw (ATT),airborne,angle,2662,0.4719,0.5266,0.73,1.4219
+plane-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,1894,0.1152,0.1326,0.22,0.31
+plane-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1331,0.1325,0.1477,0.23,0.31
+plane-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,1894,0.1802,0.2829,0.33,6.65
+plane-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1331,0.1915,0.2112,0.36,0.44
+plane-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,1894,0.4735,0.535,0.76,0.86
+plane-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1331,0.4209,0.4683,0.66,0.68
+plane-logged-flight,AHRS position horizontal (POS),whole log,metres,1894,0.4469,0.5236,0.7898,0.9017
+plane-logged-flight,AHRS position horizontal (POS),airborne,metres,1331,0.5941,0.6146,0.8017,0.9017
+plane-logged-flight,AHRS altitude (POS),whole log,metres,1894,0.1923,0.2237,0.42,0.53
+plane-logged-flight,AHRS altitude (POS),airborne,metres,1331,0.2236,0.2532,0.47,0.53
+plane-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,758,0.1483,0.1798,0.3183,0.4126
+plane-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,532,0.1514,0.183,0.3281,0.4126
+plane-logged-flight,GPS position horizontal (GPS),whole log,metres,378,1.6782,1.9998,3.1445,3.4175
+plane-logged-flight,GPS position horizontal (GPS),airborne,metres,266,2.2652,2.3577,3.1949,3.4175
+plane-logged-flight,GPS altitude (GPS),whole log,metres,378,0.2081,0.3664,0.96,1.25
+plane-logged-flight,GPS altitude (GPS),airborne,metres,266,0.2929,0.4365,1.16,1.25

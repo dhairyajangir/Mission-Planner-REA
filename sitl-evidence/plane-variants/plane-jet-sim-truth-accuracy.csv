@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-jet-logged-flight,AHRS roll (ATT),whole log,angle,4138,0.9856,1.8129,4.4906,8.7039
+plane-jet-logged-flight,AHRS roll (ATT),airborne,angle,2556,1.4938,2.2783,4.7109,5.7501
+plane-jet-logged-flight,AHRS pitch (ATT),whole log,angle,4138,0.2995,0.3895,0.8474,1.9941
+plane-jet-logged-flight,AHRS pitch (ATT),airborne,angle,2556,0.3527,0.4567,0.9582,1.9941
+plane-jet-logged-flight,AHRS yaw (ATT),whole log,angle,4138,0.5747,0.6742,1.1964,1.9555
+plane-jet-logged-flight,AHRS yaw (ATT),airborne,angle,2556,0.6291,0.7289,1.3554,1.9555
+plane-jet-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,2069,0.1444,0.3078,0.31,8.7
+plane-jet-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1278,0.1436,0.1761,0.34,0.49
+plane-jet-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,2069,0.2296,0.2719,0.49,1.28
+plane-jet-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1278,0.2443,0.2932,0.57,0.79
+plane-jet-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,2069,0.5161,0.5833,0.89,1.02
+plane-jet-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1278,0.536,0.5913,0.93,1.02
+plane-jet-logged-flight,AHRS position horizontal (POS),whole log,metres,2069,0.8621,1.0534,1.9481,2.3914
+plane-jet-logged-flight,AHRS position horizontal (POS),airborne,metres,1278,1.2474,1.3015,2.0483,2.3914
+plane-jet-logged-flight,AHRS altitude (POS),whole log,metres,2069,0.2447,0.3479,0.8,1.04
+plane-jet-logged-flight,AHRS altitude (POS),airborne,metres,1278,0.3451,0.437,0.86,1.04
+plane-jet-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,828,0.1652,0.1986,0.3542,0.528
+plane-jet-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,511,0.1702,0.2045,0.3813,0.528
+plane-jet-logged-flight,GPS position horizontal (GPS),whole log,metres,413,3.3007,4.0715,7.5243,8.6733
+plane-jet-logged-flight,GPS position horizontal (GPS),airborne,metres,256,4.82,5.0516,8.1501,8.6733
+plane-jet-logged-flight,GPS altitude (GPS),whole log,metres,413,0.3793,0.6863,1.47,2.77
+plane-jet-logged-flight,GPS altitude (GPS),airborne,metres,256,0.6084,0.8714,1.99,2.77

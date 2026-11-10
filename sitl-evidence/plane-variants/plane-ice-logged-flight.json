@@ -1,0 +1,56 @@
+{
+ "variant": "plane-ice",
+ "kind": "plane",
+ "defaults": [
+  "Tools/autotest/models/plane.parm",
+  "Tools/autotest/default_params/plane-ice.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 1,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 0.0,
+  "Q_FRAME_CLASS": null,
+  "Q_FRAME_TYPE": null,
+  "Q_TILT_ENABLE": null,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": null,
+  "Q_OPTIONS": null,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 1.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 338.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 Takeoff",
+  "t=  0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec",
+  "t=  0.2 vehicle: Triggered AUTO. GPS speed = 0.0"
+ ],
+ "logs": [
+  {
+   "file": "plane-ice-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 56664064,
+   "gz_bytes": 24487110,
+   "gz_sha256": "200c99647afbb749f2628dd860d6b7e6a8a02abc063019e07f340bc179ffd633"
+  }
+ ]
+}

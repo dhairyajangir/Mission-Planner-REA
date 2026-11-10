@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-3d-logged-flight,AHRS roll (ATT),whole log,angle,3593,0.0828,0.277,0.5311,1.54
+plane-3d-logged-flight,AHRS roll (ATT),airborne,angle,2520,0.1174,0.3306,1.1283,1.54
+plane-3d-logged-flight,AHRS pitch (ATT),whole log,angle,3593,0.0372,0.1712,0.1486,5.4354
+plane-3d-logged-flight,AHRS pitch (ATT),airborne,angle,2520,0.0452,0.1312,0.1836,2.6771
+plane-3d-logged-flight,AHRS yaw (ATT),whole log,angle,3593,0.0564,0.2006,0.2614,1.4353
+plane-3d-logged-flight,AHRS yaw (ATT),airborne,angle,2520,0.0799,0.2396,0.6793,1.4353
+plane-3d-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,1797,0.2442,0.2818,0.48,0.52
+plane-3d-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1260,0.2456,0.2867,0.49,0.52
+plane-3d-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,1797,0.3092,0.389,0.6,6.48
+plane-3d-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1260,0.3167,0.3555,0.61,0.68
+plane-3d-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,1797,0.7292,0.8122,1.15,1.19
+plane-3d-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1260,0.6941,0.7835,1.12,1.19
+plane-3d-logged-flight,AHRS position horizontal (POS),whole log,metres,1797,0.0,0.0,0.0,0.0
+plane-3d-logged-flight,AHRS position horizontal (POS),airborne,metres,1260,0.0,0.0,0.0,0.0
+plane-3d-logged-flight,AHRS altitude (POS),whole log,metres,1797,0.0003,0.0017,0.0001,0.01
+plane-3d-logged-flight,AHRS altitude (POS),airborne,metres,1260,0.0004,0.002,0.0001,0.01
+plane-3d-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,719,0.2171,0.2482,0.4091,0.488
+plane-3d-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,504,0.2278,0.258,0.4178,0.488
+plane-3d-logged-flight,GPS position horizontal (GPS),whole log,metres,359,1.8101,2.2143,3.8917,4.4751
+plane-3d-logged-flight,GPS position horizontal (GPS),airborne,metres,252,2.4889,2.6301,4.1634,4.4751
+plane-3d-logged-flight,GPS altitude (GPS),whole log,metres,359,0.2457,0.4196,0.99,1.49
+plane-3d-logged-flight,GPS altitude (GPS),airborne,metres,252,0.3454,0.4997,1.3,1.49

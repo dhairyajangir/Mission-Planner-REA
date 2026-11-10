@@ -1,0 +1,9 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+plane-elevon-logged-flight,roll: navigation demand - actual (CTUN),deg,1173,5.7765,12.5772,34.17,56.23
+plane-elevon-logged-flight,pitch: navigation demand - actual (CTUN),deg,1173,3.7255,5.0857,10.47,14.36
+plane-elevon-logged-flight,height: demand - actual (TECS hdem - h),m,470,2.3378,3.9781,11.454,13.8449
+plane-elevon-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,470,1.5974,2.3666,5.6366,5.9539
+plane-elevon-logged-flight,altitude error (NTUN AltE),m,1173,6.5135,11.515,29.09,54.07
+plane-elevon-logged-flight,cross-track error (NTUN XT),m,1173,13.1043,17.8841,32.583,50.0308
+plane-elevon-logged-flight,airspeed error (NTUN AsE),m/s,1173,1.6053,2.3254,5.4274,5.7671
+plane-elevon-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",748,11.875,12.6,11.12 / 50.00,99 -> 92

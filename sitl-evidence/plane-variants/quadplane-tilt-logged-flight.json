@@ -1,0 +1,72 @@
+{
+ "variant": "quadplane-tilt",
+ "kind": "vtol",
+ "defaults": [
+  "Tools/autotest/default_params/quadplane.parm",
+  "Tools/autotest/default_params/quadplane-tilt.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 21,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 1.0,
+  "Q_FRAME_TYPE": 1.0,
+  "Q_TILT_ENABLE": 1.0,
+  "Q_TILT_TYPE": 2.0,
+  "Q_TAILSIT_ENABLE": 0.0,
+  "Q_OPTIONS": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 882.3244018554688,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 114.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 167.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 VTOLTakeoff",
+  "t= 13.6 vehicle: Mission: 2 WP",
+  "t= 13.6 vehicle: Transition started airspeed 0.8",
+  "t= 21.4 vehicle: Transition airspeed reached 18.2",
+  "t= 22.5 vehicle: Transition FW done",
+  "t= 24.4 vehicle: Reached waypoint #2 dist 95m",
+  "t= 24.4 vehicle: Mission: 3 WP",
+  "t= 33.3 vehicle: Reached waypoint #3 dist 85m",
+  "t= 33.3 vehicle: Mission: 4 VTOLLand",
+  "t= 33.3 vehicle: VTOL approach d=301.4",
+  "t= 44.1 vehicle: VTOL airbrake v=21.4 d=157 sd=157 h=55.1",
+  "t= 45.5 vehicle: VTOL position1 v=17.5 d=129.5 h=56.9 dc=19.6",
+  "t= 56.3 vehicle: VTOL position2 started v=5.7 d=10.0 h=58.0",
+  "t= 61.8 vehicle: Land descend started",
+  "t= 99.2 vehicle: Land final started",
+  "t=111.3 vehicle: SIM Hit ground at 0.499459 m/s",
+  "t=117.5 vehicle: Land complete",
+  "t=117.5 vehicle: Throttle disarmed",
+  "t=118.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "quadplane-tilt-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 49364992,
+   "gz_bytes": 24409799,
+   "gz_sha256": "0e0554213118fff0e1c0cc05f4301edddd99e4ce56033f9bc21745fad089b1f2"
+  }
+ ]
+}

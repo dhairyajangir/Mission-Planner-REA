@@ -1,0 +1,72 @@
+{
+ "variant": "quadplane-tilttrivec",
+ "kind": "vtol",
+ "defaults": [
+  "Tools/autotest/default_params/quadplane.parm",
+  "Tools/autotest/default_params/quadplane-tilttrivec.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 21,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 7.0,
+  "Q_FRAME_TYPE": 1.0,
+  "Q_TILT_ENABLE": 1.0,
+  "Q_TILT_TYPE": 2.0,
+  "Q_TAILSIT_ENABLE": 0.0,
+  "Q_OPTIONS": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 896.0096435546875,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 112.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 164.0
+ },
+ "notes": [
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 VTOLTakeoff",
+  "t= 13.6 vehicle: Mission: 2 WP",
+  "t= 13.6 vehicle: Transition started airspeed 0.8",
+  "t= 18.0 vehicle: Transition airspeed reached 13.2",
+  "t= 19.1 vehicle: Transition FW done",
+  "t= 23.4 vehicle: Reached waypoint #2 dist 84m",
+  "t= 23.4 vehicle: Mission: 3 WP",
+  "t= 31.5 vehicle: Reached waypoint #3 dist 86m",
+  "t= 31.5 vehicle: Mission: 4 VTOLLand",
+  "t= 31.5 vehicle: VTOL approach d=305.3",
+  "t= 42.6 vehicle: VTOL airbrake v=20.2 d=143 sd=143 h=56.4",
+  "t= 48.9 vehicle: VTOL position1 v=15.0 d=38.7 h=56.8 dc=12.4",
+  "t= 51.5 vehicle: VTOL position2 started v=9.0 d=6.9 h=59.3",
+  "t= 59.2 vehicle: Land descend started",
+  "t= 96.5 vehicle: Land final started",
+  "t=108.6 vehicle: SIM Hit ground at 0.495022 m/s",
+  "t=114.9 vehicle: Land complete",
+  "t=114.9 vehicle: Throttle disarmed",
+  "t=115.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "quadplane-tilttrivec-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 47005696,
+   "gz_bytes": 23909246,
+   "gz_sha256": "98cff594c27c63779572990c390670370c8dd5eb6faff1b0fd0275eb4e348f4d"
+  }
+ ]
+}

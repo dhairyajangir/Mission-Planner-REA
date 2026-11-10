@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+quadplane-cl84-logged-flight,AHRS roll (ATT),whole log,angle,36008,0.156,0.257,0.4028,3.6116
+quadplane-cl84-logged-flight,AHRS roll (ATT),airborne,angle,30108,0.1695,0.2782,0.4182,3.6116
+quadplane-cl84-logged-flight,AHRS pitch (ATT),whole log,angle,36008,0.165,0.1891,0.3042,1.4489
+quadplane-cl84-logged-flight,AHRS pitch (ATT),airborne,angle,30108,0.1682,0.1935,0.3168,1.4489
+quadplane-cl84-logged-flight,AHRS yaw (ATT),whole log,angle,36008,0.3665,0.7289,1.8684,3.6425
+quadplane-cl84-logged-flight,AHRS yaw (ATT),airborne,angle,30108,0.2586,0.425,0.7999,3.0913
+quadplane-cl84-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3001,0.1259,0.1646,0.38,0.63
+quadplane-cl84-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2509,0.1343,0.176,0.39,0.63
+quadplane-cl84-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3001,0.1466,0.1582,0.26,0.28
+quadplane-cl84-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2509,0.1486,0.1612,0.26,0.28
+quadplane-cl84-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3001,0.3368,0.7125,1.86,3.05
+quadplane-cl84-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2509,0.2245,0.3975,0.78,3.05
+quadplane-cl84-logged-flight,AHRS position horizontal (POS),whole log,metres,3001,0.1353,0.2131,0.4785,0.5814
+quadplane-cl84-logged-flight,AHRS position horizontal (POS),airborne,metres,2509,0.1564,0.2326,0.5009,0.5814
+quadplane-cl84-logged-flight,AHRS altitude (POS),whole log,metres,3001,0.1041,0.1191,0.2,0.22
+quadplane-cl84-logged-flight,AHRS altitude (POS),airborne,metres,2509,0.1075,0.1224,0.2,0.22
+quadplane-cl84-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1200,0.1196,0.1446,0.2616,0.3899
+quadplane-cl84-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,1003,0.1166,0.1403,0.256,0.3004
+quadplane-cl84-logged-flight,GPS position horizontal (GPS),whole log,metres,600,0.789,1.4328,3.2119,3.9632
+quadplane-cl84-logged-flight,GPS position horizontal (GPS),airborne,metres,502,0.9423,1.5664,3.2193,3.9632
+quadplane-cl84-logged-flight,GPS altitude (GPS),whole log,metres,600,0.1221,0.1735,0.32,0.75
+quadplane-cl84-logged-flight,GPS altitude (GPS),airborne,metres,502,0.1437,0.1891,0.32,0.75
