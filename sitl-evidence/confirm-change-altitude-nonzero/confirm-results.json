@@ -1,0 +1,44 @@
+[
+ {
+  "kind": "LONG",
+  "altitude_m": 50.0,
+  "alive_before_send": true,
+  "ack": 0,
+  "alive_after_send": true,
+  "followup_ack": 0,
+  "log_tail": [
+   "validate_structures:546: Validating structures",
+   "Waiting for internal clock bits to be set (current=0x00)",
+   "Loaded defaults from @ROMFS/models/plane.parm,/home/think/ap-snapshot/Tools/autotest/models/plane.parm",
+   "Exitting"
+  ]
+ },
+ {
+  "kind": "INT",
+  "altitude_m": 50.0,
+  "alive_before_send": true,
+  "ack": 0,
+  "alive_after_send": true,
+  "followup_ack": 0,
+  "log_tail": [
+   "validate_structures:546: Validating structures",
+   "Waiting for internal clock bits to be set (current=0x00)",
+   "Loaded defaults from @ROMFS/models/plane.parm,/home/think/ap-snapshot/Tools/autotest/models/plane.parm",
+   "Exitting"
+  ]
+ },
+ {
+  "kind": "LONG",
+  "altitude_m": 0.0,
+  "alive_before_send": true,
+  "ack": null,
+  "alive_after_send": true,
+  "followup_ack": null,
+  "log_tail": [
+   "Running: sh dumpstack.sh 32 >dumpstack.sh_arduplane.32.out 2>&1",
+   "Failed",
+   "Running: sh dumpcore.sh 32 >dumpcore.sh_arduplane.32.out 2>&1",
+   "Failed"
+  ]
+ }
+]

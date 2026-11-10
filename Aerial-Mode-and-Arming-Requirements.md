@@ -41,6 +41,10 @@ With the interlock handled as above: ACRO, STABILIZE, ALT_HOLD and LOITER accept
 
 `PLND_ENABLED` 1 with `PLND_TYPE` 4 (SITL) or 2 (IRLock), a rangefinder and the simulator's `SIM_PLD_*` target: the Copter landed 0.98 m from a target 4 m north and 4 m west of home in both cases (the same coordinates, so not independent); see `sitl-evidence/copter-precland/`.
 
+## A MAVLink command to avoid: DO_CHANGE_ALTITUDE with altitude 0
+
+`MAV_CMD_DO_CHANGE_ALTITUDE` sent with altitude exactly 0 (either message form) hangs the ArduPlane/QuadPlane MAVLink command channel: it is never acknowledged, and nothing sent after it on the same connection gets an answer either, until the simulator is killed, at which point it panics (a SITL-only check on an uninitialised location). A request with any other altitude is accepted immediately and the link keeps working normally. Found and confirmed in `ArduPilot-Aerial-Library-Execution-Trace.md` ("What each aerial autopilot sends and accepts over MAVLink"); a controlling program should never send this command with altitude 0.
+
 ## What this page does not say
 
 Nothing here covers a real aircraft, real sensors, wind, a radio link or a battery. Each item is one run; the refusal texts are the vehicle's own words as captured, and some refusals gave no text (THERMAL and AUTOLAND on a QuadPlane via the acknowledgement only). Rover, Sub, Blimp and the Mission Planner side are outside this page.
