@@ -234,3 +234,28 @@ The log map (`log-message-library-map.csv`, 118 message types) credits 22 librar
 | GPS altitude (GPS) | 0.06 m (max 0.22) | 0.44 m (max 1.24) | 0.15 m (max 0.22) |
 
 What this shows and does not show: in these simulations the firmware's attitude and position estimates stay within a fraction of a degree and a fraction of a metre (Copter) of the simulator's truth, with the Plane worse on position (rms 0.64 m AHRS, 2.4 m GPS) because it flies faster and the simulated GPS is the dominant error. The truth and the sensors come from the same simulator, so a shared modelling error would not show; real sensors, vibration, magnetic disturbance and wind are not represented. The helicopter log has no airborne samples (it never flew in that run) and is not summarised. The ground-contact periods and the first seconds of each log are in the whole-log rows of the CSV, not here.
+
+## Controller tracking and the simulated battery, from the logs
+
+`research-tools/analyze-control-tracking.py` (output `sitl-evidence/aerial-library-evidence/control-tracking.csv`, simulator only): desired against actual values that the firmware logs itself, airborne samples only. All figures below are rms (max in the CSV).
+
+| Metric | Copter flight | Plane flight | Copter + Lua script (flip) |
+|---|---|---|---|
+| roll, desired - actual | 0.12 deg | 11.13 deg | 0.02 deg |
+| pitch, desired - actual | 0.21 deg | 2.70 deg | 0.15 deg |
+| yaw, desired - actual | 0.73 deg |  | 0.07 deg |
+| roll rate | 0.18 deg/s |  | 0.14 deg/s |
+| pitch rate | 0.26 deg/s |  | 2.14 deg/s |
+| yaw rate | 3.61 deg/s |  | 0.32 deg/s |
+| altitude / height | 0.02 m | 3.56 m | 0.05 m |
+| position north | 0.25 m |  | 0.12 m |
+| position east | 0.28 m |  | 0.02 m |
+| velocity north | 0.34 m/s |  | 0.38 m/s |
+| speed demand - actual |  | 2.44 m/s |  |
+| altitude error (NTUN) |  | 11.81 m |  |
+| cross-track error (NTUN) |  | 18.82 m |  |
+| airspeed error (NTUN) |  | 2.38 m/s |  |
+
+Battery (`BAT`, the simulator's model): Copter flight voltage 12.196 to 12.6 V, current mean/max 25.82 / 40.75 A, remaining 100 -> 79 %; Plane flight 11.875 to 12.6 V, 11.05 / 50.00 A, 99 -> 93 %; Copter with the script 12.192 to 12.6 V, 16.68 / 41.24 A, 100 -> 92 %.
+
+Reading these: the Copter follows its attitude, altitude and position targets closely in the simulator (the yaw rate maximum of 35 degrees per second and the script log's pitch-rate maximum of 30 are the first seconds of a turn and the flip). The Plane's large roll-demand error is the controller's lag behind step changes at each waypoint turn; its cross-track error of 19 m rms is with waypoints 250 to 300 m apart at about 22 m/s and includes the landing approach. The targets are the firmware's own, so a wrong target would not show; no wind, no sensor faults, one flight per log. The helicopter log has no airborne samples and is not summarised.

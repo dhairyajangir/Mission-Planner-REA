@@ -1,0 +1,33 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+copter-logged-flight,roll: desired - actual (ANG),deg,32121,0.0523,0.1203,0.2602,1.0225
+copter-logged-flight,pitch: desired - actual (ANG),deg,32121,0.0544,0.2145,0.0879,2.2763
+copter-logged-flight,yaw: desired - actual (ANG),deg,32121,0.2242,0.732,0.5627,6.681
+copter-logged-flight,roll rate: desired - actual (RATE),deg/s,32121,0.1199,0.1847,0.418,1.1519
+copter-logged-flight,pitch rate: desired - actual (RATE),deg/s,32121,0.173,0.2571,0.576,1.5393
+copter-logged-flight,yaw rate: desired - actual (RATE),deg/s,32121,1.0396,3.6126,2.4569,35.1191
+copter-logged-flight,altitude: desired - actual (CTUN DAlt - Alt),m,804,0.0127,0.0191,0.048,0.0746
+copter-logged-flight,position north: target - actual (PSCN),m,804,0.1312,0.2451,0.5612,0.9992
+copter-logged-flight,position east: target - actual (PSCE),m,804,0.1489,0.2787,0.6488,1.0406
+copter-logged-flight,velocity north: target - actual (PSCN),m/s,804,0.1953,0.3436,0.8779,1.1197
+copter-logged-flight,velocity east: target - actual (PSCE),m/s,804,0.2017,0.3618,0.901,1.1683
+copter-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",966,12.196,12.6,25.82 / 40.75,100 -> 79
+plane-logged-flight,roll: navigation demand - actual (CTUN),deg,1160,4.3952,11.1325,22.48,57.2
+plane-logged-flight,pitch: navigation demand - actual (CTUN),deg,1160,1.9277,2.697,5.91,8.8
+plane-logged-flight,height: demand - actual (TECS hdem - h),m,465,2.0113,3.5637,10.1372,12.2956
+plane-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,465,1.4793,2.4417,6.2142,6.5489
+plane-logged-flight,altitude error (NTUN AltE),m,1160,6.1355,11.8057,32.98,53.96
+plane-logged-flight,cross-track error (NTUN XT),m,1160,14.1515,18.8186,35.6109,50.6501
+plane-logged-flight,airspeed error (NTUN AsE),m/s,1160,1.4519,2.376,6.0465,6.3211
+plane-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",745,11.875,12.6,11.05 / 50.00,99 -> 93
+custom-mode,roll: desired - actual (ANG),deg,11161,0.0154,0.0232,0.0411,0.1359
+custom-mode,pitch: desired - actual (ANG),deg,11161,0.0544,0.149,0.2291,1.7817
+custom-mode,yaw: desired - actual (ANG),deg,11161,0.0335,0.0661,0.1259,0.4343
+custom-mode,roll rate: desired - actual (RATE),deg/s,11161,0.0906,0.1424,0.251,1.5312
+custom-mode,pitch rate: desired - actual (RATE),deg/s,11161,0.5329,2.1412,1.9416,30.0768
+custom-mode,yaw rate: desired - actual (RATE),deg/s,11161,0.0823,0.3223,0.2136,7.167
+custom-mode,altitude: desired - actual (CTUN DAlt - Alt),m,280,0.0336,0.0455,0.1063,0.1431
+custom-mode,position north: target - actual (PSCN),m,202,0.0746,0.1224,0.2848,0.3133
+custom-mode,position east: target - actual (PSCE),m,202,0.014,0.016,0.0279,0.0299
+custom-mode,velocity north: target - actual (PSCN),m/s,202,0.2174,0.3785,0.9048,0.955
+custom-mode,velocity east: target - actual (PSCE),m/s,202,0.0068,0.0099,0.024,0.0288
+custom-mode,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",562,12.192,12.6,16.68 / 41.24,100 -> 92
