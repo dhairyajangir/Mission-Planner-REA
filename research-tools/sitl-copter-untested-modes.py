@@ -33,6 +33,18 @@ def gdb_script():
     lines = ['set pagination off', 'set confirm off', 'handle SIGALRM SIGUSR1 SIGUSR2 SIGPIPE SIGURG nostop noprint pass']
     for fn in FUNCTIONS:
         lines += ['tbreak %s' % fn, 'commands', 'silent', 'printf "HIT %s\\n"' % fn, 'bt 4', 'continue', 'end']
+    if TURTLE_ONLY:
+        lines.insert(2, 'set breakpoint pending on')       # line breakpoints in mode_turtle.cpp resolve only once the program's symbols are loaded (run 1: "No symbol table is loaded")
+        # which `return false` of ModeTurtle::init fires: a one-shot breakpoint on each, printing its line number
+        src = os.path.join(TREE, 'ArduCopter/mode_turtle.cpp')
+        inside = False
+        for number, text in enumerate(open(src, errors='replace').read().splitlines(), 1):
+            if 'bool ModeTurtle::init' in text:
+                inside = True
+            elif inside and text.startswith('}'):
+                break
+            elif inside and 'return false' in text:
+                lines += ['tbreak mode_turtle.cpp:%d' % number, 'commands', 'silent', 'printf "TURTLE_RETURN_FALSE line %d\\n"' % number, 'continue', 'end']
     lines += ['run']
     path = os.path.join(WORK, 'gdb-commands.txt')
     with open(path, 'w') as f:
@@ -115,7 +127,8 @@ def main():
         notes.append('set %s (rejected: %s)' % ([(c.name, c.new) if hasattr(c, 'new') else c.name for c in changes], bad))
         sticks = Sticks(conn)
         sticks.start()
-        try_mode(conn, sticks, 'TURTLE', 'ModeTurtle', results, notes, 4.0, after='STABILIZE', throttle=1000)      # disarmed, sticks centred, throttle zero
+        time.sleep(3)                                                    # let the override reach the receiver before TURTLE is asked for (the earlier turtle-entry test waited 1 s)
+        try_mode(conn, sticks, 'TURTLE', 'ModeTurtle', results, notes, 4.0, after='STABILIZE', throttle=1500 if TURTLE_ONLY else 1000)      # disarmed; runs 1 to 3 held throttle at 1000, but ModeTurtle::init wants every stick (throttle too) at its centre
         if TURTLE_ONLY:
             raise SystemExit
         items = [mission.Item(0, 0, 16, 0, 1, 0, 0, 0, 0, HOME[0], HOME[1], HOME[2]),

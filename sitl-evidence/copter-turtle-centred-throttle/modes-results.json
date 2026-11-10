@@ -1,0 +1,34 @@
+{
+ "notes": [
+  "set [('SID_AXIS', 1.0), ('SERVO_DSHOT_ESC', 1.0)] (rejected: [])",
+  "TURTLE: TURTLE refused: vehicle stays in STABILIZE (ack result 4); back to STABILIZE: STABILIZE active"
+ ],
+ "modes": [
+  {
+   "mode": "TURTLE",
+   "class": "ModeTurtle",
+   "mode_before": "STABILIZE",
+   "answer": "TURTLE refused: vehicle stays in STABILIZE (ack result 4)",
+   "accepted": false,
+   "mode_after": "STABILIZE",
+   "armed_after": false,
+   "texts": []
+  }
+ ],
+ "hit": [
+  "ModeTurtle::init"
+ ],
+ "not_reached": [
+  "ModeDrift::init",
+  "ModeDrift::run",
+  "ModeSport::init",
+  "ModeSport::run",
+  "ModeAcro::init",
+  "ModeAcro::run",
+  "ModeGuidedNoGPS::init",
+  "ModeGuidedNoGPS::run",
+  "ModeSystemId::init",
+  "ModeSystemId::run",
+  "ModeTurtle::run"
+ ]
+}
