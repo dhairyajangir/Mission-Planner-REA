@@ -25,3 +25,5 @@ quadplane-ice-logged-flight-00000001.BIN.gz  59175958 bytes  sha256 a08f931477ec
 quadplane-copter_tailsitter-logged-flight-00000001.BIN.gz  61883058 bytes  sha256 63463bdd2200fe05c65445ce410965e88e1848c6b29a2e7dbb6803711ef3396e
 plane-tailsitter-logged-flight-00000001.BIN.gz  46720608 bytes  sha256 cb06048c2aa48c262359243ee2916ab745db6c2238d12a3545ac95ca8c533bf0
 firefly-logged-flight-00000001.BIN.gz  23401417 bytes  sha256 9fef6ed879a0dd4978d070a169abae96e175d68bf263d1404df8b194f55c5ee6
+plane-ice-ice-started-logged-flight-00000001.BIN.gz  6820916 bytes  sha256 439c52fd0a8f309eff634f2415a897059a6a5ff75f5fd595090290b70f22f0d5  (file in sitl-evidence/plane-variants-ice-started/ under its original name plane-ice-logged-flight-00000001.BIN.gz)
+quadplane-ice-ice-started-logged-flight-00000001.BIN.gz  23641965 bytes  sha256 e67754d9cbad2ea817b64ed4d35f893a22413b3364828b3f18f8ed624b6d499d  (file in sitl-evidence/plane-variants-ice-started/ under its original name quadplane-ice-logged-flight-00000001.BIN.gz)

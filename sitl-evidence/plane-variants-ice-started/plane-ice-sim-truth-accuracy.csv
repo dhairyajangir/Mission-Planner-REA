@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-ice-logged-flight,AHRS roll (ATT),whole log,angle,3787,0.1571,0.2522,0.3674,1.9606
+plane-ice-logged-flight,AHRS roll (ATT),airborne,angle,2488,0.1856,0.2988,0.3819,1.9606
+plane-ice-logged-flight,AHRS pitch (ATT),whole log,angle,3787,0.1751,0.2113,0.3619,1.6625
+plane-ice-logged-flight,AHRS pitch (ATT),airborne,angle,2488,0.1954,0.2266,0.3838,0.9905
+plane-ice-logged-flight,AHRS yaw (ATT),whole log,angle,3787,0.4739,0.5373,0.7214,1.3862
+plane-ice-logged-flight,AHRS yaw (ATT),airborne,angle,2488,0.4567,0.5164,0.7499,1.3862
+plane-ice-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,1894,0.1155,0.1333,0.2,0.36
+plane-ice-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,1244,0.1244,0.1412,0.22,0.36
+plane-ice-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,1894,0.1682,0.1921,0.33,0.9
+plane-ice-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,1244,0.191,0.2144,0.35,0.42
+plane-ice-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,1894,0.4359,0.4953,0.7,0.73
+plane-ice-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,1244,0.3996,0.4502,0.62,0.65
+plane-ice-logged-flight,AHRS position horizontal (POS),whole log,metres,1894,0.4491,0.5265,0.7683,0.9019
+plane-ice-logged-flight,AHRS position horizontal (POS),airborne,metres,1244,0.6285,0.6377,0.8017,0.9019
+plane-ice-logged-flight,AHRS altitude (POS),whole log,metres,1894,0.1942,0.2304,0.46,0.58
+plane-ice-logged-flight,AHRS altitude (POS),airborne,metres,1244,0.2386,0.271,0.5,0.58
+plane-ice-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,757,0.1512,0.1827,0.3203,0.3876
+plane-ice-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,498,0.152,0.1839,0.3289,0.3876
+plane-ice-logged-flight,GPS position horizontal (GPS),whole log,metres,378,1.6939,2.0154,3.117,3.3953
+plane-ice-logged-flight,GPS position horizontal (GPS),airborne,metres,249,2.3845,2.443,3.206,3.3953
+plane-ice-logged-flight,GPS altitude (GPS),whole log,metres,378,0.2066,0.3627,1.0,1.24
+plane-ice-logged-flight,GPS altitude (GPS),airborne,metres,249,0.3101,0.4466,1.19,1.24

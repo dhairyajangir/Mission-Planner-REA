@@ -1,0 +1,87 @@
+{
+ "variant": "quadplane-ice",
+ "kind": "vtol",
+ "defaults": [
+  "Tools/autotest/default_params/quadplane.parm",
+  "Tools/autotest/default_params/plane-ice.parm",
+  "Tools/autotest/default_params/quadplane-ice.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 1,
+ "stat_before": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "params": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 1.0,
+  "Q_FRAME_TYPE": 1.0,
+  "Q_TILT_ENABLE": 0.0,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": 0.0,
+  "Q_OPTIONS": 64.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 1.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 1.0,
+  "STAT_DISTFLWN": 885.1671142578125,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 110.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 163.0
+ },
+ "notes": [
+  "RC channel 11 held at 1900 (ICE start)",
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 VTOLTakeoff",
+  "t=  0.1 vehicle: SIM_ICEngine: choke:0 starter:0 ignition:1",
+  "t=  0.2 vehicle: Starting engine",
+  "t=  0.2 vehicle: SIM_ICEngine: choke:0 starter:1 ignition:1",
+  "t=  0.2 vehicle: SIM_ICEngine: Engine started",
+  "t=  3.2 vehicle: Engine running",
+  "t=  3.2 vehicle: SIM_ICEngine: choke:0 starter:0 ignition:1",
+  "t= 13.4 vehicle: Mission: 2 WP",
+  "t= 13.4 vehicle: Transition started airspeed 0.6",
+  "t= 17.7 vehicle: Transition airspeed reached 18.2",
+  "t= 22.7 vehicle: Transition done",
+  "t= 23.6 vehicle: Reached waypoint #2 dist 78m",
+  "t= 23.6 vehicle: Mission: 3 WP",
+  "t= 32.0 vehicle: Reached waypoint #3 dist 87m",
+  "t= 32.0 vehicle: Mission: 4 VTOLLand",
+  "t= 32.0 vehicle: VTOL approach d=305.2",
+  "t= 42.3 vehicle: VTOL airbrake v=21.6 d=159 sd=160 h=57.1",
+  "t= 45.0 vehicle: VTOL position1 v=18.3 d=105.8 h=58.4 dc=19.6",
+  "t= 52.7 vehicle: VTOL position2 started v=6.7 d=9.8 h=58.8",
+  "t= 58.2 vehicle: Land descend started",
+  "t= 95.2 vehicle: Land final started",
+  "t= 95.3 vehicle: Starting engine",
+  "t= 95.3 vehicle: SIM_ICEngine: choke:0 starter:1 ignition:1",
+  "t= 95.3 vehicle: SIM_ICEngine: Starter overheat",
+  "t= 98.4 vehicle: Engine running",
+  "t= 98.4 vehicle: SIM_ICEngine: choke:0 starter:0 ignition:1",
+  "t=107.1 vehicle: SIM Hit ground at 0.500363 m/s",
+  "t=113.3 vehicle: Land complete",
+  "t=113.3 vehicle: Throttle disarmed",
+  "t=113.3 vehicle: SIM_ICEngine: choke:0 starter:0 ignition:0",
+  "t=113.3 vehicle: SIM_ICEngine: Engine stopped",
+  "t=114.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "quadplane-ice-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 47718400,
+   "gz_bytes": 23641965,
+   "gz_sha256": "e67754d9cbad2ea817b64ed4d35f893a22413b3364828b3f18f8ed624b6d499d"
+  }
+ ]
+}

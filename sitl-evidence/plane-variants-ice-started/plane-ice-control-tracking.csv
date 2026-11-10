@@ -1,0 +1,9 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+plane-ice-logged-flight,roll: navigation demand - actual (CTUN),deg,1158,4.4096,11.1229,22.04,57.05
+plane-ice-logged-flight,pitch: navigation demand - actual (CTUN),deg,1158,1.9914,2.7905,5.93,8.66
+plane-ice-logged-flight,height: demand - actual (TECS hdem - h),m,464,1.9741,3.5261,9.9956,12.2053
+plane-ice-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,464,1.4716,2.4546,6.251,6.5607
+plane-ice-logged-flight,altitude error (NTUN AltE),m,1158,5.2922,10.8018,12.83,54.39
+plane-ice-logged-flight,cross-track error (NTUN XT),m,1158,14.2754,19.0099,36.8131,50.7837
+plane-ice-logged-flight,airspeed error (NTUN AsE),m/s,1158,1.4428,2.3873,6.0575,6.3564
+plane-ice-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",757,11.875,12.6,27.04 / 50.00,78 -> 61

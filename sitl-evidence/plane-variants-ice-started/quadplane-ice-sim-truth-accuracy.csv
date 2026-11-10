@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+quadplane-ice-logged-flight,AHRS roll (ATT),whole log,angle,36013,0.1396,0.227,0.2687,3.5883
+quadplane-ice-logged-flight,AHRS roll (ATT),airborne,angle,30936,0.1469,0.2418,0.2915,3.5883
+quadplane-ice-logged-flight,AHRS pitch (ATT),whole log,angle,36013,0.14,0.1539,0.2637,0.7269
+quadplane-ice-logged-flight,AHRS pitch (ATT),airborne,angle,30936,0.1415,0.1564,0.2713,0.705
+quadplane-ice-logged-flight,AHRS yaw (ATT),whole log,angle,36013,0.5843,0.9352,2.6475,2.9805
+quadplane-ice-logged-flight,AHRS yaw (ATT),airborne,angle,30936,0.567,0.9037,2.5956,2.9805
+quadplane-ice-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,3002,0.1132,0.1288,0.24,0.29
+quadplane-ice-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,2578,0.1169,0.1339,0.25,0.29
+quadplane-ice-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,3002,0.1274,0.1355,0.18,0.72
+quadplane-ice-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,2578,0.1279,0.1359,0.19,0.3
+quadplane-ice-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,3002,0.5663,0.9265,2.64,2.97
+quadplane-ice-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,2578,0.5471,0.8941,2.6,2.97
+quadplane-ice-logged-flight,AHRS position horizontal (POS),whole log,metres,3001,0.1344,0.2116,0.4676,0.535
+quadplane-ice-logged-flight,AHRS position horizontal (POS),airborne,metres,2578,0.1511,0.2279,0.479,0.535
+quadplane-ice-logged-flight,AHRS altitude (POS),whole log,metres,3001,0.0593,0.0719,0.14,0.16
+quadplane-ice-logged-flight,AHRS altitude (POS),airborne,metres,2578,0.0661,0.0769,0.14,0.16
+quadplane-ice-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,1201,0.1029,0.1191,0.1996,0.2878
+quadplane-ice-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,1031,0.1031,0.1189,0.1979,0.2878
+quadplane-ice-logged-flight,GPS position horizontal (GPS),whole log,metres,600,0.7747,1.397,3.059,3.135
+quadplane-ice-logged-flight,GPS position horizontal (GPS),airborne,metres,516,0.9005,1.5064,3.0817,3.135
+quadplane-ice-logged-flight,GPS altitude (GPS),whole log,metres,600,0.1231,0.1621,0.32,0.5
+quadplane-ice-logged-flight,GPS altitude (GPS),airborne,metres,516,0.1412,0.1742,0.32,0.5

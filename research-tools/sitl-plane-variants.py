@@ -8,6 +8,8 @@ the snapshot's own directories), plus a one-line file setting LOG_BITMASK 419430
   vtol   VTOL takeoff to 30 m, two waypoints at 60 m, a VTOL landing (sitl-plane-gaps.py)
 The vehicle is armed in MANUAL, put in AUTO (retried for 90 s) and followed until it disarms by itself or 300 s pass. The DataFlash .BIN is gzipped next to a JSON note with its size,
 SHA-256, the frame parameters read back, the vehicle's texts with times and the STAT counters before and after. A variant that cannot be armed or flown is recorded as it happened.
+ICE_START_CH11=1 holds RC channel 11 at 1900 by RC override for the whole flight: the ICE frames' parameter file sets RC11_OPTION 179 (ICE start/stop), the engine starts with
+the channel at or above 1700, and without it the plane never leaves the ground (plane-ice) or flies very slowly (quadplane-ice).
 """
 import gzip
 import hashlib
@@ -16,6 +18,7 @@ import math
 import os
 import subprocess
 import sys
+import threading
 import time
 
 TREE, OUT, GCS = sys.argv[1], sys.argv[2], sys.argv[3]
@@ -52,6 +55,21 @@ VARIANTS = {
     'firefly': ('vtol', [QP, DP('firefly.parm')]),
 }
 WANT = sys.argv[4:] or list(VARIANTS)
+ICE_START = bool(os.environ.get('ICE_START_CH11'))
+
+
+class IceSwitch(threading.Thread):
+    def __init__(self, conn):
+        super().__init__(daemon=True)
+        self.conn, self.running = conn, True
+
+    def run(self):
+        while self.running:
+            try:
+                self.conn.mav.rc_channels_override_send(self.conn.target_system, self.conn.target_component, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1900, 0, 0, 0, 0, 0, 0, 0)
+            except Exception:
+                pass
+            time.sleep(0.1)
 KEEP = ('Q_ENABLE', 'Q_FRAME_CLASS', 'Q_FRAME_TYPE', 'Q_TILT_ENABLE', 'Q_TILT_TYPE', 'Q_TAILSIT_ENABLE', 'Q_OPTIONS', 'LOG_BITMASK', 'ICE_ENABLE', 'DSPOILER_OPTS', 'MIXING_GAIN', 'KFF_RDDRMIX')
 
 
@@ -99,6 +117,11 @@ def fly(name, kind, defaults):
             result['mav_type'] = mav_type
             time.sleep(50)
             result['stat_before'], p = stats(conn)
+            switch = None
+            if ICE_START:
+                switch = IceSwitch(conn)
+                switch.start()
+                notes.append('RC channel 11 held at 1900 (ICE start)')
             result['params'] = {k: p.get(k) for k in KEEP}
             notes.append('upload ack %s' % mission.upload(conn, mission_for(kind)))
             flight.set_mode(conn, 'MANUAL', table='plane')
@@ -132,6 +155,8 @@ def fly(name, kind, defaults):
         except Exception as e:
             notes.append('EXCEPTION %r' % (e,))
         finally:
+            if 'switch' in dir() and switch is not None:
+                switch.running = False
             subprocess.call(['pkill', '-x', 'arduplane'])
             try:
                 proc.wait(15)
