@@ -1,0 +1,96 @@
+{
+ "notes": [
+  "SID_AXIS set to 1 (rejected: [])",
+  "TURTLE: TURTLE refused: vehicle stays in STABILIZE (ack result 4); back to STABILIZE: STABILIZE active",
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "vehicle: Mission: 2 LoitTime",
+  "SYSTEMID: SYSTEMID active; back to AUTO: AUTO active",
+  "DRIFT: DRIFT active; back to AUTO: AUTO active",
+  "SPORT: SPORT active; back to AUTO: AUTO active",
+  "ACRO: ACRO active; back to AUTO: AUTO active",
+  "GUIDED_NOGPS: GUIDED_NOGPS active; back to AUTO: AUTO active"
+ ],
+ "modes": [
+  {
+   "mode": "TURTLE",
+   "class": "ModeTurtle",
+   "mode_before": "STABILIZE",
+   "answer": "TURTLE refused: vehicle stays in STABILIZE (ack result 4)",
+   "accepted": false,
+   "mode_after": "STABILIZE",
+   "armed_after": false,
+   "texts": []
+  },
+  {
+   "mode": "SYSTEMID",
+   "class": "ModeSystemId",
+   "mode_before": "STABILIZE",
+   "answer": "SYSTEMID active",
+   "accepted": true,
+   "mode_after": "SYSTEMID",
+   "armed_after": true,
+   "texts": [
+    "SystemID Starting: axis=1"
+   ]
+  },
+  {
+   "mode": "DRIFT",
+   "class": "ModeDrift",
+   "mode_before": "AUTO",
+   "answer": "DRIFT active",
+   "accepted": true,
+   "mode_after": "DRIFT",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "SPORT",
+   "class": "ModeSport",
+   "mode_before": "AUTO",
+   "answer": "SPORT active",
+   "accepted": true,
+   "mode_after": "SPORT",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "ACRO",
+   "class": "ModeAcro",
+   "mode_before": "AUTO",
+   "answer": "ACRO active",
+   "accepted": true,
+   "mode_after": "ACRO",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "GUIDED_NOGPS",
+   "class": "ModeGuidedNoGPS",
+   "mode_before": "AUTO",
+   "answer": "GUIDED_NOGPS active",
+   "accepted": true,
+   "mode_after": "GUIDED_NOGPS",
+   "armed_after": true,
+   "texts": []
+  }
+ ],
+ "hit": [
+  "ModeDrift::init",
+  "ModeDrift::run",
+  "ModeSport::init",
+  "ModeSport::run",
+  "ModeAcro::init",
+  "ModeAcro::run",
+  "ModeGuidedNoGPS::init",
+  "ModeGuidedNoGPS::run",
+  "ModeSystemId::init",
+  "ModeSystemId::run",
+  "ModeTurtle::init"
+ ],
+ "not_reached": [
+  "ModeTurtle::run"
+ ]
+}

@@ -119,3 +119,21 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 **Deferred, not reachable here.** These have no function symbols in either simulator binary: `AP_WindVane`, `AP_DDS` (needs the DDS build option), `AP_Module`, `AP_Menu`, `AP_CheckFirmware`, `AP_Devo_Telem`, `AP_ADC`, `AP_DAC`, `AP_IOMCU`, `AP_FlashIface`; and the `AP_HAL_ESP32`, `AP_HAL_QURT`, `AP_HAL_Empty` hardware layers, `AP_ONVIF`, and the `doc` directory are other board builds, a camera protocol or documentation. They stay at level 0, to be examined with a matching board build or hardware. This is a statement about this simulator build only: it does not show the libraries are unused.
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
+
+## Copter modes without an ArduPilot autotest, entered in flight
+
+`research-tools/sitl-copter-untested-modes.py`: `coverage/copter-mode-test-map.csv` lists seven Copter modes that none of ArduPilot's own autotests names (ACRO, DRIFT, SPORT, TURTLE, SYSTEMID, GUIDED_NOGPS, AUTOROTATE). A simulated Copter was flown to 20 m by an AUTO mission with a long loiter; with RC override (sticks centred, throttle mid) each mode was requested from AUTO, held for 8 s and AUTO requested again, with one-shot gdb breakpoints on each mode's `init` and `run`.
+
+| Mode | Answer | Reached | Notes |
+|---|---|---|---|
+| SYSTEMID | accepted (from STABILIZE, `SID_AXIS` 1) | `init`, `run` | text "SystemID Starting: axis=1" |
+| DRIFT | accepted | `init`, `run` | run 1 without RC input: fell, ground contact 14.7 m/s |
+| SPORT | accepted | `init`, `run` | |
+| ACRO | accepted | `init`, `run` | |
+| GUIDED_NOGPS | accepted (level attitude target streamed) | `init`, `run` | |
+| TURTLE | refused, no text (disarmed, throttle 1000, also with `SERVO_DSHOT_ESC` 1) | `init` only | cause not determined |
+| AUTOROTATE | not tried | | helicopter build only; `ModeAutorotate` has no symbol in the Copter build |
+
+Run history: run 1 (`copter-untested-modes-run1-no-rc-input-fell`, with the script as it ran) sent no RC input, so the Copter fell in DRIFT and ACRO and GUIDED_NOGPS were entered on the ground, disarmed; it is kept as it was. Run 2 (`copter-untested-modes`) added the RC override stream, `SID_AXIS`, a TURTLE try on the ground and the attitude stream. A third run (`copter-turtle-dshot`) set `SERVO_DSHOT_ESC` 1 for TURTLE; it was refused again with no vehicle text. `ModeTurtle::init` returns false silently when the vehicle is armed, when `enabled()` (a DShot ESC type) is false, or when a stick is off centre, so which of these applied is not known; `mavlink_motor_control_check` would have printed a text.
+
+Limits: simulator only; one flight; eight seconds per mode; entry and the vehicle's texts only; the flight handling and each mode's control output were not assessed.
