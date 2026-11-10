@@ -300,7 +300,7 @@ def plane_guided_slew():
         ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
         notes.append('t=%5.1f GUIDED_CHANGE_ALTITUDE to 120 m: ack %s' % (time.time() - t0, None if ack is None else ack.result))
         hold(20.0)
-        conn.mav.command_long_send(conn.target_system, conn.target_component, 43002, 0, 1, 270.0, 0, 0, 0, 0, 0)  # GUIDED_CHANGE_HEADING: type=1 raw heading, 270 degrees
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 43002, 0, 1, 270.0, 3.0, 0, 0, 0, 0)  # GUIDED_CHANGE_HEADING: type=1 raw heading, 270 degrees, accel limit 3 m/s^2 (param3=0 floors to 0.05, an almost unusable ~0.3 deg bank limit, see the trace)
         ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
         notes.append('t=%5.1f GUIDED_CHANGE_HEADING to 270 deg: ack %s' % (time.time() - t0, None if ack is None else ack.result))
         hold(40.0)
