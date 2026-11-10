@@ -35,6 +35,9 @@ M_LON = M_LAT * math.cos(math.radians(35.363261))
 SCENARIOS = {
     'battery-low-vtol': ('vtol', {'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, {'SIM_BATT_VOLTAGE': 10.5}, 'QLAND'),
     'battery-low-cruise': ('cruise', {'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, {'SIM_BATT_VOLTAGE': 10.5}, 'RTL'),
+    # quadplane.parm never sets BATT_MONITOR (plane.parm sets it to 4); the compiled default is Type::NONE (AP_BattMonitor_Params.cpp), so nothing reads SIM_BATT_VOLTAGE at all.
+    # This repeats battery-low-vtol with BATT_MONITOR set, to confirm that is the actual cause.
+    'battery-low-vtol-monitor-set': ('vtol', {'BATT_MONITOR': 4, 'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, {'SIM_BATT_VOLTAGE': 10.5}, 'QLAND'),
     'gps-loss-vtol': ('vtol', {'FS_EKF_ACTION': 1}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
     'gps-loss-cruise': ('cruise', {'FS_EKF_ACTION': 1}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
     'gcs-link-loss-transition': ('transition', {'FS_GCS_ENABL': 1, 'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, None, 'RTL'),

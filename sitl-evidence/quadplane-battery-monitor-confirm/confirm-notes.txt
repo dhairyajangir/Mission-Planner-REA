@@ -1,0 +1,13 @@
+set {'BATT_MONITOR': 4.0, 'BATT_FS_LOW_ACT': 1.0, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1.0} (rejected []); before {'BATT_MONITOR': 0.0, 'BATT_FS_LOW_ACT': None, 'BATT_LOW_VOLT': None, 'BATT_LOW_TIMER': None}
+after reboot: {'BATT_MONITOR': 4.0, 'BATT_FS_LOW_ACT': 1.0, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1.0}
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  1.0 mode AUTO
+t= 11.0 fault injected SIM_BATT_VOLTAGE=10.5 (rejected [])
+t= 12.2 mode RTL
+t= 12.2 vehicle: Battery 1 is low 9.94V used 165 mAh
+t= 12.2 vehicle: Transition started airspeed 0.9
+t= 16.3 vehicle: Transition airspeed reached 18.4
+t= 21.3 vehicle: Transition done
