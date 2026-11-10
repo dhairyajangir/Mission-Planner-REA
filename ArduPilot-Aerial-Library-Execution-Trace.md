@@ -15,7 +15,7 @@ The raw logs (53 MB gzipped, four files) are **not committed**; `raw-log-manifes
 
 - **Copter** (`copter-logged-flight`): takeoff to 15 m, two waypoints, return, automatic disarm (91 message types, 1,115,631 messages).
 - **Plane** (`plane-logged-flight`): takeoff to 60 m, three waypoints, automatic landing and disarm (99 message types, 417,833 messages).
-- **Helicopter** (`heli-acro`, `arducopter-heli`, frame `heli`): booted and ACRO requested; arming was refused ("Motor Interlock Enabled"), so the helicopter never flew (62 types, 565,426 messages).
+- **Helicopter** (`heli-acro`, `arducopter-heli`, frame `heli`): booted and ACRO requested; arming was refused ("Motor Interlock Enabled"), so the helicopter never flew in that run (62 types, 565,426 messages); a later run flew it, see the helicopter section at the end.
 - **Copter with a Lua script** (`custom-mode`): `SCR_ENABLE` 1 and `Flip_Mode.lua`, takeoff by mission, ALT_HOLD, then custom mode 100 (77 types, 545,542 messages).
 
 ## Results by library
@@ -172,3 +172,21 @@ Limits: simulator only; one flight; eight seconds per mode; entry and the vehicl
 Reached: 54 of 56 breakpoints. Not reached: `ModeThermal::update` (THERMAL refused, soaring not enabled) and `ModeAutoLand::update` (AUTOLAND refused after `_enter`).
 
 Caveats: ACRO, MANUAL, TRAINING and QACRO were followed by simulator ground contact, so the plane's position and state when the next modes were requested (AUTO had recovered in between; "Transition done" appears during the CIRCLE hold) were not logged; each mode was held 10 s only; only entry and vehicle text are recorded, not flight behaviour. The earlier Plane in-flight run (`sitl-evidence/plane-modes/`) holds altitude and drift numbers for FBWA, FBWB, CRUISE, LOITER, CIRCLE, STABILIZE and GUIDED. Simulator only.
+
+## The helicopter build in flight, and autorotation
+
+`research-tools/sitl-heli-flight.py` (gdb, simulator only). The earlier helicopter runs could not arm: "Motor Interlock Enabled" means the motor-interlock RC switch (channel 8, `RC8_OPTION` 32 here) was high; it must be low to arm and high to run the rotor. With RC override on channel 8 low, arm in STABILIZE, then channel 8 high, the vehicle printed "RC8: MotorInterlock HIGH" and "Runup Complete" (`H_RSC_MODE` 2, `H_RSC_RUNUP_TIME` 10 s, `H_RSC_RAMP_TIME` 1 s); an AUTO mission (takeoff to 20 m, 600 s loiter) then advanced to item 2 ("Mission: 2 LoitTime").
+
+| Mode | Answer | Reached |
+|---|---|---|
+| ACRO | accepted, armed after 10 s | `ModeAcro_Heli::init`, `run` |
+| STABILIZE | accepted | `ModeStabilize_Heli::init`, `run` |
+| ALT_HOLD | accepted | (no heli-specific breakpoint) |
+| LOITER | accepted | (no heli-specific breakpoint) |
+| AUTOROTATE | refused with `AROT_ENABLE` 0 (`ModeAutorotate::init` reached) | |
+
+Motor and attitude functions hit: `AP_MotorsHeli::output_armed_stabilizing`, `AP_MotorsHeli_Single::output_to_motors`, `AC_AttitudeControl_Heli::rate_controller_run`.
+
+**Autorotation.** The mode needs two parameters. With `AROT_ENABLE` 1 alone the vehicle refuses to arm ("PreArm: AROT: H_RSC_AROT_* not configured", from `AC_Autorotation::arming_checks`, which wants the rotor-speed controller's autorotation sub-group on); that run is kept as `heli-autorotate-run1-prearm-rsc-not-configured` (its gdb text was truncated by my own mistaken relaunch, see the NOTE file there). With `AROT_ENABLE` 1 and `H_RSC_AROT_ENBL` 1 the mode was accepted in the air; the vehicle printed "AROT: Entry Phase", "AROT: Glide Phase" and the simulator reported ground contact at 5.65 m/s; `ModeAutorotate::init` and `run` were hit (stack: `Copter::update_flight_mode`).
+
+Limits: simulator only; one flight each; entry and vehicle text only; no altitude, rotor speed or attitude was recorded during the holds, so nothing is said about handling, the flare or the touchdown; the helicopter is the single-rotor `heli` frame only (the dual, tail and gas variants were not flown).

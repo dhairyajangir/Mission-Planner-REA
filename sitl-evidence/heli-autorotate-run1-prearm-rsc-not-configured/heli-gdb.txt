@@ -1,0 +1,38 @@
+Temporary breakpoint 1 at 0x2d7886: file ../../libraries/AP_Motors/AP_MotorsHeli.cpp, line 260.
+Temporary breakpoint 2 at 0x2de05a: file ../../libraries/AP_Motors/AP_MotorsHeli_Single.cpp, line 456.
+Temporary breakpoint 3 at 0x2bd393: file ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp, line 343.
+Temporary breakpoint 4 at 0xaca63: file ../../ArduCopter/mode_stabilize_heli.cpp, line 15.
+Temporary breakpoint 5 at 0xaca91: file ../../ArduCopter/mode_stabilize_heli.cpp, line 23.
+Temporary breakpoint 6 at 0x95c7d: file ../../ArduCopter/mode_acro_heli.cpp, line 14.
+Temporary breakpoint 7 at 0x95cab: file ../../ArduCopter/mode_acro_heli.cpp, line 23.
+Temporary breakpoint 8 at 0x9c903: file ../../ArduCopter/mode_autorotate.cpp, line 23.
+Temporary breakpoint 9 at 0x9ca16: file ../../ArduCopter/mode_autorotate.cpp, line 52.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 37)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm

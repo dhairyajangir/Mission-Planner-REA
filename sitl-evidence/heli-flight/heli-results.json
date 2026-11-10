@@ -1,0 +1,79 @@
+{
+ "notes": [
+  "frame class 6.0, RC8_OPTION 32.0, H_RSC_MODE 2.0, H_RSC_RUNUP_TIME 10.0, H_RSC_RAMP_TIME 1.0",
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm (interlock switch low): armed (ack result 0)",
+  "interlock switch raised",
+  "vehicle: RC8: MotorInterlock HIGH",
+  "vehicle: Runup Complete",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "vehicle: Mission: 2 LoitTime",
+  "ACRO: ACRO active; back to AUTO: AUTO active",
+  "STABILIZE: STABILIZE active; back to AUTO: AUTO active",
+  "ALT_HOLD: ALT_HOLD active; back to AUTO: AUTO active",
+  "LOITER: LOITER active; back to AUTO: AUTO active",
+  "AUTOROTATE: AUTOROTATE refused: vehicle stays in AUTO (ack result 4); back to AUTO: AUTO active"
+ ],
+ "modes": [
+  {
+   "mode": "ACRO",
+   "mode_before": "AUTO",
+   "answer": "ACRO active",
+   "accepted": true,
+   "mode_after": "ACRO",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "STABILIZE",
+   "mode_before": "AUTO",
+   "answer": "STABILIZE active",
+   "accepted": true,
+   "mode_after": "STABILIZE",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "ALT_HOLD",
+   "mode_before": "AUTO",
+   "answer": "ALT_HOLD active",
+   "accepted": true,
+   "mode_after": "ALT_HOLD",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "LOITER",
+   "mode_before": "AUTO",
+   "answer": "LOITER active",
+   "accepted": true,
+   "mode_after": "LOITER",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "AUTOROTATE",
+   "mode_before": "AUTO",
+   "answer": "AUTOROTATE refused: vehicle stays in AUTO (ack result 4)",
+   "accepted": false,
+   "mode_after": "AUTO",
+   "armed_after": true,
+   "texts": []
+  }
+ ],
+ "hit": [
+  "AP_MotorsHeli::output_armed_stabilizing",
+  "AP_MotorsHeli_Single::output_to_motors",
+  "AC_AttitudeControl_Heli::rate_controller_run",
+  "ModeStabilize_Heli::init",
+  "ModeStabilize_Heli::run",
+  "ModeAcro_Heli::init",
+  "ModeAcro_Heli::run",
+  "ModeAutorotate::init"
+ ],
+ "not_reached": [
+  "ModeAutorotate::run"
+ ]
+}

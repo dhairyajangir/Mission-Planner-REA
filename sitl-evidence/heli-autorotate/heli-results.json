@@ -1,0 +1,44 @@
+{
+ "notes": [
+  "frame class 6.0, RC8_OPTION 32.0, H_RSC_MODE 2.0, H_RSC_RUNUP_TIME 10.0, H_RSC_RAMP_TIME 1.0",
+  "set to 1: ['AROT_ENABLE', 'H_RSC_AROT_ENBL'] (not present at boot: []; rejected: []); before: {'AROT_ENABLE': 0.0, 'H_RSC_AROT_ENBL': 0.0}",
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm (interlock switch low): armed (ack result 0)",
+  "interlock switch raised",
+  "vehicle: RC8: MotorInterlock HIGH",
+  "vehicle: Runup Complete",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "vehicle: Mission: 2 LoitTime",
+  "AUTOROTATE: AUTOROTATE active; back to AUTO: AUTO active"
+ ],
+ "modes": [
+  {
+   "mode": "AUTOROTATE",
+   "mode_before": "AUTO",
+   "answer": "AUTOROTATE active",
+   "accepted": true,
+   "mode_after": "AUTOROTATE",
+   "armed_after": true,
+   "texts": [
+    "AROT: Entry Phase",
+    "AROT: Glide Phase",
+    "SIM Hit ground at 5.651396 m/s"
+   ]
+  }
+ ],
+ "hit": [
+  "AP_MotorsHeli::output_armed_stabilizing",
+  "AP_MotorsHeli_Single::output_to_motors",
+  "AC_AttitudeControl_Heli::rate_controller_run",
+  "ModeStabilize_Heli::run",
+  "ModeAutorotate::init",
+  "ModeAutorotate::run"
+ ],
+ "not_reached": [
+  "ModeStabilize_Heli::init",
+  "ModeAcro_Heli::init",
+  "ModeAcro_Heli::run"
+ ]
+}

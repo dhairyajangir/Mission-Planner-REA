@@ -1,0 +1,94 @@
+Temporary breakpoint 1 at 0x2d7886: file ../../libraries/AP_Motors/AP_MotorsHeli.cpp, line 260.
+Temporary breakpoint 2 at 0x2de05a: file ../../libraries/AP_Motors/AP_MotorsHeli_Single.cpp, line 456.
+Temporary breakpoint 3 at 0x2bd393: file ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp, line 343.
+Temporary breakpoint 4 at 0xaca63: file ../../ArduCopter/mode_stabilize_heli.cpp, line 15.
+Temporary breakpoint 5 at 0xaca91: file ../../ArduCopter/mode_stabilize_heli.cpp, line 23.
+Temporary breakpoint 6 at 0x95c7d: file ../../ArduCopter/mode_acro_heli.cpp, line 14.
+Temporary breakpoint 7 at 0x95cab: file ../../ArduCopter/mode_acro_heli.cpp, line 23.
+Temporary breakpoint 8 at 0x9c903: file ../../ArduCopter/mode_autorotate.cpp, line 23.
+Temporary breakpoint 9 at 0x9ca16: file ../../ArduCopter/mode_autorotate.cpp, line 52.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 35)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+Loaded defaults from @ROMFS/default_params/copter-heli.parm
+HIT AP_MotorsHeli_Single::output_to_motors
+#0  AP_MotorsHeli_Single::output_to_motors (this=0x555555c25ca0) at ../../libraries/AP_Motors/AP_MotorsHeli_Single.cpp:456
+#1  0x000055555582b72c in AP_MotorsHeli::output_min (this=0x555555c25ca0) at ../../libraries/AP_Motors/AP_MotorsHeli.cpp:220
+#2  0x0000555555609463 in Copter::init_ardupilot (this=0x555555b71bc0 <copter>) at ../../ArduCopter/system.cpp:182
+#3  0x00005555556fb817 in AP_Vehicle::setup (this=0x555555b71bc0 <copter>) at ../../libraries/AP_Vehicle/AP_Vehicle.cpp:451
+HIT AC_AttitudeControl_Heli::rate_controller_run
+#0  AC_AttitudeControl_Heli::rate_controller_run (this=0x555555c264e0) at ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp:343
+#1  0x00005555555cdfd7 in Copter::run_rate_controller_main (this=0x555555b71bc0 <copter>) at ../../ArduCopter/Attitude.cpp:20
+#2  0x00005555555d5623 in Functor<void>::method_wrapper<Copter, &Copter::run_rate_controller_main> (obj=0x555555b71bc0 <copter>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569861e in Functor<void>::operator() (this=0x555555b3a000 <Copter::scheduler_tasks+32>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeStabilize_Heli::run
+#0  ModeStabilize_Heli::run (this=0x555555b800a8 <copter+58600>) at ../../ArduCopter/mode_stabilize_heli.cpp:23
+#1  0x00005555555e6a87 in Copter::update_flight_mode (this=0x555555b71bc0 <copter>) at ../../ArduCopter/mode.cpp:512
+#2  0x00005555555d5734 in Functor<void>::method_wrapper<Copter, &Copter::update_flight_mode> (obj=0x555555b71bc0 <copter>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569861e in Functor<void>::operator() (this=0x555555b3a0e0 <Copter::scheduler_tasks+256>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT AP_MotorsHeli::output_armed_stabilizing
+#0  AP_MotorsHeli::output_armed_stabilizing (this=0x555555c25ca0) at ../../libraries/AP_Motors/AP_MotorsHeli.cpp:260
+#1  0x000055555582b7be in AP_MotorsHeli::output (this=0x555555c25ca0) at ../../libraries/AP_Motors/AP_MotorsHeli.cpp:240
+#2  0x00005555555e835f in Mode::output_to_motors (this=0x555555b800a8 <copter+58600>) at ../../ArduCopter/mode.cpp:1019
+#3  0x000055555560717b in Copter::motors_output (this=0x555555b71bc0 <copter>, full_push=true) at ../../ArduCopter/motors.cpp:110
+HIT ModeAcro_Heli::init
+#0  ModeAcro_Heli::init (this=0x555555b7f110 <copter+54608>, ignore_checks=false) at ../../ArduCopter/mode_acro_heli.cpp:14
+#1  0x00005555555e6767 in Copter::set_mode (this=0x555555b71bc0 <copter>, mode=Mode::Number::ACRO, reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:432
+#2  0x00005555555e69d3 in Copter::set_mode (this=0x555555b71bc0 <copter>, new_mode=1 '\001', reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:497
+#3  0x0000555555720829 in GCS_MAVLINK::_set_mode_common (this=0x555555c1c240, _base_mode=1 '\001', _custom_mode=1) at ../../libraries/GCS_MAVLink/GCS_Common.cpp:2909
+HIT ModeAcro_Heli::run
+#0  ModeAcro_Heli::run (this=0x555555b7f110 <copter+54608>) at ../../ArduCopter/mode_acro_heli.cpp:23
+#1  0x00005555555e6a87 in Copter::update_flight_mode (this=0x555555b71bc0 <copter>) at ../../ArduCopter/mode.cpp:512
+#2  0x00005555555d5734 in Functor<void>::method_wrapper<Copter, &Copter::update_flight_mode> (obj=0x555555b71bc0 <copter>) at ../../libraries/AP_HAL/utility/functor.h:88
+#3  0x000055555569861e in Functor<void>::operator() (this=0x555555b3a0e0 <Copter::scheduler_tasks+256>) at ../../libraries/AP_HAL/utility/functor.h:54
+HIT ModeStabilize_Heli::init
+#0  ModeStabilize_Heli::init (this=0x555555b800a8 <copter+58600>, ignore_checks=false) at ../../ArduCopter/mode_stabilize_heli.cpp:15
+#1  0x00005555555e6767 in Copter::set_mode (this=0x555555b71bc0 <copter>, mode=Mode::Number::STABILIZE, reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:432
+#2  0x00005555555e69d3 in Copter::set_mode (this=0x555555b71bc0 <copter>, new_mode=0 '\000', reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:497
+#3  0x0000555555720829 in GCS_MAVLINK::_set_mode_common (this=0x555555c1c240, _base_mode=1 '\001', _custom_mode=0) at ../../libraries/GCS_MAVLink/GCS_Common.cpp:2909
+HIT ModeAutorotate::init
+#0  ModeAutorotate::init (this=0x555555b806c8 <copter+60168>, ignore_checks=false) at ../../ArduCopter/mode_autorotate.cpp:23
+#1  0x00005555555e6767 in Copter::set_mode (this=0x555555b71bc0 <copter>, mode=Mode::Number::AUTOROTATE, reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:432
+#2  0x00005555555e69d3 in Copter::set_mode (this=0x555555b71bc0 <copter>, new_mode=26 '\032', reason=ModeReason::GCS_COMMAND) at ../../ArduCopter/mode.cpp:497
+#3  0x0000555555720829 in GCS_MAVLINK::_set_mode_common (this=0x555555c1c240, _base_mode=1 '\001', _custom_mode=26) at ../../libraries/GCS_MAVLink/GCS_Common.cpp:2909
+
+Thread 1 "arducopter-heli" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffda00, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

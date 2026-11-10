@@ -1,0 +1,24 @@
+{
+ "notes": [
+  "frame class 6.0, RC8_OPTION 32.0, H_RSC_MODE 2.0, H_RSC_RUNUP_TIME 10.0, H_RSC_RAMP_TIME 1.0",
+  "AROT_ENABLE was 0.0, set to 1 (rejected: [])",
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm (interlock switch low): not armed after 150 s (last ack result 4)",
+  "vehicle: PreArm: AROT: H_RSC_AROT_* not configured"
+ ],
+ "modes": [],
+ "hit": [
+  "AP_MotorsHeli_Single::output_to_motors",
+  "AC_AttitudeControl_Heli::rate_controller_run",
+  "ModeStabilize_Heli::run"
+ ],
+ "not_reached": [
+  "AP_MotorsHeli::output_armed_stabilizing",
+  "ModeStabilize_Heli::init",
+  "ModeAcro_Heli::init",
+  "ModeAcro_Heli::run",
+  "ModeAutorotate::init",
+  "ModeAutorotate::run"
+ ]
+}
