@@ -1,0 +1,24 @@
+TERRAIN_ENABLE was 1.0, set to 1 (rejected []); restarting
+after restart TERRAIN_ENABLE=1.0
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=   0.0 vehicle: Mission: 1 Takeoff
+t=   0.0 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t=   0.2 vehicle: Triggered AUTO. GPS speed = 0.0
+t=   1.4 vehicle: Autoland direction= 0
+t=   1.5 vehicle: Holding course 35998 at 5.6m/s (0.0)
+t=   9.5 vehicle: Takeoff level-off starting at 19m
+t=  11.6 vehicle: Takeoff complete at 80.55m
+t=  11.6 vehicle: Mission: 2 WP
+t= 223.4 vehicle: Reached waypoint #2 dist 52m
+t= 223.4 vehicle: Mission: 3 WP
+t= 406.0 vehicle: Reached waypoint #3 dist 51m
+t= 406.0 vehicle: Mission: 4 Land
+t= 406.0 vehicle: Landing approach start at 120.7m
+t= 406.1 vehicle: Flare -0.1m sink=0.74 speed=22.7 dist=2.3
+t= 517.3 vehicle: SIM Hit ground at 2.083815 m/s
+t= 527.6 vehicle: Throttle disarmed
+t= 527.6 vehicle: Auto disarmed
+t= 527.7 vehicle: Distance from LAND point=936.08m
+t= 528.1 disarmed
