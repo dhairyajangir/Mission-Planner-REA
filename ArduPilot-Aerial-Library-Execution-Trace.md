@@ -233,7 +233,7 @@ The log map (`log-message-library-map.csv`, 118 message types) credits 22 librar
 | GPS position horizontal (GPS) | 0.45 m (max 0.85) | 2.44 m (max 3.41) | 0.30 m (max 0.77) |
 | GPS altitude (GPS) | 0.06 m (max 0.22) | 0.44 m (max 1.24) | 0.15 m (max 0.22) |
 
-What this shows and does not show: in these simulations the firmware's attitude and position estimates stay within a fraction of a degree and a fraction of a metre (Copter) of the simulator's truth, with the Plane worse on position (rms 0.64 m AHRS, 2.4 m GPS) because it flies faster and the simulated GPS is the dominant error. The truth and the sensors come from the same simulator, so a shared modelling error would not show; real sensors, vibration, magnetic disturbance and wind are not represented. The helicopter log has no airborne samples (it never flew in that run) and is not summarised. The ground-contact periods and the first seconds of each log are in the whole-log rows of the CSV, not here.
+What this shows and does not show: in these simulations the firmware's attitude and position estimates stay within a fraction of a degree and a fraction of a metre (Copter) of the simulator's truth, with the Plane worse on position (rms 0.64 m AHRS, 2.4 m GPS) because it flies faster and the simulated GPS is the dominant error. The truth and the sensors come from the same simulator, so a shared modelling error would not show; real sensors, vibration, magnetic disturbance and wind are not represented. The helicopter log of that run has no airborne samples (it never flew in that run); a later helicopter flight is summarised in the helicopter section at the end. The ground-contact periods and the first seconds of each log are in the whole-log rows of the CSV, not here.
 
 ## Controller tracking and the simulated battery, from the logs
 
@@ -258,4 +258,27 @@ What this shows and does not show: in these simulations the firmware's attitude 
 
 Battery (`BAT`, the simulator's model): Copter flight voltage 12.196 to 12.6 V, current mean/max 25.82 / 40.75 A, remaining 100 -> 79 %; Plane flight 11.875 to 12.6 V, 11.05 / 50.00 A, 99 -> 93 %; Copter with the script 12.192 to 12.6 V, 16.68 / 41.24 A, 100 -> 92 %.
 
-Reading these: the Copter follows its attitude, altitude and position targets closely in the simulator (the yaw rate maximum of 35 degrees per second and the script log's pitch-rate maximum of 30 are the first seconds of a turn and the flip). The Plane's large roll-demand error is the controller's lag behind step changes at each waypoint turn; its cross-track error of 19 m rms is with waypoints 250 to 300 m apart at about 22 m/s and includes the landing approach. The targets are the firmware's own, so a wrong target would not show; no wind, no sensor faults, one flight per log. The helicopter log has no airborne samples and is not summarised.
+Reading these: the Copter follows its attitude, altitude and position targets closely in the simulator (the yaw rate maximum of 35 degrees per second and the script log's pitch-rate maximum of 30 are the first seconds of a turn and the flip). The Plane's large roll-demand error is the controller's lag behind step changes at each waypoint turn; its cross-track error of 19 m rms is with waypoints 250 to 300 m apart at about 22 m/s and includes the landing approach. The targets are the firmware's own, so a wrong target would not show; no wind, no sensor faults, one flight per log. The helicopter log of that run has no airborne samples; a later logged helicopter flight is summarised at the end.
+
+## The helicopter build in a logged flight
+
+`research-tools/sitl-heli-logged-flight.py` flew the helicopter build once with `LOG_BITMASK` 4194303: interlock low to arm, high for the rotor, an AUTO mission (takeoff to 20 m, a waypoint 40 m north with a 30 s loiter, return to launch). Texts: "Mission: 2 LoitTime" at 6.5 s, "Reached command #2" at 48.8 s, "Mission: 3 RTL", "SIM Hit ground at 0.50 m/s" at 95.7 s, "Disarming motors" at 107.6 s. `STAT_FLTCNT` 0 to 1, `STAT_FLTTIME` 0 to 101 s, `STAT_DISTFLWN` 0 to 116 m. The raw log (62 MB, 32 MB gzipped) is listed with its checksum in `raw-log-manifest.txt` and not committed. The two analyses above were run on it (`sim-truth-accuracy-heli.csv`, `control-tracking-heli.csv`), airborne samples, rms:
+
+| Estimate or tracking | Helicopter |
+|---|---|
+| AHRS roll (ATT) against truth | 0.09 deg (max 0.29) |
+| AHRS pitch (ATT) against truth | 0.11 deg (max 0.32) |
+| AHRS yaw (ATT) against truth | 2.45 deg (max 9.51) |
+| EKF3 core 0 yaw (XKF1) against truth | 2.45 deg (max 9.50) |
+| AHRS position horizontal (POS) against truth | 0.07 m (max 0.23) |
+| barometer altitude (BARO AltAMSL) against truth | 0.14 m (max 0.31) |
+| GPS position horizontal (GPS) against truth | 0.24 m (max 0.80) |
+| roll: desired - actual (ANG) | 0.19 deg (max 0.89) |
+| pitch: desired - actual (ANG) | 0.29 deg (max 1.49) |
+| yaw: desired - actual (ANG) | 3.46 deg (max 17.06) |
+| yaw rate: desired - actual (RATE) | 15.10 deg/s (max 83.11) |
+| altitude: desired - actual (CTUN DAlt - Alt) | 0.04 m (max 0.16) |
+| position north: target - actual (PSCN) | 0.12 m (max 0.45) |
+| position east: target - actual (PSCE) | 0.18 m (max 0.69) |
+
+The helicopter's roll, pitch, position and altitude are as close as the Copter's, but its yaw is looser: 2.4 degrees rms against the truth (the Copter 0.7) and a yaw-rate error of 15 degrees per second rms (the Copter 3.6), with up to 83 degrees per second at its worst. The simulated battery sits at about 50 V. The helicopter flew with the single-rotor `heli` frame only; the dual, tail and gas variants were not flown. Simulator only, one flight, the firmware's own targets.

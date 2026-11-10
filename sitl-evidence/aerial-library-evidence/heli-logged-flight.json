@@ -1,0 +1,40 @@
+{
+ "stat_before": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 30.0
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 116.36373901367188,
+  "STAT_FLTCNT": 1.0,
+  "STAT_FLTTIME": 101.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 187.0
+ },
+ "notes": [
+  "LOG_BITMASK was 180222.0, set to 4194303 (rejected [])",
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t=  6.5 vehicle: Mission: 2 LoitTime",
+  "t= 48.8 vehicle: Reached command #2",
+  "t= 48.8 vehicle: Mission: 3 RTL",
+  "t= 95.7 vehicle: SIM Hit ground at 0.503710 m/s",
+  "t=107.6 vehicle: Disarming motors",
+  "t=108.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "heli-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 61636608,
+   "raw_sha256": "2c49376947e2f8067c8de5cd4b6f02406c0cacddd1157a49afa3b26e7e6a1dee",
+   "gz_bytes": 32329141
+  }
+ ]
+}
