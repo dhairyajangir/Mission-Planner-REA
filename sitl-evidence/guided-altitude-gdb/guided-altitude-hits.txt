@@ -1,0 +1,9 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+GUIDED: GUIDED active
+GUIDED_CHANGE_ALTITUDE to 120 m: ack 2
+
+ModeGuided::update_target_altitude: 650 hits
+Plane::set_target_altitude_location: 1417 hits
+Mode::update_target_altitude: 1416 hits

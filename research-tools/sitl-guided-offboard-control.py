@@ -317,6 +317,58 @@ def plane_guided_slew():
     print('[plane-guided-slew] %s' % (notes[-1] if notes else 'no notes'), flush=True)
 
 
+def plane_guided_altitude_no_wp():
+    """Isolates why GUIDED_CHANGE_ALTITUDE had no effect in plane_guided_slew(): there, GUIDED was reached via MAV_CMD_DO_REPOSITION, which also calls plane.set_guided_WP() (a position
+    target with its own altitude). This reaches GUIDED by a plain mode switch instead (as plane_position() does, no DO_REPOSITION, no set_guided_WP call at all), then sends only
+    GUIDED_CHANGE_ALTITUDE, to see whether the WP target set by DO_REPOSITION is what was overriding the altitude slew."""
+    fresh()
+    notes, proc = [], start_plane()
+    try:
+        conn, _ = link.connect(5760, timeout=120.0)
+        time.sleep(45)
+        a, b = at(300, 0), at(300, 300)
+        items = [mission.Item(0, 0, 16, 0, 1, 0, 0, 0, 0, HOME[0], HOME[1], HOME[2]), mission.Item(1, 3, 22, 1, 1, 15.0, 0, 0, 0, 0.0, 0.0, 60.0),
+                 mission.Item(2, 3, 16, 0, 1, 0, 0, 0, 0, a[0], a[1], 60.0), mission.Item(3, 3, 16, 0, 1, 0, 0, 0, 0, b[0], b[1], 60.0)]
+        notes.append('upload ack %s' % mission.upload(conn, items))
+        flight.set_mode(conn, 'MANUAL', table='plane')
+        armed = flight.arm(conn, timeout=150.0)
+        notes.append('arm: %s' % armed.detail)
+        auto = flight.set_mode(conn, 'AUTO', table='plane')
+        give_up = time.time() + 90.0
+        while not auto.ok and time.time() < give_up:
+            time.sleep(3)
+            auto = flight.set_mode(conn, 'AUTO', table='plane')
+        notes.append('AUTO: %s' % auto.detail)
+        time.sleep(30)
+        guided = flight.set_mode(conn, 'GUIDED', table='plane')          # plain mode switch, no DO_REPOSITION, no set_guided_WP call
+        notes.append('GUIDED: %s' % guided.detail)
+        t0, rows = time.time(), []
+
+        def hold(seconds):
+            end = time.time() + seconds
+            while time.time() < end:
+                r = track_row(conn, t0)
+                if r:
+                    rows.append(r)
+
+        hold(5.0)
+        conn.mav.command_int_send(conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 43001, 0, 0, 0, 0, 3.0, 0, 0, 0, 120.0)
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('t=%5.1f GUIDED_CHANGE_ALTITUDE to 120 m (no prior DO_REPOSITION): ack %s' % (time.time() - t0, None if ack is None else ack.result))
+        hold(60.0)
+        last = rows[-1] if rows else None
+        if last:
+            notes.append('final: alt %.1f m' % last[3])
+        write_track('plane-guided-altitude-no-wp', rows)
+    except Exception as e:
+        notes.append('EXCEPTION %r' % (e,))
+    finally:
+        stop(proc, 'arduplane')
+    with open(os.path.join(OUT, 'plane-guided-altitude-no-wp-notes.txt'), 'w') as f:
+        f.write('\n'.join(notes) + '\n')
+    print('[plane-guided-altitude-no-wp] %s' % (notes[-1] if notes else 'no notes'), flush=True)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'copter-position' in PARTS:
@@ -329,6 +381,8 @@ def main():
         plane_reposition()
     if 'plane-guided-slew' in PARTS:
         plane_guided_slew()
+    if 'plane-guided-altitude-no-wp' in PARTS:
+        plane_guided_altitude_no_wp()
     return 0
 
 

@@ -1,0 +1,6 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+GUIDED: GUIDED active
+t=  5.9 GUIDED_CHANGE_ALTITUDE to 120 m (no prior DO_REPOSITION): ack 0
+final: alt 77.3 m
