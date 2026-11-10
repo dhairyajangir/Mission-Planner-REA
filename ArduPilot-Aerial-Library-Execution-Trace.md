@@ -215,3 +215,22 @@ The two backends ended at the same coordinates (-35.3632255, 149.1651967) to the
 
 The log map (`log-message-library-map.csv`, 118 message types) credits 22 libraries with messages written during the simulated Copter and Plane flights. Besides the 14 libraries above, these core ones had been at level 3 only because ArduPilot's own autotests name them; the flights now give direct evidence that their log writers ran, with counts per flight in `log-message-counts.csv` (for example `AP_InertialSensor` `IMU`, `GYR`, `ACC`, `VIBE`; `AP_NavEKF3` `XKF1` to `XKF5`; `AP_NavEKF2` `NKF1` to `NKF5` in the Plane log; `AP_GPS` `GPS`, `GPA`; `AP_Baro` `BARO`; `AP_Compass` `MAG`; `AP_BattMonitor` `BAT`; `AP_AHRS` `ATT`, `POS`, `AHR2`; `AP_ESC_Telem` `ESC`, `ESCX`; `AP_Airspeed` `ARSP`; `AC_AttitudeControl` `ANG`, `RATE`, `PSCN`). Each library's claim row lists its messages and where the first writer is. A message in a log shows the code that writes it ran; it does not show that the value is right. Messages that the map could not credit to one library (`not found in source`, 33 types, and `shared`, 8 types such as the `PID*` family) are not claimed for any library.
 
+## Estimates against the simulator's ground truth
+
+`research-tools/analyze-sim-truth-accuracy.py` reads the saved DataFlash logs and compares the estimates the firmware wrote (`ATT`, `XKF1` for EKF3 core 0, `POS`, `BARO`, `GPS`) with the `SIM` message, which carries the simulator's true roll, pitch, yaw, latitude, longitude and altitude. Output `sitl-evidence/aerial-library-evidence/sim-truth-accuracy.csv` (whole log and airborne, per estimate and log). Airborne samples, rms error:
+
+| Estimate | Copter flight | Plane flight | Copter + Lua script |
+|---|---|---|---|
+| AHRS roll (ATT) | 0.15 deg (max 0.47) | 0.30 deg (max 1.97) | 0.16 deg (max 0.22) |
+| AHRS pitch (ATT) | 0.15 deg (max 0.73) | 0.22 deg (max 1.05) | 0.18 deg (max 1.26) |
+| AHRS yaw (ATT) | 0.74 deg (max 1.94) | 0.55 deg (max 1.42) | 0.46 deg (max 1.63) |
+| EKF3 core 0 roll (XKF1) | 0.14 deg (max 0.35) | 0.13 deg (max 0.28) | 0.16 deg (max 0.21) |
+| EKF3 core 0 pitch (XKF1) | 0.12 deg (max 0.26) | 0.21 deg (max 0.45) | 0.15 deg (max 0.24) |
+| EKF3 core 0 yaw (XKF1) | 0.72 deg (max 1.93) | 0.48 deg (max 0.72) | 0.47 deg (max 1.63) |
+| AHRS position horizontal (POS) | 0.12 m (max 0.30) | 0.64 m (max 0.90) | 0.10 m (max 0.29) |
+| AHRS altitude (POS) | 0.03 m (max 0.11) | 0.25 m (max 0.73) | 0.07 m (max 0.13) |
+| barometer altitude (BARO AltAMSL) | 0.01 m (max 0.05) | 0.13 m (max 0.39) | 0.02 m (max 0.06) |
+| GPS position horizontal (GPS) | 0.45 m (max 0.85) | 2.44 m (max 3.41) | 0.30 m (max 0.77) |
+| GPS altitude (GPS) | 0.06 m (max 0.22) | 0.44 m (max 1.24) | 0.15 m (max 0.22) |
+
+What this shows and does not show: in these simulations the firmware's attitude and position estimates stay within a fraction of a degree and a fraction of a metre (Copter) of the simulator's truth, with the Plane worse on position (rms 0.64 m AHRS, 2.4 m GPS) because it flies faster and the simulated GPS is the dominant error. The truth and the sensors come from the same simulator, so a shared modelling error would not show; real sensors, vibration, magnetic disturbance and wind are not represented. The helicopter log has no airborne samples (it never flew in that run) and is not summarised. The ground-contact periods and the first seconds of each log are in the whole-log rows of the CSV, not here.
