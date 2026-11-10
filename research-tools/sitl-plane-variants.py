@@ -8,6 +8,8 @@ the snapshot's own directories), plus a one-line file setting LOG_BITMASK 419430
   vtol   VTOL takeoff to 30 m, two waypoints at 60 m, a VTOL landing (sitl-plane-gaps.py)
 The vehicle is armed in MANUAL, put in AUTO (retried for 90 s) and followed until it disarms by itself or 300 s pass. The DataFlash .BIN is gzipped next to a JSON note with its size,
 SHA-256, the frame parameters read back, the vehicle's texts with times and the STAT counters before and after. A variant that cannot be armed or flown is recorded as it happened.
+TAILSITTER_REBOOT=1 restarts the simulator once (without wiping) when the frame has Q_TAILSIT_ENABLE 1, as ArduPilot's own FlyEachFrame test does ("tailsitter needs extra
+re-boot to pick up the rotated AHRS view").
 ICE_START_CH11=1 holds RC channel 11 at 1900 by RC override for the whole flight: the ICE frames' parameter file sets RC11_OPTION 179 (ICE start/stop), the engine starts with
 the channel at or above 1700, and without it the plane never leaves the ground (plane-ice) or flies very slowly (quadplane-ice).
 """
@@ -56,6 +58,7 @@ VARIANTS = {
 }
 WANT = sys.argv[4:] or list(VARIANTS)
 ICE_START = bool(os.environ.get('ICE_START_CH11'))
+TAIL_REBOOT = bool(os.environ.get('TAILSITTER_REBOOT'))
 
 
 class IceSwitch(threading.Thread):
@@ -123,6 +126,20 @@ def fly(name, kind, defaults):
                 switch.start()
                 notes.append('RC channel 11 held at 1900 (ICE start)')
             result['params'] = {k: p.get(k) for k in KEEP}
+            if TAIL_REBOOT and p.get('Q_TAILSIT_ENABLE'):
+                notes.append('Q_TAILSIT_ENABLE is set: restarting the simulator once, without wiping')
+                subprocess.call(['pkill', '-x', 'arduplane'])
+                try:
+                    proc.wait(15)
+                except Exception:
+                    proc.kill()
+                time.sleep(2)
+                proc = subprocess.Popen([BIN, '--model', name, '--defaults', ','.join(defaults + [extra]), '-I', '0', '-s', '1', '--home', '%s,%s,%s,0' % HOME], cwd=work,
+                                        stdout=open(os.path.join(work, 'sitl.log'), 'a'), stderr=subprocess.STDOUT)
+                conn, _ = link.connect(5760, timeout=120.0)
+                time.sleep(50)
+                result['stat_before'], p = stats(conn)
+                result['params_after_reboot'] = {k: p.get(k) for k in KEEP}
             notes.append('upload ack %s' % mission.upload(conn, mission_for(kind)))
             flight.set_mode(conn, 'MANUAL', table='plane')
             armed = flight.arm(conn, timeout=150.0)

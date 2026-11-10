@@ -1,0 +1,23 @@
+log,estimate,part,unit,n,mean_abs,rms,p95,max
+plane-tailsitter-logged-flight,AHRS roll (ATT),whole log,angle,92076,29.1047,48.3305,124.5536,179.9969
+plane-tailsitter-logged-flight,AHRS roll (ATT),airborne,angle,46248,22.0152,38.9487,94.9664,179.9124
+plane-tailsitter-logged-flight,AHRS pitch (ATT),whole log,angle,92076,17.586,29.9227,86.755,167.2914
+plane-tailsitter-logged-flight,AHRS pitch (ATT),airborne,angle,46248,16.898,29.7,88.6099,116.6473
+plane-tailsitter-logged-flight,AHRS yaw (ATT),whole log,angle,92076,28.4728,49.1276,130.202,179.9451
+plane-tailsitter-logged-flight,AHRS yaw (ATT),airborne,angle,46248,20.4067,38.3426,91.9342,179.9445
+plane-tailsitter-logged-flight,EKF3 core 0 roll (XKF1),whole log,angle,7673,22.2847,44.3134,122.08,179.47
+plane-tailsitter-logged-flight,EKF3 core 0 roll (XKF1),airborne,angle,3854,10.2078,24.4924,44.87,179.35
+plane-tailsitter-logged-flight,EKF3 core 0 pitch (XKF1),whole log,angle,7673,11.4025,23.7353,57.94,153.29
+plane-tailsitter-logged-flight,EKF3 core 0 pitch (XKF1),airborne,angle,3854,6.3417,12.1295,24.12,109.68
+plane-tailsitter-logged-flight,EKF3 core 0 yaw (XKF1),whole log,angle,7673,22.2269,44.7999,127.64,179.94
+plane-tailsitter-logged-flight,EKF3 core 0 yaw (XKF1),airborne,angle,3854,10.2833,23.4537,44.49,179.94
+plane-tailsitter-logged-flight,AHRS position horizontal (POS),whole log,metres,7673,0.4532,0.58,1.1031,3.0695
+plane-tailsitter-logged-flight,AHRS position horizontal (POS),airborne,metres,3854,0.4367,0.5587,1.0987,2.9085
+plane-tailsitter-logged-flight,AHRS altitude (POS),whole log,metres,7673,0.9054,1.1041,2.09,5.28
+plane-tailsitter-logged-flight,AHRS altitude (POS),airborne,metres,3854,0.8339,1.036,2.0,4.34
+plane-tailsitter-logged-flight,barometer altitude (BARO AltAMSL),whole log,metres,3069,0.161,0.1961,0.3441,0.6469
+plane-tailsitter-logged-flight,barometer altitude (BARO AltAMSL),airborne,metres,1540,0.1598,0.1953,0.3417,0.6469
+plane-tailsitter-logged-flight,GPS position horizontal (GPS),whole log,metres,1535,0.5343,0.673,1.3171,2.1604
+plane-tailsitter-logged-flight,GPS position horizontal (GPS),airborne,metres,778,0.6488,0.779,1.4662,2.1604
+plane-tailsitter-logged-flight,GPS altitude (GPS),whole log,metres,1535,0.2767,0.3566,0.63,2.29
+plane-tailsitter-logged-flight,GPS altitude (GPS),airborne,metres,778,0.2616,0.3498,0.64,2.29

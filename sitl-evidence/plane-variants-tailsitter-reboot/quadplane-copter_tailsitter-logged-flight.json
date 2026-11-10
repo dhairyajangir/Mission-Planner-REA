@@ -1,0 +1,89 @@
+{
+ "variant": "quadplane-copter_tailsitter",
+ "kind": "vtol",
+ "defaults": [
+  "Tools/autotest/default_params/quadplane.parm",
+  "Tools/autotest/default_params/quadplane-copter_tailsitter.parm"
+ ],
+ "missing_default_files": [],
+ "mav_type": 20,
+ "stat_before": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 0.0,
+  "STAT_FLTCNT": 0.0,
+  "STAT_FLTTIME": 0.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 60.0
+ },
+ "params": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 1.0,
+  "Q_FRAME_TYPE": 0.0,
+  "Q_TILT_ENABLE": 0.0,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": 1.0,
+  "Q_OPTIONS": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "params_after_reboot": {
+  "Q_ENABLE": 1.0,
+  "Q_FRAME_CLASS": 1.0,
+  "Q_FRAME_TYPE": 0.0,
+  "Q_TILT_ENABLE": 0.0,
+  "Q_TILT_TYPE": null,
+  "Q_TAILSIT_ENABLE": 1.0,
+  "Q_OPTIONS": 0.0,
+  "LOG_BITMASK": 4194303.0,
+  "ICE_ENABLE": 0.0,
+  "DSPOILER_OPTS": 3.0,
+  "MIXING_GAIN": 0.5,
+  "KFF_RDDRMIX": 0.5
+ },
+ "stat_after": {
+  "STAT_BOOTCNT": 2.0,
+  "STAT_DISTFLWN": 1020.4371948242188,
+  "STAT_FLTCNT": 2.0,
+  "STAT_FLTTIME": 163.0,
+  "STAT_RESET": 1.0,
+  "STAT_RUNTIME": 247.0
+ },
+ "notes": [
+  "Q_TAILSIT_ENABLE is set: restarting the simulator once, without wiping",
+  "upload ack 0",
+  "arm: armed (ack result 0)",
+  "AUTO: AUTO active",
+  "t=  0.0 vehicle: Mission: 1 VTOLTakeoff",
+  "t=  0.0 vehicle: Transition VTOL done",
+  "t= 13.8 vehicle: Mission: 2 WP",
+  "t= 14.3 vehicle: Angle assist r=2 p=85",
+  "t= 16.7 vehicle: Transition FW done",
+  "t= 23.9 vehicle: Reached waypoint #2 dist 81m",
+  "t= 23.9 vehicle: Mission: 3 WP",
+  "t= 32.1 vehicle: Reached waypoint #3 dist 87m",
+  "t= 32.1 vehicle: Mission: 4 VTOLLand",
+  "t= 32.1 vehicle: VTOL approach d=305.2",
+  "t= 47.6 vehicle: VTOL position1 v=19.0 d=60 sd=60 h=58.3",
+  "t= 48.8 vehicle: Transition VTOL done, timeout",
+  "t= 50.4 vehicle: VTOL Overshoot d=12.1 cs=2.9 yerr=61.1",
+  "t= 52.2 vehicle: VTOL position2 started v=2.1 d=10.0 h=97.0",
+  "t= 85.8 vehicle: Land descend started",
+  "t=116.5 vehicle: Rangefinder engaged at 49.61m",
+  "t=147.6 vehicle: Land final started",
+  "t=159.5 vehicle: SIM Hit ground at 0.427745 m/s",
+  "t=165.8 vehicle: Land complete",
+  "t=165.8 vehicle: Throttle disarmed",
+  "t=166.0 disarmed"
+ ],
+ "logs": [
+  {
+   "file": "quadplane-copter_tailsitter-logged-flight-00000001.BIN.gz",
+   "raw_bytes": 70025216,
+   "gz_bytes": 35716374,
+   "gz_sha256": "46cf5614a2dbde11ddc68c48a524fa9a4ca331e5de24ac9da2e6af14380c324d"
+  }
+ ]
+}

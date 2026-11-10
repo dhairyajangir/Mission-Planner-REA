@@ -1,0 +1,8 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+quadplane-copter_tailsitter-logged-flight,roll: navigation demand - actual (CTUN),deg,2056,47.9086,77.8729,170.27,182.39
+quadplane-copter_tailsitter-logged-flight,pitch: navigation demand - actual (CTUN),deg,2056,3.5597,6.7916,13.3,51.83
+quadplane-copter_tailsitter-logged-flight,height: demand - actual (TECS hdem - h),m,823,19.5031,25.4135,36.4354,38.7008
+quadplane-copter_tailsitter-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,823,9.2657,11.9646,22.74,22.7525
+quadplane-copter_tailsitter-logged-flight,altitude error (NTUN AltE),m,2056,18.8059,24.5586,36.43,37.4
+quadplane-copter_tailsitter-logged-flight,cross-track error (NTUN XT),m,2056,5.3042,13.6553,29.1395,79.1811
+quadplane-copter_tailsitter-logged-flight,airspeed error (NTUN AsE),m/s,2056,9.952,12.8048,23.2672,24.476

@@ -1,0 +1,9 @@
+log,metric,unit,n,mean_abs,rms,p95,max
+plane-tailsitter-logged-flight,roll: navigation demand - actual (CTUN),deg,806,76.5581,96.1777,171.02,210.08
+plane-tailsitter-logged-flight,pitch: navigation demand - actual (CTUN),deg,806,20.7835,28.3728,60.59,98.24
+plane-tailsitter-logged-flight,height: demand - actual (TECS hdem - h),m,331,24.1362,32.8875,54.8064,54.9635
+plane-tailsitter-logged-flight,speed: demand - actual (TECS spdem - sp),m/s,331,11.1051,13.3642,19.6594,19.6765
+plane-tailsitter-logged-flight,altitude error (NTUN AltE),m,806,26.3148,34.381,54.7,54.94
+plane-tailsitter-logged-flight,cross-track error (NTUN XT),m,806,0.0,0.0,0.0,0.0
+plane-tailsitter-logged-flight,airspeed error (NTUN AsE),m/s,806,11.6147,13.7399,20.2494,20.6252
+plane-tailsitter-logged-flight,"battery (BAT): voltage min / max, current mean / max, remaining first -> last","V, A, %",3069,11.875,12.6,47.30 / 50.00,99 -> 0
