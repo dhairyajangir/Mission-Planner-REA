@@ -1,0 +1,147 @@
+Temporary breakpoint 1 at 0x9a8f4: file ../../ArduPlane/mode_fbwa.cpp, line 7.
+Temporary breakpoint 2 at 0x9ab46: file ../../ArduPlane/mode_fbwa.cpp, line 42.
+Temporary breakpoint 3 at 0x9ac12: file ../../ArduPlane/mode_fbwb.cpp, line 8.
+Temporary breakpoint 4 at 0x9ac48: file ../../ArduPlane/mode_fbwb.cpp, line 19.
+Temporary breakpoint 5 at 0x9a49a: file ../../ArduPlane/mode_cruise.cpp, line 6.
+Temporary breakpoint 6 at 0x9a4e2: file ../../ArduPlane/mode_cruise.cpp, line 26.
+Temporary breakpoint 7 at 0x9fc9a: file ../../ArduPlane/mode_stabilize.cpp, line 6.
+Temporary breakpoint 8 at 0x9fcc2: file ../../ArduPlane/mode_stabilize.cpp, line 12.
+Temporary breakpoint 9 at 0x97e30: file ../../ArduPlane/mode_acro.cpp, line 6.
+Temporary breakpoint 10 at 0x97e6e: file ../../ArduPlane/mode_acro.cpp, line 15.
+Temporary breakpoint 11 at 0x97ee6: file ../../ArduPlane/mode_acro.cpp, line 29.
+Temporary breakpoint 12 at 0x9bf91: file ../../ArduPlane/mode_manual.cpp, line 6.
+Temporary breakpoint 13 at 0x9c070: file ../../ArduPlane/mode_manual.cpp, line 19.
+Temporary breakpoint 14 at 0xa100c: file ../../ArduPlane/mode_training.cpp, line 6.
+Temporary breakpoint 15 at 0xa1193: file ../../ArduPlane/mode_training.cpp, line 41.
+Temporary breakpoint 16 at 0x9a2e0: file ../../ArduPlane/mode_circle.cpp, line 7.
+Temporary breakpoint 17 at 0x9a314: file ../../ArduPlane/mode_circle.cpp, line 18.
+Temporary breakpoint 18 at 0x9b926: file ../../ArduPlane/mode_loiter.cpp, line 6.
+Temporary breakpoint 19 at 0x9b9be: file ../../ArduPlane/mode_loiter.cpp, line 23.
+Temporary breakpoint 20 at 0x9adac: file ../../ArduPlane/mode_guided.cpp, line 5.
+Temporary breakpoint 21 at 0x9ae9e: file ../../ArduPlane/mode_guided.cpp, line 31.
+Temporary breakpoint 22 at 0x9a1fc: file ../../ArduPlane/mode_avoidADSB.cpp, line 8.
+Temporary breakpoint 23 at 0x9a21e: file ../../ArduPlane/mode_avoidADSB.cpp, line 13.
+Temporary breakpoint 24 at 0x9feaa: file ../../ArduPlane/mode_takeoff.cpp, line 65.
+Temporary breakpoint 25 at 0x9fed2: file ../../ArduPlane/mode_takeoff.cpp, line 74.
+Temporary breakpoint 26 at 0xa077c: file ../../ArduPlane/mode_thermal.cpp, line 8.
+Temporary breakpoint 27 at 0xa07f6: file ../../ArduPlane/mode_thermal.cpp, line 23.
+Temporary breakpoint 28 at 0x9a120: file ../../ArduPlane/mode_autotune.cpp, line 6.
+Temporary breakpoint 29 at 0x9a146: file ../../ArduPlane/mode_autotune.cpp, line 14.
+Temporary breakpoint 30 at 0x9a168: file ../../ArduPlane/mode_autotune.cpp, line 20.
+Temporary breakpoint 31 at 0x9f362: file ../../ArduPlane/mode_rtl.cpp, line 5.
+Temporary breakpoint 32 at 0x9f58c: file ../../ArduPlane/mode_rtl.cpp, line 44.
+Temporary breakpoint 33 at 0x99585: file ../../ArduPlane/mode_autoland.cpp, line 69.
+Temporary breakpoint 34 at 0x99b34: file ../../ArduPlane/mode_autoland.cpp, line 201.
+Temporary breakpoint 35 at 0x9edc4: file ../../ArduPlane/mode_qstabilize.cpp, line 8.
+Temporary breakpoint 36 at 0x9edea: file ../../ArduPlane/mode_qstabilize.cpp, line 20.
+Temporary breakpoint 37 at 0x9ef3e: file ../../ArduPlane/mode_qstabilize.cpp, line 44.
+Temporary breakpoint 38 at 0x9c7a3: file ../../ArduPlane/mode_qhover.cpp, line 10.
+Temporary breakpoint 39 at 0x9c8dc: file ../../ArduPlane/mode_qhover.cpp, line 20.
+Temporary breakpoint 40 at 0x9c8ff: file ../../ArduPlane/mode_qhover.cpp, line 28.
+Temporary breakpoint 41 at 0x9ce3d: file ../../ArduPlane/mode_qloiter.cpp, line 9.
+Temporary breakpoint 42 at 0x9cfa0: file ../../ArduPlane/mode_qloiter.cpp, line 30.
+Temporary breakpoint 43 at 0x9cfc5: file ../../ArduPlane/mode_qloiter.cpp, line 35.
+Temporary breakpoint 44 at 0x9c168: file ../../ArduPlane/mode_qacro.cpp, line 8.
+Temporary breakpoint 45 at 0x9c1f8: file ../../ArduPlane/mode_qacro.cpp, line 23.
+Temporary breakpoint 46 at 0x9c24a: file ../../ArduPlane/mode_qacro.cpp, line 35.
+Temporary breakpoint 47 at 0x9c614: file ../../ArduPlane/mode_qautotune.cpp, line 11.
+Temporary breakpoint 48 at 0x9c63c: file ../../ArduPlane/mode_qautotune.cpp, line 19.
+Temporary breakpoint 49 at 0x9c65e: file ../../ArduPlane/mode_qautotune.cpp, line 24.
+Temporary breakpoint 50 at 0x9dac1: file ../../ArduPlane/mode_qrtl.cpp, line 7.
+Temporary breakpoint 51 at 0x9dfce: file ../../ArduPlane/mode_qrtl.cpp, line 82.
+Temporary breakpoint 52 at 0x9dff7: file ../../ArduPlane/mode_qrtl.cpp, line 89.
+Temporary breakpoint 53 at 0x9cae9: file ../../ArduPlane/mode_qland.cpp, line 8.
+Temporary breakpoint 54 at 0x9cba0: file ../../ArduPlane/mode_qland.cpp, line 24.
+Temporary breakpoint 55 at 0x9cbc2: file ../../ArduPlane/mode_qland.cpp, line 32.
+Temporary breakpoint 56 at 0x97a76: file ../../ArduPlane/mode_LoiterAltQLand.cpp, line 7.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 35)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+Loaded defaults from @ROMFS/default_params/quadplane.parm
+HIT ModeManual::update
+HIT ModeManual::run
+HIT ModeFBWA::update
+HIT ModeFBWA::run
+HIT ModeFBWB::_enter
+HIT ModeFBWB::update
+HIT ModeCruise::_enter
+HIT ModeCruise::update
+HIT ModeStabilize::update
+HIT ModeStabilize::run
+HIT ModeAcro::_enter
+HIT ModeAcro::update
+HIT ModeAcro::run
+HIT ModeTraining::update
+HIT ModeTraining::run
+HIT ModeCircle::_enter
+HIT ModeCircle::update
+HIT ModeLoiter::_enter
+HIT ModeLoiter::update
+HIT ModeGuided::_enter
+HIT ModeGuided::update
+HIT ModeAvoidADSB::_enter
+HIT ModeAvoidADSB::update
+HIT ModeTakeoff::_enter
+HIT ModeTakeoff::update
+HIT ModeThermal::_enter
+HIT ModeAutoTune::_enter
+start:136: START FF -> 0.553
+
+start:136: START FF -> 1.407
+
+HIT ModeAutoTune::update
+HIT ModeAutoTune::run
+update:452: FPID=(0.470, 0.049, 0.049, 0.000) Dmod=0.00
+
+HIT ModeRTL::_enter
+HIT ModeRTL::update
+HIT ModeAutoLand::_enter
+HIT ModeQStabilize::_enter
+HIT ModeQStabilize::update
+HIT ModeQStabilize::run
+HIT ModeQHover::_enter
+HIT ModeQHover::update
+HIT ModeQHover::run
+HIT ModeQLoiter::_enter
+HIT ModeQLoiter::update
+HIT ModeQLoiter::run
+HIT ModeQAcro::_enter
+HIT ModeQAcro::update
+HIT ModeQAcro::run
+HIT ModeQAutotune::_enter
+HIT ModeQAutotune::update
+HIT ModeQAutotune::run
+HIT ModeQRTL::_enter
+HIT ModeQRTL::update
+HIT ModeQRTL::run
+HIT ModeQLand::_enter
+HIT ModeQLand::update
+HIT ModeQLand::run
+HIT ModeLoiterAltQLand::_enter
+
+Thread 1 "arduplane" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdbb0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

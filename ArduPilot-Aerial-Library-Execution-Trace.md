@@ -137,3 +137,38 @@ Limits: function entry only; one flight per vehicle; default parameters; the fir
 Run history: run 1 (`copter-untested-modes-run1-no-rc-input-fell`, with the script as it ran) sent no RC input, so the Copter fell in DRIFT and ACRO and GUIDED_NOGPS were entered on the ground, disarmed; it is kept as it was. Run 2 (`copter-untested-modes`) added the RC override stream, `SID_AXIS`, a TURTLE try on the ground and the attitude stream. A third run (`copter-turtle-dshot`) set `SERVO_DSHOT_ESC` 1 for TURTLE; it was refused again with no vehicle text. `ModeTurtle::init` returns false silently when the vehicle is armed, when `enabled()` (a DShot ESC type) is false, or when a stick is off centre, so which of these applied is not known; `mavlink_motor_control_check` would have printed a text.
 
 Limits: simulator only; one flight; eight seconds per mode; entry and the vehicle's texts only; the flight handling and each mode's control output were not assessed.
+
+## ArduPlane and QuadPlane modes, requested in flight
+
+`research-tools/sitl-plane-inflight-modes.py`: a QuadPlane simulator (`arduplane --model quadplane`, gdb attached) took off by mission (VTOL takeoff, waypoint, long loiter) and through the forward transition; with RC override (roll and pitch centred, throttle mid) each of 24 modes was requested from AUTO, held 10 s, AUTO requested again, with one-shot breakpoints on 56 `Mode<X>::_enter`/`update`/`run` functions.
+
+| Mode | Answer | Notes |
+|---|---|---|
+| FLY_BY_WIRE_A | FLY_BY_WIRE_A active |  |
+| FLY_BY_WIRE_B | FLY_BY_WIRE_B active |  |
+| CRUISE | CRUISE active |  |
+| STABILIZE | STABILIZE active |  |
+| ACRO | ACRO active | The simulator reported ground contact at 13.5 m/s during the hold (no stick input beyond mid throttle). |
+| MANUAL | MANUAL active | The simulator reported ground contact at 8.5 m/s during the hold. |
+| TRAINING | TRAINING active | The simulator reported ground contact at 9.2 m/s during the hold. |
+| CIRCLE | CIRCLE active |  |
+| LOITER | LOITER active |  |
+| GUIDED | GUIDED active |  |
+| AVOID_ADSB | AVOID_ADSB active |  |
+| TAKEOFF | TAKEOFF active | Vehicle text: "Climbing to TKOFF alt then loitering", "Takeoff level-off starting at 6m". |
+| THERMAL | THERMAL refused: vehicle stays in AUTO (ack result 4) | Refused (ack result 4) with no vehicle text; no function reached; soaring was not enabled (SOAR_ENABLE not set here). |
+| AUTOTUNE | AUTOTUNE active | Vehicle text: "Started autotune", "Autotuning roll pitch yaw". |
+| RTL | RTL active |  |
+| AUTOLAND | AUTOLAND refused: vehicle stays in AUTO (ack result 4) | Refused (ack result 4) with no vehicle text; ModeAutoLand::_enter was reached, update was not. |
+| QSTABILIZE | QSTABILIZE active |  |
+| QHOVER | QHOVER active |  |
+| QLOITER | QLOITER active |  |
+| QACRO | QACRO active | The simulator reported ground contact at 17.9 m/s during the hold. |
+| QAUTOTUNE | QAUTOTUNE active | Vehicle text: "AutoTune: Started" and roll rate D messages. |
+| QRTL | QRTL active | Vehicle text: "VTOL Position1 d=208.9", "VTOL Overshoot". |
+| QLAND | QLAND active |  |
+| LOITER_ALT_QLAND | LOITER_ALT_QLAND active |  |
+
+Reached: 54 of 56 breakpoints. Not reached: `ModeThermal::update` (THERMAL refused, soaring not enabled) and `ModeAutoLand::update` (AUTOLAND refused after `_enter`).
+
+Caveats: ACRO, MANUAL, TRAINING and QACRO were followed by simulator ground contact, so the plane's position and state when the next modes were requested (AUTO had recovered in between; "Transition done" appears during the CIRCLE hold) were not logged; each mode was held 10 s only; only entry and vehicle text are recorded, not flight behaviour. The earlier Plane in-flight run (`sitl-evidence/plane-modes/`) holds altitude and drift numbers for FBWA, FBWB, CRUISE, LOITER, CIRCLE, STABILIZE and GUIDED. Simulator only.

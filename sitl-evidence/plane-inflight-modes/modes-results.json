@@ -1,0 +1,363 @@
+{
+ "notes": [
+  "upload ack 0",
+  "launch: armed (ack result 0); AUTO active",
+  "FLY_BY_WIRE_A: FLY_BY_WIRE_A active; back to AUTO: AUTO active",
+  "FLY_BY_WIRE_B: FLY_BY_WIRE_B active; back to AUTO: AUTO active",
+  "CRUISE: CRUISE active; back to AUTO: AUTO active",
+  "STABILIZE: STABILIZE active; back to AUTO: AUTO active",
+  "ACRO: ACRO active; back to AUTO: AUTO active",
+  "MANUAL: MANUAL active; back to AUTO: AUTO active",
+  "TRAINING: TRAINING active; back to AUTO: AUTO active",
+  "CIRCLE: CIRCLE active; back to AUTO: AUTO active",
+  "LOITER: LOITER active; back to AUTO: AUTO active",
+  "GUIDED: GUIDED active; back to AUTO: AUTO active",
+  "AVOID_ADSB: AVOID_ADSB active; back to AUTO: AUTO active",
+  "TAKEOFF: TAKEOFF active; back to AUTO: AUTO active",
+  "THERMAL: THERMAL refused: vehicle stays in AUTO (ack result 4); back to AUTO: AUTO active",
+  "AUTOTUNE: AUTOTUNE active; back to AUTO: AUTO active",
+  "RTL: RTL active; back to AUTO: AUTO active",
+  "AUTOLAND: AUTOLAND refused: vehicle stays in AUTO (ack result 4); back to AUTO: AUTO active",
+  "QSTABILIZE: QSTABILIZE active; back to AUTO: AUTO active",
+  "QHOVER: QHOVER active; back to AUTO: AUTO active",
+  "QLOITER: QLOITER active; back to AUTO: AUTO active",
+  "QACRO: QACRO active; back to AUTO: AUTO active",
+  "QAUTOTUNE: QAUTOTUNE active; back to AUTO: AUTO active",
+  "QRTL: QRTL active; back to AUTO: AUTO active",
+  "QLAND: QLAND active; back to AUTO: AUTO active",
+  "LOITER_ALT_QLAND: LOITER_ALT_QLAND active; back to AUTO: AUTO active"
+ ],
+ "modes": [
+  {
+   "mode": "FLY_BY_WIRE_A",
+   "class": "ModeFBWA",
+   "mode_before": "AUTO",
+   "answer": "FLY_BY_WIRE_A active",
+   "accepted": true,
+   "mode_after": "FLY_BY_WIRE_A",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "FLY_BY_WIRE_B",
+   "class": "ModeFBWB",
+   "mode_before": "AUTO",
+   "answer": "FLY_BY_WIRE_B active",
+   "accepted": true,
+   "mode_after": "FLY_BY_WIRE_B",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "CRUISE",
+   "class": "ModeCruise",
+   "mode_before": "AUTO",
+   "answer": "CRUISE active",
+   "accepted": true,
+   "mode_after": "CRUISE",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "STABILIZE",
+   "class": "ModeStabilize",
+   "mode_before": "AUTO",
+   "answer": "STABILIZE active",
+   "accepted": true,
+   "mode_after": "STABILIZE",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "ACRO",
+   "class": "ModeAcro",
+   "mode_before": "AUTO",
+   "answer": "ACRO active",
+   "accepted": true,
+   "mode_after": "ACRO",
+   "armed_after": true,
+   "texts": [
+    "SIM Hit ground at 13.47431 m/s"
+   ]
+  },
+  {
+   "mode": "MANUAL",
+   "class": "ModeManual",
+   "mode_before": "AUTO",
+   "answer": "MANUAL active",
+   "accepted": true,
+   "mode_after": "MANUAL",
+   "armed_after": true,
+   "texts": [
+    "SIM Hit ground at 8.520014 m/s"
+   ]
+  },
+  {
+   "mode": "TRAINING",
+   "class": "ModeTraining",
+   "mode_before": "AUTO",
+   "answer": "TRAINING active",
+   "accepted": true,
+   "mode_after": "TRAINING",
+   "armed_after": true,
+   "texts": [
+    "SIM Hit ground at 9.157787 m/s"
+   ]
+  },
+  {
+   "mode": "CIRCLE",
+   "class": "ModeCircle",
+   "mode_before": "AUTO",
+   "answer": "CIRCLE active",
+   "accepted": true,
+   "mode_after": "CIRCLE",
+   "armed_after": true,
+   "texts": [
+    "Transition done"
+   ]
+  },
+  {
+   "mode": "LOITER",
+   "class": "ModeLoiter",
+   "mode_before": "AUTO",
+   "answer": "LOITER active",
+   "accepted": true,
+   "mode_after": "LOITER",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "GUIDED",
+   "class": "ModeGuided",
+   "mode_before": "AUTO",
+   "answer": "GUIDED active",
+   "accepted": true,
+   "mode_after": "GUIDED",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "AVOID_ADSB",
+   "class": "ModeAvoidADSB",
+   "mode_before": "AUTO",
+   "answer": "AVOID_ADSB active",
+   "accepted": true,
+   "mode_after": "AVOID_ADSB",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "TAKEOFF",
+   "class": "ModeTakeoff",
+   "mode_before": "AUTO",
+   "answer": "TAKEOFF active",
+   "accepted": true,
+   "mode_after": "TAKEOFF",
+   "armed_after": true,
+   "texts": [
+    "Climbing to TKOFF alt then loitering",
+    "Takeoff level-off starting at 6m"
+   ]
+  },
+  {
+   "mode": "THERMAL",
+   "class": "ModeThermal",
+   "mode_before": "AUTO",
+   "answer": "THERMAL refused: vehicle stays in AUTO (ack result 4)",
+   "accepted": false,
+   "mode_after": "AUTO",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "AUTOTUNE",
+   "class": "ModeAutoTune",
+   "mode_before": "AUTO",
+   "answer": "AUTOTUNE active",
+   "accepted": true,
+   "mode_after": "AUTOTUNE",
+   "armed_after": true,
+   "texts": [
+    "Started autotune",
+    "Autotuning roll pitch yaw"
+   ]
+  },
+  {
+   "mode": "RTL",
+   "class": "ModeRTL",
+   "mode_before": "AUTO",
+   "answer": "RTL active",
+   "accepted": true,
+   "mode_after": "RTL",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "AUTOLAND",
+   "class": "ModeAutoLand",
+   "mode_before": "AUTO",
+   "answer": "AUTOLAND refused: vehicle stays in AUTO (ack result 4)",
+   "accepted": false,
+   "mode_after": "AUTO",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "QSTABILIZE",
+   "class": "ModeQStabilize",
+   "mode_before": "AUTO",
+   "answer": "QSTABILIZE active",
+   "accepted": true,
+   "mode_after": "QSTABILIZE",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "QHOVER",
+   "class": "ModeQHover",
+   "mode_before": "AUTO",
+   "answer": "QHOVER active",
+   "accepted": true,
+   "mode_after": "QHOVER",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "QLOITER",
+   "class": "ModeQLoiter",
+   "mode_before": "AUTO",
+   "answer": "QLOITER active",
+   "accepted": true,
+   "mode_after": "QLOITER",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "QACRO",
+   "class": "ModeQAcro",
+   "mode_before": "AUTO",
+   "answer": "QACRO active",
+   "accepted": true,
+   "mode_after": "QACRO",
+   "armed_after": true,
+   "texts": [
+    "SIM Hit ground at 17.86875 m/s",
+    "EKF3 lane switch 1",
+    "EKF3 primary changed:1"
+   ]
+  },
+  {
+   "mode": "QAUTOTUNE",
+   "class": "ModeQAutotune",
+   "mode_before": "AUTO",
+   "answer": "QAUTOTUNE active",
+   "accepted": true,
+   "mode_after": "QAUTOTUNE",
+   "armed_after": true,
+   "texts": [
+    "AutoTune: Started",
+    "AutoTune: Roll Rate D Up 0%",
+    "AutoTune: Roll Rate D Up 0%",
+    "AutoTune: Roll Rate D Up 0%",
+    "AutoTune: Roll Rate D Up 50%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%"
+   ]
+  },
+  {
+   "mode": "QRTL",
+   "class": "ModeQRTL",
+   "mode_before": "AUTO",
+   "answer": "QRTL active",
+   "accepted": true,
+   "mode_after": "QRTL",
+   "armed_after": true,
+   "texts": [
+    "VTOL Position1 d=208.9",
+    "VTOL Overshoot d=208.9 cs=-7.7 yerr=-107.9"
+   ]
+  },
+  {
+   "mode": "QLAND",
+   "class": "ModeQLand",
+   "mode_before": "AUTO",
+   "answer": "QLAND active",
+   "accepted": true,
+   "mode_after": "QLAND",
+   "armed_after": true,
+   "texts": []
+  },
+  {
+   "mode": "LOITER_ALT_QLAND",
+   "class": "ModeLoiterAltQLand",
+   "mode_before": "AUTO",
+   "answer": "LOITER_ALT_QLAND active",
+   "accepted": true,
+   "mode_after": "LOITER_ALT_QLAND",
+   "armed_after": true,
+   "texts": [
+    "Transition done"
+   ]
+  }
+ ],
+ "hit": [
+  "ModeFBWA::update",
+  "ModeFBWA::run",
+  "ModeFBWB::_enter",
+  "ModeFBWB::update",
+  "ModeCruise::_enter",
+  "ModeCruise::update",
+  "ModeStabilize::update",
+  "ModeStabilize::run",
+  "ModeAcro::_enter",
+  "ModeAcro::update",
+  "ModeAcro::run",
+  "ModeManual::update",
+  "ModeManual::run",
+  "ModeTraining::update",
+  "ModeTraining::run",
+  "ModeCircle::_enter",
+  "ModeCircle::update",
+  "ModeLoiter::_enter",
+  "ModeLoiter::update",
+  "ModeGuided::_enter",
+  "ModeGuided::update",
+  "ModeAvoidADSB::_enter",
+  "ModeAvoidADSB::update",
+  "ModeTakeoff::_enter",
+  "ModeTakeoff::update",
+  "ModeThermal::_enter",
+  "ModeAutoTune::_enter",
+  "ModeAutoTune::update",
+  "ModeAutoTune::run",
+  "ModeRTL::_enter",
+  "ModeRTL::update",
+  "ModeAutoLand::_enter",
+  "ModeQStabilize::_enter",
+  "ModeQStabilize::update",
+  "ModeQStabilize::run",
+  "ModeQHover::_enter",
+  "ModeQHover::update",
+  "ModeQHover::run",
+  "ModeQLoiter::_enter",
+  "ModeQLoiter::update",
+  "ModeQLoiter::run",
+  "ModeQAcro::_enter",
+  "ModeQAcro::update",
+  "ModeQAcro::run",
+  "ModeQAutotune::_enter",
+  "ModeQAutotune::update",
+  "ModeQAutotune::run",
+  "ModeQRTL::_enter",
+  "ModeQRTL::update",
+  "ModeQRTL::run",
+  "ModeQLand::_enter",
+  "ModeQLand::update",
+  "ModeQLand::run",
+  "ModeLoiterAltQLand::_enter"
+ ],
+ "not_reached": [
+  "ModeThermal::update",
+  "ModeAutoLand::update"
+ ]
+}
