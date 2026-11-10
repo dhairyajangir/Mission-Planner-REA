@@ -1,0 +1,6 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+GUIDED: GUIDED active
+SET_POSITION_TARGET_GLOBAL_INT sent: lat=-35.3569728 lon=149.1685346 alt=80.0
+after 60 s: 527.4 m from the GUIDED target, alt 80.0 m

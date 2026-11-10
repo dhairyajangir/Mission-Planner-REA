@@ -1,0 +1,3 @@
+arm: armed (ack result 0)
+takeoff ack 0
+SET_POSITION_TARGET_LOCAL_NED sent: north=20.0 east=10.0 alt=20.0 (NED x,y,z)

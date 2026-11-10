@@ -1,0 +1,5 @@
+arm: armed (ack result 0)
+takeoff ack 0
+streamed vx=2.0 m/s north for 10 s; max measured vx 0.00 m/s
+sent zero velocity to stop
+no rows
