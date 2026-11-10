@@ -1,0 +1,24 @@
+OK   parameters set {'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1} (rejected [])
+upload ack 0
+OK   armed   [armed (ack result 0)]
+OK   AUTO   [AUTO active]
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  1.0 mode AUTO
+t=  6.0 fault injected {'SIM_BATT_VOLTAGE': 10.5} (rejected [])
+t= 18.4 vehicle: Mission: 2 WP
+t= 18.4 vehicle: Transition started airspeed 0.8
+t= 22.7 vehicle: Transition airspeed reached 18.3
+t= 27.7 vehicle: Transition done
+t= 28.6 vehicle: Reached waypoint #2 dist 77m
+t= 28.6 vehicle: Mission: 3 WP
+t= 37.0 vehicle: Reached waypoint #3 dist 86m
+t= 37.0 vehicle: Mission: 4 VTOLLand
+t= 37.0 vehicle: VTOL approach d=305.5
+t= 47.4 vehicle: VTOL airbrake v=21.5 d=158 sd=159 h=57.0
+t= 50.1 vehicle: VTOL position1 v=18.3 d=104.0 h=58.2 dc=19.6
+t= 57.7 vehicle: VTOL position2 started v=6.7 d=9.7 h=58.5
+t= 59.8 vehicle: Potential VTOL Thrust Loss (3)
+t= 63.2 vehicle: Land descend started
+OK   no simulator ground contact before the fault was injected
+FAIL ended in or passed through QLAND   [AUTO]
+RESULT 1 checks failed: ended in or passed through QLAND

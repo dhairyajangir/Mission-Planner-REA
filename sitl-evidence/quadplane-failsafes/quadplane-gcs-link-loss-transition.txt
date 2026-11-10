@@ -1,0 +1,16 @@
+OK   parameters set {'FS_GCS_ENABL': 1, 'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5} (rejected [])
+upload ack 0
+OK   armed   [armed (ack result 0)]
+OK   AUTO   [AUTO active]
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  1.0 mode AUTO
+t= 13.4 vehicle: Mission: 2 WP
+t= 13.4 vehicle: Transition started airspeed 0.6
+t= 17.0 ground-station heartbeats stopped
+t= 17.8 vehicle: Transition airspeed reached 18.1
+t= 22.0 mode RTL
+t= 22.0 vehicle: GCS Failsafe On: switched to RTL
+t= 22.8 vehicle: Transition done
+OK   no simulator ground contact before the fault was injected
+OK   ended in or passed through RTL   [RTL]
+RESULT passed

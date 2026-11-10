@@ -1,0 +1,24 @@
+OK   parameters set {'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1} (rejected [])
+upload ack 0
+OK   armed   [armed (ack result 0)]
+OK   AUTO   [AUTO active]
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  1.0 mode AUTO
+t= 13.4 vehicle: Mission: 2 WP
+t= 13.4 vehicle: Transition started airspeed 0.6
+t= 17.8 vehicle: Transition airspeed reached 18.2
+t= 22.8 vehicle: Transition done
+t= 23.7 vehicle: Reached waypoint #2 dist 77m
+t= 23.7 vehicle: Mission: 3 WP
+t= 31.0 fault injected {'SIM_BATT_VOLTAGE': 10.5} (rejected [])
+t= 32.1 vehicle: Reached waypoint #3 dist 86m
+t= 32.1 vehicle: Mission: 4 VTOLLand
+t= 32.1 vehicle: VTOL approach d=305.3
+t= 42.5 vehicle: VTOL airbrake v=21.6 d=158 sd=160 h=57.1
+t= 45.3 vehicle: VTOL position1 v=18.2 d=102.4 h=58.3 dc=19.6
+t= 52.8 vehicle: VTOL position2 started v=6.7 d=9.8 h=58.7
+t= 54.9 vehicle: Potential VTOL Thrust Loss (3)
+t= 58.3 vehicle: Land descend started
+OK   no simulator ground contact before the fault was injected
+FAIL ended in or passed through RTL   [AUTO]
+RESULT 1 checks failed: ended in or passed through RTL
