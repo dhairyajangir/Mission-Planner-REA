@@ -1,0 +1,93 @@
+Temporary breakpoint 1 at 0x23e110
+Temporary breakpoint 2 at 0x23f6f0
+Temporary breakpoint 3 at 0x23f140
+Temporary breakpoint 4 at 0x23edf0
+Temporary breakpoint 5 at 0x23e5a0
+Temporary breakpoint 6 at 0x23e6a0
+Temporary breakpoint 7 at 0x36ca90
+Temporary breakpoint 8 at 0x36caf0
+Temporary breakpoint 9 at 0x36c320
+Temporary breakpoint 10 at 0x36c340
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 37)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+HIT AC_PrecLand::init
+#0  0x0000555555792110 in AC_PrecLand::init(unsigned short) ()
+#1  0x00005555555f2849 in Copter::init_ardupilot() ()
+#2  0x00005555556b2647 in AP_Vehicle::setup() ()
+#3  0x00005555557bb1e6 in HAL_SITL::run(int, char* const*, AP_HAL::HAL::Callbacks*) const ()
+HIT AC_PrecLand_IRLock::init
+#0  0x00005555558c0320 in AC_PrecLand_IRLock::init() ()
+#1  0x0000555555792269 in AC_PrecLand::init(unsigned short) ()
+#2  0x00005555555f2849 in Copter::init_ardupilot() ()
+#3  0x00005555556b2647 in AP_Vehicle::setup() ()
+HIT AP_IRLock_SITL::init
+#0  0x00005555558c0a90 in AP_IRLock_SITL::init(signed char) ()
+#1  0x0000555555792269 in AC_PrecLand::init(unsigned short) ()
+#2  0x00005555555f2849 in Copter::init_ardupilot() ()
+#3  0x00005555556b2647 in AP_Vehicle::setup() ()
+HIT AC_PrecLand::update
+#0  0x00005555557936f0 in AC_PrecLand::update(float, bool) ()
+#1  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+#2  0x00005555556aec1b in AP_Scheduler::loop() ()
+#3  0x00005555556b1d99 in AP_Vehicle::loop() ()
+HIT AC_PrecLand_IRLock::update
+#0  0x00005555558c0340 in AC_PrecLand_IRLock::update() ()
+#1  0x00005555557938e0 in AC_PrecLand::update(float, bool) ()
+#2  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+#3  0x00005555556aec1b in AP_Scheduler::loop() ()
+HIT AP_IRLock_SITL::update
+#0  0x00005555558c0af0 in AP_IRLock_SITL::update() ()
+#1  0x00005555558c0363 in AC_PrecLand_IRLock::update() ()
+#2  0x00005555557938e0 in AC_PrecLand::update(float, bool) ()
+#3  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+HIT AC_PrecLand::run_estimator
+#0  0x0000555555793140 in AC_PrecLand::run_estimator(float, bool) ()
+#1  0x00005555557938f0 in AC_PrecLand::update(float, bool) ()
+#2  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+#3  0x00005555556aec1b in AP_Scheduler::loop() ()
+HIT AC_PrecLand::run_output_prediction
+#0  0x0000555555792df0 in AC_PrecLand::run_output_prediction() ()
+#1  0x00005555557938f0 in AC_PrecLand::update(float, bool) ()
+#2  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+#3  0x00005555556aec1b in AP_Scheduler::loop() ()
+HIT AC_PrecLand::target_acquired
+#0  0x00005555557925a0 in AC_PrecLand::target_acquired() ()
+#1  0x00005555555daabf in Mode::land_run_horizontal_control() ()
+#2  0x00005555555dad88 in Mode::precland_run() ()
+#3  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+HIT AC_PrecLand::get_target_position_measurement_NED_m
+#0  0x00005555557926a0 in AC_PrecLand::get_target_position_measurement_NED_m(Vector3<float>&) ()
+#1  0x00005555555d99ec in Mode::land_run_vertical_control(bool) ()
+#2  0x00005555555dad92 in Mode::precland_run() ()
+#3  0x00005555556ae1bc in AP_Scheduler::run(unsigned int) ()
+
+Thread 1 "arducopter" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdca0, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory

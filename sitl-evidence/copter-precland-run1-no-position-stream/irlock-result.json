@@ -1,0 +1,29 @@
+{
+ "backend": 2,
+ "name": "irlock",
+ "notes": [
+  "set {'PLND_ENABLED': 1.0, 'PLND_TYPE': 2.0, 'RNGFND1_TYPE': 1.0, 'RNGFND1_PIN': 0.0, 'RNGFND1_SCALING': 10.0, 'RNGFND1_MIN': 0.0, 'RNGFND1_MAX': 40.0, 'SIM_SONAR_SCALE': 12.0, 'SIM_PLD_ENABLE': 1.0, 'SIM_PLD_HEIGHT': 0.0, 'SIM_PLD_ALT_LMT': 15.0, 'SIM_PLD_DIST_LMT': 10.0}; rejected []; absent at boot ['PLND_TYPE', 'RNGFND1_PIN', 'RNGFND1_SCALING', 'RNGFND1_MIN', 'RNGFND1_MAX']",
+  "target -35.3632251 149.1651859 (4 m north, 4 m west of home); rejected []",
+  "GUIDED: GUIDED active",
+  "arm: armed (ack result 0)",
+  "climb: None after 44 s",
+  "LAND: LAND active",
+  "t= 31.0 vehicle: SIM Hit ground at 0.531916 m/s",
+  "t= 33.0 vehicle: PrecLand: Target Lost",
+  "t= 33.1 vehicle: Disarming motors",
+  "t= 34.0 disarmed"
+ ],
+ "hit": [
+  "AC_PrecLand::init",
+  "AC_PrecLand::update",
+  "AC_PrecLand::run_estimator",
+  "AC_PrecLand::run_output_prediction",
+  "AC_PrecLand::target_acquired",
+  "AC_PrecLand::get_target_position_measurement_NED_m",
+  "AP_IRLock_SITL::init",
+  "AP_IRLock_SITL::update",
+  "AC_PrecLand_IRLock::init",
+  "AC_PrecLand_IRLock::update"
+ ],
+ "not_reached": []
+}
