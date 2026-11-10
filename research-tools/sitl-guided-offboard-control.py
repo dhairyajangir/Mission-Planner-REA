@@ -253,6 +253,70 @@ def plane_reposition():
     print('[plane-reposition] %s' % (notes[-1] if notes else 'no notes'), flush=True)
 
 
+def plane_guided_slew():
+    """The GUIDED-only 'slew' commands (AP_PLANE_OFFBOARD_GUIDED_SLEW_ENABLED, handle_command_int_guided_slew_commands): GUIDED_CHANGE_SPEED (43000), GUIDED_CHANGE_ALTITUDE (43001) and
+    GUIDED_CHANGE_HEADING (43002). All three return FAILED unless the vehicle is already in GUIDED mode (confirmed in the disarmed command sweep, where all three failed) and the full
+    command sweep never tried them with the vehicle actually in GUIDED and flying. Reaches GUIDED the same way plane_reposition() does, then sends all three, 20 s apart, holding the
+    last for 40 s."""
+    fresh()
+    notes, proc = [], start_plane()
+    try:
+        conn, _ = link.connect(5760, timeout=120.0)
+        time.sleep(45)
+        a, b = at(300, 0), at(300, 300)
+        items = [mission.Item(0, 0, 16, 0, 1, 0, 0, 0, 0, HOME[0], HOME[1], HOME[2]), mission.Item(1, 3, 22, 1, 1, 15.0, 0, 0, 0, 0.0, 0.0, 60.0),
+                 mission.Item(2, 3, 16, 0, 1, 0, 0, 0, 0, a[0], a[1], 60.0), mission.Item(3, 3, 16, 0, 1, 0, 0, 0, 0, b[0], b[1], 60.0)]
+        notes.append('upload ack %s' % mission.upload(conn, items))
+        flight.set_mode(conn, 'MANUAL', table='plane')
+        armed = flight.arm(conn, timeout=150.0)
+        notes.append('arm: %s' % armed.detail)
+        auto = flight.set_mode(conn, 'AUTO', table='plane')
+        give_up = time.time() + 90.0
+        while not auto.ok and time.time() < give_up:
+            time.sleep(3)
+            auto = flight.set_mode(conn, 'AUTO', table='plane')
+        notes.append('AUTO: %s' % auto.detail)
+        time.sleep(30)
+        target_lat, target_lon, target_alt = at(700, 300)[0], at(700, 300)[1], 80.0
+        conn.mav.command_int_send(conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 192, 0, 0, 0, 1, 0, 0,
+                                  int(target_lat * 1e7), int(target_lon * 1e7), target_alt)
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=5)
+        notes.append('DO_REPOSITION to reach GUIDED: ack %s' % (None if ack is None else ack.result))
+        t0, rows = time.time(), []
+
+        def hold(seconds):
+            end = time.time() + seconds
+            while time.time() < end:
+                r = track_row(conn, t0)
+                if r:
+                    rows.append(r)
+
+        hold(15.0)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 43000, 0, 0, 30.0, 2.0, 0, 0, 0, 0)  # GUIDED_CHANGE_SPEED: type=0 airspeed, target 30 m/s, accel 2 m/s^2
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('t=%5.1f GUIDED_CHANGE_SPEED to 30 m/s airspeed: ack %s' % (time.time() - t0, None if ack is None else ack.result))
+        hold(20.0)
+        conn.mav.command_int_send(conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 43001, 0, 0, 0, 0, 3.0, 0, 0, 0, 120.0)  # GUIDED_CHANGE_ALTITUDE: 120 m, rate 3 m/s
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('t=%5.1f GUIDED_CHANGE_ALTITUDE to 120 m: ack %s' % (time.time() - t0, None if ack is None else ack.result))
+        hold(20.0)
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 43002, 0, 1, 270.0, 0, 0, 0, 0, 0)  # GUIDED_CHANGE_HEADING: type=1 raw heading, 270 degrees
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('t=%5.1f GUIDED_CHANGE_HEADING to 270 deg: ack %s' % (time.time() - t0, None if ack is None else ack.result))
+        hold(40.0)
+        last = rows[-1] if rows else None
+        if last:
+            notes.append('final: alt %.1f m, vx %.2f vy %.2f (heading atan2(vy,vx), degrees from north clockwise = %.0f)' % (last[3], last[4], last[5], (math.degrees(math.atan2(last[5], last[4])) % 360)))
+        write_track('plane-guided-slew', rows)
+    except Exception as e:
+        notes.append('EXCEPTION %r' % (e,))
+    finally:
+        stop(proc, 'arduplane')
+    with open(os.path.join(OUT, 'plane-guided-slew-notes.txt'), 'w') as f:
+        f.write('\n'.join(notes) + '\n')
+    print('[plane-guided-slew] %s' % (notes[-1] if notes else 'no notes'), flush=True)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'copter-position' in PARTS:
@@ -263,6 +327,8 @@ def main():
         plane_position()
     if 'plane-reposition' in PARTS:
         plane_reposition()
+    if 'plane-guided-slew' in PARTS:
+        plane_guided_slew()
     return 0
 
 
