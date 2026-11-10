@@ -1,0 +1,107 @@
+[
+ {
+  "case": "control",
+  "options": {},
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "real32",
+  "options": {
+   "real32": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "thread",
+  "options": {
+   "thread": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "no-stream",
+  "options": {
+   "stream": false
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "no-prior",
+  "options": {
+   "prior": false
+  },
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "sid-axis",
+  "options": {
+   "sid": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "late",
+  "options": {
+   "late": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ }
+]

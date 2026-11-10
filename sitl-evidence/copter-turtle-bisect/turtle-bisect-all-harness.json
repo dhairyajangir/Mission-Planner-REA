@@ -1,0 +1,20 @@
+[
+ {
+  "case": "all-harness",
+  "options": {
+   "instance": 0,
+   "read_params": true,
+   "real32": true,
+   "thread": true,
+   "sid": true,
+   "stream": false,
+   "prior": false,
+   "late": true
+  },
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ }
+]

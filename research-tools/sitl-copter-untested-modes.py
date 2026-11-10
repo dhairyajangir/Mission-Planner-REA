@@ -82,6 +82,7 @@ class Sticks(threading.Thread):
 def try_mode(conn, sticks, name, cls, results, notes, hold, after='AUTO', throttle=1500, attitude=False):
     before = flight.current_mode(conn)
     sticks.throttle, sticks.attitude = throttle, attitude
+    time.sleep(1.0)                                                      # let the new stick values reach the vehicle first: the override thread sends at 10 Hz, and TURTLE judges the sticks at the moment it is asked for (earlier runs asked in the same instant and were refused)
     r = flight.set_mode(conn, name)
     t = texts(conn, hold)
     hb = flight.current_heartbeat(conn)

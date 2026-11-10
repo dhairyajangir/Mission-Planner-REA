@@ -1,0 +1,4 @@
+case,options,prior_acks,final_ack,final_mode,final_text,error
+instance0,"{""instance"": 0}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+read-params,"{""read_params"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+instance0-read-params,"{""instance"": 0, ""read_params"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,

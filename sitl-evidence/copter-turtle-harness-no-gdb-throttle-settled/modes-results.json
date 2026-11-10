@@ -1,0 +1,35 @@
+{
+ "notes": [
+  "set [('SID_AXIS', 1.0), ('SERVO_DSHOT_ESC', 1.0)] (rejected: [])",
+  "TURTLE: TURTLE active; back to STABILIZE: STABILIZE active"
+ ],
+ "modes": [
+  {
+   "mode": "TURTLE",
+   "class": "ModeTurtle",
+   "mode_before": "STABILIZE",
+   "answer": "TURTLE active",
+   "accepted": true,
+   "mode_after": "TURTLE",
+   "armed_after": false,
+   "texts": [
+    "Turtle: raise throttle to arm"
+   ]
+  }
+ ],
+ "hit": [],
+ "not_reached": [
+  "ModeDrift::init",
+  "ModeDrift::run",
+  "ModeSport::init",
+  "ModeSport::run",
+  "ModeAcro::init",
+  "ModeAcro::run",
+  "ModeGuidedNoGPS::init",
+  "ModeGuidedNoGPS::run",
+  "ModeSystemId::init",
+  "ModeSystemId::run",
+  "ModeTurtle::init",
+  "ModeTurtle::run"
+ ]
+}

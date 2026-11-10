@@ -1,0 +1,51 @@
+[
+ {
+  "case": "instance0",
+  "options": {
+   "instance": 0
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "read-params",
+  "options": {
+   "read_params": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ },
+ {
+  "case": "instance0-read-params",
+  "options": {
+   "instance": 0,
+   "read_params": true
+  },
+  "prior_attempts": [
+   4,
+   4,
+   4
+  ],
+  "final": {
+   "ack_result": 0,
+   "custom_mode": 28,
+   "statustext": "Turtle: raise throttle to arm"
+  }
+ }
+]

@@ -1,0 +1,8 @@
+case,options,prior_acks,final_ack,final_mode,final_text,error
+control,{},"[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+real32,"{""real32"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+thread,"{""thread"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+no-stream,"{""stream"": false}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+no-prior,"{""prior"": false}",,0,28,Turtle: raise throttle to arm,
+sid-axis,"{""sid"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,
+late,"{""late"": true}","[4, 4, 4]",0,28,Turtle: raise throttle to arm,

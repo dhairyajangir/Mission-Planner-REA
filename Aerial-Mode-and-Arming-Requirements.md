@@ -21,7 +21,7 @@ What had to be true before ArduPilot's copter, plane and helicopter builds accep
 | DRIFT, SPORT, ACRO | accepted from AUTO in flight | with no stick input the Copter fell in DRIFT (ground contact 14.7 m/s in the first run); sticks centred and throttle 1500 by RC override fixed it | `sitl-evidence/copter-untested-modes/`, `...-run1-no-rc-input-fell/` |
 | GUIDED_NOGPS | accepted | a level attitude target stream was sent | same |
 | SYSTEMID | accepted | `SID_AXIS` 1, requested from STABILIZE (needs a mode with manual throttle) and flying; the source's refusal texts are `Aircraft must be flying`, `Axis requires manual throttle` and `No axis selected, SID_AXIS = 0` (read from `mode_systemid.cpp`; only the accepted case was run) | same |
-| TURTLE | accepted by `research-tools/sitl-copter-turtle-entry.py` (no gdb) with `SERVO_DSHOT_ESC` 1 and RC channels 1 to 4 at 1500, reproduced at speedups 5 and 1; text `Turtle: raise throttle to arm`. Refused in six attempts of my other harness (five under gdb, one without) | needs a DShot ESC type, disarmed, sticks centred; why my harness is refused is **not determined** (see the trace) | `sitl-evidence/copter-turtle-entry/`, `copter-turtle-entry-recheck/`, `copter-turtle-entry-recheck-s1/` and the other `copter-turtle-*` folders |
+| TURTLE | accepted (disarmed; text `Turtle: raise throttle to arm`) | needs `SERVO_DSHOT_ESC` set to a DShot type, the vehicle disarmed and landed, and **every stick, throttle included, at its centre at the moment the mode is requested**; a controlling program that raises the throttle and asks in the same instant is refused (this cost me seven failed attempts, see the trace) | `sitl-evidence/copter-turtle-entry/`, `copter-turtle-bisect/`, `copter-turtle-gdb-throttle-settled/` |
 | AUTOROTATE | helicopter build only | `AROT_ENABLE` 1 and `H_RSC_AROT_ENBL` 1, armed and flying; with `AROT_ENABLE` 0 refused | `sitl-evidence/heli-autorotate/` |
 
 ## Plane and QuadPlane modes
@@ -43,4 +43,4 @@ With the interlock handled as above: ACRO, STABILIZE, ALT_HOLD and LOITER accept
 
 ## What this page does not say
 
-Nothing here covers a real aircraft, real sensors, wind, a radio link or a battery. Each item is one run; the refusal texts are the vehicle's own words as captured, and some refusals gave no text (TURTLE, THERMAL and AUTOLAND on a QuadPlane via the acknowledgement only). Rover, Sub, Blimp and the Mission Planner side are outside this page.
+Nothing here covers a real aircraft, real sensors, wind, a radio link or a battery. Each item is one run; the refusal texts are the vehicle's own words as captured, and some refusals gave no text (THERMAL and AUTOLAND on a QuadPlane via the acknowledgement only). Rover, Sub, Blimp and the Mission Planner side are outside this page.
