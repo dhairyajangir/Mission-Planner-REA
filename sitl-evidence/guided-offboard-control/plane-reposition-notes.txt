@@ -1,0 +1,5 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+DO_REPOSITION sent: lat=-35.3569728 lon=149.1685346 alt=80.0; ack 0
+after 60 s: 96.0 m from the target, alt 80.0 m

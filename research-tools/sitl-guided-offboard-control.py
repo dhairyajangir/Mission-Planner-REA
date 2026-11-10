@@ -2,7 +2,7 @@
 computer or custom ground station uses for direct control, distinct from an uploaded AUTO mission or an immediate MAV_CMD; neither vehicle's handling of it was tested elsewhere in this
 repository. Simulator only (WSL, pymavlink, the custom-gcs library).
 
-    python3 sitl-guided-offboard-control.py <ardupilot tree> <out dir> <custom-gcs dir> [part ...]      parts: copter-position, copter-velocity, plane-position
+    python3 sitl-guided-offboard-control.py <ardupilot tree> <out dir> <custom-gcs dir> [part ...]      parts: copter-position, copter-velocity, plane-position, plane-reposition
 
 copter-position   GUIDED takeoff to 15 m (MAV_CMD_NAV_TAKEOFF via COMMAND_LONG, the usual way into GUIDED flight), then one SET_POSITION_TARGET_LOCAL_NED with a position-only type_mask
                   (ignore velocity/acceleration/yaw), target 20 m north, 10 m east, 5 m above the takeoff height (NED: positive z is down, so z = -5). The vehicle's track is logged for
@@ -208,6 +208,51 @@ def plane_position():
     print('[plane-position] %s' % notes[-1] if notes else '[plane-position] no notes', flush=True)
 
 
+def plane_reposition():
+    """MAV_CMD_DO_REPOSITION (number 192), the command whose handler (handle_command_int_DO_REPOSITION) does decode and use the target lat/lon, unlike SET_POSITION_TARGET_GLOBAL_INT
+    (see plane_position() above). Same flight and same target as plane_position(), for a direct comparison."""
+    fresh()
+    notes, proc = [], start_plane()
+    try:
+        conn, _ = link.connect(5760, timeout=120.0)
+        time.sleep(45)
+        a, b = at(300, 0), at(300, 300)
+        items = [mission.Item(0, 0, 16, 0, 1, 0, 0, 0, 0, HOME[0], HOME[1], HOME[2]), mission.Item(1, 3, 22, 1, 1, 15.0, 0, 0, 0, 0.0, 0.0, 60.0),
+                 mission.Item(2, 3, 16, 0, 1, 0, 0, 0, 0, a[0], a[1], 60.0), mission.Item(3, 3, 16, 0, 1, 0, 0, 0, 0, b[0], b[1], 60.0)]
+        notes.append('upload ack %s' % mission.upload(conn, items))
+        flight.set_mode(conn, 'MANUAL', table='plane')
+        armed = flight.arm(conn, timeout=150.0)
+        notes.append('arm: %s' % armed.detail)
+        auto = flight.set_mode(conn, 'AUTO', table='plane')
+        give_up = time.time() + 90.0
+        while not auto.ok and time.time() < give_up:
+            time.sleep(3)
+            auto = flight.set_mode(conn, 'AUTO', table='plane')
+        notes.append('AUTO: %s' % auto.detail)
+        time.sleep(30)
+        target_lat, target_lon, target_alt = at(700, 300)[0], at(700, 300)[1], 80.0
+        conn.mav.command_int_send(conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 192, 0, 0, 0, 1, 0, 0, int(target_lat * 1e7), int(target_lon * 1e7), target_alt)  # param2=1: MAV_DO_REPOSITION_FLAGS_CHANGE_MODE (the plane is still in AUTO, not GUIDED)
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=5)
+        notes.append('DO_REPOSITION sent: lat=%.7f lon=%.7f alt=%.1f; ack %s' % (target_lat, target_lon, target_alt, None if ack is None else ack.result))
+        t0, rows = time.time(), []
+        while time.time() - t0 < 60.0:
+            r = track_row(conn, t0)
+            if r:
+                rows.append(r)
+        last = rows[-1] if rows else None
+        if last:
+            dist = math.hypot((last[1] - target_lat) * M_LAT, (last[2] - target_lon) * M_LON)
+            notes.append('after 60 s: %.1f m from the target, alt %.1f m' % (dist, last[3]))
+        write_track('plane-reposition', rows)
+    except Exception as e:
+        notes.append('EXCEPTION %r' % (e,))
+    finally:
+        stop(proc, 'arduplane')
+    with open(os.path.join(OUT, 'plane-reposition-notes.txt'), 'w') as f:
+        f.write('\n'.join(notes) + '\n')
+    print('[plane-reposition] %s' % (notes[-1] if notes else 'no notes'), flush=True)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     if 'copter-position' in PARTS:
@@ -216,6 +261,8 @@ def main():
         copter_velocity()
     if 'plane-position' in PARTS:
         plane_position()
+    if 'plane-reposition' in PARTS:
+        plane_reposition()
     return 0
 
 
