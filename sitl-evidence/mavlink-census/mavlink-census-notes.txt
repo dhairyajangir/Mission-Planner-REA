@@ -1,0 +1,4 @@
+copter: upload ack 0; arm: armed (ack result 0); AUTO: AUTO active; start: mission start accepted (ack result 0)
+plane: upload ack 0; arm: armed (ack result 0); AUTO: AUTO active
+quadplane: upload ack 0; arm: armed (ack result 0); AUTO: AUTO active
+heli: upload ack 0; arm: armed (ack result 0); AUTO: AUTO active; start: mission start accepted (ack result 0)

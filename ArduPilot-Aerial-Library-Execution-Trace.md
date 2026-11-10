@@ -400,3 +400,35 @@ So the copter-tailsitter failure in the airframe sweep came from my sweep missin
 | freestyle | 1 | 1 | 72 s | 0.15 | 0.20 | 0.72 | 0.09 | 0.01 | 0.03 | 0.03 | 0.03 | 0.23 | 0.02 |
 
 Reading these: for the 24 regular layouts (quad, hexa, octa, octa-quad, deca, tri, y6, dodeca-hexa and the three scripted 16- and 32-motor frames) the estimates against the truth are identical to the digit shown (roll 0.13, pitch 0.11, yaw 0.58 degrees, AHRS position 0.06 m; 0.12 to 0.14 for the scripted frames), and so are the altitude and position tracking (0.02 m altitude, 0.16 m north and 0.02 m east). The simulator evidently drives all of them with one common multicopter dynamics model, so the sweep shows that the firmware arms, mixes and flies every layout well enough to complete the mission, not that the aircraft differ. What does differ is the attitude tracking the firmware logs for itself, mostly in yaw: 0.04 degrees for most frames, 0.08 to 0.10 for octa-quad, deca, dodeca-hexa and the 16-motor frames, and 0.35 for the tri-copter, whose yaw is made with a tail servo. The odd models are singlecopter and coaxcopter (classes 8 and 9), where the yaw estimate is worse (2.9 degrees rms against 0.58) and yaw tracking is 0.68 and 0.33 degrees; Callisto, with a yaw tracking error of 2.25 degrees and roll and pitch 0.17 and 0.26; and freestyle, which flew the mission in 69.7 s with a 0.23 m north position error. The motor mixing differs per frame and shows in the logged motor outputs (`RCOU`), which were not compared here. One flight each, simulator only, with the simulator's sensor models and the firmware's own targets. The raw logs (28, about 25 MB gzipped each) are not committed; their checksums are in `raw-log-manifest.txt`.
+
+## What each aerial autopilot sends and accepts over MAVLink
+
+### Message census (no stream request)
+
+`research-tools/sitl-mavlink-census.py`: a fresh simulator per vehicle, no `REQUEST_DATA_STREAM` and no ground-station heartbeat sent, messages counted by name for 60 s on the ground and 30 s during a mission flight (`sitl-evidence/mavlink-census/mavlink-census.csv`).
+
+| Vehicle | Message types | Ground (combined Hz) | Flight (combined Hz) |
+|---|---|---|---|
+| Copter | 7 | 2.0 | 2.9 |
+| Helicopter | 7 | 2.0 | 3.0 |
+| Plane | 38 | 52.8 | 74.6 |
+| QuadPlane | 38 | 55.8 | 73.3 |
+
+Copter and the helicopter build send only `HEARTBEAT`, `HOME_POSITION`, `GPS_GLOBAL_ORIGIN`, `TIMESYNC`, `PARAM_VALUE`, `MISSION_ITEM_REACHED` and `STATUSTEXT` on a bare connection; a ground station has to request every other stream from them. Plane and QuadPlane send attitude, position, GPS, battery, airspeed, RC channels, EKF status, vibration, wind and more without being asked. The firmware source (`libraries/GCS_MAVLink/GCS_MAVLink_Parameters.cpp`) sets the compiled-in default stream rate to 1 Hz per group for `APM_BUILD_ArduPlane` and 0 for `APM_BUILD_COPTER_OR_HELI`, which matches what was measured and shows this is deliberate firmware behaviour, not a quirk of the simulator. The measured rates (about 1.7 Hz on the ground, 2.3 Hz in flight) are higher than the nominal 1 Hz; why was not investigated.
+
+### Command sweep: every MAV_CMD, zero parameters
+
+`research-tools/sitl-mavlink-command-sweep.py`: every `MAV_CMD_*` named in a `case` label of `GCS_Common.cpp` and the vehicle's own `GCS_MAVLink_*.cpp`, sent as `COMMAND_LONG` and `COMMAND_INT` with every parameter zero, to a disarmed vehicle; the acknowledgement and vehicle text kept. 87 commands for Copter and the helicopter, 88 for Plane and QuadPlane (`sitl-evidence/mavlink-command-sweep-final/command-sweep.csv`):
+
+| Vehicle | ACCEPTED | FAILED | DENIED | UNSUPPORTED | COMMAND_INT_ONLY |
+|---|---|---|---|---|---|
+| Copter | 40 | 21 | 10 | 5 | 4 |
+| Helicopter | 39 | 22 | 10 | 5 | 4 |
+| Plane | 34 | 28 | 9 | 6 | 3 |
+| QuadPlane | 35 | 27 | 9 | 6 | 3 |
+
+Differences: `MAV_CMD_DO_MOTOR_TEST` is accepted on Copter and QuadPlane but failed on Plane and the helicopter build (consistent with the heli motor-test refusal found earlier); `MAV_CMD_DO_SPRAYER` and `MAV_CMD_DO_CHANGE_SPEED` differ between Copter and Plane; `MAV_CMD_NAV_VTOL_TAKEOFF` is `COMMAND_INT_ONLY` on Copter and the helicopter build but `UNSUPPORTED` on both Plane and QuadPlane (with `Q_ENABLE` set, so VTOL takeoff on a QuadPlane evidently needs the mission-item form, not a direct command, which was not tested here).
+
+**A hang found along the way.** `MAV_CMD_DO_CHANGE_ALTITUDE` (186) sent with all parameters zero is never acknowledged on ArduPlane or QuadPlane, and it stops the MAVLink command channel acknowledging *anything* sent after it on the same connection; four earlier sweep attempts lost the rest of that vehicle's results to this (kept as `sitl-evidence/mavlink-command-sweep`, `-rerun`, `-with-defaults`, `-retry`). The process itself does not crash while this is happening — it keeps answering `HEARTBEAT` and stays alive for at least 120 s with no further commands sent (`sitl-evidence/isolate-replay-crash/`) — but when the hung process is finally killed (`SIGTERM`) it panics: `PANIC: Should not be called on invalid location: Location cannot be (0, 0, 0)`, in `Location::get_alt_cm` (`libraries/AP_Common/Location.cpp:152`), a check compiled in for SITL builds only. This was isolated entirely from the MAVLink interface, without a debugger: an idle run with no commands sent for 180 s never panics (`sitl-evidence/isolate-idle-crash/`); sending `MAV_CMD_DO_CHANGE_ALTITUDE` alone gets no acknowledgement while `MAV_CMD_DO_CHANGE_SPEED` alone is answered normally (`sitl-evidence/isolate-change-altitude-crash/`); replaying the sweep's first 16 commands shows the channel stops answering exactly at that command, and the panic only appears in the log after the final kill, not during the 120 s of idle waiting that followed (`sitl-evidence/isolate-replay-crash/`). The final sweep lists the command as "NOT SENT" with this explanation and so has genuine answers for every other command.
+
+Limits: simulator only, one pass per vehicle; a result can depend on the order commands were sent in (the order used is the command number); not tried with non-zero parameters, on a real vehicle, or on an armed vehicle; the exact code path inside the altitude-change handler that leaves the invalid location was not traced in source or under a debugger.

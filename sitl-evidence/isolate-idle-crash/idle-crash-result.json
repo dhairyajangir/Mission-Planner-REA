@@ -1,0 +1,84 @@
+{
+ "checks": [
+  {
+   "uptime_s": 10.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 20.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 30.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 40.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 50.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 60.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 70.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 80.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 90.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 100.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 110.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 120.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 130.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 140.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 150.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 160.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 170.0,
+   "alive": true
+  },
+  {
+   "uptime_s": 180.0,
+   "alive": true
+  }
+ ],
+ "log_tail": [
+  "bind port 5763 for SERIAL2",
+  "SERIAL2 on TCP port 5763",
+  "validate_structures:546: Validating structures",
+  "Waiting for internal clock bits to be set (current=0x00)",
+  "Loaded defaults from @ROMFS/models/plane.parm,/home/think/ap-snapshot/Tools/autotest/models/plane.parm",
+  "Exitting"
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "sent": [
+  {
+   "name": "MAV_CMD_ACCELCAL_VEHICLE_POS",
+   "long_ack": 4,
+   "int_ack": 4,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_AIRFRAME_CONFIGURATION",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_BATTERY_RESET",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_CAMERA_STOP_TRACKING",
+   "long_ack": 3,
+   "int_ack": 3,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_CAMERA_TRACK_POINT",
+   "long_ack": 3,
+   "int_ack": 3,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_CAMERA_TRACK_RECTANGLE",
+   "long_ack": 3,
+   "int_ack": 3,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_CAN_FORWARD",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_COMPONENT_ARM_DISARM",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_CONTROL_HIGH_LATENCY",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DEBUG_TRAP",
+   "long_ack": 2,
+   "int_ack": 2,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_ACCEPT_MAG_CAL",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_ADSB_OUT_IDENT",
+   "long_ack": 4,
+   "int_ack": 4,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_AUTOTUNE_ENABLE",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_AUX_FUNCTION",
+   "long_ack": 4,
+   "int_ack": 4,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_CANCEL_MAG_CAL",
+   "long_ack": 0,
+   "int_ack": 0,
+   "alive": true
+  },
+  {
+   "name": "MAV_CMD_DO_CHANGE_ALTITUDE",
+   "long_ack": null,
+   "int_ack": null,
+   "alive": true
+  }
+ ],
+ "checks": [
+  {
+   "uptime_after_replay_s": 10.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 20.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 30.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 40.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 50.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 60.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 70.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 80.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 90.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 100.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 110.0,
+   "alive": true
+  },
+  {
+   "uptime_after_replay_s": 120.0,
+   "alive": true
+  }
+ ],
+ "log_tail": [
+  "Loaded defaults from @ROMFS/models/plane.parm,/home/think/ap-snapshot/Tools/autotest/models/plane.parm",
+  "PANIC: Should not be called on invalid location: Location cannot be (0, 0, 0)",
+  "Running: sh dumpstack.sh 22 >dumpstack.sh_arduplane.22.out 2>&1",
+  "Failed",
+  "Running: sh dumpcore.sh 22 >dumpcore.sh_arduplane.22.out 2>&1",
+  "Failed"
+ ]
+}
