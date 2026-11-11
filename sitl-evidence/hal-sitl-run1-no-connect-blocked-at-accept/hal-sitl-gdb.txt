@@ -1,0 +1,30 @@
+Breakpoint 1 at 0x2682a0
+Breakpoint 2 at 0x269ca0
+Breakpoint 3 at 0x269a20
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+
+Program received signal SIGTERM, Terminated.
+0x00007ffff792ba94 in __libc_accept (fd=10, addr=..., len=0x0) at ../sysdeps/unix/sysv/linux/accept.c:26
+warning: 26	../sysdeps/unix/sysv/linux/accept.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00005555557bc2a0 <HALSITL::SITL_State::_sitl_setup()>
+	breakpoint already hit 1 time
+        silent
+        continue
+2       breakpoint     keep y   0x00005555557bdca0 <HALSITL::SITL_State::_fdm_input_step()>
+        silent
+        continue
+3       breakpoint     keep y   0x00005555557bda20 <HALSITL::SITL_State::_fdm_input_local() [clone .part.0]>
+        silent
+        continue

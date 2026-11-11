@@ -1,0 +1,3 @@
+HALSITL::SITL_State::_sitl_setup: 1 hits
+HALSITL::SITL_State::_fdm_input_step: 0 hits
+HALSITL::SITL_State::_fdm_input_local: 0 hits

@@ -1,0 +1,2 @@
+HALSITL::SITL_State::_sitl_setup: 1 hits
+HALSITL::SITL_State::_fdm_input_local: 19887 hits
