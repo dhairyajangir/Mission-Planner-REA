@@ -3,6 +3,7 @@ arm: armed (ack result 0)
 AUTO: AUTO active
 DO_REPOSITION to reach GUIDED: ack 0
 t= 16.0 GUIDED_CHANGE_SPEED to 30 m/s airspeed: ack 0
-t= 37.0 GUIDED_CHANGE_ALTITUDE to 120 m: ack 0
-t= 58.0 GUIDED_CHANGE_HEADING to 270 deg: ack 0
-final: alt 78.3 m, vx -0.62 vy -30.90 (heading atan2(vy,vx), degrees from north clockwise = 269)
+t= 22.0 GUIDED_CHANGE_SPEED to -50 m/s (outside tuning envelope): ack 4
+t= 38.0 GUIDED_CHANGE_ALTITUDE to 120 m: ack 0
+t= 59.0 GUIDED_CHANGE_HEADING to 270 deg: ack 0
+final: alt 79.1 m, vx -0.49 vy -30.90 (heading atan2(vy,vx), degrees from north clockwise = 269)

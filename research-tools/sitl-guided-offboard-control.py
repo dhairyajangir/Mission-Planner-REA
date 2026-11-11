@@ -295,7 +295,13 @@ def plane_guided_slew():
         conn.mav.command_long_send(conn.target_system, conn.target_component, 43000, 0, 0, 30.0, 2.0, 0, 0, 0, 0)  # GUIDED_CHANGE_SPEED: type=0 airspeed, target 30 m/s, accel 2 m/s^2
         ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
         notes.append('t=%5.1f GUIDED_CHANGE_SPEED to 30 m/s airspeed: ack %s' % (time.time() - t0, None if ack is None else ack.result))
-        hold(20.0)
+        hold(5.0)
+        # fault injection: an airspeed outside ArduPlane's own tuning envelope (handle_change_airspeed rejects airspeed > ARSPD_FBW_MAX or < ARSPD_FBW_MIN, mode_guided.cpp:126).
+        # -50 m/s is nonsense in both directions; expect the command to be refused and the 30 m/s target from above to survive untouched.
+        conn.mav.command_long_send(conn.target_system, conn.target_component, 43000, 0, 0, -50.0, 2.0, 0, 0, 0, 0)
+        ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
+        notes.append('t=%5.1f GUIDED_CHANGE_SPEED to -50 m/s (outside tuning envelope): ack %s' % (time.time() - t0, None if ack is None else ack.result))
+        hold(15.0)
         conn.mav.command_int_send(conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, 43001, 0, 0, 0, 0, 3.0, 0, 0, 0, 120.0)  # GUIDED_CHANGE_ALTITUDE: 120 m, rate 3 m/s
         ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=3)
         notes.append('t=%5.1f GUIDED_CHANGE_ALTITUDE to 120 m: ack %s' % (time.time() - t0, None if ack is None else ack.result))
