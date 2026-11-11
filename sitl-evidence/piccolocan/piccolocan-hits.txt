@@ -1,0 +1,5 @@
+CAN_P1_DRIVER -> 1, CAN_D1_PROTOCOL -> 4 (PiccoloCAN) (rejected []); restarting under gdb
+after restart under gdb: CAN_P1_DRIVER=1.0 CAN_D1_PROTOCOL=4.0
+
+AP_PiccoloCAN::init: 1 hits
+AP_PiccoloCAN::update: 11763 hits
