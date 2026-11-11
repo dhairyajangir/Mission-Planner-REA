@@ -1,0 +1,41 @@
+== modes and arming
+OK   vehicle is disarmed and reports a Rover mode   [INITIALISING]
+-- every mode requested one by one, disarmed
+mode  0 MANUAL     MANUAL active  | Beginning INS calibration. Do not move vehicle; INS: alloc 6144 bytes for ISB (free=524288)
+mode  1 ACRO       ACRO active  | EKF3 IMU1 origin set; Field Elevation Set: 584m
+mode  3 STEERING   STEERING active
+mode  4 HOLD       HOLD active
+mode  5 LOITER     LOITER active
+mode  6 FOLLOW     FOLLOW refused: vehicle stays in LOITER (ack result 4)  | EKF3 IMU0 is using GPS; EKF3 IMU1 is using GPS
+mode  7 SIMPLE     SIMPLE active
+mode  8 DOCK       DOCK refused: vehicle stays in SIMPLE (ack result 4)  | Dock: target not acquired; Flight mode change failed
+mode  9 CIRCLE     CIRCLE active
+mode 10 AUTO       AUTO refused: vehicle stays in CIRCLE (ack result 4)  | No Mission. Can't set AUTO.; Flight mode change failed
+mode 11 RTL        RTL active
+mode 12 SMART_RTL  SMART_RTL active
+mode 15 GUIDED     GUIDED active
+OK   MANUAL is accepted
+OK   arm succeeds   [armed (ack result 0) | Throttle armed]
+OK   heartbeat reports armed
+OK   parameter restore refuses while armed   [refusing to write parameters while the vehicle is armed]
+-- every mode requested one by one, armed, standing still in the simulator
+mode  0 MANUAL     MANUAL active
+mode  1 ACRO       ACRO active
+mode  3 STEERING   STEERING active
+mode  4 HOLD       HOLD active
+mode  5 LOITER     LOITER active
+mode  6 FOLLOW     FOLLOW refused: vehicle stays in LOITER (ack result 4)  | Flight mode change failed
+mode  7 SIMPLE     SIMPLE active
+mode  8 DOCK       DOCK refused: vehicle stays in SIMPLE (ack result 4)  | Dock: target not acquired; Flight mode change failed
+mode  9 CIRCLE     CIRCLE active
+mode 10 AUTO       AUTO refused: vehicle stays in CIRCLE (ack result 4)  | No Mission. Can't set AUTO.; Flight mode change failed
+mode 11 RTL        RTL active
+mode 12 SMART_RTL  SMART_RTL active
+mode 15 GUIDED     GUIDED active
+OK   disarm succeeds   [disarmed (ack result 0)]
+== parameters
+OK   saved file reloads to the same 1292 parameters
+OK   three parameters written and echoed   [[('WP_SPEED', 3.0), ('CRUISE_SPEED', 4.0), ('WP_RADIUS', 4.0)]]
+OK   diff lists exactly those three   [['CRUISE_SPEED', 'WP_RADIUS', 'WP_SPEED']]
+FAIL restore wrote three, skipped the protected SERIAL0_BAUD, vehicle matches the file again   [(('BARO1_GND_PRESS', 'BARO2_GND_PRESS', 'SERIAL0_BAUD'), [])]
+RESULT 1 checks failed: restore wrote three, skipped the protected SERIAL0_BAUD, vehicle matches the file again

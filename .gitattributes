@@ -2,3 +2,4 @@
 "mission-planner-payload.cab" filter=lfs diff=lfs merge=lfs -text
 "mission-planner-portable.zip" filter=lfs diff=lfs merge=lfs -text
 "mission-planner-binary-evidence/rea-remaining-index.sqlite" filter=lfs diff=lfs merge=lfs -text
+"*.BIN.gz" filter=lfs diff=lfs merge=lfs -text
