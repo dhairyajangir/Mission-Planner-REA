@@ -134,6 +134,13 @@ This resolves the sweep's never-entered finding for `AP_RCTelemetry` specificall
 A first attempt (kept, `sitl-evidence/hal-sitl-run1-no-connect-blocked-at-accept/`) connected nothing at all and got 0 hits on every breakpoint, including the original choice of `_fdm_input_step` (which just calls `_fdm_input_local` and was dropped after this, most likely inlined at this build's optimisation level, the same pattern as the CRSF telemetry test above). The SITL log explained it: the process was stuck at `Waiting for connection ....` on SERIAL0 — ArduPilot's own main loop does not start ticking until a GCS connects, something none of this project's other scripts had to notice because they always connect immediately as part of the test itself.
 
 Limits: entry and call-count only, one boot, no mission, simulator only.
+## AP_Vehicle: the vehicle base class every flight in this repository already runs through, confirmed by name
+
+Same gap as AP_HAL_SITL above, one layer up: `AP_Vehicle` is the common base class every ArduPilot vehicle type inherits from, exercised by every flight in this repository, but never cited by name in a claim. `research-tools/sitl-ap-vehicle-gdb.py` (output `sitl-evidence/ap-vehicle/`) put gdb breakpoints on `AP_Vehicle::setup` and `AP_Vehicle::loop` over a plain Copter boot once a bare MAVLink TCP connect unblocked SITL's `accept()`: 1 and 25,526 hits in about a minute.
+
+A third breakpoint, `AP_Vehicle::one_Hz_update`, could not even be set (gdb: `Function "AP_Vehicle::one_Hz_update" not defined`) - most likely inlined away entirely at this build's optimisation level, the same pattern already seen with `_fdm_input_step` and the CRSF decode functions above; not confirmed with a disassembly.
+
+Limits: entry and call-count only, one boot, no mission, simulator only.
 ## Copter modes without an ArduPilot autotest, entered in flight
 
 `research-tools/sitl-copter-untested-modes.py`: `coverage/copter-mode-test-map.csv` lists seven Copter modes that none of ArduPilot's own autotests names (ACRO, DRIFT, SPORT, TURTLE, SYSTEMID, GUIDED_NOGPS, AUTOROTATE). A simulated Copter was flown to 20 m by an AUTO mission with a long loiter; with RC override (sticks centred, throttle mid) each mode was requested from AUTO, held for 8 s and AUTO requested again, with one-shot gdb breakpoints on each mode's `init` and `run`.
