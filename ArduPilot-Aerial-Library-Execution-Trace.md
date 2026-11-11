@@ -82,7 +82,7 @@ The raw logs (53 MB gzipped, four files) are **not committed**; `raw-log-manifes
 | `AP_TemperatureSensor` | `init` x1, `update` x962 | `init` x1, `update` x566 | `init` x1, `update` x265 |
 | `AP_VideoTX` | `init` x1, `update` x385 | `init` x1, `update` x226 | `init` x1, `update` x106 |
 
-**Present in a binary but never entered:** `AP_PiccoloCAN`, `AP_RCTelemetry`.
+**Present in a binary but never entered:** `AP_PiccoloCAN`. `AP_RCTelemetry` was also never entered by this sweep, but see the CRSF telemetry test below: it is reachable in the simulator after all, just not by anything this sweep's two default flights did.
 
 **Findings worth noting**
 - `AP_LandingGear::update` was never entered in the Copter run (as in the earlier sweep) and was entered 566 times in the Plane run, so the landing-gear update does run on the Plane build with default settings. `AP_LandingGear::init` ran in all three builds.
@@ -120,6 +120,13 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## AP_RCTelemetry/AP_CRSF_Telem: present but never entered, above, turned out to be reachable without hardware
+
+ArduPilot ships its own SITL simulator for this (`libraries/SITL/SIM_CRSF.*`, no hardware): a UART set to a generic RC-input protocol (`--serial5=sim:crsf`, `SERIAL5_PROTOCOL` 23, read once at boot like an enable-flag parameter, so it needed the same two-stage restart used throughout this repository even though it is not one) gets fed real CRSF frames (VTX_FRAME/VTX_TELEM/VTX_UNKNOWN, 0xC8-headers) every 400 ms by the simulated device. `research-tools/sitl-crsf-telemetry-gdb.py` (output `sitl-evidence/crsf-telemetry/`) set gdb breakpoints on `AP_CRSF_Telem::AP_CRSF_Telem` (the constructor; its one call site is inside `get_singleton()`), `AP_CRSF_Telem::get_singleton`, and the decoder entry points `AP_RCProtocol_CRSF::_process_byte` and `decode_crsf_packet`, on a Copter build, and waited 50 s disarmed (`get_singleton()` only allocates `AP_CRSF_Telem` while the vehicle is not armed).
+
+Result: the constructor was hit once, so `AP_CRSF_Telem` really was allocated at runtime; the other three breakpoints showed 0 hits even though logically something in that call chain had to run to reach the constructor. The likely explanation is that `get_singleton`, `_process_byte` and `decode_crsf_packet` are all small enough to have been inlined into their callers at this build's optimisation level, so a breakpoint on the named symbol never catches the inlined copy; this was not confirmed with a disassembly or a differently-built binary. The SITL log confirms the device attached (`SIM connection crsf:(null) on SERIAL5`) and the parameter survived the reboot (`SERIAL5_PROTOCOL=23.0`).
+
+This resolves the sweep's never-entered finding for `AP_RCTelemetry` specifically for its CRSF backend: it is reachable in this simulator, with no hardware, using ArduPilot's own built-in test device, once the right serial port and protocol are configured. `AP_PiccoloCAN` (a CAN-bus ESC protocol with no equivalent built-in SITL simulator found) and the other two RC-telemetry backends in the same library (`AP_GHST_Telem`, `AP_Spektrum_Telem`) were not attempted here. Limits: one run, Copter only, one backend of three, entry only (no check of what telemetry data it actually sent), the three inlining-suspected breakpoints not independently confirmed.
 ## Copter modes without an ArduPilot autotest, entered in flight
 
 `research-tools/sitl-copter-untested-modes.py`: `coverage/copter-mode-test-map.csv` lists seven Copter modes that none of ArduPilot's own autotests names (ACRO, DRIFT, SPORT, TURTLE, SYSTEMID, GUIDED_NOGPS, AUTOROTATE). A simulated Copter was flown to 20 m by an AUTO mission with a long loiter; with RC override (sticks centred, throttle mid) each mode was requested from AUTO, held for 8 s and AUTO requested again, with one-shot gdb breakpoints on each mode's `init` and `run`.

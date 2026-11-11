@@ -1,0 +1,7 @@
+SERIAL5_PROTOCOL was -1.0, set to 23 (RCIN, rejected []); restarting under gdb
+after restart under gdb, SERIAL5_PROTOCOL=23.0
+
+AP_CRSF_Telem::AP_CRSF_Telem: 1 hits
+AP_CRSF_Telem::get_singleton: 0 hits
+AP_RCProtocol_CRSF::_process_byte: 0 hits
+AP_RCProtocol_CRSF::decode_crsf_packet: 0 hits
