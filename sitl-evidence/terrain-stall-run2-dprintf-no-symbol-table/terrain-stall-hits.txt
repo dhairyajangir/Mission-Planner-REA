@@ -1,0 +1,7 @@
+arm: armed (ack result 0)
+takeoff ack 0
+SET_POSITION_TARGET_GLOBAL_INT (terrain-alt) sent toward the empty tile
+
+ModeGuided::pos_control_run: 218824 hits
+pos_control_run terrain-check lines: 0
+failsafe-triggered lines: 0

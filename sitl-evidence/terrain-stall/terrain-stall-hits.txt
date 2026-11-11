@@ -1,0 +1,8 @@
+arm: armed (ack result 0)
+takeoff ack 0
+SET_POSITION_TARGET_GLOBAL_INT (terrain-alt) sent toward the empty tile
+
+ModeGuided::pos_control_run: 100007 hits
+Copter::failsafe_terrain_on_event: 0 hits
+AC_WPNav::get_terrain_D_m: 100007 hits
+AC_WPNav::get_terrain_U_m: 0 hits

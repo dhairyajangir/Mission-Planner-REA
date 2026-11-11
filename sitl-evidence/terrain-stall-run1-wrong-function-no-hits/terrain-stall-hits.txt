@@ -1,0 +1,6 @@
+arm: armed (ack result 0)
+takeoff ack 0
+SET_POSITION_TARGET_GLOBAL_INT (terrain-alt) sent toward the empty tile
+
+AC_WPNav::advance_wp_target_along_track: 0 hits
+terrain-D-unavailable-for-current-position hits: 0
