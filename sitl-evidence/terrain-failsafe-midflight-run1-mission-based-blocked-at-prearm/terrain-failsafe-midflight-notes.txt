@@ -1,0 +1,8 @@
+TERRAIN_ENABLE -> 1, WPNAV_SPEED -> 2000 cm/s (rejected ['WPNAV_SPEED']); restarting
+stream requests after reboot: GLOBAL_POSITION_INT ack 0, TERRAIN_REPORT ack 0
+after restart: TERRAIN_ENABLE=1.0 WPNAV_SPEED=None
+upload ack 0
+arm: not armed after 150 s (last ack result 4)
+  prearm text: Arm: waiting for terrain data
+  prearm text: PreArm: waiting for terrain data
+not armed, mission not started
