@@ -1,0 +1,21 @@
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+GUIDED: GUIDED active
+GUIDED_CHANGE_ALTITUDE to 120 m (12000 cm above home): ack 2
+
+823 dprintf lines, first 3 and last 10:
+T=1825 amsl_cm_before=0 loc.alt=0 loc.relative_alt=0 current_loc.alt=0 home.alt=0
+T=1925 amsl_cm_before=0 loc.alt=0 loc.relative_alt=0 current_loc.alt=0 home.alt=0
+T=2025 amsl_cm_before=0 loc.alt=0 loc.relative_alt=0 current_loc.alt=0 home.alt=0
+...
+T=83724 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=66006 home.alt=58405
+T=83824 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65995 home.alt=58405
+T=83924 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65984 home.alt=58405
+T=84024 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65975 home.alt=58405
+T=84124 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65966 home.alt=58405
+T=84224 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65958 home.alt=58405
+T=84324 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65950 home.alt=58405
+T=84424 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65942 home.alt=58405
+T=84524 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65934 home.alt=58405
+T=84624 amsl_cm_before=65784 loc.alt=65784 loc.relative_alt=0 current_loc.alt=65925 home.alt=58405
