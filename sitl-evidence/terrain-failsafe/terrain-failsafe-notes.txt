@@ -1,0 +1,7 @@
+TERRAIN_ENABLE was 1.0, set to 1 (rejected []); restarting
+stream requests after reboot: GLOBAL_POSITION_INT ack 0, TERRAIN_REPORT ack 0
+upload ack 0
+arm: not armed after 150 s (last ack result 4)
+  prearm text: Arm: waiting for terrain data
+  prearm text: PreArm: waiting for terrain data
+not armed, mission not started
