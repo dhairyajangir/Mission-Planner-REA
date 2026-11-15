@@ -1,0 +1,4 @@
+arm: not armed after 120 s (last ack result None)
+
+0 samples
+
