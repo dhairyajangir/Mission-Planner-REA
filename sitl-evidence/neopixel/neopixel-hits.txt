@@ -1,0 +1,6 @@
+NTF_LED_TYPES -> 123335.0 (was 123079.0), SERVO9_FUNCTION -> 120 (k_LED_neopixel1) (rejected []); restarting under gdb
+after restart under gdb: NTF_LED_TYPES=123335.0 SERVO9_FUNCTION=120.0
+
+SerialLED::init: 1 hits
+SerialLED::hw_set_rgb: 192 hits
+NeoPixel::NeoPixel: 1 hits

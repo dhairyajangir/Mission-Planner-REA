@@ -122,6 +122,11 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## AP_SerialLED (NeoPixel backend): present but never entered, closed the same way as AP_PiccoloCAN
+
+The earlier full-function sweep found `AP_SerialLED`'s functions (`send`, `set_RGB`, `set_num_neopixel*`) present but never entered ("no serial LED configured"). Needed no hardware: `NTF_LED_TYPES` bit 8 (256, NeoPixel, OR'd into the existing default) plus `SERVO9_FUNCTION` 120 (`k_LED_neopixel1`) on a Copter boot - the LED driver list is built once at `AP_Notify::init()`, so this needed the usual two-stage reboot (`research-tools/sitl-neopixel-gdb.py`, output `sitl-evidence/neopixel/`). `NeoPixel::NeoPixel` and `SerialLED::init` each hit once; `SerialLED::hw_set_rgb` (the shared base-class send path) hit 192 times in 30 s (~6.4 Hz) - the WS2812 protocol bit-banged out to a servo channel nobody reads, the same spirit as `AP_PiccoloCAN` writing CAN frames nobody answers.
+
+Limits: entry and call-count only, one boot, simulator only, Copter only, NeoPixel backend only - ProfiLED, DShot-LED and the I2C-based serial-LED backends were not tried.
 ## GUIDED velocity command-loss timeout: confirmed, not just asserted
 
 `copter_velocity()` (`sitl-guided-offboard-control.py`) previously sent an explicit zero-velocity message to stop the stream, which never tested the thing its own docstring already claimed ("ArduCopter's GUIDED velocity controller times out without repeated messages") - a vehicle told to stop stopping is not a fault test. Kept as `sitl-evidence/guided-offboard-control-run1-copter-velocity-explicit-stop-sent/`.
