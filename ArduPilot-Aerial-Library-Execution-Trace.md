@@ -120,6 +120,15 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## The horizontal stall: three more causes ruled out by reading, one left standing
+
+Three more hypotheses for why GUIDED's position target stopped advancing, checked against the source and the existing logs with no new SITL run:
+
+1. `ModeGuided::pos_control_run`'s own update-timeout check (`mode_guided.cpp`: "stop rotating if no updates received within `timeout_ms`") only resets yaw to `HOLD` - `guided_pos_target_ned_m` itself is fed to `pos_control->input_pos_NED_m(...)` every loop regardless, unchanged from the original far target. A one-shot position command does not go stale the way the documented GUIDED velocity controller does.
+2. `ModeGuided`'s optional travel limit (`guided_limit.horiz_max_m`) defaults to 0.0 (no limit) and is only ever set by an `AUTO` mission's `MAV_CMD_DO_GUIDED_LIMITS` item, which this GUIDED-only test never sent.
+3. The existing `sitl-terrain-failsafe-midflight.py` log shows no GCS-failsafe text and only one mode line for the whole 600 s run (`mode GUIDED`, never changing) - ruling out a GCS-link-loss failsafe, worth checking specifically since that script never threads periodic heartbeats the way `run_quadplane_failsafes.py` does.
+
+Leading remaining hypothesis, not yet confirmed with gdb: a clamp or S-curve distance/speed limit inside `AC_PosControl`'s own horizontal (NE) controller. Not pursued further here.
 ## The terrain-failsafe stall: ruled out as a terrain-data problem, cause otherwise still open
 
 Follow-up on the previous section's stall. `research-tools/sitl-terrain-stall-gdb.py` repeated the same 200+ s GUIDED flight toward the empty tile, gdb-counting `ModeGuided::pos_control_run` (the per-loop GUIDED position-controller function; a first attempt watched `AC_WPNav::advance_wp_target_along_track` instead and got zero hits - a single ad-hoc GUIDED position target never uses AC_WPNav's multi-leg path advancer at all, only AUTO-style waypoint sequences do; kept as `sitl-evidence/terrain-stall-run1-wrong-function-no-hits/`), `AC_WPNav::get_terrain_D_m`, the `get_terrain_U_m` it wraps, and `Copter::failsafe_terrain_on_event`.
