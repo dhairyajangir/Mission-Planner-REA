@@ -4,7 +4,7 @@ despite a roughly level attitude and throttle above 90% (or saturated) for 1 ful
 which redistributes the remaining motors' thrust to compensate. Arm in GUIDED, take off to 30 m (enough margin that the climb is still using meaningful throttle), fail motor 1,
 watch for the text and the reported lost-motor index, and whether the vehicle keeps flying or hits the ground. Simulator only (WSL, pymavlink, the custom-gcs library).
 
-    python3 sitl-copter-motor-failure.py <ardupilot tree> <out dir> <custom-gcs dir>
+    python3 sitl-copter-motor-failure.py <ardupilot tree> <out dir> <custom-gcs dir> [takeoff_alt_m]
 """
 import csv
 import os
@@ -13,6 +13,7 @@ import sys
 import time
 
 TREE, OUT, GCS = sys.argv[1], sys.argv[2], sys.argv[3]
+TAKEOFF_ALT_M = float(sys.argv[4]) if len(sys.argv) > 4 else 30.0
 sys.path.insert(0, GCS)
 from customgcs import flight, link, params  # noqa: E402
 
@@ -38,10 +39,10 @@ def main():
         armed = flight.arm(conn, timeout=120.0)
         notes.append('arm: %s' % armed.detail)
         if armed.ok:
-            conn.mav.command_long_send(conn.target_system, conn.target_component, 22, 0, 0, 0, 0, 0, 0, 0, 30.0)
+            conn.mav.command_long_send(conn.target_system, conn.target_component, 22, 0, 0, 0, 0, 0, 0, 0, TAKEOFF_ALT_M)
             ack = conn.recv_match(type='COMMAND_ACK', blocking=True, timeout=5)
-            notes.append('takeoff to 30 m ack %s' % (None if ack is None else ack.result))
-            time.sleep(25)  # let it stabilise in the hover before failing a motor
+            notes.append('takeoff to %.0f m ack %s' % (TAKEOFF_ALT_M, None if ack is None else ack.result))
+            time.sleep(max(25.0, TAKEOFF_ALT_M))  # give it time to actually finish the climb before failing a motor
             base = link.read_params(conn)
             bad = [r.name for r in params.write(conn, [params.Change('SIM_ENGINE_FAIL', base.get('SIM_ENGINE_FAIL'), 1.0)]) if not r.ok]
             notes.append('SIM_ENGINE_FAIL -> 1 (motor 1 killed, SIM_ENGINE_MUL default 0 = full loss) (rejected %s)' % bad)

@@ -1,0 +1,40 @@
+arm: armed (ack result 0)
+takeoff to 100 m ack 0
+SIM_ENGINE_FAIL -> 1 (motor 1 killed, SIM_ENGINE_MUL default 0 = full loss) (rejected [])
+t=  0.2 armed=True
+t=  1.2 armed=True
+t=  2.2 armed=True
+t=  3.2 armed=True
+t=  4.2 armed=True
+t=  5.2 armed=True
+t=  6.2 armed=True
+t=  7.2 armed=True
+t=  7.8 vehicle: SIM Hit ground at 15.93575 m/s
+t=  8.2 armed=True
+t=  9.2 armed=True
+t=  9.2 vehicle: SIM Hit ground at 1.593316 m/s
+t= 10.2 armed=True
+t= 10.9 vehicle: SIM Hit ground at 2.353448 m/s
+t= 11.2 armed=True
+t= 12.0 vehicle: SIM Hit ground at 2.575746 m/s
+t= 12.2 armed=True
+t= 13.2 vehicle: SIM Hit ground at 2.475868 m/s
+t= 13.2 armed=True
+t= 14.2 armed=True
+t= 14.8 vehicle: SIM Hit ground at 2.530428 m/s
+t= 15.2 armed=True
+t= 16.2 armed=True
+t= 16.6 vehicle: SIM Hit ground at 2.918219 m/s
+t= 17.2 armed=True
+t= 17.6 vehicle: SIM Hit ground at 2.441998 m/s
+t= 18.2 armed=True
+t= 19.2 armed=True
+t= 19.4 vehicle: SIM Hit ground at 2.637987 m/s
+t= 20.2 armed=True
+t= 21.2 armed=True
+t= 21.2 vehicle: SIM Hit ground at 2.873719 m/s
+t= 22.2 armed=True
+t= 23.0 vehicle: SIM Hit ground at 2.463797 m/s
+t= 23.2 armed=True
+t= 24.2 armed=True
+t= 24.7 vehicle: SIM Hit ground at 2.925042 m/s
