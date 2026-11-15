@@ -1,0 +1,32 @@
+arm: armed (ack result 0)
+takeoff to 30 m ack 0
+SIM_ENGINE_FAIL -> 1 (motor 1 killed, SIM_ENGINE_MUL default 0 = full loss) (rejected [])
+t=  0.2 armed=True
+t=  1.2 armed=True
+t=  2.2 armed=True
+t=  3.2 armed=True
+t=  3.2 vehicle: SIM Hit ground at 14.03119 m/s
+t=  3.4 vehicle: EKF3 lane switch 1
+t=  3.4 vehicle: EKF3 primary changed:1
+t=  4.2 armed=True
+t=  5.0 vehicle: Potential Thrust Loss (1)
+t=  5.2 armed=True
+t=  6.2 armed=True
+t=  7.2 armed=True
+t=  8.2 armed=True
+t=  9.2 armed=True
+t= 10.2 armed=True
+t= 11.2 armed=True
+t= 12.2 armed=True
+t= 13.2 armed=True
+t= 14.2 armed=True
+t= 15.2 armed=True
+t= 16.2 armed=True
+t= 17.2 armed=True
+t= 18.2 armed=True
+t= 19.2 armed=True
+t= 20.2 armed=True
+t= 21.2 armed=True
+t= 22.2 armed=True
+t= 23.2 armed=True
+t= 24.2 armed=True

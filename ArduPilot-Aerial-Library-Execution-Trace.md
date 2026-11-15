@@ -122,6 +122,13 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## Single motor failure: the thrust-loss detector fired, but too late
+
+A fault not tried anywhere else in this project: `SIM_ENGINE_FAIL` (SITL's own motor-kill simulation; `SIM_ENGINE_MUL` defaults to 0, full thrust loss on that motor), on a quad hovering at 30 m in GUIDED. `research-tools/sitl-copter-motor-failure.py` (output `sitl-evidence/copter-motor-failure/`) armed, took off, held 25 s, then killed motor 1.
+
+The quad fell in a smooth, near-continuous near-freefall descent (0 to 14 m/s over about 2.9 s, steadily accelerating, not a controlled or compensated descent) and hit the ground at 14.03 m/s 3.2 s after the motor died. ArduCopter's own detector for exactly this (`Copter::thrust_loss_check`, `ArduCopter/crash_check.cpp`, a 1 s confirmation window on descent-at-high-throttle) did work correctly - `"Potential Thrust Loss (1)"` correctly named motor 1 - but only arrived at t=5.0 s, about 1.8 s *after* the ground-contact text already logged at t=3.2 s. On this frame, at this altitude, the fall itself was faster than the detector's own 1-second trigger window, so by the time it fired the vehicle had already crashed. The vehicle still reported armed for the rest of the 25 s watch; no crash-triggered disarm was seen.
+
+Limits: one run, Copter quad frame only, one starting altitude (30 m) and one hover throttle level; not tried on other frame types, a higher starting altitude (more time for the 1 s window to complete before impact), or a partial thrust loss (SIM_ENGINE_MUL above 0) instead of total loss.
 ## AP_CheckFirmware: a mislabeled gap, closed essentially for free
 
 The original sweep listed `AP_CheckFirmware` as having no symbols in either simulator binary, but `AP_CHECK_FIRMWARE_ENABLED` is defined as `AP_OPENDRONEID_ENABLED` (`AP_CheckFirmware.h`) - and `AP_OpenDroneID::update` was already confirmed entered in that very same sweep (1,925 hits on Copter), so the symbol must have been present all along; `nm` confirms it (`check_firmware_print`, a free function, the only symbol this library's build actually produces). Its one call site, inside `AP_Vehicle::setup()`, has no runtime gate at all - and `AP_Vehicle::setup()` was already confirmed to run once per boot when `AP_Vehicle` itself was closed earlier. `research-tools/sitl-checkfirmware-gdb.py` (output `sitl-evidence/checkfirmware/`) just confirmed `check_firmware_print` hit once in a plain boot, as predicted.
