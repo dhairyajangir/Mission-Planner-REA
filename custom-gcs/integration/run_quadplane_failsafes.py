@@ -1,7 +1,7 @@
 """QuadPlane failsafes, not covered by run_plane.py's failsafe scenarios (which fly a plain Plane). Disposable ArduPlane SITL, model `quadplane`. Simulator only.
 
     python3 run_quadplane_failsafes.py <ardupilot tree> <out dir> [scenario ...]
-    scenarios: battery-low-vtol, battery-low-cruise, gps-loss-vtol, gps-loss-cruise, gcs-link-loss-transition, rc-loss-landing   (default: all)
+    scenarios: battery-low-vtol, battery-low-cruise, gps-loss-vtol, gps-loss-cruise, gcs-link-loss-transition, rc-loss-landing, motor-failure-vtol   (default: all)
 
 Mission: VTOL takeoff to 30 m, a waypoint 250 m north at 60 m (the forward-flight transition happens on the way there), a second waypoint 250 m east, a VTOL landing at home
 (the same mission sitl-plane-gaps.py's quadplane() flies, which is known to complete: transition, two waypoints, VTOL approach and landing).
@@ -42,6 +42,9 @@ SCENARIOS = {
     'gps-loss-cruise': ('cruise', {'FS_EKF_ACTION': 1}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
     'gcs-link-loss-transition': ('transition', {'FS_GCS_ENABL': 1, 'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, None, 'RTL'),
     'rc-loss-landing': ('landing', {'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, {'SIM_RC_FAIL': 1}, 'RTL'),
+    # fault injection, not tried anywhere else: a VTOL lift motor killed outright (SIM_ENGINE_MUL defaults to 0, full loss) while still a multicopter, the same
+    # fault sitl-copter-motor-failure.py used on a plain Copter. 'observe' because there is no single documented correct outcome to check against here.
+    'motor-failure-vtol': ('vtol', {}, {'SIM_ENGINE_FAIL': 1}, 'observe'),
 }
 
 
