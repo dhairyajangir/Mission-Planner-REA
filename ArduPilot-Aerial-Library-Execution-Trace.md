@@ -122,6 +122,13 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## The horizontal stall, resolved: a terrain-relative speed throttle, not a generic limit
+
+Five gdb attempts at printing `AC_PosControl`'s internal target/current-position values, to see the numbers directly instead of inferring from terrain height, all failed on C++ expression-evaluation quirks specific to this build: `AP_HAL::millis()` and plain `millis()` were both unresolvable from a breakpoint in `mode_guided.cpp`; `pos_control` and then `this->pos_control` were unresolvable at the exact address gdb stopped at; `copter` (the global vehicle singleton) came back with "unknown type" from that translation unit. Kept as five small failed runs (`sitl-evidence/guided-distance-stall-run1`-`run5`).
+
+Dropping gdb and logging `GLOBAL_POSITION_INT` directly instead settled it (`research-tools/sitl-guided-distance-stall.py`, output `sitl-evidence/guided-distance-stall/`): the same far GUIDED position target, but in `MAV_FRAME_GLOBAL_RELATIVE_ALT` instead of terrain-relative, had the vehicle cruise a dead-steady 10 m/s west for the whole 220 s test - 17.6 km covered, zero sign of slowing. The horizontal stall only happens with a terrain-relative target.
+
+`AC_PosControl::input_pos_NED_m`/`terrain_scaler_D_m` explain why: when `terrain_margin_m` is non-zero (true only for a terrain-relative target), the allowed horizontal speed gets multiplied by a scalar that drops toward a hard 0.01 floor as the vehicle's vertical position error grows - a genuine safety feature (don't fly fast horizontally while badly off your intended height above the ground below you), not a bug. That matches the earlier terrain-relative test's slowdown after about 2.4 km far better than a hard stop would: it was most likely crawling at roughly 1% of normal speed, not frozen solid. Not independently confirmed with a working gdb trace of the scalar's actual value - the gdb tooling problems above blocked that - but a working non-terrain control plus the source mechanism both point the same way.
 ## The horizontal stall: three more causes ruled out by reading, one left standing
 
 Three more hypotheses for why GUIDED's position target stopped advancing, checked against the source and the existing logs with no new SITL run:
