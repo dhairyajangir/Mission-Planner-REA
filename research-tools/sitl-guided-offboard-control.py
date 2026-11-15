@@ -145,14 +145,15 @@ def copter_velocity():
                 rows.append(r)
         max_speed = max((r[4] for r in rows), default=0.0)
         notes.append('streamed vx=2.0 m/s north for 10 s; max measured vx %.2f m/s' % max_speed)
-        conn.mav.set_position_target_local_ned_send(0, conn.target_system, conn.target_component, mavutil.mavlink.MAV_FRAME_LOCAL_NED, TYPE_MASK_VELOCITY_ONLY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        notes.append('sent zero velocity to stop')
+        # fault injection: no explicit stop sent at all (no zero-velocity message, no further messages of any kind) - only the documented 3 s
+        # command-loss timeout (ModeGuided::get_timeout_ms, "set velocity to zero ... if no updates received for 3 seconds", mode_guided.cpp) should stop it.
+        notes.append('sending nothing further at all (no explicit stop) - watching for the documented 3 s command-timeout to zero the velocity on its own')
         t1 = time.time()
         while time.time() - t1 < 10.0:
             r = track_row(conn, t0)
             if r:
                 rows.append(r)
-        notes.append(('10 s after stopping: vx %.2f m/s (no further velocity messages sent)' % rows[-1][4]) if rows else 'no rows')
+        notes.append(('10 s after the last velocity message (none sent since): vx %.2f m/s' % rows[-1][4]) if rows else 'no rows')
         write_track('copter-velocity', rows)
     except Exception as e:
         notes.append('EXCEPTION %r' % (e,))

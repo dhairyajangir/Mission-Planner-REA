@@ -122,6 +122,11 @@ Of the 22 libraries still at level 0 after the first sweep, seven have code in t
 
 Limits: function entry only; one flight per vehicle; default parameters; the first and second sweep attempts and the pkill/parser faults are described in the section above.
 
+## GUIDED velocity command-loss timeout: confirmed, not just asserted
+
+`copter_velocity()` (`sitl-guided-offboard-control.py`) previously sent an explicit zero-velocity message to stop the stream, which never tested the thing its own docstring already claimed ("ArduCopter's GUIDED velocity controller times out without repeated messages") - a vehicle told to stop stopping is not a fault test. Kept as `sitl-evidence/guided-offboard-control-run1-copter-velocity-explicit-stop-sent/`.
+
+Changed to send nothing at all after the last streamed 2 m/s command, relying purely on `ModeGuided::get_timeout_ms` (`mode_guided.cpp`: "set velocity to zero ... if no updates received for 3 seconds"). Confirmed: ten seconds after the last velocity message, with none sent since, `vx` had fallen to -0.01 m/s. The documented self-timeout genuinely works.
 ## The horizontal stall, resolved: a terrain-relative speed throttle, not a generic limit
 
 Five gdb attempts at printing `AC_PosControl`'s internal target/current-position values, to see the numbers directly instead of inferring from terrain height, all failed on C++ expression-evaluation quirks specific to this build: `AP_HAL::millis()` and plain `millis()` were both unresolvable from a breakpoint in `mode_guided.cpp`; `pos_control` and then `this->pos_control` were unresolvable at the exact address gdb stopped at; `copter` (the global vehicle singleton) came back with "unknown type" from that translation unit. Kept as five small failed runs (`sitl-evidence/guided-distance-stall-run1`-`run5`).

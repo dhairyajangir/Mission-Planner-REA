@@ -1,5 +1,5 @@
 arm: armed (ack result 0)
 takeoff ack 0
 streamed vx=2.0 m/s north for 10 s; max measured vx 2.01 m/s
-sent zero velocity to stop
-10 s after stopping: vx -0.02 m/s (no further velocity messages sent)
+sending nothing further at all (no explicit stop) - watching for the documented 3 s command-timeout to zero the velocity on its own
+10 s after the last velocity message (none sent since): vx -0.01 m/s
