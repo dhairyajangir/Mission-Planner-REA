@@ -1,0 +1,35 @@
+set {'CHUTE_ENABLED': 1.0, 'CHUTE_TYPE': 10.0, 'SERVO9_FUNCTION': 27.0, 'CHUTE_CRT_SINK': 10.0, 'CHUTE_ALT_MIN': 0.0}; rejected []; restarting under the new setting
+after restart: CHUTE_ENABLED=1.0 CHUTE_TYPE=10.0 CHUTE_CRT_SINK=10.0 SERVO9_FUNCTION=27.0
+SERVOx_FUNCTION: {1: 33.0, 2: 34.0, 3: 35.0, 4: 36.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0}; k_motor1 (33) on channel(s): [1]
+arm: armed (ack result 0)
+takeoff to 30 m ack 0
+SIM_ENGINE_FAIL -> 1 (motor channel [1] killed) (rejected [])
+t=  1.0 armed=True
+t=  1.2 vehicle: Parachute: Released
+t=  1.2 vehicle: Disarming motors
+t=  2.0 armed=False
+t=  2.4 vehicle: PreArm: Chute is released
+t=  3.0 armed=False
+t=  3.0 vehicle: SIM Hit ground at 17.05561 m/s
+t=  4.0 armed=False
+t=  5.0 armed=False
+t=  6.0 armed=False
+t=  7.0 armed=False
+t=  8.0 armed=False
+t=  9.0 armed=False
+t= 10.0 armed=False
+t= 11.0 armed=False
+t= 12.0 armed=False
+t= 13.0 armed=False
+t= 14.0 armed=False
+t= 15.0 armed=False
+t= 16.0 armed=False
+t= 17.0 armed=False
+t= 18.0 armed=False
+t= 19.0 armed=False
+t= 20.0 armed=False
+t= 21.0 armed=False
+t= 22.0 armed=False
+t= 23.0 armed=False
+t= 24.0 armed=False
+t= 25.0 armed=False
