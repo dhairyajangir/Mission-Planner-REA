@@ -38,8 +38,12 @@ SCENARIOS = {
     # quadplane.parm never sets BATT_MONITOR (plane.parm sets it to 4); the compiled default is Type::NONE (AP_BattMonitor_Params.cpp), so nothing reads SIM_BATT_VOLTAGE at all.
     # This repeats battery-low-vtol with BATT_MONITOR set, to confirm that is the actual cause.
     'battery-low-vtol-monitor-set': ('vtol', {'BATT_MONITOR': 4, 'BATT_FS_LOW_ACT': 1, 'BATT_LOW_VOLT': 11.0, 'BATT_LOW_TIMER': 1}, {'SIM_BATT_VOLTAGE': 10.5}, 'QLAND'),
-    'gps-loss-vtol': ('vtol', {'FS_EKF_ACTION': 1}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
-    'gps-loss-cruise': ('cruise', {'FS_EKF_ACTION': 1}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
+    # the original version of these two set FS_EKF_ACTION, which does not exist on Plane (rejected every time, see quadplane-failsafes-run1-gps-loss-wrong-param/) -
+    # Plane's own EKF failsafe (ArduPlane/ekf_check.cpp) is gated by FS_EKF_THRESH (default 0.8, already on, no param needed) and is architecturally disabled unless
+    # quadplane.in_vtol_posvel_mode() - so gps-loss-cruise genuinely has no action by design, but gps-loss-vtol should switch to QLAND (in_vtol_auto) and was never
+    # actually armed for that outcome by the original run.
+    'gps-loss-vtol': ('vtol', {}, {'SIM_GPS1_ENABLE': 0}, 'QLAND'),
+    'gps-loss-cruise': ('cruise', {}, {'SIM_GPS1_ENABLE': 0}, 'observe'),
     'gcs-link-loss-transition': ('transition', {'FS_GCS_ENABL': 1, 'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, None, 'RTL'),
     'rc-loss-landing': ('landing', {'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, {'SIM_RC_FAIL': 1}, 'RTL'),
     # fault injection, not tried anywhere else: a VTOL lift motor killed outright (SIM_ENGINE_MUL defaults to 0, full loss) while still a multicopter, the same

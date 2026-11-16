@@ -1,29 +1,34 @@
-FAIL parameters set {'FS_EKF_ACTION': 1} (rejected ['FS_EKF_ACTION'])
+OK   parameters set {} (rejected [])
 upload ack 0
 OK   armed   [armed (ack result 0)]
 OK   AUTO   [AUTO active]
 t=  0.0 vehicle: Mission: 1 VTOLTakeoff
 t=  1.0 mode AUTO
 t=  6.0 fault injected {'SIM_GPS1_ENABLE': 0} (rejected [])
-t= 13.1 vehicle: AHRS: DCM active
-t= 13.5 vehicle: Mission: 2 WP
-t= 13.5 vehicle: Transition started airspeed 1.2
-t= 17.1 vehicle: Transition airspeed reached 18.5
+t= 13.0 vehicle: AHRS: DCM active
+t= 13.6 vehicle: Mission: 2 WP
+t= 13.6 vehicle: Transition started airspeed 0.9
+t= 17.2 vehicle: Transition airspeed reached 18.6
 t= 21.0 vehicle: EKF3 IMU0 stopped aiding
 t= 21.0 vehicle: EKF3 IMU1 stopped aiding
-t= 21.5 vehicle: Reached waypoint #2 dist 92m
-t= 21.5 vehicle: Mission: 3 WP
-t= 22.1 vehicle: Transition done
-t= 29.8 vehicle: Reached waypoint #3 dist 79m
-t= 29.8 vehicle: Mission: 4 VTOLLand
-t= 29.8 vehicle: VTOL approach d=303.3
-t= 39.0 vehicle: VTOL airbrake v=22.3 d=168 sd=169 h=58.4
-t= 39.2 vehicle: EKF3 lane switch 1
-t= 39.2 vehicle: EKF3 primary changed:1
-t= 43.5 vehicle: VTOL position1 v=18.9 d=75.8 h=60.1 dc=17.4
-t= 49.1 vehicle: VTOL Overshoot d=6.0 cs=2.2 yerr=75.7
-t= 50.2 vehicle: VTOL position2 started v=9.0 d=9.9 h=61.3
-t= 70.7 vehicle: SIM Hit ground at 2.715240 m/s
+t= 21.7 vehicle: Reached waypoint #2 dist 89m
+t= 21.7 vehicle: Mission: 3 WP
+t= 22.2 vehicle: Transition done
+t= 30.2 vehicle: Reached waypoint #3 dist 74m
+t= 30.2 vehicle: Mission: 4 VTOLLand
+t= 30.2 vehicle: VTOL approach d=306.3
+t= 39.4 vehicle: VTOL airbrake v=22.5 d=170 sd=171 h=58.3
+t= 39.5 vehicle: EKF3 lane switch 1
+t= 39.5 vehicle: EKF3 primary changed:1
+t= 43.9 vehicle: VTOL position1 v=18.9 d=77.5 h=60.1 dc=17.6
+t= 49.3 vehicle: VTOL Overshoot d=6.4 cs=2.8 yerr=74.5
+t= 76.9 vehicle: SIM Hit ground at 8.716742 m/s
+t= 78.5 vehicle: SIM Hit ground at 2.240146 m/s
+t= 80.8 vehicle: SIM Hit ground at 2.380023 m/s
+t= 83.0 vehicle: SIM Hit ground at 2.003789 m/s
+t= 85.7 vehicle: SIM Hit ground at 2.630909 m/s
+t= 88.1 vehicle: SIM Hit ground at 2.418366 m/s
+t= 90.3 vehicle: SIM Hit ground at 2.077141 m/s
 OK   no simulator ground contact before the fault was injected
-OK   mode recorded after the fault (no configured action for this fault)   [AUTO]
-RESULT 1 checks failed: parameters set {'FS_EKF_ACTION': 1} (rejected ['FS_EKF_ACTION'])
+FAIL ended in or passed through QLAND   [AUTO]
+RESULT 1 checks failed: ended in or passed through QLAND
