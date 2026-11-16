@@ -700,3 +700,15 @@ With `GUIDED` confirmed active before arming, the fifth attempt worked cleanly: 
 This confirms `FOLLOW` mode genuinely commands the vehicle toward a live, moving MAVLink target - not just an isolated PID calculation - but the vehicle settled into tracking the leader's *velocity* without closing the position gap that had opened during the climb/transition phase; the roughly 53m steady-state lag was not explained further (plausibly `FOLL_ACCEL_NE`/`FOLL_JERK_NE`'s default limits needing longer than a 60s window to close a gap that size).
 
 Limits: one run, Copter only, simulator only; a synthetic single-sysid leader over the same link, not a second real SITL vehicle; the steady-state lag's cause (controller tuning vs. some other limit) was not investigated; `FOLL_OFS_TYPE`, non-zero offsets and `FOLL_YAW_BEHAVE` were not tried.
+
+## Why the tailsitter reboot is needed, closed by source reading alone
+
+The earlier `copter-tailsitter-reboot` finding confirmed the quadplane-copter_tailsitter frame needs an extra restart to fly ("tailsitter needs extra re-boot to pick up the rotated AHRS view", ArduPilot's own autotest comment) but explicitly left *why* unexamined. Source reading alone closes it, no new SITL run needed:
+
+`Q_TAILSIT_ENABLE` (`Tailsitter::enable`, `ArduPlane/tailsitter.cpp`) is an `AP_PARAM_FLAG_ENABLE` parameter, the same category as every other enable-flag requiring a reboot elsewhere in this project. `QuadPlane::setup()` (`ArduPlane/quadplane.cpp`) builds the rotated attitude reference frame the VTOL controller uses for a tailsitter exactly once per boot:
+
+```cpp
+ahrs_view = ahrs.create_view((tailsitter.enable > 0) ? ROTATION_PITCH_90 : ROTATION_NONE, ahrs_trim_pitch);
+```
+
+`setup()` runs during the vehicle's boot sequence - well before any GCS client can connect and send a `PARAM_SET`. So on a freshly-wiped first boot, `Q_TAILSIT_ENABLE` is still whatever the `default_params` file set it to (0, unless the model's own `.parm` file pre-configures it) at the exact moment `ahrs_view` is constructed. Setting it live afterward only updates the persisted value in storage - the already-built, wrongly-oriented (`ROTATION_NONE`) `ahrs_view` stays in place for the rest of that boot, regardless. Only the *second* boot (restarted without wiping, so the now-persisted `Q_TAILSIT_ENABLE`=1 loads from storage before `setup()` runs this time) constructs `ahrs_view` with the correct `ROTATION_PITCH_90` - matching exactly why ArduPilot's own `FlyEachFrame` autotest, and this project's earlier confirmation, both needed that extra non-wiping restart to fly the frame at all.
