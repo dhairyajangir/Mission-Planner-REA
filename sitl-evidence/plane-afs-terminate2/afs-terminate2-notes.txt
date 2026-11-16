@@ -1,0 +1,86 @@
+set {'AFS_ENABLE': 1.0, 'AFS_TERM_ACTION': 42.0}; rejected []; restarting under the new setting
+after restart: AFS_ENABLE=1.0 AFS_TERM_ACTION=42.0
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+(climb) vehicle: Mission: 1 Takeoff
+(climb) vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+(climb) vehicle: AFS State: AFS_AUTO
+(climb) vehicle: AFS State: DATA_LINK_LOSS
+(climb) vehicle: Triggered AUTO. GPS speed = 0.0
+(climb) vehicle: Autoland direction= 359
+(climb) vehicle: Holding course 35997 at 5.4m/s (0.0)
+(climb) vehicle: Takeoff level-off starting at 20m
+reached cruise altitude: True, after 9 s
+SERVO_OUTPUT_RAW before termination: servo1(aileron)=1500 servo2(elevator)=1460 servo3(throttle)=2000 servo4(rudder)=1500
+DO_FLIGHTTERMINATION param1=1 ack=0
+t=  0.0 vehicle: Terminating due to GCS request
+t=  0.0 vehicle: Throttle disarmed
+t=  0.2 SERVO_OUTPUT_RAW: servo1(aileron)=1900 servo2(elevator)=1900 servo3(throttle)=1000 servo4(rudder)=1900
+t=  0.3 vehicle: Takeoff complete at 60.28m
+t=  0.3 vehicle: Mission: 2 WP
+t=  1.3 vehicle: PreArm: AHRS: DCM Roll/Pitch inconsistent 11 deg. 
+t=  1.3 vehicle: Wait or reboo
+t=  1.6 disarmed
+t=  2.6 disarmed
+t=  3.6 disarmed
+t=  4.5 vehicle: EKF2 IMU0 is using GPS
+t=  4.5 vehicle: EKF2 IMU1 is using GPS
+t=  4.6 disarmed
+t=  5.6 disarmed
+t=  6.6 disarmed
+t=  7.2 vehicle: SIM Hit ground at 16.54947 m/s
+t=  7.6 disarmed
+t=  8.6 disarmed
+t=  9.6 disarmed
+t= 10.6 disarmed
+t= 11.3 vehicle: PreArm: Gyros inconsistent
+t= 11.6 disarmed
+t= 12.6 disarmed
+t= 13.6 disarmed
+t= 14.6 disarmed
+t= 15.6 disarmed
+t= 16.6 disarmed
+t= 17.6 disarmed
+t= 18.6 disarmed
+t= 19.6 disarmed
+t= 20.6 disarmed
+t= 21.6 disarmed
+t= 22.6 disarmed
+t= 23.6 disarmed
+t= 24.6 disarmed
+t= 25.6 disarmed
+t= 26.6 disarmed
+t= 27.6 disarmed
+t= 28.6 disarmed
+t= 29.6 disarmed
+t= 30.6 disarmed
+t= 31.6 disarmed
+t= 32.6 disarmed
+t= 33.6 disarmed
+t= 34.6 disarmed
+t= 35.6 disarmed
+t= 36.6 disarmed
+t= 37.6 disarmed
+t= 38.6 disarmed
+t= 39.6 disarmed
+t= 40.6 disarmed
+t= 41.6 disarmed
+t= 42.6 disarmed
+t= 43.6 disarmed
+t= 44.6 disarmed
+t= 45.6 disarmed
+t= 46.6 disarmed
+t= 47.6 disarmed
+t= 48.6 disarmed
+t= 49.6 disarmed
+t= 50.6 disarmed
+t= 51.6 disarmed
+t= 52.6 disarmed
+t= 53.6 disarmed
+t= 54.6 disarmed
+t= 55.6 disarmed
+t= 56.6 disarmed
+t= 57.6 disarmed
+t= 58.6 disarmed
+t= 59.6 disarmed
