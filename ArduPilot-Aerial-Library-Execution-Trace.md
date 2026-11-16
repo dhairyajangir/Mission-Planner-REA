@@ -160,6 +160,13 @@ Three more hypotheses for why GUIDED's position target stopped advancing, checke
 3. The existing `sitl-terrain-failsafe-midflight.py` log shows no GCS-failsafe text and only one mode line for the whole 600 s run (`mode GUIDED`, never changing) - ruling out a GCS-link-loss failsafe, worth checking specifically since that script never threads periodic heartbeats the way `run_quadplane_failsafes.py` does.
 
 Leading remaining hypothesis, not yet confirmed with gdb: a clamp or S-curve distance/speed limit inside `AC_PosControl`'s own horizontal (NE) controller. Not pursued further here.
+## QuadPlane main-motor failure during cruise: no crash, but a struggling landing approach
+
+A third data point, as an eighth `run_quadplane_failsafes.py` scenario (`motor-failure-cruise`): the main forward/cruise motor (`SERVO3`, `k_throttle`=70, bit 2, value 4) killed during level cruise flight rather than a VTOL lift motor, output in `sitl-evidence/quadplane-failsafes/quadplane-motor-failure-cruise*`.
+
+Unlike losing a VTOL lift motor (which crashed the aircraft in 2.5 s, see above), losing the cruise motor caused no crash at all: the aircraft still reached the final waypoint 1.9 s after the fault, still gliding on its wings with airspeed and lift intact, and entered the mission's `VTOLLand` item normally. The landing approach itself then struggled - `"VTOL Overshoot"` at t=35.4 s, 4.4 s after the fault, with a 66.4 degree yaw error - most likely because managing approach speed and energy during a VTOL landing still relies on some forward thrust that this aircraft no longer had. No ground-contact text appeared and the mode stayed `AUTO`, armed, for the rest of the 90 s watch, which ended before touchdown, so whether it recovered from the overshoot or eventually crashed landing was not observed.
+
+Limits: one run, simulator only, the watch window ended before the outcome of the landing attempt was settled.
 ## QuadPlane VTOL motor failure: no observable effect, unlike the pure Copter case
 
 A direct comparison to the pure-Copter motor-failure test above: the identical `SIM_ENGINE_FAIL=1` fault (one VTOL lift motor killed outright, `SIM_ENGINE_MUL` defaults to 0) added as a new `motor-failure-vtol` scenario to `run_quadplane_failsafes.py` (output `sitl-evidence/quadplane-failsafes/quadplane-motor-failure-vtol*`), injected 6 s into the VTOL takeoff of the same mission the other QuadPlane failsafe scenarios use (VTOL takeoff, two waypoints, VTOL landing).

@@ -1,7 +1,7 @@
 """QuadPlane failsafes, not covered by run_plane.py's failsafe scenarios (which fly a plain Plane). Disposable ArduPlane SITL, model `quadplane`. Simulator only.
 
     python3 run_quadplane_failsafes.py <ardupilot tree> <out dir> [scenario ...]
-    scenarios: battery-low-vtol, battery-low-cruise, gps-loss-vtol, gps-loss-cruise, gcs-link-loss-transition, rc-loss-landing, motor-failure-vtol   (default: all)
+    scenarios: battery-low-vtol, battery-low-cruise, gps-loss-vtol, gps-loss-cruise, gcs-link-loss-transition, rc-loss-landing, motor-failure-vtol, motor-failure-cruise   (default: all)
 
 Mission: VTOL takeoff to 30 m, a waypoint 250 m north at 60 m (the forward-flight transition happens on the way there), a second waypoint 250 m east, a VTOL landing at home
 (the same mission sitl-plane-gaps.py's quadplane() flies, which is known to complete: transition, two waypoints, VTOL approach and landing).
@@ -49,6 +49,9 @@ SCENARIOS = {
     # from a live quadplane boot (SERVO5..8 = k_motor1..4 = 33..36, the real VTOL lift motors). That run is kept (quadplane-failsafes-run1-motor-failure-vtol-wrong-channel-aileron).
     # 16 = bit 4 = SERVO5 = k_motor1, an actual VTOL lift motor.
     'motor-failure-vtol': ('vtol', {}, {'SIM_ENGINE_FAIL': 16}, 'observe'),
+    # the main forward/cruise motor instead (SERVO3 = k_throttle = 70, bit 2 = value 4), failed during level forward flight rather than VTOL: QuadPlane still
+    # has wings and control surfaces with an engine out, unlike a VTOL lift motor loss, so this is a genuinely different failure mode.
+    'motor-failure-cruise': ('cruise', {}, {'SIM_ENGINE_FAIL': 4}, 'observe'),
 }
 
 
