@@ -1,0 +1,7 @@
+arm: armed (ack result 0)
+leg 1 (60m north) reached=True at (56.088905334472656, 0.04968393221497536, -19.98632049560547)
+leg 2 (60m north, 60m east) reached=True at (60.138370513916016, 56.335018157958984, -19.990724563598633)
+SMART_RTL: SMART_RTL active
+t= 51.1 vehicle: SIM Hit ground at 0.504784 m/s
+t= 53.2 vehicle: Disarming motors
+t= 53.2 disarmed, stopping watch

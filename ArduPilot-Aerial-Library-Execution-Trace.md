@@ -804,3 +804,17 @@ Limits: one run, Copter only, disarmed, simulator only; only the PWM backend was
 All three commands were `ACK`ed, and the second `retract` exactly repeated the first (1100 both times) - the channel switches cleanly and repeatably between its two configured limits, confirming the backend genuinely drives two named physical states rather than something more continuous or stateful.
 
 Limits: one run, Copter only, disarmed, simulator only; the actual landing-gear deploy/retract timing, any auto-deploy-before-landing behaviour, and Plane's retractable-gear use were not tried.
+
+## SMART_RTL genuinely retraces an L-shaped path, leg by leg in reverse
+
+`AP_SmartRTL` had only ever been confirmed by ArduPilot's own autotest names matching - and one of its three matched autotests, `Copter:SMART_RTL_Repeat`, does not even pass there. This flew a clear L-shaped path in `GUIDED` (`SET_POSITION_TARGET_LOCAL_NED` position-only targets: 60m north, then 60m further east), then requested `SMART_RTL`, and recorded the entire return track (`research-tools/sitl-copter-smart-rtl.py`, output `sitl-evidence/copter-smart-rtl/`).
+
+The result is a textbook retrace, not a diagonal shortcut home:
+
+- For the first ~20s of the return, **north stayed pinned around 60-62m** while **east fell steadily from 56.8m to about 0m** - retracing the second (east) leg backward.
+- From there, **east stayed pinned near 0m** while **north fell steadily from 57.6m to 0m** - retracing the first (north) leg backward, arriving exactly at the (0,0) origin.
+- The aircraft then descended and landed softly (0.50 m/s), auto-disarming at the origin.
+
+The path genuinely traces the flown route leg by leg, in reverse order - not a straight line home, which a simpler RTL fallback would produce. This is the cleanest possible positive confirmation of the library's core purpose.
+
+Limits: one run, Copter only, simulator only; a simple two-leg L-path only, not a longer, curved, or buffer-overflow path; the specific `SMART_RTL_Repeat` scenario that does not pass in ArduPilot's own autotest suite was not investigated here.
