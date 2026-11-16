@@ -783,3 +783,20 @@ Limits: one run, Copter only, simulator only; the gripper was not pre-grabbed; o
 Both `DO_WINCH` commands were `ACK`ed. The channel starts at 0 (not a neutral 1500) - matching the `RELAXED` default - and after commanding a positive rate and waiting 3 seconds for the backend's own acceleration-limited ramp (`get_rate_limited_by_accel`), it had clearly moved to 1660, proportional to the commanded rate. Requesting `relax` dropped it straight back to 0, with no visible ramp this time - matching `AP_Winch_PWM::control_winch()`'s source exactly: the `RELAXED` branch calls `set_output_pwm(..., 0)` directly and returns *before* reaching the acceleration-rate-limiting code that the rate-control path goes through, so relaxing is instant while spinning up is gradual.
 
 Limits: one run, Copter only, disarmed, simulator only; only the PWM backend was tried, not `AP_Winch_Daiwa`; length/position control (`DO_WINCH` action=1) was not exercised, only rate control and relax.
+
+## AP_LandingGear: a clean, repeatable limit-switch move, confirmed functionally for the first time
+
+`AP_LandingGear` had only ever been confirmed by gdb reachability in the earlier aerial library sweep - never an actual deploy/retract command. `LGR_ENABLE` is an `AP_PARAM_FLAG_ENABLE` parameter (the usual two-stage reboot); `SERVO9_FUNCTION`=29 (`k_landing_gear_control`). Unlike the mount and winch servos tested elsewhere in this project, the landing gear backend drives its channel to a full `SRV_Channel::Limit::MAX` (deploy) or `MIN` (retract) - a limit-switch move, not a proportional one. This needed no flight at all: disarmed, on the ground.
+
+`research-tools/sitl-copter-landing-gear.py` (output `sitl-evidence/copter-landing-gear/`) sent `MAV_CMD_AIRFRAME_CONFIGURATION` (2520) via `COMMAND_INT` three times, reading back `SERVO_OUTPUT_RAW` channel 9 each time:
+
+| Command | servo9 |
+|---|---|
+| (before any command) | 0 |
+| retract | 1100 |
+| deploy | 1900 |
+| retract | 1100 |
+
+All three commands were `ACK`ed, and the second `retract` exactly repeated the first (1100 both times) - the channel switches cleanly and repeatably between its two configured limits, confirming the backend genuinely drives two named physical states rather than something more continuous or stateful.
+
+Limits: one run, Copter only, disarmed, simulator only; the actual landing-gear deploy/retract timing, any auto-deploy-before-landing behaviour, and Plane's retractable-gear use were not tried.

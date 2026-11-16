@@ -1,0 +1,28 @@
+{
+ "notes": [
+  "set {'LGR_ENABLE': 1.0, 'SERVO9_FUNCTION': 29.0}; rejected []; restarting under the new setting",
+  "after restart: LGR_ENABLE=1.0 SERVO9_FUNCTION=29.0",
+  "servo9(landing gear) before any command: 0",
+  "retract (param2=1) ack=0 -> servo9=1100",
+  "deploy (param2=0) ack=0 -> servo9=1900",
+  "retract (param2=1) ack=0 -> servo9=1100"
+ ],
+ "readings": [
+  {
+   "phase": "before",
+   "servo9": 0
+  },
+  {
+   "phase": "retract",
+   "servo9": 1100
+  },
+  {
+   "phase": "deploy",
+   "servo9": 1900
+  },
+  {
+   "phase": "retract",
+   "servo9": 1100
+  }
+ ]
+}
