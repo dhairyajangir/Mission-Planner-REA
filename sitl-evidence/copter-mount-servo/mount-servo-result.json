@@ -1,0 +1,30 @@
+{
+ "notes": [
+  "set {'MNT1_TYPE': 1.0, 'SERVO9_FUNCTION': 7.0, 'SERVO10_FUNCTION': 6.0}; rejected []; restarting under the new setting",
+  "after restart: MNT1_TYPE=1.0 SERVO9_FUNCTION=7.0 SERVO10_FUNCTION=6.0",
+  "servo9(tilt)/servo10(pan) before any mount command: (1500, 1500)",
+  "pitch=-45 yaw=90 ack=0 -> servo9(tilt)=1428 servo10(pan)=1700",
+  "pitch=20 yaw=-90 ack=0 -> servo9(tilt)=1899 servo10(pan)=1300",
+  "pitch=0 yaw=0 ack=0 -> servo9(tilt)=1754 servo10(pan)=1500"
+ ],
+ "readings": [
+  {
+   "pitch": -45.0,
+   "yaw": 90.0,
+   "servo9_tilt": 1428,
+   "servo10_pan": 1700
+  },
+  {
+   "pitch": 20.0,
+   "yaw": -90.0,
+   "servo9_tilt": 1899,
+   "servo10_pan": 1300
+  },
+  {
+   "pitch": 0.0,
+   "yaw": 0.0,
+   "servo9_tilt": 1754,
+   "servo10_pan": 1500
+  }
+ ]
+}

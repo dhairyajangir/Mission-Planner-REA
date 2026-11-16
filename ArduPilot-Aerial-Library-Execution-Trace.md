@@ -736,3 +736,22 @@ The caveat worth being honest about: SITL does not appear to simulate any actual
 Limits: one run, Copter only, simulator only; only the sink-rate trigger was exercised, not the 30-degree attitude-error trigger; whether SITL has any parachute physics model at all, under any configuration, was not confirmed.
 
 **Resolved, source-only, no new SITL run:** SITL does have a dedicated parachute simulator, `SITL::Parachute` (`libraries/SITL/SIM_Parachute.cpp`, param prefix `SIM_PARA_` - not `SIM_PARACHUTE_`), but it was never enabled in the run above (`SIM_PARA_ENABLE` defaults to 0), and it would not have changed anything if it had been: it only watches a configured PWM pin (`SIM_PARA_PIN`) and, once the signal crosses threshold, prints `"BANG! Parachute deployed"` and records a timestamp. Its own header declares `Vector3f drag() const`, but that method is never *defined* anywhere in the `.cpp` file, and the only caller of the `Parachute` object (`SIM_Aircraft.cpp`) only ever calls `update()` - `drag()` is never invoked anywhere in the codebase. The simulated parachute has zero physics effect on the aircraft in this snapshot, under any configuration: it is a logging-only stub. The 17 m/s impact in the run above was not a configuration mistake to go back and fix - it is exactly what this build's SITL parachute model does.
+
+## AP_Mount's Servo backend: proportional and reversible, but the tilt axis has an unexplained trim offset
+
+`AP_Mount` (camera gimbal control) had only ever been confirmed by ArduPilot's own autotest names matching, never directly. `MNT1_TYPE`=1 selects the Servo backend - plain `SERVO_FUNCTION` outputs, no simulated gimbal protocol needed - and is an `AP_PARAM_FLAG_ENABLE` parameter, the usual two-stage reboot. `SERVO9_FUNCTION`=7 (`k_mount_tilt`) and `SERVO10_FUNCTION`=6 (`k_mount_pan`) assign two unused channels. This needed no flight at all: disarmed, on the ground.
+
+`research-tools/sitl-copter-mount-servo.py` (output `sitl-evidence/copter-mount-servo/`) sent `MAV_CMD_DO_MOUNT_CONTROL` (205) via `COMMAND_INT` with `MAV_MOUNT_MODE_MAVLINK_TARGETING` (`packet.z`=2, `param1`=pitch degrees, `param2`=roll degrees, `param3`=yaw degrees per `AP_Mount_Backend::handle_command_do_mount_control`), reading back `SERVO_OUTPUT_RAW` for channels 9 and 10 each time:
+
+| Commanded pitch/yaw | tilt (servo9) | pan (servo10) |
+|---|---|---|
+| (none yet) | 1500 | 1500 |
+| -45 / 90 | 1428 | 1700 |
+| 20 / -90 | 1899 | 1300 |
+| 0 / 0 | 1754 | 1500 |
+
+Every command was accepted (`COMMAND_ACK` result 0). The pan (yaw) axis is a clean, symmetric mapping around 1500us (+-200us for +-90 degrees), and returns exactly to 1500 when commanded back to 0. The tilt (pitch) axis is also perfectly linear - the pitch=0 reading (1754us) matches exactly what a straight line through the pitch=-45/1428us and pitch=20/1899us points predicts (slope ~7.25us/degree, extrapolated: 1428 + 45*7.25 = 1754.25) - but its neutral PWM at startup (1500us) does not correspond to a 0-degree pitch command at all; there is a built-in offset on this axis that the pan axis simply does not have.
+
+This confirms the Servo backend genuinely converts commanded angles into proportional, reversible PWM output, not a fixed or binary response - a real, working mechanism. The tilt-axis offset was not investigated further (most likely `MNT1_PITCH_MIN`/`MNT1_PITCH_MAX` or the `SERVO9` trim/min/max configuration, not necessarily a code bug).
+
+Limits: one run, Copter only, disarmed, simulator only; only the Servo backend was tried, not any of `AP_Mount`'s other simulated/real gimbal protocol backends; no simulated camera view existed to confirm the mount was physically pointed where commanded, only the servo PWM values.
