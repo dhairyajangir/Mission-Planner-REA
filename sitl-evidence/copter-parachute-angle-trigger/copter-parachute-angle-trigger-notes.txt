@@ -1,0 +1,33 @@
+set {'CHUTE_ENABLED': 1.0, 'CHUTE_TYPE': 10.0, 'SERVO9_FUNCTION': 27.0, 'CHUTE_CRT_SINK': 0.0, 'CHUTE_ALT_MIN': 0.0} (CHUTE_CRT_SINK left disabled - isolating the angle-error path); rejected []; restarting
+after restart: CHUTE_ENABLED=1.0 CHUTE_TYPE=10.0 CHUTE_CRT_SINK=0.0 SERVO9_FUNCTION=27.0
+SERVOx_FUNCTION: {1: 33.0, 2: 34.0, 3: 35.0, 4: 36.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0}; k_motor1 (33) on channel(s): [1]
+arm: armed (ack result 0)
+takeoff to 30 m ack 0
+SIM_ENGINE_FAIL -> 1 (motor channel [1] killed) (rejected [])
+t=  1.0 armed=True
+t=  2.0 armed=True
+t=  3.0 armed=True
+t=  3.2 vehicle: SIM Hit ground at 14.02785 m/s
+t=  4.0 armed=True
+t=  5.0 armed=True
+t=  6.0 armed=True
+t=  7.0 armed=True
+t=  8.0 armed=True
+t=  9.0 armed=True
+t= 10.0 armed=True
+t= 11.0 armed=True
+t= 12.0 armed=True
+t= 13.0 armed=True
+t= 14.0 armed=True
+t= 15.0 armed=True
+t= 15.8 vehicle: Potential Thrust Loss (1)
+t= 16.0 armed=True
+t= 17.0 armed=True
+t= 18.0 armed=True
+t= 19.0 armed=True
+t= 20.0 armed=True
+t= 21.0 armed=True
+t= 22.0 armed=True
+t= 23.0 armed=True
+t= 24.0 armed=True
+t= 25.0 armed=True
