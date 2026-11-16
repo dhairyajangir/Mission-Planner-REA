@@ -44,7 +44,11 @@ SCENARIOS = {
     'rc-loss-landing': ('landing', {'FS_LONG_ACTN': 1, 'FS_LONG_TIMEOUT': 5}, {'SIM_RC_FAIL': 1}, 'RTL'),
     # fault injection, not tried anywhere else: a VTOL lift motor killed outright (SIM_ENGINE_MUL defaults to 0, full loss) while still a multicopter, the same
     # fault sitl-copter-motor-failure.py used on a plain Copter. 'observe' because there is no single documented correct outcome to check against here.
-    'motor-failure-vtol': ('vtol', {}, {'SIM_ENGINE_FAIL': 1}, 'observe'),
+    # SIM_ENGINE_FAIL is a bitmask of SERVO *output channel* numbers (AP_HAL_SITL/SITL_State.cpp), not a frame-relative motor index. A first run used bit 0 (value 1,
+    # SERVO1) without checking what SERVO1_FUNCTION actually is on this frame: it is k_aileron (4), not a VTOL motor at all - confirmed by reading SERVO1..8_FUNCTION
+    # from a live quadplane boot (SERVO5..8 = k_motor1..4 = 33..36, the real VTOL lift motors). That run is kept (quadplane-failsafes-run1-motor-failure-vtol-wrong-channel-aileron).
+    # 16 = bit 4 = SERVO5 = k_motor1, an actual VTOL lift motor.
+    'motor-failure-vtol': ('vtol', {}, {'SIM_ENGINE_FAIL': 16}, 'observe'),
 }
 
 
