@@ -16,6 +16,10 @@ t= 32.9 vehicle: Mission: 4 VTOLLand
 t= 32.9 vehicle: VTOL approach d=312.0
 t= 35.4 vehicle: VTOL pos1 low speed as=17.9 at=18.0
 t= 35.4 vehicle: VTOL Overshoot d=322.3 cs=7.2 yerr=66.4
+t= 97.9 vehicle: VTOL position2 started v=3.4 d=10.0 h=49.4
+t=101.3 vehicle: Land descend started
+t=133.1 vehicle: Land final started
+t=144.4 vehicle: SIM Hit ground at 0.504566 m/s
 OK   no simulator ground contact before the fault was injected
 OK   mode recorded after the fault (no configured action for this fault)   [AUTO]
 RESULT passed

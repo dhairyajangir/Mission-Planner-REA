@@ -144,7 +144,7 @@ def scenario(name, phase, pre, fault, expect):
         run.check('AUTO', auto.ok, auto.detail)
         begin, last_mode, injected, crashed_before = time.time(), None, False, False
         saw_vtol_approach = False
-        while time.time() - begin < 90.0:
+        while time.time() - begin < 150.0:  # long enough for motor-failure-cruise's VTOL landing attempt to actually settle, not just start
             msg = run.conn.recv_match(type=['HEARTBEAT', 'STATUSTEXT'], blocking=True, timeout=1)
             t = time.time() - begin
             if msg is not None and msg.get_type() == 'STATUSTEXT':
