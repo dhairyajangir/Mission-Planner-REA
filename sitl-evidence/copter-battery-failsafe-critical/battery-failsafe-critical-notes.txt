@@ -1,0 +1,57 @@
+SIM_BATT_VOLTAGE default (resting) = 12.600000381469727
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.46109390258789, 0.04608479514718056, -19.985416412353516)
+BATT_LOW_VOLT -> 0 (disabled), BATT_CRT_VOLT -> 12.1, BATT_FS_CRT_ACT -> 1 (Land) (rejected [])
+t=  0.0 SIM_BATT_VOLTAGE -> 9.6 (rejected [])
+t=  0.3 armed=True custom_mode=4
+t=  1.3 armed=True custom_mode=4
+t=  2.3 armed=True custom_mode=4
+t=  3.3 armed=True custom_mode=4
+t=  4.3 armed=True custom_mode=4
+t=  5.3 armed=True custom_mode=4
+t=  6.3 armed=True custom_mode=4
+t=  7.3 armed=True custom_mode=4
+t=  8.3 armed=True custom_mode=4
+t=  9.3 armed=True custom_mode=4
+t= 10.2 armed=True custom_mode=9
+t= 10.2 vehicle: Battery 1 is critical 9.22V used 371 mAh
+t= 10.2 vehicle: Battery Failsafe
+t= 10.3 armed=True custom_mode=9
+t= 11.3 armed=True custom_mode=9
+t= 12.3 armed=True custom_mode=9
+t= 13.3 armed=True custom_mode=9
+t= 14.3 armed=True custom_mode=9
+t= 15.3 armed=True custom_mode=9
+t= 16.3 armed=True custom_mode=9
+t= 17.3 armed=True custom_mode=9
+t= 18.3 armed=True custom_mode=9
+t= 19.3 armed=True custom_mode=9
+t= 20.3 armed=True custom_mode=9
+t= 21.3 armed=True custom_mode=9
+t= 22.3 armed=True custom_mode=9
+t= 23.3 armed=True custom_mode=9
+t= 24.3 armed=True custom_mode=9
+t= 25.3 armed=True custom_mode=9
+t= 26.3 armed=True custom_mode=9
+t= 27.3 armed=True custom_mode=9
+t= 28.3 armed=True custom_mode=9
+t= 29.3 armed=True custom_mode=9
+t= 30.3 armed=True custom_mode=9
+t= 31.3 armed=True custom_mode=9
+t= 32.3 armed=True custom_mode=9
+t= 33.3 armed=True custom_mode=9
+t= 34.3 armed=True custom_mode=9
+t= 35.3 armed=True custom_mode=9
+t= 36.3 armed=True custom_mode=9
+t= 37.3 armed=True custom_mode=9
+t= 38.3 armed=True custom_mode=9
+t= 39.3 armed=True custom_mode=9
+t= 40.3 armed=True custom_mode=9
+t= 41.3 armed=True custom_mode=9
+t= 42.3 armed=True custom_mode=9
+t= 42.6 vehicle: SIM Hit ground at 0.499980 m/s
+t= 43.3 armed=True custom_mode=9
+t= 44.3 armed=True custom_mode=9
+t= 44.9 vehicle: Disarming motors
+t= 45.3 armed=False custom_mode=9
+t= 45.3 disarmed, stopping watch
