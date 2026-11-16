@@ -1,0 +1,331 @@
+{
+  "types": [
+    {
+      "token": "0x020001fe",
+      "full_name": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "enclosing_token": null
+    }
+  ],
+  "methods": [
+    {
+      "token": "0x06000e14",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": ".ctor",
+      "return_type": "void",
+      "parameters_json": "[]",
+      "il_sha256": "caadfac95e8e871effef0123d2c2d44cb7c8d699ccbca33fb12bb0c78f62c4bc",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e15",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "Activate",
+      "return_type": "void",
+      "parameters_json": "[]",
+      "il_sha256": "13639e43e5f1f1b5c3a860303b6d0c73b5f8ad272f30417ffb2a252f1b5747b8",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e16",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "Timer_Tick",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "597da4906ec6d04a11f6bac7df6c9d22d3a27ad8128d98490c97194617175188",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e17",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_slcandirect_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "2855e48c2dad3b138687d5b038089f478af173216c465cd494b04fb8a48b72bb",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e18",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_slcanmavlink_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "222960e2beb979e7aef716b41c1de1111304797a3947a8118d5a33278994a003",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e19",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "StartMavlinkCAN",
+      "return_type": "void",
+      "parameters_json": "[\"u1\"]",
+      "il_sha256": "2333a91fc701be250356451e9a390631de23db4099aeb749d06130d2f14cd8b0",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1a",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "startslcan",
+      "return_type": "void",
+      "parameters_json": "[\"u1\"]",
+      "il_sha256": "b1a4d5db83d9ada4c9b7c6b0b92c0bca4edb2a63f62a497f3b1846f321027d2a",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1b",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "SetupSLCanPort",
+      "return_type": "void",
+      "parameters_json": "[\"class:229\"]",
+      "il_sha256": "855936eb0ef5f60d5a1557a25ef1e583f46b098468acb5251e39507351a4cd12",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1c",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "myDataGridView1_CellClick",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:4073\"]",
+      "il_sha256": "82d8efbda68de2d0ed69c214b7929a1be001cd9f74e771ae6c74fdcd597e6693",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1d",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "FirmwareUpdate",
+      "return_type": "void",
+      "parameters_json": "[\"u1\", \"bool\"]",
+      "il_sha256": "e55b31d50eab1b39aad7179f4ee82f458e37efbf4981d44dccbead3b190974b4",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1e",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "GetParameters",
+      "return_type": "void",
+      "parameters_json": "[\"u1\"]",
+      "il_sha256": "463f153e2b8473045daa48ba349aa3dcbdbfe42ff28b3b7b6b840eebdeb2b7d9",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e1f",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "Deactivate",
+      "return_type": "void",
+      "parameters_json": "[]",
+      "il_sha256": "267a7abf322a2979ea99e1c8363ca240dfb3fc857bcf799400ab8fb14900e997",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e20",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "Disconnect",
+      "return_type": "void",
+      "parameters_json": "[]",
+      "il_sha256": "78f09e05b8e8b5d02287befc341219a7c97bdeed9cb74f07d50a581d70cd42d1",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e21",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "myDataGridView1_RowsAdded",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:5057\"]",
+      "il_sha256": "bcfe559a6306c0a492648df9aed8568454e5478f012b914ab7fb396c78019dde",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e22",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "But_uavcaninspector_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "25235481164d145c99b6c8669de57eb8ab464929c1ae97d942feb75c1fc51504",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e23",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "myDataGridView1_RowEnter",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:4073\"]",
+      "il_sha256": "112c3c10d46a02bae9f5dd0d00e72400ff613b6d291dd7e94382282147f39a97",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e24",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_passthrough_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "37fbbb4cb5aec7044cc579379e9e512c474a7b10d524797963b81550ef90d09e",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e25",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_update_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "f1833f2252f948bf8690335b90cb29a6beead53037b4dc9a5347103e6b829de8",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e26",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_parameters_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "58d2e0476eeab542b4894f21580814e4b79b0ee8831b08866bb145bf5e8032a9",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e27",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_restart_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "ab0c47d5a1155f3839a624f3977976a390c55c4b0ea8d176e082efdfdd124af1",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e28",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_updatebeta_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "7b7bbeaeb29e0f318151f84affde1faa0b0f7434ee59380787edac771363de50",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e29",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_slcanmode2_2_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "a7d3fc6448dad14b430169bfcad06c6f09c6c290262f4352673a7d7ba7667bfe",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2a",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_filter_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "0bcd2dc514806c6e3202c09543fb4f3edb4b197c6ec371071cbbbd23a1abcf6f",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2b",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "menu_passthrough4_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "de06697d495df1c8537de5b2e3435727f1c9b395cfe5c29b6200b756aaee3bac",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2c",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_stats_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "eb4158d55ce04363542fda5c8af35ccf7a786993cfad1a7f26e9502524cb7a71",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2d",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_mcast1_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "2e24d0e5ff9ca83927d8cfe0ce9cabfa9731b33abff538fb2cf854cf40f42145",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2e",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_mcast2_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "05883ae99e69d715cd0d502f11da2a0ba8ba73aace73bc0f168aeeb7c785852f",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e2f",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "StartmcastCAN",
+      "return_type": "void",
+      "parameters_json": "[\"u1\", \"class:5497\"]",
+      "il_sha256": "f6fd1149d3808b0a5c6b03aa5b14db5aba23490fd4b46d1696c560b998321b70",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e30",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "but_connect_Click",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "c4e388a46f1b776bf143499912fe93ed534da1ae759b79c0d6703b7365871d39",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e31",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "cmb_interfacetype_SelectedIndexChanged",
+      "return_type": "void",
+      "parameters_json": "[\"object\", \"class:401\"]",
+      "il_sha256": "780cfd562bfc2c7fe4f8e8ff2cd1f3cc1eaf38510e4b84d4e350ef97afbe477b",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e32",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "Dispose",
+      "return_type": "void",
+      "parameters_json": "[\"bool\"]",
+      "il_sha256": "dbb0d1c366cf8d4ceb2393da32e415d004a41b3ea5b811b85e99c769176b91ba",
+      "body_status": "present"
+    },
+    {
+      "token": "0x06000e33",
+      "type_token": "0x020001fe",
+      "declaring_type": "MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN",
+      "name": "InitializeComponent",
+      "return_type": "void",
+      "parameters_json": "[]",
+      "il_sha256": "9fa2fe8a2855888355b07bc9dcaa58193218660b1ddfeb449851d28a65e72cd9",
+      "body_status": "present"
+    }
+  ]
+}

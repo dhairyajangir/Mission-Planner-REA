@@ -1,0 +1,4 @@
+2026-11-16T10:50:31.3803601Z ASSEMBLY MissionPlanner, Version=1.3.9384.38250, Culture=neutral, PublicKeyToken=null sha256=a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a mvid=b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0
+2026-11-16T10:50:37.0518134Z FAIL exception System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Object.GetType()
+   at PageDroneCANProbe.Main(String[] args)

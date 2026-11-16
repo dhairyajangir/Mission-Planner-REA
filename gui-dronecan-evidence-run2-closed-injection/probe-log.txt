@@ -1,0 +1,28 @@
+2026-11-16T10:52:12.2920967Z ASSEMBLY MissionPlanner, Version=1.3.9384.38250, Culture=neutral, PublicKeyToken=null sha256=a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a mvid=b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0
+2026-11-16T10:52:12.9176905Z SETUP installed closed in-memory CommsInjection; no physical or network transport
+2026-11-16T10:52:12.9196909Z PASS MAVLink stream closed before probe
+2026-11-16T10:52:13.3865659Z TYPE MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN token=0x020001FE
+2026-11-16T10:52:16.0520719Z CALL Activate token=0x06000E15
+2026-11-16T10:52:16.4549957Z PASS Activate starts 1000 ms timer
+2026-11-16T10:52:16.4600067Z PASS five interface choices
+2026-11-16T10:52:16.7816157Z SELECT SLCAN networkVisible=False interfaceEnabled=True connect=Connect
+2026-11-16T10:52:16.7826095Z PASS network selector visibility SLCAN
+2026-11-16T10:52:17.0952797Z SELECT MAVLinkCAN1 networkVisible=False interfaceEnabled=True connect=Connect
+2026-11-16T10:52:17.0962605Z PASS network selector visibility MAVLinkCAN1
+2026-11-16T10:52:17.4086163Z SELECT MAVLinkCAN2 networkVisible=False interfaceEnabled=True connect=Connect
+2026-11-16T10:52:17.4096030Z PASS network selector visibility MAVLinkCAN2
+2026-11-16T10:52:17.7827017Z SELECT MCastCan1 networkVisible=True interfaceEnabled=True connect=Connect
+2026-11-16T10:52:17.7832461Z PASS network selector visibility MCastCan1
+2026-11-16T10:52:18.0958921Z SELECT MCastCan2 networkVisible=True interfaceEnabled=True connect=Connect
+2026-11-16T10:52:18.0968894Z PASS network selector visibility MCastCan2
+2026-11-16T10:52:18.6186996Z CALL but_connect_Click token=0x06000E30
+2026-11-16T10:52:19.0305693Z MESSAGEBOX answer=Cancel caption=SLCAN text=You are not currently connected via mavlink. Please make sure the device is already in slcan mode or this is the slcan serialport.
+2026-11-16T10:52:19.3508527Z AFTER-CANCEL isConnected=True connect=Disconnect interfaceEnabled=False networkEnabled=False canNull=False
+2026-11-16T10:52:19.3518493Z PASS one disconnected SLCAN warning answered Cancel
+2026-11-16T10:52:19.3533514Z FAIL cancel leaves transport null
+2026-11-16T10:52:19.3543512Z PASS observed post-cancel UI remains Disconnect
+2026-11-16T10:52:19.4672490Z CALL but_connect_Click token=0x06000E30
+2026-11-16T10:52:19.8067206Z PASS second click restores disconnected state
+2026-11-16T10:52:19.8077131Z CALL Deactivate token=0x06000E1F
+2026-11-16T10:52:20.1341730Z PASS Deactivate stops timer and clears transport
+2026-11-16T10:52:20.2346052Z RESULT failures=1 messageBoxes=1

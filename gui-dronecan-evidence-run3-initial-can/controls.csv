@@ -1,0 +1,38 @@
+path,type,text,enabled,visible
+"/ConfigDroneCAN","MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN","",True,True
+"/ConfigDroneCAN/but_connect","MissionPlanner.Controls.MyButton","Connect",True,True
+"/ConfigDroneCAN/cmb_networkinterface","System.Windows.Forms.ComboBox","Intel(R) Wi-Fi 6 AX201 160MHz",True,False
+"/ConfigDroneCAN/cmb_interfacetype","System.Windows.Forms.ComboBox","SLCAN",True,True
+"/ConfigDroneCAN/but_stats","MissionPlanner.Controls.MyButton","Stats",True,True
+"/ConfigDroneCAN/but_filter","MissionPlanner.Controls.MyButton","Filter",True,True
+"/ConfigDroneCAN/chk_canonclose","System.Windows.Forms.CheckBox","Exit SLCAN on leave?",True,True
+"/ConfigDroneCAN/DGDebug","System.Windows.Forms.DataGridView","",True,True
+"/ConfigDroneCAN/DGDebug/","System.Windows.Forms.HScrollBar","",False,False
+"/ConfigDroneCAN/DGDebug/","System.Windows.Forms.VScrollBar","",False,False
+"/ConfigDroneCAN/chk_log","System.Windows.Forms.CheckBox","Log",True,True
+"/ConfigDroneCAN/tableLayoutPanel1","System.Windows.Forms.TableLayoutPanel","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox3","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox13","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox11","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox10","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox9","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox7","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox6","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox5","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox4","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox2","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/label2","System.Windows.Forms.Label","Node ID / Name",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/label3","System.Windows.Forms.Label","Mode / Health / Uptime",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/label4","System.Windows.Forms.Label","Vendor-specific code",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/label5","System.Windows.Forms.Label","Software version/CRC64",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/label7","System.Windows.Forms.Label","Hardware version/UID",True,True
+"/ConfigDroneCAN/tableLayoutPanel1/textBox1","System.Windows.Forms.TextBox","",True,True
+"/ConfigDroneCAN/but_uavcaninspector","MissionPlanner.Controls.MyButton","Inspector",True,True
+"/ConfigDroneCAN/label1","System.Windows.Forms.Label","After enabling SLCAN, you will no longer be able to connect via MAVLINK.
+You must leave this screen and wait 2 seconds before connecting again
+",True,True
+"/ConfigDroneCAN/label6","System.Windows.Forms.Label","DroneCAN/UAVCAN",True,True
+"/ConfigDroneCAN/groupBox5","System.Windows.Forms.GroupBox","",True,True
+"/ConfigDroneCAN/myDataGridView1","MissionPlanner.Controls.MyDataGridView","",True,True
+"/ConfigDroneCAN/myDataGridView1/","System.Windows.Forms.HScrollBar","",False,False
+"/ConfigDroneCAN/myDataGridView1/","System.Windows.Forms.VScrollBar","",False,False

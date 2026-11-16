@@ -2813,6 +2813,42 @@ for form in ('int', 'float'):
             not nan_summary['post_upload_readback_completed'] and nan_summary['probe_exit'] == 1 and
             'ERROR: Floating point exception - aborting' in (nan_dir/'sitl.log').read_text(errors='replace'))),
           'Saved simulator observations; failure cause and physical behavior unproven.')
+drone_dir = root / 'gui-dronecan-evidence-run3-initial-can'
+drone_manifest = json.loads((drone_dir / 'manifest.json').read_text())
+drone_provenance = json.loads((drone_dir / 'binary-provenance.json').read_text())
+drone_log = (drone_dir / 'probe-log.txt').read_text()
+check('DroneCAN disconnected capture integrity and retained attempts',
+      all(hashlib.sha256((root / name).read_bytes()).hexdigest() == digest for name, digest in drone_manifest.items()) and
+      (root / 'gui-dronecan-evidence-run1-null-stream/exit-code.txt').read_text().strip() == '1' and
+      (root / 'gui-dronecan-evidence-run2-closed-injection/exit-code.txt').read_text().strip() == '1' and
+      (drone_dir / 'exit-code.txt').read_text().strip() == '0' and
+      all((drone_dir / (name + '.png')).read_bytes().startswith(b'\x89PNG\r\n\x1a\n')
+          for name in ('activated', 'cancelled-slcan', 'deactivated')),
+      'Two failed harness attempts retained; PNGs are off-screen modified-copy renders.')
+with sqlite3.connect(f'file:{(root / "mission-planner-binary-evidence/rea-main-index.sqlite").as_posix()}?mode=ro', uri=True) as db:
+    drone_methods = db.execute('SELECT token,name,il_sha256 FROM methods WHERE declaring_type=?',
+                              ('MissionPlanner.GCSViews.ConfigurationView.ConfigDroneCAN',)).fetchall()
+drone_recorded = json.loads((drone_dir / 'rea-methods.json').read_text())
+check('DroneCAN REA and portable executable provenance',
+      sorted(drone_methods) == sorted((m['token'], m['name'], m['il_sha256']) for m in drone_recorded['methods']) and
+      all(hashlib.sha256((root / 'mission-planner-portable' / name).read_bytes()).hexdigest() == row['portable_sha256']
+          for name, row in drone_provenance.items()) and
+      all(drone_provenance[name]['isolated_sha256'] == drone_provenance[name]['portable_sha256']
+          for name in ('MissionPlanner.exe', 'MissionPlanner.Comms.dll', 'DroneCAN.dll')) and
+      drone_provenance['MissionPlanner.Utilities.dll']['isolated_sha256'] != drone_provenance['MissionPlanner.Utilities.dll']['portable_sha256'] and
+      all(('CALL ' + name + ' token=' + token) in drone_log for name, token in
+          [('Activate', '0x06000E15'), ('but_connect_Click', '0x06000E30'), ('Deactivate', '0x06000E1F')]),
+      'Original executable; redirected Utilities dependency, not unmodified GUI.')
+check('DroneCAN disconnected selection cancellation and teardown',
+      'RESULT failures=0 messageBoxes=1' in drone_log and ' FAIL ' not in drone_log and
+      drone_log.count(' PASS ') == 13 and
+      all(('SELECT ' + name + ' networkVisible=' + visible) in drone_log for name, visible in
+          [('SLCAN', 'False'), ('MAVLinkCAN1', 'False'), ('MAVLinkCAN2', 'False'), ('MCastCan1', 'True'), ('MCastCan2', 'True')]) and
+      'AFTER-CANCEL isConnected=True connect=Disconnect interfaceEnabled=False networkEnabled=False canNull=False' in drone_log and
+      'PASS cancel preserves initial CAN object and closed MAVLink stream' in drone_log and
+      'PASS second click restores disconnected state' in drone_log and
+      'PASS Deactivate stops timer and clears transport' in drone_log,
+      'Harness-observed Cancel state mismatch; no CAN forwarding, vehicle, network-monitor or hardware claim.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

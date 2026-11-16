@@ -1204,6 +1204,21 @@
       "name": "WPL NaN upload observation float",
       "passed": true,
       "detail": "Saved simulator observations; failure cause and physical behavior unproven."
+    },
+    {
+      "name": "DroneCAN disconnected capture integrity and retained attempts",
+      "passed": true,
+      "detail": "Two failed harness attempts retained; PNGs are off-screen modified-copy renders."
+    },
+    {
+      "name": "DroneCAN REA and portable executable provenance",
+      "passed": true,
+      "detail": "Original executable; redirected Utilities dependency, not unmodified GUI."
+    },
+    {
+      "name": "DroneCAN disconnected selection cancellation and teardown",
+      "passed": true,
+      "detail": "Harness-observed Cancel state mismatch; no CAN forwarding, vehicle, network-monitor or hardware claim."
     }
   ],
   "passed": true
