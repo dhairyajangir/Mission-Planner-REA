@@ -1,0 +1,61 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Breakpoint 1 at 0x3589a0
+Breakpoint 2 at 0x358c80
+Breakpoint 3 at 0x358ee0
+Breakpoint 4 at 0x272540
+Breakpoint 5 at 0x26ee00
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Setting SIM_SPEEDUP=1.000000
+Suggested EK3_DRAG_BCOEF_* = 17.209, EK3_DRAG_MCOEF = 0.209
+Home: -35.363261 149.165230 alt=584.000000m hdg=0.000000
+Starting sketch 'ArduCopter'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+bind port 5760 for SERIAL0
+SERIAL0 on TCP port 5760
+Waiting for connection ....
+Connection on serial port 5760
+Loaded defaults from @ROMFS/default_params/copter.parm
+Smoothing reset at 0.001
+bind port 5762 for SERIAL1
+SERIAL1 on TCP port 5762
+bind port 5763 for SERIAL2
+SERIAL2 on TCP port 5763
+Loaded defaults from @ROMFS/default_params/copter.parm
+validate_structures:546: Validating structures
+[New Thread 0x7ffff77ff6c0 (LWP 45)]
+Waiting for internal clock bits to be set (current=0x00)
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+Loaded defaults from @ROMFS/default_params/copter.parm
+
+Thread 1 "arducopter" received signal SIGTERM, Terminated.
+0x00007ffff78ecbdf in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7fffffffdc20, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+warning: 78	../sysdeps/unix/sysv/linux/clock_nanosleep.c: No such file or directory
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00005555558ac9a0 <AP_RAMTRON::init()>
+        silent
+        continue
+2       breakpoint     keep y   0x00005555558acc80 <AP_RAMTRON::read(unsigned int, unsigned char*, unsigned int)>
+        silent
+        continue
+3       breakpoint     keep y   0x00005555558acee0 <AP_RAMTRON::write(unsigned int, unsigned char const*, unsigned int)>
+        silent
+        continue
+4       breakpoint     keep y   0x00005555557c6540 <HALSITL::Storage::_storage_open()>
+	breakpoint already hit 8974 times
+        silent
+        continue
+5       breakpoint     keep y   0x00005555557c2e00 <AP_HAL::panic(char const*, ...)>
+        silent
+        continue
