@@ -1,0 +1,15 @@
+{
+ "notes": [
+  "SERVOx_FUNCTION: {1: 33.0, 2: 34.0, 3: 35.0, 4: 36.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 31.0}; k_motor1 (33) on channel(s): [1]",
+  "upload ack 0",
+  "STABILIZE: STABILIZE active",
+  "arm (interlock switch low): armed (ack result 0)",
+  "interlock switch raised",
+  "AUTO: AUTO active",
+  "start: mission start accepted (ack result 0)",
+  "t= 10.5 s vehicle: Mission: 2 LoitTime",
+  "t= 20.0 s fault injected SIM_ENGINE_FAIL=1 (channel 1, bit 0) (rejected []), mode left unchanged (no AUTOROTATE requested)",
+  "t= 24.7 s vehicle: SIM Hit ground at 6.338801 m/s",
+  "t= 34.7 s vehicle: Potential Thrust Loss (1)"
+ ]
+}
