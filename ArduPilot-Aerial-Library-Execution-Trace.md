@@ -662,3 +662,19 @@ Confirmed directly: `research-tools/sitl-heli-engine-failure.py` (output `sitl-e
 `Copter::thrust_loss_check` - the same detector already characterized elsewhere in this project as firing too late for a quad frame (1.8 s after ground contact from 30 m) - did eventually fire (`"Potential Thrust Loss (1)"`), but only 10 s *after* the ground-contact text this time. The too-late pattern extends to the helicopter frame too, and considerably worse here than in the quad case.
 
 Limits: one run, Heli frame only, simulator only; the fault was injected during a loiter, not during takeoff or a maneuver; whether a pilot-reacted autorotation entry (switching the interlock off and selecting `AUTOROTATE` immediately after the failure) would have saved the aircraft was not tested in the same run - that is the existing, separate `AUTOROTATE`-mode confirmation above, never combined with an actual engine failure.
+
+## Precision landing: a target-loss failsafe that actually ran on schedule
+
+`ledger:copter-precision-landing`'s existing confirmation landed cleanly with both simulated backends, but the target was never lost mid-descent. `AC_PrecLand.cpp` documents exactly what should happen if it is: `LANDING_TARGET_TIMEOUT_MS` (2000 ms) before `target_acquired()` goes false and a one-time `"Target Lost"` message is sent, then `PLND_TIMEOUT` (`_retry_timeout_s`, default 4 s) is how long the vehicle keeps descending anyway before deciding whether to retry.
+
+`research-tools/sitl-copter-precland-target-lost.py` (output `sitl-evidence/precland-target-lost/`) reused the SITL-backend (`PLND_TYPE`=4) setup from the earlier confirmation, climbed to 9.2 m in `GUIDED`, switched to `LAND`, and once precision landing was actively tracking the simulated target at 6.0 m height, set `SIM_PLD_ENABLE`=0 - the simulated target simply stops being seen, the same as an occluded beacon in real life. The result matched the source almost exactly:
+
+- t+2.0s: `"PrecLand: Target Lost"` (matches `LANDING_TARGET_TIMEOUT_MS` exactly)
+- t+4.0s after that: `"PrecLand: Retrying"` (matches `PLND_TIMEOUT`'s default exactly)
+- t+6.2s after retrying started: `"PrecLand: Retry Completed"` then immediately `"PrecLand: Failsafe Measures"` - the climb-and-relook maneuver concluding the target still cannot be found, falling back rather than searching further
+- t+19.3s after that: `"SIM Hit ground at 0.50 m/s"` - a normal, soft landing, same speed as every other clean landing in this project
+- Disarmed cleanly 2.1 s later, at rest 0.94 m from the original target and 5.05 m from home - essentially the same accuracy as the no-fault confirmation
+
+Unlike several other failsafe and detector investigations elsewhere in this project - the GPS-loss EKF failsafe that never fired even through a hard crash, the quad and helicopter `Copter::thrust_loss_check` detectors that both fired well after ground contact - this one behaved exactly as documented, on the documented schedule, with a genuinely safe outcome.
+
+Limits: one run, Copter only, simulator only; `PLND_STRICT` was left at its default, so a stricter setting's behavior (for example aborting to `RTL` instead of falling back to a normal landing at the current position) was not tried; the target was lost only once, not repeatedly or at a lower height.
