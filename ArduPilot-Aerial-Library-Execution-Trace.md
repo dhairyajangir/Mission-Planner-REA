@@ -755,3 +755,15 @@ Every command was accepted (`COMMAND_ACK` result 0). The pan (yaw) axis is a cle
 This confirms the Servo backend genuinely converts commanded angles into proportional, reversible PWM output, not a fixed or binary response - a real, working mechanism. The tilt-axis offset was not investigated further (most likely `MNT1_PITCH_MIN`/`MNT1_PITCH_MAX` or the `SERVO9` trim/min/max configuration, not necessarily a code bug).
 
 Limits: one run, Copter only, disarmed, simulator only; only the Servo backend was tried, not any of `AP_Mount`'s other simulated/real gimbal protocol backends; no simulated camera view existed to confirm the mount was physically pointed where commanded, only the servo PWM values.
+
+## Gripper auto-release on thrust loss: correct and synchronous, but inherits a detector that is itself unreliably timed
+
+A connection between two things already found separately in this project: the single motor failure test (`Copter::thrust_loss_check` fires `"Potential Thrust Loss"`, already confirmed too late relative to ground contact in that earlier run) and `AP_Gripper` (previously only autotest-name-matched, never tested directly). Reading `ArduCopter/crash_check.cpp` found the exact tie-in: `thrust_loss_check()` calls `gripper.release()` in the identical branch as the `"Potential Thrust Loss"` message, gated by `FLIGHT_OPTIONS` bit 2 (`RELEASE_GRIPPER_ON_THRUST_LOSS`, value 4) - so whenever and however late that detector fires, the gripper-release safety action fires at exactly the same moment, by construction.
+
+`research-tools/sitl-copter-gripper-thrust-loss.py` (output `sitl-evidence/copter-gripper-thrust-loss/`) confirmed this directly: `GRIP_ENABLE`=1 (the usual two-stage reboot), `GRIP_TYPE`=1 (servo), `SERVO9_FUNCTION`=28 (`k_gripper`), `FLIGHT_OPTIONS`=4, then the same 30m motor-failure recipe as the earlier test. This run's detector timing was considerably later than the original quad test: ground contact (`"SIM Hit ground at 14.03 m/s"`) at t=3.2s, but `"Potential Thrust Loss (1)"` did not fire until **t=15.0s - 11.8 seconds after impact**, versus 1.8s late in the earlier run. The detector's lateness is itself variable across runs, not a fixed offset.
+
+The gripper release followed exactly as the source predicts: `"Gripper load releasing"` at the identical t=15.0s, `servo9` switched to the release PWM range within 0.2s, `"Gripper load released"` 0.3s after that. The mechanism itself is correct and perfectly synchronous with the detector - it simply inherits whatever unreliable timing the detector happens to produce on a given crash.
+
+One test-setup gap, named plainly: the gripper was never explicitly commanded to grab before takeoff, so it started at a neutral 1500us PWM rather than the configured `GRIP_GRAB` (1900us) - the release transition (to 1100us) was still clearly observed and timed correctly, but a "cargo actually held then dropped" scenario was not literally staged.
+
+Limits: one run, Copter only, simulator only; the gripper was not pre-grabbed; only the Servo backend was tried.
