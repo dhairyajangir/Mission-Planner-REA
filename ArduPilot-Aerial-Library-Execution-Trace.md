@@ -848,6 +848,8 @@ Unlike several other detectors already characterized in this project (`Copter::t
 
 Limits: one run, Copter quad frame only, one voltage-drop depth; only the low-battery/RTL path was tried, not critical-battery/Land or the capacity-based (`BATT_LOW_MAH`) trigger; simulator only.
 
+**Also confirmed on Plane:** `research-tools/sitl-plane-battery-failsafe.py` reran the equivalent fault on a cruising Plane - `Plane::handle_battery_failsafe` (`ArduPlane/events.cpp`) is a different code path with a different action enum (`FS_LOW_ACT`=1 is RTL for Plane). Took off via a real `AUTO` mission to 60m cruise, then the same `BATT_LOW_VOLT`/`BATT_FS_LOW_ACT`/`SIM_BATT_VOLTAGE` fault. The mode switch from `AUTO` to `RTL` landed at t=10.1s - within 0.1s of the Copter case's 10.2s, both consistent with the documented 10s debounce. The Plane then climbed from 60m to the default `RTL_ALTITUDE` (100m) and settled into a circular loiter around home, rather than drifting or diverging - a clean positive result on a second vehicle type.
+
 ## Rangefinder fault on a flat-terrain hover: status flips by source, but nothing to visibly disturb
 
 `AP_RangeFinder` had only ever been exercised at gtest level. `ALT_HOLD` calls `Copter::SurfaceTracking::update_surface_offset()` (`ArduCopter/surface_tracking.cpp`) every loop, blending the position controller's altitude target toward the rangefinder-measured ground distance while healthy, and resetting that offset to 0 once the reading is unhealthy for more than `SURFACE_TRACKING_TIMEOUT_MS` (1000ms, `config.h`).
