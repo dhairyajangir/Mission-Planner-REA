@@ -678,3 +678,13 @@ Limits: one run, Heli frame only, simulator only; the fault was injected during 
 Unlike several other failsafe and detector investigations elsewhere in this project - the GPS-loss EKF failsafe that never fired even through a hard crash, the quad and helicopter `Copter::thrust_loss_check` detectors that both fired well after ground contact - this one behaved exactly as documented, on the documented schedule, with a genuinely safe outcome.
 
 Limits: one run, Copter only, simulator only; `PLND_STRICT` was left at its default, so a stricter setting's behavior (for example aborting to `RTL` instead of falling back to a normal landing at the current position) was not tried; the target was lost only once, not repeatedly or at a lower height.
+
+## AUTOLAND's automatic trigger: FS_LONG_ACTN 5, never tried, works exactly as documented
+
+The existing `AUTOLAND` confirmation (`ledger:plane-autoland-and-thermal`) only ever entered the mode by direct request. ArduPlane also documents an automatic trigger for it that no scenario anywhere in this project had tried: `FS_LONG_ACTN`=5 - `"will switch to AUTOLAND mode if possible, otherwise RTL mode"` (`ArduPlane/Parameters.cpp`) - fired by the same long-GCS/RC-failsafe mechanism every other `gcs-link-loss`/`rc-loss`/`battery-low` scenario in this project has already exercised, just with action 1 (RTL) instead of 5.
+
+Added a new scenario, `gcs-link-loss-autoland`, to `custom-gcs/integration/run_plane.py`'s `FAILSAFES` dict (`FS_GCS_ENABL`=1, `FS_LONG_ACTN`=5, `FS_LONG_TIMEOUT`=5, heartbeats stopped 15s into an `AUTO` mission), output `sitl-evidence/plane-autoland-failsafe/`. Exactly 5.0s after the heartbeats stopped - matching `FS_LONG_TIMEOUT` precisely - `"GCS Failsafe On: switched to Autoland"` appeared and the mode changed to `AUTOLAND` by itself. The aircraft then flew a complete autoland sequence on its own (`"Loiter to alt complete"`, `"Landing approach start"`, a glide slope, a flare) and landed softly at 0.46 m/s, auto-disarming 2.30 m from the `LAND` point and 2 m from home.
+
+The automatic trigger works exactly as documented, on schedule, with a fully clean outcome - the same pattern as the precision-landing target-loss failsafe elsewhere in this project, and unlike several other failsafes investigated here (the GPS-loss EKF failsafe that never fired, the thrust-loss detectors that fired too late for both quad and heli frames) that did not behave as their own documentation predicted.
+
+Limits: one run, Plane only, simulator only; the fault was injected mid-cruise, not during takeoff or an existing landing sequence; whether `FS_LONG_ACTN`=5 falls back to RTL when AUTOLAND genuinely is not possible (as the parameter description says it should) was not tried.

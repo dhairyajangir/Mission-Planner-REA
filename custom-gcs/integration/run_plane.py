@@ -48,6 +48,9 @@ FAILSAFES = {
     'wind-10ms': dict(pre={}, inject={'SIM_WIND_SPD': 10.0, 'SIM_WIND_DIR': 90.0}, expect='complete'),
     'airspeed-sensor-failure': dict(pre={}, inject={'SIM_ARSPD_FAIL': 1.0}, expect='complete'),      # the pitot reads zero pressure from 15 s on; the mission and landing are expected to finish
     'gps-loss': dict(pre={}, inject={'SIM_GPS1_ENABLE': 0}, expect='observe'),          # no configured action exists for this: the reaction is recorded, the check is that the aircraft does not crash within 60 s
+    'gcs-link-loss-autoland': dict(pre={'FS_GCS_ENABL': 1, 'FS_LONG_ACTN': 5, 'FS_LONG_TIMEOUT': 5}, inject=None, stop_heartbeats=True, expect='AUTOLAND'),
+    # FS_LONG_ACTN 5 ("will switch to AUTOLAND mode if possible, otherwise RTL mode", ArduPlane/Parameters.cpp) has never been tried here - every other
+    # gcs-link-loss/rc-loss/battery-low scenario above uses RTL (1); this is the same long-GCS-failsafe mechanism, only the configured action differs
 }
 M_PER_DEG_LAT = 111320.0
 LEG_DEG = 300.0 / M_PER_DEG_LAT
