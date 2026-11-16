@@ -1,0 +1,23 @@
+{
+ "notes": [
+  "set {'WINCH_TYPE': 1.0, 'SERVO9_FUNCTION': 88.0}; rejected []; restarting under the new setting",
+  "after restart: WINCH_TYPE=1.0 SERVO9_FUNCTION=88.0",
+  "servo9(winch) before any command: 0",
+  "DO_WINCH rate=2.0 ack=0 -> servo9=1660 (after 3s ramp)",
+  "DO_WINCH relax ack=0 -> servo9=0"
+ ],
+ "readings": [
+  {
+   "phase": "before",
+   "servo9": 0
+  },
+  {
+   "phase": "rate_control_2.0",
+   "servo9": 1660
+  },
+  {
+   "phase": "relax",
+   "servo9": 0
+  }
+ ]
+}

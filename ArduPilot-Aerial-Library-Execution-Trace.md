@@ -767,3 +767,19 @@ The gripper release followed exactly as the source predicts: `"Gripper load rele
 One test-setup gap, named plainly: the gripper was never explicitly commanded to grab before takeoff, so it started at a neutral 1500us PWM rather than the configured `GRIP_GRAB` (1900us) - the release transition (to 1100us) was still clearly observed and timed correctly, but a "cargo actually held then dropped" scenario was not literally staged.
 
 Limits: one run, Copter only, simulator only; the gripper was not pre-grabbed; only the Servo backend was tried.
+
+## AP_Winch's PWM backend: relax is instant, rate control ramps - exactly as the source says
+
+`AP_Winch` (cargo-delivery winch control) had only ever been confirmed by ArduPilot's own autotest names matching, never directly. `WINCH_TYPE`=1 selects the PWM backend (`AP_Winch_PWM.cpp` - plain `SRV_Channel` output, no simulated winch hardware) and is an `AP_PARAM_FLAG_ENABLE` parameter (the usual two-stage reboot; the group prefix is the full word `WINCH_`, not an abbreviation). `SERVO9_FUNCTION`=88 (`k_winch`) assigns an unused channel. This needed no flight at all: disarmed, on the ground.
+
+`research-tools/sitl-copter-winch.py` (output `sitl-evidence/copter-winch/`) sent `MAV_CMD_DO_WINCH` (42600) via `COMMAND_INT`, reading back `SERVO_OUTPUT_RAW` channel 9 each time:
+
+| Action | servo9 |
+|---|---|
+| (before any command) | 0 |
+| rate control, rate=2.0 (after a 3s wait) | 1660 |
+| relax | 0 |
+
+Both `DO_WINCH` commands were `ACK`ed. The channel starts at 0 (not a neutral 1500) - matching the `RELAXED` default - and after commanding a positive rate and waiting 3 seconds for the backend's own acceleration-limited ramp (`get_rate_limited_by_accel`), it had clearly moved to 1660, proportional to the commanded rate. Requesting `relax` dropped it straight back to 0, with no visible ramp this time - matching `AP_Winch_PWM::control_winch()`'s source exactly: the `RELAXED` branch calls `set_output_pwm(..., 0)` directly and returns *before* reaching the acceleration-rate-limiting code that the rate-control path goes through, so relaxing is instant while spinning up is gradual.
+
+Limits: one run, Copter only, disarmed, simulator only; only the PWM backend was tried, not `AP_Winch_Daiwa`; length/position control (`DO_WINCH` action=1) was not exercised, only rate control and relax.
