@@ -818,3 +818,13 @@ The result is a textbook retrace, not a diagonal shortcut home:
 The path genuinely traces the flown route leg by leg, in reverse order - not a straight line home, which a simpler RTL fallback would produce. This is the cleanest possible positive confirmation of the library's core purpose.
 
 Limits: one run, Copter only, simulator only; a simple two-leg L-path only, not a longer, curved, or buffer-overflow path; the specific `SMART_RTL_Repeat` scenario that does not pass in ArduPilot's own autotest suite was not investigated here.
+
+## AP_AdvancedFailsafe's GCS-commanded termination: the mechanism is confirmed, the takeoff setup is not
+
+`AP_AdvancedFailsafe` - ArduPlane's deliberate flight-termination system, meant to force a runaway aircraft down rather than let it fly away uncontrolled - had only ever been confirmed by ArduPilot's own autotest names matching. `AFS_ENABLE`=1 (the usual two-stage reboot) and `AFS_TERM_ACTION`=42 (`TERMINATE_ACTION_TERMINATE` - its own source comment says this is the only value for which `should_crash_vehicle()` can ever return true) were set, then `research-tools/sitl-plane-advanced-failsafe-terminate.py` (output `sitl-evidence/plane-afs-terminate/`) sent `MAV_CMD_DO_FLIGHTTERMINATION` (185, `param1`=1) - the standard GCS-commanded path.
+
+A test-setup limitation first, named plainly: the Copter-style `GUIDED` + `MAV_CMD_NAV_TAKEOFF` command used to get the aircraft airborne does not produce a climb for Plane (fixed-wing takeoff works differently). The altitude track stayed within 20cm of the ground for the entire 60 second watch, both before and after termination - this confirms the termination mechanism itself, not a demonstration against a genuinely cruising aircraft, which is the scenario the system actually exists for.
+
+Despite that, the mechanism was triggered and matched its own source exactly: `"Terminating due to GCS request"` and `"Throttle disarmed"` both arrived in the same instant (t=0.0), and `SERVO_OUTPUT_RAW` jumped within 0.2s from its pre-termination values (aileron 1100, elevator 1499, rudder 1300) to exactly 1900 (`SERVO_MAX`) on all three control surfaces, with throttle held at 1000 (`MIN`) - precisely matching `AP_AdvancedFailsafe_Plane::terminate_vehicle()`'s own aerodynamic-termination code. The vehicle stayed disarmed for the rest of the watch.
+
+Limits: one run, Plane only, simulator only; the aircraft was never genuinely airborne, so the actual fall/crash behavior this system is designed to produce was not observed; a proper test needs an `AUTO` mission takeoff item (the pattern already used successfully elsewhere in this project for Plane), not `GUIDED`+`NAV_TAKEOFF`.

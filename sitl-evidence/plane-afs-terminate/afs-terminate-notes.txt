@@ -1,0 +1,69 @@
+set {'AFS_ENABLE': 1.0, 'AFS_TERM_ACTION': 42.0}; rejected []; restarting under the new setting
+after restart: AFS_ENABLE=1.0 AFS_TERM_ACTION=42.0
+GUIDED (pre-arm): GUIDED active
+arm: armed (ack result 0)
+reached cruise altitude: False, after 60 s
+SERVO_OUTPUT_RAW before termination: servo1(aileron)=1100 servo2(elevator)=1499 servo3(throttle)=1000 servo4(rudder)=1300
+DO_FLIGHTTERMINATION param1=1 ack=0
+t=  0.0 vehicle: Terminating due to GCS request
+t=  0.0 vehicle: Throttle disarmed
+t=  0.2 SERVO_OUTPUT_RAW: servo1(aileron)=1900 servo2(elevator)=1900 servo3(throttle)=1000 servo4(rudder)=1900
+t=  2.0 disarmed
+t=  3.0 disarmed
+t=  4.0 disarmed
+t=  5.0 disarmed
+t=  6.0 disarmed
+t=  7.0 disarmed
+t=  8.0 disarmed
+t=  9.0 disarmed
+t= 10.0 disarmed
+t= 11.0 disarmed
+t= 12.0 disarmed
+t= 13.0 disarmed
+t= 14.0 disarmed
+t= 15.0 disarmed
+t= 16.0 disarmed
+t= 17.0 disarmed
+t= 18.0 disarmed
+t= 19.0 disarmed
+t= 20.0 disarmed
+t= 21.0 disarmed
+t= 22.0 disarmed
+t= 23.0 disarmed
+t= 24.0 disarmed
+t= 25.0 disarmed
+t= 26.0 disarmed
+t= 27.0 disarmed
+t= 28.0 disarmed
+t= 29.0 disarmed
+t= 30.0 disarmed
+t= 31.0 disarmed
+t= 32.0 disarmed
+t= 33.0 disarmed
+t= 34.0 disarmed
+t= 35.0 disarmed
+t= 36.0 disarmed
+t= 37.0 disarmed
+t= 38.0 disarmed
+t= 39.0 disarmed
+t= 40.0 disarmed
+t= 41.0 disarmed
+t= 42.0 disarmed
+t= 43.0 disarmed
+t= 44.0 disarmed
+t= 45.0 disarmed
+t= 46.0 disarmed
+t= 47.0 disarmed
+t= 48.0 disarmed
+t= 49.0 disarmed
+t= 50.0 disarmed
+t= 51.0 disarmed
+t= 52.0 disarmed
+t= 53.0 disarmed
+t= 54.0 disarmed
+t= 55.0 disarmed
+t= 56.0 disarmed
+t= 57.0 disarmed
+t= 58.0 disarmed
+t= 59.0 disarmed
+t= 60.0 disarmed
