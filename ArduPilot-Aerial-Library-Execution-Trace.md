@@ -833,3 +833,17 @@ Despite that, the mechanism was triggered and matched its own source exactly: `"
 Limits: one run, Plane only, simulator only; the aircraft was never genuinely airborne, so the actual fall/crash behavior this system is designed to produce was not observed; a proper test needs an `AUTO` mission takeoff item (the pattern already used successfully elsewhere in this project for Plane), not `GUIDED`+`NAV_TAKEOFF`.
 
 **Resolved:** `research-tools/sitl-plane-advanced-failsafe-terminate2.py` redid the test with a real `AUTO` mission takeoff instead of the broken `GUIDED`+`NAV_TAKEOFF`. The aircraft genuinely climbed this time (cruise altitude reached in 9s; pre-termination `SERVO_OUTPUT_RAW` showed throttle at 2000, a real climbing state). `MAV_CMD_DO_FLIGHTTERMINATION` produced the identical message/servo/disarm signature confirmed before, and this time a genuine mid-flight crash followed: `"SIM Hit ground at 16.55 m/s"` 7.2 seconds after termination was commanded, from 60m cruise altitude. The safety system does exactly what it is designed to do - force a genuinely flying aircraft down - not just flip servo outputs in isolation.
+
+## Battery failsafe: low-voltage RTL fires exactly on the documented 10-second schedule
+
+`AP_BattMonitor` had only ever been exercised at gtest level - no flight, no integration. `Copter::handle_battery_failsafe` (`ArduCopter/events.cpp`) is called whenever the battery monitor's low-voltage check (continuously below `BATT_LOW_VOLT` for `BATT_LOW_TIMER` seconds, default 10s) fires, and dispatches whatever `BATT_FS_LOW_ACT` names (2 = RTL for Copter). SITL's own `SIM_BATT_VOLTAGE` sets the simulated resting voltage the monitor reads, so a mid-flight drop is a clean, config-only fault injection.
+
+`research-tools/sitl-copter-battery-failsafe.py` (output `sitl-evidence/copter-battery-failsafe/`) flew 60m north in `GUIDED`, set `BATT_LOW_VOLT`=12.1 (just below SITL's 12.6V default resting voltage) and `BATT_FS_LOW_ACT`=2, then dropped `SIM_BATT_VOLTAGE` to 9.6. Result:
+
+- `"Battery 1 is low 9.22V used 371 mAh"` and `"Battery Failsafe"` both arrived at **t=10.2s** - within 0.2s of `BATT_LOW_TIMER`'s documented 10-second debounce.
+- The mode switched from `GUIDED` to `RTL` in the same instant.
+- The return track is a clean, direct flight home: north fell from 60m to 0 between t=11.9s and t=23.9s, then altitude descended steadily from 20m to 0 between t=27.9s and t=59.9s (RTL's loiter-then-land phase), touching down at the exact origin at 0.50 m/s, with `"Disarming motors"` at t=60.0s.
+
+Unlike several other detectors already characterized in this project (`Copter::thrust_loss_check`'s variable lateness, the GPS-loss EKF failsafe that never fired, the parachute's angle-error path that never triggered), this one fired exactly on schedule and did precisely what its own source and documentation describe - a clean, unqualified positive result.
+
+Limits: one run, Copter quad frame only, one voltage-drop depth; only the low-battery/RTL path was tried, not critical-battery/Land or the capacity-based (`BATT_LOW_MAH`) trigger; simulator only.

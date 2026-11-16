@@ -1,0 +1,72 @@
+SIM_BATT_VOLTAGE default (resting) = 12.600000381469727
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.452484130859375, 0.048606403172016144, -19.985414505004883)
+BATT_LOW_VOLT -> 12.1, BATT_FS_LOW_ACT -> 2 (RTL) (rejected [])
+t=  0.0 SIM_BATT_VOLTAGE -> 9.6 (rejected [])
+t=  0.3 armed=True custom_mode=4
+t=  1.3 armed=True custom_mode=4
+t=  2.3 armed=True custom_mode=4
+t=  3.3 armed=True custom_mode=4
+t=  4.3 armed=True custom_mode=4
+t=  5.3 armed=True custom_mode=4
+t=  6.3 armed=True custom_mode=4
+t=  7.3 armed=True custom_mode=4
+t=  8.3 armed=True custom_mode=4
+t=  9.3 armed=True custom_mode=4
+t= 10.2 armed=True custom_mode=6
+t= 10.2 vehicle: Battery 1 is low 9.22V used 371 mAh
+t= 10.2 vehicle: Battery Failsafe
+t= 10.3 armed=True custom_mode=6
+t= 11.3 armed=True custom_mode=6
+t= 12.3 armed=True custom_mode=6
+t= 13.3 armed=True custom_mode=6
+t= 14.3 armed=True custom_mode=6
+t= 15.3 armed=True custom_mode=6
+t= 16.3 armed=True custom_mode=6
+t= 17.3 armed=True custom_mode=6
+t= 18.3 armed=True custom_mode=6
+t= 19.3 armed=True custom_mode=6
+t= 20.3 armed=True custom_mode=6
+t= 21.3 armed=True custom_mode=6
+t= 22.3 armed=True custom_mode=6
+t= 23.3 armed=True custom_mode=6
+t= 24.3 armed=True custom_mode=6
+t= 25.3 armed=True custom_mode=6
+t= 26.3 armed=True custom_mode=6
+t= 27.3 armed=True custom_mode=6
+t= 28.3 armed=True custom_mode=6
+t= 29.3 armed=True custom_mode=6
+t= 30.3 armed=True custom_mode=6
+t= 31.3 armed=True custom_mode=6
+t= 32.3 armed=True custom_mode=6
+t= 33.3 armed=True custom_mode=6
+t= 34.3 armed=True custom_mode=6
+t= 35.3 armed=True custom_mode=6
+t= 36.3 armed=True custom_mode=6
+t= 37.3 armed=True custom_mode=6
+t= 38.3 armed=True custom_mode=6
+t= 39.3 armed=True custom_mode=6
+t= 40.3 armed=True custom_mode=6
+t= 41.3 armed=True custom_mode=6
+t= 42.3 armed=True custom_mode=6
+t= 43.3 armed=True custom_mode=6
+t= 44.3 armed=True custom_mode=6
+t= 45.3 armed=True custom_mode=6
+t= 46.3 armed=True custom_mode=6
+t= 47.3 armed=True custom_mode=6
+t= 48.3 armed=True custom_mode=6
+t= 49.3 armed=True custom_mode=6
+t= 50.3 armed=True custom_mode=6
+t= 51.3 armed=True custom_mode=6
+t= 52.3 armed=True custom_mode=6
+t= 53.3 armed=True custom_mode=6
+t= 54.3 armed=True custom_mode=6
+t= 55.3 armed=True custom_mode=6
+t= 56.3 armed=True custom_mode=6
+t= 57.3 armed=True custom_mode=6
+t= 57.7 vehicle: SIM Hit ground at 0.500619 m/s
+t= 58.3 armed=True custom_mode=6
+t= 59.3 armed=True custom_mode=6
+t= 60.0 vehicle: Disarming motors
+t= 60.3 armed=False custom_mode=6
+t= 60.3 disarmed, stopping watch
