@@ -1,0 +1,196 @@
+{
+  "sensors-OOKAKU3G": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": false,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": false,
+    "pages": {},
+    "startup_evidence_sha256": {
+      "startup.png": "1eed0a8331def6d84079b4f7647a267bf94f2c2a06d20a7ab1f381f42cc10528",
+      "windows-startup.txt": "0acf19082df67d061bcb190d9690dca2156d428214fccbbc3a4924f8289ce578",
+      "release.log": "d14fbbe3247c4dfff3a1af39cfcc50b9630d65a32867f93942b32993fa6cc22e",
+      "observation.log": "f47004f963ca60ea68976a89074332a895ca0cd9051fe8609f0b5ecb91312d46",
+      "copter.log": "e473117f873458efd61b8595bfa44222d95308740b3a5f9f940e40e477880b1f"
+    },
+    "application_logged_tcp_open": false,
+    "application_logged_autoconnect_start": true
+  },
+  "sensors-vTMUSW3l": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": false,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": false,
+    "pages": {},
+    "startup_evidence_sha256": {
+      "startup.png": "1eed0a8331def6d84079b4f7647a267bf94f2c2a06d20a7ab1f381f42cc10528",
+      "windows-startup.txt": "dccb1f263aa2376492d51b0b7e566c497773641ec743c60e2064e32411b9a3fc",
+      "release.log": "80aeff98b5d63ae1a404fac70ba6852f319cc04b9c7844e580cd73956c116412",
+      "observation.log": "0bdfcda635d5dd437b301ecfa8ae20ef18ebccb50094fa8f0ac049ed8874baef",
+      "copter.log": "e473117f873458efd61b8595bfa44222d95308740b3a5f9f940e40e477880b1f"
+    },
+    "application_logged_tcp_open": false,
+    "application_logged_autoconnect_start": true
+  },
+  "sensors-Yqrjmvst": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": false,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": false,
+    "pages": {},
+    "startup_evidence_sha256": {
+      "startup.png": "1eed0a8331def6d84079b4f7647a267bf94f2c2a06d20a7ab1f381f42cc10528",
+      "windows-startup.txt": "0acf19082df67d061bcb190d9690dca2156d428214fccbbc3a4924f8289ce578",
+      "release.log": "b341b78233ecb2fb5853fe166db45b6aec17b45b19a3386bae30f2e32888610e",
+      "observation.log": "824ce84117bc77e436f3ab0609dd110867f773dc4cae3a70599a177bd8e0fa0f",
+      "copter.log": "e473117f873458efd61b8595bfa44222d95308740b3a5f9f940e40e477880b1f"
+    },
+    "application_logged_tcp_open": false,
+    "application_logged_autoconnect_start": true,
+    "sampled_ui_stack": [
+      "JsonSerializerInternalReader.CreateList",
+      "Extensions.FromJSON",
+      "AutoConnect.Start",
+      "MainV2.OnLoad"
+    ]
+  },
+  "connected": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": true,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": true,
+    "pages": {
+      "serial": {
+        "image_sha256": "0929bc8afffd452933ec2763f5e3eaa3895d18b74c6ba3f93fe65c54576942d1",
+        "tree_sha256": "706411a8272d9eac6693ef0552c4dbfa00d7b1bfef3b4d4181966a7ef643faad",
+        "ftp_first_6s": [
+          {
+            "opcode": 2,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 4,
+            "open_read_only_path": "@SYS/uarts.txt"
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          },
+          {
+            "opcode": 5,
+            "open_read_only_path": null
+          }
+        ],
+        "all_gcs_ids_first_6s": {
+          "0": 6,
+          "110": 12
+        },
+        "selected_gcs_messages_first_6s": {
+          "FILE_TRANSFER_PROTOCOL": 12,
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {}
+      },
+      "can-gps-order": {
+        "image_sha256": "f6ba4311ebb7edf1c310b65c15819272d501b22855d12583b7d1a43dbf1bf6cd",
+        "tree_sha256": "0b8a6b36e6c9c51945fe37c2b893102bf9cc6cbe5c7f0e5b5514525a4cb594fd",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {}
+      },
+      "rtk": {
+        "image_sha256": "d52ad209a2cadc63e2f231a657de6342d9ba26088c6f86959b6bfe6fb9817d56",
+        "tree_sha256": "0bd59bdccb208cd6c9c2ffc8cb95c48dd05c96a48e3c7a644e58c42529acbef2",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6,
+          "111": 1,
+          "66": 6,
+          "76": 4
+        },
+        "selected_gcs_messages_first_6s": {
+          "COMMAND_LONG": 4,
+          "HEARTBEAT": 6,
+          "REQUEST_DATA_STREAM": 6
+        },
+        "gcs_commands_first_6s": {
+          "511": 1,
+          "512": 3
+        }
+      }
+    },
+    "startup_evidence_sha256": {
+      "startup.png": "e01006392065f0d405be64db0bb1d7ef6458dd0056e671258d6a82e1f1ad572c",
+      "windows-startup.txt": "b8435b1b8b82cbe336c37d97ce5352106c72c48ed7a8658164cfb5aca81750b1",
+      "release.log": "1d5fe0169121d74707bce350c89221615933dc918cc22a92d37fb0e6250495a1",
+      "observation.log": "d31b786cf3f57859bac5dab6005f009c7d8b412aa1d167d045f9ed6b70fde4d0",
+      "copter.log": "0621c61de623f92419d36b5ee0fd4fc3eddac2ad0a8f4bcbeaa15262be40b754"
+    },
+    "application_logged_tcp_open": true,
+    "application_logged_autoconnect_start": true,
+    "heartbeats": 339,
+    "armed_heartbeats": 0,
+    "tlog_gz_sha256": "a97d1653ae2627829ba9a1a7d64698dbe0354754ecb6eb9bd5e4fcbd851afe44",
+    "all_gcs_ids": {
+      "0": 340,
+      "110": 15,
+      "111": 33,
+      "183": 1,
+      "253": 3,
+      "66": 116,
+      "76": 41
+    },
+    "selected_gcs_messages": {
+      "COMMAND_LONG": 41,
+      "FILE_TRANSFER_PROTOCOL": 15,
+      "HEARTBEAT": 340,
+      "REQUEST_DATA_STREAM": 116
+    },
+    "gcs_commands": {
+      "42428": 2,
+      "511": 8,
+      "512": 30,
+      "520": 1
+    }
+  }
+}

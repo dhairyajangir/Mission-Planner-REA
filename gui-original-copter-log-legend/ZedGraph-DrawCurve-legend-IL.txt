@@ -1,0 +1,144 @@
+Mission Planner 1.3.83 GPS altitude legend: release IL excerpts
+
+Input: mission-planner-portable/ZedGraph.dll (byte-identical to ZedGraph.dll in mission-planner-portable.zip).
+Assembly: ZedGraph, Version=5.1.5.0, Culture=neutral, PublicKeyToken=null
+MVID: ee4e0f19-3705-46ec-ab2b-602218e34207
+PE SHA-256: 5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5
+Method: System.Void ZedGraph.Line::DrawCurve(System.Drawing.Graphics,ZedGraph.GraphPane,ZedGraph.CurveItem,System.Single)
+Metadata token: 0x600033d
+Method RVA: 0x11fc0
+Method IL stream: 1443 bytes, 590 instructions, SHA-256 fcd0965750afae9e9fc16c8661e68b883bf8d2e4367a73c9929e9ec829c548fe
+Disassembler: repository research-tools/Mono.Cecil.dll, SHA-256 c41bdb9ffd3c5f6e17d2382c1012d73703e035e3f1100245fdd4e08c8dc6eb5b
+
+Original screenshot gui-original-copter-log-browser/clean-time-graph.png shows the low first point inside the time axis and a legend of 584.09 for minimum, maximum and mean.
+Direct binary-log read: 1 x 578.12 m then 390 x 584.09 m; mean of all 391 records is 584.0747314578 m.
+The shipped method's previous-point flag is true on entry. A valid first point branches over the accumulators and initializes the previous endpoint. Subsequent accepted line segments contribute their current endpoint Y. The legend prints these accumulators.
+The corresponding source is mission-planner-1.3.83-source/ExtLibs/ZedGraph/ZedGraph/Line.cs, lines 654-657, 679, 740-761, 827-843. The binary establishes this method's branches and operands. The screenshot did not capture a runtime branch or iteration count.
+
+Accumulator and previous-point initialization
+IL_001d: ldc.r8 1.79769313486232E+308
+IL_0026: stloc.s V_8
+IL_0028: ldc.r8 -1.79769313486232E+308
+IL_0031: stloc.s V_9
+IL_0033: ldc.r8 0
+IL_003c: stloc.s V_10
+IL_003e: ldc.r8 0
+IL_0047: stloc.s V_11
+IL_0049: newobj System.Void ZedGraph.PointPair::.ctor()
+IL_004e: stloc.s V_13
+IL_0050: ldc.i4.1
+IL_0051: stloc.s V_14
+
+Pixel coalescing threshold
+IL_011b: ldarg.0
+IL_011c: ldfld System.Boolean ZedGraph.Line::_isOptimizedDraw
+IL_0121: brfalse.s IL_0133
+IL_0123: ldloc.s V_15
+IL_0125: callvirt System.Int32 ZedGraph.IPointList::get_Count()
+IL_012a: ldc.i4 1000
+IL_012f: cgt
+IL_0131: br.s IL_0134
+IL_0133: ldc.i4.0
+IL_0134: stloc.s V_28
+
+Current point Y in the ordinary non-stacked path
+IL_0192: ldloc.s V_12
+IL_0194: ldfld System.Double ZedGraph.PointPairBase::X
+IL_0199: stloc.s V_5
+IL_019b: ldloc.s V_12
+IL_019d: ldfld System.Double ZedGraph.PointPairBase::Y
+IL_01a2: stloc.s V_6
+
+Skip to previous-point assignment when there is no predecessor
+IL_02ae: stloc.s V_27
+IL_02b0: ldloc.s V_14
+IL_02b2: brtrue IL_04c7
+
+Viewport condition and current-endpoint statistics
+IL_0316: ldloc.s V_27
+IL_0318: brtrue IL_04aa
+IL_031d: ldloc.s V_11
+IL_031f: ldc.r8 1
+IL_0328: add
+IL_0329: stloc.s V_11
+IL_032b: ldloc.s V_8
+IL_032d: ldloc.s V_6
+IL_032f: call System.Double System.Math::Min(System.Double,System.Double)
+IL_0334: stloc.s V_8
+IL_0336: ldloc.s V_9
+IL_0338: ldloc.s V_6
+IL_033a: call System.Double System.Math::Max(System.Double,System.Double)
+IL_033f: stloc.s V_9
+IL_0341: ldloc.s V_10
+IL_0343: ldloc.s V_11
+IL_0345: ldc.r8 1
+IL_034e: sub
+IL_034f: mul
+IL_0350: ldloc.s V_6
+IL_0352: add
+IL_0353: stloc.s V_10
+IL_0355: ldloc.s V_10
+IL_0357: ldloc.s V_11
+IL_0359: div
+IL_035a: stloc.s V_10
+
+Assign previous endpoint, clear flag and advance loop
+IL_04c7: ldloc.s V_12
+IL_04c9: stloc.s V_13
+IL_04cb: ldloc.1
+IL_04cc: stloc.3
+IL_04cd: ldloc.2
+IL_04ce: stloc.s V_4
+IL_04d0: ldc.i4.0
+IL_04d1: stloc.s V_14
+IL_04d3: ldloc.s V_30
+IL_04d5: ldc.i4.1
+IL_04d6: add
+IL_04d7: stloc.s V_30
+IL_04d9: ldloc.s V_30
+IL_04db: ldloc.s V_15
+IL_04dd: callvirt System.Int32 ZedGraph.IPointList::get_Count()
+IL_04e2: blt IL_0154
+
+Require a nonzero segment count
+IL_04f5: ldloc.s V_11
+IL_04f7: ldc.r8 0
+IL_0500: ble.un IL_05a2
+
+Format label accumulators
+IL_054b: dup
+IL_054c: ldc.i4.1
+IL_054d: ldstr " (Min: "
+IL_0552: stelem.ref
+IL_0553: dup
+IL_0554: ldc.i4.2
+IL_0555: ldloca.s V_8
+IL_0557: ldstr "0.##"
+IL_055c: call System.String System.Double::ToString(System.String)
+IL_0561: stelem.ref
+IL_0562: dup
+IL_0563: ldc.i4.3
+IL_0564: ldstr " Max: "
+IL_0569: stelem.ref
+IL_056a: dup
+IL_056b: ldc.i4.4
+IL_056c: ldloca.s V_9
+IL_056e: ldstr "0.##"
+IL_0573: call System.String System.Double::ToString(System.String)
+IL_0578: stelem.ref
+IL_0579: dup
+IL_057a: ldc.i4.5
+IL_057b: ldstr " Mean: "
+IL_0580: stelem.ref
+IL_0581: dup
+IL_0582: ldc.i4.6
+IL_0583: ldloca.s V_10
+IL_0585: ldstr "0.##"
+IL_058a: call System.String System.Double::ToString(System.String)
+IL_058f: stelem.ref
+IL_0590: dup
+IL_0591: ldc.i4.7
+IL_0592: ldstr ")"
+IL_0597: stelem.ref
+IL_0598: call System.String System.String::Concat(System.String[])
+IL_059d: callvirt System.Void ZedGraph.Label::set_Text(System.String)

@@ -1,6 +1,6 @@
 # Copter scope and remaining evidence
 
-Saved screenshots and control trees identify the intended page after all 33 named menu selections in a modified Mission Planner 1.3.83 window on Windows. The current matrix marks 10 of those 33 page types at an original-GUI target. The pinned ArduCopter directory contributes 28 mode source files. 28 meet the matrix’s execution target. A mode request refused by the simulator can qualify as execution evidence. Successful entry and behavior require separate observations. [Coverage definitions](README.md) · [Matrix](matrix.csv)
+Saved screenshots and control trees identify the intended page after all 33 named menu selections in a modified Mission Planner 1.3.83 window on Windows. The current matrix marks 13 of those 33 page types at an original-GUI target. The pinned ArduCopter directory contributes 28 mode source files. 28 meet the matrix’s execution target. A mode request refused by the simulator can qualify as execution evidence. Successful entry and behavior require separate observations. [Coverage definitions](README.md) · [Matrix](matrix.csv)
 
 ## Application windows by runtime
 
@@ -8,13 +8,13 @@ The matrix’s original-GUI target accepts a recorded window of the unmodified r
 
 | Original application runtime | Matrix rows with an explicit claim |
 | --- | --- |
-| Linux/Mono | `ledger:connection-telemetry`, `ledger:flight-mode`, `ledger:mission-file`, `ledger:parameters-calibration`, `ledger:setup-page-frame-class`, `ledger:setup-page-state-copter`, `mp-module:FlightData`, `mp-module:FlightPlanner`, `mp-module:InitialSetup`, `mp-module:MainV2`, `mp-module:SoftwareConfig`, `mp-page:ConfigAC_Fence`, `mp-page:ConfigAccelerometerCalibration`, `mp-page:ConfigBatteryMonitoring`, `mp-page:ConfigBatteryMonitoring2`, `mp-page:ConfigFailSafe`, `mp-page:ConfigFlightModes`, `mp-page:ConfigFrameClassType`, `mp-page:ConfigHWCompass2`, `mp-page:ConfigHWIDs`, `mp-page:ConfigMandatory`, `mp-page:ConfigOptional`, `mp-page:ConfigPlanner`, `mp-page:ConfigRadioInput`, `mp-page:ConfigRadioOutput`, `mp-page:ConfigRawParams`, `mp-page:ConfigSimplePids`, `mp-page:ConfigUserDefined` |
+| Linux/Mono | `ledger:connection-telemetry`, `ledger:flight-mode`, `ledger:logs`, `ledger:mission-file`, `ledger:parameters-calibration`, `ledger:setup-page-frame-class`, `ledger:setup-page-state-copter`, `mp-module:FlightData`, `mp-module:FlightPlanner`, `mp-module:InitialSetup`, `mp-module:Log`, `mp-module:MainV2`, `mp-module:SoftwareConfig`, `mp-page:ConfigAC_Fence`, `mp-page:ConfigAccelerometerCalibration`, `mp-page:ConfigBatteryMonitoring`, `mp-page:ConfigBatteryMonitoring2`, `mp-page:ConfigFailSafe`, `mp-page:ConfigFlightModes`, `mp-page:ConfigFrameClassType`, `mp-page:ConfigGPSOrder`, `mp-page:ConfigHWCompass2`, `mp-page:ConfigHWIDs`, `mp-page:ConfigMandatory`, `mp-page:ConfigOptional`, `mp-page:ConfigPlanner`, `mp-page:ConfigRadioInput`, `mp-page:ConfigRadioOutput`, `mp-page:ConfigRawParams`, `mp-page:ConfigSerial`, `mp-page:ConfigSerialInjectGPS`, `mp-page:ConfigSimplePids`, `mp-page:ConfigUserDefined` |
 | Windows | None recorded |
 
 ## Work in priority order
 
 1. Capture the original release on native Windows when an isolated Windows guest is available. The [host inspection](../native-windows-gui-feasibility/README.md) records the current account's visibility and the disabled Windows Sandbox feature. The Linux/Mono captures document connected Copter DATA, SETUP and CONFIG, including the [parameter list and its tree selection](../Copter-Original-Parameter-Views-Trace.md).
-2. Resolve differences between component activation and the connected window. Begin with CAN GPS Order, Serial Ports and RTK-GPS Inject. Record which controls the application presents with the same simulator parameters.
+2. Compare the remaining component-only results with a connected original window. The [peripheral session](../gui-original-copter-peripheral-views/README.md) resolved the display question for Serial Ports, RTK/GPS Inject and CAN GPS Order under the Mono interpreter. The last page displayed an empty device table on this simulator.
 3. Use the workflow table to distinguish page display from completed operations. A parameter edit needs an independent simulator readback and a reopened page. The disconnected PLAN import/export establishes local file handling. Transfer to a connected simulator needs separate evidence.
 4. For the remaining source-registered pages, establish which menus and controls are reachable under each relevant firmware, connection, parameter and display-setting combination. Prioritize quadcopter operation before optional peripherals and helicopter-only pages.
 
@@ -52,7 +52,7 @@ Each source link identifies an explicit registration. Each menu link opens its s
 | ConfigFrameType | [InitialSetup L188](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L188) | Legacy Copter frame selector | Disabled | Modified copy | L3 / L3+gui open |
 | ConfigFriendlyParams | [SoftwareConfig L198](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L198) | Conditional or shared registration | No run in this capture | Modified copy | L3 / L3+gui open |
 | ConfigFriendlyParamsAdv | [SoftwareConfig L203](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L203) | Conditional or shared registration | No run in this capture | Modified copy | L3 / L3+gui open |
-| ConfigGPSOrder | [InitialSetup L266](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L266) | [CAN GPS Order](../sitl-evidence/live-gui-pages/017-CAN-GPS-Order.jpg) | exception | Modified copy | L3 / L3+gui open |
+| ConfigGPSOrder | [InitialSetup L266](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L266) | [CAN GPS Order](../sitl-evidence/live-gui-pages/017-CAN-GPS-Order.jpg) | exception | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigHWAirspeed | [InitialSetup L293](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L293) | [Airspeed](../sitl-evidence/live-gui-pages/024-Airspeed.jpg) | Enabled | Modified copy | L3 / L3+gui open |
 | ConfigHWBT | [InitialSetup L321](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L321) | [Bluetooth Setup](../sitl-evidence/live-gui-pages/030-Bluetooth-Setup.jpg) | Enabled | Modified copy | L3 / L3+gui open |
 | ConfigHWCompass | [InitialSetup L206](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L206) | Alternate compass parameter set | Enabled | Modified copy | L3 / L3+gui open |
@@ -77,8 +77,8 @@ Each source link identifies an explicit registration. Each menu link opens its s
 | ConfigRadioOutput | [InitialSetup L215](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L215) | [Servo Output](../sitl-evidence/live-gui-pages/006-Servo-Output.jpg) | Enabled | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigRawParams | [SoftwareConfig L229](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L229) | Conditional or shared registration | timeout | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigSecureAP | [InitialSetup L178](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L178) | Disconnected setup | Enabled | Modified copy | L3 / L3+gui open |
-| ConfigSerial | [InitialSetup L220](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L220) | [Serial Ports](../sitl-evidence/live-gui-pages/007-Serial-Ports.jpg) | exception | Modified copy | L3 / L3+gui open |
-| ConfigSerialInjectGPS | [InitialSetup L251](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L251) | [RTK-GPS Inject](../sitl-evidence/live-gui-pages/014-RTK-GPS-Inject.jpg) | exception | Modified copy | L3 / L3+gui open |
+| ConfigSerial | [InitialSetup L220](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L220) | [Serial Ports](../sitl-evidence/live-gui-pages/007-Serial-Ports.jpg) | exception | Original, Linux/Mono | L3 / L3+gui met |
+| ConfigSerialInjectGPS | [InitialSetup L251](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L251) | [RTK-GPS Inject](../sitl-evidence/live-gui-pages/014-RTK-GPS-Inject.jpg) | exception | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigSimplePids | [SoftwareConfig L164](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L164) | Conditional or shared registration | exception | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigTerminal | [InitialSetup L346](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L346) | Conditional or shared registration | No run in this capture | No GUI claim | L2 / L3+gui open |
 | ConfigTradHeli4 | [InitialSetup L187](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L187) | Helicopter only | Enabled | Modified copy | L3 / L3+gui open |
@@ -141,7 +141,7 @@ These modules own the principal Copter operator tasks. The remaining modules in 
 | Software configuration page registration | [SoftwareConfig](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs) | L3 | Original, Linux/Mono | L3+gui met |
 | HUD and telemetry | [FlightData](../mission-planner-1.3.83-source/GCSViews/FlightData.cs) | L3 | Original, Linux/Mono | L3+gui met |
 | Mission read and write | [FlightPlanner](../mission-planner-1.3.83-source/GCSViews/FlightPlanner.cs) | L3 | Original, Linux/Mono | L3+gui met |
-| Offline log browsing | [Log](../mission-planner-1.3.83-source/Log) | L3 | Modified copy | L3+gui open |
+| Offline log browsing | [Log](../mission-planner-1.3.83-source/Log) | L3 | Original, Linux/Mono | L3+gui met |
 | Telemetry warning rules | [Warnings](../mission-planner-1.3.83-source/Warnings) | L3 | No GUI claim | L3+gui open |
 
 The workflow rows below use the ledger’s own targets, typically executed behavior with a fault case. A met workflow target can coexist with an open original-GUI target for the owning module.
@@ -157,7 +157,7 @@ The workflow rows below use the ledger’s own targets, typically executed behav
 | Save six switch assignments | [setup-page-action-flightmodes](../Setup-Page-Actions-Trace.md) | unclaimed | Modified copy | L3+fault open |
 | Read and write a fence | [fence-workflow](../Fence-Workflow-Trace.md) | yes | No GUI claim | L3+fault met |
 | Interpret vehicle state and failsafes | [vehicle-internals](../Vehicle-Mode-Failsafe-Trace.md) | unclaimed | No GUI claim | L3+fault open |
-| Retrieve and review flight logs | [logs](../Log-Workflow-Trace.md) | yes | Modified copy | L3+fault met |
+| Retrieve and review flight logs | [logs](../Log-Workflow-Trace.md) | yes | Original, Linux/Mono | L3+fault met |
 | Configure ground-station warnings | [custom-warnings](../Warnings-Engine-Trace.md) | yes | No GUI claim | L3+fault met |
 
 Frame-specific and firmware evidence also lives in the [Copter frame trace](../Copter-Frame-Types-Trace.md) and [aerial execution trace](../ArduPilot-Aerial-Library-Execution-Trace.md). The mode-file count includes helicopter implementations and custom-mode support. It counts source files once and does not measure branch coverage, flight quality or aircraft behavior.

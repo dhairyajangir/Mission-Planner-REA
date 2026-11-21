@@ -252,7 +252,7 @@ def generate():
         "[Coverage definitions](README.md) · [Matrix](matrix.csv)", "",
         "## Work in priority order", "",
         "1. Capture the original release on native Windows when an isolated Windows guest is available. The [host inspection](../native-windows-gui-feasibility/README.md) records the current account's visibility and the disabled Windows Sandbox feature. The Linux/Mono captures document connected Copter DATA, SETUP and CONFIG, including the [parameter list and its tree selection](../Copter-Original-Parameter-Views-Trace.md).",
-        "2. Resolve differences between component activation and the connected window. Begin with CAN GPS Order, Serial Ports and RTK-GPS Inject. Record which controls the application presents with the same simulator parameters.",
+        "2. Compare the remaining component-only results with a connected original window. The [peripheral session](../gui-original-copter-peripheral-views/README.md) resolved the display question for Serial Ports, RTK/GPS Inject and CAN GPS Order under the Mono interpreter. The last page displayed an empty device table on this simulator.",
         "3. Use the workflow table to distinguish page display from completed operations. A parameter edit needs an independent simulator readback and a reopened page. The disconnected PLAN import/export establishes local file handling. Transfer to a connected simulator needs separate evidence.",
         "4. For the remaining source-registered pages, establish which menus and controls are reachable under each relevant firmware, connection, parameter and display-setting combination. Prioritize quadcopter operation before optional peripherals and helicopter-only pages.", "",
         "## Setup and configuration pages", "",

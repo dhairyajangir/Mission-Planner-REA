@@ -1,0 +1,744 @@
+If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 
+
+
+Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe
+To fix any filename case issues under mono use    export MONO_IOMAP=drive:case
+for pinvoke      MONO_LOG_LEVEL=debug MONO_LOG_MASK=dll mono MissionPlanner.exe
+watch -n 1 ls -l /proc/$(pidof mono)/fd
+watch -n 1 lsof -p $(pidof mono)
+Data Dir /home/test/.local/share/Mission Planner/
+Log Dir /home/test/.local/share/Mission Planner/logs
+Running Dir /opt/mp/
+User Data Dir /home/test/.local/share/Mission Planner/
+PlacesRecentDocuments Dir 
+PlacesDesktop Dir /home/test/Desktop
+PlacesPersonal Dir /home/test
+PlacesMyComputer Dir 
+Could not set X locale modifiers
+Gtk not found (missing LD_LIBRARY_PATH to libgtk-x11-2.0.so.0?), using built-in colorscheme
+INFO MissionPlanner.Program - ******************* Logging Configured *******************
+INFO MissionPlanner.Program - /opt/mp/x64/libSkiaSharp
+ERROR MissionPlanner.Program - System.DllNotFoundException: libdl.so assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) MissionPlanner.Utilities.NativeLibrary.dlopen(string,int)
+  at MissionPlanner.Program.Start (System.String[] args) [0x003c7] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0 
+4.0.0.0
+Splash .ctor
+IconFile
+Splash.Show()
+Debugger.IsAttached False
+Application.DoEvents
+Application.DoEvents
+Setup GMaps 1
+Setup GMaps 2
+Setup GoogleMapProvider API
+Setup Tracking.productName
+Setup Tracking.primaryScreenBitsPerPixel
+Setup Settings.Instance.UserAgent
+Setup check gdal dir
+Setup gdal
+INFO GDAL.GDAL - GDAL static ctor
+ERROR GDAL.GDAL - System.EntryPointNotFoundException: SetDllDirectory assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) GDAL.GDAL.SetDllDirectory(string)
+  at GDAL.GDAL..cctor () [0x00090] in <56f62328a3444c2c8fe767f126f1f736>:0 
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.GDAL.GdalPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: gdal_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.GDAL.GdalPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Gdal(OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.GDAL.GdalPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.GDAL.GdalPINVOKE..cctor () [0x00000] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.GDAL.Gdal.AllRegister () [0x00001] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+  at GDAL.GdalConfiguration.ConfigureGdal () [0x0000a] in <56f62328a3444c2c8fe767f126f1f736>:0 
+  at GDAL.GDAL..cctor () [0x000aa] in <56f62328a3444c2c8fe767f126f1f736>:0 
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.OGR.Ogr' threw an exception. ---> System.TypeInitializationException: The type initializer for 'OSGeo.OGR.OgrPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: ogr_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.OGR.OgrPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Ogr(OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.OGR.OgrPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.OGR.OgrPINVOKE..cctor () [0x00000] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.OGR.Ogr..cctor () [0x0000a] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at GDAL.GdalConfiguration.ConfigureOgr () [0x0000a] in <56f62328a3444c2c8fe767f126f1f736>:0 
+  at GDAL.GDAL..cctor () [0x000c2] in <56f62328a3444c2c8fe767f126f1f736>:0 
+INFO GDAL.GDAL - GDAL static ctor - SpatialReference
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.OSR.OsrPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: osr_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.OSR.OsrPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Osr(OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.OSR.OsrPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <39e26f9222b3432085b408e97bb51b0d>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.OSR.OsrPINVOKE..cctor () [0x00000] in <39e26f9222b3432085b408e97bb51b0d>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.OSR.SpatialReference..ctor (System.String wkt) [0x00000] in <39e26f9222b3432085b408e97bb51b0d>:0 
+  at GDAL.GDAL..cctor () [0x000ee] in <56f62328a3444c2c8fe767f126f1f736>:0 
+Setup proxy
+Setup proxy
+Setup CleanupFiles
+INFO MissionPlanner.Program - 64bit os True, 64bit process True, OS Arch X64, OS Desc Unix 6.6.87.2, FW Desc Mono 6.8.0.105 (Debian 6.8.0.105+dfsg-3.6ubuntu2 Sun Mar 31 02:55:28 UTC 2024)
+INFO MissionPlanner.Program - Runtime Version v4.0.30319
+INFO MissionPlanner.Program - 6.8.0.105 (Debian 6.8.0.105+dfsg-3.6ubuntu2 Sun Mar 31 02:55:28 UTC 2024)
+Application.Run(new MainV2())
+INFO MissionPlanner.MainV2 - Mainv2 ctor
+INFO MissionPlanner.MainV2 - Loading config
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 adsb_UpdatePlanePosition MainV2 System.EventHandler`1[MissionPlanner.Utilities.adsb+PointLatLngAltHdg]
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 <.ctor>b__106_0 MainV2 System.EventHandler`1[System.ValueTuple`2[System.String,MAVLink+MAV_COLLISION_THREAT_LEVEL]]
+INFO MissionPlanner.MainV2 - myview width 292 height 273
+INFO MissionPlanner.MainV2 - this   width 1109 height 604
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+BurntKermit.mpsystheme theme is loading
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+INFO MissionPlanner.Utilities.srtm - .cctor
+INFO MissionPlanner.Utilities.srtm - requestRunner start
+INFO MissionPlanner.Utilities.srtm - /home/test/.local/share/Mission Planner/srtm
+INFO MissionPlanner.Utilities.Speech - TTS: init, mono = True
+INFO MissionPlanner.MainV2 - Create FD
+INFO MissionPlanner.GCSViews.FlightData - Ctor Start
+INFO MissionPlanner.Controls.HUD - Static HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - Instance HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+Using backup param data
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.GCSViews.FlightData - Components Done
+INFO MissionPlanner.GCSViews.FlightData - Tunning Graph Settings
+INFO MissionPlanner.GCSViews.FlightData - HUD Settings
+INFO MissionPlanner.GCSViews.FlightData - Graph Setup
+INFO MissionPlanner.GCSViews.FlightData - Map Setup
+INFO MissionPlanner.MainV2 - Create FP
+INFO MissionPlanner.GCSViews.FlightPlanner - Loading wp params
+INFO MissionPlanner.GCSViews.FlightPlanner - param WP_RADIUS 30
+INFO MissionPlanner.GCSViews.FlightPlanner - param LOITER_RADIUS 45
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 0 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 0 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - updateMapType invoke req? False
+INFO MissionPlanner.MainV2 - Create SIM
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 comPort_MavChanged MainV2 System.EventHandler
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - Load Pluggins
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: /opt/mp/plugins/
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example19-multiforward.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example19-multiforward.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8-modechange.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8-modechange.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example16-donate.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example16-donate.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example18-externalapi.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example18-externalapi.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example12-forwarding.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example12-forwarding.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5-latencytracker.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5-latencytracker.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example11-trace.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example11-trace.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Polly.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6-mapicondesc.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Stats.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6-mapicondesc.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.SimpleGrid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example9-hudonoff.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example9-hudonoff.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TrackerHome.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example15-leds.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.Serialization.JsonNet.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example15-leds.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin FaceMap.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example17-menuremove.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example17-menuremove.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example10-canlogfile.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example10-canlogfile.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example22-payloadconfig.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.Plugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example22-payloadconfig.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin opendroneid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example21-persistentsimple.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Bulb.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example21-persistentsimple.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example-watchbutton.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Gridv2.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example-watchbutton.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example14-mass.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example14-mass.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TerrainMakerPlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example13-herelink2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example13-herelink2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2-menu.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2-menu.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Markdig.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/generator.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin generator.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3-fencedist.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MavlinkMessagePlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3-fencedist.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7-canrtcm.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7-canrtcm.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4-herelink.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4-herelink.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example23-switch.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example23-switch.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example20-multiplepositions.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example20-multiplepositions.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Init Grid 1.3.9384.38250 by Michael Oborne
+INFO MissionPlanner.MainV2 - Load Pluggins... Done
+INFO MissionPlanner.MainV2 - show FlightData
+Open MissionPlanner.GCSViews.FlightData FlightData
+INFO MissionPlanner.GCSViews.FlightData - Activate Called
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnHandleCreated Start
+INFO MissionPlanner.Controls.HUD - OnLoad Start
+INFO MissionPlanner.Controls.HUD - Vendor: Mesa
+INFO MissionPlanner.Controls.HUD - Version: 4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.5
+INFO MissionPlanner.Controls.HUD - Device: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO MissionPlanner.Controls.HUD - OnLoad Done
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 253
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 222
+HUD 1 hz drawtime 2671 gl True
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 220
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - show FlightData... Done
+INFO MissionPlanner.MainV2 - start http
+INFO MissionPlanner.MainV2 - start joystick
+INFO MissionPlanner.Utilities.httpserver - Listening for client
+ERROR MissionPlanner.MainV2 - Mono: closing joystick thread
+INFO MissionPlanner.MainV2 - start serialreader
+INFO MissionPlanner.MainV2 - start adsbsender
+INFO MissionPlanner.MainV2 - start plugin thread
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Copter/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Plane/LogMessages.xml.xz
+INFO MissionPlanner.MainV2 - start AutoConnect
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Rover/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Tracker/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+Full thread dump:
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"TileLoader: 0"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Threading.Monitor.Monitor_wait (object,int) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Monitor.ObjWait (bool,int,object) [0x0003a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Monitor.Wait (object,int,bool) [0x00011] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at GMap.NET.Internals.Core.ProcessLoadTask () [0x00107] in <2d6c3e0ead0f464fa9d0fb60f9a3b29c>:0
+  at System.Threading.ThreadHelper.ThreadStart_Context (object) [0x00017] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object) [0x00031] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadHelper.ThreadStart () [0x0000b] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) object.runtime_invoke_void__this__ (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"motion jpg stream-network kml"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Threading.WaitHandle.Wait_internal (intptr*,int,bool,int) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.WaitHandle.WaitOneNative (System.Runtime.InteropServices.SafeHandle,uint,bool,bool) [0x00059] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.WaitHandle.InternalWaitOne (System.Runtime.InteropServices.SafeHandle,long,bool,bool) [0x00017] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.WaitHandle.WaitOne (long,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.WaitHandle.WaitOne (int,bool) [0x0001c] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.WaitHandle.WaitOne () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at MissionPlanner.Utilities.httpserver.listernforclients () [0x0006e] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Threading.ThreadHelper.ThreadStart_Context (object) [0x00017] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object) [0x00031] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadHelper.ThreadStart () [0x0000b] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) object.runtime_invoke_void__this__ (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"FD Mainloop"  at <unknown> <0xffffffff>
+  at MissionPlanner.GCSViews.FlightData.mainloop () [0x00f6d] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Threading.ThreadHelper.ThreadStart_Context (object) [0x00017] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object) [0x00031] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadHelper.ThreadStart () [0x0000b] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) object.runtime_invoke_void__this__ (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x00077] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Finalizer"
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Reflection.MonoMethodInfo.get_parameter_info (intptr,System.Reflection.MemberInfo) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Reflection.MonoMethodInfo.GetParametersInfo (intptr,System.Reflection.MemberInfo) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Reflection.RuntimeMethodInfo.GetParameters () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at log4net.Core.MethodItem.GetMethodParameterNames (System.Reflection.MethodBase) [0x00006] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Core.MethodItem..ctor (System.Reflection.MethodBase) [0x00007] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Core.StackFrameItem..ctor (System.Diagnostics.StackFrame) [0x00086] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Core.LocationInfo..ctor (System.Type) [0x000e7] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Core.LoggingEvent.get_LocationInformation () [0x00015] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Layout.Pattern.FileLocationPatternConverter.Convert (System.IO.TextWriter,log4net.Core.LoggingEvent) [0x00000] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Layout.Pattern.PatternLayoutConverter.Convert (System.IO.TextWriter,object) [0x0000a] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Util.PatternConverter.Format (System.IO.TextWriter,object) [0x00016] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Layout.PatternLayout.Format (System.IO.TextWriter,log4net.Core.LoggingEvent) [0x00025] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Appender.AppenderSkeleton.RenderLoggingEvent (System.IO.TextWriter,log4net.Core.LoggingEvent) [0x00048] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Appender.TextWriterAppender.Append (log4net.Core.LoggingEvent) [0x00000] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Appender.FileAppender.Append (log4net.Core.LoggingEvent) [0x0000d] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Appender.RollingFileAppender.Append (log4net.Core.LoggingEvent) [0x00006] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Appender.AppenderSkeleton.DoAppend (log4net.Core.LoggingEvent) [0x00059] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Util.AppenderAttachedImpl.AppendLoopOnAppenders (log4net.Core.LoggingEvent) [0x00040] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Repository.Hierarchy.Logger.CallAppenders (log4net.Core.LoggingEvent) [0x0002f] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Repository.Hierarchy.Logger.ForcedLog (System.Type,log4net.Core.Level,object,System.Exception) [0x00017] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Repository.Hierarchy.Logger.Log (System.Type,log4net.Core.Level,object,System.Exception) [0x00011] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at log4net.Core.LogImpl.Debug (object) [0x00006] in <f2d7bfb401584182978e5448ef6c25c5>:0
+  at MissionPlanner.Program.CurrentDomain_AssemblyLoad (object,System.AssemblyLoadEventArgs) [0x0003e] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.AppDomain.DoAssemblyLoad (System.Reflection.Assembly) [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_void__this___object (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.AppDomain.LoadAssembly (System.AppDomain,string,System.Security.Policy.Evidence,bool,System.Threading.StackCrawlMark&) [0x0000c] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.AppDomain.Load (System.Reflection.AssemblyName,System.Security.Policy.Evidence) [0x00062] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper remoting-invoke-with-check) System.AppDomain.Load (System.Reflection.AssemblyName,System.Security.Policy.Evidence) [0x00033] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.AppDomain.Load (System.Reflection.AssemblyName) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper remoting-invoke-with-check) System.AppDomain.Load (System.Reflection.AssemblyName) [0x00032] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Reflection.Assembly.Load (System.Reflection.AssemblyName) [0x00005] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at I18N.Common.Manager.Instantiate (string) [0x00086] in <51812a6330214965b9e21327fd12bb0e>:0
+  at I18N.Common.Manager.GetEncoding (int) [0x00018] in <51812a6330214965b9e21327fd12bb0e>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_object__this___int (object,intptr,intptr,intptr) [0x0002a] in <51812a6330214965b9e21327fd12bb0e>:0
+  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke (System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&) [0x0000c] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Reflection.RuntimeMethodInfo.Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo) [0x0007c] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.RuntimeType.InvokeMember (string,System.Reflection.BindingFlags,System.Reflection.Binder,object,object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,string[]) [0x00822] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Text.EncodingHelper.InvokeI18N (string,object[]) [0x000f6] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Text.Encoding.GetEncoding (int) [0x00218] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Text.Encoding.GetEncoding (string) [0x00015] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at Ionic.Zip.ZipFile..cctor () [0x00124] in <1ba35737601547e9b88484e39ccbf397>:0
+  at (wrapper runtime-invoke) object.runtime_invoke_void (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at <unknown> <0xffffffff>
+  at MissionPlanner.NoFly.NoFly.Scan () [0x00076] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at MissionPlanner.MainV2.BGNoFly (object) [0x00000] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context (object) [0x0000e] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.Tasks.Task.FinishContinuations () [0x00092] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task.FinishStageThree () [0x00045] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>.TrySetResult (System.Threading.Tasks.VoidTaskResult) [0x00058] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task/DelayPromise.Complete () [0x0003d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task.<Delay>m__1 (object) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Base Thread"  at <unknown> <0xffffffff>
+  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList (Newtonsoft.Json.JsonReader,System.Type,Newtonsoft.Json.Serialization.JsonContract,Newtonsoft.Json.Serialization.JsonProperty,object,string) [0x00000] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader,System.Type,Newtonsoft.Json.Serialization.JsonContract,Newtonsoft.Json.Serialization.JsonProperty,Newtonsoft.Json.Serialization.JsonContainerContract,Newtonsoft.Json.Serialization.JsonProperty,object) [0x0007f] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize (Newtonsoft.Json.JsonReader,System.Type,bool) [0x00079] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.JsonSerializer.DeserializeInternal (Newtonsoft.Json.JsonReader,System.Type) [0x00054] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.JsonSerializer.Deserialize (Newtonsoft.Json.JsonReader,System.Type) [0x00000] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.JsonConvert.DeserializeObject (string,System.Type,Newtonsoft.Json.JsonSerializerSettings) [0x0002d] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.JsonConvert.DeserializeObject<T_REF> (string,Newtonsoft.Json.JsonSerializerSettings) [0x00000] in <dd21e08747d94bcebed8b56112226337>:0
+  at Newtonsoft.Json.JsonConvert.DeserializeObject<T_REF> (string) [0x00000] in <dd21e08747d94bcebed8b56112226337>:0
+  at MissionPlanner.Utilities.Extensions.FromJSON<T_REF> (string) [0x00000] in <c7cb5fd349cd49ffbca279b7c11182d1>:0
+  at MissionPlanner.Utilities.AutoConnect.Start () [0x0003c] in <c7cb5fd349cd49ffbca279b7c11182d1>:0
+  at MissionPlanner.MainV2.OnLoad (System.EventArgs) [0x00431] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Windows.Forms.Form.OnLoadInternal (System.EventArgs) [0x00029] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Form.OnCreateControl () [0x00027] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.CreateControl () [0x000a3] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.WmShowWindow (System.Windows.Forms.Message&) [0x00039] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.WndProc (System.Windows.Forms.Message&) [0x001cf] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.ScrollableControl.WndProc (System.Windows.Forms.Message&) [0x00000] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.ContainerControl.WndProc (System.Windows.Forms.Message&) [0x0003c] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Form.WndProc (System.Windows.Forms.Message&) [0x0015c] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at MissionPlanner.MainV2.WndProc (System.Windows.Forms.Message&) [0x0023a] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Windows.Forms.Control/ControlWindowTarget.OnMessage (System.Windows.Forms.Message&) [0x00000] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control/ControlNativeWindow.WndProc (System.Windows.Forms.Message&) [0x0000b] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.NativeWindow.WndProc (intptr,System.Windows.Forms.Msg,intptr,intptr) [0x0008e] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.XplatUIX11.SendMessage (intptr,System.Windows.Forms.Msg,intptr,intptr) [0x000d6] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.XplatUIX11.MapWindow (System.Windows.Forms.Hwnd,System.Windows.Forms.WindowType) [0x00043] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.XplatUIX11.CreateWindow (System.Windows.Forms.CreateParams) [0x00591] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.XplatUI.CreateWindow (System.Windows.Forms.CreateParams) [0x00000] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.NativeWindow.CreateHandle (System.Windows.Forms.CreateParams) [0x0000c] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.CreateHandle () [0x0003a] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Form.CreateHandle () [0x00000] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.CreateControl () [0x0004b] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.SetVisibleCore (bool) [0x00069] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Form.SetVisibleCore (bool) [0x0007b] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Control.set_Visible (bool) [0x0000c] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at (wrapper remoting-invoke-with-check) System.Windows.Forms.Control.set_Visible (bool) [0x00032] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Application.RunLoop (bool,System.Windows.Forms.ApplicationContext) [0x0005f] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.ApplicationContext) [0x00014] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at System.Windows.Forms.Application.Run (System.Windows.Forms.Form) [0x00006] in <a3daa9b84fd241a497578a25f68bc3c7>:0
+  at MissionPlanner.Program.Start (string[]) [0x00bb3] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at MissionPlanner.Program.Main (string[]) [0x00000] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr) [0x0002a] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at MissionPlanner.Controls.ControlHelpers.BeginInvokeIfRequired (System.ComponentModel.ISynchronizeInvoke,System.Action) [0x00012] in <ae7fec05f0884ac48e10b27edbf8e6b9>:0
+  at MissionPlanner.MainV2/<SerialReader>d__139.MoveNext () [0x0076a] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner.InvokeMoveNext (object) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner.Run () [0x0003b] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction (System.Action,bool,System.Threading.Tasks.Task&) [0x00023] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task.FinishContinuations () [0x00061] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task.FinishStageThree () [0x00045] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task`1<System.Threading.Tasks.VoidTaskResult>.TrySetResult (System.Threading.Tasks.VoidTaskResult) [0x00058] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task/DelayPromise.Complete () [0x0003d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Tasks.Task.<Delay>m__1 (object) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at System.Threading.Timer/Scheduler.TimerCB (object) [0x00007] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00019] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00096] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"Thread Pool Worker"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) object.__icall_wrapper_mono_monitor_enter_v4_internal (object,intptr) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue/SparseArray`1<T_REF>.Add (T_REF) [0x0000d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueueThreadLocals..ctor (System.Threading.ThreadPoolWorkQueue) [0x0002d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.EnsureCurrentThreadHasQueue () [0x0000a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00016] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_bool (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+
+"TileLoader: 4"  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) System.Threading.Monitor.Monitor_wait (object,int) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Monitor.ObjWait (bool,int,object) [0x0003a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.Monitor.Wait (object,int,bool) [0x00011] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at GMap.NET.Internals.Core.ProcessLoadTask () [0x00107] in <2d6c3e0ead0f464fa9d0fb60f9a3b29c>:0
+  at System.Threading.ThreadHelper.ThreadStart_Context (object) [0x00017] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x0008d] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool) [0x00000] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ExecutionContext.Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object) [0x00031] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at System.Threading.ThreadHelper.ThreadStart () [0x0000b] in <12b418a7818c4ca0893feeaaf67f1e7f>:0
+  at (wrapper runtime-invoke) object.runtime_invoke_void__this__ (object,intptr,intptr,intptr) [0x0002a] in <12b418a7818c4ca0893feeaaf67f1e7f>:0

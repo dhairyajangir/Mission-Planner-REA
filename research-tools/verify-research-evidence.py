@@ -2983,6 +2983,31 @@ check('original Copter parameter views and packed file', parameter_views['parame
 runpy.run_path(str(root / 'copter-battery-page-write-study/verify.py'))['check']()
 check('Copter battery page activation and storage timing', True,
       'Release IL, original numeric conversion and the recorded write, echo and storage request matched.')
+peripheral = root / 'gui-original-copter-peripheral-views'
+observations = runpy.run_path(str(peripheral / 'verify.py'))['inspect'](peripheral)
+reference = json.loads((peripheral / 'verification.json').read_text())['connected']
+check('connected original Copter peripheral pages under the Mono interpreter',
+      observations == reference and set(observations['pages']) == {'serial', 'can-gps-order', 'rtk'}
+      and observations['matching_release_files'] == 1317 and observations['heartbeats'] == 339
+      and observations['armed_heartbeats'] == 0,
+      'Three screened page types, recorded navigation, original release and simulator heartbeats matched.')
+serial_requests = observations['pages']['serial']['ftp_first_6s']
+check('original Serial Ports page reads the simulator UART report',
+      [entry['opcode'] for entry in serial_requests] == [2, 4] + [5] * 10
+      and serial_requests[1]['open_read_only_path'] == '@SYS/uarts.txt',
+      'During the first six seconds, the link reset the FTP session, opened the report and requested ten reads.')
+log_browser = runpy.run_path(str(root / 'gui-original-copter-log-browser/verify.py'))['verify']()
+check('original Log Browser time graph and first-point legend discrepancy',
+      log_browser['gps_samples'] == 391 and log_browser['observed_legend_min_m'] == '584.09'
+      and log_browser['all_sample_min_m'] == '578.12' and log_browser['all_sample_mean_m'] == '584.07',
+      'The first altitude appeared on the line. The legend statistics differed from the complete series.')
+legend_folder = root / 'gui-original-copter-log-legend'
+legend = runpy.run_path(str(legend_folder / 'verify_drawcurve_il.py'))['verify'](root)
+check('original ZedGraph DrawCurve method for Copter log legend',
+      legend['token'] == '0x0600033d' and legend['code_bytes'] == 1443
+      and hashlib.sha256((legend_folder / 'ZedGraph-DrawCurve-legend-IL.txt').read_bytes()).hexdigest()
+      == '902769962fbf22594a47afaf9089608f97bb2be40ffdf7fb3f369f5e1e7ed6b9',
+      'Archive method body matched the indexed method digest and the retained disassembly excerpt was pinned.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

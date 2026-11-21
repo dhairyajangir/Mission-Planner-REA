@@ -1359,6 +1359,26 @@
       "name": "Copter battery page activation and storage timing",
       "passed": true,
       "detail": "Release IL, original numeric conversion and the recorded write, echo and storage request matched."
+    },
+    {
+      "name": "connected original Copter peripheral pages under the Mono interpreter",
+      "passed": true,
+      "detail": "Three screened page types, recorded navigation, original release and simulator heartbeats matched."
+    },
+    {
+      "name": "original Serial Ports page reads the simulator UART report",
+      "passed": true,
+      "detail": "During the first six seconds, the link reset the FTP session, opened the report and requested ten reads."
+    },
+    {
+      "name": "original Log Browser time graph and first-point legend discrepancy",
+      "passed": true,
+      "detail": "The first altitude appeared on the line. The legend statistics differed from the complete series."
+    },
+    {
+      "name": "original ZedGraph DrawCurve method for Copter log legend",
+      "passed": true,
+      "detail": "Archive method body matched the indexed method digest and the retained disassembly excerpt was pinned."
     }
   ],
   "passed": true
