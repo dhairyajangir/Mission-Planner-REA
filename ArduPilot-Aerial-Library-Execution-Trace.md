@@ -893,3 +893,18 @@ The no-pulses notice arrives exactly at `RC_FS_TIMEOUT` (1.0 s); the low-throttl
 In every cleared case the mode did not go back to `GUIDED`: `failsafe_radio_off_event` only logs and sends the notice, as the source says.
 
 Limits: one run per case, Copter quad frame only, started from `GUIDED` (the `FS_OPTIONS` bits for continuing in AUTO or GUIDED, and the default 16 bit for continuing a landing, were not exercised); `FS_THR_ENABLE` values 2, 5, 6 and 7 and `SIM_RC_FAIL`=3 were not flown; time-to-notice has about 0.1 s resolution; simulator only, no real receiver.
+
+## Copter GCS-loss failsafe: action map and timing confirmed, arming blocked while it is raised
+
+`Copter::failsafe_gcs_check` compares the time since the last heartbeat from the GCS against `FS_GCS_TIMEOUT` and, past it, maps `FS_GCS_ENABLE` to an action. `research-tools/sitl-copter-gcs-failsafe.py` (output `sitl-evidence/copter-gcs-failsafe/`) flew a Copter 60 m north at 20 m in `GUIDED`, wrote the parameters in flight, then stopped heartbeats while keeping the link open and reading.
+
+- `FS_GCS_ENABLE`=1, timeout 5: `"GCS Failsafe"` 5.2 s after the last heartbeat, mode switched to `RTL`.
+- `FS_GCS_ENABLE`=3, timeout 5: `SMART_RTL` at 5.1 s.
+- `FS_GCS_ENABLE`=5, timeout 5: `LAND` at 5.1 s.
+- `FS_GCS_ENABLE`=1, timeout 3: notice and `RTL` at 3.1 s, so the delay follows `FS_GCS_TIMEOUT`.
+
+Heartbeats were resumed about 12 s after the notice in each run. `"GCS Failsafe Cleared"` followed within 0.3 s and no further mode change was logged; the vehicle finished its RTL, SMART_RTL or LAND, touched down at about 0.5 m/s and disarmed.
+
+**Arming while the failsafe is raised.** The first batch of runs set `FS_GCS_ENABLE` before arming and all ended `"not armed after 120 s (last ack result 4)"` with no refusal text captured. `research-tools/sitl-copter-gcs-failsafe-arm-probe.py` isolated it: a GCS that had been heard and then went quiet past the timeout raised `"GCS Failsafe"` even while disarmed, and arming was refused (`"PreArm: GCS failsafe on"`) until heartbeats resumed. With no heartbeat ever sent the check never started and arming worked. The probe's own note ties this to `AP_Arming_Copter::gcs_failsafe_check`; that source line was not re-read here.
+
+Limits: one run per case, Copter quad only, simulator only. The `FS_OPTIONS` pilot-control exception in `LOITER` is described in the script but no capture of it is retained, so it is not claimed here. `FS_GCS_ENABLE` values other than 1, 3 and 5 were not flown.
