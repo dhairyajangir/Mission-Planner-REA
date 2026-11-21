@@ -1,0 +1,44 @@
+case auto-defaults-throttle950: pre={} mode_at_fault=AUTO feed_udp_rc=True inject={'SIM_RC_FAIL': 2} clear={'SIM_RC_FAIL': 0} clear_at=14s watch=35s; SITL -I 3 (TCP 5790, RC UDP 5531)
+defaults: THR_FAILSAFE=1.0 THR_FS_VALUE=950.0 FS_SHORT_ACTN=0.0 FS_LONG_ACTN=0.0 FS_LONG_TIMEOUT=5.0 RC_FS_TIMEOUT=1.0 FLTMODE_CH=8.0 SIM_RC_FAIL=0.0 FS_GCS_ENABL=0.0
+pre-flight params set: FLTMODE_CH=0 plus {} (rejected [])
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+reached cruise altitude: True (alt 55.124)
+UDP RC feeder running (throttle centred 1500) from cruise, before the fault
+state before fault: mode=AUTO alt=60.459 servo3=1449 rc3=1000
+t= -23.6 vehicle: Mission: 1 Takeoff
+t= -23.6 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -23.6 vehicle: Triggered AUTO. GPS speed = 0.0
+t= -23.6 MISSION_CURRENT seq=1
+t= -22.4 HEARTBEAT mode=AUTO armed=True
+t= -21.7 vehicle: Holding course 35998 at 6.5m/s (0.0)
+t= -21.7 vehicle: Autoland direction= 359
+t= -16.3 vehicle: Takeoff level-off starting at 20m
+t= -15.2 vehicle: EKF2 IMU0 is using GPS
+t= -15.2 vehicle: EKF2 IMU1 is using GPS
+t= -14.4 vehicle: Takeoff complete at 60.16m
+t= -14.4 vehicle: Mission: 2 WP
+t= -14.4 MISSION_CURRENT seq=2
+t=  -6.0 vehicle: Reached waypoint #2 dist 52m
+t=  -6.0 vehicle: Mission: 3 WP
+t=  -6.0 MISSION_CURRENT seq=3
+t=   0.0 SENT param_set SIM_RC_FAIL=2
+t=   3.0 PARAM_VALUE SIM_RC_FAIL=2.0
+t=   3.0 vehicle: Throttle failsafe on
+t=   3.0 vehicle: RC Short Failsafe On
+t=   3.0 PARAM_VALUE STAT_FLTTIME=23.0
+t=   3.0 PARAM_VALUE STAT_RUNTIME=60.0
+t=   3.0 PARAM_VALUE STAT_FLTCNT=1.0
+t=   3.0 PARAM_VALUE STAT_DISTFLWN=567.65625
+t=   5.6 vehicle: RC Long Failsafe On: switched to Auto
+t=   8.5 vehicle: Reached waypoint #3 dist 51m
+t=   8.5 vehicle: Mission: 4 LoitUnlim
+t=   8.8 MISSION_CURRENT seq=4
+t=  14.1 SENT param_set SIM_RC_FAIL=0
+t=  14.1 PARAM_VALUE SIM_RC_FAIL=0.0
+t=  14.2 vehicle: Throttle failsafe off
+t=  14.5 vehicle: RC Long Failsafe Cleared
+t=  31.5 PARAM_VALUE STAT_FLTTIME=54.0
+t=  31.5 PARAM_VALUE STAT_RUNTIME=91.0
+t=  31.5 PARAM_VALUE STAT_DISTFLWN=1271.3214111328125

@@ -1,0 +1,2 @@
+First, valid run of research-tools/sitl-copter-zigzag-auto.py with only two cases selected (ab-east-forward-3lines, ab-east-forward-3lines-suspend-resume) to check the harness
+(two-stage ZIGZ_AUTO_ENABLE restart, aux 61/83 channels, LOCAL_POSITION_NED tracking).  Its results agree with the full run in ../copter-crash-and-modes-zigzag/.

@@ -1,0 +1,39 @@
+# 00000001.BIN: vehicle clock, seconds relative to the first injected PARM record (reference 57.064665 s of log time)
+t= -23.02 MSG Throttle armed
+t= -23.00 PARM SIM_RC_FAIL=0.0
+t= -23.00 MSG ArduPlane V4.8.0-dev (15a10bb4)
+t= -23.00 MSG <04cfea5c7cf4f1fb8b47f8b3e8289cf
+t= -23.00 MSG Param space used: 187/3840
+t= -23.00 MSG RC Protocol: UDP
+t= -23.00 MSG New mission
+t= -23.00 MSG New rally
+t= -23.00 MSG New fence
+t= -23.00 MODE ModeNum=0 Rsn=26
+t= -23.00 MSG GPS 1: probing for u-blox at 230400 baud
+t= -21.74 MSG Mission: 1 Takeoff
+t= -21.74 MODE ModeNum=10 Rsn=2
+t= -21.72 MSG Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -21.50 MSG Triggered AUTO. GPS speed = 0.0
+t= -20.18 MSG Autoland direction= 359
+t= -20.12 MSG Holding course 35997 at 6.5m/s (0.0)
+t= -14.02 MSG Takeoff level-off starting at 20m
+t= -12.70 MSG EKF2 IMU0 is using GPS
+t= -12.70 MSG EKF2 IMU1 is using GPS
+t= -12.02 MSG Takeoff complete at 60.05m
+t= -12.02 MSG Mission: 2 WP
+t=  -5.92 MSG Reached waypoint #2 dist 53m
+t=  -5.92 MSG Mission: 3 WP
+t=   0.00 PARM SIM_RC_FAIL=1.0
+t=   0.00 PARM SIM_RC_FAIL=1.0
+t=   1.18 MSG Throttle failsafe on
+t=   1.18 MODE ModeNum=5 Rsn=3
+t=   1.18 MSG RC Short Failsafe: switched to FBWA
+t=   8.58 PARM SIM_RC_FAIL=0.0
+t=   8.58 PARM SIM_RC_FAIL=0.0
+t=   8.64 MSG Throttle failsafe off
+t=   8.66 MSG RC Short Failsafe Cleared
+t=   8.66 MSG Mission: 3 WP
+t=   8.66 MODE ModeNum=10 Rsn=48
+t=   8.66 MSG Flight mode Auto restored
+t=  16.68 MSG Reached waypoint #3 dist 51m
+t=  16.68 MSG Mission: 4 LoitUnlim

@@ -1,0 +1,32 @@
+t=   0.0 case gndbehav0-fs1: SIM_GND_BEHAV=0 FS_CRASH_CHECK=1 tcp 5780 rc udp 5521
+t=   0.0 mode=STABILIZE armed=False
+t=   0.8 vehicle: Barometer 1 calibration complete
+t=   0.8 vehicle: Barometer 2 calibration complete
+t=   1.3 vehicle: ArduPilot Ready
+t=   1.5 mode=3 armed=False
+t=   1.6 vehicle: RC7: SaveWaypoint MIDDLE
+t=   3.3 vehicle: EKF3 IMU0 initialised
+t=   3.3 vehicle: EKF3 IMU1 initialised
+t=   3.3 vehicle: AHRS: EKF3 active
+t=   4.6 vehicle: EKF3 IMU0 tilt alignment complete
+t=   4.6 vehicle: EKF3 IMU1 tilt alignment complete
+t=   4.7 vehicle: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=   4.7 vehicle: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=   8.6 vehicle: GPS 1: probing for u-blox at 230400 baud
+t=   8.7 vehicle: GPS 1: detected u-blox
+t=  18.9 vehicle: EKF3 IMU0 origin set
+t=  18.9 vehicle: Field Elevation Set: 584m
+t=  19.0 vehicle: EKF3 IMU1 origin set
+t=  20.8 defaults: FS_CRASH_CHECK=1.0 SIM_GND_BEHAV=-1.0 SIM_ENGINE_FAIL=0.0 SIM_ENGINE_MUL=0.0 FLTMODE_CH=5.0
+t=  20.8 params written (rejected [])
+t=  43.9 arm: armed (ack result 0)
+t=  43.9 mode=GUIDED armed=True
+t=  49.4 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete
+t=  49.4 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete
+t=  68.1 hover alt=30.0 mode=GUIDED
+t=  68.1 FAULT: SIM_ENGINE_FAIL -> 1 (rejected [])
+t=  71.3 vehicle: SIM Hit ground at 14.03488 m/s
+t=  90.9 vehicle: Crash: Disarming: AngErr=53>30, Accel=2.5<3.0
+t=  90.9 vehicle: Disarming motors
+t=  91.0 mode=GUIDED armed=False
+t=  95.0 RESULT {"case": "gndbehav0-fs1", "SIM_GND_BEHAV": 0, "FS_CRASH_CHECK": 1, "crash_text_s_after_fault": 22.8, "armed_at_end": false, "disarmed_s_after_fault": 22.9, "gates_after_4s": {"samples": 215, "lean_gt15_s": 21.5, "err_gt30_s": 21.5, "speed_lt10_s": 21.5, "filtered_accel_lt3_s": 16.7, "lean_err_speed_all_s": 21.5, "lean_err_speed_accel_all_s": 16.7, "landed_on_ground_s": 3.8}, "gates_whole_watch": {"samples": 253, "lean_gt15_s": 25.2, "err_gt30_s": 25.1, "speed_lt10_s": 23.5, "filtered_accel_lt3_s": 17.3, "lean_err_speed_all_s": 23.3, "lean_err_speed_accel_all_s": 16.8, "landed_on_ground_s": 3.8}, "final_row": [95.03, "GUIDED", 0, -1.3, 0.79, 56.1, 58.6, "on_ground", 0, 9.82, 0.42]}

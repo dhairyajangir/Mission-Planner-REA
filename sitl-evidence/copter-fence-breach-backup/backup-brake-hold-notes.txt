@@ -1,0 +1,26 @@
+t= 20.22 case backup-brake-hold: FENCE_ACTION=4 FENCE_RADIUS=50.0 FENCE_TYPE=2 FENCE_OPTIONS=0 FENCE_ENABLE=1 accepted=[True, True, True, True, True, True] readback AVOID_ENABLE=0.0 FENCE_ENABLE=1.0
+t= 20.24 HEARTBEAT mode=STABILIZE armed=False dist=None alt=None
+t= 20.24 FENCE_STATUS breach_status=0 count=0 type=0 dist=None
+t= 21.44 vehicle: PreArm: Fence enabled, need position estimate (dist=None)
+t= 23.64 GUIDED: GUIDED active
+t= 44.25 arm: armed (ack result 0)
+t= 44.45 HEARTBEAT mode=GUIDED armed=True dist=0.0 alt=0.0
+t= 49.78 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 49.80 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 60.46 takeoff done alt=20.0
+t= 61.77 LOITER: LOITER active
+t= 61.81 HEARTBEAT mode=LOITER armed=True dist=0.0 alt=20.0
+t= 65.81 pitch stick forward (PWM 1300)
+t= 80.62 FENCE_STATUS breach_status=1 count=1 type=3 dist=50.1
+t= 80.67 HEARTBEAT mode=BRAKE armed=True dist=50.1 alt=20.0
+t= 80.73 vehicle: Circle fence breached (dist=50.1)
+t= 80.73 vehicle: Manual recovery started (dist=50.1)
+t= 87.31 pilot LOITER (while outside): LOITER active
+t= 87.31 vehicle: Manual recovery started (dist=57.4)
+t= 87.31 HEARTBEAT mode=LOITER armed=True dist=58.1 alt=20.0
+t=147.41 finishing (LAND if still armed)
+t=147.50 vehicle: Manual recovery started (dist=58.2)
+t=147.50 HEARTBEAT mode=LAND armed=True dist=58.2 alt=20.0
+t=175.87 vehicle: SIM Hit ground at 0.501408 m/s (dist=58.2)
+t=177.98 vehicle: Disarming motors (dist=58.2)
+t=178.11 HEARTBEAT mode=LAND armed=False dist=58.2 alt=-0.0

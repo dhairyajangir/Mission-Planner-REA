@@ -1,0 +1,603 @@
+[
+ {
+  "case": "ab-east-forward-3lines",
+  "A_NE": [
+   0.0,
+   -0.0
+  ],
+  "B_NE": [
+   0.1,
+   22.2
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 100.2,
+    "t_end": 107.3,
+    "dN": 8.1,
+    "dE": -0.0,
+    "len": 8.1,
+    "start_NE": [
+     0.1,
+     22.2
+    ],
+    "end_NE": [
+     8.2,
+     22.2
+    ],
+    "end_text": "ZigZag: moving to B (line 1/3)"
+   },
+   {
+    "text": "ZigZag: moving to B (line 1/3)",
+    "t_start": 107.3,
+    "t_end": 109.5,
+    "dN": -0.0,
+    "dE": -0.0,
+    "len": 0.1,
+    "start_NE": [
+     8.2,
+     22.2
+    ],
+    "end_NE": [
+     8.2,
+     22.2
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 109.5,
+    "t_end": 116.8,
+    "dN": 8.0,
+    "dE": -0.0,
+    "len": 8.1,
+    "start_NE": [
+     8.2,
+     22.2
+    ],
+    "end_NE": [
+     16.2,
+     22.2
+    ],
+    "end_text": "ZigZag: moving to A (line 2/3)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 2/3)",
+    "t_start": 116.8,
+    "t_end": 126.6,
+    "dN": -0.2,
+    "dE": -22.5,
+    "len": 22.5,
+    "start_NE": [
+     16.2,
+     22.2
+    ],
+    "end_NE": [
+     16.0,
+     -0.4
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 126.6,
+    "t_end": 133.8,
+    "dN": 8.1,
+    "dE": 0.3,
+    "len": 8.1,
+    "start_NE": [
+     16.0,
+     -0.4
+    ],
+    "end_NE": [
+     24.1,
+     -0.1
+    ],
+    "end_text": "ZigZag: moving to B (line 3/3)"
+   },
+   {
+    "text": "ZigZag: moving to B (line 3/3)",
+    "t_start": 133.8,
+    "t_end": 143.5,
+    "dN": 0.0,
+    "dE": 22.5,
+    "len": 22.5,
+    "start_NE": [
+     24.1,
+     -0.1
+    ],
+    "end_NE": [
+     24.1,
+     22.4
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-east-backward-1line",
+  "A_NE": [
+   24.1,
+   22.1
+  ],
+  "B_NE": [
+   24.2,
+   43.9
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to backward",
+    "t_start": 169.6,
+    "t_end": 176.1,
+    "dN": -6.0,
+    "dE": 0.0,
+    "len": 6.0,
+    "start_NE": [
+     24.2,
+     44.0
+    ],
+    "end_NE": [
+     18.1,
+     44.0
+    ],
+    "end_text": "ZigZag: moving to A (line 1/1)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 1/1)",
+    "t_start": 176.1,
+    "t_end": 185.9,
+    "dN": 0.0,
+    "dE": -22.1,
+    "len": 22.1,
+    "start_NE": [
+     18.1,
+     44.0
+    ],
+    "end_NE": [
+     18.1,
+     21.9
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-north-right-2lines",
+  "A_NE": [
+   18.1,
+   22.1
+  ],
+  "B_NE": [
+   40.1,
+   22.1
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to right",
+    "t_start": 212.0,
+    "t_end": 218.4,
+    "dN": 0.0,
+    "dE": 6.1,
+    "len": 6.1,
+    "start_NE": [
+     40.1,
+     22.1
+    ],
+    "end_NE": [
+     40.1,
+     28.1
+    ],
+    "end_text": "ZigZag: moving to B (line 1/2)"
+   },
+   {
+    "text": "ZigZag: moving to B (line 1/2)",
+    "t_start": 218.4,
+    "t_end": 220.4,
+    "dN": -0.0,
+    "dE": -0.0,
+    "len": 0.0,
+    "start_NE": [
+     40.1,
+     28.1
+    ],
+    "end_NE": [
+     40.1,
+     28.1
+    ],
+    "end_text": "ZigZag: moving to right"
+   },
+   {
+    "text": "ZigZag: moving to right",
+    "t_start": 220.4,
+    "t_end": 227.1,
+    "dN": 0.0,
+    "dE": 6.0,
+    "len": 6.0,
+    "start_NE": [
+     40.1,
+     28.1
+    ],
+    "end_NE": [
+     40.1,
+     34.1
+    ],
+    "end_text": "ZigZag: moving to A (line 2/2)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 2/2)",
+    "t_start": 227.1,
+    "t_end": 236.9,
+    "dN": -22.2,
+    "dE": 0.0,
+    "len": 22.2,
+    "start_NE": [
+     40.1,
+     34.1
+    ],
+    "end_NE": [
+     17.9,
+     34.1
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-north-left-1line",
+  "A_NE": [
+   18.2,
+   34.1
+  ],
+  "B_NE": [
+   39.8,
+   34.1
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to left",
+    "t_start": 262.9,
+    "t_end": 269.5,
+    "dN": 0.0,
+    "dE": -6.1,
+    "len": 6.1,
+    "start_NE": [
+     39.9,
+     34.1
+    ],
+    "end_NE": [
+     39.9,
+     28.0
+    ],
+    "end_text": "ZigZag: moving to B (line 1/1)"
+   },
+   {
+    "text": "ZigZag: moving to B (line 1/1)",
+    "t_start": 269.5,
+    "t_end": 271.4,
+    "dN": -0.0,
+    "dE": 0.0,
+    "len": 0.0,
+    "start_NE": [
+     39.9,
+     28.0
+    ],
+    "end_NE": [
+     39.9,
+     28.0
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-east-forward-0lines",
+  "A_NE": [
+   39.8,
+   28.1
+  ],
+  "B_NE": [
+   39.9,
+   50.3
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 297.6,
+    "t_end": 304.2,
+    "dN": 6.0,
+    "dE": -0.0,
+    "len": 6.0,
+    "start_NE": [
+     39.9,
+     50.3
+    ],
+    "end_NE": [
+     46.0,
+     50.3
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-east-forward-3lines-suspend-resume",
+  "A_NE": [
+   45.9,
+   50.3
+  ],
+  "B_NE": [
+   46.0,
+   72.4
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 330.1,
+    "t_end": 337.3,
+    "dN": 8.1,
+    "dE": -0.0,
+    "len": 8.1,
+    "start_NE": [
+     46.0,
+     72.5
+    ],
+    "end_NE": [
+     54.1,
+     72.5
+    ],
+    "end_text": "ZigZag: moving to A (line 1/3)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 1/3)",
+    "t_start": 337.3,
+    "t_end": 339.1,
+    "dN": 0.0,
+    "dE": -0.6,
+    "len": 0.6,
+    "start_NE": [
+     54.1,
+     72.5
+    ],
+    "end_NE": [
+     54.1,
+     71.8
+    ],
+    "end_text": "ZigZag: manual control"
+   },
+   {
+    "text": "ZigZag: manual control",
+    "t_start": 339.1,
+    "t_end": 345.1,
+    "dN": -0.0,
+    "dE": -2.0,
+    "len": 2.0,
+    "start_NE": [
+     54.1,
+     71.8
+    ],
+    "end_NE": [
+     54.1,
+     69.8
+    ],
+    "end_text": "ZigZag: moving to A (line 1/3)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 1/3)",
+    "t_start": 345.1,
+    "t_end": 354.6,
+    "dN": -0.1,
+    "dE": -19.8,
+    "len": 19.8,
+    "start_NE": [
+     54.1,
+     69.8
+    ],
+    "end_NE": [
+     54.0,
+     50.0
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 354.6,
+    "t_end": 361.7,
+    "dN": 8.1,
+    "dE": 0.2,
+    "len": 8.1,
+    "start_NE": [
+     54.0,
+     50.0
+    ],
+    "end_NE": [
+     62.1,
+     50.3
+    ],
+    "end_text": "ZigZag: moving to B (line 2/3)"
+   },
+   {
+    "text": "ZigZag: moving to B (line 2/3)",
+    "t_start": 361.7,
+    "t_end": 371.4,
+    "dN": 0.0,
+    "dE": 22.4,
+    "len": 22.4,
+    "start_NE": [
+     62.1,
+     50.3
+    ],
+    "end_NE": [
+     62.1,
+     72.7
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 371.4,
+    "t_end": 378.6,
+    "dN": 8.1,
+    "dE": -0.3,
+    "len": 8.1,
+    "start_NE": [
+     62.1,
+     72.7
+    ],
+    "end_NE": [
+     70.2,
+     72.4
+    ],
+    "end_text": "ZigZag: moving to A (line 3/3)"
+   },
+   {
+    "text": "ZigZag: moving to A (line 3/3)",
+    "t_start": 378.6,
+    "t_end": 388.4,
+    "dN": -0.2,
+    "dE": -22.4,
+    "len": 22.4,
+    "start_NE": [
+     70.2,
+     72.4
+    ],
+    "end_NE": [
+     70.0,
+     50.0
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ },
+ {
+  "case": "ab-east-forward-infinite-suspend-resume",
+  "A_NE": [
+   70.0,
+   50.2
+  ],
+  "B_NE": [
+   70.1,
+   72.3
+  ],
+  "legs": [
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 414.5,
+    "t_end": 420.9,
+    "dN": 6.1,
+    "dE": -0.0,
+    "len": 6.1,
+    "start_NE": [
+     70.1,
+     72.4
+    ],
+    "end_NE": [
+     76.1,
+     72.4
+    ],
+    "end_text": "ZigZag: moving to B"
+   },
+   {
+    "text": "ZigZag: moving to B",
+    "t_start": 420.9,
+    "t_end": 422.8,
+    "dN": 0.0,
+    "dE": -0.0,
+    "len": 0.0,
+    "start_NE": [
+     76.1,
+     72.4
+    ],
+    "end_NE": [
+     76.1,
+     72.3
+    ],
+    "end_text": "ZigZag: manual control"
+   },
+   {
+    "text": "ZigZag: manual control",
+    "t_start": 422.8,
+    "t_end": 428.8,
+    "dN": -0.0,
+    "dE": 0.0,
+    "len": 0.0,
+    "start_NE": [
+     76.1,
+     72.3
+    ],
+    "end_NE": [
+     76.1,
+     72.3
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 428.8,
+    "t_end": 435.3,
+    "dN": 6.0,
+    "dE": -0.0,
+    "len": 6.0,
+    "start_NE": [
+     76.1,
+     72.3
+    ],
+    "end_NE": [
+     82.1,
+     72.3
+    ],
+    "end_text": "ZigZag: moving to A"
+   },
+   {
+    "text": "ZigZag: moving to A",
+    "t_start": 435.3,
+    "t_end": 445.2,
+    "dN": -0.2,
+    "dE": -22.4,
+    "len": 22.4,
+    "start_NE": [
+     82.1,
+     72.3
+    ],
+    "end_NE": [
+     82.0,
+     49.9
+    ],
+    "end_text": "ZigZag: moving to forward"
+   },
+   {
+    "text": "ZigZag: moving to forward",
+    "t_start": 445.2,
+    "t_end": 451.6,
+    "dN": 6.1,
+    "dE": 0.2,
+    "len": 6.1,
+    "start_NE": [
+     82.0,
+     49.9
+    ],
+    "end_NE": [
+     88.0,
+     50.1
+    ],
+    "end_text": "ZigZag: moving to B"
+   },
+   {
+    "text": "ZigZag: moving to B",
+    "t_start": 451.6,
+    "t_end": 453.8,
+    "dN": 0.0,
+    "dE": 1.2,
+    "len": 1.2,
+    "start_NE": [
+     88.0,
+     50.1
+    ],
+    "end_NE": [
+     88.1,
+     51.4
+    ],
+    "end_text": "ZigZag: manual control"
+   }
+  ]
+ }
+]

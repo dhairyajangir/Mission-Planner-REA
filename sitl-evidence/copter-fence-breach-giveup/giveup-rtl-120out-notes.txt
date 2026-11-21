@@ -1,0 +1,17 @@
+t= 20.22 case giveup-rtl-120out: FENCE_ACTION=1 FENCE_RADIUS=50.0 FENCE_TYPE=2 FENCE_OPTIONS=0 FENCE_ENABLE=0 accepted=[True, True, True, True, True, True] readback AVOID_ENABLE=0.0 FENCE_ENABLE=0.0
+t= 20.23 HEARTBEAT mode=STABILIZE armed=False dist=None alt=None
+t= 23.69 GUIDED: GUIDED active
+t= 44.44 arm: armed (ack result 0)
+t= 44.64 HEARTBEAT mode=GUIDED armed=True dist=0.0 alt=0.0
+t= 49.99 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 49.99 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 60.71 takeoff done alt=20.0
+t= 84.36 sending MAV_CMD_DO_FENCE_ENABLE(1) at dist=170.5 m, mode=GUIDED
+t= 84.39 FENCE_STATUS breach_status=1 count=1 type=3 dist=170.5
+t= 84.42 HEARTBEAT mode=LAND armed=True dist=170.5 alt=20.0
+t= 84.42 after enable: mode LAND
+t= 84.43 vehicle: Circle fence breached (dist=170.5)
+t= 84.43 vehicle: Manual recovery started (dist=170.5)
+t=112.82 vehicle: SIM Hit ground at 0.501047 m/s (dist=170.0)
+t=114.93 vehicle: Disarming motors (dist=170.0)
+t=115.07 HEARTBEAT mode=LAND armed=False dist=170.0 alt=-0.0

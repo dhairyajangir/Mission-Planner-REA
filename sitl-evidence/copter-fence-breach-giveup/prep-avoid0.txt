@@ -1,0 +1,1 @@
+AVOID_ENABLE=0 set under -w accepted=[True, True]; restart without -w; readback (AVOID_ENABLE, FLTMODE_CH)=(0.0, 0.0)

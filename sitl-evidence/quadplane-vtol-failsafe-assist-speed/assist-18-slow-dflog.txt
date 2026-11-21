@@ -1,0 +1,28 @@
+    0.000 MSG  Throttle armed
+    0.002 MSG  ArduPlane V4.8.0-dev (15a10bb4)
+    0.002 MSG  =04cfea5c7cf4f1fb8b47f8b3e8289cf
+    0.002 MSG  Param space used: 172/3840
+    0.002 MSG  RC Protocol: UDP
+    0.002 MSG  New mission
+    0.002 MSG  New rally
+    0.002 MSG  New fence
+    0.002 MSG  QuadPlane Frame: QUAD/X
+    0.002 MODE mode=0 modenum=0 reason=2
+    0.002 MSG  GPS 1: probing for u-blox at 230400 baud
+    1.185 MSG  Mission: 1 VTOLTakeoff
+    1.185 MODE mode=10 modenum=10 reason=2
+   14.550 MSG  Mission: 2 WP
+   14.553 MSG  Transition started airspeed 0.8
+   18.953 MSG  Transition airspeed reached 18.2
+   23.956 MSG  Transition done
+   24.849 MSG  Reached waypoint #2 dist 77m
+   24.849 MSG  Mission: 3 LoitUnlim
+   44.850 MSG  Transition started airspeed 18.0
+   45.951 MSG  Transition airspeed reached 18.1
+   50.953 MSG  Transition done
+   53.549 MSG  Transition started airspeed 17.9
+   55.749 MSG  Transition airspeed reached 18.1
+   60.752 MSG  Transition done
+   63.349 MSG  Transition started airspeed 17.9
+   65.349 MSG  Transition airspeed reached 18.0
+   70.351 MSG  Transition done

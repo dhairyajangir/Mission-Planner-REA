@@ -1,0 +1,25 @@
+# 00000001.BIN: vehicle clock, seconds relative to the first injected PARM record (reference 60.245059 s of log time)
+t= -24.48 MSG Mission: 1 Takeoff
+t= -24.48 MODE ModeNum=10 Rsn=2
+t= -24.46 MSG Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -24.26 MSG Triggered AUTO. GPS speed = 0.0
+t= -23.00 MSG Holding course 35998 at 6.5m/s (0.0)
+t= -22.98 MSG Autoland direction= 359
+t= -16.82 MSG Takeoff level-off starting at 20m
+t= -15.88 MSG EKF2 IMU0 is using GPS
+t= -15.88 MSG EKF2 IMU1 is using GPS
+t= -14.80 MSG Takeoff complete at 60.16m
+t= -14.80 MSG Mission: 2 WP
+t=  -8.70 MSG Reached waypoint #2 dist 52m
+t=  -8.70 MSG Mission: 3 WP
+t=   0.00 PARM SIM_RC_FAIL=2.0
+t=   0.00 PARM SIM_RC_FAIL=2.0
+t=   0.20 MSG Throttle failsafe on
+t=   0.20 MSG RC Short Failsafe On
+t=   5.18 MSG RC Long Failsafe On: switched to Auto
+t=   8.50 MSG Reached waypoint #3 dist 51m
+t=   8.50 MSG Mission: 4 LoitUnlim
+t=  14.12 PARM SIM_RC_FAIL=0.0
+t=  14.12 PARM SIM_RC_FAIL=0.0
+t=  14.22 MSG Throttle failsafe off
+t=  14.46 MSG RC Long Failsafe Cleared

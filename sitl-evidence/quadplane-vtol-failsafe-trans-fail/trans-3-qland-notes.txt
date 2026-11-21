@@ -1,0 +1,18 @@
+scenario trans-3-qland: pre {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': 0} route land slow-after-done None slow-params {}
+defaults read: {'Q_ENABLE': 1.0, 'Q_ASSIST_SPEED': 18.0, 'Q_ASSIST_ANGLE': 30.0, 'Q_ASSIST_ALT': 0.0, 'Q_ASSIST_DELAY': 0.5, 'Q_ASSIST_OPTIONS': 0.0, 'Q_TRANS_FAIL': 0.0, 'Q_TRANS_FAIL_ACT': 0.0, 'Q_OPTIONS': 0.0, 'Q_RTL_MODE': 0.0, 'Q_RTL_ALT': 15.0, 'AIRSPEED_MIN': 13.0, 'AIRSPEED_MAX': 35.0, 'AIRSPEED_CRUISE': 25.0, 'ARSPD_USE': 1.0, 'FS_GCS_ENABL': 0.0, 'Q_FRAME_CLASS': 1.0, 'SERVO5_FUNCTION': 33.0, 'SERVO6_FUNCTION': 34.0, 'SERVO7_FUNCTION': 35.0, 'SERVO8_FUNCTION': 36.0}
+pre-flight params set {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': 0} (rejected [])
+read back: {'Q_TRANS_FAIL': 3.0, 'Q_TRANS_FAIL_ACT': 0.0}
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  0.2 mode AUTO armed=True
+t= 13.5 vehicle: Mission: 2 WP
+t= 13.5 vehicle: Transition started airspeed 0.7
+t= 17.4 mode QLAND armed=True
+t= 18.4 vehicle: Transition failed, exceeded time limit
+t= 54.9 vehicle: SIM Hit ground at 0.502296 m/s
+t= 63.1 vehicle: Land complete
+t= 63.1 vehicle: Throttle disarmed
+t= 63.1 disarmed, stopping watch
+end t=64.1 mode QLAND armed False airspeed 0.7180989384651184 rel-alt -0.0

@@ -1,0 +1,503 @@
+[
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "STABILIZE",
+  "case": "ground-armed-stabilize-thr1000",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground (alt about 0), throttle 1000",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 0.002,
+  "thr_pwm": 1000,
+  "rc3_seen_by_vehicle": 1000,
+  "landed_state_before(1=ground,2=air)": 1,
+  "vfr_throttle_pct_before": 0,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: pilot overrides active",
+   "AutoTune: pilot overrides active",
+   "Disarming motors"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "ground-armed-stabilize-thr1050",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground (alt about 0), throttle 1050",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": -0.005,
+  "thr_pwm": 1050,
+  "rc3_seen_by_vehicle": 1050,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 1,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": false,
+  "tune_6s": {
+   "peak_abs_roll_deg": 0.2,
+   "peak_abs_pitch_deg": 0.2,
+   "alt_min": -0.01,
+   "alt_max": -0.01,
+   "texts": []
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: pilot overrides active",
+   "AutoTune: pilot overrides active",
+   "Disarming motors"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "ground-armed-stabilize-thr1100",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground (alt about 0), throttle 1100",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 0.004,
+  "thr_pwm": 1100,
+  "rc3_seen_by_vehicle": 1100,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 5,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": false,
+  "tune_6s": {
+   "peak_abs_roll_deg": 0.3,
+   "peak_abs_pitch_deg": 0.3,
+   "alt_min": 0.0,
+   "alt_max": 0.0,
+   "texts": []
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: pilot overrides active",
+   "AutoTune: pilot overrides active",
+   "Disarming motors"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "ground-armed-stabilize-thr1200",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground (alt about 0), throttle 1200",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 0.004,
+  "thr_pwm": 1200,
+  "rc3_seen_by_vehicle": 1200,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 12,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": false,
+  "tune_6s": {
+   "peak_abs_roll_deg": 0.4,
+   "peak_abs_pitch_deg": 0.4,
+   "alt_min": 0.0,
+   "alt_max": 0.01,
+   "texts": []
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate D Up 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-from-alt_hold",
+  "requested_from": "ALT_HOLD",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": 25.001,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 8.0,
+   "peak_abs_pitch_deg": 0.0,
+   "alt_min": 25.0,
+   "alt_max": 25.01,
+   "texts": [
+    "AutoTune: Roll Rate D Up 50%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate D Down 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-from-stabilize",
+  "requested_from": "STABILIZE",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 25.535,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 10.0,
+   "peak_abs_pitch_deg": 0.0,
+   "alt_min": 25.65,
+   "alt_max": 25.65,
+   "texts": [
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate D Down 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-from-loiter",
+  "requested_from": "LOITER",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "LOITER",
+  "alt_before": 25.649,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 13.5,
+   "peak_abs_pitch_deg": 0.4,
+   "alt_min": 25.65,
+   "alt_max": 25.65,
+   "texts": [
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%",
+    "AutoTune: Roll Rate D Down 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Roll Rate D Down 0%",
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate D Down 0%",
+   "AutoTune: Roll Rate D Down 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-from-poshold",
+  "requested_from": "POSHOLD",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "POSHOLD",
+  "alt_before": 25.648,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 18.4,
+   "peak_abs_pitch_deg": 0.4,
+   "alt_min": 25.65,
+   "alt_max": 25.65,
+   "texts": [
+    "AutoTune: Roll Rate D Down 25%",
+    "AutoTune: Roll Rate D Down 75%",
+    "AutoTune: Roll Rate P Up 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "GUIDED",
+  "case": "air-from-guided",
+  "requested_from": "GUIDED",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "GUIDED",
+  "alt_before": 25.647,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "SPORT",
+  "case": "air-from-sport",
+  "requested_from": "SPORT",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "SPORT",
+  "alt_before": 25.65,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "DRIFT",
+  "case": "air-from-drift",
+  "requested_from": "DRIFT",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "DRIFT",
+  "alt_before": 25.654,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "ACRO",
+  "case": "air-from-acro",
+  "requested_from": "ACRO",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "ACRO",
+  "alt_before": 25.661,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "BRAKE",
+  "case": "air-from-brake",
+  "requested_from": "BRAKE",
+  "note": "flying, throttle 1500",
+  "from_mode_actual": "BRAKE",
+  "alt_before": 25.674,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "ALT_HOLD",
+  "case": "air-from-alt_hold-thr1000-1.5s",
+  "requested_from": "ALT_HOLD",
+  "note": "throttle stick held at 1000 for 1.5 s before the request (debounce window passed), held through the request",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": 24.293,
+  "thr_pwm": 1000,
+  "rc3_seen_by_vehicle": 1000,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 31,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "LOITER",
+  "case": "air-from-loiter-thr1000-1.5s",
+  "requested_from": "LOITER",
+  "note": "throttle stick held at 1000 for 1.5 s before the request (debounce window passed), held through the request",
+  "from_mode_actual": "LOITER",
+  "alt_before": 22.868,
+  "thr_pwm": 1000,
+  "rc3_seen_by_vehicle": 1000,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 32,
+  "armed_before": true,
+  "accepted": false,
+  "armed_after_request_2s": true
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate P Up 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-reentry-1",
+  "requested_from": "ALT_HOLD",
+  "note": "repeat entry from ALT_HOLD after the earlier accepted entry/exit",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": 24.492,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 17.6,
+   "peak_abs_pitch_deg": 0.1,
+   "alt_min": 24.49,
+   "alt_max": 24.5,
+   "texts": [
+    "AutoTune: Roll Rate P Up 0%",
+    "AutoTune: Roll Rate P Up 0%",
+    "AutoTune: Roll Rate P Up 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Roll Rate P Up 0%",
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: Roll Rate P Up 0%"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "air-reentry-2",
+  "requested_from": "ALT_HOLD",
+  "note": "repeat entry from ALT_HOLD after the earlier accepted entry/exit",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": 24.491,
+  "thr_pwm": 1500,
+  "rc3_seen_by_vehicle": 1500,
+  "landed_state_before(1=ground,2=air)": 2,
+  "vfr_throttle_pct_before": 37,
+  "armed_before": true,
+  "accepted": true,
+  "armed_after_request_2s": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 17.7,
+   "peak_abs_pitch_deg": 0.1,
+   "alt_min": 24.49,
+   "alt_max": 24.5,
+   "texts": [
+    "AutoTune: Roll Rate P Up 0%",
+    "AutoTune: Roll Rate P Up 0%",
+    "AutoTune: Roll Rate P Up 0%"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Roll Rate P Up 0%",
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ }
+]

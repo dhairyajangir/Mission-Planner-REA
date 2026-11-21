@@ -1,0 +1,115 @@
+[
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "STABILIZE",
+  "case": "ground-armed-stabilize-thr1000",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground, throttle stick at 1000",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 0.002,
+  "thr_pwm": 1000,
+  "accepted": false
+ },
+ {
+  "acks": [
+   0
+  ],
+  "texts": [
+   "AutoTune: Started",
+   "AutoTune: pilot overrides active",
+   "AutoTune: pilot overrides active",
+   "Disarming motors"
+  ],
+  "mode_after": "AUTOTUNE",
+  "case": "ground-armed-stabilize-thr1100",
+  "requested_from": "STABILIZE",
+  "note": "armed on ground, throttle 1100 (below hover)",
+  "from_mode_actual": "STABILIZE",
+  "alt_before": 0.001,
+  "thr_pwm": 1100,
+  "accepted": true,
+  "tune_6s": {
+   "peak_abs_roll_deg": 0.2,
+   "peak_abs_pitch_deg": 0.2,
+   "alt_min": -0.01,
+   "alt_max": 0.0,
+   "texts": [
+    "EKF3 IMU0 is using GPS",
+    "EKF3 IMU1 is using GPS"
+   ]
+  },
+  "exit_texts": [
+   "AutoTune: Stopped"
+  ],
+  "mode_after_exit": "ALT_HOLD"
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "ALT_HOLD",
+  "case": "air-from-alt_hold-thr1000-1.5s",
+  "requested_from": "ALT_HOLD",
+  "note": "throttle stick held at 1000 for 1.5 s before the request (debounce window passed), held through the request",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": -0.006,
+  "thr_pwm": 1000,
+  "accepted": false
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "LOITER",
+  "case": "air-from-loiter-thr1000-1.5s",
+  "requested_from": "LOITER",
+  "note": "throttle stick held at 1000 for 1.5 s before the request (debounce window passed), held through the request",
+  "from_mode_actual": "LOITER",
+  "alt_before": -0.006,
+  "thr_pwm": 1000,
+  "accepted": false
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "ALT_HOLD",
+  "case": "air-reentry-1",
+  "requested_from": "ALT_HOLD",
+  "note": "repeat entry from ALT_HOLD after the earlier accepted entry/exit",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": -0.006,
+  "thr_pwm": 1500,
+  "accepted": false
+ },
+ {
+  "acks": [
+   4
+  ],
+  "texts": [
+   "Mode change to Autotune failed: init failed"
+  ],
+  "mode_after": "ALT_HOLD",
+  "case": "air-reentry-2",
+  "requested_from": "ALT_HOLD",
+  "note": "repeat entry from ALT_HOLD after the earlier accepted entry/exit",
+  "from_mode_actual": "ALT_HOLD",
+  "alt_before": -0.006,
+  "thr_pwm": 1500,
+  "accepted": false
+ }
+]

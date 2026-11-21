@@ -1,0 +1,16 @@
+ab-east-forward-3lines  A=(0.0, -0.0) B=(0.1, 21.7)
+     97.9- 105.1 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to B (line 1/3)
+    105.1- 107.3 s  ZigZag: moving to B (line 1/3)     dN=  -0.0 dE=  -0.0 len=  0.1  ends with: ZigZag: moving to forward
+    107.3- 114.6 s  ZigZag: moving to forward          dN=   8.0 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to A (line 2/3)
+    114.6- 124.3 s  ZigZag: moving to A (line 2/3)     dN=  -0.2 dE= -22.0 len= 22.0  ends with: ZigZag: moving to forward
+    124.3- 131.4 s  ZigZag: moving to forward          dN=   8.1 dE=   0.2 len=  8.1  ends with: ZigZag: moving to B (line 3/3)
+    131.4- 141.1 s  ZigZag: moving to B (line 3/3)     dN=   0.0 dE=  22.0 len= 22.0  ends with: ZigZag: manual control
+ab-east-forward-3lines-suspend-resume  A=(24.1, 21.6) B=(24.2, 43.7)
+    167.4- 174.5 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to A (line 1/3)
+    174.5- 176.4 s  ZigZag: moving to A (line 1/3)     dN=   0.0 dE=  -0.8 len=  0.8  ends with: ZigZag: manual control
+    176.4- 182.4 s  ZigZag: manual control             dN=   0.0 dE=  -1.9 len=  1.9  ends with: ZigZag: moving to A (line 1/3)
+    182.4- 191.8 s  ZigZag: moving to A (line 1/3)     dN=  -0.0 dE= -19.7 len= 19.7  ends with: ZigZag: moving to forward
+    191.8- 199.0 s  ZigZag: moving to forward          dN=   8.1 dE=   0.2 len=  8.1  ends with: ZigZag: moving to B (line 2/3)
+    199.0- 208.8 s  ZigZag: moving to B (line 2/3)     dN=  -0.0 dE=  22.3 len= 22.3  ends with: ZigZag: moving to forward
+    208.8- 215.9 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.3 len=  8.1  ends with: ZigZag: moving to A (line 3/3)
+    215.9- 225.5 s  ZigZag: moving to A (line 3/3)     dN=  -0.1 dE= -22.4 len= 22.4  ends with: ZigZag: manual control

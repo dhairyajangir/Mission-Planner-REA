@@ -1,0 +1,3 @@
+Second run of research-tools/sitl-copter-zigzag-auto.py with the infinite-line suspend/resume case flown twice.  Added after the full run showed that its first auto A/B leg was a zero-length
+one (the vehicle was already on the perpendicular line through B), so the 'resume abandons the interrupted leg' check was not decisive there.  The second flight of the case starts with
+a long leg to A and is the decisive one.  The script's CASES list gained one entry (the '-repeat' label) after the full run; no other change.

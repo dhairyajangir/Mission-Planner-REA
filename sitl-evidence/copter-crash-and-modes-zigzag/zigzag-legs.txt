@@ -1,0 +1,37 @@
+ab-east-forward-3lines  A=(0.0, -0.0) B=(0.1, 22.2)
+    100.2- 107.3 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to B (line 1/3)
+    107.3- 109.5 s  ZigZag: moving to B (line 1/3)     dN=  -0.0 dE=  -0.0 len=  0.1  ends with: ZigZag: moving to forward
+    109.5- 116.8 s  ZigZag: moving to forward          dN=   8.0 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to A (line 2/3)
+    116.8- 126.6 s  ZigZag: moving to A (line 2/3)     dN=  -0.2 dE= -22.5 len= 22.5  ends with: ZigZag: moving to forward
+    126.6- 133.8 s  ZigZag: moving to forward          dN=   8.1 dE=   0.3 len=  8.1  ends with: ZigZag: moving to B (line 3/3)
+    133.8- 143.5 s  ZigZag: moving to B (line 3/3)     dN=   0.0 dE=  22.5 len= 22.5  ends with: ZigZag: manual control
+ab-east-backward-1line  A=(24.1, 22.1) B=(24.2, 43.9)
+    169.6- 176.1 s  ZigZag: moving to backward         dN=  -6.0 dE=   0.0 len=  6.0  ends with: ZigZag: moving to A (line 1/1)
+    176.1- 185.9 s  ZigZag: moving to A (line 1/1)     dN=   0.0 dE= -22.1 len= 22.1  ends with: ZigZag: manual control
+ab-north-right-2lines  A=(18.1, 22.1) B=(40.1, 22.1)
+    212.0- 218.4 s  ZigZag: moving to right            dN=   0.0 dE=   6.1 len=  6.1  ends with: ZigZag: moving to B (line 1/2)
+    218.4- 220.4 s  ZigZag: moving to B (line 1/2)     dN=  -0.0 dE=  -0.0 len=  0.0  ends with: ZigZag: moving to right
+    220.4- 227.1 s  ZigZag: moving to right            dN=   0.0 dE=   6.0 len=  6.0  ends with: ZigZag: moving to A (line 2/2)
+    227.1- 236.9 s  ZigZag: moving to A (line 2/2)     dN= -22.2 dE=   0.0 len= 22.2  ends with: ZigZag: manual control
+ab-north-left-1line  A=(18.2, 34.1) B=(39.8, 34.1)
+    262.9- 269.5 s  ZigZag: moving to left             dN=   0.0 dE=  -6.1 len=  6.1  ends with: ZigZag: moving to B (line 1/1)
+    269.5- 271.4 s  ZigZag: moving to B (line 1/1)     dN=  -0.0 dE=   0.0 len=  0.0  ends with: ZigZag: manual control
+ab-east-forward-0lines  A=(39.8, 28.1) B=(39.9, 50.3)
+    297.6- 304.2 s  ZigZag: moving to forward          dN=   6.0 dE=  -0.0 len=  6.0  ends with: ZigZag: manual control
+ab-east-forward-3lines-suspend-resume  A=(45.9, 50.3) B=(46.0, 72.4)
+    330.1- 337.3 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.0 len=  8.1  ends with: ZigZag: moving to A (line 1/3)
+    337.3- 339.1 s  ZigZag: moving to A (line 1/3)     dN=   0.0 dE=  -0.6 len=  0.6  ends with: ZigZag: manual control
+    339.1- 345.1 s  ZigZag: manual control             dN=  -0.0 dE=  -2.0 len=  2.0  ends with: ZigZag: moving to A (line 1/3)
+    345.1- 354.6 s  ZigZag: moving to A (line 1/3)     dN=  -0.1 dE= -19.8 len= 19.8  ends with: ZigZag: moving to forward
+    354.6- 361.7 s  ZigZag: moving to forward          dN=   8.1 dE=   0.2 len=  8.1  ends with: ZigZag: moving to B (line 2/3)
+    361.7- 371.4 s  ZigZag: moving to B (line 2/3)     dN=   0.0 dE=  22.4 len= 22.4  ends with: ZigZag: moving to forward
+    371.4- 378.6 s  ZigZag: moving to forward          dN=   8.1 dE=  -0.3 len=  8.1  ends with: ZigZag: moving to A (line 3/3)
+    378.6- 388.4 s  ZigZag: moving to A (line 3/3)     dN=  -0.2 dE= -22.4 len= 22.4  ends with: ZigZag: manual control
+ab-east-forward-infinite-suspend-resume  A=(70.0, 50.2) B=(70.1, 72.3)
+    414.5- 420.9 s  ZigZag: moving to forward          dN=   6.1 dE=  -0.0 len=  6.1  ends with: ZigZag: moving to B
+    420.9- 422.8 s  ZigZag: moving to B                dN=   0.0 dE=  -0.0 len=  0.0  ends with: ZigZag: manual control
+    422.8- 428.8 s  ZigZag: manual control             dN=  -0.0 dE=   0.0 len=  0.0  ends with: ZigZag: moving to forward
+    428.8- 435.3 s  ZigZag: moving to forward          dN=   6.0 dE=  -0.0 len=  6.0  ends with: ZigZag: moving to A
+    435.3- 445.2 s  ZigZag: moving to A                dN=  -0.2 dE= -22.4 len= 22.4  ends with: ZigZag: moving to forward
+    445.2- 451.6 s  ZigZag: moving to forward          dN=   6.1 dE=   0.2 len=  6.1  ends with: ZigZag: moving to B
+    451.6- 453.8 s  ZigZag: moving to B                dN=   0.0 dE=   1.2 len=  1.2  ends with: ZigZag: manual control

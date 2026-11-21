@@ -1,0 +1,45 @@
+case fbwa-thrfsvalue-long: pre={} mode_at_fault=FLY_BY_WIRE_A feed_udp_rc=True inject={'THR_FS_VALUE': 1600} clear={'THR_FS_VALUE': 950} clear_at=14s watch=40s; SITL -I 3 (TCP 5790, RC UDP 5531)
+defaults: THR_FAILSAFE=1.0 THR_FS_VALUE=950.0 FS_SHORT_ACTN=0.0 FS_LONG_ACTN=0.0 FS_LONG_TIMEOUT=5.0 RC_FS_TIMEOUT=1.0 FLTMODE_CH=8.0 SIM_RC_FAIL=0.0 FS_GCS_ENABL=0.0
+pre-flight params set: FLTMODE_CH=0 plus {} (rejected [])
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+reached cruise altitude: True (alt 56.546)
+UDP RC feeder running (throttle centred 1500) from cruise, before the fault
+requested FLY_BY_WIRE_A: FLY_BY_WIRE_A active
+state before fault: mode=FLY_BY_WIRE_A alt=68.063 servo3=1500 rc3=1500
+t= -32.9 vehicle: Mission: 1 Takeoff
+t= -32.9 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -32.9 MISSION_CURRENT seq=1
+t= -32.9 vehicle: Triggered AUTO. GPS speed = 0.0
+t= -32.3 HEARTBEAT mode=AUTO armed=True
+t= -31.4 vehicle: Autoland direction= 0
+t= -31.4 vehicle: Holding course 35999 at 6.5m/s (0.0)
+t= -24.6 vehicle: Takeoff level-off starting at 20m
+t= -23.8 vehicle: EKF2 IMU0 is using GPS
+t= -23.8 vehicle: EKF2 IMU1 is using GPS
+t= -23.1 vehicle: Takeoff complete at 60.33m
+t= -23.1 vehicle: Mission: 2 WP
+t= -23.1 MISSION_CURRENT seq=2
+t= -16.4 vehicle: Reached waypoint #2 dist 52m
+t= -16.4 vehicle: Mission: 3 WP
+t= -16.4 MISSION_CURRENT seq=3
+t=  -8.2 HEARTBEAT mode=FLY_BY_WIRE_A armed=True
+t=  -7.0 PARAM_VALUE STAT_FLTTIME=25.0
+t=  -7.0 PARAM_VALUE STAT_RUNTIME=60.0
+t=  -7.0 PARAM_VALUE STAT_FLTCNT=1.0
+t=  -7.0 PARAM_VALUE STAT_DISTFLWN=603.2923583984375
+t=   0.0 SENT param_set THR_FS_VALUE=1600
+t=   0.0 PARAM_VALUE THR_FS_VALUE=1600.0
+t=   1.0 HEARTBEAT mode=CIRCLE armed=True
+t=   1.0 vehicle: Throttle failsafe on
+t=   1.0 vehicle: RC Short Failsafe: switched to Circle
+t=   5.8 HEARTBEAT mode=RTL armed=True
+t=   5.8 vehicle: RC Long Failsafe On: switched to RTL
+t=  14.0 SENT param_set THR_FS_VALUE=950
+t=  14.0 PARAM_VALUE THR_FS_VALUE=950.0
+t=  14.1 vehicle: Throttle failsafe off
+t=  14.5 vehicle: RC Long Failsafe Cleared
+t=  23.9 PARAM_VALUE STAT_FLTTIME=56.0
+t=  23.9 PARAM_VALUE STAT_RUNTIME=91.0
+t=  23.9 PARAM_VALUE STAT_DISTFLWN=1304.4371337890625

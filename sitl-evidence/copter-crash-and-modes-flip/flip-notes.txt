@@ -1,0 +1,97 @@
+t=   0.0 connected tcp 5780, RC udp 5521
+t=   0.0 mode=STABILIZE armed=False
+t=   0.4 vehicle: Barometer 1 calibration complete
+t=   0.4 vehicle: Barometer 2 calibration complete
+t=   1.0 vehicle: ArduPilot Ready
+t=   1.2 mode=3 armed=False
+t=   1.3 vehicle: RC7: SaveWaypoint MIDDLE
+t=   3.0 vehicle: EKF3 IMU0 initialised
+t=   3.0 vehicle: EKF3 IMU1 initialised
+t=   3.0 vehicle: AHRS: EKF3 active
+t=   4.3 vehicle: EKF3 IMU0 tilt alignment complete
+t=   4.3 vehicle: EKF3 IMU1 tilt alignment complete
+t=   4.4 vehicle: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=   4.4 vehicle: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=   8.3 vehicle: GPS 1: probing for u-blox at 230400 baud
+t=   8.3 vehicle: GPS 1: detected u-blox
+t=  18.5 vehicle: EKF3 IMU0 origin set
+t=  18.6 vehicle: Field Elevation Set: 584m
+t=  18.7 vehicle: EKF3 IMU1 origin set
+t=  20.8 defaults: FLTMODE_CH=5.0 FS_THR_ENABLE=1.0 FS_CRASH_CHECK=1.0 ATC_ANGLE_MAX=30.0 FLIP_RATE=400.0
+t=  20.8 FLTMODE_CH -> 0 (rejected [])
+t=  40.3 arm: armed (ack result 0)
+t=  40.4 mode=GUIDED armed=True
+t=  45.9 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete
+t=  45.9 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete
+t=  56.4 takeoff alt=28.632
+t=  61.4 mode=ALT_HOLD armed=True
+t=  68.7 althold-centred: from ALT_HOLD alt=30.0, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t=  68.7 mode=FLIP armed=True
+t=  69.9 mode=ALT_HOLD armed=True
+t=  71.9 RESULT {"case": "althold-centred", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.14, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 414.0, "peak_pitch_rate_dps": 14.0, "peak_abs_roll_deg_signed": 176.2, "peak_abs_pitch_deg_signed": -1.7, "alt_start_m": 30.001, "alt_min_m": 26.4, "alt_end_m": 26.4, "armed_end": true}
+t=  84.8 althold-centred-repeat: from ALT_HOLD alt=26.1, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t=  84.8 mode=FLIP armed=True
+t=  85.9 mode=ALT_HOLD armed=True
+t=  88.0 RESULT {"case": "althold-centred-repeat", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.12, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 415.0, "peak_pitch_rate_dps": -5.0, "peak_abs_roll_deg_signed": -178.8, "peak_abs_pitch_deg_signed": 0.6, "alt_start_m": 26.076, "alt_min_m": 22.4, "alt_end_m": 22.4, "armed_end": true}
+t= 100.9 althold-roll-left: from ALT_HOLD alt=22.1, sticks roll=1200 pitch=1500 (RC_CHANNELS seen (1200, 1500, 1500, 1500))
+t= 100.9 mode=FLIP armed=True
+t= 102.1 mode=ALT_HOLD armed=True
+t= 104.2 RESULT {"case": "althold-roll-left", "from_mode": "ALT_HOLD", "roll_pwm": 1200, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.21, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": -411.0, "peak_pitch_rate_dps": 4.0, "peak_abs_roll_deg_signed": 179.8, "peak_abs_pitch_deg_signed": -0.5, "alt_start_m": 22.087, "alt_min_m": 17.6, "alt_end_m": 17.6, "armed_end": true}
+t= 140.2 althold-roll-right: from ALT_HOLD alt=29.5, sticks roll=1800 pitch=1500 (RC_CHANNELS seen (1800, 1500, 1500, 1500))
+t= 140.2 mode=FLIP armed=True
+t= 141.4 mode=ALT_HOLD armed=True
+t= 143.5 RESULT {"case": "althold-roll-right", "from_mode": "ALT_HOLD", "roll_pwm": 1800, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.18, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 412.0, "peak_pitch_rate_dps": -0.0, "peak_abs_roll_deg_signed": -178.7, "peak_abs_pitch_deg_signed": -0.0, "alt_start_m": 29.522, "alt_min_m": 25.0, "alt_end_m": 25.0, "armed_end": true}
+t= 156.3 althold-pitch-back: from ALT_HOLD alt=24.7, sticks roll=1500 pitch=1800 (RC_CHANNELS seen (1500, 1800, 1500, 1500))
+t= 156.3 mode=FLIP armed=True
+t= 157.4 mode=ALT_HOLD armed=True
+t= 159.5 RESULT {"case": "althold-pitch-back", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1800, "flip_mode_seen": true, "flip_active_s": 1.07, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": -1.0, "peak_pitch_rate_dps": 412.0, "peak_abs_roll_deg_signed": -180.0, "peak_abs_pitch_deg_signed": 88.0, "alt_start_m": 24.741, "alt_min_m": 19.9, "alt_end_m": 19.9, "armed_end": true}
+t= 192.0 althold-pitch-forward: from ALT_HOLD alt=29.5, sticks roll=1500 pitch=1200 (RC_CHANNELS seen (1500, 1200, 1500, 1500))
+t= 192.0 mode=FLIP armed=True
+t= 193.1 mode=ALT_HOLD armed=True
+t= 195.1 RESULT {"case": "althold-pitch-forward", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1200, "flip_mode_seen": true, "flip_active_s": 1.09, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 1.0, "peak_pitch_rate_dps": -412.0, "peak_abs_roll_deg_signed": 180.0, "peak_abs_pitch_deg_signed": 88.4, "alt_start_m": 29.497, "alt_min_m": 24.6, "alt_end_m": 24.6, "armed_end": true}
+t= 200.7 mode=STABILIZE armed=True
+t= 208.0 stabilize-centred: from STABILIZE alt=25.0, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 208.0 mode=FLIP armed=True
+t= 209.2 mode=STABILIZE armed=True
+t= 211.2 RESULT {"case": "stabilize-centred", "from_mode": "STABILIZE", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.14, "mode_after": "STABILIZE", "peak_roll_rate_dps": 416.0, "peak_pitch_rate_dps": 2.0, "peak_abs_roll_deg_signed": -179.6, "peak_abs_pitch_deg_signed": -0.2, "alt_start_m": 24.984, "alt_min_m": 17.6, "alt_end_m": 17.6, "armed_end": true}
+t= 211.2 mode=ALT_HOLD armed=True
+t= 241.0 mode=ACRO armed=True
+t= 248.3 acro-centred: from ACRO alt=30.6, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 248.3 mode=FLIP armed=True
+t= 249.4 mode=ACRO armed=True
+t= 251.5 RESULT {"case": "acro-centred", "from_mode": "ACRO", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.11, "mode_after": "ACRO", "peak_roll_rate_dps": 415.0, "peak_pitch_rate_dps": 1.0, "peak_abs_roll_deg_signed": -178.3, "peak_abs_pitch_deg_signed": -0.2, "alt_start_m": 30.596, "alt_min_m": 23.7, "alt_end_m": 23.7, "armed_end": true}
+t= 251.5 mode=ALT_HOLD armed=True
+t= 264.4 althold-high-roll-stick: from ALT_HOLD alt=22.3, sticks roll=2000 pitch=1500 (RC_CHANNELS seen (2000, 1500, 1500, 1500))
+t= 264.4 vehicle: Mode change to Flip failed: init failed
+t= 271.4 RESULT {"case": "althold-high-roll-stick", "from_mode": "ALT_HOLD", "roll_pwm": 2000, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": -1.0, "peak_pitch_rate_dps": -0.0, "peak_abs_roll_deg_signed": 30.4, "peak_abs_pitch_deg_signed": -0.0, "alt_start_m": 22.294, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 276.9 mode=LOITER armed=True
+t= 284.3 loiter-centred: from LOITER alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 284.3 vehicle: Mode change to Flip failed: init failed
+t= 291.3 RESULT {"case": "loiter-centred", "from_mode": "LOITER", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "LOITER", "peak_roll_rate_dps": -0.0, "peak_pitch_rate_dps": 0.0, "peak_abs_roll_deg_signed": 0.1, "peak_abs_pitch_deg_signed": 0.1, "alt_start_m": 22.293, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 291.3 mode=ALT_HOLD armed=True
+t= 296.9 mode=POSHOLD armed=True
+t= 304.2 poshold-centred: from POSHOLD alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 304.2 vehicle: Mode change to Flip failed: init failed
+t= 311.2 RESULT {"case": "poshold-centred", "from_mode": "POSHOLD", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "POSHOLD", "peak_roll_rate_dps": -0.0, "peak_pitch_rate_dps": -0.0, "peak_abs_roll_deg_signed": 0.1, "peak_abs_pitch_deg_signed": 0.1, "alt_start_m": 22.295, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 311.2 mode=ALT_HOLD armed=True
+t= 316.8 mode=SPORT armed=True
+t= 324.1 sport-centred: from SPORT alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 324.1 vehicle: Mode change to Flip failed: init failed
+t= 331.1 RESULT {"case": "sport-centred", "from_mode": "SPORT", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "SPORT", "peak_roll_rate_dps": 0.0, "peak_pitch_rate_dps": 0.0, "peak_abs_roll_deg_signed": 0.0, "peak_abs_pitch_deg_signed": 0.0, "alt_start_m": 22.294, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 331.1 mode=ALT_HOLD armed=True
+t= 336.7 mode=DRIFT armed=True
+t= 344.0 drift-centred: from DRIFT alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 344.0 vehicle: Mode change to Flip failed: init failed
+t= 351.0 RESULT {"case": "drift-centred", "from_mode": "DRIFT", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "DRIFT", "peak_roll_rate_dps": 0.0, "peak_pitch_rate_dps": 0.0, "peak_abs_roll_deg_signed": 0.0, "peak_abs_pitch_deg_signed": 0.0, "alt_start_m": 22.296, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 351.0 mode=ALT_HOLD armed=True
+t= 356.6 mode=GUIDED armed=True
+t= 363.1 GUIDED hover (no sticks used)
+t= 363.9 guided-centred: from GUIDED alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 363.9 vehicle: Mode change to Flip failed: init failed
+t= 370.9 RESULT {"case": "guided-centred", "from_mode": "GUIDED", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": false, "flip_active_s": null, "mode_after": "GUIDED", "peak_roll_rate_dps": -0.0, "peak_pitch_rate_dps": 0.0, "peak_abs_roll_deg_signed": -0.1, "peak_abs_pitch_deg_signed": -0.0, "alt_start_m": 22.298, "alt_min_m": 22.3, "alt_end_m": 22.3, "armed_end": true}
+t= 370.9 mode=ALT_HOLD armed=True
+t= 383.8 althold-abandon-by-stick: from ALT_HOLD alt=22.3, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t= 383.8 mode=FLIP armed=True
+t= 384.3 althold-abandon-by-stick: roll stick -> 2000 (abandon)
+t= 384.3 mode=ALT_HOLD armed=True
+t= 386.4 RESULT {"case": "althold-abandon-by-stick", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 0.48, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 415.0, "peak_pitch_rate_dps": -2.0, "peak_abs_roll_deg_signed": 177.6, "peak_abs_pitch_deg_signed": 0.2, "alt_start_m": 22.297, "alt_min_m": 14.9, "alt_end_m": 15.7, "armed_end": true}

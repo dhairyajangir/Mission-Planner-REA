@@ -1,0 +1,139 @@
+t=   0.0 connected tcp 5780, RC udp 5521
+t=   0.0 mode=STABILIZE armed=False
+t=   0.7 vehicle: Barometer 1 calibration complete
+t=   0.7 vehicle: Barometer 2 calibration complete
+t=   1.2 vehicle: ArduPilot Ready
+t=   1.4 mode=3 armed=False
+t=   1.5 vehicle: RC7: SaveWaypoint MIDDLE
+t=   3.2 vehicle: EKF3 IMU0 initialised
+t=   3.2 vehicle: EKF3 IMU1 initialised
+t=   3.2 vehicle: AHRS: EKF3 active
+t=   4.6 vehicle: EKF3 IMU0 tilt alignment complete
+t=   4.6 vehicle: EKF3 IMU1 tilt alignment complete
+t=   4.6 vehicle: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=   4.6 vehicle: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=   8.6 vehicle: GPS 1: probing for u-blox at 230400 baud
+t=   8.6 vehicle: GPS 1: detected u-blox
+t=  15.8 before enable: ZIGZ_AUTO_ENABLE=0.0 ZIGZ_SIDE_DIST=None ZIGZ_LINE_NUM=None FLTMODE_CH=5.0 WPNAV_SPEED=None
+t=  15.9 stage-1 params [('FLTMODE_CH', 0.0, True), ('RC8_OPTION', 61.0, True), ('RC9_OPTION', 83.0, True), ('LOIT_OPTIONS', 0.0, True), ('ZIGZ_AUTO_ENABLE', 1.0, True)]
+t=  19.8 mode=STABILIZE armed=False
+t=  20.7 vehicle: Barometer 1 calibration complete
+t=  20.7 vehicle: Barometer 2 calibration complete
+t=  21.2 vehicle: ArduPilot Ready
+t=  21.5 vehicle: RC7: SaveWaypoint MIDDLE
+t=  23.2 vehicle: EKF3 IMU0 initialised
+t=  23.2 vehicle: EKF3 IMU1 initialised
+t=  23.2 vehicle: AHRS: EKF3 active
+t=  24.6 vehicle: EKF3 IMU1 tilt alignment complete
+t=  24.6 vehicle: EKF3 IMU0 tilt alignment complete
+t=  24.7 vehicle: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=  24.7 vehicle: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=  28.6 vehicle: GPS 1: probing for u-blox at 230400 baud
+t=  28.6 vehicle: GPS 1: detected u-blox
+t=  35.6 after restart: ZIGZ_AUTO_ENABLE=1.0 ZIGZ_SIDE_DIST=4.0 ZIGZ_LINE_NUM=0.0 ZIGZ_DIRECTION=0.0 ZIGZ_WP_DELAY=0.0 ZIGZ_SPRAYER=0.0 FLTMODE_CH=0.0 RC8_OPTION=61.0 RC9_OPTION=83.0
+t=  64.1 arm: armed (ack result 0)
+t=  64.2 mode=GUIDED armed=True
+t=  69.7 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete
+t=  69.8 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete
+t=  76.2 takeoff alt=18.522
+t=  81.3 ab-east-forward-3lines: params [('ZIGZ_DIRECTION', 0.0, True), ('ZIGZ_LINE_NUM', 3.0, True), ('ZIGZ_SIDE_DIST', 8.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t=  81.3 mode=LOITER armed=True
+t=  86.4 mode=ZIGZAG armed=True
+t=  87.3 ab-east-forward-3lines: mode=ZIGZAG alt=20.0 yaw=-0.2258468483326565
+t=  87.6 vehicle: ZigZag: point A stored
+t=  87.6 ab-east-forward-3lines: A text True at pos (0.015560276806354523, -0.007918020710349083, -20.000782012939453, -0.014905967749655247, 0.010609408840537071)
+t=  98.9 vehicle: ZigZag: point B stored
+t=  98.9 ab-east-forward-3lines: B text True at pos (0.11607523262500763, 22.205535888671875, -19.99291229248047, -0.011757634580135345, 0.09851249307394028), AB length 22.2 m, still=True
+t= 100.2 vehicle: ZigZag: moving to forward
+t= 107.3 vehicle: ZigZag: moving to B (line 1/3)
+t= 109.5 vehicle: ZigZag: moving to forward
+t= 116.8 vehicle: ZigZag: moving to A (line 2/3)
+t= 126.6 vehicle: ZigZag: moving to forward
+t= 133.8 vehicle: ZigZag: moving to B (line 3/3)
+t= 143.5 vehicle: ZigZag: manual control
+t= 146.6 RESULT {"case": "ab-east-forward-3lines", "axis": "east", "direction": 0, "line_num": 3, "side_dist": 8.0, "pos_a": [0.015560276806354523, -0.007918020710349083, -20.000782012939453, -0.014905967749655247, 0.010609408840537071], "pos_b": [0.11607523262500763, 22.205535888671875, -19.99291229248047, -0.011757634580135345, 0.09851249307394028], "pos_at_auto": [0.12037564069032669, 22.245882034301758, -19.993600845336914, -0.01690775342285633, 0.05632257089018822], "yaw_at_auto_deg": -0.21383628084230644, "suspend_plan": null, "finished": true, "texts": [[100.2, "ZigZag: moving to forward"], [107.3, "ZigZag: moving to B (line 1/3)"], [109.5, "ZigZag: moving to forward"], [116.8, "ZigZag: moving to A (line 2/3)"], [126.6, "ZigZag: moving to forward"], [133.8, "ZigZag: moving to B (line 3/3)"], [143.5, "ZigZag: manual control"]], "pos_end": [24.117097854614258, 22.10106658935547, -19.99447250366211, -0.009824275970458984, 0.047384023666381836]}
+t= 146.6 mode=LOITER armed=True
+t= 150.7 ab-east-backward-1line: params [('ZIGZ_DIRECTION', 2.0, True), ('ZIGZ_LINE_NUM', 1.0, True), ('ZIGZ_SIDE_DIST', 6.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 155.7 mode=ZIGZAG armed=True
+t= 156.7 ab-east-backward-1line: mode=ZIGZAG alt=19.998 yaw=-0.20692662402212617
+t= 157.0 vehicle: ZigZag: point A stored
+t= 157.0 ab-east-backward-1line: A text True at pos (24.123653411865234, 22.128173828125, -19.999034881591797, -0.016872501000761986, 0.014986271038651466)
+t= 168.3 vehicle: ZigZag: point B stored
+t= 168.3 ab-east-backward-1line: B text True at pos (24.182714462280273, 43.92232131958008, -19.994314193725586, 0.0008306917734444141, 0.10643331706523895), AB length 21.8 m, still=True
+t= 169.6 vehicle: ZigZag: moving to backward
+t= 176.1 vehicle: ZigZag: moving to A (line 1/1)
+t= 185.9 vehicle: ZigZag: manual control
+t= 188.9 RESULT {"case": "ab-east-backward-1line", "axis": "east", "direction": 2, "line_num": 1, "side_dist": 6.0, "pos_a": [24.123653411865234, 22.128173828125, -19.999034881591797, -0.016872501000761986, 0.014986271038651466], "pos_b": [24.182714462280273, 43.92232131958008, -19.994314193725586, 0.0008306917734444141, 0.10643331706523895], "pos_at_auto": [24.189327239990234, 43.96508026123047, -19.995079040527344, -0.0059897759929299355, 0.06314364820718765], "yaw_at_auto_deg": -0.20802346969350824, "suspend_plan": null, "finished": true, "texts": [[169.6, "ZigZag: moving to backward"], [176.1, "ZigZag: moving to A (line 1/1)"], [185.9, "ZigZag: manual control"]], "pos_end": [18.1232852935791, 22.16550636291504, -19.999372482299805, -0.016267817467451096, -0.017601294443011284]}
+t= 188.9 mode=LOITER armed=True
+t= 193.0 ab-north-right-2lines: params [('ZIGZ_DIRECTION', 1.0, True), ('ZIGZ_LINE_NUM', 2.0, True), ('ZIGZ_SIDE_DIST', 6.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 198.0 mode=ZIGZAG armed=True
+t= 199.0 ab-north-right-2lines: mode=ZIGZAG alt=20.0 yaw=-0.20560167404484947
+t= 199.3 vehicle: ZigZag: point A stored
+t= 199.3 ab-north-right-2lines: A text True at pos (18.129173278808594, 22.129140853881836, -20.00077247619629, -0.016755236312747, 0.015994196757674217)
+t= 210.6 vehicle: ZigZag: point B stored
+t= 210.7 ab-north-right-2lines: B text True at pos (40.070068359375, 22.08148765563965, -19.999755859375, 0.07543721795082092, -0.014662046916782856), AB length 21.9 m, still=True
+t= 212.0 vehicle: ZigZag: moving to right
+t= 218.4 vehicle: ZigZag: moving to B (line 1/2)
+t= 220.4 vehicle: ZigZag: moving to right
+t= 227.1 vehicle: ZigZag: moving to A (line 2/2)
+t= 236.9 vehicle: ZigZag: manual control
+t= 240.1 RESULT {"case": "ab-north-right-2lines", "axis": "north", "direction": 1, "line_num": 2, "side_dist": 6.0, "pos_a": [18.129173278808594, 22.129140853881836, -20.00077247619629, -0.016755236312747, 0.015994196757674217], "pos_b": [40.070068359375, 22.08148765563965, -19.999755859375, 0.07543721795082092, -0.014662046916782856], "pos_at_auto": [40.11027526855469, 22.062732696533203, -19.998973846435547, 0.032805901020765305, 0.00023647079069633037], "yaw_at_auto_deg": -0.20856228090557233, "suspend_plan": null, "finished": true, "texts": [[212.0, "ZigZag: moving to right"], [218.4, "ZigZag: moving to B (line 1/2)"], [220.4, "ZigZag: moving to right"], [227.1, "ZigZag: moving to A (line 2/2)"], [236.9, "ZigZag: manual control"]], "pos_end": [18.18267059326172, 34.13718795776367, -19.99591636657715, -0.047755952924489975, 0.010385314002633095]}
+t= 240.1 mode=LOITER armed=True
+t= 244.1 ab-north-left-1line: params [('ZIGZ_DIRECTION', 3.0, True), ('ZIGZ_LINE_NUM', 1.0, True), ('ZIGZ_SIDE_DIST', 6.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 249.1 mode=ZIGZAG armed=True
+t= 250.1 ab-north-left-1line: mode=ZIGZAG alt=20.001 yaw=-0.20603046851846613
+t= 250.4 vehicle: ZigZag: point A stored
+t= 250.5 ab-north-left-1line: A text True at pos (18.154735565185547, 34.128658294677734, -20.00159454345703, -0.016932589933276176, 0.014641928486526012)
+t= 261.5 vehicle: ZigZag: point B stored
+t= 261.6 ab-north-left-1line: B text True at pos (39.84357833862305, 34.08040237426758, -20.000823974609375, 0.07432481646537781, -0.013507501222193241), AB length 21.7 m, still=True
+t= 262.9 vehicle: ZigZag: moving to left
+t= 269.5 vehicle: ZigZag: moving to B (line 1/1)
+t= 271.4 vehicle: ZigZag: manual control
+t= 274.5 RESULT {"case": "ab-north-left-1line", "axis": "north", "direction": 3, "line_num": 1, "side_dist": 6.0, "pos_a": [18.154735565185547, 34.128658294677734, -20.00159454345703, -0.016932589933276176, 0.014641928486526012], "pos_b": [39.84357833862305, 34.08040237426758, -20.000823974609375, 0.07432481646537781, -0.013507501222193241], "pos_at_auto": [39.88544464111328, 34.06262969970703, -20.000640869140625, 0.037587057799100876, -0.0008485889993607998], "yaw_at_auto_deg": -0.2086454304545893, "suspend_plan": null, "finished": true, "texts": [[262.9, "ZigZag: moving to left"], [269.5, "ZigZag: moving to B (line 1/1)"], [271.4, "ZigZag: manual control"]], "pos_end": [39.83535385131836, 28.08900260925293, -19.99895668029785, -0.010491940192878246, -0.008407758548855782]}
+t= 274.5 mode=LOITER armed=True
+t= 278.5 ab-east-forward-0lines: params [('ZIGZ_DIRECTION', 0.0, True), ('ZIGZ_LINE_NUM', 0.0, True), ('ZIGZ_SIDE_DIST', 6.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 283.6 mode=ZIGZAG armed=True
+t= 284.6 ab-east-forward-0lines: mode=ZIGZAG alt=19.999 yaw=-0.20930765197917642
+t= 284.9 vehicle: ZigZag: point A stored
+t= 285.0 ab-east-forward-0lines: A text True at pos (39.8455924987793, 28.068601608276367, -19.999155044555664, -0.01830470748245716, 0.012158100493252277)
+t= 296.3 vehicle: ZigZag: point B stored
+t= 296.4 ab-east-forward-0lines: B text True at pos (39.89873504638672, 50.27736282348633, -19.994525909423828, 0.008483439683914185, 0.09920015186071396), AB length 22.2 m, still=True
+t= 297.6 vehicle: ZigZag: moving to forward
+t= 304.2 vehicle: ZigZag: manual control
+t= 307.2 RESULT {"case": "ab-east-forward-0lines", "axis": "east", "direction": 0, "line_num": 0, "side_dist": 6.0, "pos_a": [39.8455924987793, 28.068601608276367, -19.999155044555664, -0.01830470748245716, 0.012158100493252277], "pos_b": [39.89873504638672, 50.27736282348633, -19.994525909423828, 0.008483439683914185, 0.09920015186071396], "pos_at_auto": [39.91326904296875, 50.31687545776367, -19.995258331298828, -0.002141555305570364, 0.0592564232647419], "yaw_at_auto_deg": -0.20403331853711174, "suspend_plan": null, "finished": true, "texts": [[297.6, "ZigZag: moving to forward"], [304.2, "ZigZag: manual control"]], "pos_end": [45.94004440307617, 50.30683517456055, -20.000280380249023, -0.026972977444529533, 0.005989967379719019]}
+t= 307.2 mode=LOITER armed=True
+t= 311.3 ab-east-forward-3lines-suspend-resume: params [('ZIGZ_DIRECTION', 0.0, True), ('ZIGZ_LINE_NUM', 3.0, True), ('ZIGZ_SIDE_DIST', 8.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 316.3 mode=ZIGZAG armed=True
+t= 317.3 ab-east-forward-3lines-suspend-resume: mode=ZIGZAG alt=20.0 yaw=-0.20708147721721504
+t= 317.5 vehicle: ZigZag: point A stored
+t= 317.5 ab-east-forward-3lines-suspend-resume: A text True at pos (45.92911911010742, 50.29843521118164, -20.000938415527344, -0.008141575381159782, 0.010042411275207996)
+t= 328.8 vehicle: ZigZag: point B stored
+t= 328.9 ab-east-forward-3lines-suspend-resume: B text True at pos (45.98677062988281, 72.43018341064453, -19.99700355529785, 0.0067815217189490795, 0.09490994364023209), AB length 22.1 m, still=True
+t= 330.1 vehicle: ZigZag: moving to forward
+t= 337.3 vehicle: ZigZag: moving to A (line 1/3)
+t= 339.1 vehicle: ZigZag: manual control
+t= 345.1 vehicle: ZigZag: moving to A (line 1/3)
+t= 354.6 vehicle: ZigZag: moving to forward
+t= 361.7 vehicle: ZigZag: moving to B (line 2/3)
+t= 371.4 vehicle: ZigZag: moving to forward
+t= 378.6 vehicle: ZigZag: moving to A (line 3/3)
+t= 388.4 vehicle: ZigZag: manual control
+t= 391.5 RESULT {"case": "ab-east-forward-3lines-suspend-resume", "axis": "east", "direction": 0, "line_num": 3, "side_dist": 8.0, "pos_a": [45.92911911010742, 50.29843521118164, -20.000938415527344, -0.008141575381159782, 0.010042411275207996], "pos_b": [45.98677062988281, 72.43018341064453, -19.99700355529785, 0.0067815217189490795, 0.09490994364023209], "pos_at_auto": [45.99057388305664, 72.47315979003906, -19.997636795043945, 0.00021139979071449488, 0.0521174892783165], "yaw_at_auto_deg": -0.20095735885265237, "suspend_plan": "finite", "first_ab_text": "ZigZag: moving to A (line 1/3)", "suspend": {"t": 338.8, "pos_at_suspend": [54.09477615356445, 72.13148498535156, -19.999401092529297, 0.013873279094696045, -0.791625440120697], "pos_after_6s": [54.07032012939453, 69.81065368652344, -19.99870491027832, 0.0029215540271252394, -0.03269357606768608], "texts": [[339.1, "ZigZag: manual control"]]}, "finished": true, "resume": {"t": 344.8, "texts": [[345.1, "ZigZag: moving to A (line 1/3)"], [354.6, "ZigZag: moving to forward"], [361.7, "ZigZag: moving to B (line 2/3)"], [371.4, "ZigZag: moving to forward"], [378.6, "ZigZag: moving to A (line 3/3)"], [388.4, "ZigZag: manual control"]]}, "texts": [[330.1, "ZigZag: moving to forward"], [337.3, "ZigZag: moving to A (line 1/3)"], [339.1, "ZigZag: manual control"], [345.1, "ZigZag: moving to A (line 1/3)"], [354.6, "ZigZag: moving to forward"], [361.7, "ZigZag: moving to B (line 2/3)"], [371.4, "ZigZag: moving to forward"], [378.6, "ZigZag: moving to A (line 3/3)"], [388.4, "ZigZag: manual control"]], "pos_end": [70.0012435913086, 50.26430130004883, -19.997467041015625, 0.010587882250547409, -0.047557685524225235]}
+t= 391.5 mode=LOITER armed=True
+t= 395.5 ab-east-forward-infinite-suspend-resume: params [('ZIGZ_DIRECTION', 0.0, True), ('ZIGZ_LINE_NUM', -1.0, True), ('ZIGZ_SIDE_DIST', 6.0, True), ('ZIGZ_WP_DELAY', 0.0, True)]
+t= 400.5 mode=ZIGZAG armed=True
+t= 401.6 ab-east-forward-infinite-suspend-resume: mode=ZIGZAG alt=19.998 yaw=-0.19866864517110308
+t= 401.8 vehicle: ZigZag: point A stored
+t= 401.9 ab-east-forward-infinite-suspend-resume: A text True at pos (69.99230194091797, 50.23359680175781, -19.998382568359375, 0.013524073176085949, -0.009826567955315113)
+t= 413.2 vehicle: ZigZag: point B stored
+t= 413.2 ab-east-forward-infinite-suspend-resume: B text True at pos (70.09519958496094, 72.34137725830078, -19.997737884521484, -0.013600321486592293, 0.08140167593955994), AB length 22.1 m, still=True
+t= 414.5 vehicle: ZigZag: moving to forward
+t= 420.9 vehicle: ZigZag: moving to B
+t= 422.8 vehicle: ZigZag: manual control
+t= 428.8 vehicle: ZigZag: moving to forward
+t= 435.3 vehicle: ZigZag: moving to A
+t= 445.2 vehicle: ZigZag: moving to forward
+t= 451.6 vehicle: ZigZag: moving to B
+t= 453.8 vehicle: ZigZag: manual control
+t= 461.5 RESULT {"case": "ab-east-forward-infinite-suspend-resume", "axis": "east", "direction": 0, "line_num": -1, "side_dist": 6.0, "pos_a": [69.99230194091797, 50.23359680175781, -19.998382568359375, 0.013524073176085949, -0.009826567955315113], "pos_b": [70.09519958496094, 72.34137725830078, -19.997737884521484, -0.013600321486592293, 0.08140167593955994], "pos_at_auto": [70.07467651367188, 72.38504028320312, -19.998075485229492, 0.0015130253741517663, 0.03926877677440643], "yaw_at_auto_deg": -0.19286686637864003, "suspend_plan": "infinite", "first_ab_text": "ZigZag: moving to B", "suspend": {"t": 422.4, "pos_at_suspend": [76.11061096191406, 72.34253692626953, -19.99906349182129, 0.02515982836484909, -0.01099728886038065], "pos_after_6s": [76.07223510742188, 72.34559631347656, -20.00058937072754, 0.019611487165093422, -0.013318507932126522], "texts": [[422.8, "ZigZag: manual control"]]}, "finished": false, "second_suspend_t": 453.4, "resume": {"t": 428.4, "texts": [[428.8, "ZigZag: moving to forward"], [435.3, "ZigZag: moving to A"], [445.2, "ZigZag: moving to forward"], [451.6, "ZigZag: moving to B"], [453.8, "ZigZag: manual control"]]}, "texts": [[414.5, "ZigZag: moving to forward"], [420.9, "ZigZag: moving to B"], [422.8, "ZigZag: manual control"], [428.8, "ZigZag: moving to forward"], [435.3, "ZigZag: moving to A"], [445.2, "ZigZag: moving to forward"], [451.6, "ZigZag: moving to B"], [453.8, "ZigZag: manual control"]], "pos_end": [88.05694580078125, 53.30251693725586, -19.99839973449707, 0.011979406699538231, -0.022710131481289864]}
+t= 461.5 mode=LOITER armed=True

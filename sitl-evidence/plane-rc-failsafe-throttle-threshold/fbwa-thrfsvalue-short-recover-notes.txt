@@ -1,0 +1,45 @@
+case fbwa-thrfsvalue-short-recover: pre={} mode_at_fault=FLY_BY_WIRE_A feed_udp_rc=True inject={'THR_FS_VALUE': 1600} clear={'THR_FS_VALUE': 950} clear_at=3s watch=25s; SITL -I 3 (TCP 5790, RC UDP 5531)
+defaults: THR_FAILSAFE=1.0 THR_FS_VALUE=950.0 FS_SHORT_ACTN=0.0 FS_LONG_ACTN=0.0 FS_LONG_TIMEOUT=5.0 RC_FS_TIMEOUT=1.0 FLTMODE_CH=8.0 SIM_RC_FAIL=0.0 FS_GCS_ENABL=0.0
+pre-flight params set: FLTMODE_CH=0 plus {} (rejected [])
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+reached cruise altitude: True (alt 55.016)
+UDP RC feeder running (throttle centred 1500) from cruise, before the fault
+requested FLY_BY_WIRE_A: FLY_BY_WIRE_A active
+state before fault: mode=FLY_BY_WIRE_A alt=67.085 servo3=1500 rc3=1500
+t= -31.3 vehicle: Mission: 1 Takeoff
+t= -31.3 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -31.3 MISSION_CURRENT seq=1
+t= -30.6 HEARTBEAT mode=AUTO armed=True
+t= -30.6 vehicle: Triggered AUTO. GPS speed = 0.0
+t= -29.8 vehicle: Holding course 35998 at 6.5m/s (0.0)
+t= -29.8 vehicle: Autoland direction= 359
+t= -24.8 vehicle: Takeoff level-off starting at 20m
+t= -22.8 vehicle: Takeoff complete at 60.06m
+t= -22.8 vehicle: Mission: 2 WP
+t= -22.6 MISSION_CURRENT seq=2
+t= -21.2 vehicle: EKF2 IMU0 is using GPS
+t= -21.2 vehicle: EKF2 IMU1 is using GPS
+t= -16.9 vehicle: Reached waypoint #2 dist 52m
+t= -16.9 vehicle: Mission: 3 WP
+t= -16.6 MISSION_CURRENT seq=3
+t=  -8.2 HEARTBEAT mode=FLY_BY_WIRE_A armed=True
+t=  -5.9 PARAM_VALUE STAT_FLTTIME=25.0
+t=  -5.9 PARAM_VALUE STAT_RUNTIME=60.0
+t=  -5.9 PARAM_VALUE STAT_FLTCNT=1.0
+t=  -5.9 PARAM_VALUE STAT_DISTFLWN=612.2611694335938
+t=   0.0 SENT param_set THR_FS_VALUE=1600
+t=   0.6 PARAM_VALUE THR_FS_VALUE=1600.0
+t=   1.2 HEARTBEAT mode=CIRCLE armed=True
+t=   1.2 vehicle: Throttle failsafe on
+t=   1.2 vehicle: RC Short Failsafe: switched to Circle
+t=   3.5 SENT param_set THR_FS_VALUE=950
+t=   4.0 PARAM_VALUE THR_FS_VALUE=950.0
+t=   4.0 vehicle: Throttle failsafe off
+t=   4.2 HEARTBEAT mode=FLY_BY_WIRE_A armed=True
+t=   4.2 vehicle: RC Short Failsafe Cleared
+t=   4.2 vehicle: Flight mode FBWA restored
+t=  25.1 PARAM_VALUE STAT_FLTTIME=56.0
+t=  25.1 PARAM_VALUE STAT_RUNTIME=91.0
+t=  25.1 PARAM_VALUE STAT_DISTFLWN=1319.7327880859375

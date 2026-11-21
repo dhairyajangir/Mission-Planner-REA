@@ -1,0 +1,19 @@
+# 00000001.BIN: vehicle clock, seconds relative to the first injected PARM record (reference 67.86451 s of log time)
+t= -23.90 MSG EKF2 IMU0 is using GPS
+t= -23.90 MSG EKF2 IMU1 is using GPS
+t= -23.62 MSG Takeoff complete at 60.33m
+t= -23.62 MSG Mission: 2 WP
+t= -17.52 MSG Reached waypoint #2 dist 52m
+t= -17.52 MSG Mission: 3 WP
+t=  -9.22 MODE ModeNum=5 Rsn=2
+t=   0.00 PARM THR_FS_VALUE=1600.0
+t=   0.00 PARM THR_FS_VALUE=1600.0
+t=   0.20 MSG Throttle failsafe on
+t=   0.20 MODE ModeNum=1 Rsn=3
+t=   0.20 MSG RC Short Failsafe: switched to Circle
+t=   5.24 MODE ModeNum=11 Rsn=3
+t=   5.24 MSG RC Long Failsafe On: switched to RTL
+t=  14.02 PARM THR_FS_VALUE=950.0
+t=  14.02 PARM THR_FS_VALUE=950.0
+t=  14.08 MSG Throttle failsafe off
+t=  14.20 MSG RC Long Failsafe Cleared

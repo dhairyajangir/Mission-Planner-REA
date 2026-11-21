@@ -1,0 +1,4 @@
+Archived first run of research-tools/sitl-copter-autotune-entry.py (worker 2). Valid observations, but an earlier version of the script: no EXTENDED_SYS_STATE / VFR_HUD logging
+and only two ground cases (throttle stick 1000 and 1100), no re-arm logic.  AUTOTUNE was ACCEPTED on the ground at throttle 1100 (unexpected) and the vehicle then auto-disarmed
+('Disarming motors' ~1.7 s after entry), so the following GUIDED takeoff silently failed and every flying case was skipped ('skipping ...: armed=False').  That is why the script was
+extended (landed state logging, ground throttle sweep, re-arm) and rerun into sitl-evidence/copter-crash-and-modes-autotune/.  Kept as evidence of the harness gap, not as a flight result.

@@ -1,0 +1,21 @@
+    0.000 MSG  Throttle armed
+    0.002 MSG  ArduPlane V4.8.0-dev (15a10bb4)
+    0.002 MSG  =04cfea5c7cf4f1fb8b47f8b3e8289cf
+    0.002 MSG  Param space used: 178/3840
+    0.002 MSG  RC Protocol: UDP
+    0.002 MSG  New mission
+    0.002 MSG  New rally
+    0.002 MSG  New fence
+    0.002 MSG  QuadPlane Frame: QUAD/X
+    0.002 MODE mode=0 modenum=0 reason=2
+    0.002 MSG  GPS 1: probing for u-blox at 230400 baud
+    2.065 MSG  Mission: 1 VTOLTakeoff
+    2.065 MODE mode=10 modenum=10 reason=2
+   15.427 MSG  Mission: 2 WP
+   15.430 MSG  Transition started airspeed 0.7
+   18.433 MSG  Transition failed, exceeded time limit
+   18.433 MODE mode=20 modenum=20 reason=23
+   56.324 MSG  SIM Hit ground at 0.502296 m/s
+   62.463 MSG  Land complete
+   62.463 MSG  Throttle disarmed
+   63.522 MSG  PreArm: QLand mode not armable

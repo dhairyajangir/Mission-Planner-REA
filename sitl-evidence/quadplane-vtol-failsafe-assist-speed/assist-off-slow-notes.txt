@@ -1,0 +1,17 @@
+scenario assist-off-slow: pre {'Q_ASSIST_SPEED': -1} route loiter slow-after-done 12.0 slow-params {'AIRSPEED_CRUISE': 14}
+defaults read: {'Q_ENABLE': 1.0, 'Q_ASSIST_SPEED': 18.0, 'Q_ASSIST_ANGLE': 30.0, 'Q_ASSIST_ALT': 0.0, 'Q_ASSIST_DELAY': 0.5, 'Q_ASSIST_OPTIONS': 0.0, 'Q_TRANS_FAIL': 0.0, 'Q_TRANS_FAIL_ACT': 0.0, 'Q_OPTIONS': 0.0, 'Q_RTL_MODE': 0.0, 'Q_RTL_ALT': 15.0, 'AIRSPEED_MIN': 13.0, 'AIRSPEED_MAX': 35.0, 'AIRSPEED_CRUISE': 25.0, 'ARSPD_USE': 1.0, 'FS_GCS_ENABL': 0.0, 'Q_FRAME_CLASS': 1.0, 'SERVO5_FUNCTION': 33.0, 'SERVO6_FUNCTION': 34.0, 'SERVO7_FUNCTION': 35.0, 'SERVO8_FUNCTION': 36.0}
+pre-flight params set {'Q_ASSIST_SPEED': -1} (rejected [])
+read back: {'Q_ASSIST_SPEED': -1.0}
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  0.0 mode AUTO armed=True
+t= 14.2 vehicle: Mission: 2 WP
+t= 14.2 vehicle: Transition airspeed wait
+t= 16.4 vehicle: Transition airspeed reached 13.3
+t= 22.6 vehicle: Transition done
+t= 23.5 vehicle: Reached waypoint #2 dist 82m
+t= 23.5 vehicle: Mission: 3 LoitUnlim
+t= 34.9 experiment change {'AIRSPEED_CRUISE': 14} (rejected []); airspeed then 25.329551696777344
+end t=70.1 mode AUTO armed True airspeed 14.006514549255371 rel-alt 59.5

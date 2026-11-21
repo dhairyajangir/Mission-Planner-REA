@@ -1,0 +1,19 @@
+[
+ {
+  "case": "althold-centred",
+  "from_mode": "ALT_HOLD",
+  "roll_pwm": 1500,
+  "pitch_pwm": 1500,
+  "flip_mode_seen": true,
+  "flip_active_s": 1.14,
+  "mode_after": "ALT_HOLD",
+  "peak_roll_rate_dps": 415.0,
+  "peak_pitch_rate_dps": -2.0,
+  "peak_abs_roll_deg_signed": -178.8,
+  "peak_abs_pitch_deg_signed": 0.3,
+  "alt_start_m": 30.001,
+  "alt_min_m": 26.3,
+  "alt_end_m": 26.3,
+  "armed_end": true
+ }
+]

@@ -1,0 +1,31 @@
+t=   0.0 connected tcp 5780, RC udp 5521
+t=   0.0 mode=STABILIZE armed=False
+t=   0.6 vehicle: Barometer 1 calibration complete
+t=   0.6 vehicle: Barometer 2 calibration complete
+t=   1.2 vehicle: ArduPilot Ready
+t=   1.3 mode=3 armed=False
+t=   1.4 vehicle: RC7: SaveWaypoint MIDDLE
+t=   3.2 vehicle: EKF3 IMU0 initialised
+t=   3.2 vehicle: EKF3 IMU1 initialised
+t=   3.2 vehicle: AHRS: EKF3 active
+t=   4.5 vehicle: EKF3 IMU0 tilt alignment complete
+t=   4.5 vehicle: EKF3 IMU1 tilt alignment complete
+t=   4.6 vehicle: EKF3 IMU0 MAG0 initial yaw alignment complete
+t=   4.6 vehicle: EKF3 IMU1 MAG0 initial yaw alignment complete
+t=   8.5 vehicle: GPS 1: probing for u-blox at 230400 baud
+t=   8.5 vehicle: GPS 1: detected u-blox
+t=  18.7 vehicle: EKF3 IMU0 origin set
+t=  18.8 vehicle: Field Elevation Set: 584m
+t=  18.9 vehicle: EKF3 IMU1 origin set
+t=  20.8 defaults: FLTMODE_CH=5.0 FS_THR_ENABLE=1.0 FS_CRASH_CHECK=1.0 ATC_ANGLE_MAX=30.0 FLIP_RATE=400.0
+t=  20.8 FLTMODE_CH -> 0 (rejected [])
+t=  43.7 arm: armed (ack result 0)
+t=  43.8 mode=GUIDED armed=True
+t=  49.3 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete
+t=  49.3 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete
+t=  59.8 takeoff alt=28.678
+t=  64.8 mode=ALT_HOLD armed=True
+t=  72.1 althold-centred: from ALT_HOLD alt=30.0, sticks roll=1500 pitch=1500 (RC_CHANNELS seen (1500, 1500, 1500, 1500))
+t=  72.1 mode=FLIP armed=True
+t=  73.3 mode=ALT_HOLD armed=True
+t=  75.4 RESULT {"case": "althold-centred", "from_mode": "ALT_HOLD", "roll_pwm": 1500, "pitch_pwm": 1500, "flip_mode_seen": true, "flip_active_s": 1.14, "mode_after": "ALT_HOLD", "peak_roll_rate_dps": 415.0, "peak_pitch_rate_dps": -2.0, "peak_abs_roll_deg_signed": -178.8, "peak_abs_pitch_deg_signed": 0.3, "alt_start_m": 30.001, "alt_min_m": 26.3, "alt_end_m": 26.3, "armed_end": true}

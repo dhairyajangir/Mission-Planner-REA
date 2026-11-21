@@ -1,0 +1,42 @@
+case auto-fbwa-short-long-continue: pre={'FS_SHORT_ACTN': 2, 'FS_LONG_ACTN': 0, 'FS_LONG_TIMEOUT': 5} mode_at_fault=AUTO feed_udp_rc=False inject={'SIM_RC_FAIL': 1} clear={'SIM_RC_FAIL': 0} clear_at=25s watch=45s; SITL -I 3 (TCP 5790, RC UDP 5531)
+defaults: THR_FAILSAFE=1.0 THR_FS_VALUE=950.0 FS_SHORT_ACTN=0.0 FS_LONG_ACTN=0.0 FS_LONG_TIMEOUT=5.0 RC_FS_TIMEOUT=1.0 FLTMODE_CH=8.0 SIM_RC_FAIL=0.0 FS_GCS_ENABL=0.0
+pre-flight params set: FLTMODE_CH=0 plus {'FS_SHORT_ACTN': 2, 'FS_LONG_ACTN': 0, 'FS_LONG_TIMEOUT': 5} (rejected [])
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+reached cruise altitude: True (alt 55.111)
+state before fault: mode=AUTO alt=60.777 servo3=1472 rc3=1000
+t= -18.8 vehicle: Mission: 1 Takeoff
+t= -18.8 vehicle: Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.2 sec
+t= -18.8 vehicle: Triggered AUTO. GPS speed = 0.0
+t= -18.8 MISSION_CURRENT seq=1
+t= -17.5 HEARTBEAT mode=AUTO armed=True
+t= -17.5 vehicle: Autoland direction= 0
+t= -17.5 vehicle: Holding course 35998 at 6.5m/s (0.0)
+t= -11.3 vehicle: Takeoff level-off starting at 20m
+t= -10.1 vehicle: EKF2 IMU0 is using GPS
+t= -10.1 vehicle: EKF2 IMU1 is using GPS
+t=  -9.9 vehicle: Takeoff complete at 60.13m
+t=  -9.9 vehicle: Mission: 2 WP
+t=  -9.7 MISSION_CURRENT seq=2
+t=  -3.8 vehicle: Reached waypoint #2 dist 52m
+t=  -3.8 vehicle: Mission: 3 WP
+t=  -3.7 MISSION_CURRENT seq=3
+t=   0.0 SENT param_set SIM_RC_FAIL=1
+t=   0.0 PARAM_VALUE SIM_RC_FAIL=1.0
+t=   1.8 HEARTBEAT mode=FLY_BY_WIRE_A armed=True
+t=   1.8 vehicle: Throttle failsafe on
+t=   1.8 vehicle: RC Short Failsafe: switched to FBWA
+t=   5.9 HEARTBEAT mode=RTL armed=True
+t=   5.9 vehicle: RC Long Failsafe On: switched to RTL
+t=   6.2 PARAM_VALUE STAT_FLTTIME=24.0
+t=   6.2 PARAM_VALUE STAT_RUNTIME=60.0
+t=   6.2 PARAM_VALUE STAT_FLTCNT=1.0
+t=   6.2 PARAM_VALUE STAT_DISTFLWN=548.2395629882812
+t=  25.3 SENT param_set SIM_RC_FAIL=0
+t=  25.3 PARAM_VALUE SIM_RC_FAIL=0.0
+t=  25.9 vehicle: Throttle failsafe off
+t=  25.9 vehicle: RC Long Failsafe Cleared
+t=  37.0 PARAM_VALUE STAT_FLTTIME=55.0
+t=  37.0 PARAM_VALUE STAT_RUNTIME=91.0
+t=  37.0 PARAM_VALUE STAT_DISTFLWN=1222.97314453125

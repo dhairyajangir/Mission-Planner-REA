@@ -1,0 +1,24 @@
+scenario trans-3-qrtl: pre {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': 1} route land slow-after-done None slow-params {}
+defaults read: {'Q_ENABLE': 1.0, 'Q_ASSIST_SPEED': 18.0, 'Q_ASSIST_ANGLE': 30.0, 'Q_ASSIST_ALT': 0.0, 'Q_ASSIST_DELAY': 0.5, 'Q_ASSIST_OPTIONS': 0.0, 'Q_TRANS_FAIL': 0.0, 'Q_TRANS_FAIL_ACT': 0.0, 'Q_OPTIONS': 0.0, 'Q_RTL_MODE': 0.0, 'Q_RTL_ALT': 15.0, 'AIRSPEED_MIN': 13.0, 'AIRSPEED_MAX': 35.0, 'AIRSPEED_CRUISE': 25.0, 'ARSPD_USE': 1.0, 'FS_GCS_ENABL': 0.0, 'Q_FRAME_CLASS': 1.0, 'SERVO5_FUNCTION': 33.0, 'SERVO6_FUNCTION': 34.0, 'SERVO7_FUNCTION': 35.0, 'SERVO8_FUNCTION': 36.0}
+pre-flight params set {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': 1} (rejected [])
+read back: {'Q_TRANS_FAIL': 3.0, 'Q_TRANS_FAIL_ACT': 1.0}
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  0.0 mode AUTO armed=True
+t= 16.3 vehicle: Mission: 2 WP
+t= 16.3 vehicle: Transition started airspeed 0.3
+t= 21.0 mode QRTL armed=True
+t= 21.8 vehicle: Transition failed, exceeded time limit
+t= 21.8 vehicle: VTOL position1 d=17.6 r=90.0
+t= 21.8 vehicle: VTOL Position1 d=17.6
+t= 21.8 vehicle: VTOL Overshoot d=17.6 cs=-13.9 yerr=-179.9
+t= 37.3 vehicle: VTOL position2 started v=1.8 d=9.9 h=15.0
+t= 40.9 vehicle: Land descend started
+t= 50.5 vehicle: Land final started
+t= 61.4 vehicle: SIM Hit ground at 0.492323 m/s
+t= 67.8 vehicle: Land complete
+t= 67.8 vehicle: Throttle disarmed
+t= 67.8 disarmed, stopping watch
+end t=68.0 mode QRTL armed False airspeed 0.9279492497444153 rel-alt -0.1

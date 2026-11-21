@@ -1,0 +1,9 @@
+case fbwa-thrfsvalue-long: pre={} mode_at_fault=FBWA feed_udp_rc=True inject={'THR_FS_VALUE': 1600} clear={'THR_FS_VALUE': 950} clear_at=14s watch=40s; SITL -I 3 (TCP 5790, RC UDP 5531)
+defaults: THR_FAILSAFE=1.0 THR_FS_VALUE=950.0 FS_SHORT_ACTN=0.0 FS_LONG_ACTN=0.0 FS_LONG_TIMEOUT=5.0 RC_FS_TIMEOUT=1.0 FLTMODE_CH=8.0 SIM_RC_FAIL=0.0 FS_GCS_ENABL=0.0
+pre-flight params set: FLTMODE_CH=0 plus {} (rejected [])
+mission upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+reached cruise altitude: True (alt 55.881)
+UDP RC feeder running (throttle centred 1500) from cruise, before the fault
+EXCEPTION KeyError('FBWA')

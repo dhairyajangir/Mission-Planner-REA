@@ -1,0 +1,24 @@
+scenario trans-3-warn: pre {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': -1} route land slow-after-done None slow-params {}
+defaults read: {'Q_ENABLE': 1.0, 'Q_ASSIST_SPEED': 18.0, 'Q_ASSIST_ANGLE': 30.0, 'Q_ASSIST_ALT': 0.0, 'Q_ASSIST_DELAY': 0.5, 'Q_ASSIST_OPTIONS': 0.0, 'Q_TRANS_FAIL': 0.0, 'Q_TRANS_FAIL_ACT': 0.0, 'Q_OPTIONS': 0.0, 'Q_RTL_MODE': 0.0, 'Q_RTL_ALT': 15.0, 'AIRSPEED_MIN': 13.0, 'AIRSPEED_MAX': 35.0, 'AIRSPEED_CRUISE': 25.0, 'ARSPD_USE': 1.0, 'FS_GCS_ENABL': 0.0, 'Q_FRAME_CLASS': 1.0, 'SERVO5_FUNCTION': 33.0, 'SERVO6_FUNCTION': 34.0, 'SERVO7_FUNCTION': 35.0, 'SERVO8_FUNCTION': 36.0}
+pre-flight params set {'Q_TRANS_FAIL': 3, 'Q_TRANS_FAIL_ACT': -1} (rejected [])
+read back: {'Q_TRANS_FAIL': 3.0, 'Q_TRANS_FAIL_ACT': -1.0}
+upload ack 0
+arm: armed (ack result 0)
+AUTO: AUTO active
+t=  0.0 vehicle: Mission: 1 VTOLTakeoff
+t=  0.0 mode AUTO armed=True
+t= 12.8 vehicle: Mission: 2 WP
+t= 12.8 vehicle: Transition started airspeed 0.5
+t= 15.8 vehicle: Transition failed, exceeded time limit
+t= 17.7 vehicle: Transition airspeed reached 18.1
+t= 22.3 vehicle: Transition done
+t= 23.8 vehicle: Reached waypoint #2 dist 76m
+t= 23.8 vehicle: Mission: 3 WP
+t= 31.8 vehicle: Reached waypoint #3 dist 87m
+t= 31.8 vehicle: Mission: 4 VTOLLand
+t= 31.8 vehicle: VTOL approach d=305.3
+t= 42.4 vehicle: VTOL airbrake v=21.6 d=158 sd=160 h=56.9
+t= 45.1 vehicle: VTOL position1 v=18.3 d=104.1 h=58.3 dc=19.6
+t= 52.7 vehicle: VTOL position2 started v=6.7 d=9.8 h=58.5
+t= 58.1 vehicle: Land descend started
+end t=71.1 mode AUTO armed True airspeed 1.0444996356964111 rel-alt 39.9
