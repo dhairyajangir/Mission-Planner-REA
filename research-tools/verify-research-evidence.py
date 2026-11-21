@@ -3030,6 +3030,27 @@ check('connected original Copter optical flow and range finder pages',
 help_view = runpy.run_path(str(root / 'gui-original-warnings-help/verify.py'))['verify']()
 check('original Help page and Warning Manager control tree', help_view['named_dialog_controls'] == 9,
       'Help rendered in the main window. The separate warning dialog had nine named controls and a black interior.')
+georef = runpy.run_path(str(root / 'gui-original-photo-geotag/verify.py'))['verify']()
+check('original Geo Ref Images mode selection', georef['initial'] == 'CAM Message' and georef['selected'] == 'Time offset',
+      'Named controls and dialog pixels show the two selections and the corresponding editable fields.')
+auto_analysis = runpy.run_path(str(root / 'gui-original-log-analyzer/verify.py'))['verify']()
+check('offline Auto Analysis missing external runner',
+      auto_analysis['local_input_bytes'] == 8267692 and not auto_analysis['analysis_report_observed'],
+      'The file picker accepted the converted log. Two error dialogs followed the failed runner download.')
+alignment_dir = root / 'copter-sim-log-alignment-study'
+alignment = runpy.run_path(str(alignment_dir / 'replay.py'))
+alignment_record = json.loads((alignment_dir / 'results.json').read_text())
+archive = alignment['SOURCE'].read_bytes()
+_, positions_and_truth = alignment['read_records'](gzip.decompress(archive))
+computed = {case: alignment['expected'](list(alignment['modified'](positions_and_truth, case)))
+            for case in ('archived_control', 'pos_delayed_1s', 'missing_truth_tail')}
+check('time alignment and missing simulator truth in altitude comparison',
+      computed == alignment_record['cases'] and
+      hashlib.sha256(archive).hexdigest() == alignment_record['archive_sha256'] and
+      hashlib.sha256(alignment['COMPARATOR'].read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+      == alignment_record['comparator_sha256_lf'] and
+      computed['missing_truth_tail']['position_samples_after_last_truth'] == 686,
+      'The archived flight and both modified offline log sequences reproduce the altitude statistics and stale matches.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

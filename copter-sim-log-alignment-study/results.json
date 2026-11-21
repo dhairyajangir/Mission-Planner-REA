@@ -1,0 +1,76 @@
+{
+  "archive_sha256": "aa2c351f42059566c9499644417005a7cc73a62a0e5ed4f6d30042e265e15803",
+  "comparator_sha256_lf": "990f3020cf5ce4e43451c025fafee97d8704d08c37accab5300c551736bb23a2",
+  "pymavlink": "2.4.50",
+  "cases": {
+    "archived_control": {
+      "truth_samples": 2745,
+      "position_samples": 2745,
+      "last_truth_altitude_m_amsl": 584.0900268554688,
+      "position_samples_after_last_truth": 0,
+      "max_matched_truth_age_seconds": 0.0,
+      "altitude_error_rows": {
+        "whole log": [
+          2745,
+          0.026,
+          0.0373,
+          0.1,
+          0.13
+        ],
+        "airborne": [
+          2363,
+          0.0272,
+          0.0393,
+          0.1,
+          0.13
+        ]
+      }
+    },
+    "pos_delayed_1s": {
+      "truth_samples": 2745,
+      "position_samples": 2745,
+      "last_truth_altitude_m_amsl": 584.0900268554688,
+      "position_samples_after_last_truth": 26,
+      "max_matched_truth_age_seconds": 1.0,
+      "altitude_error_rows": {
+        "whole log": [
+          2745,
+          0.3489,
+          0.7157,
+          2.27,
+          2.46
+        ],
+        "airborne": [
+          2362,
+          0.3866,
+          0.7663,
+          2.28,
+          2.46
+        ]
+      }
+    },
+    "missing_truth_tail": {
+      "truth_samples": 2059,
+      "position_samples": 2745,
+      "last_truth_altitude_m_amsl": 593.5900268554688,
+      "position_samples_after_last_truth": 686,
+      "max_matched_truth_age_seconds": 27.439853,
+      "altitude_error_rows": {
+        "whole log": [
+          2745,
+          1.5874,
+          3.51,
+          9.51,
+          9.55
+        ],
+        "airborne": [
+          2627,
+          1.6582,
+          3.5879,
+          9.51,
+          9.55
+        ]
+      }
+    }
+  }
+}

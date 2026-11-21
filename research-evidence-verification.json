@@ -1404,6 +1404,21 @@
       "name": "original Help page and Warning Manager control tree",
       "passed": true,
       "detail": "Help rendered in the main window. The separate warning dialog had nine named controls and a black interior."
+    },
+    {
+      "name": "original Geo Ref Images mode selection",
+      "passed": true,
+      "detail": "Named controls and dialog pixels show the two selections and the corresponding editable fields."
+    },
+    {
+      "name": "offline Auto Analysis missing external runner",
+      "passed": true,
+      "detail": "The file picker accepted the converted log. Two error dialogs followed the failed runner download."
+    },
+    {
+      "name": "time alignment and missing simulator truth in altitude comparison",
+      "passed": true,
+      "detail": "The archived flight and both modified offline log sequences reproduce the altitude statistics and stale matches."
     }
   ],
   "passed": true

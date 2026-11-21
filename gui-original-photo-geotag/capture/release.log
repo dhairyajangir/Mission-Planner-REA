@@ -1,0 +1,546 @@
+If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 
+
+
+Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe
+To fix any filename case issues under mono use    export MONO_IOMAP=drive:case
+for pinvoke      MONO_LOG_LEVEL=debug MONO_LOG_MASK=dll mono MissionPlanner.exe
+watch -n 1 ls -l /proc/$(pidof mono)/fd
+watch -n 1 lsof -p $(pidof mono)
+Data Dir /home/test/.local/share/Mission Planner/
+Log Dir /home/test/.local/share/Mission Planner/logs
+Running Dir /opt/mp/
+User Data Dir /home/test/.local/share/Mission Planner/
+PlacesRecentDocuments Dir 
+PlacesDesktop Dir /home/test/Desktop
+PlacesPersonal Dir /home/test
+PlacesMyComputer Dir 
+Gtk not found (missing LD_LIBRARY_PATH to libgtk-x11-2.0.so.0?), using built-in colorscheme
+INFO MissionPlanner.Program - ******************* Logging Configured *******************
+INFO MissionPlanner.Program - /opt/mp/x64/libSkiaSharp
+ERROR MissionPlanner.Program - System.DllNotFoundException: libdl.so assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) MissionPlanner.Utilities.NativeLibrary.dlopen(string,int)
+  at MissionPlanner.Program.Start (System.String[] args) [0x003c7] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0 
+4.0.0.0
+Splash .ctor
+IconFile
+Splash.Show()
+Debugger.IsAttached False
+Application.DoEvents
+Application.DoEvents
+Setup GMaps 1
+Setup GMaps 2
+Setup GoogleMapProvider API
+Setup Tracking.productName
+Setup Tracking.primaryScreenBitsPerPixel
+Setup Settings.Instance.UserAgent
+Setup check gdal dir
+Setup gdal
+INFO GDAL.GDAL - GDAL static ctor
+ERROR GDAL.GDAL - System.EntryPointNotFoundException: SetDllDirectory assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) GDAL.GDAL.SetDllDirectory(string)
+  at GDAL.GDAL..cctor () [0x00090] in <56f62328a3444c2c8fe767f126f1f736>:0 
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.GDAL.GdalPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: gdal_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.GDAL.GdalPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Gdal(OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.GDAL.GdalPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.GDAL.GdalPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.GDAL.GdalPINVOKE..cctor () [0x00000] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.GDAL.Gdal.AllRegister () [0x00001] in <48d1eae6ebd945f993d99bbd0863755c>:0 
+  at GDAL.GdalConfiguration.ConfigureGdal () [0x0000a] in <56f62328a3444c2c8fe767f126f1f736>:0 
+  at GDAL.GDAL..cctor () [0x000aa] in <56f62328a3444c2c8fe767f126f1f736>:0 
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.OGR.Ogr' threw an exception. ---> System.TypeInitializationException: The type initializer for 'OSGeo.OGR.OgrPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: ogr_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.OGR.OgrPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Ogr(OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OGR.OgrPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.OGR.OgrPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.OGR.OgrPINVOKE..cctor () [0x00000] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.OGR.Ogr..cctor () [0x0000a] in <1f4e8e1f025945059652f9c259c5a3b4>:0 
+   --- End of inner exception stack trace ---
+  at GDAL.GdalConfiguration.ConfigureOgr () [0x0000a] in <56f62328a3444c2c8fe767f126f1f736>:0 
+  at GDAL.GDAL..cctor () [0x000c2] in <56f62328a3444c2c8fe767f126f1f736>:0 
+INFO GDAL.GDAL - GDAL static ctor - SpatialReference
+ERROR GDAL.GDAL - System.TypeInitializationException: The type initializer for 'OSGeo.OSR.OsrPINVOKE' threw an exception. ---> System.TypeInitializationException: The type initializer for 'SWIGExceptionHelper' threw an exception. ---> System.DllNotFoundException: osr_wrap assembly:<unknown assembly> type:<unknown type> member:(null)
+  at (wrapper managed-to-native) OSGeo.OSR.OsrPINVOKE+SWIGExceptionHelper.SWIGRegisterExceptionCallbacks_Osr(OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate,OSGeo.OSR.OsrPINVOKE/SWIGExceptionHelper/ExceptionDelegate)
+  at OSGeo.OSR.OsrPINVOKE+SWIGExceptionHelper..cctor () [0x000ef] in <39e26f9222b3432085b408e97bb51b0d>:0 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at OSGeo.OSR.OsrPINVOKE..cctor () [0x00000] in <39e26f9222b3432085b408e97bb51b0d>:0 
+   --- End of inner exception stack trace ---
+  at OSGeo.OSR.SpatialReference..ctor (System.String wkt) [0x00000] in <39e26f9222b3432085b408e97bb51b0d>:0 
+  at GDAL.GDAL..cctor () [0x000ee] in <56f62328a3444c2c8fe767f126f1f736>:0 
+Setup proxy
+Setup proxy
+Setup CleanupFiles
+INFO MissionPlanner.Program - 64bit os True, 64bit process True, OS Arch X64, OS Desc Unix 6.6.87.2, FW Desc Mono 6.8.0.105 (Debian 6.8.0.105+dfsg-3.6ubuntu2 Sun Mar 31 02:55:28 UTC 2024)
+INFO MissionPlanner.Program - Runtime Version v4.0.30319
+INFO MissionPlanner.Program - 6.8.0.105 (Debian 6.8.0.105+dfsg-3.6ubuntu2 Sun Mar 31 02:55:28 UTC 2024)
+Application.Run(new MainV2())
+INFO MissionPlanner.MainV2 - Mainv2 ctor
+INFO MissionPlanner.MainV2 - Loading config
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 adsb_UpdatePlanePosition MainV2 System.EventHandler`1[MissionPlanner.Utilities.adsb+PointLatLngAltHdg]
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 <.ctor>b__106_0 MainV2 System.EventHandler`1[System.ValueTuple`2[System.String,MAVLink+MAV_COLLISION_THREAT_LEVEL]]
+INFO MissionPlanner.MainV2 - myview width 292 height 273
+INFO MissionPlanner.MainV2 - this   width 1109 height 604
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+BurntKermit.mpsystheme theme is loading
+Background to Color [A=255, R=38, G=39, B=40]
+Control Background to Color [A=255, R=67, G=68, B=69]
+Text to Color [White]
+TextBox Background to Color [A=255, R=67, G=68, B=69]
+Button Text to Color [A=255, R=64, G=87, B=4]
+Button Background top to Color [A=255, R=148, G=193, B=31]
+Button Background bottom to Color [A=255, R=205, G=226, B=150]
+ProgressBar Top to Color [A=255, R=102, G=139, B=26]
+ProgressBar Bottom to Color [A=255, R=124, G=164, B=40]
+ProgressBar Outline to Color [A=255, R=150, G=174, B=112]
+BannerColor1 to Color [A=255, R=64, G=87, B=4]
+BannerColor2 to Color [A=255, R=148, G=193, B=31]
+Disabled Button to Color [A=150, R=43, G=58, B=3]
+Button Mouseover to Color [A=73, R=43, G=58, B=3]
+Button Mousedown to Color [A=73, R=43, G=58, B=3]
+CurrentPPM Background to Color [Green]
+Graph Chart Fill to Color [A=255, R=31, G=31, B=32]
+Graph Pane Fill to Color [A=255, R=55, G=55, B=56]
+Graph Legend Fill to Color [A=255, R=133, G=132, B=131]
+Rich Text Box text to Color [WhiteSmoke]
+BackStageView Button Area to Color [Black]
+BSV Unselected Text to Color [WhiteSmoke]
+Horizontal ProgressBar to Color [A=255, R=148, G=193, B=31]
+HUD text and drawings to Color [LightGray]
+HUD Ground top to Color [A=255, R=155, G=184, B=36]
+HUD Ground bottom to Color [A=255, R=65, G=79, B=7]
+HUD Sky top to Color [Blue]
+HUD Sky bottom to Color [LightBlue]
+INFO MissionPlanner.Utilities.srtm - .cctor
+INFO MissionPlanner.Utilities.srtm - requestRunner start
+INFO MissionPlanner.Utilities.srtm - /home/test/.local/share/Mission Planner/srtm
+INFO MissionPlanner.Utilities.Speech - TTS: init, mono = True
+INFO MissionPlanner.MainV2 - Create FD
+INFO MissionPlanner.GCSViews.FlightData - Ctor Start
+INFO MissionPlanner.Controls.HUD - Static HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - Instance HUD ctor
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/SITL/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AP_Periph/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduSub/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Rover/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduCopter/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/ArduPlane/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/AntennaTracker/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Blimp/apm.pdef.xml.gz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/Parameters/Heli/apm.pdef.xml.gz
+Using backup param data
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.GCSViews.FlightData - Components Done
+INFO MissionPlanner.GCSViews.FlightData - Tunning Graph Settings
+INFO MissionPlanner.GCSViews.FlightData - HUD Settings
+INFO MissionPlanner.GCSViews.FlightData - Graph Setup
+INFO MissionPlanner.GCSViews.FlightData - Map Setup
+INFO MissionPlanner.MainV2 - Create FP
+INFO MissionPlanner.GCSViews.FlightPlanner - Loading wp params
+INFO MissionPlanner.GCSViews.FlightPlanner - param WP_RADIUS 30
+INFO MissionPlanner.GCSViews.FlightPlanner - param LOITER_RADIUS 45
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 0 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - Reading MAV_CMD for ArduPlane
+INFO MissionPlanner.GCSViews.FlightPlanner - Command item count 0 orig list 55
+INFO MissionPlanner.GCSViews.FlightPlanner - updateMapType invoke req? False
+INFO MissionPlanner.MainV2 - Create SIM
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.MAVLinkInterface - Subscribed .ctor at offset 0 in file:line:column <filename unknown>:0:0 comPort_MavChanged MainV2 System.EventHandler
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - Load Pluggins
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: /opt/mp/plugins/
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example19-multiforward.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example19-multiforward.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8-modechange.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8-modechange.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example16-donate.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example16-donate.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example18-externalapi.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example18-externalapi.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example12-forwarding.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example12-forwarding.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5-latencytracker.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5-latencytracker.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example11-trace.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example11-trace.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Polly.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6-mapicondesc.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Stats.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6-mapicondesc.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.SimpleGrid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TrackerHome.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example9-hudonoff.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.Serialization.JsonNet.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example9-hudonoff.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin FaceMap.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example15-leds.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example15-leds.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example17-menuremove.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example17-menuremove.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example10-canlogfile.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example10-canlogfile.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example22-payloadconfig.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example22-payloadconfig.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.Plugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin opendroneid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Bulb.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example21-persistentsimple.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example21-persistentsimple.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example-watchbutton.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example-watchbutton.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Gridv2.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example14-mass.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example14-mass.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example13-herelink2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example13-herelink2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TerrainMakerPlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2-menu.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Markdig.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2-menu.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/generator.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MavlinkMessagePlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin generator.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3-fencedist.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3-fencedist.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7-canrtcm.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7-canrtcm.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4-herelink.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4-herelink.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example23-switch.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example23-switch.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example20-multiplepositions.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example20-multiplepositions.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Init Grid 1.3.9384.38250 by Michael Oborne
+INFO MissionPlanner.MainV2 - Load Pluggins... Done
+INFO MissionPlanner.MainV2 - show FlightData
+Open MissionPlanner.GCSViews.FlightData FlightData
+INFO MissionPlanner.GCSViews.FlightData - Activate Called
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnHandleCreated Start
+INFO MissionPlanner.Controls.HUD - OnLoad Start
+INFO MissionPlanner.Controls.HUD - Vendor: Mesa
+INFO MissionPlanner.Controls.HUD - Version: 4.5 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.5
+INFO MissionPlanner.Controls.HUD - Device: llvmpipe (LLVM 20.1.2, 256 bits)
+INFO MissionPlanner.Controls.HUD - OnLoad Done
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 253
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 222
+HUD 1 hz drawtime 1670 gl True
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 296 220
+INFO MissionPlanner.MainV2 - Saving config
+INFO MissionPlanner.MainV2 - show FlightData... Done
+INFO MissionPlanner.MainV2 - start http
+INFO MissionPlanner.MainV2 - start joystick
+INFO MissionPlanner.Utilities.httpserver - Listening for client
+ERROR MissionPlanner.MainV2 - Mono: closing joystick thread
+INFO MissionPlanner.MainV2 - start serialreader
+INFO MissionPlanner.MainV2 - start adsbsender
+INFO MissionPlanner.MainV2 - start plugin thread
+INFO MissionPlanner.MainV2 - start AutoConnect
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Copter/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Plane/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Rover/LogMessages.xml.xz
+INFO MissionPlanner.Utilities.Download - Get https://autotest.ardupilot.org/LogMessages/Tracker/LogMessages.xml.xz
+INFO MissionPlanner.ArduPilot.APFirmware - https://firmware.oborne.me/manifest.json.gz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+ERROR MissionPlanner.ArduPilot.APFirmware - System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.GetByteArrayAsyncCore (System.Threading.Tasks.Task`1[TResult] getTask) [0x00079] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.ArduPilot.APFirmware.GetList (System.String url, System.Boolean force) [0x0006a] in <3f469290027b4f4f9b9cce6b6c47604d>:0 
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.ArduPilot.APFirmware - https://firmware.ardupilot.org/manifest.json.gz
+INFO MissionPlanner.Utilities.Download - getFilefromNetAsync(): System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Download.getFilefromNetAsync (System.String url, System.String saveto, System.Action`2[T1,T2] status) [0x000c4] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+ERROR MissionPlanner.ArduPilot.APFirmware - System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x000e5] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.GetByteArrayAsyncCore (System.Threading.Tasks.Task`1[TResult] getTask) [0x00079] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.ArduPilot.APFirmware.GetList (System.String url, System.Boolean force) [0x0006a] in <3f469290027b4f4f9b9cce6b6c47604d>:0 
+ERROR MissionPlanner.Utilities.KIndex - System.Net.WebException: Error: NameResolutionFailure
+  at System.Net.WebConnection.Connect (System.Net.WebOperation operation, System.Threading.CancellationToken cancellationToken) [0x00079] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at System.Net.WebConnection.InitConnection (System.Net.WebOperation operation, System.Threading.CancellationToken cancellationToken) [0x000f7] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at System.Net.WebOperation.Run () [0x000b7] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at System.Net.WebCompletionSource`1[T].WaitForCompletion () [0x000b1] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at System.Net.HttpWebRequest.RunWithTimeoutWorker[T] (System.Threading.Tasks.Task`1[TResult] workerTask, System.Int32 timeout, System.Action abort, System.Func`1[TResult] aborted, System.Threading.CancellationTokenSource cts) [0x00118] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at System.Net.HttpWebRequest.EndGetResponse (System.IAsyncResult asyncResult) [0x00025] in <a85c1a570f9a4f9f9c3d2cfa5504e34f>:0 
+  at MissionPlanner.Utilities.KIndex.kindexcallback (System.IAsyncResult ar) [0x0000c] in <c7cb5fd349cd49ffbca279b7c11182d1>:0 
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink default port",
+  "Enabled": true,
+  "Port": 14550,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Mavlink alt port",
+  "Enabled": true,
+  "Port": 14551,
+  "Protocol": "Udp",
+  "Format": "MAVLink",
+  "Direction": "Inbound",
+  "ConfigString": ""
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5000 h264",
+  "Enabled": true,
+  "Port": 5000,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5000 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5100 h264",
+  "Enabled": true,
+  "Port": 5100,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5100 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5600 h264",
+  "Enabled": true,
+  "Port": 5600,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5600 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.Utilities.AutoConnect - {
+  "Label": "Video udp 5601 h265",
+  "Enabled": true,
+  "Port": 5601,
+  "Protocol": "Udp",
+  "Format": "Video",
+  "Direction": "Inbound",
+  "ConfigString": "udpsrc port=5601 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H265 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+}
+INFO MissionPlanner.MainV2 - appload time
+INFO MissionPlanner.Utilities.Update - Checking for update at: https://firmware.oborne.me/MissionPlanner/upgrade/version.txt
+ERROR MissionPlanner.MainV2 - Update check failed
+System.Net.Http.HttpRequestException: No such host is known ---> System.Net.Sockets.SocketException: No such host is known
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x0012b] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+   --- End of inner exception stack trace ---
+  at System.Net.Http.ConnectHelper.ConnectAsync (System.String host, System.Int32 port, System.Threading.CancellationToken cancellationToken) [0x001e6] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.CreateConnectionAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x00166] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync (System.Threading.Tasks.ValueTask`1[TResult] creationTask) [0x000e8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpConnectionPool.SendWithRetryAsync (System.Net.Http.HttpRequestMessage request, System.Boolean doRequestAuth, System.Threading.CancellationToken cancellationToken) [0x00085] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.RedirectHandler.SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken) [0x000b8] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at System.Net.Http.HttpClient.FinishSendAsyncBuffered (System.Threading.Tasks.Task`1[TResult] sendTask, System.Net.Http.HttpRequestMessage request, System.Threading.CancellationTokenSource cts, System.Boolean disposeCts) [0x0018f] in <3588d5c507ec48a6b5d13a6d5ae64da2>:0 
+  at MissionPlanner.Utilities.Update.CheckForUpdate (System.Boolean NotifyNoUpdate) [0x000b2] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0 
+  at MissionPlanner.MainV2.checkupdate (System.Object stuff) [0x00009] in <b0e70e19ad564dc7bb0b8e33a4ca21c0>:0 
+INFO MissionPlanner.MainV2 - Loaded 4855 airports
+HUD 2 hz drawtime 28 gl False
+HUD 1 hz drawtime 4 gl False
+HUD 1 hz drawtime 8 gl False
+HUD 1 hz drawtime 15 gl False
+HUD 1 hz drawtime 5 gl False
+INFO MissionPlanner.Utilities.Airports - getAirports - regen list
+INFO MissionPlanner.Utilities.Airports - getAirports done 0.007028 sec
+HUD 1 hz drawtime 5 gl False
+HUD 1 hz drawtime 5 gl False
+INFO MissionPlanner.Controls.HUD - OnResize start
+INFO MissionPlanner.Controls.HUD - OnResize doing
+HUD resize 5 5
+HUD 1 hz drawtime 90 gl False
+Open MissionPlanner.GCSViews.Help Help
+MainV2_KeyDown System.Windows.Forms.KeyEventArgs
+Open MissionPlanner.temp .ctor
+Open MissionPlanner.GeoRef.Georefimage Geo Ref Images
