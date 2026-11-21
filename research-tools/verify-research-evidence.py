@@ -2967,6 +2967,16 @@ for face, (digest, cues) in mono_displays.items():
           hashlib.sha256((mono_gui / f'{face}.png').read_bytes()).hexdigest() == digest and
           'Mission Planner 1.3.83 build 1.3.9384.38258' in tree_text and all(cue in tree_text for cue in cues),
           'Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run.')
+verify_original = runpy.run_path(str(root / 'research-tools/verify-copter-original-gui.py'))['verify']
+verify_original(root, check)
+mode_edit = root / 'gui-original-mono-flight-modes-save-restore-20261122/verify.py'
+try:
+    runpy.run_path(str(mode_edit))['verify']()
+except (OSError, ValueError) as error:
+    check('original Copter flight-mode save and restore', False, str(error))
+else:
+    check('original Copter flight-mode save and restore', True,
+          'Independent simulator readbacks, reopened GUI labels and intact release files matched.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

@@ -1,0 +1,11 @@
+requests.bin: OK
+run: OK
+Begin read-only SERIAL1 observer: 2026-11-21T19:10:33Z
+2026-11-21T19:10:46Z capture /evidence/serial1-1.bin
+2834 /evidence/serial1-1.bin
+2026-11-21T19:16:07Z capture /evidence/serial1-2.bin
+1220 /evidence/serial1-2.bin
+2026-11-21T19:17:15Z capture /evidence/serial1-3.bin
+1270 /evidence/serial1-3.bin
+2026-11-21T19:22:00Z capture /evidence/serial1-4.bin
+1298 /evidence/serial1-4.bin

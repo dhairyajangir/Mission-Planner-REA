@@ -1,0 +1,286 @@
+{
+  "target": [
+    1,
+    1
+  ],
+  "message_counts": {
+    "TIMESYNC": 3,
+    "HEARTBEAT": 25,
+    "SYS_STATUS": 1,
+    "GPS_GLOBAL_ORIGIN": 1,
+    "HOME_POSITION": 1,
+    "PARAM_VALUE": 19
+  },
+  "records": [
+    {
+      "kind": "HEARTBEAT",
+      "seq": 1,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 2,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 6,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 7,
+      "name": "MAV_SYSID",
+      "value": 1.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 8,
+      "name": "FRAME_CLASS",
+      "value": 1.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 9,
+      "name": "FLTMODE_CH",
+      "value": 5.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 10,
+      "name": "FLTMODE1",
+      "value": 7.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 11,
+      "name": "FLTMODE2",
+      "value": 9.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 12,
+      "name": "FLTMODE3",
+      "value": 6.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 13,
+      "name": "FLTMODE4",
+      "value": 3.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 14,
+      "name": "FLTMODE5",
+      "value": 5.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 15,
+      "name": "FLTMODE6",
+      "value": 0.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 16,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 17,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 18,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 19,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 20,
+      "name": "MAV_SYSID",
+      "value": 1.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 21,
+      "name": "FRAME_CLASS",
+      "value": 1.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 22,
+      "name": "FLTMODE_CH",
+      "value": 5.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 23,
+      "name": "FLTMODE1",
+      "value": 7.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 24,
+      "name": "FLTMODE2",
+      "value": 9.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 25,
+      "name": "FLTMODE3",
+      "value": 6.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 26,
+      "name": "FLTMODE4",
+      "value": 3.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 27,
+      "name": "FLTMODE5",
+      "value": 5.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "PARAM_VALUE",
+      "seq": 28,
+      "name": "FLTMODE6",
+      "value": 0.0,
+      "index": 65535,
+      "count": 1431
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 29,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 31,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 32,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 33,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 34,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 36,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    },
+    {
+      "kind": "HEARTBEAT",
+      "seq": 37,
+      "vehicle": 2,
+      "autopilot": 3,
+      "base_mode": 81,
+      "custom_mode": 0,
+      "armed": false
+    }
+  ]
+}

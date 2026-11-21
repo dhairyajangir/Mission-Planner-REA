@@ -15,6 +15,14 @@ Ubuntu-E (WSL2) hosted a private Ubuntu 24.04 runtime. Mono 6.8.0.105 started th
 
 The four `windows-*.txt` files contain the X11 window trees for the corresponding captures. `release.log` records the actual view classes, including ConfigPlanner, and zero parameters received on the two setup screens. The run exercised navigation without changing application or vehicle settings through the UI. Native Windows rendering, plugin behavior, map downloads and aircraft behavior were outside this run.
 
+## Connected Copter session
+
+The original release used its temporary AutoConnect profile to connect over private loopback to a disarmed quadrotor simulator. The application received all 1,431 reported parameters. The DATA screen showed Stabilize and a simulated battery near 12.6 V. The SETUP menu opened Mandatory Hardware. Frame Type displayed Quad and Plus. Flight Modes showed channel 5 at PWM 1800, with slot 6 highlighted in green. Opening FailSafe brought up the propeller reminder, where the observation ended. [Screens and window trees](connected) · [Application log](connected/release.log)
+
+An independent reader on the same simulator's second port recorded disarmed heartbeats, frame class 1, flight-mode channel 5 and assignments 7, 9, 6, 3, 5 and 0. These assignments corresponded to the six labels visible in the GUI. The archive comparison found that all 1,317 packaged files still matched. [Wire capture](connected/serial1-1.bin) · [Decoded observations](connected/serial1-1.json) · [Release file comparison](connected/archive-comparison.json)
+
+A fresh simulator and release extraction were used for the separate slot edit, save, reopen and restore experiment. Another connected run covered sensor pages and captured the battery parameter traffic. The PLAN file round trip used disconnected sessions. [Flight-mode experiment](../gui-original-mono-flight-modes-save-restore-20261122/README.md) · [Sensor page trace](../Copter-Original-Sensor-Pages-Trace.md) · [PLAN file trace](../Original-Mono-Plan-File-Trace.md)
+
 ## Reproducing the disconnected run
 
 1. On a WSL2 Ubuntu 24.04 x86-64 installation with unprivileged user namespaces, Bash, apt, dpkg-deb, unzip, Python 3 and ImageMagick, run `bash runtime/prepare.sh`. The script reads the original portable ZIP from the absolute project path on the SSD. It downloads signed Ubuntu package indexes and packages into a private directory under `/tmp`. The host distribution's installed package set is untouched. A previous attempt using the existing package lists hit HTTP 404s for superseded package versions. The included recipe refreshes a private index.

@@ -1,0 +1,280 @@
+Assembly SHA-256 a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a
+Module version ID b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0
+
+System.Byte MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::readSwitch(System.Single) [0x06000f3e]
+IL_0000: ldarg.1
+IL_0001: conv.i4
+IL_0002: stloc.0
+IL_0003: ldloc.0
+IL_0004: ldc.i4 1230
+IL_0009: ble.s IL_0015
+IL_000b: ldloc.0
+IL_000c: ldc.i4 1360
+IL_0011: bgt.s IL_0015
+IL_0013: ldc.i4.1
+IL_0014: ret
+IL_0015: ldloc.0
+IL_0016: ldc.i4 1360
+IL_001b: ble.s IL_0027
+IL_001d: ldloc.0
+IL_001e: ldc.i4 1490
+IL_0023: bgt.s IL_0027
+IL_0025: ldc.i4.2
+IL_0026: ret
+IL_0027: ldloc.0
+IL_0028: ldc.i4 1490
+IL_002d: ble.s IL_0039
+IL_002f: ldloc.0
+IL_0030: ldc.i4 1620
+IL_0035: bgt.s IL_0039
+IL_0037: ldc.i4.3
+IL_0038: ret
+IL_0039: ldloc.0
+IL_003a: ldc.i4 1620
+IL_003f: ble.s IL_004b
+IL_0041: ldloc.0
+IL_0042: ldc.i4 1749
+IL_0047: bgt.s IL_004b
+IL_0049: ldc.i4.4
+IL_004a: ret
+IL_004b: ldloc.0
+IL_004c: ldc.i4 1750
+IL_0051: blt.s IL_0055
+IL_0053: ldc.i4.5
+IL_0054: ret
+IL_0055: ldc.i4.0
+IL_0056: ret
+
+System.Void MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::timer_Tick(System.Object,System.EventArgs) [0x06000f3d]
+IL_0000: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0005: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_000a: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_000f: ldarg.0
+IL_0010: ldfld System.Windows.Forms.BindingSource MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::currentStateBindingSource
+IL_0015: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_001a: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_001f: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_0024: call System.Action`1<T> MissionPlanner.Utilities.ExtensionsMP::UpdateDataSource<MissionPlanner.CurrentState>(System.Windows.Forms.BindingSource,T)
+IL_0029: callvirt System.Void MissionPlanner.CurrentState::UpdateCurrentSettings(System.Action`1<MissionPlanner.CurrentState>)
+IL_002e: leave.s IL_0033
+IL_0030: pop
+IL_0031: leave.s IL_0033
+IL_0033: ldc.r4 0
+IL_0038: stloc.0
+IL_0039: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_003e: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0043: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_0048: ldstr "FLTMODE_CH"
+IL_004d: callvirt System.Boolean MAVLink/MAVLinkParamList::ContainsKey(System.String)
+IL_0052: brtrue.s IL_0072
+IL_0054: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0059: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_005e: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_0063: ldstr "MODE_CH"
+IL_0068: callvirt System.Boolean MAVLink/MAVLinkParamList::ContainsKey(System.String)
+IL_006d: brfalse IL_02d1
+IL_0072: ldc.i4.0
+IL_0073: stloc.3
+IL_0074: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0079: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_007e: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_0083: ldstr "FLTMODE_CH"
+IL_0088: callvirt System.Boolean MAVLink/MAVLinkParamList::ContainsKey(System.String)
+IL_008d: brfalse.s IL_00b1
+IL_008f: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0094: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0099: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_009e: ldstr "FLTMODE_CH"
+IL_00a3: callvirt MAVLink/MAVLinkParam MAVLink/MAVLinkParamList::get_Item(System.String)
+IL_00a8: callvirt System.Double MAVLink/MAVLinkParam::get_Value()
+IL_00ad: conv.i4
+IL_00ae: stloc.3
+IL_00af: br.s IL_00d1
+IL_00b1: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_00b6: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_00bb: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_00c0: ldstr "MODE_CH"
+IL_00c5: callvirt MAVLink/MAVLinkParam MAVLink/MAVLinkParamList::get_Item(System.String)
+IL_00ca: callvirt System.Double MAVLink/MAVLinkParam::get_Value()
+IL_00cf: conv.i4
+IL_00d0: stloc.3
+IL_00d1: ldloc.3
+IL_00d2: ldc.i4.5
+IL_00d3: sub
+IL_00d4: switch IL_010e,IL_0128,IL_0142,IL_015c,IL_0176,IL_0190,IL_01aa,IL_01c1,IL_01d8,IL_01ef,IL_0206,IL_021d
+IL_0109: br IL_0232
+IL_010e: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0113: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0118: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_011d: callvirt System.Single MissionPlanner.CurrentState::get_ch5in()
+IL_0122: stloc.0
+IL_0123: br IL_0232
+IL_0128: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_012d: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0132: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_0137: callvirt System.Single MissionPlanner.CurrentState::get_ch6in()
+IL_013c: stloc.0
+IL_013d: br IL_0232
+IL_0142: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0147: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_014c: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_0151: callvirt System.Single MissionPlanner.CurrentState::get_ch7in()
+IL_0156: stloc.0
+IL_0157: br IL_0232
+IL_015c: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0161: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0166: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_016b: callvirt System.Single MissionPlanner.CurrentState::get_ch8in()
+IL_0170: stloc.0
+IL_0171: br IL_0232
+IL_0176: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_017b: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0180: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_0185: callvirt System.Single MissionPlanner.CurrentState::get_ch9in()
+IL_018a: stloc.0
+IL_018b: br IL_0232
+IL_0190: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0195: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_019a: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_019f: callvirt System.Single MissionPlanner.CurrentState::get_ch10in()
+IL_01a4: stloc.0
+IL_01a5: br IL_0232
+IL_01aa: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_01af: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_01b4: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_01b9: callvirt System.Single MissionPlanner.CurrentState::get_ch11in()
+IL_01be: stloc.0
+IL_01bf: br.s IL_0232
+IL_01c1: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_01c6: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_01cb: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_01d0: callvirt System.Single MissionPlanner.CurrentState::get_ch12in()
+IL_01d5: stloc.0
+IL_01d6: br.s IL_0232
+IL_01d8: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_01dd: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_01e2: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_01e7: callvirt System.Single MissionPlanner.CurrentState::get_ch13in()
+IL_01ec: stloc.0
+IL_01ed: br.s IL_0232
+IL_01ef: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_01f4: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_01f9: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_01fe: callvirt System.Single MissionPlanner.CurrentState::get_ch14in()
+IL_0203: stloc.0
+IL_0204: br.s IL_0232
+IL_0206: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_020b: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0210: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_0215: callvirt System.Single MissionPlanner.CurrentState::get_ch15in()
+IL_021a: stloc.0
+IL_021b: br.s IL_0232
+IL_021d: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0222: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0227: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_022c: callvirt System.Single MissionPlanner.CurrentState::get_ch16in()
+IL_0231: stloc.0
+IL_0232: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0237: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_023c: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_0241: ldstr "FLTMODE_CH"
+IL_0246: callvirt System.Boolean MAVLink/MAVLinkParamList::ContainsKey(System.String)
+IL_024b: brfalse.s IL_0290
+IL_024d: ldarg.0
+IL_024e: ldfld System.Windows.Forms.Label MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::LBL_flightmodepwm
+IL_0253: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0258: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_025d: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_0262: ldstr "FLTMODE_CH"
+IL_0267: callvirt MAVLink/MAVLinkParam MAVLink/MAVLinkParamList::get_Item(System.String)
+IL_026c: dup
+IL_026d: brtrue.s IL_0273
+IL_026f: pop
+IL_0270: ldnull
+IL_0271: br.s IL_0278
+IL_0273: callvirt System.String System.Object::ToString()
+IL_0278: ldstr ": "
+IL_027d: ldloca.s V_0
+IL_027f: call System.String System.Single::ToString()
+IL_0284: call System.String System.String::Concat(System.String,System.String,System.String)
+IL_0289: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL_028e: br.s IL_02d1
+IL_0290: ldarg.0
+IL_0291: ldfld System.Windows.Forms.Label MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::LBL_flightmodepwm
+IL_0296: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_029b: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_02a0: callvirt MAVLink/MAVLinkParamList MissionPlanner.MAVState::get_param()
+IL_02a5: ldstr "MODE_CH"
+IL_02aa: callvirt MAVLink/MAVLinkParam MAVLink/MAVLinkParamList::get_Item(System.String)
+IL_02af: dup
+IL_02b0: brtrue.s IL_02b6
+IL_02b2: pop
+IL_02b3: ldnull
+IL_02b4: br.s IL_02bb
+IL_02b6: callvirt System.String System.Object::ToString()
+IL_02bb: ldstr ": "
+IL_02c0: ldloca.s V_0
+IL_02c2: call System.String System.Single::ToString()
+IL_02c7: call System.String System.String::Concat(System.String,System.String,System.String)
+IL_02cc: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL_02d1: ldc.i4.6
+IL_02d2: newarr System.Windows.Forms.Control
+IL_02d7: dup
+IL_02d8: ldc.i4.0
+IL_02d9: ldarg.0
+IL_02da: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode1
+IL_02df: stelem.ref
+IL_02e0: dup
+IL_02e1: ldc.i4.1
+IL_02e2: ldarg.0
+IL_02e3: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode2
+IL_02e8: stelem.ref
+IL_02e9: dup
+IL_02ea: ldc.i4.2
+IL_02eb: ldarg.0
+IL_02ec: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode3
+IL_02f1: stelem.ref
+IL_02f2: dup
+IL_02f3: ldc.i4.3
+IL_02f4: ldarg.0
+IL_02f5: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode4
+IL_02fa: stelem.ref
+IL_02fb: dup
+IL_02fc: ldc.i4.4
+IL_02fd: ldarg.0
+IL_02fe: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode5
+IL_0303: stelem.ref
+IL_0304: dup
+IL_0305: ldc.i4.5
+IL_0306: ldarg.0
+IL_0307: ldfld System.Windows.Forms.ComboBox MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::CMB_fmode6
+IL_030c: stelem.ref
+IL_030d: stloc.1
+IL_030e: ldloc.1
+IL_030f: stloc.s V_4
+IL_0311: ldc.i4.0
+IL_0312: stloc.s V_5
+IL_0314: br.s IL_0326
+IL_0316: ldloc.s V_4
+IL_0318: ldloc.s V_5
+IL_031a: ldelem.ref
+IL_031b: call System.Void MissionPlanner.Utilities.ThemeManager::ApplyThemeTo(System.Windows.Forms.Control)
+IL_0320: ldloc.s V_5
+IL_0322: ldc.i4.1
+IL_0323: add
+IL_0324: stloc.s V_5
+IL_0326: ldloc.s V_5
+IL_0328: ldloc.s V_4
+IL_032a: ldlen
+IL_032b: conv.i4
+IL_032c: blt.s IL_0316
+IL_032e: ldarg.0
+IL_032f: ldloc.0
+IL_0330: call System.Byte MissionPlanner.GCSViews.ConfigurationView.ConfigFlightModes::readSwitch(System.Single)
+IL_0335: stloc.2
+IL_0336: ldloc.1
+IL_0337: ldloc.2
+IL_0338: ldelem.ref
+IL_0339: ldsfld System.Drawing.Color MissionPlanner.Utilities.ThemeManager::CurrentPPMBackground
+IL_033e: callvirt System.Void System.Windows.Forms.Control::set_BackColor(System.Drawing.Color)
+IL_0343: ret

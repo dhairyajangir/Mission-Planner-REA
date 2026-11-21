@@ -1,0 +1,70 @@
+Sat Nov 21 19:08:04 UTC 2026
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+total 0
+lrwxrwxrwx 1  1000  1000   11 Nov 21 19:08 core -> /proc/kcore
+lrwxrwxrwx 1  1000  1000   13 Nov 21 19:08 fd -> /proc/self/fd
+crw-rw-rw- 1 65534 65534 1, 7 Nov 21 18:53 full
+crw-rw-rw- 1 65534 65534 1, 3 Nov 21 18:53 null
+lrwxrwxrwx 1  1000  1000    8 Nov 21 19:08 ptmx -> pts/ptmx
+drwxr-xr-x 2  1000  1000    0 Nov 21 19:08 pts
+crw-rw-rw- 1 65534 65534 1, 8 Nov 21 18:53 random
+drwxr-xr-x 2  1000  1000   40 Nov 21 19:08 shm
+lrwxrwxrwx 1  1000  1000   15 Nov 21 19:08 stderr -> /proc/self/fd/2
+lrwxrwxrwx 1  1000  1000   15 Nov 21 19:08 stdin -> /proc/self/fd/0
+lrwxrwxrwx 1  1000  1000   15 Nov 21 19:08 stdout -> /proc/self/fd/1
+crw-rw-rw- 1 65534 65534 5, 0 Nov 21 18:53 tty
+crw-rw-rw- 1 65534 65534 1, 9 Nov 21 18:53 urandom
+crw-rw-rw- 1 65534 65534 1, 5 Nov 21 18:53 zero
+Mono JIT compiler version 6.8.0.105 (Debian 6.8.0.105+dfsg-3.6ubuntu2 Sun Mar 31 02:55:28 UTC 2024)
+Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
+	TLS:           __thread
+	SIGSEGV:       altstack
+	Notifications: epoll
+	Architecture:  amd64
+	Disabled:      none
+	Misc:          softdebug 
+	Interpreter:   yes
+	LLVM:          supported, not enabled.
+	Suspend:       hybrid
+	GC:            sgen (concurrent by default)
+a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a  MissionPlanner.exe
+0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71  MissionPlanner.Utilities.dll
+90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814  MissionPlanner.Comms.dll
+7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336  MissionPlanner.Controls.dll
+24afb2e186bcdf66c66d7cb5b88fb7afeaa2a0b89bf63c9d58e4fb2029ac2b54  /sim/arducopter
+Saved the exact test user profile as initial-user-config.xml.
+xwininfo: can not set locale properly
+2026-11-21T19:08:57Z: click (207,116) label setup
+xwininfo: can not set locale properly
+2026-11-21T19:09:24Z: click (163,194) label mandatory
+xwininfo: can not set locale properly
+2026-11-21T19:09:47Z: click (158,253) label accel
+xwininfo: can not set locale properly
+2026-11-21T19:10:06Z: click (158,283) label compass
+xwininfo: can not set locale properly
+2026-11-21T19:10:26Z: click (158,313) label radio-input
+xwininfo: can not set locale properly
+2026-11-21T19:10:46Z: click (158,343) label servo-output
+xwininfo: can not set locale properly
+2026-11-21T19:11:16Z: click (158,523) label hardware-id
+xwininfo: can not set locale properly
+2026-11-21T19:11:48Z: click (158,583) label optional
+xwininfo: can not set locale properly
+2026-11-21T19:12:26Z: click (249,505) label optional-scroll
+xwininfo: can not set locale properly
+2026-11-21T19:13:01Z: click (153,223) label battery
+xwininfo: can not set locale properly
+2026-11-21T19:13:38Z: click (249,505) label battery-scroll
+xwininfo: can not set locale properly
+2026-11-21T19:14:08Z: click (153,253) label battery-two
+xwininfo: can not set locale properly
+2026-11-21T19:14:42Z: click (108,116) label final-hud
+xwininfo: can not set locale properly
+.
+..
+.cache
+.config
+.local
+.mono

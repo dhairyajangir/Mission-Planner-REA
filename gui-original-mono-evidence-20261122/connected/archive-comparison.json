@@ -1,0 +1,13 @@
+{
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "release_files": 1317,
+  "missing": [],
+  "changed": [],
+  "added": [
+    "Mission Planner/MissionPlanner.log",
+    "Mission Planner/MissionPlanner.log.1",
+    "\\\\Mission Planner\\\\MissionPlanner.log"
+  ],
+  "extraction": "/tmp/mission-planner-original-gui-nov21/app-hjNeNTCH",
+  "matching": 1317
+}

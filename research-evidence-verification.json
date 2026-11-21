@@ -1284,6 +1284,71 @@
       "name": "original Mono GUI disconnected data-return",
       "passed": true,
       "detail": "Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run."
+    },
+    {
+      "name": "connected original Mono release and simulator provenance",
+      "passed": true,
+      "detail": "One isolated release and disposable Copter under Mono; startup plugins disabled."
+    },
+    {
+      "name": "original Mono GUI Copter startup",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "original Mono GUI Copter setup",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "original Mono GUI Copter mandatory",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "original Mono GUI Copter frame-type",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "original Mono GUI Copter flight-modes",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "original Mono GUI Copter failsafe",
+      "passed": true,
+      "detail": "Reviewed release-window PNG and X11 control tree from the disarmed core observation."
+    },
+    {
+      "name": "Copter core disarmed SERIAL1 observations",
+      "passed": true,
+      "detail": "Raw bounded capture decoded separately from the saved observer summary; no airborne inference."
+    },
+    {
+      "name": "original Mono PLAN local import and save",
+      "passed": true,
+      "detail": "Two disconnected guests, local home and two waypoints, 36 fields; command catalogue reported Plane."
+    },
+    {
+      "name": "ConfigFlightModes compiled method bodies and call edge",
+      "passed": true,
+      "detail": "Release IL listing tied to indexed method hashes and the timer callback's readSwitch call."
+    },
+    {
+      "name": "nine supplemental original Mono Copter setup pages",
+      "passed": true,
+      "detail": "Each reviewed PNG is paired with the exact ordered release page activation and navigation event."
+    },
+    {
+      "name": "supplemental GUI telemetry and battery-page parameter write",
+      "passed": true,
+      "detail": "Disarmed samples bracket every page. After battery navigation the GCS sent the existing multiplier and later a preflight storage command; the returned multiplier matched."
+    },
+    {
+      "name": "original Copter flight-mode save and restore",
+      "passed": true,
+      "detail": "Independent simulator readbacks, reopened GUI labels and intact release files matched."
     }
   ],
   "passed": true

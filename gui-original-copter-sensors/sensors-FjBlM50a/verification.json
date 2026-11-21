@@ -1,0 +1,97 @@
+{
+  "vehicle_heartbeats": 518,
+  "armed_heartbeats": 0,
+  "first_heartbeat_utc": "2026-11-21T19:08:17.411955+00:00",
+  "last_heartbeat_utc": "2026-11-21T19:16:54.725207+00:00",
+  "gcs_param_set": [
+    {
+      "utc": "2026-11-21T19:13:04.237737+00:00",
+      "name": "BATT_VOLT_MULT",
+      "value": 10.100000381469727
+    }
+  ],
+  "vehicle_batt_volt_mult_param_value": [
+    {
+      "utc": "2026-11-21T19:08:22.224123+00:00",
+      "value": 10.100000381469727
+    },
+    {
+      "utc": "2026-11-21T19:13:04.249853+00:00",
+      "value": 10.100000381469727
+    }
+  ],
+  "gcs_preflight_storage": [
+    {
+      "utc": "2026-11-21T19:13:14.422378+00:00",
+      "param1": 1.0
+    }
+  ],
+  "tlog_gz_sha256": "175df68a25cc1bb68a64420778e800e5acd092cee267f7c0108df1082aed7d0a",
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "archive_matching_files": 1317,
+  "captures": {
+    "mandatory": {
+      "click_utc": "2026-11-21T19:09:24+00:00",
+      "disarmed_before_click": "2026-11-21T19:09:23.414536+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:09:30.415007+00:00",
+      "screenshot_sha256": "09673dd32868978c238ea1fc93699a4dabf2aecca3f786e5f91a36d8fd2e8735",
+      "tree_sha256": "6edb2fe140c94d870638167bd7bbdc8637687d82a1250ff38c3068f571eca6f2"
+    },
+    "accel": {
+      "click_utc": "2026-11-21T19:09:47+00:00",
+      "disarmed_before_click": "2026-11-21T19:09:46.423349+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:09:53.420975+00:00",
+      "screenshot_sha256": "17c5c9985d37dcf189e796ac14ce1e8f356b98e6aae7827625a888f611c647ae",
+      "tree_sha256": "1f2cea90112df6527bbc12c85d9c4a463e814d9fc9c8b8f994b0aa66038da459"
+    },
+    "compass": {
+      "click_utc": "2026-11-21T19:10:06+00:00",
+      "disarmed_before_click": "2026-11-21T19:10:05.426866+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:10:12.425811+00:00",
+      "screenshot_sha256": "1a1e2d725dde6d8ee4e42a90f5837771a4a3fc010e0933bbf9235c4fef299ea0",
+      "tree_sha256": "82e9cbb2e076103226c8519dc956d8c7c6b6aaac1a154a570213991b0b14415f"
+    },
+    "radio-input": {
+      "click_utc": "2026-11-21T19:10:26+00:00",
+      "disarmed_before_click": "2026-11-21T19:10:25.425410+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:10:32.431526+00:00",
+      "screenshot_sha256": "c19ad2add32af000cb65a90416a62f52c70168f3c212062ffdc3d2aa6b7426b4",
+      "tree_sha256": "c2efa9f7e32f9bb0f03f5ee847f691c766f798296bd8695308bcb0f7839f4951"
+    },
+    "servo-output": {
+      "click_utc": "2026-11-21T19:10:46+00:00",
+      "disarmed_before_click": "2026-11-21T19:10:45.439399+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:10:52.436106+00:00",
+      "screenshot_sha256": "b43aefda931d8808447516a3149b0408f2afb8c5dd48933913099f7cd775719d",
+      "tree_sha256": "c20890df073897d6ec16a8ad2ba745a512c37be391fb0479e5acaf6451d88848"
+    },
+    "hardware-id": {
+      "click_utc": "2026-11-21T19:11:16+00:00",
+      "disarmed_before_click": "2026-11-21T19:11:15.453204+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:11:22.463629+00:00",
+      "screenshot_sha256": "7bb2ab059256542c09c7c315cfa2665120c385253435b578a1d34924d7865817",
+      "tree_sha256": "d69db4a49ddcfce59a05cffac6992a276b2a46711e69ddbef85a890f84f35d10"
+    },
+    "optional": {
+      "click_utc": "2026-11-21T19:11:48+00:00",
+      "disarmed_before_click": "2026-11-21T19:11:47.500802+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:11:54.518584+00:00",
+      "screenshot_sha256": "948c89ac4a1f06865539083eedca39fe8e187442d3d14a1cd6b0c198f8024e9a",
+      "tree_sha256": "b1c65d93ddf0240cc946435ce34e7b96220ae3830277c4986ad0648be964d96a"
+    },
+    "battery": {
+      "click_utc": "2026-11-21T19:13:01+00:00",
+      "disarmed_before_click": "2026-11-21T19:13:00.566071+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:13:07.547011+00:00",
+      "screenshot_sha256": "734eb7a55ce9efbad997d9e02558ecea06cb4b9cf88b6f1cb2e93785a4116755",
+      "tree_sha256": "87b0eea039445938ce0199e9fc4220af06661f134d750ef718f0a13a9c74a777"
+    },
+    "battery-two": {
+      "click_utc": "2026-11-21T19:14:08+00:00",
+      "disarmed_before_click": "2026-11-21T19:14:07.596262+00:00",
+      "disarmed_after_nominal_capture": "2026-11-21T19:14:14.594807+00:00",
+      "screenshot_sha256": "03d96ae28ca52eeed0d87d1107e7d321a28f54645694f02d17e1641b2f95880e",
+      "tree_sha256": "7d0d19a86da0767c3ef24e2babd333e51d27142f2aa19d4278ccac588f76d63c"
+    }
+  }
+}
