@@ -11,6 +11,8 @@ time from the last heartbeat sent to the notice, the mode chosen, and the outcom
 import csv
 import math
 import os
+import socket
+import struct
 import subprocess
 import sys
 import time
@@ -27,6 +29,7 @@ ALT_M = 20.0
 WATCH_S = 70.0
 CLEAR_AFTER_S = 12.0
 HB_PERIOD_S = 1.0
+RC_UDP_PORT = 5501  # AP_RCProtocol_UDP's SITL RC input socket
 # (label, FS_GCS_ENABLE, FS_GCS_TIMEOUT, FS_OPTIONS or None to keep the default, mode flown in when heartbeats stop)
 CASES = [
     ('rtl-guided', 1, 5, None, 'GUIDED'),
@@ -72,8 +75,7 @@ def goto_local(conn, heart, north_m, east_m, alt_m, timeout=60.0, tol_m=4.0):
 
 def run_case(label, fs_gcs, timeout_s, fs_options, fly_mode):
     work = os.path.expanduser('~/cg-copter-gcs-failsafe-' + label)
-    subprocess.call(['pkill', '-x', 'arducopter'])
-    time.sleep(1)
+    # No name-based pkill: other agents' simulators run on this machine (instances 1+); this run is instance 0 and terminates only its own process.
     subprocess.call(['rm', '-rf', work])
     os.makedirs(work)
     notes, track = [], []
@@ -122,6 +124,18 @@ def run_case(label, fs_gcs, timeout_s, fs_options, fly_mode):
         heart.tick()
         notes.append('params written in flight: %s (rejected %s)' % ([c.name for c in pending], bad))
         if fly_mode != 'GUIDED':
+            # LOITER's throttle is the pilot's stick: with no RC input SITL's throttle sits at 1000, which commands full descent (the first LOITER run
+            # simply flew into the ground, 'SIM Hit ground at 2.49 m/s' before any failsafe). So hold throttle centred through SITL's UDP RC input
+            # (the path confirmed in sitl-copter-radio-failsafe.py) and switch off the RC flight-mode switch (FLTMODE_CH=0) so the packet's
+            # channel 5 cannot change the mode.
+            heart.last_sent = 0.0
+            heart.tick()
+            bad_rc = [r.name for r in params.write(conn, [params.Change('FLTMODE_CH', base.get('FLTMODE_CH'), 0.0)]) if not r.ok]
+            pkt = struct.pack('<16H', *([1500] * 16))
+            socket.socket(socket.AF_INET, socket.SOCK_DGRAM).sendto(pkt, ('127.0.0.1', RC_UDP_PORT))
+            conn.mav.command_long_send(conn.target_system, conn.target_component, 511, 0, 65, 200000, 0, 0, 0, 0, 0)  # RC_CHANNELS at 5 Hz
+            rc = conn.recv_match(type='RC_CHANNELS', blocking=True, timeout=3)
+            notes.append('FLTMODE_CH -> 0 (rejected %s); UDP RC packet sent, RC_CHANNELS chan3=%s' % (bad_rc, None if rc is None else rc.chan3_raw))
             res = flight.set_mode(conn, fly_mode, table='copter')
             notes.append('switch to %s: %s' % (fly_mode, res.detail))
             end = time.time() + 5
@@ -162,7 +176,7 @@ def run_case(label, fs_gcs, timeout_s, fs_options, fly_mode):
     except Exception as e:
         notes.append('EXCEPTION %r' % (e,))
     finally:
-        subprocess.call(['pkill', '-TERM', '-x', 'arducopter'])
+        proc.terminate()
         try:
             proc.wait(120)
         except Exception:

@@ -1,0 +1,12 @@
+case brake-or-land-guided: FS_GCS_ENABLE=7 FS_GCS_TIMEOUT=5 FS_OPTIONS=default flown in GUIDED
+defaults: FS_GCS_ENABLE=0.0 FS_GCS_TIMEOUT=5.0 FS_OPTIONS=16.0 SYSID_MYGCS=None
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.440269470214844, 0.04670492187142372, -19.986366271972656)
+params written in flight: ['FS_GCS_TIMEOUT', 'FS_GCS_ENABLE'] (rejected [])
+heartbeats stopped; last one sent 0.00s before this line
+t=  0.2 mode=GUIDED armed=True
+t=  5.1 mode=BRAKE armed=True
+t=  5.1 vehicle: GCS Failsafe
+t= 17.1 heartbeats resumed
+t= 17.4 vehicle: GCS Failsafe Cleared
+time from last heartbeat sent to GCS Failsafe notice: 5.1

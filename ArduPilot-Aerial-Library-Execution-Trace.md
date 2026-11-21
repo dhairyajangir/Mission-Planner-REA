@@ -894,29 +894,26 @@ In every cleared case the mode did not go back to `GUIDED`: `failsafe_radio_off_
 
 Limits: one run per case, Copter quad frame only, started from `GUIDED` (the `FS_OPTIONS` bits for continuing in AUTO or GUIDED, and the default 16 bit for continuing a landing, were not exercised); `FS_THR_ENABLE` values 2, 5, 6 and 7 and `SIM_RC_FAIL`=3 were not flown; time-to-notice has about 0.1 s resolution; simulator only, no real receiver.
 
-## Copter GCS-loss failsafe: action map and timing confirmed, arming blocked while it is raised
+## Copter GCS-loss failsafe: the action map, the timeout, and the default FS_OPTIONS exception that makes LOITER ignore it
 
-`Copter::failsafe_gcs_check` compares the time since the last heartbeat from the GCS against `FS_GCS_TIMEOUT` and, past it, maps `FS_GCS_ENABLE` to an action. `research-tools/sitl-copter-gcs-failsafe.py` (output `sitl-evidence/copter-gcs-failsafe/`) flew a Copter 60 m north at 20 m in `GUIDED`, wrote the parameters in flight, then stopped heartbeats while keeping the link open and reading.
+`Copter::failsafe_gcs_check` (`ArduCopter/events.cpp`) counts from the last heartbeat seen from `SYSID_MYGCS` and fires after `FS_GCS_TIMEOUT` (default 5 s); `failsafe_gcs_on_event` then maps `FS_GCS_ENABLE` to an action unless `FS_OPTIONS` says to continue. The vehicle's `FS_OPTIONS` read back as 16 (`GCS_CONTINUE_IF_PILOT_CONTROL`), so the source predicts the failsafe acts in an autopilot mode (`GUIDED`) but is only announced in a pilot-controlled one (`LOITER`). `research-tools/sitl-copter-gcs-failsafe.py` (output `sitl-evidence/copter-gcs-failsafe/`) flew a quad 60 m north at 20 m, stopped GCS heartbeats while keeping the link open and reading, and resumed them 12 s after the notice. Times below run from the last heartbeat the harness sent, so they include a little link and scheduler latency.
 
-- `FS_GCS_ENABLE`=1, timeout 5: `"GCS Failsafe"` 5.2 s after the last heartbeat, mode switched to `RTL`.
-- `FS_GCS_ENABLE`=3, timeout 5: `SMART_RTL` at 5.1 s.
-- `FS_GCS_ENABLE`=5, timeout 5: `LAND` at 5.1 s.
-- `FS_GCS_ENABLE`=1, timeout 3: notice and `RTL` at 3.1 s, so the delay follows `FS_GCS_TIMEOUT`.
+| Case | Notice | Mode chosen | Outcome |
+| --- | --- | --- | --- |
+| `FS_GCS_ENABLE`=1, timeout 5, `GUIDED` | 5.2 s | `RTL` | returned home, landed at 0.50 m/s, disarmed t=55.3 s |
+| `FS_GCS_ENABLE`=1, `FS_GCS_TIMEOUT`=3, `GUIDED` | 3.1 s | `RTL` | returned home, disarmed t=53.2 s |
+| `FS_GCS_ENABLE`=5 (Land), `GUIDED` | 5.1 s | `LAND` | landed in place (still 60 m north), disarmed t=40.2 s |
+| `FS_GCS_ENABLE`=3 (SmartRTL or RTL), `GUIDED` | 5.1 s | `SMART_RTL` | returned to the origin, disarmed t=39.2 s |
+| `FS_GCS_ENABLE`=7 (Brake or Land), `GUIDED` | 5.1 s | `BRAKE` | held at 60.1 m north and 20.0 m for the rest of the 70 s watch; no landing |
+| `FS_GCS_ENABLE`=1, `LOITER`, default `FS_OPTIONS` | 5.2 s | none: `GCS Failsafe - Continuing Pilot Control` | stayed in `LOITER` at about 20 m for the whole 70 s watch |
+| `FS_GCS_ENABLE`=1, `LOITER`, `FS_OPTIONS`=0 | 5.1 s | `RTL` | returned home, disarmed t=55.2 s |
 
-Heartbeats were resumed about 12 s after the notice in each run. `"GCS Failsafe Cleared"` followed within 0.3 s and no further mode change was logged; the vehicle finished its RTL, SMART_RTL or LAND, touched down at about 0.5 m/s and disarmed.
+Every action matches the `switch` in `failsafe_gcs_on_event`, and the notice follows `FS_GCS_TIMEOUT` (3.1 s for 3, 5.1 to 5.2 s for 5). The `LOITER` pair isolates the exception: identical setup and `FS_GCS_ENABLE`, and only the `FS_OPTIONS` value decides between continuing and `RTL`. The `BRAKE` case matches `set_mode_brake_or_land_with_pause`, which tries `BRAKE` and only falls back to `LAND` (announcing `Trying Land Mode`) if `BRAKE` cannot be entered; `BRAKE` itself does not land. In every case where heartbeats resumed, `GCS Failsafe Cleared` arrived within 0.3 s and the mode was left as the failsafe had set it (`failsafe_gcs_off_event` only announces). The `LOITER` default case's position drifted from 56.3 to 61.5 m north over the watch; that was not investigated (residual momentum from the preceding 60 m move is likely but untested).
 
-**Arming while the failsafe is raised.** The first batch of runs set `FS_GCS_ENABLE` before arming and all ended `"not armed after 120 s (last ack result 4)"` with no refusal text captured. `research-tools/sitl-copter-gcs-failsafe-arm-probe.py` isolated it: a GCS that had been heard and then went quiet past the timeout raised `"GCS Failsafe"` even while disarmed, and arming was refused (`"PreArm: GCS failsafe on"`) until heartbeats resumed. With no heartbeat ever sent the check never started and arming worked. The probe's own note ties this to `AP_Arming_Copter::gcs_failsafe_check`; that source line was not re-read here.
+**A side finding from a harness bug: a GCS failsafe blocks arming.** The first batch never armed (`not armed after 120 s`, `ack result 4`, no refusal text captured). A three-trial probe (`research-tools/sitl-copter-gcs-failsafe-arm-probe.py`, output `arm-blocked-by-gcs-failsafe-probe.txt`) showed why: with `FS_GCS_ENABLE` set before arming and heartbeats sent only during the 20 s warm-up, the parameter read and arm retries left the link silent for over 5 s, `GCS Failsafe` fired on the ground, and `Arm: GCS failsafe on` / `PreArm: GCS failsafe on` refused arming (`AP_Arming_Copter::gcs_failsafe_check`). The same setup with no heartbeats ever sent, or with heartbeats but no failsafe params, armed normally. Fix: the failsafe parameters are now written in flight, with a heartbeat just before and after each write and `FS_GCS_ENABLE` last.
 
-Limits: one run per case, Copter quad only, simulator only. The `FS_OPTIONS` pilot-control exception in `LOITER` is described in the script but no capture of it is retained, so it is not claimed here. `FS_GCS_ENABLE` values other than 1, 3 and 5 were not flown.
+**Two more self-corrections.** The first `LOITER` run flew into the ground (`SIM Hit ground at 2.49 m/s` before any failsafe fired): `LOITER` takes the pilot's throttle stick, and SITL with no RC input holds throttle at 1000, which commands full descent. It is kept as `invalid-loiter-run-no-rc-throttle/`. The harness now holds throttle at 1500 through SITL's UDP RC input, set `FLTMODE_CH`=0 so the packet's channel 5 cannot change the mode, and confirmed `RC_CHANNELS` `chan3`=1500 before switching. Two further runs and one batch member were killed mid-flight by another agent's name-based `pkill` on the shared machine (`EOF on TCP socket`; one never armed, one had every parameter write rejected); they held no usable data and were rerun, not kept. The harness no longer kills by name.
 
-## Battery failsafe by capacity: fires on the crossing, with no 10-second timer
+Source-only observation, not tested: `failsafe_gcs_on_event` calls `RC_Channels::clear_overrides()` before acting, so MAVLink RC overrides do not survive a GCS failsafe; this harness uses UDP RC input rather than overrides.
 
-Reading `AP_BattMonitor_Backend::update_failsafes` (`libraries/AP_BattMonitor/AP_BattMonitor_Backend.cpp`) predicts a difference between the two low-battery triggers: the voltage paths start a `BATT_LOW_TIMER` timer and fire only after it, while the capacity path returns `Failsafe::Low` as soon as `BATT_CAPACITY - consumed_mah` falls below `BATT_LOW_MAH`.
-
-`research-tools/sitl-copter-battery-failsafe-capacity.py` (output `sitl-evidence/copter-battery-failsafe-capacity/`) flew 60 m north in `GUIDED`, read `BATT_CAPACITY` (3300 mAh) and the live consumed mAh from `BATTERY_STATUS` (264 mAh), then set `BATT_LOW_MAH`=3006 (a threshold of 294 mAh consumed) and `BATT_FS_LOW_ACT`=2. `SIM_BATT_VOLTAGE` was never touched, so the pack stayed at 12.31 V, above the 10.5 V `BATT_LOW_VOLT` default, and the voltage path was not involved.
-
-- `"Battery 1 is low 12.31V used 294 mAh"` and `"Battery Failsafe"` arrived at t=3.6 s, with the heartbeat switching to `RTL` in the same instant, exactly when the vehicle's own message reports 294 mAh used.
-- The 2 Hz `BATTERY_STATUS` samples read 292 mAh at 3.5 s and first exceeded 294 at 4.0 s, so the notice came within one 0.5 s sample of the crossing. The voltage path took 10.2 s.
-- The track shows the flight home (north 59.7 m at 5.9 s, 22.1 m at 11.9 s, -0.5 m at 17.9 s) and the start of the descent (15.8 m at 26.2 s).
-
-Limits: the watch ended at about 26 s with no exception recorded, for a reason not established, so touchdown and disarm were not observed in this capture. One run, Copter quad only, the low-capacity/RTL path only (`BATT_CRT_MAH` not tried), simulator only.
+Limits: one run per case, Copter quad frame only, flown from a 60 m hover; `FS_GCS_ENABLE` values 2, 4 and 6 and the `FS_OPTIONS` bits for continuing in AUTO or while landing were not flown; time-to-notice includes sender-side timing (about 0.1 to 0.2 s); `BRAKE` was observed for 65 s, not indefinitely; simulator only.

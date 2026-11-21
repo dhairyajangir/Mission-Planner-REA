@@ -1,0 +1,17 @@
+case rtl-loiter-options0: FS_GCS_ENABLE=1 FS_GCS_TIMEOUT=5 FS_OPTIONS=0 flown in LOITER
+defaults: FS_GCS_ENABLE=0.0 FS_GCS_TIMEOUT=5.0 FS_OPTIONS=16.0 SYSID_MYGCS=None
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.317813873291016, 0.04824301600456238, -19.98595428466797)
+params written in flight: ['FS_GCS_TIMEOUT', 'FS_OPTIONS', 'FS_GCS_ENABLE'] (rejected [])
+FLTMODE_CH -> 0 (rejected []); UDP RC packet sent, RC_CHANNELS chan3=1500
+switch to LOITER: LOITER active
+heartbeats stopped; last one sent 0.90s before this line
+t=  1.2 mode=LOITER armed=True
+t=  5.1 mode=RTL armed=True
+t=  5.1 vehicle: GCS Failsafe
+t= 17.1 heartbeats resumed
+t= 17.4 vehicle: GCS Failsafe Cleared
+t= 52.7 vehicle: SIM Hit ground at 0.499774 m/s
+t= 54.8 vehicle: Disarming motors
+t= 55.2 disarmed, stopping watch
+time from last heartbeat sent to GCS Failsafe notice: 5.1
