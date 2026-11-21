@@ -1,0 +1,13 @@
+case rtl-low-throttle: FS_THR_ENABLE=1 SIM_RC_FAIL=2
+defaults: FS_THR_ENABLE=1.0 FS_THR_VALUE=975.0 RC_FS_TIMEOUT=1.0 SIM_RC_FAIL=0.0 FS_OPTIONS=16.0
+FS_THR_ENABLE -> 1 (rejected [])
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.47554397583008, 0.04784237965941429, -19.985532760620117)
+t=  0.0 SIM_RC_FAIL -> 2 (rejected [])
+t=  0.1 mode=RTL armed=True
+t=  0.1 vehicle: Radio Failsafe
+t= 12.1 cleared SIM_RC_FAIL -> 0
+t= 47.7 vehicle: SIM Hit ground at 0.498766 m/s
+t= 49.8 vehicle: Disarming motors
+t= 50.3 disarmed, stopping watch
+time to Radio Failsafe notice: 0.1

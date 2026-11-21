@@ -1,0 +1,15 @@
+case rtl-no-pulses: FS_THR_ENABLE=1 SIM_RC_FAIL=1
+defaults: FS_THR_ENABLE=1.0 FS_THR_VALUE=975.0 RC_FS_TIMEOUT=1.0 SIM_RC_FAIL=0.0 FS_OPTIONS=16.0
+FS_THR_ENABLE -> 1 (rejected [])
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.39472961425781, 0.047359347343444824, -19.985675811767578)
+t=  0.0 SIM_RC_FAIL -> 1 (rejected [])
+t=  0.3 mode=GUIDED armed=True
+t=  1.0 mode=RTL armed=True
+t=  1.0 vehicle: Radio Failsafe
+t= 13.0 cleared SIM_RC_FAIL -> 0
+t= 13.0 vehicle: Radio Failsafe Cleared
+t= 48.2 vehicle: SIM Hit ground at 0.499008 m/s
+t= 50.3 vehicle: Disarming motors
+t= 50.3 disarmed, stopping watch
+time to Radio Failsafe notice: 1.0

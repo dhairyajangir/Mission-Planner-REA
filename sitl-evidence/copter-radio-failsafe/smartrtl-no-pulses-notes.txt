@@ -1,0 +1,15 @@
+case smartrtl-no-pulses: FS_THR_ENABLE=4 SIM_RC_FAIL=1
+defaults: FS_THR_ENABLE=1.0 FS_THR_VALUE=975.0 RC_FS_TIMEOUT=1.0 SIM_RC_FAIL=0.0 FS_OPTIONS=16.0
+FS_THR_ENABLE -> 4 (rejected [])
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.4965705871582, 0.04682823643088341, -19.9853572845459)
+t=  0.0 SIM_RC_FAIL -> 1 (rejected [])
+t=  0.3 mode=GUIDED armed=True
+t=  1.0 mode=SMART_RTL armed=True
+t=  1.0 vehicle: Radio Failsafe
+t= 13.0 cleared SIM_RC_FAIL -> 0
+t= 13.0 vehicle: Radio Failsafe Cleared
+t= 32.6 vehicle: SIM Hit ground at 0.505905 m/s
+t= 34.7 vehicle: Disarming motors
+t= 35.3 disarmed, stopping watch
+time to Radio Failsafe notice: 1.0
