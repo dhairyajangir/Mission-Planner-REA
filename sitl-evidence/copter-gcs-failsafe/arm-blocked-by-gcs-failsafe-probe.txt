@@ -1,0 +1,10 @@
+Output of research-tools/sitl-copter-gcs-failsafe-arm-probe.py (arm retried for 40 s per trial; GCS heartbeats, when on, were sent only during the 20 s warm-up, not during the parameter read, parameter writes or arm retries that followed).
+It was run after the first batch of sitl-copter-gcs-failsafe.py runs (FS_GCS_ENABLE set before arming) all ended "not armed after 120 s (last ack result 4)" with no refusal text captured.
+
+hb-params param rejected []
+hb-params hb=True params=True -> False not armed after 40 s (last ack result 4) ('Arm: Need Position Estimate', 'PreArm: Need Position Estimate', 'GCS Failsafe', 'Arm: GCS failsafe on', 'EKF3 IMU0 is using GPS', 'EKF3 IMU1 is using GPS', 'PreArm: GCS failsafe on')
+nohb-params param rejected []
+nohb-params hb=False params=True -> True armed (ack result 0) ('Arm: Need Position Estimate', 'PreArm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'EKF3 IMU0 is using GPS', 'EKF3 IMU1 is using GPS', 'Arming motors')
+hb-noparams hb=True params=False -> True armed (ack result 0) ('Arm: Need Position Estimate', 'PreArm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'Arm: Need Position Estimate', 'EKF3 IMU0 is using GPS', 'EKF3 IMU1 is using GPS', 'Arming motors')
+
+Reading: a GCS that has been heard and then goes quiet past FS_GCS_TIMEOUT raises 'GCS Failsafe' even while disarmed, and AP_Arming_Copter::gcs_failsafe_check (AP_Arming_Copter.cpp:519) then refuses to arm until heartbeats resume. With no heartbeats ever sent (nohb) the check never starts (failsafe_gcs_check returns while sysid_mygcs_last_seen_time_ms()==0), so arming works.

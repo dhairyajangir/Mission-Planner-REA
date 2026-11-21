@@ -1,0 +1,15 @@
+case smartrtl-guided: FS_GCS_ENABLE=3 FS_GCS_TIMEOUT=5 FS_OPTIONS=default flown in GUIDED
+defaults: FS_GCS_ENABLE=0.0 FS_GCS_TIMEOUT=5.0 FS_OPTIONS=16.0 SYSID_MYGCS=None
+arm: armed (ack result 0)
+outbound leg (60m north) reached=True at (56.38817596435547, 0.04578583315014839, -19.98523712158203)
+params written in flight: ['FS_GCS_TIMEOUT', 'FS_GCS_ENABLE'] (rejected [])
+heartbeats stopped; last one sent 0.00s before this line
+t=  0.2 mode=GUIDED armed=True
+t=  5.1 mode=SMART_RTL armed=True
+t=  5.1 vehicle: GCS Failsafe
+t= 17.1 heartbeats resumed
+t= 17.4 vehicle: GCS Failsafe Cleared
+t= 36.4 vehicle: SIM Hit ground at 0.504482 m/s
+t= 38.5 vehicle: Disarming motors
+t= 39.2 disarmed, stopping watch
+time from last heartbeat sent to GCS Failsafe notice: 5.1
