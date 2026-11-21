@@ -1,0 +1,97 @@
+ASSEMBLY MissionPlanner.Utilities c7cb5fd3-49cd-49ff-bca2-79b7c11182d1
+INITIAL_CACHE 0
+APP Reading log for CAM Messages
+APP Reading log for GPS-ATT Messages
+APP Log locations : 3
+APP Read images
+APP Images read : 2
+APP Photo missing-time NOT PROCESSED. No GPS match in the log file. Please take care
+APP Photo nominal PROCESSED with GPS position found 0 ms away
+FIX 2024-06-15T17:29:59.000 -35.126 149.24
+FIX 2024-06-15T17:30:00.000 -35.125 149.25
+FIX 2024-06-15T17:30:01.000 -35.124 149.26
+PHOTO missing-time.jpg 0001-01-01T00:00:00.000 Unspecified
+PHOTO nominal.jpg 2024-06-15T17:30:00.000 Unspecified
+MATCHES 1
+RESULT nominal.jpg 2024-06-15T17:30:00.000 2024-06-15T17:30:00.000 -35.125 149.25 120
+APP GeoTagging <synthetic survey>\nominal.jpg
+## Tag: JFIFVersion
+Value: 1.01
+IFD: JFIF
+Interop. TagID: 1 (0x01)
+Interop. Type: 3 (SHORT)
+Interop. Count: 1 
+Interop. Data Length: 2
+Interop. Data: 0x01 0x01 
+## Tag: JFIFUnits
+Value: None
+IFD: JFIF
+Interop. TagID: 101 (0x65)
+Interop. Type: 1 (BYTE)
+Interop. Count: 1 
+Interop. Data Length: 1
+Interop. Data: 0x00 
+## Tag: XDensity
+Value: 1
+IFD: JFIF
+Interop. TagID: 102 (0x66)
+Interop. Type: 3 (SHORT)
+Interop. Count: 1 
+Interop. Data Length: 2
+Interop. Data: 0x01 0x00 
+## Tag: YDensity
+Value: 1
+IFD: JFIF
+Interop. TagID: 103 (0x67)
+Interop. Type: 3 (SHORT)
+Interop. Count: 1 
+Interop. Data Length: 2
+Interop. Data: 0x01 0x00 
+## Tag: JFIFXThumbnail
+Value: 0
+IFD: JFIF
+Interop. TagID: 201 (0xC9)
+Interop. Type: 1 (BYTE)
+Interop. Count: 1 
+Interop. Data Length: 1
+Interop. Data: 0x00 
+## Tag: JFIFYThumbnail
+Value: 0
+IFD: JFIF
+Interop. TagID: 202 (0xCA)
+Interop. Type: 1 (BYTE)
+Interop. Count: 1 
+Interop. Data Length: 1
+Interop. Data: 0x00 
+## Tag: JFIFThumbnail
+Value: JPEG
+IFD: JFIF
+Interop. TagID: 203 (0xCB)
+Interop. Type: 1 (BYTE)
+Interop. Count: 0 
+Interop. Data Length: 0
+Interop. Data: 
+## Tag: ImageDescription
+Value: Synthetic survey swatch
+IFD: Zeroth
+Interop. TagID: 270 (0x10E)
+Interop. Type: 2 (ASCII)
+Interop. Count: 24 
+Interop. Data Length: 24
+Interop. Data: 0x53 0x79 0x6E 0x74 0x68 0x65 0x74 0x69 0x63 0x20 0x73 0x75 0x72 0x76 0x65 0x79 0x20 0x73 0x77 0x61 0x74 0x63 0x68 0x00 
+## Tag: EXIFIFDPointer
+Value: 62
+IFD: Zeroth
+Interop. TagID: 34665 (0x8769)
+Interop. Type: 4 (LONG)
+Interop. Count: 1 
+Interop. Data Length: 4
+Interop. Data: 0x3E 0x00 0x00 0x00 
+## Tag: DateTimeOriginal
+Value: 2024.06.15 17:30:00
+IFD: EXIF
+Interop. TagID: 36867 (0x9003)
+Interop. Type: 2 (ASCII)
+Interop. Count: 20 
+Interop. Data Length: 20
+Interop. Data: 0x32 0x30 0x32 0x34 0x3A 0x30 0x36 0x3A 0x31 0x35 0x20 0x31 0x37 0x3A 0x33 0x30 0x3A 0x30 0x30 0x00 

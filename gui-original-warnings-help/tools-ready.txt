@@ -1,0 +1,7 @@
+0x2002ce "temp": ()  1044x628+22+22  +22+22
+0x200456 "Create custom audio warnings": ()  171x17+134+19  +168+53
+0x200460 "Warning Manager": ()  125x13+3+22  +37+56
+0x2002b3 "Help": ()  38x17+390+137  +390+137
+0x200258 "Check for BETA Updates": ()  123x29+536+455  +622+604
+0x20025a "Change Log": ()  69x17+505+510  +591+659
+0x20025c "Show Console Window (restart)": ()  201x18+449+489  +535+638

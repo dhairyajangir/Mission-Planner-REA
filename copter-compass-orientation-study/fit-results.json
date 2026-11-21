@@ -1,0 +1,43 @@
+{
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "fits": {
+    "full_sphere": {
+      "count": 122,
+      "offset_xyz_radius": [
+        -119.99999860437757,
+        79.99999829575579,
+        -149.9999974295922,
+        499.9999985224525
+      ]
+    },
+    "level_ring": {
+      "count": 122,
+      "offset_xyz_radius": [
+        -119.9999982454827,
+        80.00000240487014,
+        -6.227881089358148,
+        520.2599556100373
+      ]
+    },
+    "ring_plus_poles": {
+      "count": 122,
+      "offset_xyz_radius": [
+        -119.99999872347006,
+        80.00000244833655,
+        -149.9999999999989,
+        499.99999948380224
+      ]
+    }
+  },
+  "loaded_release_files": {
+    "Microsoft.Dynamic.dll": "87b428c03871d72cf2ee895dc1f2b5de8b2f1d42cbf6f685683ed0026ed5adca",
+    "MissionPlanner.exe": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "Xamarin.Forms.Core.dll": "4a7e87cc5285a757c92e272dd505b03d6cd70820c8a05c2d1426fcb7b1b6af47",
+    "alglibnet.dll": "c4931bec0fe3b0ba17ec11ef1b66af787f3e5774d3d1c1712dbdde59d0f39dc3",
+    "log4net.dll": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d"
+  },
+  "method": {
+    "module_version_id": "b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0",
+    "token": "06000168"
+  }
+}

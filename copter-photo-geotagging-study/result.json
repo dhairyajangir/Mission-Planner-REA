@@ -1,0 +1,57 @@
+{
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "release_sha256": {
+    "ExifLibrary.dll": "7fa033a8429bbd1504e5a46217e5b536b11fe5e027d9966afb3748be443baf16",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "MetaDataExtractor.dll": "f5218640b945acc4ca7518770512fb249e1f118b9e924bac99664b5382b7c9b8",
+    "MissionPlanner.Comms.dll": "90f727cfe0404c81ba332b7ddc23d43c3f025969cc9cac797986559eb947d814",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71"
+  },
+  "fixture_sha256": {
+    "missing-time.jpg": "c2093d4930ce3eebb89c9c3e1814632aadafe3edb2fa9b8996cc4e87201dc103",
+    "nominal.jpg": "77cab22b8cdcc700c1a736d04d1be35ab0f6fcbbdcc68026a690643bbdd84bef",
+    "survey.tlog": "6368c99be18b8df5ce1cc422140998e7140840871e03bd798ecdef816108248b"
+  },
+  "input": {
+    "missing-time.jpg": {
+      "date_taken": null,
+      "digitized": null,
+      "size": [
+        32,
+        24
+      ],
+      "pixels_sha256": "03875dddf20ca01c03e6a3dcb604199ffda9f9308808bd38eb867e927edab2f9"
+    },
+    "nominal.jpg": {
+      "date_taken": "2024:06:15 17:30:00",
+      "digitized": null,
+      "size": [
+        32,
+        24
+      ],
+      "pixels_sha256": "03875dddf20ca01c03e6a3dcb604199ffda9f9308808bd38eb867e927edab2f9"
+    }
+  },
+  "matched_time": "2024-06-15T17:30:00.000",
+  "expected_fix": [
+    -35.125,
+    149.25,
+    120.0
+  ],
+  "tagged_file": "nominal_geotag.jpg",
+  "tagged_sha256": "0ae1cfc8cdd7656cb6f8d39c054611e0c5895da592acdbc2a94cf7142b46ed04",
+  "output": {
+    "date_taken": "2024:06:15 17:30:00",
+    "digitized": null,
+    "size": [
+      32,
+      24
+    ],
+    "pixels_sha256": "03875dddf20ca01c03e6a3dcb604199ffda9f9308808bd38eb867e927edab2f9",
+    "gps": [
+      -35.125,
+      149.25,
+      120.0
+    ]
+  }
+}

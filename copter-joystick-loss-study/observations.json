@@ -1,0 +1,20 @@
+{
+  "lifecycle": [
+    "CONFIRMED_STARTED ENABLED=True CH1=2000 CH3=1000",
+    "CONFIRMED_INVALID ENABLED=True CH1=1000 CH3=1000",
+    "CONFIRMED_CLEARED ENABLED=False CH1=0 CH3=0"
+  ],
+  "loaded_release_files": {
+    "GeoAPI.CoordinateSystems.dll": "b167901385d5591de94a75c8a3a421351e58b074d22f0cf5d2799290c2c87f2b",
+    "Interfaces.dll": "04cab52e4da182d5aaf2dc11fb3041f8cd2b2fa275be43fbe088736640ec8205",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "ProjNET.dll": "03f58357e056a455bdaad817e5ed0aed6bd4fabd1448e39eda9d4e87c019bb48",
+    "SharpDX.dll": "a2ef8f3d86561a75908c01b6b6aa87c072dec53c890b1ecf9f1405e6b16eec8b",
+    "System.Reactive.dll": "665487d6c36c47080c0642d927e3c3182ae0cedbd8910f010f90c1240c1d7172",
+    "log4net.dll": "deee8b348c2a730186da5308d381e5aba82f87dd5c55f1afa0b8e67fae79273d"
+  },
+  "mapped_rows": 1092,
+  "mapping_sha256": "b85b18b2ab8b3017c1eba4a1caef050ad846c1133a0d97a913eb9873b35ce5bb"
+}

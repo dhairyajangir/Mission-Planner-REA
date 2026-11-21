@@ -1,0 +1,1140 @@
+
+xwininfo: Window id: 0x21f (the root window) (has no name)
+
+  Root window id: 0x21f (the root window) (has no name)
+  Parent window id: 0x0 (none)
+     76 children:
+     0x200ac4 "Hardware Config": ()  105x17+207+136  +207+136
+        1 child:
+        0x200ac5 (has no name): ()  105x17+0+0  +207+136
+     0x20010e "Mission Planner 1.3.83 build 1.3.9384.38258 ArduCopter V4.8.0-dev (15a10bb4) on ": ()  1101x577+86+98  +86+98
+        1 child:
+        0x20010f (has no name): ()  1109x604+0+0  +86+98
+           3 children:
+           0x200112 "Menu": ()  1101x30+0+0  +86+98
+              1 child:
+              0x200113 (has no name): ()  1101x30+0+0  +86+98
+           0x200110 (has no name): ()  1101x526+0+51  +86+149
+              1 child:
+              0x200111 (has no name): ()  1101x526+0+0  +86+149
+                 1 child:
+                 0x200a6f (has no name): ()  1101x526+0+0  +86+149
+                    1 child:
+                    0x200a70 (has no name): ()  1101x526+0+0  +86+149
+                       1 child:
+                       0x200a71 (has no name): ()  1101x526+0+0  +86+149
+                          1 child:
+                          0x200a72 (has no name): ()  1101x526+0+0  +86+149
+                             2 children:
+                             0x200a73 (has no name): ()  929x526+172+0  +258+149
+                                1 child:
+                                0x200a74 (has no name): ()  929x526+0+0  +258+149
+                                   5 children:
+                                   0x200f31 (has no name): ()  654x230+0+0  +258+149
+                                      1 child:
+                                      0x200f32 (has no name): ()  929x526+0+0  +258+149
+                                         7 children:
+                                         0x200f45 (has no name): ()  16x526+913+0  +1171+149
+                                            1 child:
+                                            0x200f46 (has no name): ()  16x526+0+0  +1171+149
+                                         0x200f47 (has no name): ()  929x16+0+510  +258+659
+                                            1 child:
+                                            0x200f48 (has no name): ()  929x16+0+0  +258+659
+                                         0x200f33 (has no name): ()  628x25+12+36  +270+185
+                                            1 child:
+                                            0x200f34 (has no name): ()  628x25+0+0  +270+185
+                                               6 children:
+                                               0x200f35 "Flight Identification:": ()  112x17+5+4  +275+189
+                                                  1 child:
+                                                  0x200f36 (has no name): ()  112x17+0+0  +275+189
+                                               0x200f37 "Save": ()  103x19+201+2  +471+187
+                                                  1 child:
+                                                  0x200f38 (has no name): ()  103x19+0+0  +471+187
+                                               0x200f2d (has no name): ()  100x13+415+3  +685+188
+                                                  1 child:
+                                                  0x200f2e (has no name): ()  100x13+0+0  +685+188
+                                               0x200f39 "Save": ()  103x19+521+3  +791+188
+                                                  1 child:
+                                                  0x200f3a (has no name): ()  103x19+0+0  +791+188
+                                               0x200f2f (has no name): ()  86x13+109+2  +379+187
+                                                  1 child:
+                                                  0x200f30 (has no name): ()  86x13+0+0  +379+187
+                                               0x200f3b "Aircraft Registration": ()  114x17+310+5  +580+190
+                                                  1 child:
+                                                  0x200f3c (has no name): ()  114x17+0+0  +580+190
+                                         0x200f3d "Find": ()  103x19+230+11  +488+160
+                                            1 child:
+                                            0x200f3e (has no name): ()  103x19+0+0  +488+160
+                                         0x200f3f "Refresh Params": ()  103x19+121+11  +379+160
+                                            1 child:
+                                            0x200f40 (has no name): ()  103x19+0+0  +379+160
+                                         0x200f41 "Write Params": ()  103x19+12+11  +270+160
+                                            1 child:
+                                            0x200f42 (has no name): ()  103x19+0+0  +270+160
+                                         0x200f43 (has no name): ()  887x510+12+67  +270+216
+                                            1 child:
+                                            0x200f44 (has no name): ()  887x510+0+0  +270+216
+                                   0x200e41 (has no name): ()  929x526+0+0  +258+149
+                                      1 child:
+                                      0x200e42 (has no name): ()  929x526+0+0  +258+149
+                                         1 child:
+                                         0x200e43 "The following pages are required to be configured before your autopilot will work. Please work though them all.": ()  246x78+25+25  +283+174
+                                            1 child:
+                                            0x200e44 (has no name): ()  246x78+0+0  +283+174
+                                   0x200cdc (has no name): ()  929x526+0+0  +258+149
+                                      1 child:
+                                      0x200cdd (has no name): ()  929x526+0+0  +258+149
+                                         27 children:
+                                         0x200cde "metres from ground": ()  113x17+332+330  +590+479
+                                            1 child:
+                                            0x200cdf (has no name): ()  113x17+0+0  +590+479
+                                         0x200ce0 "0": ()  120x20+206+328  +464+477
+                                            1 child:
+                                            0x200ce1 (has no name): ()  116x16+2+2  +466+479
+                                               2 children:
+                                               0x200ce2 (has no name): ()  16x16+100+0  +566+479
+                                                  1 child:
+                                                  0x200ce3 (has no name): ()  16x16+0+0  +566+479
+                                               0x200cce "0": ()  116x13+0+0  +466+479
+                                                  1 child:
+                                                  0x200ccf (has no name): ()  116x13+0+0  +466+479
+                                         0x200ce4 "Height Override": ()  91x17+88+330  +346+479
+                                            1 child:
+                                            0x200ce5 (has no name): ()  91x17+0+0  +346+479
+                                         0x200ce6 "Scaling Factors": ()  86x17+204+121  +462+270
+                                            1 child:
+                                            0x200ce7 (has no name): ()  86x17+0+0  +462+270
+                                         0x200ce8 "Position of Sensor, relative to IMU": ()  187x17+163+211  +421+360
+                                            1 child:
+                                            0x200ce9 (has no name): ()  187x17+0+0  +421+360
+                                         0x200cea "metres down": ()  75x17+330+290  +588+439
+                                            1 child:
+                                            0x200ceb (has no name): ()  75x17+0+0  +588+439
+                                         0x200cec "metres right": ()  71x17+330+264  +588+413
+                                            1 child:
+                                            0x200ced (has no name): ()  71x17+0+0  +588+413
+                                         0x200cee "metres foward": ()  83x17+330+238  +588+387
+                                            1 child:
+                                            0x200cef (has no name): ()  83x17+0+0  +588+387
+                                         0x200cf0 "0": ()  120x20+206+288  +464+437
+                                            1 child:
+                                            0x200cf1 (has no name): ()  116x16+2+2  +466+439
+                                               2 children:
+                                               0x200cf2 (has no name): ()  16x16+100+0  +566+439
+                                                  1 child:
+                                                  0x200cf3 (has no name): ()  16x16+0+0  +566+439
+                                               0x200cd0 "0": ()  116x13+0+0  +466+439
+                                                  1 child:
+                                                  0x200cd1 (has no name): ()  116x13+0+0  +466+439
+                                         0x200cf4 "0": ()  120x20+206+262  +464+411
+                                            1 child:
+                                            0x200cf5 (has no name): ()  116x16+2+2  +466+413
+                                               2 children:
+                                               0x200cf6 (has no name): ()  16x16+100+0  +566+413
+                                                  1 child:
+                                                  0x200cf7 (has no name): ()  16x16+0+0  +566+413
+                                               0x200cd2 "0": ()  116x13+0+0  +466+413
+                                                  1 child:
+                                                  0x200cd3 (has no name): ()  116x13+0+0  +466+413
+                                         0x200cf8 "0": ()  120x20+206+236  +464+385
+                                            1 child:
+                                            0x200cf9 (has no name): ()  116x16+2+2  +466+387
+                                               2 children:
+                                               0x200cfa (has no name): ()  16x16+100+0  +566+387
+                                                  1 child:
+                                                  0x200cfb (has no name): ()  16x16+0+0  +566+387
+                                               0x200cd4 "0": ()  116x13+0+0  +466+387
+                                                  1 child:
+                                                  0x200cd5 (has no name): ()  116x13+0+0  +466+387
+                                         0x200cfc "0": ()  120x20+209+166  +467+315
+                                            1 child:
+                                            0x200cfd (has no name): ()  116x16+2+2  +469+317
+                                               2 children:
+                                               0x200cfe (has no name): ()  16x16+100+0  +569+317
+                                                  1 child:
+                                                  0x200cff (has no name): ()  16x16+0+0  +569+317
+                                               0x200cd6 "0": ()  116x13+0+0  +469+317
+                                                  1 child:
+                                                  0x200cd7 (has no name): ()  116x13+0+0  +469+317
+                                         0x200d00 "0": ()  120x20+209+140  +467+289
+                                            1 child:
+                                            0x200d01 (has no name): ()  116x16+2+2  +469+291
+                                               2 children:
+                                               0x200d02 (has no name): ()  16x16+100+0  +569+291
+                                                  1 child:
+                                                  0x200d03 (has no name): ()  16x16+0+0  +569+291
+                                               0x200cd8 "0": ()  116x13+0+0  +469+291
+                                                  1 child:
+                                                  0x200cd9 (has no name): ()  116x13+0+0  +469+291
+                                         0x200d04 "degrees, relative to vehicle": ()  153x17+335+97  +593+246
+                                            1 child:
+                                            0x200d05 (has no name): ()  153x17+0+0  +593+246
+                                         0x200d06 "0": ()  120x20+209+92  +467+241
+                                            1 child:
+                                            0x200d07 (has no name): ()  116x16+2+2  +469+243
+                                               2 children:
+                                               0x200d08 (has no name): ()  16x16+100+0  +569+243
+                                                  1 child:
+                                                  0x200d09 (has no name): ()  16x16+0+0  +569+243
+                                               0x200cda "0": ()  116x13+0+0  +469+243
+                                                  1 child:
+                                                  0x200cdb (has no name): ()  116x13+0+0  +469+243
+                                         0x200d0a "Position Z": ()  57x17+89+290  +347+439
+                                            1 child:
+                                            0x200d0b (has no name): ()  57x17+0+0  +347+439
+                                         0x200d0c "Position Y": ()  56x17+89+264  +347+413
+                                            1 child:
+                                            0x200d0d (has no name): ()  56x17+0+0  +347+413
+                                         0x200d0e "Position X": ()  57x17+89+238  +347+387
+                                            1 child:
+                                            0x200d0f (has no name): ()  57x17+0+0  +347+387
+                                         0x200d10 "FY Scale": ()  49x17+92+168  +350+317
+                                            1 child:
+                                            0x200d11 (has no name): ()  49x17+0+0  +350+317
+                                         0x200d12 "FX Scale": ()  50x17+92+142  +350+291
+                                            1 child:
+                                            0x200d13 (has no name): ()  50x17+0+0  +350+291
+                                         0x200d14 "Yaw Orientation": ()  91x17+92+94  +350+243
+                                            1 child:
+                                            0x200d15 (has no name): ()  91x17+0+0  +350+243
+                                         0x200d16 "Type": ()  30x17+92+68  +350+217
+                                            1 child:
+                                            0x200d17 (has no name): ()  30x17+0+0  +350+217
+                                         0x200d18 (has no name): ()  121x21+209+65  +467+214
+                                            1 child:
+                                            0x200d19 (has no name): ()  121x21+0+0  +467+214
+                                         0x200d1a "Enable": ()  134x19+92+35  +350+184
+                                            1 child:
+                                            0x200d1b (has no name): ()  134x19+0+0  +350+184
+                                         0x200d1c "Optical Flow  ": ()  135x20+7+5  +265+154
+                                            1 child:
+                                            0x200d1d (has no name): ()  135x20+0+0  +265+154
+                                         0x200d1e (has no name): ()  923x5+3+23  +261+172
+                                            1 child:
+                                            0x200d1f (has no name): ()  923x5+0+0  +261+172
+                                         0x200d20 (has no name): ()  75x75+11+35  +269+184
+                                            1 child:
+                                            0x200d21 (has no name): ()  73x73+1+1  +270+185
+                                   0x200bfc (has no name): ()  929x526+0+0  +258+149
+                                      1 child:
+                                      0x200bfd (has no name): ()  929x526+0+0  +258+149
+                                         8 children:
+                                         0x200bfe "0": ()  13x22+421+78  +679+227
+                                            1 child:
+                                            0x200bff (has no name): ()  13x22+0+0  +679+227
+                                         0x200c00 "0": ()  13x22+421+50  +679+199
+                                            1 child:
+                                            0x200c01 (has no name): ()  13x22+0+0  +679+199
+                                         0x200c02 "Voltage: ": ()  68x22+337+78  +595+227
+                                            1 child:
+                                            0x200c03 (has no name): ()  68x22+0+0  +595+227
+                                         0x200c04 "Distance: ": ()  77x22+337+50  +595+199
+                                            1 child:
+                                            0x200c05 (has no name): ()  77x22+0+0  +595+199
+                                         0x200c06 "RangeFinder": ()  114x20+7+5  +265+154
+                                            1 child:
+                                            0x200c07 (has no name): ()  114x20+0+0  +265+154
+                                         0x200c08 (has no name): ()  923x5+3+23  +261+172
+                                            1 child:
+                                            0x200c09 (has no name): ()  923x5+0+0  +261+172
+                                         0x200c0a (has no name): ()  121x21+180+62  +438+211
+                                            1 child:
+                                            0x200c0b (has no name): ()  121x21+0+0  +438+211
+                                         0x200c0c (has no name): ()  75x75+11+35  +269+184
+                                            1 child:
+                                            0x200c0d (has no name): ()  73x73+1+1  +270+185
+                                   0x200b38 (has no name): ()  929x526+0+0  +258+149
+                                      1 child:
+                                      0x200b39 (has no name): ()  929x526+0+0  +258+149
+                                         1 child:
+                                         0x200b3a "The following pages are OPTIONAL configure them if you have aditional hardware, or other requirements.": ()  246x78+25+25  +283+174
+                                            1 child:
+                                            0x200b3b (has no name): ()  246x78+0+0  +283+174
+                             0x200a75 (has no name): ()  172x526+0+0  +86+149
+                                1 child:
+                                0x200a76 (has no name): ()  172x526+0+0  +86+149
+                                   40 children:
+                                   0x200b1f (has no name): ()  16x510+156+0  +242+149
+                                      1 child:
+                                      0x200b20 (has no name): ()  16x510+0+0  +242+149
+                                   0x200b21 (has no name): ()  16x16+156+510  +242+659
+                                      1 child:
+                                      0x200b22 (has no name): ()  16x16+0+0  +242+659
+                                   0x200b1d (has no name): ()  156x16+0+510  +86+659
+                                      1 child:
+                                      0x200b1e (has no name): ()  156x16+0+0  +86+659
+                                   0x200ecf "Install Firmware": ()  172x30+0+0  +86+149
+                                      1 child:
+                                      0x200ed0 (has no name): ()  172x30+0+0  +86+149
+                                   0x200ed1 ">> Mandatory Hardware": ()  172x30+0+30  +86+179
+                                      1 child:
+                                      0x200ed2 (has no name): ()  172x30+0+0  +86+179
+                                   0x200ed3 "      Frame Type": ()  172x30+0+60  +86+209
+                                      1 child:
+                                      0x200ed4 (has no name): ()  172x30+0+0  +86+209
+                                   0x200ed5 "      Accel Calibration": ()  172x30+0+90  +86+239
+                                      1 child:
+                                      0x200ed6 (has no name): ()  172x30+0+0  +86+239
+                                   0x200ed7 "      Compass": ()  172x30+0+120  +86+269
+                                      1 child:
+                                      0x200ed8 (has no name): ()  172x30+0+0  +86+269
+                                   0x200ed9 "      Radio Calibration": ()  172x30+0+150  +86+299
+                                      1 child:
+                                      0x200eda (has no name): ()  172x30+0+0  +86+299
+                                   0x200edb "      Servo Output": ()  172x30+0+180  +86+329
+                                      1 child:
+                                      0x200edc (has no name): ()  172x30+0+0  +86+329
+                                   0x200edd "      Serial Ports": ()  172x30+0+210  +86+359
+                                      1 child:
+                                      0x200ede (has no name): ()  172x30+0+0  +86+359
+                                   0x200edf "      ESC Calibration": ()  172x30+0+240  +86+389
+                                      1 child:
+                                      0x200ee0 (has no name): ()  172x30+0+0  +86+389
+                                   0x200ee1 "      Flight Modes": ()  172x30+0+270  +86+419
+                                      1 child:
+                                      0x200ee2 (has no name): ()  172x30+0+0  +86+419
+                                   0x200ee3 "      FailSafe": ()  172x30+0+300  +86+449
+                                      1 child:
+                                      0x200ee4 (has no name): ()  172x30+0+0  +86+449
+                                   0x200ee5 "      Initial Tune Parameter": ()  172x30+0+330  +86+479
+                                      1 child:
+                                      0x200ee6 (has no name): ()  172x30+0+0  +86+479
+                                   0x200ee7 "      HW ID": ()  172x30+0+360  +86+509
+                                      1 child:
+                                      0x200ee8 (has no name): ()  172x30+0+0  +86+509
+                                   0x200ee9 "      ADSB": ()  172x30+0+390  +86+539
+                                      1 child:
+                                      0x200eea (has no name): ()  172x30+0+0  +86+539
+                                   0x200eeb ">> Optional Hardware": ()  172x30+0+420  +86+569
+                                      1 child:
+                                      0x200eec (has no name): ()  172x30+0+0  +86+569
+                                   0x200eed "      RTK/GPS Inject": ()  172x30+0+450  +86+599
+                                      1 child:
+                                      0x200eee (has no name): ()  172x30+0+0  +86+599
+                                   0x200eef "      CubeID Update": ()  172x30+0+480  +86+629
+                                      1 child:
+                                      0x200ef0 (has no name): ()  172x30+0+0  +86+629
+                                   0x200ef1 "      Sik Radio": ()  172x30+0+510  +86+659
+                                      1 child:
+                                      0x200ef2 (has no name): ()  172x30+0+0  +86+659
+                                   0x200ef3 "      CAN GPS Order": ()  172x30+0+540  +86+689
+                                      1 child:
+                                      0x200ef4 (has no name): ()  172x30+0+0  +86+689
+                                   0x200ef6 "      Battery Monitor": ()  172x30+0+570  +86+719
+                                      1 child:
+                                      0x200ef7 (has no name): ()  172x30+0+0  +86+719
+                                   0x200ef9 "      Battery Monitor 2": ()  172x30+0+600  +86+749
+                                      1 child:
+                                      0x200efa (has no name): ()  172x30+0+0  +86+749
+                                   0x200efc "      DroneCAN/UAVCAN": ()  172x30+0+630  +86+779
+                                      1 child:
+                                      0x200efd (has no name): ()  172x30+0+0  +86+779
+                                   0x200eff "      Joystick": ()  172x30+0+660  +86+809
+                                      1 child:
+                                      0x200f00 (has no name): ()  172x30+0+0  +86+809
+                                   0x200f02 "      Compass/Motor Calib": ()  172x30+0+690  +86+839
+                                      1 child:
+                                      0x200f03 (has no name): ()  172x30+0+0  +86+839
+                                   0x200f05 "      Range Finder": ()  172x30+0+720  +86+869
+                                      1 child:
+                                      0x200f06 (has no name): ()  172x30+0+0  +86+869
+                                   0x200f08 "      Airspeed": ()  172x30+0+750  +86+899
+                                      1 child:
+                                      0x200f09 (has no name): ()  172x30+0+0  +86+899
+                                   0x200f0b "      PX4Flow": ()  172x30+0+780  +86+929
+                                      1 child:
+                                      0x200f0c (has no name): ()  172x30+0+0  +86+929
+                                   0x200f0e "      Optical Flow": ()  172x30+0+810  +86+959
+                                      1 child:
+                                      0x200f0f (has no name): ()  172x30+0+0  +86+959
+                                   0x200f11 "      OSD": ()  172x30+0+840  +86+989
+                                      1 child:
+                                      0x200f12 (has no name): ()  172x30+0+0  +86+989
+                                   0x200f14 "      Camera Gimbal": ()  172x30+0+870  +86+1019
+                                      1 child:
+                                      0x200f15 (has no name): ()  172x30+0+0  +86+1019
+                                   0x200f17 "      Motor Test": ()  172x30+0+900  +86+1049
+                                      1 child:
+                                      0x200f18 (has no name): ()  172x30+0+0  +86+1049
+                                   0x200f1a "      Bluetooth Setup": ()  172x30+0+930  +86+1079
+                                      1 child:
+                                      0x200f1b (has no name): ()  172x30+0+0  +86+1079
+                                   0x200f1d "      Parachute": ()  172x30+0+960  +86+1109
+                                      1 child:
+                                      0x200f1e (has no name): ()  172x30+0+0  +86+1109
+                                   0x200f20 "      ESP8266 Setup": ()  172x30+0+990  +86+1139
+                                      1 child:
+                                      0x200f21 (has no name): ()  172x30+0+0  +86+1139
+                                   0x200f23 "      Antenna Tracker": ()  172x30+0+1020  +86+1169
+                                      1 child:
+                                      0x200f24 (has no name): ()  172x30+0+0  +86+1169
+                                   0x200f26 "      FFT Setup": ()  172x30+0+1050  +86+1199
+                                      1 child:
+                                      0x200f27 (has no name): ()  172x30+0+0  +86+1199
+                                   0x200f29 ">> Advanced": ()  172x30+0+1080  +86+1229
+                                      1 child:
+                                      0x200f2a (has no name): ()  172x30+0+0  +86+1229
+           0x200114 (has no name): ()  1101x51+0+0  +86+98
+              1 child:
+              0x200115 (has no name): ()  1101x51+0+0  +86+98
+                 1 child:
+                 0x200116 "menuStrip1": ()  1101x51+0+0  +86+98
+                    1 child:
+                    0x200117 (has no name): ()  1101x51+0+0  +86+98
+                       1 child:
+                       0x200118 (has no name): ()  280x51+735+0  +821+98
+                          1 child:
+                          0x200119 (has no name): ()  280x51+0+0  +821+98
+                             4 children:
+                             0x20011a "TCP5760-1-QUADROTOR": ()  158x21+119+29  +940+127
+                                1 child:
+                                0x20011b (has no name): ()  158x21+0+0  +940+127
+                                   1 child:
+                                   0x20011c (has no name): ()  136x13+3+3  +943+130
+                                      1 child:
+                                      0x20011d (has no name): ()  136x13+0+0  +943+130
+                             0x20018a "Stats...": ()  40x17+4+34  +825+132
+                                1 child:
+                                0x20018b (has no name): ()  40x17+0+0  +825+132
+                             0x20011e "TCP": ()  140x21+0+0  +821+98
+                                1 child:
+                                0x20011f (has no name): ()  140x21+0+0  +821+98
+                                   1 child:
+                                   0x200120 "AUTO": ()  118x13+3+3  +824+101
+                                      1 child:
+                                      0x200121 (has no name): ()  118x13+0+0  +824+101
+                             0x200122 "115200": ()  129x21+148+0  +969+98
+                                1 child:
+                                0x200123 (has no name): ()  129x21+0+0  +969+98
+                                   1 child:
+                                   0x200124 "115200": ()  107x13+3+3  +972+101
+                                      1 child:
+                                      0x200125 (has no name): ()  107x13+0+0  +972+101
+     0x200109 (has no name): ()  137x70+0+0  +0+0
+        1 child:
+        0x20010a (has no name): ()  100x25+0+0  +0+0
+     0x200107 (has no name): ()  216x114+0+0  +0+0
+        1 child:
+        0x200108 (has no name): ()  100x25+0+0  +0+0
+     0x200105 (has no name): ()  221x202+0+0  +0+0
+        1 child:
+        0x200106 (has no name): ()  100x25+0+0  +0+0
+     0x200103 (has no name): ()  240x136+0+0  +0+0
+        1 child:
+        0x200104 (has no name): ()  100x25+0+0  +0+0
+     0x200101 (has no name): ()  233x136+0+0  +0+0
+        1 child:
+        0x200102 (has no name): ()  100x25+0+0  +0+0
+     0x2000ff (has no name): ()  234x136+0+0  +0+0
+        1 child:
+        0x200100 (has no name): ()  100x25+0+0  +0+0
+     0x2000fd (has no name): ()  267x180+0+0  +0+0
+        1 child:
+        0x2000fe (has no name): ()  100x25+0+0  +0+0
+     0x2000fb (has no name): ()  130x48+0+0  +0+0
+        1 child:
+        0x2000fc (has no name): ()  100x25+0+0  +0+0
+     0x2000f9 (has no name): ()  145x70+0+0  +0+0
+        1 child:
+        0x2000fa (has no name): ()  100x25+0+0  +0+0
+     0x2000f7 (has no name): ()  227x26+0+0  +0+0
+        1 child:
+        0x2000f8 (has no name): ()  100x25+0+0  +0+0
+     0x2000f3 (has no name): ()  165x70+0+0  +0+0
+        1 child:
+        0x2000f4 (has no name): ()  100x25+0+0  +0+0
+     0x2000f1 (has no name): ()  180x224+0+0  +0+0
+        1 child:
+        0x2000f2 (has no name): ()  100x25+0+0  +0+0
+     0x2000ef (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000f0 (has no name): ()  100x20+0+0  +0+0
+     0x2000ed (has no name): ()  156x516+0+0  +0+0
+        1 child:
+        0x2000ee (has no name): ()  100x25+0+0  +0+0
+     0x2000e1 (has no name): ()  158x70+0+0  +0+0
+        1 child:
+        0x2000e2 (has no name): ()  100x25+0+0  +0+0
+     0x2000df (has no name): ()  234x48+0+0  +0+0
+        1 child:
+        0x2000e0 (has no name): ()  100x25+0+0  +0+0
+     0x2000dd (has no name): ()  154x92+0+0  +0+0
+        1 child:
+        0x2000de (has no name): ()  100x25+0+0  +0+0
+     0x2000c1 (has no name): ()  252x158+0+0  +0+0
+        1 child:
+        0x2000c2 (has no name): ()  100x25+0+0  +0+0
+     0x2000bb (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000bc (has no name): ()  100x20+0+0  +0+0
+     0x2000b9 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000ba (has no name): ()  100x20+0+0  +0+0
+     0x2000b7 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000b8 (has no name): ()  100x20+0+0  +0+0
+     0x2000b5 (has no name): ()  188x290+0+0  +0+0
+        1 child:
+        0x2000b6 (has no name): ()  100x25+0+0  +0+0
+     0x2000ad (has no name): ()  68x4+0+0  +0+0
+        1 child:
+        0x2000ae (has no name): ()  100x25+0+0  +0+0
+     0x2000ab (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000ac (has no name): ()  100x20+0+0  +0+0
+     0x2000a5 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000a6 (has no name): ()  100x20+0+0  +0+0
+     0x2000a3 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x2000a4 (has no name): ()  100x20+0+0  +0+0
+     0x20009f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x2000a0 (has no name): ()  100x25+0+0  +0+0
+     0x20009b (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20009c (has no name): ()  100x25+0+0  +0+0
+     0x200097 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200098 (has no name): ()  100x25+0+0  +0+0
+     0x200093 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200094 (has no name): ()  100x25+0+0  +0+0
+     0x20008f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200090 (has no name): ()  100x25+0+0  +0+0
+     0x20008b (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20008c (has no name): ()  100x25+0+0  +0+0
+     0x200087 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200088 (has no name): ()  100x25+0+0  +0+0
+     0x200085 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200086 (has no name): ()  100x25+0+0  +0+0
+     0x200083 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200084 (has no name): ()  100x25+0+0  +0+0
+     0x200081 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200082 (has no name): ()  100x25+0+0  +0+0
+     0x20007f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200080 (has no name): ()  100x25+0+0  +0+0
+     0x20007d (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20007e (has no name): ()  100x25+0+0  +0+0
+     0x20007b (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20007c (has no name): ()  100x25+0+0  +0+0
+     0x200079 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20007a (has no name): ()  100x25+0+0  +0+0
+     0x200077 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200078 (has no name): ()  100x25+0+0  +0+0
+     0x200075 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200076 (has no name): ()  100x25+0+0  +0+0
+     0x200073 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200074 (has no name): ()  100x25+0+0  +0+0
+     0x200071 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200072 (has no name): ()  100x25+0+0  +0+0
+     0x20006f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200070 (has no name): ()  100x25+0+0  +0+0
+     0x20006d (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20006e (has no name): ()  100x25+0+0  +0+0
+     0x20006b (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20006c (has no name): ()  100x25+0+0  +0+0
+     0x200069 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20006a (has no name): ()  100x25+0+0  +0+0
+     0x200067 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200068 (has no name): ()  100x25+0+0  +0+0
+     0x200065 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200066 (has no name): ()  100x25+0+0  +0+0
+     0x200063 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200064 (has no name): ()  100x25+0+0  +0+0
+     0x200061 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200062 (has no name): ()  100x25+0+0  +0+0
+     0x20005f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200060 (has no name): ()  100x25+0+0  +0+0
+     0x20005d (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20005e (has no name): ()  100x25+0+0  +0+0
+     0x20005b (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20005c (has no name): ()  100x25+0+0  +0+0
+     0x200059 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x20005a (has no name): ()  100x25+0+0  +0+0
+     0x200057 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200058 (has no name): ()  100x25+0+0  +0+0
+     0x200055 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200056 (has no name): ()  100x25+0+0  +0+0
+     0x200053 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200054 (has no name): ()  100x25+0+0  +0+0
+     0x200051 (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200052 (has no name): ()  100x25+0+0  +0+0
+     0x20004f (has no name): ()  118x26+0+0  +0+0
+        1 child:
+        0x200050 (has no name): ()  100x25+0+0  +0+0
+     0x20004d (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x20004e (has no name): ()  100x20+0+0  +0+0
+     0x20004b (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x20004c (has no name): ()  100x20+0+0  +0+0
+     0x200049 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x20004a (has no name): ()  100x20+0+0  +0+0
+     0x200047 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x200048 (has no name): ()  100x20+0+0  +0+0
+     0x200045 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x200046 (has no name): ()  100x20+0+0  +0+0
+     0x200043 (has no name): ()  155x48+0+0  +0+0
+        1 child:
+        0x200044 (has no name): ()  100x25+0+0  +0+0
+     0x200041 (has no name): ()  100x20+0+0  +0+0
+        1 child:
+        0x200042 (has no name): ()  100x20+0+0  +0+0
+     0x20003f (has no name): ()  131x48+0+0  +0+0
+        1 child:
+        0x200040 (has no name): ()  100x25+0+0  +0+0
+     0x20003d (has no name): ()  177x180+0+0  +0+0
+        1 child:
+        0x20003e (has no name): ()  100x25+0+0  +0+0
+     0x20002e (has no name): ()  182x114+0+0  +0+0
+        1 child:
+        0x20002f (has no name): ()  100x25+0+0  +0+0
+     0x20002c (has no name): ()  2x4+0+0  +0+0
+        1 child:
+        0x20002d (has no name): ()  100x25+0+0  +0+0
+     0x20000c (has no name): ()  1x1+-1+-1  +-1+-1
+     0x200001 (has no name): ()  1x1+0+0  +0+0
+        119 children:
+        0x200de3 "Install Firmware": ()  172x30+0+0  +0+0
+           1 child:
+           0x200de4 (has no name): ()  172x30+0+0  +0+0
+        0x200de5 ">> Mandatory Hardware": ()  172x30+0+30  +0+30
+           1 child:
+           0x200de6 (has no name): ()  172x30+0+0  +0+30
+        0x200de7 "      Frame Type": ()  172x30+0+60  +0+60
+           1 child:
+           0x200de8 (has no name): ()  172x30+0+0  +0+60
+        0x200de9 "      Accel Calibration": ()  172x30+0+90  +0+90
+           1 child:
+           0x200dea (has no name): ()  172x30+0+0  +0+90
+        0x200deb "      Compass": ()  172x30+0+120  +0+120
+           1 child:
+           0x200dec (has no name): ()  172x30+0+0  +0+120
+        0x200ded "      Radio Calibration": ()  172x30+0+150  +0+150
+           1 child:
+           0x200dee (has no name): ()  172x30+0+0  +0+150
+        0x200def "      Servo Output": ()  172x30+0+180  +0+180
+           1 child:
+           0x200df0 (has no name): ()  172x30+0+0  +0+180
+        0x200df1 "      Serial Ports": ()  172x30+0+210  +0+210
+           1 child:
+           0x200df2 (has no name): ()  172x30+0+0  +0+210
+        0x200df3 "      ESC Calibration": ()  172x30+0+240  +0+240
+           1 child:
+           0x200df4 (has no name): ()  172x30+0+0  +0+240
+        0x200df5 "      Flight Modes": ()  172x30+0+270  +0+270
+           1 child:
+           0x200df6 (has no name): ()  172x30+0+0  +0+270
+        0x200df7 "      FailSafe": ()  172x30+0+300  +0+300
+           1 child:
+           0x200df8 (has no name): ()  172x30+0+0  +0+300
+        0x200df9 "      Initial Tune Parameter": ()  172x30+0+330  +0+330
+           1 child:
+           0x200dfa (has no name): ()  172x30+0+0  +0+330
+        0x200dfb "      HW ID": ()  172x30+0+360  +0+360
+           1 child:
+           0x200dfc (has no name): ()  172x30+0+0  +0+360
+        0x200dfd "      ADSB": ()  172x30+0+390  +0+390
+           1 child:
+           0x200dfe (has no name): ()  172x30+0+0  +0+390
+        0x200dff ">> Optional Hardware": ()  172x30+0+420  +0+420
+           1 child:
+           0x200e00 (has no name): ()  172x30+0+0  +0+420
+        0x200e01 "      RTK/GPS Inject": ()  172x30+0+450  +0+450
+           1 child:
+           0x200e02 (has no name): ()  172x30+0+0  +0+450
+        0x200e03 "      CubeID Update": ()  172x30+0+480  +0+480
+           1 child:
+           0x200e04 (has no name): ()  172x30+0+0  +0+480
+        0x200e05 "      Sik Radio": ()  172x30+0+510  +0+510
+           1 child:
+           0x200e06 (has no name): ()  172x30+0+0  +0+510
+        0x200e07 "      CAN GPS Order": ()  172x30+0+540  +0+540
+           1 child:
+           0x200e08 (has no name): ()  172x30+0+0  +0+540
+        0x200e0a "      Battery Monitor": ()  172x30+0+570  +0+570
+           1 child:
+           0x200e0b (has no name): ()  172x30+0+0  +0+570
+        0x200e0d "      Battery Monitor 2": ()  172x30+0+600  +0+600
+           1 child:
+           0x200e0e (has no name): ()  172x30+0+0  +0+600
+        0x200e10 "      DroneCAN/UAVCAN": ()  172x30+0+630  +0+630
+           1 child:
+           0x200e11 (has no name): ()  172x30+0+0  +0+630
+        0x200e13 "      Joystick": ()  172x30+0+660  +0+660
+           1 child:
+           0x200e14 (has no name): ()  172x30+0+0  +0+660
+        0x200e16 "      Compass/Motor Calib": ()  172x30+0+690  +0+690
+           1 child:
+           0x200e17 (has no name): ()  172x30+0+0  +0+690
+        0x200e19 "      Range Finder": ()  172x30+0+720  +0+720
+           1 child:
+           0x200e1a (has no name): ()  172x30+0+0  +0+720
+        0x200e1c "      Airspeed": ()  172x30+0+750  +0+750
+           1 child:
+           0x200e1d (has no name): ()  172x30+0+0  +0+750
+        0x200e1f "      PX4Flow": ()  172x30+0+780  +0+780
+           1 child:
+           0x200e20 (has no name): ()  172x30+0+0  +0+780
+        0x200e22 "      Optical Flow": ()  172x30+0+810  +0+810
+           1 child:
+           0x200e23 (has no name): ()  172x30+0+0  +0+810
+        0x200e25 "      OSD": ()  172x30+0+840  +0+840
+           1 child:
+           0x200e26 (has no name): ()  172x30+0+0  +0+840
+        0x200e28 "      Camera Gimbal": ()  172x30+0+870  +0+870
+           1 child:
+           0x200e29 (has no name): ()  172x30+0+0  +0+870
+        0x200e2b "      Motor Test": ()  172x30+0+900  +0+900
+           1 child:
+           0x200e2c (has no name): ()  172x30+0+0  +0+900
+        0x200e2e "      Bluetooth Setup": ()  172x30+0+930  +0+930
+           1 child:
+           0x200e2f (has no name): ()  172x30+0+0  +0+930
+        0x200e31 "      Parachute": ()  172x30+0+960  +0+960
+           1 child:
+           0x200e32 (has no name): ()  172x30+0+0  +0+960
+        0x200e34 "      ESP8266 Setup": ()  172x30+0+990  +0+990
+           1 child:
+           0x200e35 (has no name): ()  172x30+0+0  +0+990
+        0x200e37 "      Antenna Tracker": ()  172x30+0+1020  +0+1020
+           1 child:
+           0x200e38 (has no name): ()  172x30+0+0  +0+1020
+        0x200e3a "      FFT Setup": ()  172x30+0+1050  +0+1050
+           1 child:
+           0x200e3b (has no name): ()  172x30+0+0  +0+1050
+        0x200e3d ">> Advanced": ()  172x30+0+1080  +0+1080
+           1 child:
+           0x200e3e (has no name): ()  172x30+0+0  +0+1080
+        0x200c94 "Install Firmware": ()  172x30+0+0  +0+0
+           1 child:
+           0x200c95 (has no name): ()  172x30+0+0  +0+0
+        0x200c96 ">> Mandatory Hardware": ()  172x30+0+30  +0+30
+           1 child:
+           0x200c97 (has no name): ()  172x30+0+0  +0+30
+        0x200c98 ">> Optional Hardware": ()  172x30+0+60  +0+60
+           1 child:
+           0x200c99 (has no name): ()  172x30+0+0  +0+60
+        0x200c9a "      RTK/GPS Inject": ()  172x30+0+90  +0+90
+           1 child:
+           0x200c9b (has no name): ()  172x30+0+0  +0+90
+        0x200c9c "      CubeID Update": ()  172x30+0+120  +0+120
+           1 child:
+           0x200c9d (has no name): ()  172x30+0+0  +0+120
+        0x200c9e "      Sik Radio": ()  172x30+0+150  +0+150
+           1 child:
+           0x200c9f (has no name): ()  172x30+0+0  +0+150
+        0x200ca0 "      CAN GPS Order": ()  172x30+0+180  +0+180
+           1 child:
+           0x200ca1 (has no name): ()  172x30+0+0  +0+180
+        0x200ca2 "      Battery Monitor": ()  172x30+0+210  +0+210
+           1 child:
+           0x200ca3 (has no name): ()  172x30+0+0  +0+210
+        0x200ca4 "      Battery Monitor 2": ()  172x30+0+240  +0+240
+           1 child:
+           0x200ca5 (has no name): ()  172x30+0+0  +0+240
+        0x200ca6 "      DroneCAN/UAVCAN": ()  172x30+0+270  +0+270
+           1 child:
+           0x200ca7 (has no name): ()  172x30+0+0  +0+270
+        0x200ca8 "      Joystick": ()  172x30+0+300  +0+300
+           1 child:
+           0x200ca9 (has no name): ()  172x30+0+0  +0+300
+        0x200caa "      Compass/Motor Calib": ()  172x30+0+330  +0+330
+           1 child:
+           0x200cab (has no name): ()  172x30+0+0  +0+330
+        0x200cac "      Range Finder": ()  172x30+0+360  +0+360
+           1 child:
+           0x200cad (has no name): ()  172x30+0+0  +0+360
+        0x200cae "      Airspeed": ()  172x30+0+390  +0+390
+           1 child:
+           0x200caf (has no name): ()  172x30+0+0  +0+390
+        0x200cb0 "      PX4Flow": ()  172x30+0+420  +0+420
+           1 child:
+           0x200cb1 (has no name): ()  172x30+0+0  +0+420
+        0x200cb2 "      Optical Flow": ()  172x30+0+450  +0+450
+           1 child:
+           0x200cb3 (has no name): ()  172x30+0+0  +0+450
+        0x200cb4 "      OSD": ()  172x30+0+480  +0+480
+           1 child:
+           0x200cb5 (has no name): ()  172x30+0+0  +0+480
+        0x200cb6 "      Camera Gimbal": ()  172x30+0+510  +0+510
+           1 child:
+           0x200cb7 (has no name): ()  172x30+0+0  +0+510
+        0x200cb8 "      Motor Test": ()  172x30+0+540  +0+540
+           1 child:
+           0x200cb9 (has no name): ()  172x30+0+0  +0+540
+        0x200cbb "      Bluetooth Setup": ()  172x30+0+570  +0+570
+           1 child:
+           0x200cbc (has no name): ()  172x30+0+0  +0+570
+        0x200cbe "      Parachute": ()  172x30+0+600  +0+600
+           1 child:
+           0x200cbf (has no name): ()  172x30+0+0  +0+600
+        0x200cc1 "      ESP8266 Setup": ()  172x30+0+630  +0+630
+           1 child:
+           0x200cc2 (has no name): ()  172x30+0+0  +0+630
+        0x200cc4 "      Antenna Tracker": ()  172x30+0+660  +0+660
+           1 child:
+           0x200cc5 (has no name): ()  172x30+0+0  +0+660
+        0x200cc7 "      FFT Setup": ()  172x30+0+690  +0+690
+           1 child:
+           0x200cc8 (has no name): ()  172x30+0+0  +0+690
+        0x200cca ">> Advanced": ()  172x30+0+720  +0+720
+           1 child:
+           0x200ccb (has no name): ()  172x30+0+0  +0+720
+        0x200bc2 "Install Firmware": ()  172x30+0+0  +0+0
+           1 child:
+           0x200bc3 (has no name): ()  172x30+0+0  +0+0
+        0x200bc4 ">> Mandatory Hardware": ()  172x30+0+30  +0+30
+           1 child:
+           0x200bc5 (has no name): ()  172x30+0+0  +0+30
+        0x200bc6 ">> Optional Hardware": ()  172x30+0+60  +0+60
+           1 child:
+           0x200bc7 (has no name): ()  172x30+0+0  +0+60
+        0x200bc8 "      RTK/GPS Inject": ()  172x30+0+90  +0+90
+           1 child:
+           0x200bc9 (has no name): ()  172x30+0+0  +0+90
+        0x200bca "      CubeID Update": ()  172x30+0+120  +0+120
+           1 child:
+           0x200bcb (has no name): ()  172x30+0+0  +0+120
+        0x200bcc "      Sik Radio": ()  172x30+0+150  +0+150
+           1 child:
+           0x200bcd (has no name): ()  172x30+0+0  +0+150
+        0x200bce "      CAN GPS Order": ()  172x30+0+180  +0+180
+           1 child:
+           0x200bcf (has no name): ()  172x30+0+0  +0+180
+        0x200bd0 "      Battery Monitor": ()  172x30+0+210  +0+210
+           1 child:
+           0x200bd1 (has no name): ()  172x30+0+0  +0+210
+        0x200bd2 "      Battery Monitor 2": ()  172x30+0+240  +0+240
+           1 child:
+           0x200bd3 (has no name): ()  172x30+0+0  +0+240
+        0x200bd4 "      DroneCAN/UAVCAN": ()  172x30+0+270  +0+270
+           1 child:
+           0x200bd5 (has no name): ()  172x30+0+0  +0+270
+        0x200bd6 "      Joystick": ()  172x30+0+300  +0+300
+           1 child:
+           0x200bd7 (has no name): ()  172x30+0+0  +0+300
+        0x200bd8 "      Compass/Motor Calib": ()  172x30+0+330  +0+330
+           1 child:
+           0x200bd9 (has no name): ()  172x30+0+0  +0+330
+        0x200bda "      Range Finder": ()  172x30+0+360  +0+360
+           1 child:
+           0x200bdb (has no name): ()  172x30+0+0  +0+360
+        0x200bdc "      Airspeed": ()  172x30+0+390  +0+390
+           1 child:
+           0x200bdd (has no name): ()  172x30+0+0  +0+390
+        0x200bde "      PX4Flow": ()  172x30+0+420  +0+420
+           1 child:
+           0x200bdf (has no name): ()  172x30+0+0  +0+420
+        0x200be0 "      Optical Flow": ()  172x30+0+450  +0+450
+           1 child:
+           0x200be1 (has no name): ()  172x30+0+0  +0+450
+        0x200be2 "      OSD": ()  172x30+0+480  +0+480
+           1 child:
+           0x200be3 (has no name): ()  172x30+0+0  +0+480
+        0x200be4 "      Camera Gimbal": ()  172x30+0+510  +0+510
+           1 child:
+           0x200be5 (has no name): ()  172x30+0+0  +0+510
+        0x200be6 "      Motor Test": ()  172x30+0+540  +0+540
+           1 child:
+           0x200be7 (has no name): ()  172x30+0+0  +0+540
+        0x200be9 "      Bluetooth Setup": ()  172x30+0+570  +0+570
+           1 child:
+           0x200bea (has no name): ()  172x30+0+0  +0+570
+        0x200bec "      Parachute": ()  172x30+0+600  +0+600
+           1 child:
+           0x200bed (has no name): ()  172x30+0+0  +0+600
+        0x200bef "      ESP8266 Setup": ()  172x30+0+630  +0+630
+           1 child:
+           0x200bf0 (has no name): ()  172x30+0+0  +0+630
+        0x200bf2 "      Antenna Tracker": ()  172x30+0+660  +0+660
+           1 child:
+           0x200bf3 (has no name): ()  172x30+0+0  +0+660
+        0x200bf5 "      FFT Setup": ()  172x30+0+690  +0+690
+           1 child:
+           0x200bf6 (has no name): ()  172x30+0+0  +0+690
+        0x200bf8 ">> Advanced": ()  172x30+0+720  +0+720
+           1 child:
+           0x200bf9 (has no name): ()  172x30+0+0  +0+720
+        0x200af9 "Install Firmware": ()  172x30+0+0  +0+0
+           1 child:
+           0x200afa (has no name): ()  172x30+0+0  +0+0
+        0x200afb ">> Mandatory Hardware": ()  172x30+0+30  +0+30
+           1 child:
+           0x200afc (has no name): ()  172x30+0+0  +0+30
+        0x200afd ">> Optional Hardware": ()  172x30+0+60  +0+60
+           1 child:
+           0x200afe (has no name): ()  172x30+0+0  +0+60
+        0x200aff "      RTK/GPS Inject": ()  172x30+0+90  +0+90
+           1 child:
+           0x200b00 (has no name): ()  172x30+0+0  +0+90
+        0x200b01 "      CubeID Update": ()  172x30+0+120  +0+120
+           1 child:
+           0x200b02 (has no name): ()  172x30+0+0  +0+120
+        0x200b03 "      Sik Radio": ()  172x30+0+150  +0+150
+           1 child:
+           0x200b04 (has no name): ()  172x30+0+0  +0+150
+        0x200b05 "      CAN GPS Order": ()  172x30+0+180  +0+180
+           1 child:
+           0x200b06 (has no name): ()  172x30+0+0  +0+180
+        0x200b07 "      Battery Monitor": ()  172x30+0+210  +0+210
+           1 child:
+           0x200b08 (has no name): ()  172x30+0+0  +0+210
+        0x200b09 "      Battery Monitor 2": ()  172x30+0+240  +0+240
+           1 child:
+           0x200b0a (has no name): ()  172x30+0+0  +0+240
+        0x200b0b "      DroneCAN/UAVCAN": ()  172x30+0+270  +0+270
+           1 child:
+           0x200b0c (has no name): ()  172x30+0+0  +0+270
+        0x200b0d "      Joystick": ()  172x30+0+300  +0+300
+           1 child:
+           0x200b0e (has no name): ()  172x30+0+0  +0+300
+        0x200b0f "      Compass/Motor Calib": ()  172x30+0+330  +0+330
+           1 child:
+           0x200b10 (has no name): ()  172x30+0+0  +0+330
+        0x200b11 "      Range Finder": ()  172x30+0+360  +0+360
+           1 child:
+           0x200b12 (has no name): ()  172x30+0+0  +0+360
+        0x200b13 "      Airspeed": ()  172x30+0+390  +0+390
+           1 child:
+           0x200b14 (has no name): ()  172x30+0+0  +0+390
+        0x200b15 "      PX4Flow": ()  172x30+0+420  +0+420
+           1 child:
+           0x200b16 (has no name): ()  172x30+0+0  +0+420
+        0x200b17 "      Optical Flow": ()  172x30+0+450  +0+450
+           1 child:
+           0x200b18 (has no name): ()  172x30+0+0  +0+450
+        0x200b19 "      OSD": ()  172x30+0+480  +0+480
+           1 child:
+           0x200b1a (has no name): ()  172x30+0+0  +0+480
+        0x200b1b "      Camera Gimbal": ()  172x30+0+510  +0+510
+           1 child:
+           0x200b1c (has no name): ()  172x30+0+0  +0+510
+        0x200b23 "      Motor Test": ()  172x30+0+540  +0+540
+           1 child:
+           0x200b24 (has no name): ()  172x30+0+0  +0+540
+        0x200b26 "      Bluetooth Setup": ()  172x30+0+570  +0+570
+           1 child:
+           0x200b27 (has no name): ()  172x30+0+0  +0+570
+        0x200b29 "      Parachute": ()  172x30+0+600  +0+600
+           1 child:
+           0x200b2a (has no name): ()  172x30+0+0  +0+600
+        0x200b2c "      ESP8266 Setup": ()  172x30+0+630  +0+630
+           1 child:
+           0x200b2d (has no name): ()  172x30+0+0  +0+630
+        0x200b2f "      Antenna Tracker": ()  172x30+0+660  +0+660
+           1 child:
+           0x200b30 (has no name): ()  172x30+0+0  +0+660
+        0x200b32 "      FFT Setup": ()  172x30+0+690  +0+690
+           1 child:
+           0x200b33 (has no name): ()  172x30+0+0  +0+690
+        0x200b35 ">> Advanced": ()  172x30+0+720  +0+720
+           1 child:
+           0x200b36 (has no name): ()  172x30+0+0  +0+720
+        0x200ad5 "Install Firmware": ()  172x30+0+0  +0+0
+           1 child:
+           0x200ad6 (has no name): ()  172x30+0+0  +0+0
+        0x200ad7 ">> Mandatory Hardware": ()  172x30+0+30  +0+30
+           1 child:
+           0x200ad8 (has no name): ()  172x30+0+0  +0+30
+        0x200ad9 ">> Optional Hardware": ()  172x30+0+60  +0+60
+           1 child:
+           0x200ada (has no name): ()  172x30+0+0  +0+60
+        0x200adb ">> Advanced": ()  172x30+0+90  +0+90
+           1 child:
+           0x200adc (has no name): ()  172x30+0+0  +0+90
+        0x200126 (has no name): ()  1101x526+0+0  +0+0
+           1 child:
+           0x200127 (has no name): ()  1101x526+0+0  +0+0
+              1 child:
+              0x200128 (has no name): ()  1101x526+0+0  +0+0
+                 1 child:
+                 0x200129 (has no name): ()  1101x526+0+0  +0+0
+                    2 children:
+                    0x20012a (has no name): ()  797x526+304+0  +304+0
+                       1 child:
+                       0x20012b (has no name): ()  795x524+1+1  +305+1
+                          1 child:
+                          0x20012c (has no name): ()  795x524+0+0  +305+1
+                             1 child:
+                             0x20012d (has no name): ()  795x524+0+0  +305+1
+                                2 children:
+                                0x20012e (has no name): ()  787x490+4+4  +309+5
+                                   1 child:
+                                   0x20012f (has no name): ()  787x490+0+0  +309+5
+                                      2 children:
+                                      0x200130 (has no name): ()  787x490+0+0  +309+5
+                                         1 child:
+                                         0x200131 (has no name): ()  787x490+0+0  +309+5
+                                            12 children:
+                                            0x200132 "Zoom": ()  36x17+747+3  +1056+8
+                                               1 child:
+                                               0x200133 (has no name): ()  36x17+0+0  +1056+8
+                                            0x200134 "3.0": ()  46x20+743+22  +1052+27
+                                               1 child:
+                                               0x200135 (has no name): ()  42x16+2+2  +1054+29
+                                                  2 children:
+                                                  0x200136 (has no name): ()  16x16+26+0  +1080+29
+                                                     1 child:
+                                                     0x200137 (has no name): ()  16x16+0+0  +1080+29
+                                                  0x200138 "3.0": ()  42x13+0+0  +1054+29
+                                                     1 child:
+                                                     0x200139 (has no name): ()  42x13+0+0  +1054+29
+                                            0x20013a (has no name): ()  670x22+66+0  +375+5
+                                               1 child:
+                                               0x20013b (has no name): ()  670x22+0+0  +375+5
+                                            0x20013c (has no name): ()  45x450+742+40  +1051+45
+                                               1 child:
+                                               0x20013d (has no name): ()  45x450+0+0  +1051+45
+                                            0x20013e (has no name): ()  60x60+0+0  +309+5
+                                               1 child:
+                                               0x20013f (has no name): ()  60x60+0+0  +309+5
+                                            0x200140 "GPS Track (Black)": ()  99x17+332+460  +641+465
+                                               1 child:
+                                               0x200141 (has no name): ()  99x17+0+0  +641+465
+                                            0x200142 "Target Heading": ()  86x17+245+460  +554+465
+                                               1 child:
+                                               0x200143 (has no name): ()  86x17+0+0  +554+465
+                                            0x200144 "Direct to current WP": ()  112x17+135+460  +444+465
+                                               1 child:
+                                               0x200145 (has no name): ()  112x17+0+0  +444+465
+                                            0x200146 "Current Heading": ()  93x17+45+460  +354+465
+                                               1 child:
+                                               0x200147 (has no name): ()  93x17+0+0  +354+465
+                                            0x200148 "hdop: 0": ()  43x12+-1+442  +308+447
+                                               1 child:
+                                               0x200149 (has no name): ()  43x12+0+0  +308+447
+                                            0x20014a "Sats: 0": ()  40x12+-1+461  +308+466
+                                               1 child:
+                                               0x20014b (has no name): ()  40x12+0+0  +308+466
+                                            0x20014c "Map": ()  787x490+0+0  +309+5
+                                               1 child:
+                                               0x20014d (has no name): ()  787x490+0+0  +309+5
+                                      0x20014e (has no name): ()  787x250+0+0  +309+5
+                                         1 child:
+                                         0x20014f (has no name): ()  787x250+0+0  +309+5
+                                            1 child:
+                                            0x2000af (has no name): ()  787x250+0+0  +309+5
+                                               1 child:
+                                               0x2000b0 (has no name): ()  787x250+0+0  +309+5
+                                                  2 children:
+                                                  0x2000b1 (has no name): ()  128x17+0+128  +309+133
+                                                     1 child:
+                                                     0x2000b2 (has no name): ()  128x17+0+0  +309+133
+                                                  0x2000b3 (has no name): ()  17x128+128+0  +437+5
+                                                     1 child:
+                                                     0x2000b4 (has no name): ()  17x128+0+0  +437+5
+                                0x200150 (has no name): ()  793x25+1+498  +306+499
+                                   1 child:
+                                   0x200151 (has no name): ()  793x25+0+0  +306+499
+                                      3 children:
+                                      0x200152 (has no name): ()  247x21+7+2  +313+501
+                                         1 child:
+                                         0x200153 (has no name): ()  247x21+0+0  +313+501
+                                            1 child:
+                                            0x200154 "GEO": ()  64x21+0+2  +313+503
+                                               1 child:
+                                               0x200155 (has no name): ()  64x21+0+0  +313+503
+                                                  1 child:
+                                                  0x200156 "GEO": ()  42x13+3+3  +316+506
+                                                     1 child:
+                                                     0x200157 (has no name): ()  42x13+0+0  +316+506
+                                      0x200158 "Auto Pan": ()  77x18+325+2  +631+501
+                                         1 child:
+                                         0x200159 (has no name): ()  77x18+0+0  +631+501
+                                      0x20015a "Tuning": ()  64x18+260+2  +566+501
+                                         1 child:
+                                         0x20015b (has no name): ()  64x18+0+0  +566+501
+                    0x20015c (has no name): ()  300x526+0+0  +0+0
+                       1 child:
+                       0x20015d (has no name): ()  298x524+1+1  +1+1
+                          1 child:
+                          0x20015e (has no name): ()  298x524+0+0  +1+1
+                             1 child:
+                             0x20015f (has no name): ()  298x524+0+0  +1+1
+                                2 children:
+                                0x200160 (has no name): ()  298x495+0+29  +1+30
+                                   1 child:
+                                   0x200161 (has no name): ()  296x493+1+1  +2+31
+                                      2 children:
+                                      0x200174 (has no name): ()  296x1+0+0  +2+31
+                                         1 child:
+                                         0x200175 (has no name): ()  1x1+-5+-5  +-3+26
+                                      0x200162 (has no name): ()  296x493+0+0  +2+31
+                                         1 child:
+                                         0x200163 (has no name): ()  296x493+0+0  +2+31
+                                            1 child:
+                                            0x200164 "Quick": ()  289x448+4+41  +6+72
+                                               1 child:
+                                               0x200165 (has no name): ()  289x448+0+0  +6+72
+                                                  1 child:
+                                                  0x200166 (has no name): ()  283x442+3+3  +9+75
+                                                     1 child:
+                                                     0x200167 (has no name): ()  283x442+0+0  +9+75
+                                                        6 children:
+                                                        0x200168 (has no name): ()  136x142+144+297  +153+372
+                                                           1 child:
+                                                           0x200169 (has no name): ()  136x142+0+0  +153+372
+                                                        0x20016a (has no name): ()  135x142+3+297  +12+372
+                                                           1 child:
+                                                           0x20016b (has no name): ()  135x142+0+0  +12+372
+                                                        0x20016c (has no name): ()  136x141+144+150  +153+225
+                                                           1 child:
+                                                           0x20016d (has no name): ()  136x141+0+0  +153+225
+                                                        0x20016e (has no name): ()  135x141+3+150  +12+225
+                                                           1 child:
+                                                           0x20016f (has no name): ()  135x141+0+0  +12+225
+                                                        0x200170 (has no name): ()  136x141+144+3  +153+78
+                                                           1 child:
+                                                           0x200171 (has no name): ()  136x141+0+0  +153+78
+                                                        0x200172 (has no name): ()  135x141+3+3  +12+78
+                                                           1 child:
+                                                           0x200173 (has no name): ()  135x141+0+0  +12+78
+                                0x200176 (has no name): ()  298x25+0+0  +1+1
+                                   1 child:
+                                   0x200177 (has no name): ()  296x23+1+1  +2+2
+                                      1 child:
+                                      0x200178 (has no name): ()  5x5+0+0  +2+2
+                                         1 child:
+                                         0x200179 (has no name): ()  5x5+0+0  +2+2
+        0x200031 (has no name): ()  923x4+0+45  +0+45
+           1 child:
+           0x200032 (has no name): ()  923x4+0+0  +0+45
+        0x200002 (has no name): ()  1x1+0+0  +0+0
+           1 child:
+           0x200003 (has no name): ()  1x1+0+0  +0+0
+

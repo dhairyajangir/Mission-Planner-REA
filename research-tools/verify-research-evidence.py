@@ -3008,6 +3008,28 @@ check('original ZedGraph DrawCurve method for Copter log legend',
       and hashlib.sha256((legend_folder / 'ZedGraph-DrawCurve-legend-IL.txt').read_bytes()).hexdigest()
       == '902769962fbf22594a47afaf9089608f97bb2be40ffdf7fb3f369f5e1e7ed6b9',
       'Archive method body matched the indexed method digest and the retained disassembly excerpt was pinned.')
+compass_fit = runpy.run_path(str(root / 'copter-compass-orientation-study/verify.py'))['verify']()
+check('legacy compass fit with missing vertical orientations',
+      compass_fit['max_training_residual'] < 0.0001 and compass_fit['vertical_offset_error'] > 140,
+      'A planar fixture fit the observed ring but missed both held-out poles. Full-sphere and two-pole controls recovered the bias.')
+joystick = runpy.run_path(str(root / 'copter-joystick-loss-study/replay.py'))['verify']()
+check('original joystick worker observes device loss on a closed link', joystick['mapped_rows'] == 1092,
+      'The invalid device left channel values cached until an explicit clear. All archived mapping vectors matched.')
+runpy.run_path(str(root / 'copter-photo-geotagging-study/verify.py'))['check_retained']()
+check('time-matched JPEG geotag and missing capture time', True,
+      'Independent decoding matched the expected GPS fix. A second photo without capture time produced no tagged copy.')
+sensor_folder = root / 'gui-original-copter-sensor-options'
+collect_sensor = runpy.run_path(str(sensor_folder / 'verify.py'))['collect']
+sensor_runs = {'initial_adsb_attempt': collect_sensor(sensor_folder / 'sensors-HXgw6hfd', ['adsb']),
+               'sensor_pages': collect_sensor(sensor_folder, ['optional', 'rangefinder', 'optical-flow', 'adsb'])}
+check('connected original Copter optical flow and range finder pages',
+      sensor_runs == json.loads((sensor_folder / 'verification.json').read_text()) and
+      all(run['matching_release_files'] == 1317 and run['armed_heartbeats'] == 0
+          for run in sensor_runs.values()) and sum(run['heartbeats'] for run in sensor_runs.values()) == 1158,
+      'Both sessions reproduced the release identity and telemetry record. ADS-B activation yielded a blank pane.')
+help_view = runpy.run_path(str(root / 'gui-original-warnings-help/verify.py'))['verify']()
+check('original Help page and Warning Manager control tree', help_view['named_dialog_controls'] == 9,
+      'Help rendered in the main window. The separate warning dialog had nine named controls and a black interior.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

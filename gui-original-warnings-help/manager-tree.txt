@@ -1,0 +1,34 @@
+     0x20084e "Warning Manager": ()  890x260+44+44  +44+44
+        1 child:
+        0x20084f (has no name): ()  898x287+0+0  +44+44
+           10 children:
+           0x200850 "Color": ()  33x17+398+39  +442+83
+              1 child:
+              0x200851 (has no name): ()  33x17+0+0  +442+83
+           0x200852 "Item type": ()  56x17+3+39  +47+83
+              1 child:
+              0x200853 (has no name): ()  56x17+0+0  +47+83
+           0x200854 "Message": ()  52x17+507+39  +551+83
+              1 child:
+              0x200855 (has no name): ()  52x17+0+0  +551+83
+           0x200856 "Repeat Interval": ()  88x17+748+39  +792+83
+              1 child:
+              0x200857 (has no name): ()  88x17+0+0  +792+83
+           0x200858 "Trigger": ()  43x17+314+39  +358+83
+              1 child:
+              0x200859 (has no name): ()  43x17+0+0  +358+83
+           0x20085a "Comparison": ()  71x17+258+39  +302+83
+              1 child:
+              0x20085b (has no name): ()  71x17+0+0  +302+83
+           0x20085c "Field": ()  29x17+129+39  +173+83
+              1 child:
+              0x20085d (has no name): ()  29x17+0+0  +173+83
+           0x20085e "Save": ()  75x23+94+13  +138+57
+              1 child:
+              0x20085f (has no name): ()  75x23+0+0  +138+57
+           0x200860 "+": ()  75x23+13+13  +57+57
+              1 child:
+              0x200861 (has no name): ()  75x23+0+0  +57+57
+           0x200862 (has no name): ()  884x197+4+53  +48+97
+              1 child:
+              0x200863 (has no name): ()  884x197+0+0  +48+97

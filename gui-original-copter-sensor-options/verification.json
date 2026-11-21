@@ -1,0 +1,221 @@
+{
+  "initial_adsb_attempt": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": true,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": true,
+    "pages": {
+      "adsb": {
+        "image_sha256": "9952bc1cf5d7a02da88f61eecdcb6267fcf6ef368d2a04b285dff3dc5b0537de",
+        "tree_sha256": "39ef5bfae55aaab17d5875b9ba9cf043b72cae4e44dc8ab88eadc158362fa16c",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6,
+          "111": 1
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {},
+        "visual_review": "blank pane, control tree populated"
+      }
+    },
+    "startup_evidence_sha256": {
+      "startup.png": "5d52d5dfe5317203ed93f2e0aea33cdbee8f067f67c2a3876813c370b7f3fbed",
+      "windows-startup.txt": "2ca3f41811037cd81e761ec1b706c98cdc9020483f4940556f75c7bc4488781d",
+      "release.log": "1ba2408f0e2c7319b7f3d85f8f35a48c4aaf29fff1a4fdcd3a010ebb3d03de57",
+      "observation.log": "a01dc7a320f63f35f36b085375794597b780fa1cbae88cb0169db9f9ed0e879f",
+      "copter.log": "8c6b81261b40d3c49936a13da6b46a52d9ff5f8dca4321efa838177165521577"
+    },
+    "application_logged_tcp_open": true,
+    "application_logged_autoconnect_start": true,
+    "sampled_ui_stack": [],
+    "heartbeats": 657,
+    "armed_heartbeats": 0,
+    "tlog_gz_sha256": "233d0f29785b9e59958a37d3cee3e6da716e16462ee2e0bb3ecd4a7e716947a4",
+    "all_gcs_ids": {
+      "0": 658,
+      "110": 3,
+      "111": 65,
+      "183": 1,
+      "253": 3,
+      "66": 194,
+      "76": 82
+    },
+    "selected_gcs_messages": {
+      "COMMAND_LONG": 82,
+      "FILE_TRANSFER_PROTOCOL": 3,
+      "HEARTBEAT": 658,
+      "REQUEST_DATA_STREAM": 194
+    },
+    "gcs_commands": {
+      "42428": 2,
+      "511": 17,
+      "512": 62,
+      "520": 1
+    },
+    "packed_parameters": {
+      "all_parameter_count": 1431,
+      "sensor_values": {
+        "ADSB_TYPE": 0,
+        "FLOW_TYPE": 0,
+        "RNGFND1_TYPE": 0
+      }
+    },
+    "parameter_set_requests": [],
+    "sensor_param_value_frames": {
+      "RNGFND1_TYPE": 0.0,
+      "RNGFND2_TYPE": 0.0,
+      "RNGFND3_TYPE": 0.0,
+      "RNGFND4_TYPE": 0.0,
+      "RNGFND5_TYPE": 0.0,
+      "RNGFND6_TYPE": 0.0,
+      "RNGFND7_TYPE": 0.0,
+      "RNGFND8_TYPE": 0.0,
+      "RNGFND9_TYPE": 0.0,
+      "RNGFNDA_TYPE": 0.0,
+      "FLOW_TYPE": 0.0,
+      "ADSB_TYPE": 0.0,
+      "RNGFND_FILT": 0.5
+    },
+    "adsb_later_hashes": {
+      "adsb-settled.png": "9952bc1cf5d7a02da88f61eecdcb6267fcf6ef368d2a04b285dff3dc5b0537de",
+      "windows-adsb-settled.txt": "e1de804ee39fd53cd92d82aa0bc82c565dfb87e9f7f7602407a020d92b6a16ec"
+    },
+    "observed_activations": [
+      "ConfigMandatory",
+      "ConfigADSB"
+    ]
+  },
+  "sensor_pages": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": true,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": true,
+    "pages": {
+      "optional": {
+        "image_sha256": "d213f5b577be20bf4629a861b1aac164edf6aec3256042c0a8bff00c69d0f713",
+        "tree_sha256": "0d47069313e3f0d4205819cfd361b5ee1d5bdc5e9c57eeaef125d1822387ebdb",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {},
+        "visual_review": "visible and identifying content"
+      },
+      "rangefinder": {
+        "image_sha256": "279ef512257b1a8817c54e99e5d93e82646e79ba03dce1c59f37321de28770ac",
+        "tree_sha256": "60254f5eefb340281e975741c354b90fed9bb45f85c05ba37956ce8929de4ee6",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {},
+        "visual_review": "visible and identifying content"
+      },
+      "optical-flow": {
+        "image_sha256": "841324a291e1227c002b5b61e0806d8cd245594b5d73bbdddf414143f914ffad",
+        "tree_sha256": "949a40a1c3437c5165acf577dd0cd12c1d95f3d34717138ce951f9dc9ce134f4",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {},
+        "visual_review": "visible and identifying content"
+      },
+      "adsb": {
+        "image_sha256": "da246369eb05f39c35c7a38b5a405737d6fbd5e44d6b4c851d6996470195fdbf",
+        "tree_sha256": "6ceb881085836d3a4934ab6e0a72ba6627a856b6028ab3dece96bc55be1b2ea2",
+        "ftp_first_6s": [],
+        "all_gcs_ids_first_6s": {
+          "0": 6,
+          "111": 1
+        },
+        "selected_gcs_messages_first_6s": {
+          "HEARTBEAT": 6
+        },
+        "gcs_commands_first_6s": {},
+        "visual_review": "blank pane, control tree populated"
+      }
+    },
+    "startup_evidence_sha256": {
+      "startup.png": "47e2774dddc4f69c483a173c6968a7c463362285bf3ef53c5c1ecf3668ed8938",
+      "windows-startup.txt": "f34ca6844ce0ff410c290bd3c44b2f73a0b97ee297b487348f2c8f8054543cb6",
+      "release.log": "5cadea94878bb725174551005ed4b70609f4ec629cfbce97ab2c5b51e8eed2ae",
+      "observation.log": "0c3f158b913c0a0555059306e636763725ab86879af690abc1fba7a36c69fd41",
+      "copter.log": "0621c61de623f92419d36b5ee0fd4fc3eddac2ad0a8f4bcbeaa15262be40b754"
+    },
+    "application_logged_tcp_open": true,
+    "application_logged_autoconnect_start": true,
+    "heartbeats": 501,
+    "armed_heartbeats": 0,
+    "tlog_gz_sha256": "5e7c26c0aa35cd25ff24a8ba7bbd6b9241e37446e386e808c95a22dfc0dd71fb",
+    "all_gcs_ids": {
+      "0": 501,
+      "110": 3,
+      "111": 50,
+      "183": 1,
+      "253": 3,
+      "66": 146,
+      "76": 59
+    },
+    "selected_gcs_messages": {
+      "COMMAND_LONG": 59,
+      "FILE_TRANSFER_PROTOCOL": 3,
+      "HEARTBEAT": 501,
+      "REQUEST_DATA_STREAM": 146
+    },
+    "gcs_commands": {
+      "42428": 2,
+      "511": 13,
+      "512": 43,
+      "520": 1
+    },
+    "packed_parameters": {
+      "all_parameter_count": 1431,
+      "sensor_values": {
+        "ADSB_TYPE": 0,
+        "FLOW_TYPE": 0,
+        "RNGFND1_TYPE": 0
+      }
+    },
+    "parameter_set_requests": [],
+    "sensor_param_value_frames": {
+      "RNGFND1_TYPE": 0.0,
+      "RNGFND2_TYPE": 0.0,
+      "RNGFND3_TYPE": 0.0,
+      "RNGFND4_TYPE": 0.0,
+      "RNGFND5_TYPE": 0.0,
+      "RNGFND6_TYPE": 0.0,
+      "RNGFND7_TYPE": 0.0,
+      "RNGFND8_TYPE": 0.0,
+      "RNGFND9_TYPE": 0.0,
+      "RNGFNDA_TYPE": 0.0,
+      "FLOW_TYPE": 0.0,
+      "ADSB_TYPE": 0.0,
+      "RNGFND_FILT": 0.5
+    },
+    "adsb_later_hashes": {
+      "adsb-settled.png": "da246369eb05f39c35c7a38b5a405737d6fbd5e44d6b4c851d6996470195fdbf",
+      "windows-adsb-settled.txt": "6ff2c80c88283c32246de6c49efb8a83f00d664b80519a4e71601516417355cf"
+    },
+    "observed_activations": [
+      "ConfigOptional",
+      "ConfigHWRangeFinder",
+      "ConfigHWOptFlow",
+      "ConfigMandatory",
+      "ConfigADSB"
+    ]
+  }
+}
