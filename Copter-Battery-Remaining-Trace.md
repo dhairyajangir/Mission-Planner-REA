@@ -1,0 +1,15 @@
+# Copter battery percentage after an unknown reading
+
+Mission Planner 1.3.83's primary battery percentage was zero in three cases tested here: before the first battery sample, after an explicit unknown reading, and after a genuine empty reading. The secondary percentage preserved the distinction between unknown (−1) and empty (0) after receiving data. [Release-component capture](mission-planner-gui-faces/battery-remaining/states.csv)
+
+## Transitions observed
+
+The probe gave one disconnected Copter state primary and secondary readings of 78% and 61%. An intervening attitude packet left those readings intact. A battery-status report of −1 for battery ID 1 changed the secondary reading to −1. Sending −1 for battery ID 0 then set the primary to 0. A system-status report subsequently set the primary to 54. A battery message addressed to another system left it at 54, and a system-status report of −1 for the matching system changed it to 0. Both readings subsequently accepted new percentages. These were individual packet transitions; prolonged link silence and display-refresh timing remain untested. [All 13 states](mission-planner-gui-faces/battery-remaining/states.csv)
+
+The bundled MAVLink definitions designate −1 as an unavailable estimate. In the pinned source, the primary property's setter converts a negative reading to zero; the secondary property stores the assigned integer. Both `SYS_STATUS` and battery ID 0 in `BATTERY_STATUS` write the primary property. Battery ID 1 writes the secondary property. [MAVLink field definitions](mission-planner-1.3.83-source/ExtLibs/Mavlink/message_definitions/common.xml) · [Vehicle state](mission-planner-1.3.83-source/ExtLibs/ArduPilot/CurrentState.cs)
+
+Flight Data binds the HUD's percentages to these two properties. The HUD source appends a percent sign to each numeric value in its battery text. A downstream display using only the primary state value cannot distinguish those three zero cases. The probe observed the state object before rendering. It did not run Flight Data, measure alert behavior, or photograph a HUD. [Bindings](mission-planner-1.3.83-source/GCSViews/FlightData.Designer.cs) · [HUD text](mission-planner-1.3.83-source/ExtLibs/Controls/HUD.cs)
+
+## Replay
+
+Run `python research-tools/run-copter-battery-remaining.py <new-output-directory>` on Windows. The runner extracts release assemblies from the local portable ZIP, compiles the probe in a temporary directory, and saves the observations only after all 13 assertions pass. The probe serializes nominal MAVLink 2 messages in memory and calls the original `CurrentState.Parent_OnPacketReceived` handler on a disconnected interface. System and component identifiers match the state except for the explicit other-system control. The run used a disposable settings directory. An initial compile identified the need for the .NET Framework `netstandard.dll` reference, included in the runner. [Runner](research-tools/run-copter-battery-remaining.py) · [Probe source](research-tools/CopterBatteryRemainingProbe.cs) · [Release and capture hashes](mission-planner-gui-faces/battery-remaining/sha256.json)

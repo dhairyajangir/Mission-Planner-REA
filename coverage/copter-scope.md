@@ -80,6 +80,47 @@ Each source link identifies an explicit registration. Each menu link opens its s
 
 The two compass registrations depend on the presence of `COMPASS_PRIO1_ID`. The saved Copter parameter list contains it. Frame Type showed a frame-class selector. Antenna Tracker in this menu is the optional tracker UI; the firmware-gated tracker configuration page is a different type. The menu run covered the Mandatory and Optional groups. Advanced, disconnected and software-configuration pages require separate observations. Plugin-added pages are outside the explicit registration inventory. [Copter parameters](../sitl-evidence/setup-page-disabled-reasons/copter-all-parameters.csv)
 
+## Copter mode numbers observed in the simulator
+
+The table follows the firmware enum, including AUTO_RTL, which reports an AUTO landing sequence. The ground sweep requested modes while disarmed. A matching vehicle heartbeat establishes an active state. STABILIZE was already active at the start. A refusal below required both a rejected request and a different reported state. [Firmware enum](../ardupilot-source/ardupilot-master/ArduCopter/mode.h) · [Ground sweep](../sitl-evidence/mode-sweep/mode-sweep.csv)
+
+The focused column uses selected airborne quad, helicopter and ground-recheck captures. A dash means that this selection supplies no further result for that mode. [Airborne quad sweep](../sitl-evidence/copter-air-modes/copter-air-modes.csv) · [Instrumented quad](../sitl-evidence/copter-untested-modes/modes-results.json) · [Turtle recheck](../sitl-evidence/copter-turtle-entry-recheck/turtle-entry.csv) · [Helicopter baseline](../sitl-evidence/heli-flight/heli-results.json) · [Configured helicopter](../sitl-evidence/heli-autorotate/heli-results.json)
+
+The suite column gives the first matching line in each decompressed transcript. Both upstream test helpers that print `Got mode` check the vehicle-reported mode first. Those lines prove the mode was reported during the test; some tests request a mode that is already active. The line by itself gives no airborne or armed-state guarantee. [C Copter.log.gz](../sitl-evidence/autotest/Copter.log.gz) · [R Copter-rerun1.log.gz](../sitl-evidence/autotest/Copter-rerun1.log.gz) · [H Helicopter-rerun2.log.gz](../sitl-evidence/autotest-helicopter/Helicopter-rerun2.log.gz) · [Upstream heartbeat checks](../ardupilot-source/ardupilot-master/Tools/autotest/vehicle_test_suite.py)
+
+| ID | Mode | Disarmed quad sweep | Focused captures | Suite lines |
+| ---: | --- | --- | --- | --- |
+| 0 | STABILIZE | Already active | heli baseline entered from AUTO | C 514, R 360, H 129 |
+| 1 | ACRO | Reported active | quad entered from AUTO, heli baseline entered from AUTO | C 1641, H 1056 |
+| 2 | ALT_HOLD | Reported active | quad airborne, heli baseline entered from AUTO | C 1661, R 649, H 1076 |
+| 3 | AUTO | Reported active | — | C 1681, R 6316, H 1096 |
+| 4 | GUIDED | Reported active | — | C 1698, R 399, H 1112 |
+| 5 | LOITER | Reported active | quad airborne, heli baseline entered from AUTO | C 1772, R 888, H 1186 |
+| 6 | RTL | Reported active | — | C 1840, R 1625, H 1253 |
+| 7 | CIRCLE | Reported active | quad airborne | C 1851, R 24734, H 1264 |
+| 9 | LAND | Reported active | — | C 1865, R 484, H 1278 |
+| 11 | DRIFT | Reported active | quad airborne, quad entered from AUTO | C 1884, H 1297 |
+| 13 | SPORT | Reported active | quad airborne, quad entered from AUTO | — |
+| 14 | FLIP | Refused | — | R 27441 |
+| 15 | AUTOTUNE | Refused | — | R 9607, H 14319 |
+| 16 | POSHOLD | Reported active | quad airborne | C 2079, R 162355, H 1491 |
+| 17 | BRAKE | Reported active | quad airborne | C 2148, R 16663, H 1559 |
+| 18 | THROW | Reported active | — | C 2164, R 229391 |
+| 19 | AVOID_ADSB | Reported active | — | C 2232, H 1573 |
+| 20 | GUIDED_NOGPS | Reported active | quad entered from AUTO | C 2243, H 1584 |
+| 21 | SMART_RTL | Reported active | quad airborne | C 2263, R 20178, H 1604 |
+| 22 | FLOWHOLD | Refused | — | C 86398 |
+| 23 | FOLLOW | Refused | — | C 2286, H 1627 |
+| 24 | ZIGZAG | Reported active | — | C 185868 |
+| 25 | SYSTEMID | Refused | quad entered from STABILIZE | — |
+| 26 | AUTOROTATE | Refused | heli baseline refused, heli configured entered from AUTO | H 7432 |
+| 27 | AUTO_RTL | Refused | — | R 7982 |
+| 28 | TURTLE | Refused | quad refused, quad ground recheck active | — |
+
+Of 26 pinned enum values, 26 were reported active in at least one of these simulator contexts. This count includes helicopter mode 26 and the reported AUTO_RTL state. Individual refusals still stand for their own configurations. Successful mode reporting alone establishes neither a completed maneuver nor the behavior of a physical aircraft.
+
+The helicopter suite explicitly records `Got mode AUTOROTATE` at decompressed line 7432. The same passage records the numeric request for 26, the entry phase and the subsequent glide phase. The separate baseline helicopter capture shows an in-air refusal; the configured helicopter capture shows an armed transition from AUTO. These are distinct runs. A manual rotor-interlock event or a passing pre-arm test alone cannot establish a transition into mode 26.
+
 ## Modules and workflows
 
 These modules own the principal Copter operator tasks. The remaining modules in the repository inventory span shared services, optional features and other workflows. This selection does not establish their vehicle applicability.

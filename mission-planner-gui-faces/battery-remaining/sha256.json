@@ -1,0 +1,7 @@
+{
+  "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+  "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+  "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+  "CopterBatteryRemainingProbe.cs": "7391a5b23dbc6d469deb0ec7aee8ded880eb918da815555b8969524f161d58c8",
+  "states.csv": "216e0cf781bb8f4afa8a3dbb7625a5bea8304f55e63b35b1709ad825aec577d3"
+}

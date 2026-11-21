@@ -1,0 +1,14 @@
+step,primary_percent,secondary_percent
+initial,0,0
+primary-valid,78,0
+secondary-valid,78,61
+other-telemetry,78,61
+secondary-unknown,78,-1
+primary-unknown,0,-1
+system-valid,54,-1
+other-system,54,-1
+system-unknown,0,-1
+primary-recovery,22,-1
+secondary-recovery,22,35
+primary-empty,0,35
+secondary-empty,0,0

@@ -1,0 +1,15 @@
+{
+  "binary_sha256": "24afb2e186bcdf66c66d7cb5b88fb7afeaa2a0b89bf63c9d58e4fb2029ac2b54",
+  "page_capture_sha256": "116d912364315c6a8acd1dd9bbc565df420c8109495c023b08dde0bf278ad9a5",
+  "parameters_read_back": {
+    "FLTMODE_CH": 5,
+    "FLTMODE1": 0,
+    "FLTMODE2": 1,
+    "FLTMODE3": 2,
+    "FLTMODE4": 3,
+    "FLTMODE5": 4,
+    "FLTMODE6": 5
+  },
+  "passed": 20,
+  "total": 20
+}

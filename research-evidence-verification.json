@@ -1229,6 +1229,36 @@
       "name": "warning rule persistence in release DLL",
       "passed": true,
       "detail": "Two separate processes saved and restored a compound rule against synthetic telemetry."
+    },
+    {
+      "name": "Copter GPS altitude in both Log Browser axis modes",
+      "passed": true,
+      "detail": "Release component graph data compared with GPS records from the same DataFlash binary."
+    },
+    {
+      "name": "Copter battery percentage state after unknown readings",
+      "passed": true,
+      "detail": "Synthetic messages through the release CurrentState component."
+    },
+    {
+      "name": "Copter HUD battery readings in dual-battery text and icon layouts",
+      "passed": true,
+      "detail": "Nine crops of the release HUD software renderer, with synthetic battery states."
+    },
+    {
+      "name": "Copter GPS state and HUD after fix loss and recovery",
+      "passed": true,
+      "detail": "Synthetic valid messages and software-rendered GPS fix indicator in release components."
+    },
+    {
+      "name": "helicopter autotest confirms mode 26 entry",
+      "passed": true,
+      "detail": "Direct confirmation in the retained helicopter test transcript, distinct from a disarmed quad refusal."
+    },
+    {
+      "name": "Copter switch PWM versus observed release-page slot",
+      "passed": true,
+      "detail": "Two fresh disarmed SITL runs, ten integer threshold samples swept in both directions per run."
     }
   ],
   "passed": true

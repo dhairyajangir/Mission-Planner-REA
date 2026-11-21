@@ -2,6 +2,7 @@
 import hashlib
 import base64
 import csv
+from datetime import timedelta, timezone
 import binascii
 import json
 import math
@@ -2866,6 +2867,82 @@ check('warning rule persistence in release DLL',
       (warnings_dir / 'load.txt').read_text().splitlines()[-2:] ==
       ['PASS restored child follows field changes', 'PASS restored parent follows field changes'],
       'Two separate processes saved and restored a compound rule against synthetic telemetry.')
+gps_graph_dir = root / 'sitl-evidence/copter-log-gps-graph'
+graph_capture = json.loads((gps_graph_dir / 'verification.json').read_text())
+verify_graph = runpy.run_path(str(root / 'research-tools/verify-copter-log-gps-graph.py'))['verify']
+graph_zone = timezone(timedelta(minutes=graph_capture['recorded_local_offset_minutes']))
+graph_points = gps_graph_dir / 'points.csv'
+graph_stats = verify_graph(graph_points, graph_zone)
+check('Copter GPS altitude in both Log Browser axis modes',
+      graph_stats == graph_capture['retained'] == graph_capture['replay'] and
+      graph_stats['samples_per_axis'] == 391 and
+      hashlib.sha256(graph_points.read_bytes()).hexdigest() == graph_capture['points_sha256'],
+      'Release component graph data compared with GPS records from the same DataFlash binary.')
+battery_dir = root / 'mission-planner-gui-faces/battery-remaining'
+with (battery_dir / 'states.csv').open(encoding='utf-8', newline='') as stream:
+    battery_rows = {r['step']: (int(r['primary_percent']), int(r['secondary_percent']))
+                    for r in csv.DictReader(stream)}
+battery_hashes = json.loads((battery_dir / 'sha256.json').read_text())
+battery_files = [battery_dir / 'states.csv', root / 'research-tools/CopterBatteryRemainingProbe.cs']
+battery_files.extend(root / 'mission-planner-portable' / name for name in battery_hashes if name.endswith('.dll'))
+check('Copter battery percentage state after unknown readings',
+      all(hashlib.sha256(f.read_bytes()).hexdigest() == battery_hashes[f.name] for f in battery_files) and
+      len(battery_rows) == 13 and battery_rows['primary-unknown'] == battery_rows['system-unknown'] == (0, -1) and
+      battery_rows['other-telemetry'] == (78, 61) and battery_rows['secondary-recovery'] == (22, 35) and
+      battery_rows['secondary-empty'] == (0, 0),
+      'Synthetic messages through the release CurrentState component.')
+hud_dir = root / 'mission-planner-gui-faces/battery-hud'
+hud_hashes = json.loads((hud_dir / 'results.json').read_text())['sha256']
+pngs = {p.stem: hashlib.sha256(p.read_bytes()).hexdigest() for p in hud_dir.glob('*.png')}
+check('Copter HUD battery readings in dual-battery text and icon layouts',
+      len(pngs) == 9 and all(digest == hud_hashes[name + '.png'] for name, digest in pngs.items()) and
+      pngs['primary-unknown'] == pngs['primary-empty'] != pngs['dual-valid'] and
+      pngs['secondary-unknown'] != pngs['secondary-empty'] and
+      pngs['secondary-no-volts-unknown'] == pngs['secondary-no-volts-empty'] and
+      pngs['icons-secondary-unknown'] == pngs['icons-secondary-empty'],
+      'Nine crops of the release HUD software renderer, with synthetic battery states.')
+gps_fix_dir = root / 'sitl-evidence/copter-gps-fix-hud'
+with (gps_fix_dir / 'observed.csv').open(encoding='utf-8', newline='') as stream:
+    fix_states = {row['step']: row for row in csv.DictReader(stream)}
+fix_hashes = json.loads((gps_fix_dir / 'verification.json').read_text())['sha256']
+fix_files = [root / 'research-tools/CopterGpsFixHudProbe.cs', gps_fix_dir / 'observed.csv',
+             *gps_fix_dir.glob('*.png')]
+fix_files.extend(root / 'mission-planner-portable' / name for name in fix_hashes if name.endswith('.dll'))
+check('Copter GPS state and HUD after fix loss and recovery',
+      len(fix_states) == 8 and all(hashlib.sha256(f.read_bytes()).hexdigest() == fix_hashes[f.name]
+                                  for f in fix_files) and
+      fix_hashes['raw-3d.png'] == fix_hashes['raw-recovered.png'] != fix_hashes['raw-lost-last-position.png'] and
+      fix_states['global-update-while-lost']['fix'] == '1' and
+      fix_states['global-update-while-lost']['alt_relative_m'] == '13.00' and
+      fix_states['global-lost']['alt_relative_m'] == '12.00',
+      'Synthetic valid messages and software-rendered GPS fix indicator in release components.')
+heli_suite = root / 'sitl-evidence/autotest-helicopter/Helicopter-rerun2.log.gz'
+with gzip.open(heli_suite, 'rt', errors='replace') as stream:
+    heli_mode_lines = [line.strip() for i, line in enumerate(stream, 1) if 7429 <= i <= 7432]
+check('helicopter autotest confirms mode 26 entry',
+      len(heli_mode_lines) == 4 and 'Changing mode to AUTOROTATE' in heli_mode_lines[0] and
+      'p2=26.000000' in heli_mode_lines[1] and 'AROT: Entry Phase' in heli_mode_lines[2] and
+      'Got mode AUTOROTATE' in heli_mode_lines[3],
+      'Direct confirmation in the retained helicopter test transcript, distinct from a disarmed quad refusal.')
+page_slots = {int(row['seed_pwm']): int(row['actual_slot']) for row in display_rows
+              if row['case'] == 'threshold' and row['seed_pwm'].isdigit()}
+switch_ok = True
+for iteration in (1, 2):
+    switch_dir = root / f'sitl-evidence/copter-switch-boundaries-run{iteration}'
+    run = json.loads((switch_dir / 'result.json').read_text())
+    with (switch_dir / 'switch.csv').open(encoding='utf-8', newline='') as stream:
+        switch_rows = list(csv.DictReader(stream))
+    expected_order = [('up', pwm) for pwm in sorted(page_slots)] + [('down', pwm) for pwm in sorted(page_slots, reverse=True)]
+    switch_ok &= [(r['direction'], int(r['pwm'])) for r in switch_rows] == expected_order
+    switch_ok &= (run['page_capture_sha256'] == hashlib.sha256(display_capture.read_bytes()).hexdigest() and
+                  run['passed'] == run['total'] == len(switch_rows) == 20 and run['parameters_read_back']['FLTMODE_CH'] == 5)
+    for row in switch_rows:
+        slot = page_slots[int(row['pwm'])]
+        mode = run['parameters_read_back'][f'FLTMODE{slot}']
+        switch_ok &= (int(row['page_slot']) == slot and row['received_pwm'] == 'True' and
+                      int(row['configured_mode']) == mode and row['heartbeat_modes'].split()[-2:] == [str(mode)] * 2)
+check('Copter switch PWM versus observed release-page slot', switch_ok,
+      'Two fresh disarmed SITL runs, ten integer threshold samples swept in both directions per run.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

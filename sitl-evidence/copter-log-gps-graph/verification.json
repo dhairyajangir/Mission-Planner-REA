@@ -1,0 +1,39 @@
+{
+  "input_sha256": "80f2d22edb979b0e9fc219da3c2dbc3a0ff4b86a7d8611728276bc5732041d6d",
+  "points_sha256": "1ec6a3d01795bf7a67fe7f997da1b50a50750121f0a09869d94f03f5a48246ee",
+  "release_sha256": {
+    "MissionPlanner.exe": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "ZedGraph.dll": "5b1c254d4e1dbb767870272231664a0ea57f33e401b677abb2bcb2129a86efd5",
+    "MissionPlanner.exe.config": "19363792acd6a1e4b7c6ae980fb5450f57387e910f74dac1dd51ac91f783e9ef"
+  },
+  "recorded_local_offset_minutes": 330,
+  "retained": {
+    "samples_per_axis": 391,
+    "first_line": 10979,
+    "last_line": 140792,
+    "anchor_utc": "2026-11-04T05:22:17.800000+00:00",
+    "time_error_us_range": [
+      -36,
+      41
+    ],
+    "altitude_cm_counts": {
+      "57812": 1,
+      "58409": 390
+    }
+  },
+  "replay": {
+    "samples_per_axis": 391,
+    "first_line": 10979,
+    "last_line": 140792,
+    "anchor_utc": "2026-11-04T05:22:17.800000+00:00",
+    "time_error_us_range": [
+      -36,
+      41
+    ],
+    "altitude_cm_counts": {
+      "57812": 1,
+      "58409": 390
+    }
+  }
+}

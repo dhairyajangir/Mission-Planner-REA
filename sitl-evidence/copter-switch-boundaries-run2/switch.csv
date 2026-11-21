@@ -1,0 +1,21 @@
+direction,pwm,page_slot,configured_mode,received_pwm,heartbeat_modes
+up,1230,1,0,True,0 0
+up,1231,2,1,True,1 1
+up,1360,2,1,True,1 1
+up,1361,3,2,True,2 2
+up,1490,3,2,True,2 2
+up,1491,4,3,True,3 3
+up,1620,4,3,True,3 3
+up,1621,5,4,True,4 4
+up,1749,5,4,True,4 4
+up,1750,6,5,True,5 5
+down,1750,6,5,True,5 5
+down,1749,5,4,True,4 4
+down,1621,5,4,True,4 4
+down,1620,4,3,True,3 3
+down,1491,4,3,True,3 3
+down,1490,3,2,True,2 2
+down,1361,3,2,True,2 2
+down,1360,2,1,True,1 1
+down,1231,2,1,True,1 1
+down,1230,1,0,True,0 0

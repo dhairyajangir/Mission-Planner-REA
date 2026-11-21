@@ -1,0 +1,63 @@
+{
+  "comparisons": [
+    {
+      "left": "dual-valid",
+      "right": "primary-empty",
+      "difference_bounds": [
+        197,
+        18,
+        240,
+        37
+      ]
+    },
+    {
+      "left": "primary-unknown",
+      "right": "primary-empty",
+      "difference_bounds": null
+    },
+    {
+      "left": "secondary-unknown",
+      "right": "secondary-empty",
+      "difference_bounds": [
+        197,
+        41,
+        233,
+        60
+      ]
+    },
+    {
+      "left": "secondary-no-volts-unknown",
+      "right": "secondary-no-volts-empty",
+      "difference_bounds": null
+    },
+    {
+      "left": "icons-secondary-unknown",
+      "right": "icons-secondary-empty",
+      "difference_bounds": null
+    },
+    {
+      "left": "icons-secondary-unknown",
+      "right": "dual-valid",
+      "difference_bounds": [
+        4,
+        15,
+        240,
+        69
+      ]
+    }
+  ],
+  "sha256": {
+    "CopterBatteryHudProbe.cs": "515a1a96aaabfd103c968bd0034b62a24e7ad37afa9cce78fe88af9e15a34c3e",
+    "MissionPlanner.Controls.dll": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "dual-valid.png": "8a1f34647a202a5869a29df9fdbcc0cd50b47c945bae0bd0bf100bb8313ba1c1",
+    "icons-secondary-empty.png": "e3e33389fb711f288d6ec6e38420ef305d5d2f5e5e511a8dc786a3b45eef2b5d",
+    "icons-secondary-unknown.png": "e3e33389fb711f288d6ec6e38420ef305d5d2f5e5e511a8dc786a3b45eef2b5d",
+    "primary-empty.png": "e5fd0b58b23e023acc7aba931fc934be3388a1a26fdd70a26de113e7704d4848",
+    "primary-unknown.png": "e5fd0b58b23e023acc7aba931fc934be3388a1a26fdd70a26de113e7704d4848",
+    "secondary-empty.png": "c3f0eef6abb0ae8787d5357b1a39714efcf406bd43ed88dce8de80a0369eabe4",
+    "secondary-no-volts-empty.png": "21392c3d709031d83c78de7b0d2287a3326624d3fd3d55b04d9583bfeb0924f4",
+    "secondary-no-volts-unknown.png": "21392c3d709031d83c78de7b0d2287a3326624d3fd3d55b04d9583bfeb0924f4",
+    "secondary-unknown.png": "13b16f15f8d3dec93062c2b7d9e68412b26d9b75095b4315b1f2c52abac6e4cf"
+  }
+}

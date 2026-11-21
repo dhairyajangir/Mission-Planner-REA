@@ -1,0 +1,21 @@
+{
+  "stages_verified": 8,
+  "hud_loss_difference_bounds": [
+    13,
+    15,
+    140,
+    33
+  ],
+  "hud_recovered_equals_initial": true,
+  "sha256": {
+    "CopterGpsFixHudProbe.cs": "7afb09e34dd801a4511564bdda67b80e43805705b46a9fcb5b3156e855a9e5b4",
+    "MissionPlanner.Controls.dll": "7abb3f1300bc32751c2b94c252a727f2ae6a6ad5e58b241eedcc4473dc738336",
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6",
+    "observed.csv": "9116ba5ee174db8fca78ad7be3945aab300be42c4d232afafd5f94959c6ec645",
+    "raw-3d.png": "26e15b72fd020b27f9ab8bcc5a00aa44d0a56a6d55d23a9e5535768980f4287c",
+    "raw-lost-last-position.png": "965b65111896623122df1ce19e084188c2a4321a017f219336dbbf420525fd6c",
+    "raw-recovered.png": "26e15b72fd020b27f9ab8bcc5a00aa44d0a56a6d55d23a9e5535768980f4287c"
+  }
+}

@@ -106,7 +106,7 @@ Result of the complete run (`Helicopter-rerun2.log.gz`): 36 passed, 1 failed (`R
 
 - Passed, among others: `AVCMission`, `PosHoldTakeOff`, `StabilizeTakeOff`, `SplineWaypoint`, `AutorotationPreArm`, `Autorotation`, `ManAutorotation`, `governortest`, `GovernorNotEngagedManualThrottle`, `TurbineStart`, `TurbineCoolDown`, `NastyMission`, `PIDNotches`, `AutoTune`, `DDFPTail`, `DDVPTail`, `HeliQuad`, `HeliQuadFlip`, `HeliQuadInvertedFlight`, `HeliSingleInvertedFlight`, `MountFailsafeAction`, `StickArmingRequiresZeroThrottle`.
 - `FlyEachFrame` passed: for each of the seven internal helicopter frames (heli, heli-blade360, heli-ddfptail, heli-ddvptail, heli-dual, heli-gas, heli-quad) it restarts the simulator with that model, takes off to 10 m and does an RTL. That is flight of every internal helicopter frame in the simulator, by the vehicle's own test, not a test of mixing quality.
-- The autorotation tests pass. They fly in POSHOLD and other modes with the helicopter parameters; I did not establish that any of them enters flight mode 26 (AUTOROTATE) itself, so the earlier "mode 26 not entered" observation in the mode ledger stays open.
+- The Autorotation test requested mode 26 and the simulator reported AUTOROTATE. Lines 7429 through 7432 of the [helicopter suite log](sitl-evidence/autotest-helicopter/Helicopter-rerun2.log.gz) record the request, entry-phase message and mode confirmation.
 - Not covered by this suite: the motor test page and `DO_MOTOR_TEST` for helicopters (the page reports 0 motors for a helicopter, from its source).
 
 ### `RotorRunup` failure (explained: a 1 s wall-clock wait against an 11 s simulator-time runup)

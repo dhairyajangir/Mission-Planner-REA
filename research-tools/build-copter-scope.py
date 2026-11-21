@@ -1,7 +1,9 @@
 """Regenerate the Copter scope audit from the branch's retained evidence."""
 import argparse
 import csv
+import gzip
 import hashlib
+import json
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -93,6 +95,98 @@ def review_pages(menu):
     return reviews
 
 
+def mode_observations():
+    source_path = "ardupilot-source/ardupilot-master/ArduCopter/mode.h"
+    source = (ROOT / source_path).read_text(encoding="utf-8")
+    body = source.split("enum class Number : uint8_t {", 1)[1].split("};", 1)[0]
+    modes = {int(n): name for name, n in re.findall(r"^\s*([A-Z][A-Z0-9_]+)\s*=\s*(\d+),", body, re.M)}
+    ground_path = "sitl-evidence/mode-sweep/mode-sweep.csv"
+    ground = unique([r for r in read_csv(ground_path) if r["vehicle"] == "ArduCopter"], "mode")
+    air_path = "sitl-evidence/copter-air-modes/copter-air-modes.csv"
+    focused = defaultdict(list)
+    observed = set()
+    for row in read_csv(air_path):
+        if row["mode"] == row["reported_mode"] and row["entered"] == "True" and float(row["alt_min_m"]) > 0:
+            observed.add(row["mode"])
+            focused[row["mode"]].append("quad airborne")
+    for label, path in [
+        ("quad", "copter-untested-modes/modes-results.json"),
+        ("heli baseline", "heli-flight/heli-results.json"),
+        ("heli configured", "heli-autorotate/heli-results.json"),
+    ]:
+        rows = json.loads((ROOT / "sitl-evidence" / path).read_text())["modes"]
+        for row in rows:
+            mode = row["mode"]
+            if row["mode_after"] == mode:
+                observed.add(mode)
+                if row["mode_before"] != mode and row["armed_after"]:
+                    focused[mode].append(f"{label} entered from {row['mode_before']}")
+            elif not row["accepted"] and row["mode_after"] == row["mode_before"]:
+                focused[mode].append(f"{label} refused")
+    turtle_path = "sitl-evidence/copter-turtle-entry-recheck/turtle-entry.csv"
+    turtle_id = next(n for n, name in modes.items() if name == "TURTLE")
+    if any(int(row["custom_mode"]) == turtle_id for row in read_csv(turtle_path)):
+        observed.add("TURTLE")
+        focused["TURTLE"].append("quad ground recheck active")
+
+    suites = {
+        "C": "sitl-evidence/autotest/Copter.log.gz",
+        "R": "sitl-evidence/autotest/Copter-rerun1.log.gz",
+        "H": "sitl-evidence/autotest-helicopter/Helicopter-rerun2.log.gz",
+    }
+    first_match = defaultdict(dict)
+    for key, path in suites.items():
+        with gzip.open(ROOT / path, "rt", encoding="utf-8", errors="replace") as stream:
+            for number, line in enumerate(stream, 1):
+                match = re.search(r"\bGot mode ([A-Z0-9_]+)\s*$", line)
+                if match:
+                    token = match[1]
+                    name = modes.get(int(token)) if token.isdigit() else token
+                    if name in modes.values():
+                        first_match[name].setdefault(key, number)
+                        observed.add(name)
+    lines = ["## Copter mode numbers observed in the simulator", "",
+             "The table follows the firmware enum, including AUTO_RTL, which reports an AUTO landing sequence. "
+             "The ground sweep requested modes while disarmed. A matching vehicle heartbeat establishes an active state. "
+             "STABILIZE was already active at the start. A refusal below required both a rejected request and a different reported state. "
+             f"[Firmware enum](../{source_path}) · [Ground sweep](../{ground_path})", "",
+             "The focused column uses selected airborne quad, helicopter and ground-recheck captures. A dash means that this selection supplies no further result for that mode. "
+             f"[Airborne quad sweep](../{air_path}) · [Instrumented quad](../sitl-evidence/copter-untested-modes/modes-results.json) · "
+             f"[Turtle recheck](../{turtle_path}) · [Helicopter baseline](../sitl-evidence/heli-flight/heli-results.json) · "
+             "[Configured helicopter](../sitl-evidence/heli-autorotate/heli-results.json)", "",
+             "The suite column gives the first matching line in each decompressed transcript. Both upstream test helpers that print "
+             "`Got mode` check the vehicle-reported mode first. Those lines prove the mode was reported during the test; some tests request a mode that is already active. "
+             "The line by itself gives no airborne or armed-state guarantee. "
+             + " · ".join(f"[{key} {Path(path).name}](../{path})" for key, path in suites.items())
+             + " · [Upstream heartbeat checks](../ardupilot-source/ardupilot-master/Tools/autotest/vehicle_test_suite.py)", "",
+             "| ID | Mode | Disarmed quad sweep | Focused captures | Suite lines |",
+             "| ---: | --- | --- | --- | --- |"]
+    for number, name in modes.items():
+        row = ground[str(number)]
+        if row["armed"] != "no" or row["mode_name"] != name:
+            raise ValueError(f"Ground sweep identity mismatch for {name}")
+        if row["heartbeat_mode_after"] == str(number):
+            observed.add(name)
+            outcome = "Already active" if row["initial_mode"] == str(number) else "Reported active"
+        elif row["heartbeat_mode_after"] and row["ack_result"] == "4":
+            outcome = "Refused"
+        else:
+            outcome = "Inconclusive"
+        extra = ", ".join(focused[name]) or "—"
+        refs = ", ".join(f"{key} {line}" for key, line in first_match[name].items()) or "—"
+        lines.append(f"| {number} | {name} | {outcome} | {extra} | {refs} |")
+    if "H" not in first_match["AUTOROTATE"]:
+        raise ValueError("Retained helicopter suite no longer verifies AUTOROTATE")
+    lines += ["", f"Of {len(modes)} pinned enum values, {len(observed)} were reported active in at least one of these simulator contexts. "
+              "This count includes helicopter mode 26 and the reported AUTO_RTL state. Individual refusals still stand for their own configurations. "
+              "Successful mode reporting alone establishes neither a completed maneuver nor the behavior of a physical aircraft.", "",
+              f"The helicopter suite explicitly records `Got mode AUTOROTATE` at decompressed line {first_match['AUTOROTATE']['H']}. "
+              "The same passage records the numeric request for 26, the entry phase and the subsequent glide phase. "
+              "The separate baseline helicopter capture shows an in-air refusal; the configured helicopter capture shows an armed transition from AUTO. "
+              "These are distinct runs. A manual rotor-interlock event or a passing pre-arm test alone cannot establish a transition into mode 26.", ""]
+    return lines
+
+
 def generate():
     matrix = unique(read_csv("coverage/matrix.csv"), "row_id")
     pages = {r["item"]: r for r in matrix.values() if r["area"] == "mp-page"}
@@ -161,6 +255,8 @@ def generate():
         lines.append(f"| {title} | [{key}](../{evidence}) | {row['fault_injected'] or 'unclaimed'} | {row['gui_kind'] or 'unclaimed'} | {target(row)} |")
     lines += ["", "Frame-specific and firmware evidence also lives in the [Copter frame trace](../Copter-Frame-Types-Trace.md) and [aerial execution trace](../ArduPilot-Aerial-Library-Execution-Trace.md). The mode-file count includes helicopter implementations and custom-mode support. It counts source files once and does not measure branch coverage, flight quality or aircraft behavior.", "",
               "Regenerate from the repository root with `python research-tools/build-copter-scope.py` after rebuilding the coverage matrix. Use `--check` to compare the checked-in report with current inputs.", ""]
+    insertion = lines.index("## Modules and workflows")
+    lines[insertion:insertion] = mode_observations()
     return "\n".join(lines)
 
 
