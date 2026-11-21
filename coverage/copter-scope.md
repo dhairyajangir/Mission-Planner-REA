@@ -8,12 +8,12 @@ The matrix’s original-GUI target accepts a recorded window of the unmodified r
 
 | Original application runtime | Matrix rows with an explicit claim |
 | --- | --- |
-| Linux/Mono | `ledger:connection-telemetry`, `ledger:flight-mode`, `ledger:mission-file`, `ledger:setup-page-frame-class`, `mp-module:FlightData`, `mp-module:FlightPlanner`, `mp-module:InitialSetup`, `mp-module:MainV2`, `mp-module:SoftwareConfig`, `mp-page:ConfigAccelerometerCalibration`, `mp-page:ConfigBatteryMonitoring`, `mp-page:ConfigBatteryMonitoring2`, `mp-page:ConfigFailSafe`, `mp-page:ConfigFlightModes`, `mp-page:ConfigFrameClassType`, `mp-page:ConfigHWCompass2`, `mp-page:ConfigHWIDs`, `mp-page:ConfigMandatory`, `mp-page:ConfigOptional`, `mp-page:ConfigPlanner`, `mp-page:ConfigRadioInput`, `mp-page:ConfigRadioOutput` |
+| Linux/Mono | `ledger:connection-telemetry`, `ledger:flight-mode`, `ledger:mission-file`, `ledger:parameters-calibration`, `ledger:setup-page-frame-class`, `ledger:setup-page-state-copter`, `mp-module:FlightData`, `mp-module:FlightPlanner`, `mp-module:InitialSetup`, `mp-module:MainV2`, `mp-module:SoftwareConfig`, `mp-page:ConfigAC_Fence`, `mp-page:ConfigAccelerometerCalibration`, `mp-page:ConfigBatteryMonitoring`, `mp-page:ConfigBatteryMonitoring2`, `mp-page:ConfigFailSafe`, `mp-page:ConfigFlightModes`, `mp-page:ConfigFrameClassType`, `mp-page:ConfigHWCompass2`, `mp-page:ConfigHWIDs`, `mp-page:ConfigMandatory`, `mp-page:ConfigOptional`, `mp-page:ConfigPlanner`, `mp-page:ConfigRadioInput`, `mp-page:ConfigRadioOutput`, `mp-page:ConfigRawParams`, `mp-page:ConfigSimplePids`, `mp-page:ConfigUserDefined` |
 | Windows | None recorded |
 
 ## Work in priority order
 
-1. Capture the original release on native Windows. The Linux/Mono captures document connected Copter DATA and SETUP, including the frame, flight-mode and failsafe pages. The disconnected CONFIG capture documents the Planner page. Each observation applies to its recorded runtime and connection state.
+1. Capture the original release on native Windows when an isolated Windows guest is available. The [host inspection](../native-windows-gui-feasibility/README.md) records the current account's visibility and the disabled Windows Sandbox feature. The Linux/Mono captures document connected Copter DATA, SETUP and CONFIG, including the [parameter list and its tree selection](../Copter-Original-Parameter-Views-Trace.md).
 2. Resolve differences between component activation and the connected window. Begin with CAN GPS Order, Serial Ports and RTK-GPS Inject. Record which controls the application presents with the same simulator parameters.
 3. Use the workflow table to distinguish page display from completed operations. A parameter edit needs an independent simulator readback and a reopened page. The disconnected PLAN import/export establishes local file handling. Transfer to a connected simulator needs separate evidence.
 4. For the remaining source-registered pages, establish which menus and controls are reachable under each relevant firmware, connection, parameter and display-setting combination. Prioritize quadcopter operation before optional peripherals and helicopter-only pages.
@@ -26,7 +26,7 @@ Each source link identifies an explicit registration. Each menu link opens its s
 | Page | Source registration | Quad scope or modified Windows capture | SITL component harness | Matrix GUI evidence | Level / matrix target |
 | --- | --- | --- | --- | --- | --- |
 | Antenna.TrackerUI | [InitialSetup L333](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L333) | [Antenna Tracker](../sitl-evidence/live-gui-pages/033-Antenna-Tracker.jpg) | Enabled | Modified copy | L3 / L3+gui open |
-| ConfigAC_Fence | [SoftwareConfig L156](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L156) | Conditional or shared registration | Enabled | Modified copy | L3 / L3+gui open |
+| ConfigAC_Fence | [SoftwareConfig L156](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L156) | Conditional or shared registration | Enabled | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigADSB | [InitialSetup L263](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L263) | [ADSB](../sitl-evidence/live-gui-pages/013-ADSB.jpg) | Enabled | Modified copy | L3 / L3+gui open |
 | ConfigAccelerometerCalibration | [InitialSetup L196](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L196) | [Accel Calibration](../sitl-evidence/live-gui-pages/003-Accel-Calibration.jpg) | Enabled | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigAdvanced | [InitialSetup L342](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L342) | Conditional or shared registration | Enabled | Modified copy | L3 / L3+gui open |
@@ -75,14 +75,14 @@ Each source link identifies an explicit registration. Each menu link opens its s
 | ConfigREPL | [InitialSetup L351](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L351) | Conditional or shared registration | Enabled | Modified copy | L3 / L3+gui open |
 | ConfigRadioInput | [InitialSetup L211](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L211) | [Radio Calibration](../sitl-evidence/live-gui-pages/005-Radio-Calibration.jpg) | Enabled | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigRadioOutput | [InitialSetup L215](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L215) | [Servo Output](../sitl-evidence/live-gui-pages/006-Servo-Output.jpg) | Enabled | Original, Linux/Mono | L3 / L3+gui met |
-| ConfigRawParams | [SoftwareConfig L229](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L229) | Conditional or shared registration | timeout | Modified copy | L3 / L3+gui open |
+| ConfigRawParams | [SoftwareConfig L229](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L229) | Conditional or shared registration | timeout | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigSecureAP | [InitialSetup L178](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L178) | Disconnected setup | Enabled | Modified copy | L3 / L3+gui open |
 | ConfigSerial | [InitialSetup L220](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L220) | [Serial Ports](../sitl-evidence/live-gui-pages/007-Serial-Ports.jpg) | exception | Modified copy | L3 / L3+gui open |
 | ConfigSerialInjectGPS | [InitialSetup L251](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L251) | [RTK-GPS Inject](../sitl-evidence/live-gui-pages/014-RTK-GPS-Inject.jpg) | exception | Modified copy | L3 / L3+gui open |
-| ConfigSimplePids | [SoftwareConfig L164](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L164) | Conditional or shared registration | exception | Modified copy | L3 / L3+gui open |
+| ConfigSimplePids | [SoftwareConfig L164](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L164) | Conditional or shared registration | exception | Original, Linux/Mono | L3 / L3+gui met |
 | ConfigTerminal | [InitialSetup L346](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L346) | Conditional or shared registration | No run in this capture | No GUI claim | L2 / L3+gui open |
 | ConfigTradHeli4 | [InitialSetup L187](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L187) | Helicopter only | Enabled | Modified copy | L3 / L3+gui open |
-| ConfigUserDefined | [SoftwareConfig L221](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L221) | Conditional or shared registration | Enabled | Modified copy | L3 / L3+gui open |
+| ConfigUserDefined | [SoftwareConfig L221](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L221) | Conditional or shared registration | Enabled | Original, Linux/Mono | L3 / L3+gui met |
 | Joystick.JoystickSetup | [InitialSetup L280](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L280) | [Joystick](../sitl-evidence/live-gui-pages/021-Joystick.jpg) | Enabled | Modified copy | L3 / L3+gui open |
 | MavFTPUI | [SoftwareConfig L215](../mission-planner-1.3.83-source/GCSViews/SoftwareConfig.cs#L215) | Conditional or shared registration | Enabled | Modified copy | L3 / L3+gui open |
 | Sikradio | [InitialSetup L259](../mission-planner-1.3.83-source/GCSViews/InitialSetup.cs#L259) | [Sik Radio](../sitl-evidence/live-gui-pages/016-Sik-Radio.jpg) | Enabled | Modified copy | L3 / L3+gui open |
@@ -151,7 +151,7 @@ The workflow rows below use the ledger’s own targets, typically executed behav
 | Connect and display telemetry | [connection-telemetry](../Connection-Telemetry-Trace.md) | yes | Original, Linux/Mono | L3+fault met |
 | Read and write a mission | [mission-transfer](../Mission-Transfer-Trace.md) | yes | Modified copy | L3+fault met |
 | Pause and resume a mission | [mission-pause-restart](../Mission-Execution-Trace.md) | unclaimed | No GUI claim | L3+fault open |
-| Read and restore parameters | [parameters-calibration](../Parameter-Workflow-Trace.md) | yes | Modified copy | L3+fault met |
+| Read and restore parameters | [parameters-calibration](../Parameter-Workflow-Trace.md) | yes | Original, Linux/Mono | L3+fault met |
 | Calibrate simulated accelerometers | [accelerometer-calibration](../Accelerometer-Calibration-Trace.md) | yes | No GUI claim | L3+fault met |
 | Request and observe a mode change | [flight-mode](../Flight-Mode-Workflow-Trace.md) | yes | Original, Linux/Mono | L3+fault met |
 | Save six switch assignments | [setup-page-action-flightmodes](../Setup-Page-Actions-Trace.md) | unclaimed | Modified copy | L3+fault open |

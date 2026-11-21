@@ -4,6 +4,8 @@ The portable Mission Planner 1.3.83 ZIP was extracted into a new directory for e
 
 ## Disconnected session
 
+The subsequent disarmed Copter session has its own [connected capture guide](connected/README.md), including four verified page classes, screenshots, TCP parameter readback and the exact guest fixture.
+
 Ubuntu-E (WSL2) hosted a private Ubuntu 24.04 runtime. Mono 6.8.0.105 started the unmodified release executable on an Xvfb display. The guest had its own network, PID, IPC, mount and user namespaces, a new writable home directory, a software-rendered display, and no attached aircraft or serial devices. The only network interface visible to the app was its private loopback. Executable and companion DLL hashes are in `disconnected/observation.log`. The archived profile contains the normal `DisabledPlugins` preference, listing the bundled optional plugin filenames. No packaged plugin files were removed. The release log records the preference taking effect.
 
 | Operator action | Observed content | Capture |

@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-11-21T19:34:30.7771649Z",
+  "edition": "Professional",
+  "build": "26300",
+  "admin_token": false,
+  "sandbox_cim": 2,
+  "sandbox_dism": "permission required",
+  "sandbox_appx_count": 0,
+  "wsb_file_association": true,
+  "commands": {
+    "WindowsSandbox.exe": false,
+    "WindowsSandboxClient.exe": false,
+    "wsb.exe": false,
+    "Get-VM": true,
+    "VBoxManage.exe": false,
+    "vmrun.exe": false,
+    "qemu-system-x86_64.exe": false
+  },
+  "known_launchers": {
+    "sandbox_system32": false,
+    "sandbox_client_system32": false,
+    "virtualbox": false,
+    "vmware_workstation": false,
+    "qemu": false
+  },
+  "services": {
+    "vmms": "Running",
+    "vmcompute": "Running"
+  },
+  "hyperv_guest_count": "permission required",
+  "virtualbox_current_user_registry": false,
+  "vmware_current_user_inventory": false
+}

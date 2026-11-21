@@ -1349,6 +1349,16 @@
       "name": "original Copter flight-mode save and restore",
       "passed": true,
       "detail": "Independent simulator readbacks, reopened GUI labels and intact release files matched."
+    },
+    {
+      "name": "original Copter parameter views and packed file",
+      "passed": true,
+      "detail": "Original CONFIG window, tree filtering and current/default values checked against contiguous MAVFTP data."
+    },
+    {
+      "name": "Copter battery page activation and storage timing",
+      "passed": true,
+      "detail": "Release IL, original numeric conversion and the recorded write, echo and storage request matched."
     }
   ],
   "passed": true

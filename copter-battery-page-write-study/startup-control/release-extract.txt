@@ -1,0 +1,2 @@
+467 Open MissionPlanner.GCSViews.FlightData FlightData
+903 INFO MissionPlanner.MainV2 - start AutoConnect

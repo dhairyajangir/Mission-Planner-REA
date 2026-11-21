@@ -2977,6 +2977,12 @@ except (OSError, ValueError) as error:
 else:
     check('original Copter flight-mode save and restore', True,
           'Independent simulator readbacks, reopened GUI labels and intact release files matched.')
+parameter_views = runpy.run_path(str(root / 'research-tools/verify-copter-parameter-views.py'))['verify']()
+check('original Copter parameter views and packed file', parameter_views['parameters'] == 1431,
+      'Original CONFIG window, tree filtering and current/default values checked against contiguous MAVFTP data.')
+runpy.run_path(str(root / 'copter-battery-page-write-study/verify.py'))['check']()
+check('Copter battery page activation and storage timing', True,
+      'Release IL, original numeric conversion and the recorded write, echo and storage request matched.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:
