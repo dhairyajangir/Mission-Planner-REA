@@ -1,0 +1,55 @@
+{
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "assemblies": {
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MAVLink.dll": "122552511cfca19931f64ccbc148499d7073c295ff3480637132ab664a8969d6"
+  },
+  "stages": {
+    "valid": {
+      "fix": 3.0,
+      "satellites": 10.0,
+      "hdop": 0.85,
+      "fix2": 3.0,
+      "satellites2": 10.0,
+      "hdop2": 0.85,
+      "combined_satellites": 20.0
+    },
+    "unknown": {
+      "fix": 1.0,
+      "satellites": 10.0,
+      "hdop": 0.85,
+      "fix2": 1.0,
+      "satellites2": 255.0,
+      "hdop2": 655.35,
+      "combined_satellites": 265.0
+    },
+    "valid-zero": {
+      "fix": 1.0,
+      "satellites": 0.0,
+      "hdop": 0.0,
+      "fix2": 1.0,
+      "satellites2": 0.0,
+      "hdop2": 0.0,
+      "combined_satellites": 0.0
+    },
+    "unknown-after-zero": {
+      "fix": 1.0,
+      "satellites": 0.0,
+      "hdop": 0.0,
+      "fix2": 1.0,
+      "satellites2": 255.0,
+      "hdop2": 655.35,
+      "combined_satellites": 255.0
+    },
+    "recovery": {
+      "fix": 3.0,
+      "satellites": 8.0,
+      "hdop": 0.95,
+      "fix2": 3.0,
+      "satellites2": 8.0,
+      "hdop2": 0.95,
+      "combined_satellites": 16.0
+    }
+  }
+}

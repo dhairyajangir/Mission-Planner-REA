@@ -1,0 +1,17 @@
+     0x200259 "PluginManager": ()  764x406+22+22  +22+22
+        1 child:
+        0x20025a (has no name): ()  756x382+4+20  +26+42
+           3 children:
+           0x20025b "Show Errors": ()  85x33+369+9  +395+51
+              1 child:
+              0x20025c (has no name): ()  85x33+0+0  +395+51
+           0x20025d "Save && Close": ()  85x33+13+9  +39+51
+              1 child:
+              0x20025e (has no name): ()  85x33+0+0  +39+51
+           0x20025f (has no name): ()  720x306+10+55  +36+97
+              1 child:
+              0x200260 (has no name): ()  720x306+0+0  +36+97
+                 1 child:
+                 0x200299 (has no name): ()  16x304+703+1  +739+98
+                    1 child:
+                    0x20029a (has no name): ()  16x304+0+0  +739+98

@@ -3069,6 +3069,26 @@ check('prototype telemetry display during loss and recovery',
       len(prototype['stages']) == 5 and all(hashlib.sha256((prototype_folder / name).read_bytes()).hexdigest() == digest
                                              for name, digest in screen_hashes.items()),
       'The ordinary browser screen kept the previous position, reset general message age and displayed the satellite sentinel as 255.')
+plugin_view = runpy.run_path(str(root / 'gui-original-plugin-manager/verify.py'))['verify']()
+check('disconnected original plugin manager and saved settings',
+      plugin_view['disabled_profile_entries'] == 55 and plugin_view['source_module'] == 'Plugin',
+      'The built-in Grid and disabled external examples were visible. The operator retained the same plugin settings.')
+satellites = runpy.run_path(str(root / 'copter-gps-receiver-sentinels/replay.py'))['verify']()['stages']
+check('original primary and secondary GPS unknown fields', satellites['unknown']['combined_satellites'] == 265,
+      'The primary kept the last count, the secondary stored 255, and both accepted zero and recovered values.')
+osd = runpy.run_path(str(root / 'gui-original-copter-osd/verify.py'))['verify']()
+check('hardware OSD page and Mono gate for the onboard editor',
+      osd['release_files'] == 1317 and osd['disarmed_heartbeats'] == 46 and not osd['outbound_param_set'],
+      'The connected SETUP page rendered its hardware controls. The distinct onboard editor was absent on Mono.')
+config_menu_folder = root / 'gui-original-copter-friendly-params'
+inspect_menu = runpy.run_path(str(config_menu_folder / 'verify.py'))['inspect']
+config_runs = {'first_menu': inspect_menu(config_menu_folder / 'sensors-5eLzDluK', []),
+               'completed_retry': inspect_menu(config_menu_folder, ['mavftp', 'extended', 'extended-settled'])}
+directory_requests = config_runs['completed_retry']['selections']['mavftp']['ftp_requests_first_6s']
+check('default Copter CONFIG menu, directory listing and partial Extended Tuning render',
+      config_runs == json.loads((config_menu_folder / 'verification.json').read_text()) and
+      directory_requests == [{'opcode': 3, 'path': '/'}] * 2 + [{'opcode': 3, 'path': '@SYS'}] * 4,
+      'MAVFtp displayed the directory listing and Extended Tuning painted numeric controls. The friendly parameter pages were absent.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

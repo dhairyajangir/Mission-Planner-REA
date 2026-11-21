@@ -1,0 +1,84 @@
+INFO MissionPlanner.Plugin.PluginLoader - Plugin path: /opt/mp/plugins/
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example19-multiforward.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example19-multiforward.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Polly.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Stats.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8-modechange.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8-modechange.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.SimpleGrid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example16-donate.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TrackerHome.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin NodaTime.Serialization.JsonNet.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example16-donate.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin FaceMap.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example18-externalapi.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example18-externalapi.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example8.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example8.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin AltitudeAngelWings.Plugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example12-forwarding.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example12-forwarding.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5-latencytracker.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5-latencytracker.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example11-trace.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example11-trace.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin opendroneid.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Bulb.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MissionPlanner.Gridv2.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6-mapicondesc.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6-mapicondesc.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example5.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin TerrainMakerPlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example5.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example9-hudonoff.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Markdig.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example9-hudonoff.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example15-leds.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example15-leds.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example17-menuremove.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin MavlinkMessagePlugin.dll is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example17-menuremove.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example10-canlogfile.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example10-canlogfile.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example22-payloadconfig.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example22-payloadconfig.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example6.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example6.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example21-persistentsimple.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example21-persistentsimple.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example-watchbutton.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example-watchbutton.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example14-mass.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example14-mass.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example13-herelink2.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example13-herelink2.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example2-menu.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example2-menu.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/generator.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin generator.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example3-fencedist.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example3-fencedist.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example7-canrtcm.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example7-canrtcm.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example4-herelink.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example4-herelink.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example23-switch.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example23-switch.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin: /opt/mp/plugins/example20-multiplepositions.cs
+INFO MissionPlanner.Plugin.PluginLoader - Plugin example20-multiplepositions.cs is disabled in config.xml
+INFO MissionPlanner.Plugin.PluginLoader - Plugin Init Grid 1.3.9384.38250 by Michael Oborne
+INFO MissionPlanner.MainV2 - appload time
+MainV2_KeyDown System.Windows.Forms.KeyEventArgs
+MainV2_KeyDown System.Windows.Forms.KeyEventArgs

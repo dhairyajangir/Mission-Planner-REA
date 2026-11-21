@@ -1,0 +1,50 @@
+{
+  "member": "MissionPlanner.exe",
+  "member_sha256": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+  "assembly": "MissionPlanner",
+  "mvid": "b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0",
+  "type_methods": {
+    "MissionPlanner.Plugin.Plugin": [
+      "get_Host",
+      "set_Host",
+      "get_FileName",
+      "set_FileName",
+      "get_Name",
+      "get_Version",
+      "get_Author",
+      "get_NextRun",
+      "set_NextRun",
+      "Init",
+      "Loaded",
+      "SetupUI",
+      "Loop",
+      "get_loopratehz",
+      "set_loopratehz",
+      "Exit",
+      ".ctor"
+    ],
+    "MissionPlanner.Plugin.PluginLoader": [
+      ".cctor",
+      "LoadFromSameFolder",
+      "Load",
+      "InitPlugin",
+      "LoadAll",
+      "PluginInit",
+      ".ctor"
+    ],
+    "MissionPlanner.Controls.PluginUI": [
+      ".ctor",
+      "PopulateGridView",
+      "UpdateDisabledPlugins",
+      "bSave_Click",
+      "ResizeFormForDataGrid",
+      "dgvPlugins_RowHeadersWidthChanged",
+      "dgvPlugins_SelectionChanged",
+      "btnLoadPlugin_Click",
+      "PluginUI_Shown",
+      "but_errors_Click",
+      "Dispose",
+      "InitializeComponent"
+    ]
+  }
+}

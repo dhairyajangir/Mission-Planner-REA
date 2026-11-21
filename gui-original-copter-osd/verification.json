@@ -1,0 +1,25 @@
+{
+  "screenshots": {
+    "config.png": "ca0b53f366dad9467f84c6ca39f653ad3fe72d925207afce8d506f93e61d44fa",
+    "connected.png": "5f17ea0e764a2df62315e21fa01775c8d361b12eb0f6eac66aaff9f569ad1785",
+    "hardware-osd.png": "f9842751eda0765dc8de7484e6ba1efe3a8b35050288e8ebe78a9b732d783eea",
+    "optional.png": "d213f5b577be20bf4629a861b1aac164edf6aec3256042c0a8bff00c69d0f713",
+    "startup.png": "6280991e1785a81cadbda85f210179c2db2f2e708a2ec205e881c4c6c35515da"
+  },
+  "disarmed_heartbeats": 46,
+  "page_brackets": {
+    "hardware-osd": [
+      "2026-11-21T21:35:54+00:00",
+      "2026-11-21T21:35:53.991942+00:00",
+      "2026-11-21T21:36:02.987417+00:00"
+    ],
+    "config": [
+      "2026-11-21T21:36:03+00:00",
+      "2026-11-21T21:36:02.987417+00:00",
+      "2026-11-21T21:36:09.995939+00:00"
+    ]
+  },
+  "outbound_param_set": [],
+  "tlog_sha256": "15a911b40034b6a60c234ed974051067873fade0eae2dc832929ee1403291042",
+  "release_files": 1317
+}

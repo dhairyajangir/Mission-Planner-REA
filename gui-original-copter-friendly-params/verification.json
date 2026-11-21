@@ -1,0 +1,198 @@
+{
+  "first_menu": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": true,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": true,
+    "pages": {},
+    "startup_evidence_sha256": {
+      "startup.png": "e6f6f177a7ef84f8f9346a356ef86b4409ddb28ea411fab5bee2da0276734e9c",
+      "windows-startup.txt": "1857a226d2f6b4f993f1dd71f5d7e37e4b26cddcedc33fe4a920ec38f6e200e6",
+      "release.log": "db6c1ea611e3b6cc04045cfcadbc8ae59dc0f460d3e72746b4ba83819c42cff0",
+      "observation.log": "7298d22e89d19b4c9c3eb765cf47cc9054b338421bed598911e2d63afaa51947",
+      "copter.log": "8c6b81261b40d3c49936a13da6b46a52d9ff5f8dca4321efa838177165521577"
+    },
+    "application_logged_tcp_open": true,
+    "application_logged_autoconnect_start": true,
+    "heartbeats": 397,
+    "armed_heartbeats": 0,
+    "tlog_gz_sha256": "46f85844d95eea277da0b308e5eaa9397b92738785199b594332cdb7a1d17d0d",
+    "all_gcs_ids": {
+      "0": 399,
+      "110": 3,
+      "111": 39,
+      "183": 2,
+      "253": 3,
+      "66": 106,
+      "76": 51
+    },
+    "selected_gcs_messages": {
+      "COMMAND_LONG": 51,
+      "FILE_TRANSFER_PROTOCOL": 3,
+      "HEARTBEAT": 399,
+      "REQUEST_DATA_STREAM": 106
+    },
+    "gcs_commands": {
+      "42428": 2,
+      "511": 10,
+      "512": 37,
+      "520": 2
+    },
+    "menu": [
+      "GeoFence",
+      "Basic Tuning",
+      "Extended Tuning",
+      "MAVFtp",
+      "User Params",
+      "Full Parameter List",
+      "Planner"
+    ],
+    "opened": [
+      "MissionPlanner.GCSViews.FlightData FlightData",
+      "MissionPlanner.GCSViews.SoftwareConfig SWConfig",
+      "MissionPlanner.GCSViews.ConfigurationView.ConfigSimplePids Basic Tuning",
+      "MissionPlanner.GCSViews.FlightData FlightData"
+    ],
+    "selections": {
+      "config": {
+        "screen_sha256": "bf3c088e86db3fa2ccb7b22f43fdae2834ab23ced4dc5bdb71839c9975f15ed5",
+        "tree_sha256": "061f45330c3c39abadda140b35ff59aa756d1a2efe006a2f068c3f6234d03dc2",
+        "outgoing_ids_first_6s": {
+          "0": 6,
+          "111": 1
+        },
+        "command_ids_first_6s": {},
+        "ftp_requests_first_6s": []
+      }
+    }
+  },
+  "completed_retry": {
+    "matching_release_files": 1317,
+    "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+    "startup_complete_log": true,
+    "sitl_waited_for_tcp": true,
+    "telemetry_retained": true,
+    "pages": {},
+    "startup_evidence_sha256": {
+      "startup.png": "265e5525fa3ca763867ed29174b27f64eca4256972f76941af1c40d31852f33b",
+      "windows-startup.txt": "7eea4c8e8327cdb3769a3901e6dca69c9a48c733e4fd93fb21e97364bd771a41",
+      "release.log": "72e9f753c212275b6412992396bf633780ebab3db9f42f02c0465de2644eb695",
+      "observation.log": "d4f698a624bebbfe88abce9ef1fc17e1bcdbeeaeccfbde17eaf943a3b5e6028a",
+      "copter.log": "8c6b81261b40d3c49936a13da6b46a52d9ff5f8dca4321efa838177165521577"
+    },
+    "application_logged_tcp_open": true,
+    "application_logged_autoconnect_start": true,
+    "heartbeats": 336,
+    "armed_heartbeats": 0,
+    "tlog_gz_sha256": "2407ed0f099f85ab42cffbdadd4c45635eaeed752b328773518712e67c50489e",
+    "all_gcs_ids": {
+      "0": 337,
+      "110": 9,
+      "111": 33,
+      "183": 1,
+      "253": 3,
+      "66": 116,
+      "76": 40
+    },
+    "selected_gcs_messages": {
+      "COMMAND_LONG": 40,
+      "FILE_TRANSFER_PROTOCOL": 9,
+      "HEARTBEAT": 337,
+      "REQUEST_DATA_STREAM": 116
+    },
+    "gcs_commands": {
+      "42428": 2,
+      "511": 8,
+      "512": 29,
+      "520": 1
+    },
+    "menu": [
+      "GeoFence",
+      "Basic Tuning",
+      "Extended Tuning",
+      "MAVFtp",
+      "User Params",
+      "Full Parameter List",
+      "Planner"
+    ],
+    "opened": [
+      "MissionPlanner.GCSViews.FlightData FlightData",
+      "MissionPlanner.GCSViews.SoftwareConfig SWConfig",
+      "MissionPlanner.GCSViews.ConfigurationView.ConfigSimplePids Basic Tuning",
+      "MissionPlanner.Controls.MavFTPUI MAVFtp",
+      "MissionPlanner.GCSViews.ConfigurationView.ConfigArducopter Extended Tuning"
+    ],
+    "selections": {
+      "config": {
+        "screen_sha256": "bf3c088e86db3fa2ccb7b22f43fdae2834ab23ced4dc5bdb71839c9975f15ed5",
+        "tree_sha256": "0133b45c6d7562cd6b407ee3cdf50a31b1d1b3bf16a0c6502eef9679c2530d6a",
+        "outgoing_ids_first_6s": {
+          "0": 6,
+          "111": 1
+        },
+        "command_ids_first_6s": {},
+        "ftp_requests_first_6s": []
+      },
+      "mavftp": {
+        "screen_sha256": "01f726cf638031ceb10e012a38946a312055772ea79e4d94d41acbde8c819763",
+        "tree_sha256": "0694214054de9ef96fbfead9591f9d02c77e062bc485c370f364959de35e2075",
+        "outgoing_ids_first_6s": {
+          "0": 6,
+          "110": 6
+        },
+        "command_ids_first_6s": {},
+        "ftp_requests_first_6s": [
+          {
+            "opcode": 3,
+            "path": "/"
+          },
+          {
+            "opcode": 3,
+            "path": "/"
+          },
+          {
+            "opcode": 3,
+            "path": "@SYS"
+          },
+          {
+            "opcode": 3,
+            "path": "@SYS"
+          },
+          {
+            "opcode": 3,
+            "path": "@SYS"
+          },
+          {
+            "opcode": 3,
+            "path": "@SYS"
+          }
+        ]
+      },
+      "extended": {
+        "screen_sha256": "88f4b4205e98879c8172a14c2e1b64235c491ec1dd0c1e3a2eb81c983a935ff8",
+        "tree_sha256": "31c24ac9435483f6aad23a1098073c3a2a772e9b8621abede07aee90f65a7d56",
+        "outgoing_ids_first_6s": {
+          "0": 6,
+          "111": 1,
+          "66": 6,
+          "76": 4
+        },
+        "command_ids_first_6s": {
+          "512": 3,
+          "511": 1
+        },
+        "ftp_requests_first_6s": []
+      },
+      "extended-settled": {
+        "screen_sha256": "88f4b4205e98879c8172a14c2e1b64235c491ec1dd0c1e3a2eb81c983a935ff8",
+        "tree_sha256": "31c24ac9435483f6aad23a1098073c3a2a772e9b8621abede07aee90f65a7d56",
+        "outgoing_ids_first_6s": {
+          "0": 6
+        },
+        "command_ids_first_6s": {},
+        "ftp_requests_first_6s": []
+      }
+    }
+  }
+}

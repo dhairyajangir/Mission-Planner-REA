@@ -1,0 +1,62 @@
+SHA256 a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a
+MVID b0e70e19-ad56-4dc7-bb0b-8e33a4ca21c0
+System.Void MissionPlanner.GCSViews.InitialSetup::HardwareConfig_Load(System.Object,System.EventArgs)
+IL_0734: ldarg.0
+IL_0735: call System.Boolean MissionPlanner.GCSViews.InitialSetup::get_gotAllParams()
+IL_073a: br.s IL_073d
+IL_073c: ldc.i4.0
+IL_073d: ldloc.2
+IL_073e: ldc.i4.0
+IL_073f: call MissionPlanner.Controls.BackstageView.BackstageViewPage MissionPlanner.GCSViews.InitialSetup::AddBackstageViewPage(System.Type,System.String,System.Boolean,MissionPlanner.Controls.BackstageView.BackstageViewPage,System.Boolean)
+IL_0744: pop
+IL_0745: call MissionPlanner.Utilities.DisplayView MissionPlanner.MainV2::get_DisplayConfiguration()
+IL_074a: callvirt System.Boolean MissionPlanner.Utilities.DisplayView::get_displayOsd()
+IL_074f: brfalse.s IL_0780
+IL_0751: ldarg.0
+IL_0752: ldtoken MissionPlanner.GCSViews.ConfigurationView.ConfigHWOSD
+IL_0757: call System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL_075c: ldloc.0
+IL_075d: ldstr "backstageViewPageosd.Text"
+IL_0762: callvirt System.String System.Resources.ResourceManager::GetString(System.String)
+IL_0767: ldarg.0
+IL_0768: call System.Boolean MissionPlanner.GCSViews.InitialSetup::get_isConnected()
+IL_076d: brfalse.s IL_0777
+IL_076f: ldarg.0
+IL_0770: call System.Boolean MissionPlanner.GCSViews.InitialSetup::get_gotAllParams()
+IL_0775: br.s IL_0778
+IL_0777: ldc.i4.0
+IL_0778: ldloc.2
+IL_0779: ldc.i4.0
+IL_077a: call MissionPlanner.Controls.BackstageView.BackstageViewPage MissionPlanner.GCSViews.InitialSetup::AddBackstageViewPage(System.Type,System.String,System.Boolean,MissionPlanner.Controls.BackstageView.BackstageViewPage,System.Boolean)
+IL_077f: pop
+IL_0780: call MissionPlanner.Utilities.DisplayView MissionPlanner.MainV2::get_DisplayConfiguration()
+System.Void MissionPlanner.GCSViews.SoftwareConfig::SoftwareConfig_Load(System.Object,System.EventArgs)
+IL_01e7: ldnull
+IL_01e8: ldc.i4.1
+IL_01e9: call MissionPlanner.Controls.BackstageView.BackstageViewPage MissionPlanner.GCSViews.SoftwareConfig::AddBackstageViewPage(System.Type,System.String,MissionPlanner.Controls.BackstageView.BackstageViewPage,System.Boolean)
+IL_01ee: pop
+IL_01ef: ldsfld System.Boolean MissionPlanner.Program::MONO
+IL_01f4: brtrue.s IL_0221
+IL_01f6: call System.Boolean MissionPlanner.GCSViews.ConfigurationView.ConfigOSD::IsApplicable()
+IL_01fb: brfalse.s IL_0221
+IL_01fd: call MissionPlanner.Utilities.DisplayView MissionPlanner.MainV2::get_DisplayConfiguration()
+IL_0202: callvirt System.Boolean MissionPlanner.Utilities.DisplayView::get_displayOSD()
+IL_0207: brfalse.s IL_0221
+IL_0209: ldarg.0
+IL_020a: ldtoken MissionPlanner.GCSViews.ConfigurationView.ConfigOSD
+IL_020f: call System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL_0214: call System.String MissionPlanner.Strings::get_OnboardOSD()
+IL_0219: ldnull
+IL_021a: ldc.i4.0
+IL_021b: call MissionPlanner.Controls.BackstageView.BackstageViewPage MissionPlanner.GCSViews.SoftwareConfig::AddBackstageViewPage(System.Type,System.String,MissionPlanner.Controls.BackstageView.BackstageViewPage,System.Boolean)
+IL_0220: pop
+IL_0221: call MissionPlanner.Utilities.DisplayView MissionPlanner.MainV2::get_DisplayConfiguration()
+IL_0226: callvirt System.Boolean MissionPlanner.Utilities.DisplayView::get_displayMavFTP()
+IL_022b: brfalse.s IL_025f
+IL_022d: call MissionPlanner.MAVLinkInterface MissionPlanner.MainV2::get_comPort()
+IL_0232: callvirt MissionPlanner.MAVState MissionPlanner.MAVLinkInterface::get_MAV()
+IL_0237: ldfld MissionPlanner.CurrentState MissionPlanner.MAVState::cs
+IL_023c: callvirt System.UInt32 MissionPlanner.CurrentState::get_capabilities()
+IL_0241: ldc.i4.s 32
+IL_0243: and
+IL_0244: ldc.i4.0
