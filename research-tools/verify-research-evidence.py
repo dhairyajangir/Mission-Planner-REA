@@ -3051,6 +3051,24 @@ check('time alignment and missing simulator truth in altitude comparison',
       == alignment_record['comparator_sha256_lf'] and
       computed['missing_truth_tail']['position_samples_after_last_truth'] == 686,
       'The archived flight and both modified offline log sequences reproduce the altitude statistics and stale matches.')
+joystick_form = runpy.run_path(str(root / 'gui-original-joystick-setup/verify.py'))['verify']()
+check('disconnected original Joystick Setup with no input device',
+      joystick_form['device_nodes'] == 0 and joystick_form['rc_rows'] == 16 and joystick_form['fallback_button_rows'] == 10,
+      'The joystick page opened with an empty selector and an ArduPlane label in the disconnected profile.')
+fft_folder = root / 'gui-original-copter-fft-initial'
+fft_pages = runpy.run_path(str(fft_folder / 'verify.py'))['collect']()
+check('original Copter FFT Setup and Initial Tune Parameters pages',
+      fft_pages == json.loads((fft_folder / 'verification.json').read_text()) and
+      fft_pages['heartbeats'] == 510 and fft_pages['armed_heartbeats'] == 0 and not fft_pages['gcs_parameter_set_requests'],
+      'The two setup pages rendered with the simulator connected. The FFT panel painted after the first blank capture.')
+prototype_folder = root / 'copter-gcs-telemetry-display'
+prototype = runpy.run_path(str(prototype_folder / 'replay.py'))['verify']()
+screen_hashes = {'nominal.png': 'dd89110babd37f15f05d8cdddac0eb58fe769b84b111ef1ace52adbf7bfafbb3',
+                 'unknown_measurements.png': 'da28846301bdff000eb382bfa5da20325ce9cfd3c9acd2d10218ae3bed69e5f7'}
+check('prototype telemetry display during loss and recovery',
+      len(prototype['stages']) == 5 and all(hashlib.sha256((prototype_folder / name).read_bytes()).hexdigest() == digest
+                                             for name, digest in screen_hashes.items()),
+      'The ordinary browser screen kept the previous position, reset general message age and displayed the satellite sentinel as 255.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

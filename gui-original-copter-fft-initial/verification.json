@@ -1,0 +1,81 @@
+{
+  "matching_release_files": 1317,
+  "archive_sha256": "ff3694f7a9038caf756545049dd7aef74e3d0d8fe3586e87aa881045704dd6f9",
+  "startup_complete_log": true,
+  "sitl_waited_for_tcp": true,
+  "telemetry_retained": true,
+  "pages": {
+    "initial": {
+      "image_sha256": "0a365a2e3fd7db40f248f128e6c164086759db3ddaa5fcbbd83aff76172bf552",
+      "tree_sha256": "ddf35674236e589ec993d6d16a20e8e8f58bbb2f4fddba84e36ce1ab61f19738",
+      "ftp_first_6s": [],
+      "all_gcs_ids_first_6s": {
+        "0": 6,
+        "111": 1
+      },
+      "selected_gcs_messages_first_6s": {
+        "HEARTBEAT": 6
+      },
+      "gcs_commands_first_6s": {}
+    },
+    "fft": {
+      "image_sha256": "c5c2d8fddb8a8dcd313f86c786d3fc554e4d230b90332f270857b9169aca88a5",
+      "tree_sha256": "dfa1663eedb694a99001488b4a3cb8763e9a4af3dfbd9b4450b7fa844aa6dd39",
+      "ftp_first_6s": [],
+      "all_gcs_ids_first_6s": {
+        "0": 6,
+        "111": 1
+      },
+      "selected_gcs_messages_first_6s": {
+        "HEARTBEAT": 6
+      },
+      "gcs_commands_first_6s": {}
+    }
+  },
+  "startup_evidence_sha256": {
+    "startup.png": "08b1380482487c220ec5a8b72b609e62ee90ff9f227e60bccbad290e17055511",
+    "windows-startup.txt": "6d514dce3a213ae354f419c95aae2c3b2ccfce42f06bcaeb470725df045ff8b8",
+    "release.log": "6dabd69b0e29d51350f749ab5ac263ed46b8536d88d5f5bb83afc900ed431211",
+    "observation.log": "ae4b5254f885de082f44e2b38dfb6261880042db004d8005d7f82b92d97784a8",
+    "copter.log": "8c6b81261b40d3c49936a13da6b46a52d9ff5f8dca4321efa838177165521577"
+  },
+  "application_logged_tcp_open": true,
+  "application_logged_autoconnect_start": true,
+  "heartbeats": 510,
+  "armed_heartbeats": 0,
+  "tlog_gz_sha256": "69053fe0eee076b7ee2aa2769edcc7c66a85d0973a3058013505580b02f2aead",
+  "all_gcs_ids": {
+    "0": 511,
+    "110": 3,
+    "111": 50,
+    "183": 1,
+    "253": 3,
+    "66": 176,
+    "76": 65
+  },
+  "selected_gcs_messages": {
+    "COMMAND_LONG": 65,
+    "FILE_TRANSFER_PROTOCOL": 3,
+    "HEARTBEAT": 511,
+    "REQUEST_DATA_STREAM": 176
+  },
+  "gcs_commands": {
+    "42428": 2,
+    "511": 13,
+    "512": 49,
+    "520": 1
+  },
+  "setup_activations": [
+    "ConfigMandatory",
+    "ConfigInitialParams",
+    "ConfigOptional",
+    "ConfigFFT"
+  ],
+  "reviewed_screens": {
+    "initial.png": "0a365a2e3fd7db40f248f128e6c164086759db3ddaa5fcbbd83aff76172bf552",
+    "fft-settled.png": "46a465bc724125b412a92fe88df4d5c1487b4d8023935cf4858a897bd7bcc110",
+    "windows-fft-settled.txt": "78ef91d2681850594bec084ce61e6b19861cbb5ff366ad53bb2ffee767511665",
+    "final-hud-settled.png": "195786a64038f81b66abc26df084796751990c0a00d3ec3e62c3750c870be433"
+  },
+  "gcs_parameter_set_requests": []
+}

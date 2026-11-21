@@ -1,0 +1,17 @@
+INFO MissionPlanner.MainV2 - start joystick
+ERROR MissionPlanner.MainV2 - Mono: closing joystick thread
+INFO MissionPlanner.MainV2 - appload time
+Open MissionPlanner.GCSViews.InitialSetup HWConfig
+Open MissionPlanner.GCSViews.ConfigurationView.ConfigOptional Optional Hardware
+Open MissionPlanner.Joystick.JoystickSetup Joystick
+INFO MissionPlanner.Joystick.JoystickBase - Loading joystick config files joystickbuttonsArduPlane.xml joystickaxisArduPlane.xml
+INFO MissionPlanner.Joystick.JoystickBase - Loading joystick config files joystickbuttonsArduPlane.xml joystickaxisArduPlane.xml
+INFO MissionPlanner.Joystick.JoystickBase - AcquireJoystick 
+ERROR MissionPlanner.Joystick.JoystickBase - System.IO.FileNotFoundException: /dev/input/by-id/
+  at MissionPlanner.Joystick.JoystickLinux.Start (System.String deviceFile) [0x00021] in <3f469290027b4f4f9b9cce6b6c47604d>:0 
+  at MissionPlanner.Joystick.JoystickLinux.AcquireJoystick (System.String name) [0x00041] in <3f469290027b4f4f9b9cce6b6c47604d>:0 
+INFO MissionPlanner.Joystick.JoystickBase - getNumButtons
+ERROR MissionPlanner.Joystick.JoystickBase - System.NullReferenceException: Object reference not set to an instance of an object
+  at MissionPlanner.Joystick.JoystickLinux.getNumButtons () [0x0001f] in <3f469290027b4f4f9b9cce6b6c47604d>:0 
+INFO MissionPlanner.Joystick.JoystickBase - getNumButtons 10
+INFO MissionPlanner.Joystick.JoystickBase - JoystickLinux .dtor

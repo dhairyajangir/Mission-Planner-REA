@@ -1,0 +1,14 @@
+# Original Copter FFT Setup and Initial Tune Parameters views
+
+Mission Planner 1.3.83 displayed both setup pages in run `sensors-M7BvfZTN`. The untouched release ran under Mono's interpreter in an isolated Ubuntu-E guest and connected over private TCP to ArduCopter V4.8.0-dev (15a10bb4). The operator navigated the setup sidebar, scrolled to FFT Setup, and returned to DATA. The application logged ConfigMandatory, ConfigInitialParams, ConfigOptional and ConfigFFT in that order. [Navigation log](observation.log) · [Release log](release.log) · [Initial profile](initial-user-config.xml)
+
+| Page | Observed on screen |
+| --- | --- |
+| [Initial Tune Parameters](initial.png) | The pane showed a 9-inch airscrew, four battery cells, 4.2 V fully charged and 3.3 V fully discharged, with LiPo selected. Both optional checkboxes were clear. Calculate Initial Parameters was visible. These values describe the form as displayed. |
+| [FFT Setup](fft-settled.png) | The pane showed a sample count per batch of 1024, three unchecked IMU selectors, the FFT button, and a bitmap of log-type checkboxes. IMU_RAW and IMU_FAST were both clear. The four-second capture still had a blank pane. A second capture after the display settled shows the controls. |
+
+The action log contains sidebar and toolbar navigation plus clicks on the empty desktop. The Calculate Initial Parameters and FFT buttons were untouched. The observations establish the original Linux/Mono page displays, with calculation, log processing, parameter updates and native Windows behavior outside this run. [Initial Tune control tree](windows-initial.txt) · [Settled FFT control tree](windows-fft-settled.txt) · [First FFT capture](fft.png)
+
+All 510 simulator heartbeat samples indicated disarmed, including samples bracketing both selections. The six seconds following each page click contained six outgoing ground-station heartbeats and one time-synchronization message. Across the complete telemetry file, the ground station sent zero PARAM_SET or PARAM_EXT_SET messages. All 1,317 original release files matched the portable archive after the guest closed. [Telemetry replay](verification.json) · [Raw telemetry](vehicle.tlog.gz) · [Release comparison](archive-comparison.json)
+
+Run `python gui-original-copter-fft-initial/verify.py --check` from the repository root to replay the retained evidence. A fresh collection uses `python3 gui-original-copter-peripheral-views/observe-interpreted.py` in the prepared Ubuntu-E environment. Use a separate copy of this study's recorder for new runs because it saves observations beside itself. Given the launcher's run ID, `python3 gui-original-copter-fft-initial/observe.py RUN_ID startup 0` retrieves the first capture. Each navigation invocation takes a label, the next action number, and the coordinates of the visible navigation target. Finish with `finish NEXT_ACTION`. [Recorded guest launcher command](capture.sh)

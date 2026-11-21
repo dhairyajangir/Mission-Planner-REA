@@ -1419,6 +1419,21 @@
       "name": "time alignment and missing simulator truth in altitude comparison",
       "passed": true,
       "detail": "The archived flight and both modified offline log sequences reproduce the altitude statistics and stale matches."
+    },
+    {
+      "name": "disconnected original Joystick Setup with no input device",
+      "passed": true,
+      "detail": "The joystick page opened with an empty selector and an ArduPlane label in the disconnected profile."
+    },
+    {
+      "name": "original Copter FFT Setup and Initial Tune Parameters pages",
+      "passed": true,
+      "detail": "The two setup pages rendered with the simulator connected. The FFT panel painted after the first blank capture."
+    },
+    {
+      "name": "prototype telemetry display during loss and recovery",
+      "passed": true,
+      "detail": "The ordinary browser screen kept the previous position, reset general message age and displayed the satellite sentinel as 255."
     }
   ],
   "passed": true

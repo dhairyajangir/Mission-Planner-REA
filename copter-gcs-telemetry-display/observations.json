@@ -1,0 +1,186 @@
+{
+  "source_sha256_lf": {
+    "webui.py": "86996f3763ac6732b42bd5891fff4cf22c784c615d5fa54857d3165adedd59e4",
+    "ui.html": "7133063f7fc4d995d672434a293433f1f138c42c6cd60cf07e1fe8431e434873"
+  },
+  "stages": {
+    "nominal": {
+      "second": 0,
+      "input": [
+        "GLOBAL_POSITION_INT",
+        "GPS_RAW_INT",
+        "SYS_STATUS"
+      ],
+      "state": {
+        "position": [
+          -35.1,
+          149.2,
+          12.5
+        ],
+        "gps": [
+          3,
+          10
+        ],
+        "battery_v": 12.6,
+        "speed": 5.0,
+        "message_age_s": 0,
+        "track": [
+          [
+            -35.1,
+            149.2
+          ]
+        ]
+      },
+      "display": {
+        "s-pos": "-35.100000, 149.200000",
+        "s-hs": "12.5 m / 5.0 m/s",
+        "s-gps": "fix type 3, 10 satellites",
+        "s-bat": "12.60 V",
+        "s-age": "0 s ago",
+        "s-conn": "connected"
+      }
+    },
+    "heartbeat_only": {
+      "second": 30,
+      "input": [
+        "HEARTBEAT"
+      ],
+      "state": {
+        "position": [
+          -35.1,
+          149.2,
+          12.5
+        ],
+        "gps": [
+          3,
+          10
+        ],
+        "battery_v": 12.6,
+        "speed": 5.0,
+        "message_age_s": 0,
+        "track": [
+          [
+            -35.1,
+            149.2
+          ]
+        ]
+      },
+      "display": {
+        "s-pos": "-35.100000, 149.200000",
+        "s-hs": "12.5 m / 5.0 m/s",
+        "s-gps": "fix type 3, 10 satellites",
+        "s-bat": "12.60 V",
+        "s-age": "0 s ago",
+        "s-conn": "connected"
+      }
+    },
+    "unknown_measurements": {
+      "second": 31,
+      "input": [
+        "GLOBAL_POSITION_INT",
+        "GPS_RAW_INT",
+        "SYS_STATUS"
+      ],
+      "state": {
+        "position": [
+          -35.1,
+          149.2,
+          12.5
+        ],
+        "gps": [
+          1,
+          255
+        ],
+        "battery_v": null,
+        "speed": 5.0,
+        "message_age_s": 0,
+        "track": [
+          [
+            -35.1,
+            149.2
+          ]
+        ]
+      },
+      "display": {
+        "s-pos": "-35.100000, 149.200000",
+        "s-hs": "12.5 m / 5.0 m/s",
+        "s-gps": "fix type 1, 255 satellites",
+        "s-bat": "-",
+        "s-age": "0 s ago",
+        "s-conn": "connected"
+      }
+    },
+    "silence": {
+      "second": 44,
+      "input": [],
+      "state": {
+        "position": [
+          -35.1,
+          149.2,
+          12.5
+        ],
+        "gps": [
+          1,
+          255
+        ],
+        "battery_v": null,
+        "speed": 5.0,
+        "message_age_s": 13,
+        "track": [
+          [
+            -35.1,
+            149.2
+          ]
+        ]
+      },
+      "display": {
+        "s-pos": "-35.100000, 149.200000",
+        "s-hs": "12.5 m / 5.0 m/s",
+        "s-gps": "fix type 1, 255 satellites",
+        "s-bat": "-",
+        "s-age": "13 s ago",
+        "s-conn": "connected"
+      }
+    },
+    "recovery": {
+      "second": 45,
+      "input": [
+        "GLOBAL_POSITION_INT",
+        "GPS_RAW_INT",
+        "SYS_STATUS"
+      ],
+      "state": {
+        "position": [
+          -35.2,
+          149.3,
+          21.0
+        ],
+        "gps": [
+          3,
+          8
+        ],
+        "battery_v": 12.0,
+        "speed": 1.0,
+        "message_age_s": 0,
+        "track": [
+          [
+            -35.1,
+            149.2
+          ],
+          [
+            -35.2,
+            149.3
+          ]
+        ]
+      },
+      "display": {
+        "s-pos": "-35.200000, 149.300000",
+        "s-hs": "21.0 m / 1.0 m/s",
+        "s-gps": "fix type 3, 8 satellites",
+        "s-bat": "12.00 V",
+        "s-age": "0 s ago",
+        "s-conn": "connected"
+      }
+    }
+  }
+}

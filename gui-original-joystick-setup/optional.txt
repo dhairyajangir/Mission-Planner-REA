@@ -1,0 +1,5 @@
+0x2002ae "Hardware Config": ()  105x17+207+136  +207+136
+0x2002e9 "The following pages are OPTIONAL configure them if you have aditional hardware, or other requirements.": ()  246x78+25+25  +283+174
+0x2002d5 ">> Optional Hardware": ()  172x30+0+90  +86+239
+0x2002dd "      Joystick": ()  172x30+0+210  +86+359
+0x2002ba ">> Optional Hardware": ()  172x30+0+90  +0+90

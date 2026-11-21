@@ -1,0 +1,2 @@
+0x2002ae "Hardware Config": ()  105x17+207+136  +207+136
+0x2002ba ">> Optional Hardware": ()  172x30+0+90  +86+239
