@@ -908,3 +908,15 @@ Heartbeats were resumed about 12 s after the notice in each run. `"GCS Failsafe 
 **Arming while the failsafe is raised.** The first batch of runs set `FS_GCS_ENABLE` before arming and all ended `"not armed after 120 s (last ack result 4)"` with no refusal text captured. `research-tools/sitl-copter-gcs-failsafe-arm-probe.py` isolated it: a GCS that had been heard and then went quiet past the timeout raised `"GCS Failsafe"` even while disarmed, and arming was refused (`"PreArm: GCS failsafe on"`) until heartbeats resumed. With no heartbeat ever sent the check never started and arming worked. The probe's own note ties this to `AP_Arming_Copter::gcs_failsafe_check`; that source line was not re-read here.
 
 Limits: one run per case, Copter quad only, simulator only. The `FS_OPTIONS` pilot-control exception in `LOITER` is described in the script but no capture of it is retained, so it is not claimed here. `FS_GCS_ENABLE` values other than 1, 3 and 5 were not flown.
+
+## Battery failsafe by capacity: fires on the crossing, with no 10-second timer
+
+Reading `AP_BattMonitor_Backend::update_failsafes` (`libraries/AP_BattMonitor/AP_BattMonitor_Backend.cpp`) predicts a difference between the two low-battery triggers: the voltage paths start a `BATT_LOW_TIMER` timer and fire only after it, while the capacity path returns `Failsafe::Low` as soon as `BATT_CAPACITY - consumed_mah` falls below `BATT_LOW_MAH`.
+
+`research-tools/sitl-copter-battery-failsafe-capacity.py` (output `sitl-evidence/copter-battery-failsafe-capacity/`) flew 60 m north in `GUIDED`, read `BATT_CAPACITY` (3300 mAh) and the live consumed mAh from `BATTERY_STATUS` (264 mAh), then set `BATT_LOW_MAH`=3006 (a threshold of 294 mAh consumed) and `BATT_FS_LOW_ACT`=2. `SIM_BATT_VOLTAGE` was never touched, so the pack stayed at 12.31 V, above the 10.5 V `BATT_LOW_VOLT` default, and the voltage path was not involved.
+
+- `"Battery 1 is low 12.31V used 294 mAh"` and `"Battery Failsafe"` arrived at t=3.6 s, with the heartbeat switching to `RTL` in the same instant, exactly when the vehicle's own message reports 294 mAh used.
+- The 2 Hz `BATTERY_STATUS` samples read 292 mAh at 3.5 s and first exceeded 294 at 4.0 s, so the notice came within one 0.5 s sample of the crossing. The voltage path took 10.2 s.
+- The track shows the flight home (north 59.7 m at 5.9 s, 22.1 m at 11.9 s, -0.5 m at 17.9 s) and the start of the descent (15.8 m at 26.2 s).
+
+Limits: the watch ended at about 26 s with no exception recorded, for a reason not established, so touchdown and disarm were not observed in this capture. One run, Copter quad only, the low-capacity/RTL path only (`BATT_CRT_MAH` not tried), simulator only.
