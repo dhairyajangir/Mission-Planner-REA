@@ -2943,6 +2943,30 @@ for iteration in (1, 2):
                       int(row['configured_mode']) == mode and row['heartbeat_modes'].split()[-2:] == [str(mode)] * 2)
 check('Copter switch PWM versus observed release-page slot', switch_ok,
       'Two fresh disarmed SITL runs, ten integer threshold samples swept in both directions per run.')
+mono_gui = root / 'gui-original-mono-evidence-20261122/disconnected'
+mono_archive = json.loads((mono_gui / 'archive-comparison.json').read_text())
+mono_observation = (mono_gui / 'observation.log').read_text(errors='replace')
+check('disconnected original Mission Planner release on Linux/Mono',
+      mono_archive['archive_sha256'] == hashlib.sha256((root / 'mission-planner-portable.zip').read_bytes()).hexdigest()
+      and mono_archive['release_files'] == mono_archive['matching'] == 1317
+      and mono_archive['changed'] == mono_archive['missing'] == []
+      and 'Mono JIT compiler version 6.8.0.105' in mono_observation
+      and 'INFO MissionPlanner.MainV2 - appload time' in (mono_gui / 'release.log').read_text(errors='replace'),
+      'Full release started with optional plugins disabled in a temporary profile, all ZIP files matched after exit.')
+mono_displays = {
+    'startup': ('3dd5375f09111f6b0356558785f40e534217737f1e63ea6148b934c410d57f09', ['"Quick"']),
+    'setup': ('74a2c4e50cc370007fcf5b57ea9bd32648881c73dc343839d08818efa61040d3',
+              ['"Install Firmware"', '"Install Firmware Legacy"']),
+    'config': ('de6be772a2de6698c97c582e480cad85da592a01cf537c3e077cdca304be30d5',
+               ['"Joystick Setup"', '"Track Length"', '"Telemetry Rates"']),
+    'data-return': ('0138362b1e3f625587294e0c53639017eeb0244137a9d4ce1df45e2cdc13bbc9', ['"Quick"']),
+}
+for face, (digest, cues) in mono_displays.items():
+    tree_text = (mono_gui / f'windows-{face}.txt').read_text(errors='replace')
+    check(f'original Mono GUI disconnected {face}',
+          hashlib.sha256((mono_gui / f'{face}.png').read_bytes()).hexdigest() == digest and
+          'Mission Planner 1.3.83 build 1.3.9384.38258' in tree_text and all(cue in tree_text for cue in cues),
+          'Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

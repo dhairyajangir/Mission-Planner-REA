@@ -67,6 +67,39 @@ def target(row):
     return "met" if row["at_target"] == "yes" else "open"
 
 
+def original_platforms(row):
+    if row["gui_kind"] != "original":
+        return []
+    return [platform for platform in ("Linux/Mono", "Windows")
+            if "Original " + platform + " GUI:" in row["note"]] or ["unspecified runtime"]
+
+
+def gui_evidence(row):
+    platforms = original_platforms(row)
+    if platforms:
+        return "Original, " + " and ".join(platforms)
+    return "Modified copy" if row["gui_kind"] == "modified-copy" else "No GUI claim"
+
+
+def platform_summary(matrix):
+    groups = defaultdict(list)
+    for row in matrix.values():
+        for platform in original_platforms(row):
+            groups[platform].append(row["row_id"])
+    lines = ["## Application windows by runtime", "",
+             "The matrix’s original-GUI target accepts a recorded window of the unmodified release. "
+             "The table lists the runtime identified by each original-GUI claim. A Linux/Mono observation establishes behavior on that runtime; native Windows requires its own capture. "
+             "The Windows menu sweep used a modified copy. A harness exercising the release’s original WinForms controls provides component evidence. "
+             "A page can have evidence of more than one kind. [Current claims](claims.csv)", "",
+             "| Original application runtime | Matrix rows with an explicit claim |",
+             "| --- | --- |"]
+    for platform in ("Linux/Mono", "Windows", "unspecified runtime"):
+        names = ", ".join(f"`{name}`" for name in sorted(groups[platform]))
+        if names or platform != "unspecified runtime":
+            lines.append(f"| {platform} | {names or 'None recorded'} |")
+    return [*lines, ""]
+
+
 def review_pages(menu):
     reviews = unique(read_csv(REVIEWS), "page")
     if set(reviews) != set(menu):
@@ -212,21 +245,21 @@ def generate():
         raise ValueError("Copter mode source inventory and matrix differ")
     lines = [
         "# Copter scope and remaining evidence", "",
-        f"Saved screenshots and control trees identify the intended page after all {len(menu)} named menu selections in a modified Mission Planner 1.3.83 window. "
-        f"The current matrix marks {sum(target(r) == 'met' for r in matched)} of those {len(menu)} page types at their original-GUI target. "
+        f"Saved screenshots and control trees identify the intended page after all {len(menu)} named menu selections in a modified Mission Planner 1.3.83 window on Windows. "
+        f"The current matrix marks {sum(target(r) == 'met' and '+gui' in r['target'] for r in matched)} of those {len(menu)} page types at an original-GUI target. "
         f"The pinned ArduCopter directory contributes {len(modes)} mode source files. "
         f"{sum(target(r) == 'met' for r in modes)} meet the matrix’s execution target. A mode request refused by the simulator can qualify as execution evidence. Successful entry and behavior require separate observations. "
         "[Coverage definitions](README.md) · [Matrix](matrix.csv)", "",
         "## Work in priority order", "",
-        "1. Capture the release application's own connection, Copter HUD, SETUP and CONFIG navigation, then the frame, flight-mode and failsafe pages. Retain package identity, connection state, visible controls and the effect of each action.",
+        "1. Check which original application windows and runtime combinations still lack evidence in the table below. For a connected Copter, record the connection transition, HUD, SETUP and CONFIG navigation, then the frame, flight-mode and failsafe pages. A disconnected startup capture covers only its observed state.",
         "2. Resolve differences between component activation and the connected window. Begin with CAN GPS Order, Serial Ports and RTK-GPS Inject. Record which controls the application presents with the same simulator parameters.",
         "3. Exercise Copter workflows end to end. Match a UI action to a simulator acknowledgement, an independent readback and the state shown after reopening the page. Start with flight-mode assignments, parameter restoration and mission transfer.",
         "4. For the remaining source-registered pages, establish which menus and controls are reachable under each relevant firmware, connection, parameter and display-setting combination. Prioritize quadcopter operation before optional peripherals and helicopter-only pages.", "",
         "## Setup and configuration pages", "",
         "Each source link identifies an explicit registration. Each menu link opens its saved screenshot. The review checked visible controls inside the page pane, excluding the navigation bar. All but HW ID had identifying control text. Its screenshot shows a device table with BARO1_DEVID 65540 and BARO2_DEVID 65796. CAN GPS Order showed a title and hint. FailSafe showed its controls after a warning dialog was dismissed. The two battery pages showed different controls. This establishes the page face in each capture; loading data and changing settings require their own evidence. [Per-page review and capture hashes](copter-menu-capture-review.csv) The component column records a separate harness run on Copter SITL. The harness can construct a type which the menu gates out. An enabled root control can still contain disabled children. The final column gives the current matrix level and original-GUI target status for the page across all research.",
         f"[Window capture](../{MENU}) · [Component activation](../{HARNESS}) · [Harness exception follow-up](../sitl-evidence/page-state-exceptions/page-state.csv)", "",
-        "| Page | Source registration | Quad scope or captured menu | Component | Level / GUI target |",
-        "| --- | --- | --- | --- | --- |",
+        "| Page | Source registration | Quad scope or modified Windows capture | SITL component harness | Matrix GUI evidence | Level / matrix target |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     for name, row in sorted(pages.items()):
         capture = by_type.get(name)
@@ -239,24 +272,26 @@ def generate():
         observed = "No run in this capture" if state is None else state["status"]
         if state and observed == "ok":
             observed = "Enabled" if state["enabled"] == "True" else "Disabled"
-        lines.append(f"| {name} | {', '.join(registrations[name])} | {scope} | {observed} | L{row['level']} / {target(row)} |")
+        lines.append(f"| {name} | {', '.join(registrations[name])} | {scope} | {observed} | {gui_evidence(row)} | L{row['level']} / {row['target']} {target(row)} |")
     lines += ["", "The two compass registrations depend on the presence of `COMPASS_PRIO1_ID`. The saved Copter parameter list contains it. Frame Type showed a frame-class selector. Antenna Tracker in this menu is the optional tracker UI; the firmware-gated tracker configuration page is a different type. The menu run covered the Mandatory and Optional groups. Advanced, disconnected and software-configuration pages require separate observations. Plugin-added pages are outside the explicit registration inventory. [Copter parameters](../sitl-evidence/setup-page-disabled-reasons/copter-all-parameters.csv)", "",
               "## Modules and workflows", "",
               "These modules own the principal Copter operator tasks. The remaining modules in the repository inventory span shared services, optional features and other workflows. This selection does not establish their vehicle applicability.", "",
               "| Operator task | Owning module | Matrix level | GUI evidence | Target |", "| --- | --- | --- | --- | --- |"]
     for name, purpose in CORE_MODULES.items():
         row = matrix[f"mp-module:{name}"]
-        lines.append(f"| {purpose} | [{name}](../{row['source_ref']}) | L{row['level']} | {row['gui_kind'] or 'unclaimed'} | {target(row)} |")
+        lines.append(f"| {purpose} | [{name}](../{row['source_ref']}) | L{row['level']} | {gui_evidence(row)} | {row['target']} {target(row)} |")
     lines += ["", "The workflow rows below use the ledger’s own targets, typically executed behavior with a fault case. A met workflow target can coexist with an open original-GUI target for the owning module.", "",
               "| Operator workflow | Ledger row | Fault case recorded | GUI evidence | Ledger target |", "| --- | --- | --- | --- | --- |"]
     for key, title in WORKFLOWS.items():
         row = matrix[f"ledger:{key}"]
         evidence = row["evidence"].split(";")[0]
-        lines.append(f"| {title} | [{key}](../{evidence}) | {row['fault_injected'] or 'unclaimed'} | {row['gui_kind'] or 'unclaimed'} | {target(row)} |")
+        lines.append(f"| {title} | [{key}](../{evidence}) | {row['fault_injected'] or 'unclaimed'} | {gui_evidence(row)} | {row['target']} {target(row)} |")
     lines += ["", "Frame-specific and firmware evidence also lives in the [Copter frame trace](../Copter-Frame-Types-Trace.md) and [aerial execution trace](../ArduPilot-Aerial-Library-Execution-Trace.md). The mode-file count includes helicopter implementations and custom-mode support. It counts source files once and does not measure branch coverage, flight quality or aircraft behavior.", "",
               "Regenerate from the repository root with `python research-tools/build-copter-scope.py` after rebuilding the coverage matrix. Use `--check` to compare the checked-in report with current inputs.", ""]
     insertion = lines.index("## Modules and workflows")
     lines[insertion:insertion] = mode_observations()
+    insertion = lines.index("## Work in priority order")
+    lines[insertion:insertion] = platform_summary(matrix)
     return "\n".join(lines)
 
 

@@ -1259,6 +1259,31 @@
       "name": "Copter switch PWM versus observed release-page slot",
       "passed": true,
       "detail": "Two fresh disarmed SITL runs, ten integer threshold samples swept in both directions per run."
+    },
+    {
+      "name": "disconnected original Mission Planner release on Linux/Mono",
+      "passed": true,
+      "detail": "Full release started with optional plugins disabled in a temporary profile, all ZIP files matched after exit."
+    },
+    {
+      "name": "original Mono GUI disconnected startup",
+      "passed": true,
+      "detail": "Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run."
+    },
+    {
+      "name": "original Mono GUI disconnected setup",
+      "passed": true,
+      "detail": "Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run."
+    },
+    {
+      "name": "original Mono GUI disconnected config",
+      "passed": true,
+      "detail": "Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run."
+    },
+    {
+      "name": "original Mono GUI disconnected data-return",
+      "passed": true,
+      "detail": "Visually reviewed release-window capture and X11 control tree; no connected vehicle in this run."
     }
   ],
   "passed": true

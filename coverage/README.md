@@ -14,7 +14,7 @@ For Copter, the [scope report](copter-scope.md) connects setup page registration
 | `target` / `at_target` | Required minimum: `L3`, `L3+fault`, or `L3+gui` (original GUI). Defaults per area are in `build-coverage-matrix.py`. |
 | `evidence`, `evidence_sha12` | Files backing an L3 claim and the first 12 hex digits of each file's SHA-256. |
 
-Level is the strongest evidence kind reached, **not breadth**: nearly every L3 row is partial. Read `note` and the cited trace before relying on a row.
+Level records the strongest kind of evidence reached. Nearly every L3 row covers part of the workflow. For an original-GUI claim, read the row's note for the operating system, runtime, connection state and observed action. A release component loaded in a separate probe process cannot satisfy the original-GUI target.
 
 ## Updating
 
