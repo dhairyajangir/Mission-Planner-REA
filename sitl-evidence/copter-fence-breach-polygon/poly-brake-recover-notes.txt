@@ -1,0 +1,30 @@
+t= 20.02 case poly-brake-recover: FENCE_ACTION=4 FENCE_OPTIONS=0 polygon +-40.0 m, FENCE_TYPE=4
+t= 20.23 prepared params read back: AVOID_ENABLE=0.0 FLTMODE_CH=0.0
+t= 20.26 fence polygon upload ack=0 FENCE_TOTAL=6.0
+t= 20.29 fence params accepted: [True, True, True, True]
+t= 20.42 HEARTBEAT mode=STABILIZE armed=False dist=None alt=None
+t= 20.43 FENCE_STATUS breach_status=0 count=0 type=0 dist=None
+t= 21.44 vehicle: PreArm: Fence enabled, need position estimate (dist=None)
+t= 25.87 GUIDED: GUIDED active
+t= 42.42 arm: armed (ack result 0) 
+t= 42.62 HEARTBEAT mode=GUIDED armed=True dist=0.0 alt=0.0
+t= 47.88 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 47.98 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 58.62 takeoff done alt=20.0
+t= 61.52 LOITER: LOITER active
+t= 61.52 HEARTBEAT mode=LOITER armed=True dist=0.0 alt=20.0
+t= 65.52 pitch stick forward (PWM 1300)
+t= 78.05 FENCE_STATUS breach_status=1 count=1 type=3 dist=40.0
+t= 78.09 HEARTBEAT mode=BRAKE armed=True dist=40.3 alt=20.0
+t= 78.09 vehicle: Polygon fence breached (dist=40.3)
+t= 78.09 vehicle: Manual recovery started (dist=40.3)
+t= 90.09 manual recovery: LOITER + pitch back (PWM 1700)
+t= 91.91 vehicle: Manual recovery started (dist=48.0)
+t= 91.91 HEARTBEAT mode=LOITER armed=True dist=48.0 alt=20.0
+t= 96.38 vehicle: Fence breach cleared (dist=40.1)
+t= 96.44 FENCE_STATUS breach_status=0 count=1 type=0 dist=39.8
+t=102.65 stick centred, watching 25 s in LOITER inside fence
+t=128.79 HEARTBEAT mode=LAND armed=True dist=25.3 alt=20.0
+t=156.62 vehicle: SIM Hit ground at 0.500728 m/s (dist=25.3)
+t=158.73 vehicle: Disarming motors (dist=25.3)
+t=158.86 HEARTBEAT mode=LAND armed=False dist=25.3 alt=-0.0

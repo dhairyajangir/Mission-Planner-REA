@@ -1,10 +1,12 @@
 """Check the integrity and scope of currently captured research evidence."""
 import hashlib
 import base64
+import csv
 import binascii
 import json
 import math
 import re
+import runpy
 from pathlib import Path
 import sqlite3
 import zlib
@@ -369,6 +371,14 @@ check('nonempty SITL log download', 'LOG_DOWNLOAD_BYTES=5660672' in download_log
       log_result['byte_identical'] and log_result['message_count'] == 140847 and
       hashlib.sha256(download.read_bytes()).hexdigest() == hashlib.sha256(original.read_bytes()).hexdigest() == log_result['download_sha256'],
       'One log downloaded through the original library and parsed independently; no GUI playback.')
+field_result = runpy.run_path(str(root / 'research-tools/compare-copter-log-fields.py'))['compare']()
+field_counts = field_result['message_counts'].values()
+check('Copter DataFlash text export numeric fields',
+      field_result == json.loads((logdir / 'copter-field-comparison.json').read_text()) and
+      sum(row['records'] for row in field_counts) == 9779 and
+      sum(row['midpoint_away_from_zero'] for row in field_counts) == 95 and
+      all(row['differences'] == 0 for row in field_counts),
+      'Seven selected message types in one saved binary and its release-converter export.')
 repro = json.loads((logdir / 'empty-unit-reproduction.json').read_text())
 check('empty UNIT conversion reproduction', repro['fixture_bytes_differ'] == 1 and
       repro['results']['empty']['exit_code'] == repro['results']['nonempty']['exit_code'] == 0 and
@@ -2813,6 +2823,49 @@ for form in ('int', 'float'):
             not nan_summary['post_upload_readback_completed'] and nan_summary['probe_exit'] == 1 and
             'ERROR: Floating point exception - aborting' in (nan_dir/'sitl.log').read_text(errors='replace'))),
           'Saved simulator observations; failure cause and physical behavior unproven.')
+try:
+    runpy.run_path(str(root / 'research-tools/verify-copter-geofence-captures.py'))['verify_captures'](
+        root / 'sitl-evidence')
+except (ValueError, OSError, KeyError, IndexError) as error:
+    check('nine Copter geofence observations', False, str(error))
+else:
+    check('nine Copter geofence observations', True,
+          '17,102 saved positions across seven lateral breaches and two avoidance cases.')
+mode_dir = root / 'sitl-evidence/copter-log-mode-labels'
+mode_provenance = json.loads((mode_dir / 'provenance.json').read_text())
+mode_exports = runpy.run_path(str(root / 'research-tools/verify-copter-log-mode-labels.py'))['read_modes']
+named_modes = mode_exports(mode_dir / 'with-handler.log')
+numeric_modes = mode_exports(mode_dir / 'without-handler.log')
+check('Copter mode labels in release DataFlash exports',
+      all(hashlib.sha256((mode_dir / name).read_bytes()).hexdigest() == digest
+          for name, digest in mode_provenance['capture_sha256'].items()) and
+      all(hashlib.sha256((root / 'mission-planner-portable' / name).read_bytes()).hexdigest() == digest
+          for name, digest in mode_provenance['release_sha256'].items()) and
+      len(named_modes) == len(numeric_modes) == 32 and
+      [row for row in named_modes if row[2] == 5] == [(1, '5', 5, 0), (8, 'Loiter', 5, 0)] and
+      (31, '28', 28, 0) in named_modes and all(label == str(num) for _, label, num, _ in numeric_modes),
+      'Offline bundled metadata and the desktop log conversion callback, with a numeric control.')
+display_dir = root / 'mission-planner-gui-faces/flight-mode-display'
+display_capture = display_dir / 'run3.csv'
+with display_capture.open(newline='', encoding='utf-8') as stream:
+    display_rows = list(csv.DictReader(stream))
+stale_label = [row for row in display_rows if row['case'] == 'absent-after-valid']
+check('Copter flight-mode channel display',
+      display_capture.read_bytes() == (display_dir / 'repeat.csv').read_bytes() and
+      len(display_rows) == 34 and all(row['actual_label'] == row['expected_label'] and
+      row['actual_slot'] == row['expected_slot'] for row in display_rows) and
+      len(stale_label) == 1 and (stale_label[0]['actual_slot'], stale_label[0]['actual_label']) == ('1', '9: 1580'),
+      'Two disconnected release-component captures, including parameter removal after a valid sample.')
+warnings_dir = root / 'warnings-persistence-evidence'
+warning_hashes = json.loads((warnings_dir / 'sha256.json').read_text())
+warning_files = [warnings_dir / 'warnings.xml', root / 'research-tools/WarningsPersistenceProbe.cs',
+                 root / 'mission-planner-portable/MissionPlanner.Utilities.dll']
+check('warning rule persistence in release DLL',
+      all(hashlib.sha256(path.read_bytes()).hexdigest() == warning_hashes[path.name] for path in warning_files) and
+      (warnings_dir / 'save.txt').read_text().splitlines()[-1] == 'PASS SaveConfig wrote warnings.xml' and
+      (warnings_dir / 'load.txt').read_text().splitlines()[-2:] ==
+      ['PASS restored child follows field changes', 'PASS restored parent follows field changes'],
+      'Two separate processes saved and restored a compound rule against synthetic telemetry.')
 out = root / 'research-evidence-verification.json'
 out.write_text(json.dumps({'checks': checks, 'passed': all(c['passed'] for c in checks)}, indent=2) + '\n')
 for c in checks:

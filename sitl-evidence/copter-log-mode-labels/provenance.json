@@ -1,0 +1,21 @@
+{
+  "firmware_enum_sha256": "734f93b917c250d7f8910268c425efb9da4afe8415854ef833a5cc65151ce533",
+  "release_sha256": {
+    "MissionPlanner.exe": "a49e30e2cd635836cd737f112f419da2d3c46c59716ee08122e2986013b79f2a",
+    "MissionPlanner.Utilities.dll": "0ca12a6f602ec54f7ed087cd16f125db33b6f64b57a7108fbb151851c3168a71",
+    "MissionPlanner.ArduPilot.dll": "107fa88e20dbf4c6b2e23f4a71d79030867b61cfe7b596cbc9f63b7f86187c8c",
+    "MissionPlanner.exe.config": "19363792acd6a1e4b7c6ae980fb5450f57387e910f74dac1dd51ac91f783e9ef",
+    "ParameterMetaDataBackup.xml": "cd98e85916b12c70a13674b864fe429b0f15bd72eca123eb26226112e547e068"
+  },
+  "capture_sha256": {
+    "mode-series.bin": "c14e03ebbdb24313e0da24982c04d17467500d6958e6e501f3c86dfd4d1f4d70",
+    "with-handler.log": "c5e7d20f35233db73b6cf22ef56e99b5389af840061859c38ac61842d155722d",
+    "without-handler.log": "1e3fa3e190f43adba052227709c65affeffd3dacad636f31e8994b7a3a6eb9fa"
+  },
+  "firmware_modes": 26,
+  "named_pinned_modes": 25,
+  "pinned_modes_without_bundled_label": {
+    "28": "TURTLE"
+  },
+  "checked_mode_records_per_run": 32
+}

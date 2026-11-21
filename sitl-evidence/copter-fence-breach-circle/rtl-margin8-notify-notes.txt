@@ -1,0 +1,30 @@
+t= 20.03 case rtl-margin8-notify: AVOID_ENABLE=0 FENCE_ACTION=1 FENCE_MARGIN=8.0 FENCE_OPTIONS=4 FENCE_RADIUS=50.0
+t= 20.23 prepared params read back: AVOID_ENABLE=0.0 FLTMODE_CH=0.0
+t= 20.43 fence params accepted: [True, True, True, True, True, True]; readback FENCE_ENABLE=1.0 FENCE_TYPE=2.0
+t= 20.43 HEARTBEAT mode=STABILIZE armed=False dist=None alt=None
+t= 20.43 FENCE_STATUS breach_status=0 count=0 type=0 dist=None
+t= 21.45 vehicle: PreArm: Fence enabled, need position estimate (dist=None)
+t= 25.20 GUIDED: GUIDED active
+t= 41.64 arm: armed (ack result 0) 
+t= 41.84 HEARTBEAT mode=GUIDED armed=True dist=0.0 alt=0.0
+t= 47.20 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 47.20 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 57.84 takeoff done alt=20.0
+t= 59.04 LOITER: LOITER active
+t= 59.04 HEARTBEAT mode=LOITER armed=True dist=0.0 alt=20.0
+t= 63.05 pitch stick forward (PWM 1300)
+t= 76.07 vehicle: Circle fence in 7.9m (dist=42.1)
+t= 77.06 vehicle: Circle fence in 3.5m (dist=46.5)
+t= 77.87 FENCE_STATUS breach_status=1 count=1 type=3 dist=50.0
+t= 77.91 HEARTBEAT mode=RTL armed=True dist=50.0 alt=20.0
+t= 77.91 mode left LOITER; releasing pitch stick
+t= 77.91 vehicle: Circle fence breached (dist=50.3)
+t= 77.91 vehicle: Manual recovery started (dist=50.3)
+t= 82.67 vehicle: Circle fence in 0.1m (dist=49.9)
+t= 82.67 vehicle: Fence breach cleared (dist=49.9)
+t= 82.86 FENCE_STATUS breach_status=0 count=1 type=0 dist=49.1
+t= 83.67 vehicle: Circle fence in 4.9m (dist=45.2)
+t= 84.19 vehicle: Circle fence cleared margin breach (dist=42.1)
+t=126.91 vehicle: SIM Hit ground at 0.497895 m/s (dist=0.0)
+t=129.01 vehicle: Disarming motors (dist=0.0)
+t=129.08 HEARTBEAT mode=RTL armed=False dist=0.0 alt=-0.0

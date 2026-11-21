@@ -2,6 +2,8 @@
 
 `matrix.csv` has one row per Mission Planner 1.3.83 / ArduPilot item (setup pages, source modules, ArduPilot libraries, vehicles, modes) plus one row per workflow in `Reverse-Engineering-Coverage.md`. `summary.md` counts rows per area.
 
+For Copter, the [scope report](copter-scope.md) connects setup page registrations to the captured menu, simulator observations and remaining original-GUI checks. Regenerate it with `python research-tools/build-copter-scope.py` after updating the matrix.
+
 ## Columns that carry evidence
 
 | Column | Meaning |

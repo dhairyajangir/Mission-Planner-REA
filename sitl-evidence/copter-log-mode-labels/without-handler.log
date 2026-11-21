@@ -1,0 +1,35 @@
+FMT, 123, 14, MODE, QMBB, TimeUS,Mode,ModeNum,Rsn
+FMT, 75, 75, MSG, QZ, TimeUS,Message
+MODE, 1, 5, 5, 0
+MSG, 2, ArduCopter V4.8.0-dev (72b23820)
+MODE, 3, 0, 0, 0
+MODE, 4, 1, 1, 0
+MODE, 5, 2, 2, 0
+MODE, 6, 3, 3, 0
+MODE, 7, 4, 4, 0
+MODE, 8, 5, 5, 0
+MODE, 9, 6, 6, 0
+MODE, 10, 7, 7, 0
+MODE, 11, 8, 8, 0
+MODE, 12, 9, 9, 0
+MODE, 13, 10, 10, 0
+MODE, 14, 11, 11, 0
+MODE, 15, 12, 12, 0
+MODE, 16, 13, 13, 0
+MODE, 17, 14, 14, 0
+MODE, 18, 15, 15, 0
+MODE, 19, 16, 16, 0
+MODE, 20, 17, 17, 0
+MODE, 21, 18, 18, 0
+MODE, 22, 19, 19, 0
+MODE, 23, 20, 20, 0
+MODE, 24, 21, 21, 0
+MODE, 25, 22, 22, 0
+MODE, 26, 23, 23, 0
+MODE, 27, 24, 24, 0
+MODE, 28, 25, 25, 0
+MODE, 29, 26, 26, 0
+MODE, 30, 27, 27, 0
+MODE, 31, 28, 28, 0
+MODE, 32, 29, 29, 0
+MODE, 33, 30, 30, 0

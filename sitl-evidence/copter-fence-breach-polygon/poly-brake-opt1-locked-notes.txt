@@ -1,0 +1,31 @@
+t= 20.03 case poly-brake-opt1-locked: FENCE_ACTION=4 FENCE_OPTIONS=1 polygon +-40.0 m, FENCE_TYPE=4
+t= 20.23 prepared params read back: AVOID_ENABLE=0.0 FLTMODE_CH=0.0
+t= 20.26 fence polygon upload ack=0 FENCE_TOTAL=6.0
+t= 20.28 fence params accepted: [True, True, True, True]
+t= 20.43 HEARTBEAT mode=STABILIZE armed=False dist=None alt=None
+t= 20.43 FENCE_STATUS breach_status=0 count=0 type=0 dist=None
+t= 21.45 vehicle: PreArm: Fence enabled, need position estimate (dist=None)
+t= 24.90 GUIDED: GUIDED active
+t= 41.44 arm: armed (ack result 0) 
+t= 41.65 HEARTBEAT mode=GUIDED armed=True dist=0.0 alt=0.0
+t= 46.99 vehicle: EKF3 IMU1 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 47.00 vehicle: EKF3 IMU0 MAG0 in-flight yaw alignment complete (dist=0.0)
+t= 57.75 takeoff done alt=20.0
+t= 59.92 LOITER: LOITER active
+t= 59.92 HEARTBEAT mode=LOITER armed=True dist=0.0 alt=20.0
+t= 63.95 pitch stick forward (PWM 1300)
+t= 76.47 FENCE_STATUS breach_status=1 count=1 type=3 dist=40.0
+t= 76.51 HEARTBEAT mode=BRAKE armed=True dist=40.3 alt=20.0
+t= 76.51 vehicle: Polygon fence breached (dist=40.3)
+t= 76.51 vehicle: Manual recovery started (dist=40.3)
+t= 94.35 pilot/GCS requests LOITER: LOITER refused: vehicle stays in BRAKE (ack result 4) texts=['Mode change to Loiter failed: in fence recovery']
+t=101.02 pilot/GCS requests LAND: LAND refused: vehicle stays in BRAKE (ack result 4) texts=['Mode change to Land failed: in fence recovery']
+t=107.78 pilot/GCS requests GUIDED: GUIDED refused: vehicle stays in BRAKE (ack result 4) texts=['Mode change to Guided failed: in fence recovery']
+t=129.83 clearing FENCE_OPTIONS (0) and retrying LOITER
+t=129.84 FENCE_OPTIONS set to 0 accepted=True
+t=130.93 LOITER after clearing option: LOITER active texts=[]
+t=132.70 vehicle: Manual recovery started (dist=48.0)
+t=132.70 HEARTBEAT mode=LAND armed=True dist=48.0 alt=20.0
+t=161.75 vehicle: SIM Hit ground at 0.501363 m/s (dist=48.0)
+t=163.86 vehicle: Disarming motors (dist=48.0)
+t=163.91 HEARTBEAT mode=LAND armed=False dist=48.0 alt=-0.0

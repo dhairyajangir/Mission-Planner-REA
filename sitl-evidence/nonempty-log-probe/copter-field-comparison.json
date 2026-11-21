@@ -1,0 +1,63 @@
+{
+  "binary_sha256": "80f2d22edb979b0e9fc219da3c2dbc3a0ff4b86a7d8611728276bc5732041d6d",
+  "text_sha256": "2a09825386071ec0a636c61edbf6296d10e189fe440835ef253c21063b1d7576",
+  "message_counts": {
+    "ATT": {
+      "records": 853,
+      "exact_fixed": 1706,
+      "rounded_float": 5118,
+      "midpoint_away_from_zero": 0,
+      "matched_nan": 0,
+      "differences": 0
+    },
+    "BARO": {
+      "records": 1706,
+      "exact_fixed": 8530,
+      "rounded_float": 11848,
+      "midpoint_away_from_zero": 94,
+      "matched_nan": 0,
+      "differences": 0
+    },
+    "BAT": {
+      "records": 854,
+      "exact_fixed": 5124,
+      "rounded_float": 5124,
+      "midpoint_away_from_zero": 0,
+      "matched_nan": 0,
+      "differences": 0
+    },
+    "CTUN": {
+      "records": 853,
+      "exact_fixed": 853,
+      "rounded_float": 8530,
+      "midpoint_away_from_zero": 0,
+      "matched_nan": 1706,
+      "differences": 0
+    },
+    "GPS": {
+      "records": 391,
+      "exact_fixed": 4301,
+      "rounded_float": 1564,
+      "midpoint_away_from_zero": 0,
+      "matched_nan": 0,
+      "differences": 0
+    },
+    "IMU": {
+      "records": 4268,
+      "exact_fixed": 34144,
+      "rounded_float": 29875,
+      "midpoint_away_from_zero": 1,
+      "matched_nan": 0,
+      "differences": 0
+    },
+    "RCIN": {
+      "records": 854,
+      "exact_fixed": 12810,
+      "rounded_float": 0,
+      "midpoint_away_from_zero": 0,
+      "matched_nan": 0,
+      "differences": 0
+    }
+  },
+  "first_differences": []
+}

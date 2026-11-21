@@ -156,6 +156,11 @@
       "detail": "One log downloaded through the original library and parsed independently; no GUI playback."
     },
     {
+      "name": "Copter DataFlash text export numeric fields",
+      "passed": true,
+      "detail": "Seven selected message types in one saved binary and its release-converter export."
+    },
+    {
       "name": "empty UNIT conversion reproduction",
       "passed": true,
       "detail": "One extracted record and a one-byte synthetic control; exception is swallowed by converter."
@@ -1204,6 +1209,26 @@
       "name": "WPL NaN upload observation float",
       "passed": true,
       "detail": "Saved simulator observations; failure cause and physical behavior unproven."
+    },
+    {
+      "name": "nine Copter geofence observations",
+      "passed": true,
+      "detail": "17,102 saved positions across seven lateral breaches and two avoidance cases."
+    },
+    {
+      "name": "Copter mode labels in release DataFlash exports",
+      "passed": true,
+      "detail": "Offline bundled metadata and the desktop log conversion callback, with a numeric control."
+    },
+    {
+      "name": "Copter flight-mode channel display",
+      "passed": true,
+      "detail": "Two disconnected release-component captures, including parameter removal after a valid sample."
+    },
+    {
+      "name": "warning rule persistence in release DLL",
+      "passed": true,
+      "detail": "Two separate processes saved and restored a compound rule against synthetic telemetry."
     }
   ],
   "passed": true

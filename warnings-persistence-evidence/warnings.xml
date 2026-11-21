@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomWarning xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomWarning>
+    <Child>
+      <Name>Armed</Name>
+      <Warning>1</Warning>
+      <type>SpeakAndText</type>
+      <RepeatTime>10</RepeatTime>
+      <ConditionType>EQ</ConditionType>
+      <Text>WARNING: {name} is {value}</Text>
+    </Child>
+    <Name>Voltage</Name>
+    <Warning>10.75</Warning>
+    <type>Coloring</type>
+    <color>Gold</color>
+    <RepeatTime>30</RepeatTime>
+    <ConditionType>LT</ConditionType>
+    <Text>Battery &lt; {warning} &amp; armed: {value}</Text>
+  </CustomWarning>
+</ArrayOfCustomWarning>

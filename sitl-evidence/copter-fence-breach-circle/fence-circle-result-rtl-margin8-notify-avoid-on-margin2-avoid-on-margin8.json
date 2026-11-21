@@ -1,0 +1,61 @@
+[
+ {
+  "label": "rtl-margin8-notify",
+  "AVOID_ENABLE": 0,
+  "FENCE_ACTION": 1,
+  "FENCE_MARGIN": 8.0,
+  "FENCE_OPTIONS": 4,
+  "FENCE_RADIUS": 50.0,
+  "armed": true,
+  "t_stick": 63.05,
+  "t_cross": 77.85,
+  "mode_changed": true,
+  "mode_after_breach": "RTL",
+  "max_dist_when_mode_changed": 50.0,
+  "first": {
+   "margin_cross": 76.06,
+   "margin_cross_dist": 42.08,
+   "cross": 77.85,
+   "cross_dist": 50.04
+  },
+  "final_mode": "RTL",
+  "final_armed": false,
+  "max_dist_overall": 55.4
+ },
+ {
+  "label": "avoid-on-margin2",
+  "AVOID_ENABLE": 3,
+  "FENCE_ACTION": 1,
+  "FENCE_MARGIN": 2.0,
+  "FENCE_OPTIONS": 0,
+  "FENCE_RADIUS": 50.0,
+  "armed": true,
+  "max_dist_stick_held": 48.01,
+  "mode_end_of_hold": "LOITER",
+  "first": {
+   "margin_cross": 83.9,
+   "margin_cross_dist": 48.0
+  },
+  "final_mode": "LAND",
+  "final_armed": false,
+  "max_dist_overall": 48.0
+ },
+ {
+  "label": "avoid-on-margin8",
+  "AVOID_ENABLE": 3,
+  "FENCE_ACTION": 1,
+  "FENCE_MARGIN": 8.0,
+  "FENCE_OPTIONS": 0,
+  "FENCE_RADIUS": 50.0,
+  "armed": true,
+  "max_dist_stick_held": 42.02,
+  "mode_end_of_hold": "LOITER",
+  "first": {
+   "margin_cross": 85.05,
+   "margin_cross_dist": 42.0
+  },
+  "final_mode": "LAND",
+  "final_armed": false,
+  "max_dist_overall": 42.0
+ }
+]

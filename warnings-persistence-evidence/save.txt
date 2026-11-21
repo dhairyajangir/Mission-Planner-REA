@@ -1,0 +1,4 @@
+PASS loaded portable utility assembly
+PASS disposable settings path
+PASS empty first startup
+PASS SaveConfig wrote warnings.xml
